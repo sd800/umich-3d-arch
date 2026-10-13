@@ -15,4 +15,4 @@ if(names.some(n=>!map[n]))throw new Error('Object names not preserved');
 if(names.some(n=>n.length>10))throw new Error('3DS names exceed Rhino limit');
 const info={parser:'Three.js TDSLoader (independent 3DS importer)',objects:names.length,triangles,vertices,box_min:bounds.min.toArray(),box_max:bounds.max.toArray(),all_names_preserved:true};
 console.log(JSON.stringify(info,null,2));
-fs.writeFileSync(new URL('../output/3DS导入校验.json',import.meta.url),JSON.stringify(info,null,2));
+fs.writeFileSync(new URL('../output/3ds_validation.json',import.meta.url),JSON.stringify(info,null,2));

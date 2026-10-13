@@ -6,7 +6,7 @@ import {Box3,Vector3,OrthographicCamera,Raycaster,Vector2,MOUSE,TOUCH} from 'thr
 import {OrbitControls} from 'three/addons/controls/OrbitControls.js';
 import {CampusMapControls,frameCampusBox,setRotationMode,levelCampusView} from './campus_controls.js';
 import {updateCampusZoomLimit} from './camera_limits.js';
-const validation=JSON.parse(readFileSync(new URL('../output/3DS导入校验.json',import.meta.url),'utf8'));
+const validation=JSON.parse(readFileSync(new URL('../output/3ds_validation.json',import.meta.url),'utf8'));
 const campus=new Box3(new Vector3(...validation.box_min),new Vector3(...validation.box_max));
 const diagonal=campus.getSize(new Vector3()).length();
 const element={clientWidth:1000,clientHeight:650,getBoundingClientRect:()=>({left:17,top:39,width:1000,height:650})};

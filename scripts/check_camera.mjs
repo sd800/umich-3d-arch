@@ -6,7 +6,7 @@ import {CampusMapControls} from './campus_controls.js';
 import {updateCampusZoomLimit} from './camera_limits.js';
 
 const records=JSON.parse(readFileSync(new URL('../output/viewer_records.json',import.meta.url),'utf8'));
-const validation=JSON.parse(readFileSync(new URL('../output/3DS导入校验.json',import.meta.url),'utf8'));
+const validation=JSON.parse(readFileSync(new URL('../output/3ds_validation.json',import.meta.url),'utf8'));
 const bounds=new Box3(new Vector3(...validation.box_min),new Vector3(...validation.box_max));
 const diagonal=bounds.getSize(new Vector3()).length();
 const corners=[];

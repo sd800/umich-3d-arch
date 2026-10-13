@@ -9,3 +9,5 @@
 - Historical versions already recorded in the changelog remain stable. Rewrite published history only when the user explicitly authorizes it; use an exact force-with-lease when that is required.
 - Build the model worker before the viewer bundle. Verify navigation and loading regressions, local/offline byte integrity, SEO and applicable browser behavior after changes.
 - Preserve CAD geometry and original source data when changing website interaction. Keep camera pivots ground-aligned, disable inertia, and make rotation an explicit interaction.
+
+- Use English filenames for all project files and generated deliverables. Update references when renaming files.

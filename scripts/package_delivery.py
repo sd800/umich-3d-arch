@@ -18,7 +18,7 @@ A bilingual exterior model of the **University of Michigan, Ann Arbor**. Open `i
 | `output/UMich_AnnArbor_Layered.3dm` | Rhino v7 model with native layers and metric units |
 | `output/layer_map.json` | 3DS object names → individual building / environment layers |
 | `scripts/apply_layers_rhino.py` | Restore layers after importing the 3DS into Rhino |
-| `output/建筑尺寸与来源.csv` | Building dimensions, height certainty and source references |
+| `output/building_dimensions_and_sources.csv` | Building dimensions, height certainty and source references |
 | `output/campus_aerial.png` | Detailed Central Campus exterior view |
 | `output/campus_overview.png` | Four-sector overview |
 | `output/campus_plan.png` | North-up campus plan |
@@ -159,8 +159,8 @@ usage=f'''# 密西根大学安娜堡校区模型使用说明
 
 “Michigan”统一译为“密西根”，“Ann Arbor”统一译为“安娜堡”。地名与建筑译名保持原义，英文专名保留以便查证。来源与完整中文译名说明见 `sources`。
 '''
-(out/'使用说明.md').write_text(usage)
-checks={'rhino':json.loads((out/'rhino_validation.json').read_text()),'3ds':json.loads((out/'3DS导入校验.json').read_text())}
+(out/'usage_guide.md').write_text(usage)
+checks={'rhino':json.loads((out/'rhino_validation.json').read_text()),'3ds':json.loads((out/'3ds_validation.json').read_text())}
 validation=f'''# Delivery validation
 
 - Rhino v7, meter units; {checks['rhino']['nonempty_layers']} nonempty layers.

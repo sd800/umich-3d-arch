@@ -14,7 +14,7 @@ A bilingual exterior model of the **University of Michigan, Ann Arbor**. Open `i
 | `output/UMich_AnnArbor_Layered.3dm` | Rhino v7 model with native layers and metric units |
 | `output/layer_map.json` | 3DS object names → individual building / environment layers |
 | `scripts/apply_layers_rhino.py` | Restore layers after importing the 3DS into Rhino |
-| `output/建筑尺寸与来源.csv` | Building dimensions, height certainty and source references |
+| `output/building_dimensions_and_sources.csv` | Building dimensions, height certainty and source references |
 | `output/campus_aerial.png` | Detailed Central Campus exterior view |
 | `output/campus_overview.png` | Four-sector overview |
 | `output/campus_plan.png` | North-up campus plan |

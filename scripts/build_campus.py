@@ -463,7 +463,7 @@ for o in objects:
 (OUT/'UMich_AnnArbor.3ds').write_bytes(chunk(0x4D4D,chunk(0x0002,struct.pack('<I',3))+chunk(0x3D3D,chunk(0x3D3E,struct.pack('<I',3))+chunk(0x0100,struct.pack('<f',1))+mb+ob)))
 for name,data in [('layer_map',layer_map),('palette',COLORS),('buildings',records),('viewer_records',records)]:
     (OUT/(name+'.json')).write_text(json.dumps(data,ensure_ascii=False,indent=2))
-with (OUT/'建筑尺寸与来源.csv').open('w',encoding='utf-8-sig',newline='') as fd:
+with (OUT/'building_dimensions_and_sources.csv').open('w',encoding='utf-8-sig',newline='') as fd:
     wr=csv.DictWriter(fd,fieldnames=list(records[0]));wr.writeheader();wr.writerows(records)
 (OUT/'footprints_local_meters.geojson').write_text(json.dumps({'type':'FeatureCollection','coordinate_system':{'epsg':32617,'origin_easting':OX,'origin_northing':OY,'origin_wgs84':[LON,LAT],'unit':'m','z_datum':'local Z0=225m USGS DEM datum','note':'Local projected meters, not RFC7946 longitude/latitude'},'features':[{'type':'Feature','properties':f['record'],'geometry':mapping(f['poly'])} for f in buildings]},ensure_ascii=False,separators=(',',':')))
 av=[];af=[];co=[];off=0

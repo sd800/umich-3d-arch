@@ -2,6 +2,10 @@
 
 All notable changes to UMich Campus 3D Model are recorded here. Versions use `YY.M.D.NUM`, with a separate release sequence for each day in America/Chicago.
 
+## 26.10.13.9 — 2026-10-13
+
+- Use English filenames for the building dimensions/source CSV, usage guide and 3DS validation report. Update generators, validation scripts and documentation, and regenerate the portable delivery archive.
+
 ## 26.10.13.8 — 2026-10-13
 
 - Center the initial view, Campus and Reset on The Diag’s central plaza using its official mapped geometry. Preserve the southwest viewing direction, oblique angle and zoom scale.

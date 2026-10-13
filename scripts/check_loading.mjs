@@ -6,7 +6,7 @@ import {Worker} from 'node:worker_threads';
 import {loadModelBytes} from './model_data.js';
 import {loadingPercent} from './loading.js';
 import {CampusTDSLoader} from './campus_tds_loader.js';
-const validation=JSON.parse(readFileSync(new URL('../output/3DS导入校验.json',import.meta.url),'utf8'));
+const validation=JSON.parse(readFileSync(new URL('../output/3ds_validation.json',import.meta.url),'utf8'));
 const filename=['UMich_AnnArbor','UChicago_HydePark','XJTU_InnovationHarbour'].find(name=>{try{return readFileSync(new URL(`../output/${name}.3ds`,import.meta.url)).length>0;}catch{return false;}});
 const expected=readFileSync(new URL(`../output/${filename}.3ds`,import.meta.url));
 const digest=bytes=>createHash('sha256').update(bytes).digest('hex');
