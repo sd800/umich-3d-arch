@@ -379,7 +379,7 @@
   },
   {
     "name": "The Diag",
-    "name_zh": "The Diag（校园中央绿地）",
+    "name_zh": "The Diag 中央绿地",
     "source": "https://map.fo.umich.edu/",
     "note": "English is the original GIS label; Chinese is an independent faithful translation. GIS typos are retained here for traceability."
   },

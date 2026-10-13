@@ -2,6 +2,10 @@
 
 All notable changes to UMich Campus 3D Model are recorded here. Versions use `YY.M.D.NUM`, with a separate release sequence for each day in America/Chicago.
 
+## 26.10.13.10 — 2026-10-13
+
+- Simplify the Chinese label for The Diag across the viewer, offline edition and place-name documentation while retaining the original English name.
+
 ## 26.10.13.9 — 2026-10-13
 
 - Use English filenames for the building dimensions/source CSV, usage guide and 3DS validation report. Update generators, validation scripts and documentation, and regenerate the portable delivery archive.

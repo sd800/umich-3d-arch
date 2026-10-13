@@ -91,7 +91,7 @@ The Charles J. Strosacker Foundation Plaza|查尔斯·J·斯特罗萨克基金�
 Peter S. Fuss Pavilion|彼得·S·富斯亭
 Eula D. Marcks Garden|尤拉·D·马尔克斯花园
 East Quad Garden|东庭院宿舍区花园
-The Diag|The Diag（校园中央绿地）
+The Diag|The Diag 中央绿地
 Ingalls Mall|英格尔斯林荫广场
 East University Mall|东大学大道林荫广场
 Wolverine Village|Wolverine Village（狼獾村）

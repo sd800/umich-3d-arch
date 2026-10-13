@@ -2,7 +2,7 @@
 
 - University of Michigan：密西根大学；Michigan：密西根；Ann Arbor：安娜堡。
 - Huron River：休伦河；Detroit：底特律；Washtenaw：沃什特诺。
-- The Diag：保留英文专名，附“校园中央绿地”的功能说明；不把专名机械译为“对角线”。
+- The Diag → The Diag 中央绿地：保留英文专名并说明场地用途，不把专名机械译为“对角线”。
 - Ingalls Mall：英格尔斯林荫广场；校园步行开放空间中的 Mall 不译为“购物中心”。
 - Law Quadrangle：法学院庭院；Quad / Quadrangle 依语境区分庭院与住宿、教学综合体。East / West / South Quadrangle 译为对应的庭院宿舍区。
 - North Quadrangle Residential & Academic Complex：北庭院住宿与教学综合楼，保留其住宿、教学双重用途。
