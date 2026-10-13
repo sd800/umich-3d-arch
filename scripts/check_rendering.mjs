@@ -1,7 +1,7 @@
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import {createHash} from 'node:crypto';
-import {Box3,Vector3,OrthographicCamera,Group,Mesh,BoxGeometry,MeshPhongMaterial} from 'three';
+import {Box3,Vector3,OrthographicCamera,Group,Mesh,BufferGeometry,Float32BufferAttribute,BoxGeometry,MeshPhongMaterial} from 'three';
 import {CampusTDSLoader} from './campus_tds_loader.js';
 import {prepareLandscape,prepareBuildingRoofs,SURFACE_ORDER,stabilizeBuildingMaterial,updateCampusDepthRange} from './surface_rendering.js';
 const name=['UMich_AnnArbor','UChicago_HydePark','XJTU_InnovationHarbour'].find(n=>{try{readFileSync(new URL(`../output/${n}.3ds`,import.meta.url));return true;}catch{return false;}});
@@ -12,6 +12,7 @@ const meshes=[];campus.traverse(m=>{if(m.isMesh&&layers[m.name]?.category==='env
 let skins=0,triangles=0,structures=0;
 for(const mesh of meshes){
  const original=mesh.geometry,position=original.attributes.position,arrayHash=createHash('sha256').update(position.array).digest('hex'),world=mesh.matrixWorld.clone();
+ const originalNormalHash=createHash('sha256').update(original.attributes.normal.array).digest('hex');
  const materialNames=(Array.isArray(mesh.material)?mesh.material:[mesh.material]).map(m=>m.name);
  const parts=prepareLandscape(mesh);assert.ok(parts.length);campus.updateMatrixWorld(true);
  for(const part of parts){
@@ -19,12 +20,13 @@ for(const mesh of meshes){
   assert.equal(createHash('sha256').update(part.geometry.attributes.position.array).digest('hex'),arrayHash,'No vertex is raised or flattened');
   const mat=Array.isArray(part.material)?part.material[0]:part.material;
   if(mat.name in SURFACE_ORDER){
-   skins++;assert.equal(mat.depthWrite,false);assert.equal(mat.depthTest,true);assert.equal(mat.transparent,false);assert.equal(part.renderOrder,SURFACE_ORDER[mat.name]);assert.equal(part.castShadow,false);
+   skins++;assert.equal(mat.flatShading,false);assert.notEqual(part.geometry.attributes.normal,original.attributes.normal,'Smooth lighting uses an independent normal attribute');assert.equal(mat.depthWrite,false);assert.equal(mat.depthTest,true);assert.equal(mat.transparent,false);assert.equal(part.renderOrder,SURFACE_ORDER[mat.name]);assert.equal(part.castShadow,false);
    const index=part.geometry.index,a=new Vector3(),b=new Vector3(),c=new Vector3();
    for(let i=0;i<index.count;i+=3){a.fromBufferAttribute(position,index.getX(i)).applyMatrix4(world);b.fromBufferAttribute(position,index.getX(i+1)).applyMatrix4(world);c.fromBufferAttribute(position,index.getX(i+2)).applyMatrix4(world);assert.ok(b.sub(a).cross(c.sub(a)).z>0,'Bottoms and extrusion seams must not overpaint map skins');}
    triangles+=index.count/3;
   }else{structures++;assert.equal(part.geometry,original,'Trees, walls and furniture retain closed geometry');}
  }
+ assert.equal(createHash('sha256').update(original.attributes.normal.array).digest('hex'),originalNormalHash,'CAD-imported normals remain untouched');
  assert.deepEqual(materialNames.sort(),[...new Set(parts.flatMap(p=>(Array.isArray(p.material)?p.material:[p.material]).map(m=>m.name)))].sort());
 }
 assert.ok(skins>0);assert.ok(structures>0);assert.ok(SURFACE_ORDER.Ground<SURFACE_ORDER.Road&&SURFACE_ORDER.Road<SURFACE_ORDER.Marking);
@@ -41,6 +43,7 @@ for(const tilt of [.1,.65,1.1])for(let bearing=0;bearing<16;bearing++){
 // Multi-material models must split map skins without deleting a retaining wall.
 const mixed=new Mesh(new BoxGeometry(10,10,10),Array.from({length:6},(_,i)=>new MeshPhongMaterial({name:i<4?'LightStone':'Road'})));new Group().add(mixed);const parts=prepareLandscape(mixed);assert.ok(parts.some(m=>m.material.name==='Road'));assert.ok(parts.some(m=>m.material.name==='LightStone'));
 const single=new Mesh(new BoxGeometry(10,10,10),new MeshPhongMaterial({name:'Ground'}));new Group().add(single);assert.equal(prepareLandscape(single).length,1,'Single materials ignore geometry material indices, as WebGLRenderer does');
+const seamGeometry=new BufferGeometry();seamGeometry.setAttribute('position',new Float32BufferAttribute([0,0,0,.001,10,10,0,10,0,0,0,10,10,0,10,0,10,10],3));seamGeometry.setIndex([0,1,2,3,4,5]);seamGeometry.computeVertexNormals();const seamMesh=new Mesh(seamGeometry,new MeshPhongMaterial({name:'Grass'}));new Group().add(seamMesh);const seamParts=prepareLandscape(seamMesh);assert.equal(seamParts[0].geometry.index.count,3,'Rounded extrusion side faces must never paint map skins');
 const glass=new MeshPhongMaterial({transparent:true,opacity:.73});stabilizeBuildingMaterial(glass,true);assert.equal(glass.depthWrite,false);assert.equal(glass.depthTest,true);assert.equal(glass.opacity,.73);
 const body=new MeshPhongMaterial();stabilizeBuildingMaterial(body);assert.equal(body.depthWrite,true);assert.equal(body.depthTest,true);
 let roofCaps=0;

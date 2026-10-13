@@ -1,3 +1,4 @@
+import {createTerrainLighting,applyTerrainLighting} from './terrain_lighting.js';
 import * as THREE from 'three';
 import realRoofFixture from './fixtures/umich_roof.json';
 import {prepareBuildingRoofs,prepareLandscape,stabilizeBuildingMaterial,updateCampusDepthRange,setCampusClipping,stabilizeCampusShadows,fitCampusSun,updateCampusDetailDepth} from './surface_rendering.js';
@@ -23,6 +24,23 @@ try {
     expect(new THREE.Vector3(-14,0,6),[0,39,76],'Opaque building occludes glass behind it');
     frames++;checks+=3;
   }
+  // A sloping terrain quad with duplicated edge vertices reproduces the
+  // faceted-lighting discontinuity independently of cast shadows.
+  const terrainScene=new THREE.Scene();terrainScene.add(new THREE.AmbientLight(0xffffff,.3));
+  const terrainSun=new THREE.DirectionalLight(0xffffff,2);terrainSun.position.set(-1,-2,3);terrainScene.add(terrainSun);
+  const terrainGeometry=new THREE.BufferGeometry();terrainGeometry.setAttribute('position',new THREE.Float32BufferAttribute([-10,-10,0,10,-10,0,-10,10,0,10,-10,0,10,10,8,-10,10,0],3));terrainGeometry.setIndex([0,1,2,3,4,5]);terrainGeometry.computeVertexNormals();
+  const terrainMaterial=new THREE.MeshPhongMaterial({name:'Grass',color:0x879779,flatShading:true,shininess:0,specular:0}),terrain=new THREE.Mesh(terrainGeometry,terrainMaterial);terrainScene.add(terrain);
+  camera.up.set(0,1,0);camera.position.set(0,0,100);camera.lookAt(0,0,0);camera.updateMatrixWorld(true);updateCampusDepthRange(camera,new THREE.Box3().setFromObject(terrain));renderer.render(terrainScene,camera);
+  const leftPoint=new THREE.Vector3(0,-.2,0),rightPoint=new THREE.Vector3(0,.2,.08);
+  const jump=()=>{const a=pixel(leftPoint),b=pixel(rightPoint);return Math.max(...a.map((v,i)=>Math.abs(v-b[i])));};
+  const facetedTerrainJump=jump();if(facetedTerrainJump<8)throw new Error('Original faceted terrain lighting must be reproduced');
+  const smoothTerrain=prepareLandscape(terrain)[0];renderer.render(terrainScene,camera);const smoothTerrainJump=jump();if(smoothTerrainJump>3)throw new Error('Terrain triangle edge remains visible after smoothing: '+smoothTerrainJump);
+  const normal=smoothTerrain.geometry.attributes.normal;if(normal.getX(1)!==normal.getX(3)||normal.getY(2)!==normal.getY(5))throw new Error('Duplicated patch vertices must share smooth normals');
+  const terrainField=createTerrainLighting({x:[-10,0,10],y:[-10,0,10],heights:[[0,0,0],[0,2,4],[0,4,8]]});applyTerrainLighting(terrainMaterial,terrainField);renderer.render(terrainScene,camera);
+  const terrainFieldJump=jump();if(terrainFieldJump>3)throw new Error('DEM normal-field edge remains visible: '+terrainFieldJump);
+  const fieldReference=pixel(new THREE.Vector3(0,0,0));smoothTerrain.geometry.setIndex([0,1,4,0,4,2]);renderer.render(terrainScene,camera);const fieldAlternative=pixel(new THREE.Vector3(0,0,4));
+  const triangulationLightingDelta=Math.max(...fieldReference.map((v,i)=>Math.abs(v-fieldAlternative[i])));if(triangulationLightingDelta>1)throw new Error('Changing terrain triangulation changes its lighting: '+triangulationLightingDelta);
+
   const shadowScene=new THREE.Scene();shadowScene.background=new THREE.Color(0xffffff);
   const floor=new THREE.Mesh(new THREE.PlaneGeometry(30,30),new THREE.MeshStandardMaterial({color:0xffffff}));stabilizeCampusShadows(floor.material);floor.receiveShadow=true;shadowScene.add(floor);
   const caster=new THREE.Mesh(new THREE.BoxGeometry(2,2,6),new THREE.MeshStandardMaterial({color:0x888888}));caster.position.z=4;caster.castShadow=true;shadowScene.add(caster);
@@ -97,6 +115,6 @@ try {
   }
 
 
-  output.textContent=JSON.stringify({status:'passed',frames,pixelChecks:checks,roofChecks,roofMaximumDelta,originalRoofFailures:originalFailures,uniformRoofChecks,depthBits:renderer.getContext().getParameter(renderer.getContext().DEPTH_BITS),checks:['Terrain crossing reproduced','Surface stack survives pan and rotation','Opaque structures keep normal occlusion','Transparent glass stays depth-tested','Adaptive depth range keeps all surfaces visible','Section clipping removes clipped shadows','Roof lighting stays stable while panning, rotating and zooming','Coplanar roof accents and recessed sheets stay visible','Actual North Campus roof regression reproduced and repaired']},null,2);
+  output.textContent=JSON.stringify({status:'passed',frames,pixelChecks:checks,facetedTerrainJump,smoothTerrainJump,terrainFieldJump,triangulationLightingDelta,roofChecks,roofMaximumDelta,originalRoofFailures:originalFailures,uniformRoofChecks,depthBits:renderer.getContext().getParameter(renderer.getContext().DEPTH_BITS),checks:['Terrain crossing reproduced','Surface stack survives pan and rotation','Opaque structures keep normal occlusion','Transparent glass stays depth-tested','Adaptive depth range keeps all surfaces visible','Section clipping removes clipped shadows','Roof lighting stays stable while panning, rotating and zooming','Coplanar roof accents and recessed sheets stay visible','Actual North Campus roof regression reproduced and repaired']},null,2);
   target.dispose();
 }catch(error){output.textContent=JSON.stringify({status:'failed',error:error.message},null,2);console.error(error);}

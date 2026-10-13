@@ -1,8 +1,26 @@
-import {BufferGeometry,FrontSide,Matrix3,Mesh,Vector3,ShaderChunk} from 'three';
+import {BufferAttribute,BufferGeometry,FrontSide,Matrix3,Mesh,Vector3,ShaderChunk} from 'three';
 
 // Map surfaces are a cartographic stack. Independently draped CAD triangles
 // can cross by meters; no depth bias can repair those crossings reliably.
 export const SURFACE_ORDER=Object.freeze({Ground:-100,Sand:-95,Grass:-94,Garden:-93,Road:-80,Walk:-75,Paving:-70,Court:-65,Track:-64,Water:-60,Marking:-50});
+/** Smooth only upward landscape skins; closed sides must not affect lighting. */
+export function smoothLandscapeNormals(geometry) {
+  const position=geometry.attributes.position,index=geometry.index,records=new Map(),byVertex=new Array(position.count);
+  const a=new Vector3(),b=new Vector3(),c=new Vector3(),normal=new Vector3();
+  for(let i=0;i<index.count;i+=3){
+    const ids=[index.getX(i),index.getX(i+1),index.getX(i+2)];
+    a.fromBufferAttribute(position,ids[0]);b.fromBufferAttribute(position,ids[1]);c.fromBufferAttribute(position,ids[2]);normal.subVectors(b,a).cross(c.sub(a));
+    for(const id of ids){
+      const key=[position.getX(id),position.getY(id),position.getZ(id)].map(v=>Math.round(v*1000)).join(',');
+      let record=records.get(key);if(!record){record=new Vector3();records.set(key,record);}record.add(normal);byVertex[id]=record;
+    }
+  }
+  for(const record of records.values()){if(record.lengthSq()>0)record.normalize();else record.set(0,0,1);}
+  const normals=new Float32Array(position.count*3);
+  for(let i=0;i<byVertex.length;i++)if(byVertex[i])byVertex[i].toArray(normals,i*3);
+  // A fresh attribute preserves the CAD-imported normals shared by other parts.
+  geometry.setAttribute('normal',new BufferAttribute(normals,3));
+}
 export function prepareLandscape(mesh) {
   const multi=Array.isArray(mesh.material),materials=multi?mesh.material:[mesh.material];
   if(!materials.some(m=>m.name in SURFACE_ORDER))return [mesh];
@@ -18,7 +36,10 @@ export function prepareLandscape(mesh) {
       if(surface){
         a.fromBufferAttribute(position,ia);b.fromBufferAttribute(position,ib);c.fromBufferAttribute(position,ic);
         ab.subVectors(b,a).cross(ac.subVectors(c,a));
-        if(ab.x*normalMatrix[2]+ab.y*normalMatrix[5]+ab.z*normalMatrix[8]<=1e-10)continue;
+        const nx=ab.x*normalMatrix[0]+ab.y*normalMatrix[3]+ab.z*normalMatrix[6],ny=ab.x*normalMatrix[1]+ab.y*normalMatrix[4]+ab.z*normalMatrix[7],nz=ab.x*normalMatrix[2]+ab.y*normalMatrix[5]+ab.z*normalMatrix[8];
+        // Rounded CAD vertices can tilt an extrusion side just above horizontal
+        // in the normal test. Exclude near-vertical seams from map skins.
+        if(nz<=1e-10||nz<Math.hypot(nx,ny,nz)*.1)continue;
       }
       out.push(ia,ib,ic);
     }
@@ -35,6 +56,7 @@ export function prepareLandscape(mesh) {
     if(material.name in SURFACE_ORDER){
       material.transparent=false;material.opacity=1;material.depthWrite=false;material.depthTest=true;material.side=FrontSide;
       part.renderOrder=SURFACE_ORDER[material.name];part.castShadow=false;
+      smoothLandscapeNormals(geometry);material.flatShading=false;material.needsUpdate=true;
       // No polygon offset: the stack must stay stable at grazing angles too.
       material.polygonOffset=false;
     }

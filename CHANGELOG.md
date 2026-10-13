@@ -2,6 +2,12 @@
 
 All notable changes to UMich Campus 3D Model are recorded here. Versions use `YY.M.D.NUM`, with a separate release sequence for each day in America/Chicago.
 
+## 26.10.13.4 — 2026-10-13
+
+- Derive continuous ground and landscape lighting from the existing DEM sample field, independent of sparse triangulation and flattened building pads. Smooth upward surface geometry, welding duplicated patch vertices for shading without moving terrain or altering CAD data. Remove large triangular light/dark patches around the medical campus and Nichols Arboretum.
+- Exclude near-vertical extrusion seams that CAD rounding can misclassify as landscape tops, removing thin dark marks from lawns, walks and other map surfaces.
+- Preserve building and tree cast shadows, roof colors and the existing selected-building highlight. Add a real GPU terrain-edge regression that reproduces the old lighting discontinuity and verifies continuous shading after repair.
+
 ## 26.10.13.3 — 2026-10-13
 
 - Use one neutral gray base color for flat roof caps, metal sheets, slate surfaces and concrete insets. Remove material-based light/dark patches within ordinary flat roofs while preserving wall colors and natural lighting on pitched surfaces.
