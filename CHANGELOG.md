@@ -2,6 +2,11 @@
 
 All notable changes to UMich Campus 3D Model are recorded here. Versions use `YY.M.D.NUM`, with a separate release sequence for each day in America/Chicago.
 
+## 26.10.13.6 — 2026-10-13
+
+- Open with a campus-wide bird’s-eye view instead of the Central Campus preset, bringing North Campus, the medical center and the athletic campus into the initial composition.
+- Frame the principal building clusters and raise the overview elevation for clearer buildings and landscape connections. Use the same overview for Campus and Reset, while retaining individual district and building views.
+
 ## 26.10.13.5 — 2026-10-13
 
 - Restore the full viewing range from overhead to an exactly horizontal elevation. Add a bilingual Level control that retains the current bearing, local pivot and zoom.
