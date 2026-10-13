@@ -2,6 +2,13 @@
 
 All notable changes to UMich Campus 3D Model are recorded here. Versions use `YY.M.D.NUM`, with a separate release sequence for each day in America/Chicago.
 
+## 26.10.13.5 — 2026-10-13
+
+- Restore the full viewing range from overhead to an exactly horizontal elevation. Add a bilingual Level control that retains the current bearing, local pivot and zoom.
+- Replace low-angle ground-ray intersections with bounded orthographic panning and continuous vertical framing. Keep ground pivots stable and prevent abrupt travel, reversed directions, camera roll or tilt during pan and cursor zoom.
+- Preserve pointer zoom at every elevation; carry inspection framing through resize and clear it when returning to campus, building or plan presets. Retain explicit rotation, immediate stopping, touch safeguards and selected-building highlights.
+- Add 144 low-angle regression cases across six elevations, eight bearings and three viewport shapes, covering exact level views, pan, pointer zoom, ground pivots, resize, reset and absence of drift.
+
 ## 26.10.13.4 — 2026-10-13
 
 - Derive continuous ground and landscape lighting from the existing DEM sample field, independent of sparse triangulation and flattened building pads. Smooth upward surface geometry, welding duplicated patch vertices for shading without moving terrain or altering CAD data. Remove large triangular light/dark patches around the medical campus and Nichols Arboretum.

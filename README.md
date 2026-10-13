@@ -77,6 +77,10 @@ python3 scripts/package_delivery.py
 
 The source snapshots are included; rebuilding the delivered geometry does not require live GIS access. Temporary building caches are ignored and are invalidated when building code, curation or footprints change. Model sources and third-party notices are retained in the delivery archive.
 
+## Level views
+
+The view can tilt continuously from overhead to exactly horizontal. The Level control keeps the current bearing and scale. Low-angle vertical panning adjusts orthographic framing instead of intersecting nearly parallel ground rays, and cursor zoom stays anchored without tilting the camera. Ground pivots, immediate stopping and explicit rotation are retained. `npm run check:interaction` includes 144 low-angle cases across elevations, bearings and viewport proportions.
+
 ## Rendering checks
 
 Map skins use stable compositing and continuous lighting from the existing DEM samples, with smooth normals across duplicated top-surface vertices. Near-vertical extrusion seams are excluded from map skins; the actual terrain positions and building/tree cast shadows are retained. Buildings and landscape structures retain depth occlusion. The interactive viewer preserves the delivered CAD coordinates and model bytes.

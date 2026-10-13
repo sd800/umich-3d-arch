@@ -2,7 +2,7 @@ import {createTerrainLighting,applyTerrainLighting} from './terrain_lighting.js'
 import {prepareLandscape,prepareBuildingRoofs,stabilizeBuildingMaterial,updateCampusDepthRange,setCampusClipping,updateCampusDetailDepth,stabilizeCampusShadows,fitCampusSun} from './surface_rendering.js';
 import {groundHeight} from './ground_height.js';
 import {installMapSelection} from './map_selection.js';
-import {CampusMapControls,setRotationMode,frameCampusBox} from './campus_controls.js';
+import {CampusMapControls,setRotationMode,frameCampusBox,levelCampusView} from './campus_controls.js';
 import {parseCampusModel,nextPaint} from './model_parser.js';
 import {loadingIndicator} from './loading.js';
 import * as THREE from 'three';
@@ -22,8 +22,8 @@ Object.assign(zh,{central:'中央校区',architecture:'学校校园导览',athle
 
 if(!data.model){en.helpOffline='Double-click index.html with its assets and output folders beside it, or open the single-file offline HTML in the output folder. No server is needed for local viewing. WebGL 2 is required for interaction.';zh.helpOffline='保留 assets 和 output 文件夹，直接双击 index.html；也可打开 output 中的单文件离线 HTML。无需本地服务器，交互显示需要 WebGL 2。';}
 
-Object.assign(en,{rotationMode:'Rotate',load_local:'Reading local model',load_read:'Downloading model',load_decode:'Decoding model data',load_unpack:'Unpacking model',load_parse:'Reading geometry',load_scene:'Preparing buildings and landscape',load_render:'Drawing first view',load_ready:'Ready',load_total:'Overall',helpOrbit:'Drag with the left mouse button to pan; right-drag to rotate. Scroll to zoom at the pointer. On touch screens, one finger pans and two fingers pan or pinch to zoom. Enable Rotate for one-finger rotation. Arrow keys pan and +/− zoom when the model is focused.',mouseHelp:'Drag to pan · Right-drag to rotate · Scroll to zoom'});
-Object.assign(zh,{rotationMode:'旋转',load_local:'读取本地模型',load_read:'下载模型数据',load_decode:'解码模型数据',load_unpack:'解压模型数据',load_parse:'解析建筑几何',load_scene:'准备建筑与景观',load_render:'绘制首个视图',load_ready:'加载完成',load_total:'总体',helpOrbit:'鼠标左键拖动平移，右键拖动旋转，滚轮以指针所在位置缩放。触屏单指平移，双指平移或捏合缩放；开启“旋转”后可单指旋转。模型获得焦点时，方向键平移，＋／－缩放。',mouseHelp:'拖动平移 · 右键旋转 · 滚轮缩放'});
+Object.assign(en,{levelView:'Level',rotationMode:'Rotate',load_local:'Reading local model',load_read:'Downloading model',load_decode:'Decoding model data',load_unpack:'Unpacking model',load_parse:'Reading geometry',load_scene:'Preparing buildings and landscape',load_render:'Drawing first view',load_ready:'Ready',load_total:'Overall',helpOrbit:'Drag with the left mouse button to pan; right-drag to rotate. Scroll to zoom at the pointer. On touch screens, one finger pans and two fingers pan or pinch to zoom. Enable Rotate for one-finger rotation. Use Level for a horizontal view; vertical drags frame the elevation without moving the ground pivot. Arrow keys pan and +/− zoom when the model is focused.',mouseHelp:'Drag to pan · Right-drag to rotate · Scroll to zoom'});
+Object.assign(zh,{levelView:'水平视角',rotationMode:'旋转',load_local:'读取本地模型',load_read:'下载模型数据',load_decode:'解码模型数据',load_unpack:'解压模型数据',load_parse:'解析建筑几何',load_scene:'准备建筑与景观',load_render:'绘制首个视图',load_ready:'加载完成',load_total:'总体',helpOrbit:'鼠标左键拖动平移，右键拖动旋转，滚轮以指针所在位置缩放。触屏单指平移，双指平移或捏合缩放；开启“旋转”后可单指旋转。点击“水平视角”可平视；接近水平时，上下拖动调整立面在画面中的位置。模型获得焦点时，方向键平移，＋／－缩放。',mouseHelp:'拖动平移 · 右键旋转 · 滚轮缩放'});
 let stored=null;try{stored=localStorage.getItem('umich-model-language');}catch{}
 let lang=initialLanguage(navigator.languages?.length?navigator.languages:[navigator.language||'en'],stored);
 const t=key=>(lang==='zh'?zh[key]:en[key])||en[key]||key;
@@ -123,7 +123,7 @@ function applyLanguage(){
 }
 $('language').onclick=()=>{lang=lang==='en'?'zh':'en';try{localStorage.setItem('umich-model-language',lang);}catch{}applyLanguage();};
 function aspect(){return Math.max(host.clientWidth,1)/Math.max(host.clientHeight,1);}
-function updateFrustum(){if(!camera)return;const a=aspect();camera.left=-frameHeight*a/2;camera.right=frameHeight*a/2;camera.top=frameHeight/2;camera.bottom=-frameHeight/2;camera.updateProjectionMatrix();if(controls)updateCampusZoomLimit(camera,controls,campusDiagonal);}
+function updateFrustum(){if(!camera)return;const a=aspect();camera.left=-frameHeight*a/2;camera.right=frameHeight*a/2;camera.top=frameHeight/2;camera.bottom=-frameHeight/2;camera.updateProjectionMatrix();if(controls){controls.syncViewOffset();updateCampusZoomLimit(camera,controls,campusDiagonal);}}
 function fitBox(b,mode='aerial',pad=1.16,focus=false){
  if(!camera)return;frameHeight=frameCampusBox(camera,controls,b,{aspect:aspect(),mode,pad,distance:Math.max(3000,campusDiagonal*1.5),pivotHeight:focus?undefined:groundHeight(data,(b.min.x+b.max.x)/2,(b.min.y+b.max.y)/2)});updateFrustum();render();
 }
@@ -131,6 +131,7 @@ function setViewButtons(){for(const key of ['aerial','core','north-view','medica
 function syncRotationButton(){const b=$('rotation-mode');b.classList.toggle('active',Boolean(controls?.rotationMode));b.setAttribute('aria-pressed',String(Boolean(controls?.rotationMode)));}
 function resetInteraction(){if(controls)setRotationMode(controls,false);syncRotationButton();}
 $('rotation-mode').onclick=()=>{if(controls)setRotationMode(controls,!controls.rotationMode);syncRotationButton();};
+$('level-view').onclick=()=>{if(!controls)return;viewMode='level';setViewButtons();levelCampusView(controls);render(false);};
 function fullView(mode){if(mode==='plan')resetInteraction();viewMode=mode;setViewButtons();if(!campus)return;const zone={core:'central','north-view':'north','medical-view':'medical','athletic-view':'athletic'}[mode];const bounds=data.districtBounds[zone];const b=bounds?new THREE.Box3(new THREE.Vector3(bounds[0],bounds[1],0),new THREE.Vector3(bounds[2],bounds[3],150)):new THREE.Box3().setFromObject(campus);fitBox(b,mode==='plan'?'plan':'aerial');}
 function focusBuilding(code){if(!modelReady){pendingFocus=code;return;}const g=buildings.get(code);if(!g||!camera)return;g.visible=true;g.updateWorldMatrix(true,true);viewMode='focus';setViewButtons();fitBox(new THREE.Box3().setFromObject(g),'aerial',1.55,true);}
 for(const id of ['north-view','medical-view','athletic-view'])$(id).onclick=()=>fullView(id);
@@ -151,7 +152,7 @@ function updateLabels(){
 let renderQueued=false;
 function render(updateShadows=true){if(renderer&&updateShadows!==false)renderer.shadowMap.needsUpdate=true;if(!renderer||!modelReady||renderQueued)return;renderQueued=true;requestAnimationFrame(()=>{renderQueued=false;drawScene();});}
 function drawScene(){
- if(!renderer||!modelReady)return;updateCampusDepthRange(camera,renderBounds);updateCampusDetailDepth(camera,campus,depthBits);renderer.render(scene,camera);const n=new THREE.Vector3(0,1,0).transformDirection(camera.matrixWorldInverse);$('north-arrow').style.transform='rotate('+Math.atan2(n.x,n.y)+'rad)';
+ if(!renderer||!modelReady)return;updateCampusDepthRange(camera,renderBounds);updateCampusDetailDepth(camera,campus,depthBits);renderer.render(scene,camera);const level=Math.abs(controls?.getPolarAngle()-Math.PI/2)<1e-7;$('level-view').classList.toggle('active',level);$('level-view').setAttribute('aria-pressed',String(level));const n=new THREE.Vector3(0,1,0).transformDirection(camera.matrixWorldInverse);$('north-arrow').style.transform='rotate('+Math.atan2(n.x,n.y)+'rad)';
  const mpp=(camera.right-camera.left)/camera.zoom/Math.max(host.clientWidth,1),raw=mpp*80,pow=10**Math.floor(Math.log10(raw));const length=[1,2,5,10].map(x=>x*pow).find(x=>x>=raw)||10*pow;
  $('scale-line').style.width=(length/mpp)+'px';$('scale-text').textContent=length<1?Math.round(length*100)+' cm':length+' m';updateLabels();
 }

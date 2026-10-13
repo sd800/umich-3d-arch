@@ -4,7 +4,7 @@ import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import {Box3,Vector3,OrthographicCamera,Raycaster,Vector2,MOUSE,TOUCH} from 'three';
 import {OrbitControls} from 'three/addons/controls/OrbitControls.js';
-import {CampusMapControls,frameCampusBox,setRotationMode} from './campus_controls.js';
+import {CampusMapControls,frameCampusBox,setRotationMode,levelCampusView} from './campus_controls.js';
 import {updateCampusZoomLimit} from './camera_limits.js';
 const validation=JSON.parse(readFileSync(new URL('../output/3DS导入校验.json',import.meta.url),'utf8'));
 const campus=new Box3(new Vector3(...validation.box_min),new Vector3(...validation.box_max));
@@ -39,7 +39,7 @@ for(const aspect of [1000/650,1,.46])for(const mode of ['aerial','plan'])for(let
  const t=(controls.target.z-ray.ray.origin.z)/ray.ray.direction.z,anchor=ray.ray.at(t,new Vector3());const zoomBefore=pixel(anchor,camera);
  controls._handleMouseWheel(controls._customWheelEvent({clientX:647,clientY:305.5,deltaY:-100,deltaMode:0,ctrlKey:false}));camera.updateMatrixWorld(true);const zoomAfter=pixel(anchor,camera);
  near(zoomAfter.distanceTo(zoomBefore),0,'Cursor zoom anchor');near(controls.target.z,z,'Zoom pivot remains grounded');
- assert.ok(camera.zoom>1);controls.rotateUp(-100);assert.ok(controls.getPolarAngle()<=Math.PI*.375+1e-8);assert.ok(camera.position.z>controls.target.z);
+ assert.ok(camera.zoom>1);controls.rotateUp(-100);assert.ok(controls.getPolarAngle()<=Math.PI/2+1e-8);assert.ok(camera.position.z>=controls.target.z-1e-8);
  const preset=sample.clone().translate(new Vector3(1400,-2500,18));frameCampusBox(camera,controls,preset,{aspect,mode,distance:Math.max(3000,diagonal*1.5),pivotHeight:0});const frozen=camera.position.clone();for(let i=0;i<30;i++)controls.update();near(camera.position.distanceTo(frozen),0,'Preset has no residual movement');const presetCenter=preset.getCenter(new Vector3());near(controls.target.x,presetCenter.x,'Local pivot X');near(controls.target.y,presetCenter.y,'Local pivot Y');near(controls.target.z,0,'Ground pivot Z');
  assert.equal(controls.mouseButtons.LEFT,MOUSE.PAN);assert.equal(controls.touches.ONE,TOUCH.PAN);assert.equal(controls.touches.TWO,TOUCH.DOLLY_PAN);
  setRotationMode(controls,true);assert.equal(controls.mouseButtons.LEFT,MOUSE.ROTATE);assert.equal(controls.touches.ONE,TOUCH.ROTATE);setRotationMode(controls,false);
@@ -69,3 +69,49 @@ for(let i=0;i<8;i++){
  assert.ok(Math.abs(controls.target.z-controls.groundHeight(controls.target.x,controls.target.y))<.01);
 }
 console.log('Terrain passed: bilinear lookup, invisible pivot rebasing and pan alignment across sloping ground.');
+
+// Level views used to be clamped at 22.5 degrees above the horizon. Test the
+// complete range, including the exact ray/ground singularity and both sides of
+// the old cursor-zoom cutoff, at every bearing and viewport proportion.
+let levelCases=0;
+for(const aspect of [1000/650,1,.46])for(const elevation of [30,22.5,20,5,.001,0])for(let bearing=0;bearing<8;bearing++){
+ const {camera,controls}=setup(sample,aspect);controls.groundHeight=()=>0;controls.focusPivot=false;
+ controls.rotateLeft(bearing*Math.PI/4);controls.rotateUp(controls.getPolarAngle()-(Math.PI/2-elevation*Math.PI/180));camera.updateMatrixWorld(true);
+ const polar=controls.getPolarAngle(),rotation=camera.quaternion.clone();near(polar,Math.PI/2-elevation*Math.PI/180,'Requested elevation reached');
+ const anchor=controls.target.clone().add(new Vector3(0,0,35)),before=pixel(anchor,camera),target=controls.target.clone();
+ controls.pan(63,-47);camera.updateMatrixWorld(true);const panned=pixel(anchor,camera);
+ near(panned.x-before.x,63,'Low-angle pan X follows screen');near(panned.y-before.y,-47,'Low-angle pan Y follows screen');near(controls.target.z,target.z,'Low-angle orbit target stays on ground');near(camera.quaternion.angleTo(rotation),0,'Low-angle pan never tilts');
+ const worldPixel=(camera.top-camera.bottom)/camera.zoom/element.clientHeight;
+ assert.ok(controls.target.distanceTo(target)<worldPixel*Math.hypot(63,-47)*4,'Low-angle pan cannot cause enormous ground travel');
+ const mouseProbe=controls.target.clone().add(new Vector3(0,0,20)),mouseBefore=pixel(mouseProbe,camera);
+ controls._handleMouseDownPan({clientX:517,clientY:364});controls._handleMouseMovePan({clientX:549,clientY:382});camera.updateMatrixWorld(true);const mouseAfter=pixel(mouseProbe,camera);
+ near(mouseAfter.x-mouseBefore.x,32,'Low-angle mouse pan X');near(mouseAfter.y-mouseBefore.y,18,'Low-angle mouse pan Y');
+ const zoomAnchor=new Vector3(.26,.18,0).unproject(camera),zoomBefore=pixel(zoomAnchor,camera);
+ controls._handleMouseWheel(controls._customWheelEvent({clientX:647,clientY:305.5,deltaY:-100,deltaMode:0,ctrlKey:false}));camera.updateMatrixWorld(true);
+ near(pixel(zoomAnchor,camera).distanceTo(zoomBefore),0,'Low-angle cursor zoom preserves pointer');near(controls.getPolarAngle(),polar,'Low-angle zoom never tilts');near(controls.target.z,0,'Low-angle zoom keeps ground pivot');
+ // Real one-finger and two-finger paths use the same bounded screen mapping.
+ controls._pointers=[1];controls._pointerPositions={1:new Vector2(450,320)};
+ const touchProbe=controls.target.clone().add(new Vector3(0,0,20)),touchBefore=pixel(touchProbe,camera);
+ controls._handleTouchStartPan({pointerId:1,pageX:450,pageY:320});controls._handleTouchMovePan({pointerId:1,pageX:464,pageY:311});controls.update();camera.updateMatrixWorld(true);
+ near(pixel(touchProbe,camera).x-touchBefore.x,14,'Level one-finger pan X');near(pixel(touchProbe,camera).y-touchBefore.y,-9,'Level one-finger pan Y');
+ controls._pointers=[1,2];controls._pointerPositions={1:new Vector2(450,320),2:new Vector2(550,400)};
+ controls._handleTouchStartDollyPan({pointerId:1,pageX:450,pageY:320});
+ const pinchAnchor=new Vector3((500-17)/1000*2-1,-(360-39)/650*2+1,0).unproject(camera),pinchBefore=pixel(pinchAnchor,camera);
+ controls._pointerPositions[2].set(560,408);controls._pointerPositions[1].set(440,312);
+ controls._handleTouchMoveDollyPan({pointerId:1,pageX:440,pageY:312,clientX:440,clientY:312});controls.update();camera.updateMatrixWorld(true);
+ near(pixel(pinchAnchor,camera).distanceTo(pinchBefore),0,'Level pinch preserves its midpoint');near(controls.getPolarAngle(),polar,'Level pinch never tilts');near(controls.target.z,0,'Level touch keeps ground pivot');
+ const frozenPosition=camera.position.clone(),frozenTarget=controls.target.clone(),frozenProjection=camera.projectionMatrix.clone();for(let i=0;i<30;i++)controls.update();
+ near(camera.position.distanceTo(frozenPosition),0,'Low-angle release stops movement');near(controls.target.distanceTo(frozenTarget),0,'Low-angle release stops pivot drift');assert.deepEqual(camera.projectionMatrix.elements,frozenProjection.elements);
+ // Returning above the horizon must absorb the inspection offset without drift.
+ controls.rotateUp(controls.getPolarAngle()-Math.PI/4);camera.updateMatrixWorld(true);assert.ok(!camera.view?.enabled,'Ground navigation recovers its centered frustum');near(controls.target.z,0,'Returning to aerial retains a ground pivot');
+ levelCampusView(controls);near(controls.getPolarAngle(),Math.PI/2,'Level control reaches exactly horizontal');
+ controls.pan(0,80);assert.ok(camera.view?.enabled,'At level, vertical framing moves without lifting the ground pivot');near(controls.target.z,0,'Level framing keeps pivot grounded');
+ const shiftedAnchor=controls.target.clone().add(new Vector3(0,0,20)),shiftedBefore=shiftedAnchor.clone().project(camera),zoom=camera.zoom;
+ // Scale the frustum and viewport together as the viewer does on resize.
+ const oldHeight=element.clientHeight;element.clientHeight=oldHeight*1.2;camera.top*=1.2;camera.bottom*=1.2;camera.updateProjectionMatrix();controls.syncViewOffset();assert.equal(camera.zoom,zoom);const resized=shiftedAnchor.clone().project(camera);near(resized.x,shiftedBefore.x,'Resize preserves horizontal framing');near(resized.y*1.2,shiftedBefore.y,'Resize preserves vertical framing in pixels');element.clientHeight=oldHeight;
+ assert.ok(camera.projectionMatrix.elements.every(Number.isFinite),'Resizing a level view keeps finite projection');
+ frameCampusBox(camera,controls,sample,{aspect,mode:'plan',pivotHeight:0});assert.ok(!camera.view?.enabled,'Plan preset clears level framing');
+ assert.ok(camera.position.z>controls.target.z);levelCases++;
+}
+const levelOnly=setup();levelCampusView(levelOnly.controls);let framingChanges=0;levelOnly.controls.addEventListener('change',()=>framingChanges++);levelOnly.controls.pan(0,30);assert.ok(framingChanges>0,'Pure vertical framing at level must schedule rendering');
+console.log(`Level navigation passed: ${levelCases} elevation/bearing/viewport cases, exact horizontal view, bounded pan, pointer zoom, grounded pivots, resize/reset and no drift.`);

@@ -82,6 +82,10 @@ python3 scripts/package_delivery.py
 The source snapshots are included; rebuilding the delivered geometry does not require live GIS access. Temporary building caches are ignored and are invalidated when building code, curation or footprints change. Model sources and third-party notices are retained in the delivery archive.
 '''
 readme+='''
+## Level views
+
+The view can tilt continuously from overhead to exactly horizontal. The Level control keeps the current bearing and scale. Low-angle vertical panning adjusts orthographic framing instead of intersecting nearly parallel ground rays, and cursor zoom stays anchored without tilting the camera. Ground pivots, immediate stopping and explicit rotation are retained. `npm run check:interaction` includes 144 low-angle cases across elevations, bearings and viewport proportions.
+
 ## Rendering checks
 
 Map skins use stable compositing and continuous lighting from the existing DEM samples, with smooth normals across duplicated top-surface vertices. Near-vertical extrusion seams are excluded from map skins; the actual terrain positions and building/tree cast shadows are retained. Buildings and landscape structures retain depth occlusion. The interactive viewer preserves the delivered CAD coordinates and model bytes.
@@ -163,7 +167,7 @@ validation=f'''# Delivery validation
 - Published / municipal landmark peaks agree with their selected model height values within 1 cm.
 - Viewer tests: English/Chinese language selection; HTTP compressed binary, local classic script, inline model and error paths; SHA-256 equality with original CAD bytes.
 - Camera checks: {len(records)} building targets × three viewport proportions = {len(records)*3} zoom-out/refit cases, retaining access to the whole campus.
-- Navigation: 48 viewport, bearing and view combinations; mouse/touch direction, terrain pivots, cursor zoom, horizon and zoom-step limits, no inertia, drag/pinch selection and local preset checks.
+- Navigation: 48 viewport, bearing and view combinations plus 144 exact-level/low-angle cases; mouse/touch direction, terrain pivots, cursor zoom, horizon and zoom-step limits, no inertia, drag/pinch selection and local preset checks.
 - Loading: streamed-byte integrity, worker geometry/face groups identical to CAD import, and main-thread fallback/error checks.
 - Browser checks: real loading percentage and byte counts, district presets, pan/rotation, landmark zoom-out and responsive layout.
 - Rendering checks: original CAD vertices retained; upward map skins, structural occlusion and 48 depth-frustum cases. Real WebGL checks cover 48 moving views, 144 pixel samples, glass occlusion and removal of shadows cast by sectioned geometry. Terrain GPU checks reproduce the original per-triangle lighting discontinuity and confirm continuous shading independent of the terrain triangle diagonal. Roof checks include 800 samples and 48 uniform-color views, physical depth separation across buffer formats, stable roof lighting, taller occluders and an actual North Campus coplanar-roof regression.
