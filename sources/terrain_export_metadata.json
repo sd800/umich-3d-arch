@@ -1,0 +1,30 @@
+{
+  "href": "https://elevation.nationalmap.gov/arcgis/rest/directories/elevation_output/3DEPElevation_ImageServer/_ags_4744b3a0_4efe_4b65_8bb2_27c0b0a3e48a.tif",
+  "width": 320,
+  "height": 460,
+  "extent": {
+    "xmin": 271540.2465416974,
+    "ymin": 4680358.545292782,
+    "xmax": 277408.35471109446,
+    "ymax": 4688284.723065088,
+    "spatialReference": {
+      "wkid": 32617,
+      "latestWkid": 32617
+    }
+  },
+  "scale": 0,
+  "request": {
+    "bbox": "271540.2465416974,4680358.545292782,277408.35471109446,4688284.723065088",
+    "bboxSR": 32617,
+    "imageSR": 32617,
+    "size": "320,460",
+    "format": "tiff",
+    "pixelType": "F32",
+    "interpolation": "RSP_BilinearInterpolation",
+    "renderingRule": "{\"rasterFunction\": \"None\"}",
+    "f": "json",
+    "adjustAspectRatio": "false"
+  },
+  "service": "https://elevation.nationalmap.gov/arcgis/rest/services/3DEPElevation/ImageServer",
+  "date": "2026-10-12"
+}

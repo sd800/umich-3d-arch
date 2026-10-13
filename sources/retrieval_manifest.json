@@ -1,0 +1,26 @@
+[
+  {
+    "name": "trees",
+    "url": "https://gisapi.fo.umich.edu/arcgis/rest/services/BaseMap/cMapBase_TC_NoLabels_WM/MapServer/1",
+    "count": 13737,
+    "query_bbox_wgs84": "-83.769,42.242,-83.701,42.315",
+    "date": "2026-10-12",
+    "complete_query": true
+  },
+  {
+    "name": "sidewalks",
+    "url": "https://gisapi.fo.umich.edu/arcgis/rest/services/BaseMap/cMapBase_TC_NoLabels_WM/MapServer/15",
+    "count": 3271,
+    "query_bbox_wgs84": "-83.769,42.242,-83.701,42.315",
+    "date": "2026-10-12",
+    "complete_query": true
+  },
+  {
+    "name": "campus_areas",
+    "url": "https://gisapi.fo.umich.edu/arcgis/rest/services/BaseMap/cMapBase_TC_NoLabels_WM/MapServer/19",
+    "count": 7652,
+    "query_bbox_wgs84": "-83.769,42.242,-83.701,42.315",
+    "date": "2026-10-12",
+    "complete_query": true
+  }
+]

@@ -1,0 +1,488 @@
+{
+ "currentVersion": 11.5,
+ "cimVersion": "3.5.0",
+ "serviceDescription": "",
+ "mapName": "cMapBase_TC_NoLabels_WM",
+ "description": "",
+ "copyrightText": "University of Michigan FOIS RMS",
+ "supportsDynamicLayers": true,
+ "layers": [
+  {
+   "id": 0,
+   "name": "Base Map",
+   "parentLayerId": -1,
+   "defaultVisibility": true,
+   "subLayerIds": [
+    1,
+    21,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20
+   ],
+   "minScale": 0,
+   "maxScale": 0,
+   "type": "Group Layer",
+   "supportsDynamicLegends": false
+  },
+  {
+   "id": 1,
+   "name": "Tree Base",
+   "parentLayerId": 0,
+   "defaultVisibility": true,
+   "subLayerIds": null,
+   "minScale": 4513.988705,
+   "maxScale": 0,
+   "type": "Feature Layer",
+   "geometryType": "esriGeometryPoint",
+   "supportsDynamicLegends": true
+  },
+  {
+   "id": 21,
+   "name": "Campus POI",
+   "parentLayerId": 0,
+   "defaultVisibility": true,
+   "subLayerIds": null,
+   "minScale": 0,
+   "maxScale": 0,
+   "type": "Feature Layer",
+   "geometryType": "esriGeometryPolygon",
+   "supportsDynamicLegends": true
+  },
+  {
+   "id": 2,
+   "name": "Overpasses",
+   "parentLayerId": 0,
+   "defaultVisibility": true,
+   "subLayerIds": null,
+   "minScale": 10500,
+   "maxScale": 0,
+   "type": "Feature Layer",
+   "geometryType": "esriGeometryPolygon",
+   "supportsDynamicLegends": true
+  },
+  {
+   "id": 3,
+   "name": "Structures",
+   "parentLayerId": 0,
+   "defaultVisibility": true,
+   "subLayerIds": null,
+   "minScale": 10500,
+   "maxScale": 0,
+   "type": "Feature Layer",
+   "geometryType": "esriGeometryPolygon",
+   "supportsDynamicLegends": true
+  },
+  {
+   "id": 4,
+   "name": "Athletic Area Markings",
+   "parentLayerId": 0,
+   "defaultVisibility": true,
+   "subLayerIds": null,
+   "minScale": 21000,
+   "maxScale": 0,
+   "type": "Feature Layer",
+   "geometryType": "esriGeometryPolyline",
+   "supportsDynamicLegends": true
+  },
+  {
+   "id": 5,
+   "name": "Fences",
+   "parentLayerId": 0,
+   "defaultVisibility": true,
+   "subLayerIds": null,
+   "minScale": 566,
+   "maxScale": 0,
+   "type": "Feature Layer",
+   "geometryType": "esriGeometryPolyline",
+   "supportsDynamicLegends": true
+  },
+  {
+   "id": 6,
+   "name": "Railroad",
+   "parentLayerId": 0,
+   "defaultVisibility": true,
+   "subLayerIds": null,
+   "minScale": 42000,
+   "maxScale": 0,
+   "type": "Feature Layer",
+   "geometryType": "esriGeometryPolyline",
+   "supportsDynamicLegends": true
+  },
+  {
+   "id": 7,
+   "name": "Road Bridges",
+   "parentLayerId": 0,
+   "defaultVisibility": true,
+   "subLayerIds": null,
+   "minScale": 5250,
+   "maxScale": 0,
+   "type": "Feature Layer",
+   "geometryType": "esriGeometryPolygon",
+   "supportsDynamicLegends": true
+  },
+  {
+   "id": 8,
+   "name": "Railroad Bridges",
+   "parentLayerId": 0,
+   "defaultVisibility": true,
+   "subLayerIds": null,
+   "minScale": 5250,
+   "maxScale": 0,
+   "type": "Feature Layer",
+   "geometryType": "esriGeometryPolygon",
+   "supportsDynamicLegends": true
+  },
+  {
+   "id": 9,
+   "name": "Buildings",
+   "parentLayerId": 0,
+   "defaultVisibility": true,
+   "subLayerIds": null,
+   "minScale": 144500,
+   "maxScale": 0,
+   "type": "Feature Layer",
+   "geometryType": "esriGeometryPolygon",
+   "supportsDynamicLegends": true
+  },
+  {
+   "id": 10,
+   "name": "City of Ann Arbor Roads",
+   "parentLayerId": 0,
+   "defaultVisibility": true,
+   "subLayerIds": null,
+   "minScale": 145000,
+   "maxScale": 0,
+   "type": "Feature Layer",
+   "geometryType": "esriGeometryPolygon",
+   "supportsDynamicLegends": true
+  },
+  {
+   "id": 11,
+   "name": "Walls",
+   "parentLayerId": 0,
+   "defaultVisibility": true,
+   "subLayerIds": null,
+   "minScale": 5204,
+   "maxScale": 0,
+   "type": "Feature Layer",
+   "geometryType": "esriGeometryPolygon",
+   "supportsDynamicLegends": true
+  },
+  {
+   "id": 13,
+   "name": "Parking Lots",
+   "parentLayerId": 0,
+   "defaultVisibility": true,
+   "subLayerIds": null,
+   "minScale": 21000,
+   "maxScale": 0,
+   "type": "Feature Layer",
+   "geometryType": "esriGeometryPolygon",
+   "supportsDynamicLegends": true
+  },
+  {
+   "id": 14,
+   "name": "Dams",
+   "parentLayerId": 0,
+   "defaultVisibility": true,
+   "subLayerIds": null,
+   "minScale": 5250,
+   "maxScale": 0,
+   "type": "Feature Layer",
+   "geometryType": "esriGeometryPolygon",
+   "supportsDynamicLegends": true
+  },
+  {
+   "id": 15,
+   "name": "Sidewalk Areas",
+   "parentLayerId": 0,
+   "defaultVisibility": true,
+   "subLayerIds": null,
+   "minScale": 10500,
+   "maxScale": 0,
+   "type": "Feature Layer",
+   "geometryType": "esriGeometryPolygon",
+   "supportsDynamicLegends": true
+  },
+  {
+   "id": 16,
+   "name": "Water Features",
+   "parentLayerId": 0,
+   "defaultVisibility": true,
+   "subLayerIds": null,
+   "minScale": 145000,
+   "maxScale": 0,
+   "type": "Feature Layer",
+   "geometryType": "esriGeometryPolygon",
+   "supportsDynamicLegends": true
+  },
+  {
+   "id": 17,
+   "name": "Golf Course",
+   "parentLayerId": 0,
+   "defaultVisibility": true,
+   "subLayerIds": null,
+   "minScale": 21000,
+   "maxScale": 0,
+   "type": "Feature Layer",
+   "geometryType": "esriGeometryPolygon",
+   "supportsDynamicLegends": true
+  },
+  {
+   "id": 18,
+   "name": "Athletic Field Areas",
+   "parentLayerId": 0,
+   "defaultVisibility": true,
+   "subLayerIds": null,
+   "minScale": 21000,
+   "maxScale": 0,
+   "type": "Feature Layer",
+   "geometryType": "esriGeometryPolygon",
+   "supportsDynamicLegends": true
+  },
+  {
+   "id": 19,
+   "name": "UM Campus Areas",
+   "parentLayerId": 0,
+   "defaultVisibility": true,
+   "subLayerIds": null,
+   "minScale": 145000,
+   "maxScale": 0,
+   "type": "Feature Layer",
+   "geometryType": "esriGeometryPolygon",
+   "supportsDynamicLegends": true
+  },
+  {
+   "id": 20,
+   "name": "Background",
+   "parentLayerId": 0,
+   "defaultVisibility": true,
+   "subLayerIds": null,
+   "minScale": 145000,
+   "maxScale": 0,
+   "type": "Feature Layer",
+   "geometryType": "esriGeometryPolygon",
+   "supportsDynamicLegends": true
+  }
+ ],
+ "tables": [],
+ "spatialReference": {
+  "wkid": 102100,
+  "latestWkid": 3857,
+  "xyTolerance": 0.001,
+  "zTolerance": 0.001,
+  "mTolerance": 0.001,
+  "falseX": -20037700,
+  "falseY": -30241100,
+  "xyUnits": 10000,
+  "falseZ": -100000,
+  "zUnits": 10000,
+  "falseM": -100000,
+  "mUnits": 10000
+ },
+ "singleFusedMapCache": true,
+ "tileInfo": {
+  "rows": 256,
+  "cols": 256,
+  "dpi": 96,
+  "format": "PNG",
+  "compressionQuality": 0,
+  "origin": {
+   "x": -20037700,
+   "y": 30241100
+  },
+  "spatialReference": {
+   "wkid": 102100,
+   "latestWkid": 3857,
+   "xyTolerance": 0.001,
+   "zTolerance": 0.001,
+   "mTolerance": 0.001,
+   "falseX": -20037700,
+   "falseY": -30241100,
+   "xyUnits": 1.4892314192838538E8,
+   "falseZ": -100000,
+   "zUnits": 10000,
+   "falseM": -100000,
+   "mUnits": 10000
+  },
+  "lods": [
+   {
+    "level": 0,
+    "resolution": 38.21851412877826,
+    "scale": 144447.63852
+   },
+   {
+    "level": 1,
+    "resolution": 19.10925706438913,
+    "scale": 72223.81926
+   },
+   {
+    "level": 2,
+    "resolution": 9.554628532194565,
+    "scale": 36111.90963
+   },
+   {
+    "level": 3,
+    "resolution": 4.777314267420201,
+    "scale": 18055.95482
+   },
+   {
+    "level": 4,
+    "resolution": 2.388657133180933,
+    "scale": 9027.977408
+   },
+   {
+    "level": 5,
+    "resolution": 1.1943285665904666,
+    "scale": 4513.988704
+   },
+   {
+    "level": 6,
+    "resolution": 0.5971642832952333,
+    "scale": 2256.994352
+   },
+   {
+    "level": 7,
+    "resolution": 0.29858214164761665,
+    "scale": 1128.497176
+   },
+   {
+    "level": 8,
+    "resolution": 0.14929107082380833,
+    "scale": 564.248588
+   },
+   {
+    "level": 9,
+    "resolution": 0.07464553541190416,
+    "scale": 282.124294
+   },
+   {
+    "level": 10,
+    "resolution": 0.03732276770595208,
+    "scale": 141.062147
+   },
+   {
+    "level": 11,
+    "resolution": 0.01866138385297604,
+    "scale": 70.5310735
+   }
+  ]
+ },
+ "storageInfo": {
+  "storageFormat": "esriMapCacheStorageModeCompactV2",
+  "packetSize": 128
+ },
+ "initialExtent": {
+  "xmin": -9336452.431263804,
+  "ymin": 5188299.387828815,
+  "xmax": -9306600.192365963,
+  "ymax": 5214306.4297232805,
+  "spatialReference": {
+   "wkid": 102100,
+   "latestWkid": 3857,
+   "xyTolerance": 0.001,
+   "zTolerance": 0.001,
+   "mTolerance": 0.001,
+   "falseX": -20037700,
+   "falseY": -30241100,
+   "xyUnits": 10000,
+   "falseZ": -100000,
+   "zUnits": 10000,
+   "falseM": -100000,
+   "mUnits": 10000
+  }
+ },
+ "fullExtent": {
+  "xmin": -9330636.6783,
+  "ymin": 5192418.435000002,
+  "xmax": -9309709.3478,
+  "ymax": 5210467.375399999,
+  "spatialReference": {
+   "wkid": 102100,
+   "latestWkid": 3857,
+   "xyTolerance": 0.001,
+   "zTolerance": 0.001,
+   "mTolerance": 0.001,
+   "falseX": -20037700,
+   "falseY": -30241100,
+   "xyUnits": 10000,
+   "falseZ": -100000,
+   "zUnits": 10000,
+   "falseM": -100000,
+   "mUnits": 10000
+  }
+ },
+ "datesInUnknownTimezone": false,
+ "minScale": 144447.63852,
+ "maxScale": 70.5310735,
+ "units": "esriMeters",
+ "supportedImageFormatTypes": "PNG32,PNG24,PNG,JPG,DIB,TIFF,EMF,PS,PDF,GIF,SVG,SVGZ,BMP",
+ "documentInfo": {
+  "Title": "cMapBase_WM",
+  "Author": "",
+  "Comments": "",
+  "Subject": "",
+  "Category": "",
+  "Version": "3.5.0",
+  "AntialiasingMode": "Fast",
+  "TextAntialiasingMode": "Force",
+  "Keywords": ""
+ },
+ "supportsQueryDomains": true,
+ "capabilities": "Query,Map,Data",
+ "supportedQueryFormats": "JSON, geoJSON, PBF",
+ "exportTilesAllowed": false,
+ "referenceScale": 1378.0,
+ "datumTransformations": [
+  {
+   "geoTransforms": [
+    {
+     "wkid": 108190,
+     "latestWkid": 108190,
+     "transformForward": false,
+     "name": "WGS_1984_(ITRF00)_To_NAD_1983"
+    }
+   ]
+  },
+  {
+   "geoTransforms": [
+    {
+     "wkid": 108190,
+     "latestWkid": 108190,
+     "transformForward": true,
+     "name": "WGS_1984_(ITRF00)_To_NAD_1983"
+    }
+   ]
+  }
+ ],
+ "supportsDatumTransformation": true,
+ "floorAwareMapProperties": {
+  "defaultFloorFilterSettings": {"isEnabled": true}
+ },
+ "archivingInfo": {"supportsHistoricMoment": false},
+ "supportsClipping": true,
+ "supportsSpatialFilter": true,
+ "supportsTimeRelation": true,
+ "supportsQueryDataElements": true,
+ "mapUnits": {"uwkid": 9001},
+ "maxSelectionCount": 2000,
+ "maxRecordCount": 2000,
+ "maxImageHeight": 4096,
+ "maxImageWidth": 4096,
+ "supportedExtensions": ""
+}

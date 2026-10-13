@@ -1,0 +1,410 @@
+[
+  {
+    "name": "Ingalls Mall North",
+    "name_zh": "英格尔斯林荫广场北段",
+    "source": "https://map.fo.umich.edu/",
+    "note": "English is the original GIS label; Chinese is an independent faithful translation. GIS typos are retained here for traceability."
+  },
+  {
+    "name": "Gateway Garden",
+    "name_zh": "Gateway Garden（门户花园）",
+    "source": "https://map.fo.umich.edu/",
+    "note": "English is the original GIS label; Chinese is an independent faithful translation. GIS typos are retained here for traceability."
+  },
+  {
+    "name": "Palmer Field",
+    "name_zh": "帕尔默运动场",
+    "source": "https://map.fo.umich.edu/",
+    "note": "English is the original GIS label; Chinese is an independent faithful translation. GIS typos are retained here for traceability."
+  },
+  {
+    "name": "Elbel Field",
+    "name_zh": "埃尔贝尔运动场",
+    "source": "https://map.fo.umich.edu/",
+    "note": "English is the original GIS label; Chinese is an independent faithful translation. GIS typos are retained here for traceability."
+  },
+  {
+    "name": "U-M Track and Field Stadum",
+    "name_zh": "密西根大学田径场",
+    "source": "https://map.fo.umich.edu/",
+    "note": "English is the original GIS label; Chinese is an independent faithful translation. GIS typos are retained here for traceability."
+  },
+  {
+    "name": "East University Mall North",
+    "name_zh": "东大学大道林荫广场北段",
+    "source": "https://map.fo.umich.edu/",
+    "note": "English is the original GIS label; Chinese is an independent faithful translation. GIS typos are retained here for traceability."
+  },
+  {
+    "name": "Alexandra Hicks Herb Knot Garden",
+    "name_zh": "亚历山德拉·希克斯香草结园",
+    "source": "https://map.fo.umich.edu/",
+    "note": "English is the original GIS label; Chinese is an independent faithful translation. GIS typos are retained here for traceability."
+  },
+  {
+    "name": "Wilpon Complex",
+    "name_zh": "威尔庞体育设施群",
+    "source": "https://map.fo.umich.edu/",
+    "note": "English is the original GIS label; Chinese is an independent faithful translation. GIS typos are retained here for traceability."
+  },
+  {
+    "name": "Michigan Stadium Field",
+    "name_zh": "密西根体育场比赛场地",
+    "source": "https://map.fo.umich.edu/",
+    "note": "English is the original GIS label; Chinese is an independent faithful translation. GIS typos are retained here for traceability."
+  },
+  {
+    "name": "Mcity",
+    "name_zh": "Mcity 智能网联汽车试验场",
+    "source": "https://map.fo.umich.edu/",
+    "note": "English is the original GIS label; Chinese is an independent faithful translation. GIS typos are retained here for traceability."
+  },
+  {
+    "name": "Betsy Barbour Front Lawn",
+    "name_zh": "贝齐·巴伯宿舍楼前草坪",
+    "source": "https://map.fo.umich.edu/",
+    "note": "English is the original GIS label; Chinese is an independent faithful translation. GIS typos are retained here for traceability."
+  },
+  {
+    "name": "Mitchell Field",
+    "name_zh": "米切尔运动场",
+    "source": "https://map.fo.umich.edu/",
+    "note": "English is the original GIS label; Chinese is an independent faithful translation. GIS typos are retained here for traceability."
+  },
+  {
+    "name": "Duderstadt Center Front Lawn",
+    "name_zh": "杜德施塔特中心前草坪",
+    "source": "https://map.fo.umich.edu/",
+    "note": "English is the original GIS label; Chinese is an independent faithful translation. GIS typos are retained here for traceability."
+  },
+  {
+    "name": "Gerstacker Grove",
+    "name_zh": "格斯塔克尔林园",
+    "source": "https://map.fo.umich.edu/",
+    "note": "English is the original GIS label; Chinese is an independent faithful translation. GIS typos are retained here for traceability."
+  },
+  {
+    "name": "Front Lawn Michigan Union",
+    "name_zh": "密西根学生会馆前草坪",
+    "source": "https://map.fo.umich.edu/",
+    "note": "English is the original GIS label; Chinese is an independent faithful translation. GIS typos are retained here for traceability."
+  },
+  {
+    "name": "Front of Angel Hall",
+    "name_zh": "安杰尔楼前广场",
+    "source": "https://map.fo.umich.edu/",
+    "note": "English is the original GIS label; Chinese is an independent faithful translation. GIS typos are retained here for traceability."
+  },
+  {
+    "name": "Lawn Between Gorguze and FXB",
+    "name_zh": "戈古兹楼与巴尼奥楼之间的草坪",
+    "source": "https://map.fo.umich.edu/",
+    "note": "English is the original GIS label; Chinese is an independent faithful translation. GIS typos are retained here for traceability."
+  },
+  {
+    "name": "Shapiro Undergraduate Library Plaza",
+    "name_zh": "夏皮罗本科图书馆广场",
+    "source": "https://map.fo.umich.edu/",
+    "note": "English is the original GIS label; Chinese is an independent faithful translation. GIS typos are retained here for traceability."
+  },
+  {
+    "name": "U-M Soccer Stadium",
+    "name_zh": "密西根大学足球场",
+    "source": "https://map.fo.umich.edu/",
+    "note": "English is the original GIS label; Chinese is an independent faithful translation. GIS typos are retained here for traceability."
+  },
+  {
+    "name": "Rackham East Lawn",
+    "name_zh": "拉克姆研究生院东草坪",
+    "source": "https://map.fo.umich.edu/",
+    "note": "English is the original GIS label; Chinese is an independent faithful translation. GIS typos are retained here for traceability."
+  },
+  {
+    "name": "Lawn Between Walgreen Drama Center and Pierpont",
+    "name_zh": "沃尔格林戏剧中心与皮尔庞特中心之间的草坪",
+    "source": "https://map.fo.umich.edu/",
+    "note": "English is the original GIS label; Chinese is an independent faithful translation. GIS typos are retained here for traceability."
+  },
+  {
+    "name": "William Clay Ford Outdoor Courts",
+    "name_zh": "威廉·克莱·福特室外球场",
+    "source": "https://map.fo.umich.edu/",
+    "note": "English is the original GIS label; Chinese is an independent faithful translation. GIS typos are retained here for traceability."
+  },
+  {
+    "name": "Nichols Arboretum",
+    "name_zh": "尼科尔斯树木园",
+    "source": "https://map.fo.umich.edu/",
+    "note": "English is the original GIS label; Chinese is an independent faithful translation. GIS typos are retained here for traceability."
+  },
+  {
+    "name": "Football Practice Field",
+    "name_zh": "美式橄榄球训练场",
+    "source": "https://map.fo.umich.edu/",
+    "note": "English is the original GIS label; Chinese is an independent faithful translation. GIS typos are retained here for traceability."
+  },
+  {
+    "name": "Perennial Garden",
+    "name_zh": "宿根花园",
+    "source": "https://map.fo.umich.edu/",
+    "note": "English is the original GIS label; Chinese is an independent faithful translation. GIS typos are retained here for traceability."
+  },
+  {
+    "name": "Nichols Arboretum Peony Garden",
+    "name_zh": "尼科尔斯树木园牡丹园",
+    "source": "https://map.fo.umich.edu/",
+    "note": "English is the original GIS label; Chinese is an independent faithful translation. GIS typos are retained here for traceability."
+  },
+  {
+    "name": "Medicinal Plant Garden",
+    "name_zh": "药用植物园",
+    "source": "https://map.fo.umich.edu/",
+    "note": "English is the original GIS label; Chinese is an independent faithful translation. GIS typos are retained here for traceability."
+  },
+  {
+    "name": "North Campus Research Complex",
+    "name_zh": "北校区研究综合体",
+    "source": "https://map.fo.umich.edu/",
+    "note": "English is the original GIS label; Chinese is an independent faithful translation. GIS typos are retained here for traceability."
+  },
+  {
+    "name": "Wave Field",
+    "name_zh": "Wave Field（波浪地景）",
+    "source": "https://map.fo.umich.edu/",
+    "note": "English is the original GIS label; Chinese is an independent faithful translation. GIS typos are retained here for traceability."
+  },
+  {
+    "name": "Bonsai and Penjing Garden",
+    "name_zh": "盆栽与盆景园",
+    "source": "https://map.fo.umich.edu/",
+    "note": "English is the original GIS label; Chinese is an independent faithful translation. GIS typos are retained here for traceability."
+  },
+  {
+    "name": "Lawn Between Hatcher and Clements Libraries",
+    "name_zh": "哈彻图书馆与克莱门茨图书馆之间的草坪",
+    "source": "https://map.fo.umich.edu/",
+    "note": "English is the original GIS label; Chinese is an independent faithful translation. GIS typos are retained here for traceability."
+  },
+  {
+    "name": "William W. Cook Law Quadrangle",
+    "name_zh": "威廉·W·库克法学院庭院",
+    "source": "https://map.fo.umich.edu/",
+    "note": "English is the original GIS label; Chinese is an independent faithful translation. GIS typos are retained here for traceability."
+  },
+  {
+    "name": "Ferry Field",
+    "name_zh": "费里运动场",
+    "source": "https://map.fo.umich.edu/",
+    "note": "English is the original GIS label; Chinese is an independent faithful translation. GIS typos are retained here for traceability."
+  },
+  {
+    "name": "Diag Grass Area",
+    "name_zh": "The Diag 草坪区",
+    "source": "https://map.fo.umich.edu/",
+    "note": "English is the original GIS label; Chinese is an independent faithful translation. GIS typos are retained here for traceability."
+  },
+  {
+    "name": "Radiation Sciences Lab East Lawn",
+    "name_zh": "辐射科学实验楼东草坪",
+    "source": "https://map.fo.umich.edu/",
+    "note": "English is the original GIS label; Chinese is an independent faithful translation. GIS typos are retained here for traceability."
+  },
+  {
+    "name": "Radrick Farms",
+    "name_zh": "拉德里克农庄",
+    "source": "https://map.fo.umich.edu/",
+    "note": "English is the original GIS label; Chinese is an independent faithful translation. GIS typos are retained here for traceability."
+  },
+  {
+    "name": "The Diag Proper",
+    "name_zh": "The Diag 中央铺装广场",
+    "source": "https://map.fo.umich.edu/",
+    "note": "English is the original GIS label; Chinese is an independent faithful translation. GIS typos are retained here for traceability."
+  },
+  {
+    "name": "Ingalls Mall Fountain",
+    "name_zh": "英格尔斯林荫广场喷泉",
+    "source": "https://map.fo.umich.edu/",
+    "note": "English is the original GIS label; Chinese is an independent faithful translation. GIS typos are retained here for traceability."
+  },
+  {
+    "name": "Commons",
+    "name_zh": "Commons（公共活动区）",
+    "source": "https://map.fo.umich.edu/",
+    "note": "English is the original GIS label; Chinese is an independent faithful translation. GIS typos are retained here for traceability."
+  },
+  {
+    "name": "Stephen M. Ross Athletic Campus South Complex",
+    "name_zh": "斯蒂芬·M·罗斯体育区南部设施群",
+    "source": "https://map.fo.umich.edu/",
+    "note": "English is the original GIS label; Chinese is an independent faithful translation. GIS typos are retained here for traceability."
+  },
+  {
+    "name": "UM Golf Course",
+    "name_zh": "密西根大学高尔夫球场",
+    "source": "https://map.fo.umich.edu/",
+    "note": "English is the original GIS label; Chinese is an independent faithful translation. GIS typos are retained here for traceability."
+  },
+  {
+    "name": "Front Lawn Museum of Art",
+    "name_zh": "艺术博物馆前草坪",
+    "source": "https://map.fo.umich.edu/",
+    "note": "English is the original GIS label; Chinese is an independent faithful translation. GIS typos are retained here for traceability."
+  },
+  {
+    "name": "Radrick Farms Golf Course",
+    "name_zh": "拉德里克农庄高尔夫球场",
+    "source": "https://map.fo.umich.edu/",
+    "note": "English is the original GIS label; Chinese is an independent faithful translation. GIS typos are retained here for traceability."
+  },
+  {
+    "name": "Ingalls Mall South",
+    "name_zh": "英格尔斯林荫广场南段",
+    "source": "https://map.fo.umich.edu/",
+    "note": "English is the original GIS label; Chinese is an independent faithful translation. GIS typos are retained here for traceability."
+  },
+  {
+    "name": "East University Mall South",
+    "name_zh": "东大学大道林荫广场南段",
+    "source": "https://map.fo.umich.edu/",
+    "note": "English is the original GIS label; Chinese is an independent faithful translation. GIS typos are retained here for traceability."
+  },
+  {
+    "name": "Dunderstadt Portico & Plaza",
+    "name_zh": "杜德施塔特中心柱廊与广场",
+    "source": "https://map.fo.umich.edu/",
+    "note": "English is the original GIS label; Chinese is an independent faithful translation. GIS typos are retained here for traceability."
+  },
+  {
+    "name": "Felch Park",
+    "name_zh": "费尔奇公园",
+    "source": "https://map.fo.umich.edu/",
+    "note": "English is the original GIS label; Chinese is an independent faithful translation. GIS typos are retained here for traceability."
+  },
+  {
+    "name": "Perry Building Front Lawn",
+    "name_zh": "佩里楼前草坪",
+    "source": "https://map.fo.umich.edu/",
+    "note": "English is the original GIS label; Chinese is an independent faithful translation. GIS typos are retained here for traceability."
+  },
+  {
+    "name": "U-M Lacrosse Stadium",
+    "name_zh": "密西根大学长曲棍球场",
+    "source": "https://map.fo.umich.edu/",
+    "note": "English is the original GIS label; Chinese is an independent faithful translation. GIS typos are retained here for traceability."
+  },
+  {
+    "name": "Hatcher Library Portico",
+    "name_zh": "哈彻图书馆柱廊",
+    "source": "https://map.fo.umich.edu/",
+    "note": "English is the original GIS label; Chinese is an independent faithful translation. GIS typos are retained here for traceability."
+  },
+  {
+    "name": "Lurie Reflection Pool",
+    "name_zh": "卢里倒影池",
+    "source": "https://map.fo.umich.edu/",
+    "note": "English is the original GIS label; Chinese is an independent faithful translation. GIS typos are retained here for traceability."
+  },
+  {
+    "name": "Palmer Plaza",
+    "name_zh": "帕尔默广场",
+    "source": "https://map.fo.umich.edu/",
+    "note": "English is the original GIS label; Chinese is an independent faithful translation. GIS typos are retained here for traceability."
+  },
+  {
+    "name": "East University Mall - Weiser Hall",
+    "name_zh": "东大学大道林荫广场 · 韦瑟楼段",
+    "source": "https://map.fo.umich.edu/",
+    "note": "English is the original GIS label; Chinese is an independent faithful translation. GIS typos are retained here for traceability."
+  },
+  {
+    "name": "Radiation Sciences Lab West Lawn",
+    "name_zh": "辐射科学实验楼西草坪",
+    "source": "https://map.fo.umich.edu/",
+    "note": "English is the original GIS label; Chinese is an independent faithful translation. GIS typos are retained here for traceability."
+  },
+  {
+    "name": "Regents Plaza",
+    "name_zh": "校董广场",
+    "source": "https://map.fo.umich.edu/",
+    "note": "English is the original GIS label; Chinese is an independent faithful translation. GIS typos are retained here for traceability."
+  },
+  {
+    "name": "Lorch Hall Lawn",
+    "name_zh": "洛尔奇楼草坪",
+    "source": "https://map.fo.umich.edu/",
+    "note": "English is the original GIS label; Chinese is an independent faithful translation. GIS typos are retained here for traceability."
+  },
+  {
+    "name": "Ocker Field",
+    "name_zh": "奥克尔曲棍球场",
+    "source": "https://map.fo.umich.edu/",
+    "note": "English is the original GIS label; Chinese is an independent faithful translation. GIS typos are retained here for traceability."
+  },
+  {
+    "name": "Mars Yard",
+    "name_zh": "Mars Yard（火星模拟场地）",
+    "source": "https://map.fo.umich.edu/",
+    "note": "English is the original GIS label; Chinese is an independent faithful translation. GIS typos are retained here for traceability."
+  },
+  {
+    "name": "Engineering Arch",
+    "name_zh": "工程学院拱门",
+    "source": "https://map.fo.umich.edu/",
+    "note": "English is the original GIS label; Chinese is an independent faithful translation. GIS typos are retained here for traceability."
+  },
+  {
+    "name": "The Charles J. Strosacker Foundation Plaza",
+    "name_zh": "查尔斯·J·斯特罗萨克基金会广场",
+    "source": "https://map.fo.umich.edu/",
+    "note": "English is the original GIS label; Chinese is an independent faithful translation. GIS typos are retained here for traceability."
+  },
+  {
+    "name": "Peter S. Fuss Pavilion",
+    "name_zh": "彼得·S·富斯亭",
+    "source": "https://map.fo.umich.edu/",
+    "note": "English is the original GIS label; Chinese is an independent faithful translation. GIS typos are retained here for traceability."
+  },
+  {
+    "name": "Eula D. Marcks Garden",
+    "name_zh": "尤拉·D·马尔克斯花园",
+    "source": "https://map.fo.umich.edu/",
+    "note": "English is the original GIS label; Chinese is an independent faithful translation. GIS typos are retained here for traceability."
+  },
+  {
+    "name": "East Quad Garden",
+    "name_zh": "东庭院宿舍区花园",
+    "source": "https://map.fo.umich.edu/",
+    "note": "English is the original GIS label; Chinese is an independent faithful translation. GIS typos are retained here for traceability."
+  },
+  {
+    "name": "The Diag",
+    "name_zh": "The Diag（校园中央绿地）",
+    "source": "https://map.fo.umich.edu/",
+    "note": "English is the original GIS label; Chinese is an independent faithful translation. GIS typos are retained here for traceability."
+  },
+  {
+    "name": "Ingalls Mall",
+    "name_zh": "英格尔斯林荫广场",
+    "source": "https://map.fo.umich.edu/",
+    "note": "English is the original GIS label; Chinese is an independent faithful translation. GIS typos are retained here for traceability."
+  },
+  {
+    "name": "East University Mall",
+    "name_zh": "东大学大道林荫广场",
+    "source": "https://map.fo.umich.edu/",
+    "note": "English is the original GIS label; Chinese is an independent faithful translation. GIS typos are retained here for traceability."
+  },
+  {
+    "name": "Wolverine Village",
+    "name_zh": "Wolverine Village（狼獾村）",
+    "source": "https://map.fo.umich.edu/",
+    "note": "English is the original GIS label; Chinese is an independent faithful translation. GIS typos are retained here for traceability."
+  },
+  {
+    "name": "Geddes Complex",
+    "name_zh": "格迪斯楼群",
+    "source": "https://map.fo.umich.edu/",
+    "note": "English is the original GIS label; Chinese is an independent faithful translation. GIS typos are retained here for traceability."
+  }
+]

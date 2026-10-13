@@ -1,0 +1,20 @@
+{
+  "name": "umich-ann-arbor-model",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build:viewer": "esbuild scripts/viewer.js --bundle --minify --format=iife --target=es2020 --outfile=tmp/viewer.bundle.js",
+    "build": "npm run build:viewer && python3 scripts/package_viewer.py",
+    "check:3ds": "node scripts/validate_3ds.mjs output/UMich_AnnArbor.3ds",
+    "check:locale": "node scripts/check_locale.mjs",
+    "check:camera": "node scripts/check_camera.mjs",
+    "check:seo": "python3 scripts/check_seo.py && node scripts/check_model_data.mjs"
+  },
+  "dependencies": {
+    "three": "0.186.1"
+  },
+  "devDependencies": {
+    "esbuild": "0.28.2"
+  }
+}

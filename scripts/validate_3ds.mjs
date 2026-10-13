@@ -1,0 +1,18 @@
+import fs from 'node:fs';
+import { TDSLoader } from 'three/addons/loaders/TDSLoader.js';
+import { Box3 } from 'three';
+const filename=process.argv[2];
+const buffer=fs.readFileSync(filename);
+const array=buffer.buffer.slice(buffer.byteOffset,buffer.byteOffset+buffer.byteLength);
+const loader=new TDSLoader();
+const group=loader.parse(array,'');
+const names=[];let triangles=0;let vertices=0;
+group.traverse(o=>{if(o.isMesh){names.push(o.name);const g=o.geometry;vertices+=g.attributes.position.count;triangles+=g.index?g.index.count/3:g.attributes.position.count/3;}});
+const bounds=new Box3().setFromObject(group);
+const map=JSON.parse(fs.readFileSync(new URL('../output/layer_map.json',import.meta.url),'utf8'));
+if(names.length!==Object.keys(map).length)throw new Error('Object count mismatch');
+if(names.some(n=>!map[n]))throw new Error('Object names not preserved');
+if(names.some(n=>n.length>10))throw new Error('3DS names exceed Rhino limit');
+const info={parser:'Three.js TDSLoader (independent 3DS importer)',objects:names.length,triangles,vertices,box_min:bounds.min.toArray(),box_max:bounds.max.toArray(),all_names_preserved:true};
+console.log(JSON.stringify(info,null,2));
+fs.writeFileSync(new URL('../output/3DS导入校验.json',import.meta.url),JSON.stringify(info,null,2));

@@ -1,0 +1,26 @@
+{
+  "format": "Rhino 3DM v7",
+  "units": "meters",
+  "layers": 555,
+  "nonempty_layers": 555,
+  "objects": 3005,
+  "closed_native_solids": 634,
+  "closed_mesh_objects": 1765,
+  "plan_curves": 606,
+  "all_geometry_valid": true,
+  "named_views": [
+    "Campus",
+    "central",
+    "north",
+    "medical",
+    "athletic"
+  ],
+  "georeference": {
+    "wgs84": [
+      -83.7382,
+      42.2764
+    ],
+    "projection": "EPSG:32617",
+    "local_z_zero_m": 225
+  }
+}

@@ -1,0 +1,48 @@
+# macOS
+.DS_Store
+._*
+
+# Local dependencies and Python caches
+node_modules
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Local configuration and credentials
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Temporary builds, logs and Rhino backups
+/tmp/
+*.log
+*.3dmbak
+*.3dm.bak
+
+# Downloaded reference material; source links remain in the documentation
+/sources/*.pdf
+/sources/*.png
+/sources/*.jpg
+/sources/*.jpeg
+/sources/map_page.html
+/sources/contractor_extracted.txt
+/sources/osm_raw.json
+
+# Intermediate rendering arrays and duplicate delivery archives
+/output/preview_mesh_data.npz
+/output/*.zip
+/output/*.tmp
+
+# Keep index.html, the CAD models, previews and source data tracked.
+
+# Generated single-file edition is included in the local delivery ZIP.
+/output/UMich_Campus_Offline.html
+
+# Local preview and raw public map fetches
+/sources/official_raw/

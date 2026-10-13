@@ -1,0 +1,78 @@
+{
+  "buildings": 554,
+  "layers": 555,
+  "environment_layer": "环境_Environment",
+  "native_closed_solids": 634,
+  "objects_3ds": 2399,
+  "vertices": 2541948,
+  "triangles": 4439972,
+  "trees": 13233,
+  "landmarks": 29,
+  "published_height_buildings": 1,
+  "municipal_estimate_buildings": 6,
+  "estimated_height_buildings": 547,
+  "sectors": {
+    "central": 160,
+    "north": 271,
+    "medical": 52,
+    "athletic": 71
+  },
+  "unit": "meters",
+  "crs": "EPSG:32617 local offsets",
+  "origin_wgs84": [
+    -83.7382,
+    42.2764
+  ],
+  "origin_utm": [
+    274204.49096132047,
+    4684096.36214401
+  ],
+  "bounds": [
+    -1503.7091940212285,
+    -3827.338460971613,
+    3837.8647946547662,
+    3007.0218083256523
+  ],
+  "district_bounds": {
+    "central": [
+      -1498.708404041693,
+      -776.5949884943883,
+      3099.8079237851593,
+      2387.7899639699917
+    ],
+    "north": [
+      1008.0665864909913,
+      1027.596756131563,
+      3205.182091433089,
+      2790.610531534048
+    ],
+    "medical": [
+      -67.70166388836859,
+      491.436747207663,
+      1046.306140079025,
+      1482.0282817697916
+    ],
+    "athletic": [
+      -1072.5015428379634,
+      -3602.052302727617,
+      -186.03694314249282,
+      -702.9553731548349
+    ]
+  },
+  "terrain": "USGS 3DEP F32 bare-earth DEM, bilinear samples ~18m; 80m landscape patches and locally flattened building pads; Z0=225m DEM datum",
+  "terrain_source": "https://elevation.nationalmap.gov/arcgis/rest/services/3DEPElevation/ImageServer",
+  "landscape": {
+    "mapped_road_area_m2": 656016.82,
+    "parking": 621,
+    "sidewalks": 3266,
+    "surface_patches": 7641,
+    "athletic_fields": 58,
+    "wave_field": {
+      "published_artwork_width_m": 27.432000000000002,
+      "mapped_site": true,
+      "wave_amplitude_and_phase": "Illustrative; not a measured landform",
+      "source": "https://umma.umich.edu/objects/wave-field-aps1995-1/"
+    }
+  },
+  "accuracy": "Official mapped footprints and surfaces; historical/published/estimated heights labeled individually. Not a surveyed as-built model."
+}
