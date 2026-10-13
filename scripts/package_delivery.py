@@ -50,6 +50,10 @@ The interactive payload is gzip-compressed without changing the 3DS geometry; th
 
 For GitHub Pages, publish the repository’s default branch from `/ (root)` and configure the domain’s DNS for the GitHub Pages host. `CNAME` alone does not enable hosting or install an HTTPS certificate.
 
+## Releases
+
+The current calendar version is recorded in `VERSION`; release notes are in the English `CHANGELOG.md`. Commit messages use `Release YY.M.D.NUM`.
+
 ## Rebuild
 
 ```sh
@@ -67,6 +71,9 @@ python3 scripts/validate_rhino.py
 npm run check:3ds
 npm run check:camera
 npm run check:locale
+npm run check:interaction
+npm run check:loading
+npm run check:release
 npm run check:seo
 python3 scripts/package_delivery.py
 ```
@@ -127,7 +134,7 @@ usage=f'''# 密西根大学安娜堡校区模型使用说明
 1. 保留 `index.html`、`assets`、`output` 的相对位置，直接双击根目录的 `index.html`。
 2. 仅需单个网页文件时，打开 `output/UMich_Campus_Offline.html`。三维显示需要当前版本浏览器的 WebGL 2 和压缩流支持。
 3. 默认英文；设备语言偏好含中文时首次默认中文，右上角可切换。
-4. 拖动旋转、滚轮缩放、右键平移；触屏单指旋转，双指缩放或平移。选择地标后可以继续缩回全校范围。
+4. 左键拖动平移、右键拖动旋转，滚轮按指针位置缩放；触屏单指平移、双指平移或捏合缩放，开启“旋转”后可单指旋转。选择地标后可以继续缩回全校范围。
 5. 选择建筑以查看平面尺寸、模型最高点和资料说明，可单独查看或逐栋隐藏。片区按钮切换镜头，列表中的片区标签用于筛选建筑。
 6. “高程剖切”使用模型局部高程基准：Z=0对应公开DEM基准中的225米。它不是每栋建筑的相对层高，也不表示室内楼层。
 7. Rhino 推荐打开分层 `.3dm`；导入 `.3ds` 时选择米作为单位，再运行 `scripts/apply_layers_rhino.py` 恢复图层。
@@ -146,6 +153,9 @@ validation=f'''# Delivery validation
 - Published / municipal landmark peaks agree with their selected model height values within 1 cm.
 - Viewer tests: English/Chinese language selection; HTTP compressed binary, local classic script, inline model and error paths; SHA-256 equality with original CAD bytes.
 - Camera checks: {len(records)} building targets × three viewport proportions = {len(records)*3} zoom-out/refit cases, retaining access to the whole campus.
+- Navigation: 48 viewport, bearing and view combinations; mouse/touch direction, terrain pivots, cursor zoom, horizon and zoom-step limits, no inertia, drag/pinch selection and local preset checks.
+- Loading: streamed-byte integrity, worker geometry/face groups identical to CAD import, and main-thread fallback/error checks.
+- Browser checks: real loading percentage and byte counts, district presets, pan/rotation, landmark zoom-out and responsive layout.
 - SEO checks: canonical/domain consistency, sitemap/robots, social metadata, bilingual static directory, local asset links, structured 3DModel checksum, single-file embedding and repository-safe asset sizes.
 
 The checks validate deliverable integrity and behavior; they do not certify public-source geometry as an as-built survey.

@@ -4,12 +4,16 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "build:viewer": "esbuild scripts/viewer.js --bundle --minify --format=iife --target=es2020 --outfile=tmp/viewer.bundle.js",
+    "build:viewer": "npm run build:worker && esbuild scripts/viewer.js --bundle --minify --format=iife --target=es2020 --loader:.txt=text --outfile=tmp/viewer.bundle.js",
     "build": "npm run build:viewer && python3 scripts/package_viewer.py",
     "check:3ds": "node scripts/validate_3ds.mjs output/UMich_AnnArbor.3ds",
     "check:locale": "node scripts/check_locale.mjs",
     "check:camera": "node scripts/check_camera.mjs",
-    "check:seo": "python3 scripts/check_seo.py && node scripts/check_model_data.mjs"
+    "check:seo": "python3 scripts/check_seo.py && node scripts/check_model_data.mjs",
+    "build:worker": "esbuild scripts/model_worker.js --bundle --minify --format=iife --target=es2020 --outfile=tmp/model-worker.bundle.txt",
+    "check:interaction": "node scripts/check_interaction.mjs",
+    "check:loading": "node scripts/check_loading.mjs",
+    "check:release": "python3 scripts/check_release.py"
   },
   "dependencies": {
     "three": "0.186.1"

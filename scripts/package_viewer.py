@@ -118,9 +118,13 @@ from shapely.geometry import box
 river_area=transform(project,shape(river['geometry'])).intersection(box(500,900,1400,1700));anchor=river_area.representative_point();hx,hy=anchor.x,anchor.y;hz=float(interpolate([[hy,hx]])[0])+1
 places.append({'id':'HURON','name':'Huron River','name_zh':'休伦河（Huron River）','position':[hx,hy,hz]})
 (root/'sources/place_names_zh.json').write_text(json.dumps(glossary,ensure_ascii=False,indent=2))
+xi=list(range(0,len(xs),10));yi=list(range(0,len(ys),10))
+if xi[-1]!=len(xs)-1:xi.append(len(xs)-1)
+if yi[-1]!=len(ys)-1:yi.append(len(ys)-1)
+ground_grid={'x':[round(float(xs[i]),2) for i in xi],'y':[round(float(ys[i]),2) for i in yi],'heights':np.round((dem[::-1]-225)[np.ix_(yi,xi)],2).tolist()}
 seo={'en':{k:config[k] for k in ['title','description','imageAlt']},'zh':config['zh']}
 model=(out/'UMich_AnnArbor.3ds').read_bytes();compressed=gzip.compress(model,compresslevel=6,mtime=0);(out/'UMich_AnnArbor.3ds.gz').write_bytes(compressed);encoded=base64.b64encode(compressed).decode();preview=base64.b64encode((out/'campus_aerial.png').read_bytes()).decode()
-b=summary['bounds'];data={'layers':json.loads((out/'layer_map.json').read_text()),'palette':json.loads((out/'palette.json').read_text()),'records':records,'preview':'output/campus_aerial.png','modelUrl':'output/UMich_AnnArbor.3ds.gz','downloadUrl':'output/UMich_AnnArbor.3ds','compression':'gzip','offlineModelScript':'assets/model-local.js','seo':seo,'landmarkOrder':LANDMARKS,'districtBounds':{**summary['district_bounds'],'central':[-650,-650,1000,800]},'siteCenter':[(b[0]+b[2])/2,(b[1]+b[3])/2],'places':places}
+b=summary['bounds'];data={'groundGrid':ground_grid,'modelByteLength':len(model),'modelTransferBytes':len(compressed),'layers':json.loads((out/'layer_map.json').read_text()),'palette':json.loads((out/'palette.json').read_text()),'records':records,'preview':'output/campus_aerial.png','modelUrl':'output/UMich_AnnArbor.3ds.gz','downloadUrl':'output/UMich_AnnArbor.3ds','compression':'gzip','offlineModelScript':'assets/model-local.js','seo':seo,'landmarkOrder':LANDMARKS,'districtBounds':{**summary['district_bounds'],'central':[-650,-650,1000,800]},'siteCenter':[(b[0]+b[2])/2,(b[1]+b[3])/2],'places':places}
 schema={'@context':'https://schema.org','@graph':[
 {'@type':'WebSite','@id':site+'#website','url':site,'name':'UMich Campus 3D Model','inLanguage':['en','zh-CN'],'sameAs':config['repository'],'image':site+'assets/brand/m-map.png'},
 {'@type':'WebPage','@id':site+'#webpage','url':site,'name':config['title'],'description':config['description'],'inLanguage':['en','zh-CN'],'isPartOf':{'@id':site+'#website'},'mainEntity':{'@id':site+'#model'},'dateModified':date.today().isoformat(),'primaryImageOfPage':{'@type':'ImageObject','url':site+'output/campus_aerial.png','width':2400,'height':1850}},

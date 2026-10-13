@@ -46,6 +46,10 @@ The interactive payload is gzip-compressed without changing the 3DS geometry; th
 
 For GitHub Pages, publish the repository’s default branch from `/ (root)` and configure the domain’s DNS for the GitHub Pages host. `CNAME` alone does not enable hosting or install an HTTPS certificate.
 
+## Releases
+
+The current calendar version is recorded in `VERSION`; release notes are in the English `CHANGELOG.md`. Commit messages use `Release YY.M.D.NUM`.
+
 ## Rebuild
 
 ```sh
@@ -63,6 +67,9 @@ python3 scripts/validate_rhino.py
 npm run check:3ds
 npm run check:camera
 npm run check:locale
+npm run check:interaction
+npm run check:loading
+npm run check:release
 npm run check:seo
 python3 scripts/package_delivery.py
 ```
