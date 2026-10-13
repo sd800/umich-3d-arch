@@ -3,7 +3,7 @@ import {readFileSync} from 'node:fs';
 import {createHash} from 'node:crypto';
 import {Box3,Vector3,OrthographicCamera,Group,Mesh,BoxGeometry,MeshPhongMaterial} from 'three';
 import {CampusTDSLoader} from './campus_tds_loader.js';
-import {prepareLandscape,SURFACE_ORDER,stabilizeBuildingMaterial,updateCampusDepthRange} from './surface_rendering.js';
+import {prepareLandscape,prepareBuildingRoofs,SURFACE_ORDER,stabilizeBuildingMaterial,updateCampusDepthRange} from './surface_rendering.js';
 const name=['UMich_AnnArbor','UChicago_HydePark','XJTU_InnovationHarbour'].find(n=>{try{readFileSync(new URL(`../output/${n}.3ds`,import.meta.url));return true;}catch{return false;}});
 const bytes=readFileSync(new URL(`../output/${name}.3ds`,import.meta.url));
 const campus=new CampusTDSLoader().parse(bytes.buffer.slice(bytes.byteOffset,bytes.byteOffset+bytes.byteLength),'');campus.updateMatrixWorld(true);
@@ -43,4 +43,14 @@ const mixed=new Mesh(new BoxGeometry(10,10,10),Array.from({length:6},(_,i)=>new 
 const single=new Mesh(new BoxGeometry(10,10,10),new MeshPhongMaterial({name:'Ground'}));new Group().add(single);assert.equal(prepareLandscape(single).length,1,'Single materials ignore geometry material indices, as WebGLRenderer does');
 const glass=new MeshPhongMaterial({transparent:true,opacity:.73});stabilizeBuildingMaterial(glass,true);assert.equal(glass.depthWrite,false);assert.equal(glass.depthTest,true);assert.equal(glass.opacity,.73);
 const body=new MeshPhongMaterial();stabilizeBuildingMaterial(body);assert.equal(body.depthWrite,true);assert.equal(body.depthTest,true);
+let roofCaps=0;
+const buildingMeshes=[];campus.traverse(m=>{if(m.isMesh&&layers[m.name]?.category!=='environment')buildingMeshes.push(m);});
+for(const mesh of buildingMeshes){
+ const original=mesh.geometry,hash=createHash('sha256').update(original.attributes.position.array).digest('hex'),count=original.index?.count??original.attributes.position.count,originalBox=new Box3().setFromObject(mesh);
+ const wallColors=new Map((Array.isArray(mesh.material)?mesh.material:[mesh.material]).map(m=>[m.name,m.color.getHex()]));
+ const ground=originalBox.min.z-1,parts=prepareBuildingRoofs(mesh,ground,mesh.name.includes('D'));let faces=0;
+ for(const part of parts){assert.equal(createHash('sha256').update(part.geometry.attributes.position.array).digest('hex'),hash,'Roof coloring retains original positions');faces+=part.geometry.index?.count??part.geometry.attributes.position.count;for(const material of Array.isArray(part.material)?part.material:[part.material])if(material.userData.campusRoof){roofCaps++;assert.equal(material.color.getHex(),0x657078);assert.equal(material.depthTest,true);}else assert.equal(material.color.getHex(),wallColors.get(material.name),'Walls and stone trim retain their colors');assert.ok(new Box3().setFromObject(part).equals(originalBox),'Roof coloring retains mesh bounds');}
+ assert.equal(faces,count,'Roof coloring retains every original triangle exactly once');
+}
 console.log(`Rendering passed: ${skins} map skins / ${triangles.toLocaleString()} upward triangles, ${structures} unchanged structural meshes, stable material ordering, transparent/details occlusion and ${cases} tight depth-frustum cases.`);
+console.log(`Roof color checks passed: ${roofCaps} gray roof caps, unchanged triangle membership and georeferenced positions.`);

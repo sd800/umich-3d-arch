@@ -2,6 +2,13 @@
 
 All notable changes to UMich Campus 3D Model are recorded here. Versions use `YY.M.D.NUM`, with a separate release sequence for each day in America/Chicago.
 
+## 26.10.13.2 — 2026-10-13
+
+- Remove flickering roof shadow bands with a fixed sampling kernel and receiver-plane depth correction. Fit a fixed sunlight volume to the campus and use a small physical shadow bias without screen-dependent sampling noise.
+- Use subdued gray roof surfaces while preserving wall colors, stone trim and ground-level concrete. Keep roof colors coherent when exterior details are hidden.
+- Give coplanar roof sheets and concrete accents distinct depth priorities. Keep thin roof sheets visible above closed building caps using a small orthographic bias that is consistent across depth-buffer formats; preserve CAD coordinates and normal building occlusion.
+- Extend real WebGL checks with 800 roof samples covering lighting, coplanar accents, recessed sheets and taller occluders during pan, rotation and zoom. Reproduce and repair the actual North Campus roof conflict with delivered G. G. Brown geometry. Verify actual campus close-ups, North Campus navigation and unchanged CAD downloads.
+
 ## 26.10.13.1 — 2026-10-13
 
 - Render ground, roads, walks, paving, lawns, gardens, water and markings in a stable cartographic stack. Keep only their upward-facing skins so intersecting terrain facets and extrusion seams cannot obscure the map.
