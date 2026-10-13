@@ -168,7 +168,7 @@ try{
   const old=Array.isArray(m.material)?m.material:[m.material];const materials=old.map(mm=>{const mat=mm.clone();const co=data.palette[mat.name];if(co)mat.color.setRGB(co[0]/255,co[1]/255,co[2]/255,THREE.SRGBColorSpace);mat.shininess=mat.name==='Glass'?25:0;mat.specular.set(mat.name==='Glass'?0x222222:0);mat.flatShading=true;mat.emissiveIntensity=0;stabilizeBuildingMaterial(mat,m.name.includes('D'));stabilizeCampusShadows(mat);return mat;});
   m.material=Array.isArray(m.material)?materials:materials[0];m.receiveShadow=true;
   const r=byLayer.get(data.layers[m.name]?.layer);
-  if(r){let g=buildings.get(r.code);if(!g){g=new THREE.Group();g.name=r.code;buildings.set(r.code,g);campus.add(g);}const center=new THREE.Box3().setFromObject(m).getCenter(new THREE.Vector3());for(const part of prepareBuildingRoofs(m,groundHeight(data,center.x,center.y),m.name.includes('D'))){g.attach(part);part.castShadow=true;part.userData.code=r.code;pickMeshes.push(part);if(part.name.includes('D'))details.push(part);}}
+  if(r){let g=buildings.get(r.code);if(!g){g=new THREE.Group();g.name=r.code;buildings.set(r.code,g);campus.add(g);}const center=new THREE.Box3().setFromObject(m).getCenter(new THREE.Vector3());for(const part of prepareBuildingRoofs(m,groundHeight(data,center.x,center.y),m.name.includes('D'),true)){g.attach(part);part.castShadow=true;part.userData.code=r.code;pickMeshes.push(part);if(part.name.includes('D'))details.push(part);}}
   else{m.castShadow=materials.some(mat=>['Leaves','Trunk','Furniture'].includes(mat.name));envMeshes.push(...prepareLandscape(m));}
   if(++prepared%32===0){reportLoad({phase:'scene',loaded:meshes.length+prepared,total:meshes.length*2});await nextPaint();}
  }

@@ -88,7 +88,7 @@ Map skins use stable compositing while buildings and landscape structures retain
 
 Run `npm run check:rendering` for CAD surface and depth-frustum checks. Run `npm run build:rendering-check`, serve the repository root, and open `tmp/rendering-check.html` for GPU pixel, glass-occlusion, section-shadow and 800 roof-sample regression checks.
 
-Roof shadow filtering uses a fixed PCF kernel with receiver-plane depth correction. The sun volume is fixed to campus bounds. Small orthographic depth priorities separate roof sheets and concrete accents while retaining ordinary building occlusion and original CAD coordinates. The GPU check also covers roof lighting and coplanar details during pan, rotation and zoom.
+Roof shadow filtering uses a fixed PCF kernel with receiver-plane depth correction. The sun volume is fixed to campus bounds. Ordinary flat roofs use one neutral gray base color across metal, slate, concrete and body caps; pitched surfaces retain natural directional shading. Small orthographic depth priorities separate roof sheets and concrete accents while retaining ordinary building occlusion and original CAD coordinates. The GPU check also covers roof lighting and coplanar details during pan, rotation and zoom.
 '''
 (r/'README.md').write_text(readme)
 sources='''# Sources and modeling decisions
@@ -166,7 +166,7 @@ validation=f'''# Delivery validation
 - Navigation: 48 viewport, bearing and view combinations; mouse/touch direction, terrain pivots, cursor zoom, horizon and zoom-step limits, no inertia, drag/pinch selection and local preset checks.
 - Loading: streamed-byte integrity, worker geometry/face groups identical to CAD import, and main-thread fallback/error checks.
 - Browser checks: real loading percentage and byte counts, district presets, pan/rotation, landmark zoom-out and responsive layout.
-- Rendering checks: original CAD vertices retained; upward map skins, structural occlusion and 48 depth-frustum cases. Real WebGL checks cover 48 moving views, 144 pixel samples, glass occlusion and removal of shadows cast by sectioned geometry. Roof checks include 800 samples, physical depth separation across buffer formats, stable roof lighting, taller occluders and an actual North Campus coplanar-roof regression.
+- Rendering checks: original CAD vertices retained; upward map skins, structural occlusion and 48 depth-frustum cases. Real WebGL checks cover 48 moving views, 144 pixel samples, glass occlusion and removal of shadows cast by sectioned geometry. Roof checks include 800 samples and 48 uniform-color views, physical depth separation across buffer formats, stable roof lighting, taller occluders and an actual North Campus coplanar-roof regression.
 - SEO checks: canonical/domain consistency, sitemap/robots, social metadata, bilingual static directory, local asset links, structured 3DModel checksum, single-file embedding and repository-safe asset sizes.
 
 The checks validate deliverable integrity and behavior; they do not certify public-source geometry as an as-built survey.

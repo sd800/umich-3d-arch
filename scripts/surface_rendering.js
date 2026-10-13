@@ -65,9 +65,10 @@ export function stabilizeBuildingMaterial(material,detail=false) {
 }
 
 /** Color roof caps separately from walls, stone trim and ground-level concrete. */
-export function prepareBuildingRoofs(mesh,groundZ=0,detail=false) {
+export function prepareBuildingRoofs(mesh,groundZ=0,detail=false,uniformFlatRoof=false) {
   const multi=Array.isArray(mesh.material),materials=multi?mesh.material:[mesh.material];
-  const eligible=material=>!material.transparent&&!['Metal','Slate','Glass'].includes(material.name)&&!material.name.endsWith('Roof')&&(!detail||material.name==='Concrete');
+  const finishedRoof=material=>['Metal','Slate'].includes(material.name)||material.name.endsWith('Roof');
+  const eligible=material=>!material.transparent&&material.name!=='Glass'&&(finishedRoof(material)?uniformFlatRoof:(!detail||material.name==='Concrete'));
   if(!materials.some(eligible))return [mesh];
   mesh.updateWorldMatrix(true,false);
   const source=mesh.geometry,position=source.attributes.position,index=source.index;
@@ -80,7 +81,7 @@ export function prepareBuildingRoofs(mesh,groundZ=0,detail=false) {
       a.fromBufferAttribute(position,ia);b.fromBufferAttribute(position,ib);c.fromBufferAttribute(position,ic);
       normal.subVectors(b,a).cross(c.clone().sub(a)).applyMatrix3(normalMatrix).normalize();
       const z=a.clone().add(b).add(c).multiplyScalar(1/3).applyMatrix4(mesh.matrixWorld).z;
-      const roof=eligible(materials[id])&&normal.z>.7&&z>groundZ+3;
+      const roof=eligible(materials[id])&&normal.z>(finishedRoof(materials[id])?.99:.7)&&z>groundZ+3;
       buckets[id][roof?'roof':'wall'].push(ia,ib,ic);
     }
   }

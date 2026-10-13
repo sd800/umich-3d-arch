@@ -1,6 +1,6 @@
 import * as THREE from 'three';
 import realRoofFixture from './fixtures/umich_roof.json';
-import {prepareLandscape,stabilizeBuildingMaterial,updateCampusDepthRange,setCampusClipping,stabilizeCampusShadows,fitCampusSun,updateCampusDetailDepth} from './surface_rendering.js';
+import {prepareBuildingRoofs,prepareLandscape,stabilizeBuildingMaterial,updateCampusDepthRange,setCampusClipping,stabilizeCampusShadows,fitCampusSun,updateCampusDetailDepth} from './surface_rendering.js';
 const output=document.getElementById('results');
 try {
   const renderer=new THREE.WebGLRenderer({antialias:false});renderer.setSize(256,256);renderer.outputColorSpace=THREE.SRGBColorSpace;document.body.append(renderer.domElement);
@@ -88,7 +88,15 @@ try {
     updateCampusDetailDepth(camera,realRoofs);renderer.render(realRoofs,camera);expect(pivot,[255,203,5],'Actual North Campus coplanar roof stays stable');roofChecks++;
   }
   if(!originalFailures)throw new Error('Actual roof regression must reproduce the insufficient old depth separation');
+  const roofSources=[...realRoofs.children];
+  for(const mesh of roofSources)prepareBuildingRoofs(mesh,40,mesh.material.userData.campusDetailRank>0,true);
+  let uniformRoofChecks=0;
+  for(let step=0;step<48;step++){
+    const pivot=points[step%points.length],angle=step*Math.PI/8;camera.zoom=[1,8,60][step%3];camera.updateProjectionMatrix();camera.position.copy(pivot).addScaledVector(new THREE.Vector3(Math.cos(angle)*.6,Math.sin(angle)*.6,.8),15000);camera.lookAt(pivot);camera.updateMatrixWorld(true);updateCampusDepthRange(camera,campusBounds);updateCampusDetailDepth(camera,realRoofs);renderer.render(realRoofs,camera);
+    expect(pivot,[101,112,120],'Flat roof material regions use one gray base color');uniformRoofChecks++;
+  }
 
-  output.textContent=JSON.stringify({status:'passed',frames,pixelChecks:checks,roofChecks,roofMaximumDelta,originalRoofFailures:originalFailures,depthBits:renderer.getContext().getParameter(renderer.getContext().DEPTH_BITS),checks:['Terrain crossing reproduced','Surface stack survives pan and rotation','Opaque structures keep normal occlusion','Transparent glass stays depth-tested','Adaptive depth range keeps all surfaces visible','Section clipping removes clipped shadows','Roof lighting stays stable while panning, rotating and zooming','Coplanar roof accents and recessed sheets stay visible','Actual North Campus roof regression reproduced and repaired']},null,2);
+
+  output.textContent=JSON.stringify({status:'passed',frames,pixelChecks:checks,roofChecks,roofMaximumDelta,originalRoofFailures:originalFailures,uniformRoofChecks,depthBits:renderer.getContext().getParameter(renderer.getContext().DEPTH_BITS),checks:['Terrain crossing reproduced','Surface stack survives pan and rotation','Opaque structures keep normal occlusion','Transparent glass stays depth-tested','Adaptive depth range keeps all surfaces visible','Section clipping removes clipped shadows','Roof lighting stays stable while panning, rotating and zooming','Coplanar roof accents and recessed sheets stay visible','Actual North Campus roof regression reproduced and repaired']},null,2);
   target.dispose();
 }catch(error){output.textContent=JSON.stringify({status:'failed',error:error.message},null,2);console.error(error);}

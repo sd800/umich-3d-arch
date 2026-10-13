@@ -2,6 +2,12 @@
 
 All notable changes to UMich Campus 3D Model are recorded here. Versions use `YY.M.D.NUM`, with a separate release sequence for each day in America/Chicago.
 
+## 26.10.13.3 — 2026-10-13
+
+- Use one neutral gray base color for flat roof caps, metal sheets, slate surfaces and concrete insets. Remove material-based light/dark patches within ordinary flat roofs while preserving wall colors and natural lighting on pitched surfaces.
+- Preserve the existing selected-building highlight on both roofs and facades.
+- Verify uniform roof colors on actual North Campus geometry, retain coplanar depth separation, and update both website and offline editions.
+
 ## 26.10.13.2 — 2026-10-13
 
 - Remove flickering roof shadow bands with a fixed sampling kernel and receiver-plane depth correction. Fit a fixed sunlight volume to the campus and use a small physical shadow bias without screen-dependent sampling noise.
