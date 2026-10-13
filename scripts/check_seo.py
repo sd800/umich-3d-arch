@@ -1,3 +1,4 @@
+from urllib.parse import urlsplit
 """Validate domain, crawlable bilingual directory, local resources and model metadata."""
 from pathlib import Path
 import json,re,hashlib,xml.etree.ElementTree as ET
@@ -20,7 +21,7 @@ assert p.meta['description']==config['description'] and p.meta['theme-color']=='
 assert 'index, follow' in p.meta['robots'] and (r/'CNAME').read_text().strip()==config['domain']
 assert site+'sitemap.xml' in (r/'robots.txt').read_text()
 assert ET.parse(r/'sitemap.xml').find('.//{http://www.sitemaps.org/schemas/sitemap/0.9}loc').text==site
-for f in p.local:assert (r/f).is_file(),f
+for f in p.local:assert (r/urlsplit(f).path).is_file(),f
 data=json.loads(re.search(r'<script id="campus-data"[^>]*>(.*?)</script>',text,re.S).group(1))
 schema=json.loads(re.search(r'<script id="campus-schema"[^>]*>(.*?)</script>',text,re.S).group(1))
 assert len(p.rows)==len(data['records']) and len(set(p.rows))==len(p.rows)
@@ -39,3 +40,5 @@ assert not re.search(r'<script[^>]+src=',offline) and 'noindex, follow' in offli
 assert not any(bad in text for bad in ['uchicago.edu','UChicago','芝加哥大学','密歇根','安阿伯','__SITE_URL__','__CAMPUS_DATA__'])
 assert (r/'assets/model-local.js').stat().st_size<100_000_000
 print(f'SEO, bilingual directory ({len(p.rows)} buildings), canonical, assets, inline edition and model digest passed.')
+
+assert "viewer.bundle.js?v=" in text, "Viewer updates must invalidate the browser cache"

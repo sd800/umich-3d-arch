@@ -144,7 +144,7 @@ def edition(payload,font,preview,icons,logo,script,robots,rhino):
     return html
 (assets/'viewer.bundle.js').write_text(bundle)
 (assets/'model-local.js').write_text('window.__UMICH_MODEL_BASE64__='+json.dumps(encoded)+';\n')
-html=edition(data,'assets/fonts/Manrope.ttf','output/campus_aerial.png',{'32':'assets/favicon-32.png','16':'assets/favicon-16.png','apple':'assets/apple-touch-icon.png'},'assets/brand/m-map-192.png','<script defer src="assets/viewer.bundle.js"></script>','index, follow, max-image-preview:large','output/UMich_AnnArbor_Layered.3dm')
+html=edition(data,'assets/fonts/Manrope.ttf','output/campus_aerial.png',{'32':'assets/favicon-32.png','16':'assets/favicon-16.png','apple':'assets/apple-touch-icon.png'},'assets/brand/m-map-192.png','<script defer src="assets/viewer.bundle.js?v='+hashlib.sha256(bundle.encode()).hexdigest()[:12]+'"></script>','index, follow, max-image-preview:large','output/UMich_AnnArbor_Layered.3dm')
 (root/'index.html').write_text(html)
 def png(path):return 'data:image/png;base64,'+base64.b64encode((assets/path).read_bytes()).decode()
 offline=edition({**data,'model':encoded,'preview':'data:image/png;base64,'+preview},'data:font/ttf;base64,'+base64.b64encode((assets/'fonts/Manrope.ttf').read_bytes()).decode(),'data:image/png;base64,'+preview,{'32':png('favicon-32.png'),'16':png('favicon-16.png'),'apple':png('apple-touch-icon.png')},png('brand/m-map-192.png'),'<script>'+bundle.replace('</script',r'<\/script')+'</script>','noindex, follow','UMich_AnnArbor_Layered.3dm')

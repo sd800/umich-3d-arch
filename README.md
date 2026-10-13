@@ -69,9 +69,16 @@ npm run check:camera
 npm run check:locale
 npm run check:interaction
 npm run check:loading
+npm run check:rendering
 npm run check:release
 npm run check:seo
 python3 scripts/package_delivery.py
 ```
 
 The source snapshots are included; rebuilding the delivered geometry does not require live GIS access. Temporary building caches are ignored and are invalidated when building code, curation or footprints change. Model sources and third-party notices are retained in the delivery archive.
+
+## Rendering checks
+
+Map skins use stable compositing while buildings and landscape structures retain depth occlusion. The interactive viewer preserves the delivered CAD coordinates and model bytes.
+
+Run `npm run check:rendering` for CAD surface and depth-frustum checks. Run `npm run build:rendering-check`, serve the repository root, and open `tmp/rendering-check.html` for GPU pixel, glass-occlusion and section-shadow regression checks.

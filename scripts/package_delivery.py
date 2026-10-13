@@ -73,12 +73,20 @@ npm run check:camera
 npm run check:locale
 npm run check:interaction
 npm run check:loading
+npm run check:rendering
 npm run check:release
 npm run check:seo
 python3 scripts/package_delivery.py
 ```
 
 The source snapshots are included; rebuilding the delivered geometry does not require live GIS access. Temporary building caches are ignored and are invalidated when building code, curation or footprints change. Model sources and third-party notices are retained in the delivery archive.
+'''
+readme+='''
+## Rendering checks
+
+Map skins use stable compositing while buildings and landscape structures retain depth occlusion. The interactive viewer preserves the delivered CAD coordinates and model bytes.
+
+Run `npm run check:rendering` for CAD surface and depth-frustum checks. Run `npm run build:rendering-check`, serve the repository root, and open `tmp/rendering-check.html` for GPU pixel, glass-occlusion and section-shadow regression checks.
 '''
 (r/'README.md').write_text(readme)
 sources='''# Sources and modeling decisions
@@ -156,6 +164,7 @@ validation=f'''# Delivery validation
 - Navigation: 48 viewport, bearing and view combinations; mouse/touch direction, terrain pivots, cursor zoom, horizon and zoom-step limits, no inertia, drag/pinch selection and local preset checks.
 - Loading: streamed-byte integrity, worker geometry/face groups identical to CAD import, and main-thread fallback/error checks.
 - Browser checks: real loading percentage and byte counts, district presets, pan/rotation, landmark zoom-out and responsive layout.
+- Rendering checks: original CAD vertices retained; upward map skins, structural occlusion and 48 depth-frustum cases. Real WebGL checks cover 48 moving views, 144 pixel samples, glass occlusion and removal of shadows cast by sectioned geometry.
 - SEO checks: canonical/domain consistency, sitemap/robots, social metadata, bilingual static directory, local asset links, structured 3DModel checksum, single-file embedding and repository-safe asset sizes.
 
 The checks validate deliverable integrity and behavior; they do not certify public-source geometry as an as-built survey.
