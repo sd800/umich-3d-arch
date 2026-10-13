@@ -137,9 +137,8 @@ function fullView(mode){
  const overview=mode==='aerial',zone={core:'central','north-view':'north','medical-view':'medical','athletic-view':'athletic'}[mode];
  const bounds=data.districtBounds[overview?'central':zone];
  const b=bounds?new THREE.Box3(new THREE.Vector3(bounds[0],bounds[1],0),new THREE.Vector3(bounds[2],bounds[3],150)):new THREE.Box3().setFromObject(campus);
- // Match the southwest oblique reference, with Central Campus in the foreground
- // and a modest northward framing shift to reveal North Campus along the top.
- if(overview)b.translate(new THREE.Vector3(525,225,0));
+ // Keep the reference bearing and scale, centered on the mapped Diag plaza.
+ if(overview){const center=b.getCenter(new THREE.Vector3()),[x,y]=data.overviewCenter;b.translate(new THREE.Vector3(x-center.x,y-center.y,0));}
  fitBox(b,mode==='plan'?'plan':'aerial',overview?1.3:1.16,false,overview?new THREE.Vector3(-1.15,-.95,1.2):undefined,overview?2500:50);
 }
 function focusBuilding(code){if(!modelReady){pendingFocus=code;return;}const g=buildings.get(code);if(!g||!camera)return;g.visible=true;g.updateWorldMatrix(true,true);viewMode='focus';setViewButtons();fitBox(new THREE.Box3().setFromObject(g),'aerial',1.55,true);}
