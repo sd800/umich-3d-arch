@@ -21,7 +21,7 @@ A bilingual exterior model of the **University of Michigan, Ann Arbor**. Open `i
 
 The model contains **554 building layers + one environment layer**, 29 architectural highlights and 13,233 mapped tree positions. Buildings sharing one official facility number share one layer, including disconnected mapped pieces. Underground-only footprints and planning-only buildings are listed in `output/excluded_records.json`.
 
-The initial bird’s-eye composition shows the principal North Campus, Central Campus, medical and athletic building clusters together. Campus and Reset restore this overview; district buttons provide closer views.
+The initial view looks from the southwest at a lower oblique angle, with Central Campus enlarged in the foreground and the southern edge of North Campus visible above it. Campus and Reset restore this composition; district buttons provide closer views.
 
 The viewer supports English/Chinese search, individual visibility, architectural tours, locate/isolate, district camera presets, a north-up plan, metric scale, labels, shadows, exterior details, elevation slices, 3DS download and PNG view export. Zoom-out limits remain campus-wide after selecting any landmark.
 

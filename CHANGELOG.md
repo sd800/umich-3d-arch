@@ -2,6 +2,11 @@
 
 All notable changes to UMich Campus 3D Model are recorded here. Versions use `YY.M.D.NUM`, with a separate release sequence for each day in America/Chicago.
 
+## 26.10.13.7 — 2026-10-13
+
+- Match the reference screenshot’s southwest viewing direction and lower oblique angle, replacing the high overview with a larger Central Campus composition.
+- Shift framing modestly toward North Campus so its southern buildings appear along the top. Keep Campus, first load and Reset consistent, with district presets and navigation unchanged.
+
 ## 26.10.13.6 — 2026-10-13
 
 - Open with a campus-wide bird’s-eye view instead of the Central Campus preset, bringing North Campus, the medical center and the athletic campus into the initial composition.

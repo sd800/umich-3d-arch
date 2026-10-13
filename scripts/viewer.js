@@ -124,8 +124,8 @@ function applyLanguage(){
 $('language').onclick=()=>{lang=lang==='en'?'zh':'en';try{localStorage.setItem('umich-model-language',lang);}catch{}applyLanguage();};
 function aspect(){return Math.max(host.clientWidth,1)/Math.max(host.clientHeight,1);}
 function updateFrustum(){if(!camera)return;const a=aspect();camera.left=-frameHeight*a/2;camera.right=frameHeight*a/2;camera.top=frameHeight/2;camera.bottom=-frameHeight/2;camera.updateProjectionMatrix();if(controls){controls.syncViewOffset();updateCampusZoomLimit(camera,controls,campusDiagonal);}}
-function fitBox(b,mode='aerial',pad=1.16,focus=false,direction){
- if(!camera)return;frameHeight=frameCampusBox(camera,controls,b,{aspect:aspect(),mode,pad,direction,distance:Math.max(3000,campusDiagonal*1.5),pivotHeight:focus?undefined:groundHeight(data,(b.min.x+b.max.x)/2,(b.min.y+b.max.y)/2)});updateFrustum();render();
+function fitBox(b,mode='aerial',pad=1.16,focus=false,direction,minimumHeight=50){
+ if(!camera)return;frameHeight=frameCampusBox(camera,controls,b,{aspect:aspect(),mode,pad,direction,minimumHeight,distance:Math.max(3000,campusDiagonal*1.5),pivotHeight:focus?undefined:groundHeight(data,(b.min.x+b.max.x)/2,(b.min.y+b.max.y)/2)});updateFrustum();render();
 }
 function setViewButtons(){for(const key of ['aerial','core','north-view','medical-view','athletic-view','plan']){$(key).classList.toggle('active',viewMode===key);$(key).setAttribute('aria-pressed',String(viewMode===key));}}
 function syncRotationButton(){const b=$('rotation-mode');b.classList.toggle('active',Boolean(controls?.rotationMode));b.setAttribute('aria-pressed',String(Boolean(controls?.rotationMode)));}
@@ -134,13 +134,13 @@ $('rotation-mode').onclick=()=>{if(controls)setRotationMode(controls,!controls.r
 $('level-view').onclick=()=>{if(!controls)return;viewMode='level';setViewButtons();levelCampusView(controls);render(false);};
 function fullView(mode){
  if(mode==='plan')resetInteraction();viewMode=mode;setViewButtons();if(!campus)return;
- const zone={core:'central','north-view':'north','medical-view':'medical','athletic-view':'athletic'}[mode],bounds=data.districtBounds[zone];
+ const overview=mode==='aerial',zone={core:'central','north-view':'north','medical-view':'medical','athletic-view':'athletic'}[mode];
+ const bounds=data.districtBounds[overview?'central':zone];
  const b=bounds?new THREE.Box3(new THREE.Vector3(bounds[0],bounds[1],0),new THREE.Vector3(bounds[2],bounds[3],150)):new THREE.Box3().setFromObject(campus);
- if(mode==='aerial'){
-  // Frame the principal building clusters rather than distant terrain edges.
-  b.makeEmpty();for(const r of tour){const g=buildings.get(r.code);if(g)b.union(new THREE.Box3().setFromObject(g));}b.expandByScalar(180);
- }
- fitBox(b,mode==='plan'?'plan':'aerial',mode==='aerial'?1.2:1.16,false,mode==='aerial'?new THREE.Vector3(.35,-1,1.8):undefined);
+ // Match the southwest oblique reference, with Central Campus in the foreground
+ // and a modest northward framing shift to reveal North Campus along the top.
+ if(overview)b.translate(new THREE.Vector3(525,225,0));
+ fitBox(b,mode==='plan'?'plan':'aerial',overview?1.3:1.16,false,overview?new THREE.Vector3(-1.15,-.95,1.2):undefined,overview?2500:50);
 }
 function focusBuilding(code){if(!modelReady){pendingFocus=code;return;}const g=buildings.get(code);if(!g||!camera)return;g.visible=true;g.updateWorldMatrix(true,true);viewMode='focus';setViewButtons();fitBox(new THREE.Box3().setFromObject(g),'aerial',1.55,true);}
 for(const id of ['north-view','medical-view','athletic-view'])$(id).onclick=()=>fullView(id);
