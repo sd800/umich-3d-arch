@@ -12,3 +12,18 @@
 - Logo: Michigan Blue background, Michigan Maize block M and an upright rectangular map with a route and location pin.
 - Preserve original English names beside faithful independent Chinese translations.
 - Git branch: main; requested final state: no other local or remote branches; initial commit message: Add files.
+
+## Architectural refinement
+
+The current model reworks 79 facility profiles, including North Campus teaching/research buildings, the Ross ensemble and Michigan Stadium. The official facility footprint remains the plan envelope. Secondary OSM part outlines and public university/architect exterior descriptions support wing cuts and material choices; elevations, repeated bays and most section sizes are approximate.
+
+- Ross: KPF exterior/aerial and massing material, terracotta/glass, lower pavilions, terraces and the retained Kresge green roof: https://www.kpf.com/story/the-making-of-university-of-michigan-stephen-m-ross-school-of-business . Blau is represented separately on its official footprint.
+- Duderstadt: university account of the north glazing and pyramidal skylights: https://www.dc.umich.edu/about-the-dc/history/ . The open north portico and lower connector are distinguished.
+- Beyster and Ford Robotics: university engineering tour (four-storey atrium / four-storey robotics complex): https://tour.umich.edu/text-based/tours/engineering/ .
+- Leinweber: the completed-building description takes precedence over older four-storey design announcements and OSM tags: https://leinweber.bldg.umich.edu/about/ .
+- Moore and the Taubman addition: https://smtd.umich.edu/facilities/earl-v-moore-building/ and https://taubmancollege.umich.edu/about/facilities/art-architecture-building/ .
+- Stadium: https://mgoblue.com/sports/2017/6/16/facilities-michigan-stadium-html and https://mgoblue.com/news/2022/10/18/football-athletics-unveils-renderings-of-new-michigan-stadium-scoreboards . The model uses a simplified below-grade bowl section, 90 display bands and 44 aisle divisions; these do not certify the present seat-row inventory. The historical 360 × 160 ft playing-field dimensions are retained. East/west premium building plan edges use mapped OSM parts.
+
+Ground meshes have exact footprint holes and separately level pads. Intersecting mapped wings share a visualization grade; closed below-grade supports prevent open building bases. The stadium has an intentional ground excavation and a retaining perimeter, whose contact is tested instead of treating its seating bowl as a flat slab. Sub-0.1 m² GIS fragments are removed from derived building footprints; untouched source snapshots remain available.
+
+Roof finishes are individually assigned (membrane, gravel, metal, green roof and pitched slate) and remain colored by the model. Roof-edge, terrain and shadow stabilization is retained. Window frames use rectangular sections with fewer redundant faces. Optional all-zero 3DS smoothing tables are omitted; imported vertices, normals, triangles and material groups were compared before and after the storage change and are identical. The layered Rhino file is retained independently.

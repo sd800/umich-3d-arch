@@ -1,0 +1,6 @@
+{
+  "source": "output/UMich_AnnArbor.3ds",
+  "current_bytes": 85657500,
+  "optional_zero_smoothing_tables_written": 0,
+  "storage_change_geometry_equivalence": "Compared with explicit all-zero tables: identical imported positions, normals, indices and material groups."
+}

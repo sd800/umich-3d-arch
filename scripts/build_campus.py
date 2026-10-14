@@ -13,6 +13,8 @@ ROOT=pathlib.Path(__file__).resolve().parents[1]; OUT=ROOT/'output';OUT.mkdir(ex
 TF=Transformer.from_crs(4326,32617,always_xy=True)
 LON,LAT=-83.7382,42.2764;OX,OY=TF.transform(LON,LAT)
 COLORS={
+ 'Foundation':(174,172,151),'NorthBrick':(149,99,77),'Terracotta':(162,77,50),'Sandstone':(190,166,133),'MetalPanel':(147,154,154),
+ 'RoofGlazing':(119,157,170),'RoofMembrane':(85,91,88),'RoofGravel':(149,145,132),'RoofZinc':(132,148,153),'RoofGreen':(105,132,76),'RoofEdge':(93,103,103),'Seat':(161,169,169),'Screen':(24,35,44),
  'Limestone':(207,194,166),'LightStone':(225,217,195),'Brick':(144,86,67),
  'Slate':(71,75,79),'Tile':(137,67,47),'Concrete':(197,198,193),'WhitePanel':(225,226,219),
  'Metal':(113,124,128),'Glass':(113,157,174),'DarkGlass':(59,83,91),'Frame':(64,65,64),
@@ -148,7 +150,10 @@ def facade(ms,p,z,h,levels,gothic=False,continuous=False,spacing=3.7):
                     # slender mullion and stone sill
                     for off in [0]:
                         aa=(c[0]+off*u[0]+n[0]*.11,c[1]+off*u[1]+n[1]*.11,zz)
-                        bb=(aa[0],aa[1],zz+wh);ms['LightStone' if gothic else 'Frame'].append(cylinder(aa,bb,.045,4))
+                        bb=(aa[0],aa[1],zz+wh)
+                        if gothic:ms['LightStone'].append(cylinder(aa,bb,.045,4))
+                        else:
+                            center=np.array(aa[:2]);profile=Polygon([center-u*.035-n*.035,center+u*.035-n*.035,center+u*.035+n*.035,center-u*.035+n*.035]);ms['Frame'].append(extrusion(profile,zz,wh))
 def crenellations(ms,p,top,corner_height=2.0):
     a,b,c,d=p.bounds
     for x,y in [(a+.45,b+.45),(a+.45,d-.45),(c-.45,b+.45),(c-.45,d-.45)]:
@@ -163,6 +168,10 @@ from scipy.interpolate import RegularGridInterpolator
 from shapely import concave_hull, segmentize, points
 from shapely.strtree import STRtree
 from PIL import Image
+from types import SimpleNamespace
+from architecture_profiles import NORTH,ROSS,REFERENCES,volumes as architecture_volumes
+from campus_architecture import accents as architecture_accents,generic_roof
+from michigan_stadium import build_stadium,stadium_outline,field_opening
 from curation import names, ZONES, LANDMARKS, GOTHIC, HEIGHTS, HEIGHT_ESTIMATES, EXTERIOR_LEVELS, REFS, GIS, CITY_HEIGHT, BURTON, BURTON_HISTORY, TOUR
 TF=Transformer.from_crs(4326,32617,always_xy=True)
 LON,LAT=-83.7382,42.2764;OX,OY=TF.transform(LON,LAT)
@@ -184,7 +193,7 @@ for f in raw:
     grouped.setdefault(ident,[]).append(f)
 buildings=[]
 for ident,fs in grouped.items():
-    p=unary_union([f['poly'] for f in fs]).buffer(0)
+    p=unary_union([q for f in fs for q in polygons(f['poly'])if q.area>.1]).buffer(0)
     if p.area<3:continue
     t=fs[0]['properties'];en,zh=names(ident,t.get('ObjectName'))
     # Multiple surveyed footprint pieces belonging to one facility share its layer.
@@ -196,6 +205,7 @@ surfaces=[f for f in surfaces if in_campus(f)];sidewalks=[f for f in sidewalks i
 footprints=unary_union([f['poly'] for f in buildings])
 zone_shapes={z:concave_hull(unary_union([f['poly'] for f in buildings if f['zone']==z]),ratio=.25).buffer(45,join_style=2) for z in ['central','north','medical','athletic']}
 scope=unary_union(list(zone_shapes.values())+[f['poly'] for f in surfaces if f['poly'].area>500]).buffer(5,join_style=2).simplify(.8,preserve_topology=True).buffer(0)
+scope=unary_union([scope,footprints.buffer(2)]).buffer(0)
 DEM_DATUM=225.0
 meta=json.loads((ROOT/'sources/terrain_export_metadata.json').read_text());extent=meta['extent'];dem=np.asarray(Image.open(ROOT/'sources/terrain_dem.tif'),dtype=float)
 assert dem.shape==(meta['height'],meta['width']) and np.isfinite(dem).all() and 200<dem.min()<dem.max()<350
@@ -206,17 +216,38 @@ def raw_ground(x,y):
     x,y=np.broadcast_arrays(x,y);return interp(np.column_stack([y.ravel(),x.ravel()])).reshape(x.shape)
 for f in buildings:
     cp=f['poly'].representative_point();f['ground']=float(raw_ground(cp.x,cp.y))
+contact_tree=STRtree([f['poly']for f in buildings]);parents=list(range(len(buildings)))
+def contact_root(k):
+    while parents[k]!=k:parents[k]=parents[parents[k]];k=parents[k]
+    return k
+for i,f in enumerate(buildings):
+    for j in contact_tree.query(f['poly']):
+        if j>i and f['id']!='1000711'and buildings[j]['id']!='1000711'and f['poly'].intersection(buildings[j]['poly']).area>.025:parents[contact_root(j)]=contact_root(i)
+grade_groups={}
+for i,f in enumerate(buildings):grade_groups.setdefault(contact_root(i),[]).append(f)
+for group in grade_groups.values():
+    if len(group)>1:
+        z=sum(f['ground']*f['poly'].area for f in group)/sum(f['poly'].area for f in group)
+        for f in group:f['ground']=z
 pad_tree=STRtree([f['poly'].buffer(.4) for f in buildings]);pad_z=np.array([f['ground'] for f in buildings])
 def ground(x,y):
     x,y=np.broadcast_arrays(x,y);z=np.asarray(raw_ground(x,y));a,b=pad_tree.query(points(x.ravel(),y.ravel()),predicate='within')
     z.ravel()[a]=pad_z[b];return z
 anchor=model.Settings.EarthAnchorPoint;anchor.Name='Ann Arbor local origin / WGS84; Z0=225m USGS DEM datum';anchor.EarthBasepointLatitude=LAT;anchor.EarthBasepointLongitude=LON;anchor.EarthBasepointElevation=DEM_DATUM
 anchor.ModelBasePoint=rh.Point3d(0,0,0);anchor.ModelNorth=rh.Vector3d(0,1,0);anchor.ModelEast=rh.Vector3d(1,0,0);model.Settings.EarthAnchorPoint=anchor
+part_fs=[]
+for f in json.loads((ROOT/'sources/architecture_parts.geojson').read_text())['features']:
+    g=transform(project,shape(f['geometry'])).buffer(0)
+    if not g.is_empty:part_fs.append((f['properties'],g))
+part_tree=STRtree([q for _,q in part_fs])
+for f in buildings:
+    f['parts']=[part_fs[k]for k in part_tree.query(f['poly'])if part_fs[k][1].intersection(f['poly']).area>max(8,part_fs[k][1].area*.6)]
+stadium_feature=next(f for f in buildings if f['id']=='1000711');stadium_void=stadium_outline(stadium_feature['poly']);stadium_grade_band=stadium_void.difference(stadium_void.buffer(-2))
 print('Preparing',len(buildings),'building layers; terrain and public mapped landscape',flush=True)
 
 # BUILDING CACHE: regenerate when geometry inputs or building code change.
 import hashlib,pickle
-signature=hashlib.sha256((ROOT/'scripts/curation.py').read_bytes()+(ROOT/'sources/official_base_buildings.geojson').read_bytes()+pathlib.Path(__file__).read_text().split('# LANDSCAPE')[0].encode()).hexdigest()
+signature=hashlib.sha256(b''.join((ROOT/'scripts'/name).read_bytes()for name in ['architecture_profiles.py','campus_architecture.py','michigan_stadium.py'])+(ROOT/'sources/architecture_parts.geojson').read_bytes()+(ROOT/'scripts/curation.py').read_bytes()+(ROOT/'sources/official_base_buildings.geojson').read_bytes()+pathlib.Path(__file__).read_text().split('# LANDSCAPE')[0].encode()).hexdigest()
 cache=ROOT/'tmp/building-cache.pkl';cache_signature=ROOT/'tmp/building-cache.sha';cache_rhino=ROOT/'tmp/building-cache.3dm'
 if cache.exists() and cache_signature.exists() and cache_rhino.exists() and cache_signature.read_text()==signature:
     saved=pickle.loads(cache.read_bytes());model=rh.File3dm.Read(str(cache_rhino));assert model is not None
@@ -244,7 +275,12 @@ else:
                 basis='模型最高点采用学校 The University Record 所载212英尺（64.6176米）；本特利历史图书馆记载192英尺。来源存在差异，模型取212英尺，未实测核定。'
                 basis_en='Model peak follows the university Record: 212 ft / 64.6176 m. Bentley Historical Library gives 192 ft. Published sources disagree; this model uses 212 ft without a measured resolution of that discrepancy.'
         wall='Limestone' if gothic or ident in ['1000155','1000152','1000172','1000159','1000191'] else ('Brick' if residential or ident in ['1000120','1000177','1000709'] else 'LightStone')
-        roof='Slate' if gothic else 'Metal';lay=code+'_'+name.replace('/','_').replace(':','_')[:88];layer(lay,wall);ms={k:[] for k in COLORS};bodyidx=0
+        profile=(NORTH|ROSS).get(ident)
+        if not profile and zone=='north'and not residential and p.area>250 and not any(w in name.lower()for w in ['mcity','switching','chiller','power plant','support','pumping','storage','m-air','ground service']):
+            profile=(lev,height,'NorthBrick','RoofGravel');NORTH[ident]=profile
+        if profile:lev,height,wall,roof=profile
+        else:roof='Slate'if gothic else ('RoofGravel'if wall in ['Limestone','LightStone']else 'RoofMembrane')
+        lay=code+'_'+name.replace('/','_').replace(':','_')[:88];layer(lay,wall);ms={k:[] for k in COLORS};bodyidx=0
         info={'Building':name,'ChineseName':zh,'Code':code,'FacilityID':ident,'Units':'meters','FootprintSource':GIS,'HeightBasis':basis_en,'GroundDatum':'USGS 3DEP sampled terrain, local Z0=225m DEM datum; building pad flattened','GeometryDetail':'Public exterior approximation; no interior or surveyed facade reconstruction'}
         partition='保留官方地图中的建筑轮廓与庭院空隙；屋顶、重复窗格、檐口和地上层数为形态近似。建筑基座按公开地形采样，局部地面作平整处理。'
         partition_en='Official mapped footprint and courtyard voids; simplified roof, cornices and illustrative repeated facade bays. Estimated exterior storeys. Each building rests on a locally flattened pad sampled from USGS terrain.'
@@ -261,6 +297,12 @@ else:
         def gable(g,z,rise,axis=None,mat=roof):
             for q in polygons(g):ms[mat].extend(pitched(q,base+z,rise,axis))
         def block(xx0,yy0,z,sx,sy,hh,mat=wall):ms[mat].append(boxmesh(xx0,yy0,base+z,sx,sy,hh))
+        detail_record={}
+        if ident!='1000711':
+            for q in polygons(segmentize(p,5)):
+                support=extrusion(q,base-1.5,1.51);bottom=support.vertices[:,2]<base-.7
+                support.vertices[bottom,2]=np.minimum(base-.2,raw_ground(support.vertices[bottom,0],support.vertices[bottom,1])-1.5)
+                ms['Foundation'].append(support)
         if ident=='1000155':
             body(p,0,36.576,levels=8,arch=False)
             inset=p.buffer(-1.25,join_style=2);piers=p.difference(inset);body(piers,36.576,20.2,windows=False)
@@ -278,26 +320,17 @@ else:
             partition='开敞的收分混凝土塔柱、横梁与独立钟室体块；采用安娜堡市2009年清单中的165英尺估算值（50.292米），构件位置与局部尺寸为示意。'
             partition_en='Open tapered concrete piers, cross-beams and separated belfry volumes. Overall 165 ft / 50.292 m follows the city’s 2009 estimate; member sizes and positions are illustrative.'
         elif ident=='1000711':
-            main=max(polygons(p),key=lambda q:q.area);holes=sorted([Polygon(r) for r in main.interiors],key=lambda q:q.area,reverse=True);inner=holes[0] if holes else box(x-25,y-55,x+25,y+55)
-            # The real mapped playing-field opening determines the bowl geometry.
-            ring=main.difference(inner);span=max(inner.boundary.hausdorff_distance(main.boundary),50)
-            field_ground=float(raw_ground(inner.centroid.x,inner.centroid.y));bowl_bottom=field_ground-base;rim=bowl_bottom+20.5
-            for k in range(36):
-                near=inner.buffer(k*span/36,join_style=1);far=inner.buffer((k+1)*span/36,join_style=1);q=far.difference(near).intersection(ring)
-                if not q.is_empty:
-                    zz=bowl_bottom+1+k*19.5/36
-                    for qq in polygons(q):ms['Concrete' if k%4==0 else 'Maize'].append(extrusion(qq,base+zz,.52))
-            body(main.difference(inner.buffer(span*.86)).intersection(box(a-1,b-1,c+1,d+1)),rim-.7,1.2,'Concrete',False)
-            for side in [a+7,c-7]:
-                q=main.intersection(box(side-10,b+52,side+10,d-52));body(q,rim,21.8,'Brick',True,levels=4,arch=False,cont=True);flat(q,rim+21.8)
-            field=box(inner.centroid.x-24.384,inner.centroid.y-54.864,inner.centroid.x+24.384,inner.centroid.y+54.864).intersection(inner)
-            flat(field,bowl_bottom+.15,'Grass')
-            for yy0 in np.arange(inner.centroid.y-54.864,inner.centroid.y+54.9,9.144):
-                q=LineString([(inner.centroid.x-24.384,yy0),(inner.centroid.x+24.384,yy0)]).buffer(.11).intersection(field);flat(q,bowl_bottom+.29,'Marking')
-            for yy0 in [inner.centroid.y-52,inner.centroid.y+52]:block(inner.centroid.x,yy0,bowl_bottom+.28,48.5,6,.05,'Blue')
-            partition='保留官方平面中的碗形看台和比赛场地开口，区分东西侧包厢楼；36组示意阶梯和比赛场地线。球场尺度采用360×160英尺；碗底按USGS采样，剖面、看台与包厢楼高度为估算。'
-            partition_en='Mapped bowl and playing-field opening with separate east/west suite buildings, 36 illustrative seating bands and field markings. The 360 × 160 ft field follows the historical university account. Terrain informs the bowl floor; seating profiles and suite heights are estimated.'
-            src='https://bentley.umich.edu/athdept/stadium/stadtext/stadbild.htm'
+            detail_record=build_stadium(ms,p,base,f['parts'],body,SimpleNamespace(**globals()))
+            partition='下沉式碗形看台、44组通道、灰色座席、东西包厢楼、南北视频屏和沿实际场地长轴的比赛标线；保留官方轮廓，场地为360×160英尺。剖面、楼层和构件尺寸为形态近似。'
+            partition_en='Sunken bowl with gray seating, 44 aisle divisions, mapped east/west premium buildings, north/south video boards and field-aligned markings. Official footprint; 360 × 160 ft playing field. Section heights, seating bands and members are approximate exterior interpretations.'
+            src=detail_record['reference']
+        elif profile:
+            volumes=architecture_volumes(ident,p,f['parts'])
+            for q,hh,n,mat,roofmat in volumes:body(q,0,hh,mat,True,levels=n,arch=False,cont=mat in ['Glass','MetalPanel']or ident in ['1005188','1005370'])
+            detail_record=architecture_accents(ms,p,base,ident,volumes,SimpleNamespace(**globals()))
+            partition='保留官方建筑范围与庭院，重新划分高低翼楼、门廊、中庭和屋顶，按各楼特点表达砖、陶板、石材、金属和玻璃；局部分界、外部层数、构件和标高为公开资料基础上的近似。'
+            partition_en='Official envelope and courtyard voids retained; rebuilt high/low wings, entrances, atria and roof forms. Brick, terracotta, stone, metal and glass distinguish individual buildings. Part boundaries, exterior storeys, members and elevations remain public-source approximations.'
+            if ident in REFERENCES:src=REFERENCES[ident]
         elif ident=='1000700':
             circle=affinity.scale(Point(x-8,y-1).buffer(1,quad_segs=40),49,56);arena=p.intersection(circle);annex=p.difference(arena)
             body(annex,0,12,levels=3,cont=True);flat(annex,12);body(arena,0,15.5,windows=False)
@@ -347,15 +380,15 @@ else:
         elif gothic or name.startswith('Northwood') or ident=='1000709':
             rise=min(4.8,height*.24);body(p,0,height-rise,levels=lev,arch=gothic);gable(p,height-rise,rise)
         else:
-            body(p,0,height-.2,levels=lev,arch=False,cont=(t.get('Building_Type')=='PARK'));flat(p,height-.12)
-            inset=p.buffer(-4,join_style=2)
-            if not inset.is_empty and p.area>3000 and height>16:flat(inset,height-.12,'Concrete')
+            roof_allowance=1.32 if p.area>1800 else (.54 if p.area>250 else .16)
+            body(p,0,height-roof_allowance,levels=lev,arch=False,cont=(t.get('Building_Type')=='PARK'))
+            generic_roof(ms,p,base+height-roof_allowance,roof,SimpleNamespace(**globals()))
         for k,(mat,parts) in enumerate(ms.items()):
-            if parts:chunk_meshes(code+f'D{k:02d}',parts,mat,lay,info)
+            if parts:chunk_meshes(code+('D'if mat in ['Glass','DarkGlass','Frame','Solar']else 'M')+f'{k:02d}',parts,mat,lay,info)
         for q in polygons(p):
             crv=rh.PolylineCurve([rh.Point3d(float(x0),float(y0),base) for x0,y0 in q.exterior.coords]);model.Objects.AddCurve(crv,attr(code+'_PLAN',lay,wall,info))
         meshes=[o['mesh'] for o in objects if layer_map[o['name']]['layer']==lay];actual_top=max(m.bounds[1,2] for m in meshes);actual_bottom=min(m.bounds[0,2] for m in meshes)
-        r={'code':code,'facility_id':ident,'name':name,'name_zh':zh,'official_name':t.get('ObjectName'),'layer':lay,'zone':zone,'landmark':ident in LANDMARKS,'height':round(float(actual_top-base),4),'height_status':status,'levels':lev,'gis_floor_count':original_fc,'area':round(p.area,2),'width':round(c-a,2),'depth':round(d-b,2),'center':[round(x,3),round(y,3)],'ground_m':round(base,3),'peak_m':round(float(actual_top),3),'bottom_m':round(float(actual_bottom),3),'basis':basis,'basis_en':basis_en,'partition':partition,'partition_en':partition_en,'source':src,'footprint_source':GIS,'architecture_reference':REFS.get(ident,TOUR if ident in LANDMARKS else None),'short':name,'short_zh':zh,'aliases_zh':[],'construction_status':t.get('Status')}
+        r={'code':code,'facility_id':ident,'name':name,'name_zh':zh,'official_name':t.get('ObjectName'),'layer':lay,'zone':zone,'landmark':ident in LANDMARKS,'height':round(float(actual_top-base),4),'height_status':status,'levels':lev,'gis_floor_count':original_fc,'area':round(p.area,2),'width':round(c-a,2),'depth':round(d-b,2),'center':[round(x,3),round(y,3)],'ground_m':round(base,3),'peak_m':round(float(actual_top),3),'bottom_m':round(float(actual_bottom),3),'basis':basis,'basis_en':basis_en,'partition':partition,'partition_en':partition_en,'source':src,'footprint_source':GIS,'architecture_reference':REFS.get(ident,TOUR if ident in LANDMARKS else None),'short':name,'short_zh':zh,'aliases_zh':[],'construction_status':t.get('Status'),'architecture_detail':detail_record,'ground_contact':'bowl perimeter'if ident=='1000711'else 'flat grade pad'}
         if ident in HEIGHTS:assert abs(r['height']-HEIGHTS[ident][0])<.01,(ident,r['height'],HEIGHTS[ident][0])
         records.append(r);f['record']=r
         if j%75==0:print('Buildings',j,flush=True)
@@ -371,9 +404,10 @@ for f in buildings:f['record']=by_facility[f['id']]
 eg={k:[] for k in COLORS};landscape_counts={}
 def env(g,z,hh,mat,drape=True):
     g=g.intersection(scope).buffer(0)
+    if mat!='Ground':g=g.difference(stadium_void)
     if g.is_empty:return
     for q in polygons(g):
-        q=q.simplify(.09,preserve_topology=True)
+        q=q.simplify(.01 if mat=='Ground'else .09,preserve_topology=True)
         if q.area<.08:continue
         aa,bb,cc,dd=q.bounds
         patches=[]
@@ -386,7 +420,9 @@ def env(g,z,hh,mat,drape=True):
                 m=extrusion(pp,z,hh)
                 if drape:m.vertices[:,2]+=ground(m.vertices[:,0],m.vertices[:,1])
                 eg[mat].append(m)
-env(scope,-5,5,'Ground')
+env(scope.difference(footprints).difference(stadium_void),-5,5,'Ground')
+for f in buildings:
+    env(stadium_grade_band if f['id']=='1000711'else f['poly'],f['ground']-.18,.18,'Ground',False)
 roadarea=unary_union([f['poly'].intersection(scope) for f in roads]).difference(footprints).buffer(0)
 env(roadarea,.025,.07,'Road');landscape_counts['mapped_road_area_m2']=round(roadarea.area,2)
 for group,label in [(parking,'parking'),(sidewalks,'sidewalks'),(surfaces,'surface_patches'),(fields,'athletic_fields')]:
@@ -439,7 +475,7 @@ for f in treefs:
     base=float(ground(xx0,yy0));seed=int(f['id']);rng=np.random.default_rng(seed)
     # Locations are surveyed GIS points. Shape, canopy and vertical size are estimates.
     h=7.5+rng.uniform(-1,4);rad=2.0+rng.uniform(0,1.8)
-    eg['Trunk'].append(cylinder((xx0,yy0,base+.1),(xx0,yy0,base+h*.66),.16,5))
+    eg['Trunk'].append(cylinder((xx0,yy0,base-.25),(xx0,yy0,base+h*.66),.16,5))
     m=trimesh.creation.icosphere(subdivisions=1);m.apply_scale([rad,rad,h*.4]);m.apply_translation([xx0,yy0,base+h*.67]);eg['Leaves'].append(m);trees+=1
 for k,(mat,parts) in enumerate(eg.items()):
     if parts:chunk_meshes(f'E{k:02d}',parts,mat,'环境_Environment',{'Landscape':'University mapped roads, surfaces, trees and USGS sampled terrain. Approximate surface thickness, walls, tree shapes and heights.','Units':'meters'})
@@ -458,7 +494,7 @@ for name,co in COLORS.items():mb+=chunk(0xAFFF,chunk(0xA000,zs(name))+chunk(0xA0
 ob=b''
 for o in objects:
     m=o['mesh'];v=np.asarray(m.vertices,dtype='<f4');ff=np.column_stack((m.faces,np.full(len(m.faces),7))).astype('<u2')
-    fc=struct.pack('<H',len(ff))+ff.tobytes()+chunk(0x4130,zs(o['mat'])+struct.pack('<H',len(ff))+np.arange(len(ff),dtype='<u2').tobytes())+chunk(0x4150,np.zeros(len(ff),dtype='<u4').tobytes())
+    fc=struct.pack('<H',len(ff))+ff.tobytes()+chunk(0x4130,zs(o['mat'])+struct.pack('<H',len(ff))+np.arange(len(ff),dtype='<u2').tobytes())
     ob+=chunk(0x4000,zs(o['name'])+chunk(0x4100,chunk(0x4110,struct.pack('<H',len(v))+v.tobytes())+chunk(0x4120,fc)))
 (OUT/'UMich_AnnArbor.3ds').write_bytes(chunk(0x4D4D,chunk(0x0002,struct.pack('<I',3))+chunk(0x3D3D,chunk(0x3D3E,struct.pack('<I',3))+chunk(0x0100,struct.pack('<f',1))+mb+ob)))
 for name,data in [('layer_map',layer_map),('palette',COLORS),('buildings',records),('viewer_records',records)]:

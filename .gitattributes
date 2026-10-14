@@ -1,0 +1,8 @@
+*.3ds binary
+*.3dm binary
+*.png binary
+*.ttf binary
+*.woff2 binary
+assets/viewer.bundle.js -whitespace
+assets/model-local.js -whitespace
+*.csv whitespace=cr-at-eol

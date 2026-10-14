@@ -19,7 +19,8 @@
     "check:viewport": "node scripts/check_viewport.mjs",
     "check:hover": "node scripts/check_outdoor_hover.mjs",
     "build:model": "node scripts/pack_web_model.mjs",
-    "check:compression": "node scripts/check_compression.mjs"
+    "check:compression": "node scripts/check_compression.mjs",
+    "check:ground": "node scripts/check_ground_contact.mjs"
   },
   "dependencies": {
     "three": "0.186.1"

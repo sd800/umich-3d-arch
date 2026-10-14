@@ -1,0 +1,15 @@
+{
+  "retrieved": "2026-10-13",
+  "sources": [
+    {
+      "name": "north",
+      "url": "https://api.openstreetmap.org/api/0.6/map?bbox=-83.728,42.285,-83.692,42.309",
+      "sha256": "4c0b5fd9abfa4b65c508032610ae6bf6147ab53d6f265ba8d7c43880ac421176"
+    },
+    {
+      "name": "central_athletic",
+      "url": "https://api.openstreetmap.org/api/0.6/map?bbox=-83.754,42.261,-83.730,42.279",
+      "sha256": "1b6e3d3d95014d4d52c1bc6e5625d9da7ddeb71c51226cf0bd33a74c4a79eee6"
+    }
+  ]
+}

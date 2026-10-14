@@ -71,7 +71,7 @@ export function stabilizeBuildingMaterial(material,detail=false) {
   if(detail){
     // Roof accents and the underlying metal sheet can be exactly coplanar.
     // Separate their depth priorities, without moving CAD vertices.
-    material.userData.campusDetailRank={Metal:1,Slate:1,Concrete:3,LightStone:3}[material.name]??2;
+    material.userData.campusDetailRank={Metal:1,Slate:1,RoofMembrane:2,RoofGravel:2,RoofZinc:2,RoofGreen:3,RoofEdge:4,Concrete:3,LightStone:3}[material.name]??2;
     // Polygon-offset units vary between fixed and floating-point depth buffers.
     // Apply a small linear orthographic bias directly in clip space instead.
     const uniform={value:0};material.userData.campusDetailBias=uniform;
@@ -89,8 +89,8 @@ export function stabilizeBuildingMaterial(material,detail=false) {
 /** Color roof caps separately from walls, stone trim and ground-level concrete. */
 export function prepareBuildingRoofs(mesh,groundZ=0,detail=false,uniformFlatRoof=false) {
   const multi=Array.isArray(mesh.material),materials=multi?mesh.material:[mesh.material];
-  const finishedRoof=material=>['Metal','Slate'].includes(material.name)||material.name.endsWith('Roof');
-  const eligible=material=>!material.transparent&&material.name!=='Glass'&&(finishedRoof(material)?uniformFlatRoof:(!detail||material.name==='Concrete'));
+  const finishedRoof=material=>['Metal','Slate'].includes(material.name)||material.name.startsWith('Roof')||material.name.endsWith('Roof');
+  const eligible=material=>!material.transparent&&(['Brick','NorthBrick','Terracotta','Sandstone','Limestone','LightStone','Concrete','WhitePanel','MetalPanel'].includes(material.name)||(finishedRoof(material)&&uniformFlatRoof));
   if(!materials.some(eligible))return [mesh];
   mesh.updateWorldMatrix(true,false);
   const source=mesh.geometry,position=source.attributes.position,index=source.index;
@@ -114,7 +114,7 @@ export function prepareBuildingRoofs(mesh,groundZ=0,detail=false,uniformFlatRoof
     const geometry=new BufferGeometry();for(const [name,attribute] of Object.entries(source.attributes))geometry.setAttribute(name,attribute);geometry.setIndex(buckets[id][kind]);
     let material=materials[id];
     if(kind==='roof'){
-      material=material.clone();material.color.setHex(0x657078);material.shininess=0;material.specular?.set(0);material.userData.campusRoof=true;
+      material=material.clone();material.color.setHex(finishedRoof(material)?materials[id].color.getHex():0x727a75);material.shininess=0;material.specular?.set(0);material.userData.campusRoof=true;
       stabilizeBuildingMaterial(material,detail);stabilizeCampusShadows(material);
     }
     const part=new Mesh(geometry,material);part.name=mesh.name;part.position.copy(mesh.position);part.quaternion.copy(mesh.quaternion);part.scale.copy(mesh.scale);part.userData={...mesh.userData};part.castShadow=mesh.castShadow;part.receiveShadow=mesh.receiveShadow;parts.push(part);

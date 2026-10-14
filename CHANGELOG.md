@@ -1,5 +1,15 @@
 # Changelog
 
+## 26.10.13.13 — 2026-10-13
+
+- Rebuild Michigan Stadium with a sunken gray seating bowl, aisles, mapped premium-building footprints, end-zone video boards and a correctly aligned marked field.
+- Rebuild the Ross campus as distinct terracotta/glass academic bars, lower green-roof pavilions, atrium, Blau Hall and adjacent renovated buildings.
+- Rework North Campus academic and research buildings with separate wings, open Duderstadt portico, pyramidal skylights, glazed atria, studio volumes and individual brick, stone and metal facades.
+- Restore designed roof colors and materials while retaining stable shadows and depth handling; refine roof edges and facade framing across the campus.
+- Fit grade pads and below-grade supports to complete footprints, reconcile overlapping wings and remove tiny GIS slivers. Verify exported building ground contacts and the stadium retaining perimeter.
+- Stop reading device language; keep English as the default with manual language switching.
+- Omit redundant optional zero-smoothing tables in 3DS storage, preserving all imported geometry and keeping the CAD download below repository file limits.
+
 All notable changes to UMich Campus 3D Model are recorded here. Versions use `YY.M.D.NUM`, with a separate release sequence for each day in America/Chicago.
 
 ## 26.10.13.12 — 2026-10-13

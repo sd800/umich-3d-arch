@@ -2,10 +2,10 @@
   "buildings": 554,
   "layers": 555,
   "environment_layer": "环境_Environment",
-  "native_closed_solids": 634,
-  "objects_3ds": 2399,
-  "vertices": 2541948,
-  "triangles": 4439972,
+  "native_closed_solids": 678,
+  "objects_3ds": 3469,
+  "vertices": 2908544,
+  "triangles": 5056336,
   "trees": 13233,
   "landmarks": 29,
   "published_height_buildings": 1,
@@ -28,41 +28,41 @@
     4684096.36214401
   ],
   "bounds": [
-    -1503.7091940212285,
+    -1503.707885389045,
     -3827.338460971613,
     3837.8647946547662,
     3007.0218083256523
   ],
   "district_bounds": {
     "central": [
-      -1498.708404041693,
-      -776.5949884943883,
-      3099.8079237851593,
-      2387.7899639699917
+      -1498.7070968501405,
+      -776.597642731904,
+      3099.8147969573847,
+      2387.7426146760017
     ],
     "north": [
-      1008.0665864909913,
-      1027.596756131563,
-      3205.182091433089,
-      2790.610531534048
+      1008.065687751699,
+      1027.5980217881943,
+      3205.1792980438468,
+      2790.610254165963
     ],
     "medical": [
-      -67.70166388836859,
-      491.436747207663,
-      1046.306140079025,
-      1482.0282817697916
+      -67.70718907256376,
+      491.42980684772647,
+      1047.0639837231922,
+      1482.0280874728637
     ],
     "athletic": [
-      -1072.5015428379634,
-      -3602.052302727617,
-      -186.03694314249282,
-      -702.9553731548349
+      -1072.4957805945853,
+      -3602.0558694129277,
+      -186.0355100245534,
+      -702.9537046907152
     ]
   },
   "terrain": "USGS 3DEP F32 bare-earth DEM, bilinear samples ~18m; 80m landscape patches and locally flattened building pads; Z0=225m DEM datum",
   "terrain_source": "https://elevation.nationalmap.gov/arcgis/rest/services/3DEPElevation/ImageServer",
   "landscape": {
-    "mapped_road_area_m2": 656016.82,
+    "mapped_road_area_m2": 656024.0,
     "parking": 621,
     "sidewalks": 3266,
     "surface_patches": 7641,
