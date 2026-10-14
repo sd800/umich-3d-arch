@@ -17,7 +17,9 @@
     "check:rendering": "node scripts/check_rendering.mjs",
     "build:rendering-check": "esbuild scripts/check_rendering_gpu.js --bundle --format=iife --target=es2020 --outfile=tmp/rendering-check.js && python3 scripts/package_rendering_check.py",
     "check:viewport": "node scripts/check_viewport.mjs",
-    "check:hover": "node scripts/check_outdoor_hover.mjs"
+    "check:hover": "node scripts/check_outdoor_hover.mjs",
+    "build:model": "node scripts/pack_web_model.mjs",
+    "check:compression": "node scripts/check_compression.mjs"
   },
   "dependencies": {
     "three": "0.186.1"

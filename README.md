@@ -44,7 +44,7 @@ Use the `.3dm` file for native building layers and editable closed massing solid
 
 The intended domain is **umich.arch.songming.org**. Canonical URL, Open Graph/Twitter cards, bilingual titles/descriptions, structured WebSite/WebPage/3DModel data, sitemap, robots and `CNAME` are configured consistently. The static HTML includes all 554 English and Chinese building names for crawling and no-JavaScript browsing.
 
-The interactive payload is gzip-compressed without changing the 3DS geometry; the original `.3ds` remains available to download. The root local edition loads compressed data through a classic script to avoid `file://` fetch restrictions. The single-file offline edition embeds the model, font, preview and engine. Use a current browser with WebGL 2 and Compression Streams support.
+The interactive payload uses lossless geometry coding plus gzip; the original `.3ds` remains available to download. The root local edition loads compressed data through a classic script to avoid `file://` fetch restrictions. The single-file offline edition embeds the model, font, preview and engine. Use a current browser with WebGL 2 and Compression Streams support.
 
 For GitHub Pages, publish the repository’s default branch from `/ (root)` and configure the domain’s DNS for the GitHub Pages host. `CNAME` alone does not enable hosting or install an HTTPS certificate.
 
@@ -101,3 +101,9 @@ Roof shadow filtering uses a fixed PCF kernel with receiver-plane depth correcti
 - `sources/`: source snapshots and provenance.
 - `output/`: CAD files, offline edition, reports and delivery archive.
 - Root `VERSION`, `CHANGELOG.md` and package manifests record releases and builds.
+
+## Website model compression
+
+The initial model transfer is **17.39 MB**, down from **35.59 MB** (51.1% smaller). The web stream uses meshoptimizer 1.3.0 lossless vertex/index-sequence coding followed by gzip. No quantization or simplification is applied; its decoded SHA-256 matches the original 3DS. Rhino and original 3DS downloads stay unchanged.
+
+A single browser worker streams gzip decompression, restores small geometry blocks and parses the CAD model. Its compressed input and resulting geometry buffers are transferred rather than copied. The full intermediate archive is never retained. Scene setup yields to rendering between time slices; browsers that block workers use cooperative per-object parsing. Standalone HTML restores the downloadable CAD on demand in a worker. Decoder JavaScript/WebAssembly is bundled locally and requires no CDN. See `output/web_model_report.json` for byte counts, source digest and maximum block size. `npm run build:model` rebuilds the stream; `npm run check:compression` checks lossless restoration and worker behavior.

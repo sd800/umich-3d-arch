@@ -5,7 +5,7 @@ import {prepareLandscape,prepareBuildingRoofs,stabilizeBuildingMaterial,updateCa
 import {groundHeight} from './ground_height.js';
 import {installMapSelection} from './map_selection.js';
 import {CampusMapControls,setRotationMode,frameCampusBox} from './campus_controls.js';
-import {parseCampusModel,nextPaint} from './model_parser.js';
+import {parseCampusModel,recoverCampusDownload,nextPaint} from './model_parser.js';
 import {loadingIndicator} from './loading.js';
 import * as THREE from 'three';
 import {initialLanguage} from './locale.js';
@@ -31,7 +31,7 @@ let lang=initialLanguage(navigator.languages?.length?navigator.languages:[naviga
 const t=key=>(lang==='zh'?zh[key]:en[key])||en[key]||key;
 const loadingView=loadingIndicator($('load-progress'),$('load-status'),t);
 const reportLoad=event=>loadingView.update(event);
-$('download-image').disabled=true;
+$('download-image').disabled=true;$('download-3ds').disabled=Boolean(data.model);
 const nameOf=r=>lang==='zh'?(r.name_zh||r.name):r.name;
 const brief=r=>lang==='zh'?(r.short_zh||r.name_zh||r.name):(r.short||r.name);
 const byLayer=new Map(records.map(r=>[r.layer,r]));const byCode=new Map(records.map(r=>[r.code,r]));
@@ -51,7 +51,7 @@ $('open-help').onclick=()=>$('help-dialog').showModal();$('close-help').onclick=
 $('help-dialog').addEventListener('click',e=>{if(e.target===e.currentTarget){const b=e.target.getBoundingClientRect();if(e.clientX<b.left||e.clientX>b.right||e.clientY<b.top||e.clientY>b.bottom)e.target.close();}});
 function download(blob,name){const url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);}
 let bytes=null;
-$('download-3ds').onclick=()=>{if(bytes)download(new Blob([bytes],{type:'application/octet-stream'}),'UMich_AnnArbor.3ds');else{const a=document.createElement('a');a.href=data.downloadUrl||data.modelUrl;a.download='UMich_AnnArbor.3ds';a.click();}};
+$('download-3ds').onclick=async()=>{if(!data.model){const a=document.createElement('a');a.href=data.downloadUrl;a.download='UMich_AnnArbor.3ds';a.click();return;}const button=$('download-3ds');button.disabled=true;try{const input=await loadModelBytes(data);download(await recoverCampusDownload(input,data),'UMich_AnnArbor.3ds');}catch(error){console.error(error);$('status-text').textContent=lang==='zh'?'模型下载失败，请重试':'Model download failed. Please try again.';}finally{button.disabled=false;}};
 $('download-image').onclick=()=>{if(!renderer||!modelReady)return;viewportLoop.drawNow();renderer.domElement.toBlob(b=>{if(b)download(b,'UMich_AnnArbor_view.png');});};
 function listRecords(){const q=$('search').value.trim().toLowerCase();return records.filter(r=>(category==='all'||(category==='landmark'?r.landmark:r.zone===category))&&(!q||[r.name,r.name_zh,r.code,r.short,r.short_zh,...(r.aliases_zh||[])].some(s=>s?.toLowerCase().includes(q))));}
 function refreshList(){
@@ -173,15 +173,15 @@ try{
  renderer.domElement.setAttribute('aria-label',t('modelLabel'));renderer.domElement.tabIndex=0;$('canvas-host').append(renderer.domElement);
  scene=new THREE.Scene();camera=new THREE.OrthographicCamera(-1000,1000,1000,-1000,.1,100000);camera.up.set(0,0,1);scene.add(new THREE.HemisphereLight(0xffffff,0x849177,2.0));
  sun=new THREE.DirectionalLight(0xffffff,2.2);const siteCenter=new THREE.Vector3(...data.siteCenter,50);sun.position.copy(siteCenter).add(new THREE.Vector3(-4000,-6000,9000));sun.target.position.copy(siteCenter);sun.castShadow=true;sun.shadow.mapSize.set(2048,2048);sun.shadow.camera.left=-6500;sun.shadow.camera.right=6500;sun.shadow.camera.top=6500;sun.shadow.camera.bottom=-6500;sun.shadow.camera.near=1;sun.shadow.camera.far=30000;sun.shadow.bias=-.00015;sun.shadow.normalBias=.35;scene.add(sun,sun.target);
- campus=await parseCampusModel(bytes,reportLoad);const meshes=[];campus.traverse(o=>{if(o.isMesh)meshes.push(o);});
- const terrainLighting=createTerrainLighting(data.groundGrid);let prepared=0;
+ const input=bytes;bytes=null;campus=await parseCampusModel(input,reportLoad,data);const meshes=[];campus.traverse(o=>{if(o.isMesh)meshes.push(o);});
+ const terrainLighting=createTerrainLighting(data.groundGrid);let prepared=0,lastPrepared=performance.now();
  for(const m of meshes){
   const old=Array.isArray(m.material)?m.material:[m.material];const materials=old.map(mm=>{const mat=mm.clone();const co=data.palette[mat.name];if(co)mat.color.setRGB(co[0]/255,co[1]/255,co[2]/255,THREE.SRGBColorSpace);mat.shininess=mat.name==='Glass'?25:0;mat.specular.set(mat.name==='Glass'?0x222222:0);mat.flatShading=true;mat.emissiveIntensity=0;stabilizeBuildingMaterial(mat,m.name.includes('D'));stabilizeCampusShadows(mat);return mat;});
   m.material=Array.isArray(m.material)?materials:materials[0];m.receiveShadow=true;
   const r=byLayer.get(data.layers[m.name]?.layer);
   if(r){let g=buildings.get(r.code);if(!g){g=new THREE.Group();g.name=r.code;buildings.set(r.code,g);campus.add(g);}const center=new THREE.Box3().setFromObject(m).getCenter(new THREE.Vector3());for(const part of prepareBuildingRoofs(m,groundHeight(data,center.x,center.y),m.name.includes('D'),true)){g.attach(part);part.castShadow=true;part.userData.code=r.code;pickMeshes.push(part);if(part.name.includes('D'))details.push(part);}}
   else{m.castShadow=materials.some(mat=>['Leaves','Trunk','Furniture'].includes(mat.name));const parts=prepareLandscape(m);for(const part of parts)if(part.renderOrder<0)applyTerrainLighting(part.material,terrainLighting);envMeshes.push(...parts);}
-  if(++prepared%32===0){reportLoad({phase:'scene',loaded:meshes.length+prepared,total:meshes.length*2});await nextPaint();}
+  prepared++;if(performance.now()-lastPrepared>8){reportLoad({phase:'scene',loaded:meshes.length+prepared,total:meshes.length*2});await nextPaint();lastPrepared=performance.now();}
  }
  reportLoad({phase:'scene',loaded:1,total:1});
  scene.add(campus);renderBounds=new THREE.Box3().setFromObject(campus);fitCampusSun(sun,renderBounds);renderer.shadowMap.autoUpdate=false;renderer.shadowMap.needsUpdate=true;campusDiagonal=new THREE.Box3().setFromObject(campus).getSize(new THREE.Vector3()).length();envMeshes.forEach(m=>m.visible=$('environment').checked);details.forEach(m=>m.visible=$('details').checked);renderer.shadowMap.enabled=$('shadows').checked;sun.castShadow=$('shadows').checked;updateCut();controls=new CampusMapControls(camera,renderer.domElement);controls.groundHeight=(x,y)=>groundHeight(data,x,y);controls.addEventListener('change',()=>render(false));controls.listenToKeyEvents(renderer.domElement);syncRotationButton();
@@ -202,8 +202,8 @@ try{
   const place=outdoorPicker(p.x,p.y);return place?{text:nameOf(place),building:false}:null;
  },show:(value,e)=>{const tip=$('hover-tip');tip.textContent=value.text;tip.style.display='block';const b=host.getBoundingClientRect();tip.style.left=Math.min(e.clientX-b.left+14,host.clientWidth-tip.offsetWidth-10)+'px';tip.style.top=Math.min(e.clientY-b.top+14,host.clientHeight-tip.offsetHeight-38)+'px';renderer.domElement.style.cursor=value.building?'pointer':'grab';},hide:()=>{$('hover-tip').style.display='none';renderer.domElement.style.cursor='grab';}});
  renderer.domElement.addEventListener('webglcontextlost',e=>{e.preventDefault();$('status-text').textContent=t('lost');});
- reportLoad({phase:'ready',loaded:1,total:1});await nextPaint();$('download-image').disabled=false;$('loading').remove();
-}catch(err){console.error(err);modelReady=false;if(controls)controls.dispose();if(renderer)renderer.dispose();renderer=null;staticMode=true;$('canvas-host').replaceChildren();$('fallback').src=data.preview;$('fallback').style.display='block';$('loading').remove();const note=document.createElement('div');note.className='error-message';note.id='render-error';note.textContent=t('error');host.append(note);$('download-image').disabled=true;updateCount();}
+ reportLoad({phase:'ready',loaded:1,total:1});await nextPaint();$('download-image').disabled=false;$('download-3ds').disabled=false;$('loading').remove();
+}catch(err){console.error(err);$('download-3ds').disabled=false;modelReady=false;if(controls)controls.dispose();if(renderer)renderer.dispose();renderer=null;staticMode=true;$('canvas-host').replaceChildren();$('fallback').src=data.preview;$('fallback').style.display='block';$('loading').remove();const note=document.createElement('div');note.className='error-message';note.id='render-error';note.textContent=t('error');host.append(note);$('download-image').disabled=true;updateCount();}
 
 }
 initializeModel();

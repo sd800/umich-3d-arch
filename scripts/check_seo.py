@@ -29,7 +29,7 @@ for record in data['records']:
     assert record['name_zh'] and record['name_zh'] in text
     assert record['basis'] and record['partition'] and record['basis_en'] and record['partition_en']
     assert record['height_status'] in ['estimated','published','municipal']
-assert data['compression']=='gzip' and (r/data['modelUrl']).is_file()
+assert data['compression']=='gzip' and (r/urlsplit(data['modelUrl']).path).is_file()
 assert {b['zone'] for b in data['records']}=={'central','north','medical','athletic'}
 assert len(data['landmarkOrder'])==len([b for b in data['records'] if b['landmark']])
 entity=next(x for x in schema['@graph'] if x['@type']=='3DModel')

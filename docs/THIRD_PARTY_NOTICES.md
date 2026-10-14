@@ -41,3 +41,29 @@ USGS National Map 3DEP terrain: https://elevation.nationalmap.gov/arcgis/rest/se
 City of Ann Arbor historical height inventory: https://www.a2gov.org/media/aoxh1zdd/appendixb_10-10-13.pdf . These entries are historical estimates, not measured current heights.
 
 University and architect pages provide exterior-form references. Their photographs and architectural drawings are not redistributed. Chinese labels and simplified CAD geometry are independently prepared. The maize M / rolled-map icon is an independent project design using the university’s signature colors; it does not imply university endorsement.
+
+## meshoptimizer 1.3.0
+
+Official source: https://github.com/zeux/meshoptimizer/tree/v1.3/js . Used for lossless vertex and index-stream coding. The JavaScript/WebAssembly decoder is bundled locally; the encoder runs only at build time.
+
+MIT License
+
+Copyright (c) 2016-2026 Arseny Kapoulkine
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.

@@ -24,7 +24,7 @@ export async function loadModelBytes(data, environment = {}, report = () => {}) 
     report({phase,loaded,total:loaded}); return bytes;
   };
   const decompress=async bytes=>{
-    if (data.compression!=='gzip') return bytes;
+    if (data.modelFormat==='campus-3ds-v1'||data.compression!=='gzip') return bytes;
     const Decompressor=environment.DecompressionStream||globalThis.DecompressionStream;
     if (!Decompressor) throw new Error('This browser does not support compressed offline models');
     const stream=new Blob([bytes]).stream().pipeThrough(new Decompressor('gzip'));
