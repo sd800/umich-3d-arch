@@ -1,5 +1,4 @@
-// Device language preference applies only until the visitor chooses a language.
+// Device locale never overrides the English default or a manual choice.
 export function initialLanguage(languages, saved) {
- if (saved === 'en' || saved === 'zh') return saved;
- return languages.some(code => /^zh(?:-|_|$)/i.test(code)) ? 'zh' : 'en';
+ return saved === 'en' || saved === 'zh' ? saved : 'en';
 }

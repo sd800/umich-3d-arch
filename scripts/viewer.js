@@ -1,8 +1,10 @@
+import {createOutdoorPicker,groundPoint,installCampusHover} from './outdoor_hover.js';
+import {createViewportRenderLoop} from './viewport_rendering.js';
 import {createTerrainLighting,applyTerrainLighting} from './terrain_lighting.js';
 import {prepareLandscape,prepareBuildingRoofs,stabilizeBuildingMaterial,updateCampusDepthRange,setCampusClipping,updateCampusDetailDepth,stabilizeCampusShadows,fitCampusSun} from './surface_rendering.js';
 import {groundHeight} from './ground_height.js';
 import {installMapSelection} from './map_selection.js';
-import {CampusMapControls,setRotationMode,frameCampusBox,levelCampusView} from './campus_controls.js';
+import {CampusMapControls,setRotationMode,frameCampusBox} from './campus_controls.js';
 import {parseCampusModel,nextPaint} from './model_parser.js';
 import {loadingIndicator} from './loading.js';
 import * as THREE from 'three';
@@ -22,8 +24,8 @@ Object.assign(zh,{central:'中央校区',architecture:'学校校园导览',athle
 
 if(!data.model){en.helpOffline='Double-click index.html with its assets and output folders beside it, or open the single-file offline HTML in the output folder. No server is needed for local viewing. WebGL 2 is required for interaction.';zh.helpOffline='保留 assets 和 output 文件夹，直接双击 index.html；也可打开 output 中的单文件离线 HTML。无需本地服务器，交互显示需要 WebGL 2。';}
 
-Object.assign(en,{levelView:'Level',rotationMode:'Rotate',load_local:'Reading local model',load_read:'Downloading model',load_decode:'Decoding model data',load_unpack:'Unpacking model',load_parse:'Reading geometry',load_scene:'Preparing buildings and landscape',load_render:'Drawing first view',load_ready:'Ready',load_total:'Overall',helpOrbit:'Drag with the left mouse button to pan; right-drag to rotate. Scroll to zoom at the pointer. On touch screens, one finger pans and two fingers pan or pinch to zoom. Enable Rotate for one-finger rotation. Use Level for a horizontal view; vertical drags frame the elevation without moving the ground pivot. Arrow keys pan and +/− zoom when the model is focused.',mouseHelp:'Drag to pan · Right-drag to rotate · Scroll to zoom'});
-Object.assign(zh,{levelView:'水平视角',rotationMode:'旋转',load_local:'读取本地模型',load_read:'下载模型数据',load_decode:'解码模型数据',load_unpack:'解压模型数据',load_parse:'解析建筑几何',load_scene:'准备建筑与景观',load_render:'绘制首个视图',load_ready:'加载完成',load_total:'总体',helpOrbit:'鼠标左键拖动平移，右键拖动旋转，滚轮以指针所在位置缩放。触屏单指平移，双指平移或捏合缩放；开启“旋转”后可单指旋转。点击“水平视角”可平视；接近水平时，上下拖动调整立面在画面中的位置。模型获得焦点时，方向键平移，＋／－缩放。',mouseHelp:'拖动平移 · 右键旋转 · 滚轮缩放'});
+Object.assign(en,{rotationMode:'Rotate',load_local:'Reading local model',load_read:'Downloading model',load_decode:'Decoding model data',load_unpack:'Unpacking model',load_parse:'Reading geometry',load_scene:'Preparing buildings and landscape',load_render:'Drawing first view',load_ready:'Ready',load_total:'Overall',helpOrbit:'Drag with the left mouse button to pan; right-drag to rotate. Scroll to zoom at the pointer. On touch screens, one finger pans and two fingers pan or pinch to zoom. Enable Rotate for one-finger rotation. Arrow keys pan and +/− zoom when the model is focused.',mouseHelp:'Drag to pan · Right-drag to rotate · Scroll to zoom'});
+Object.assign(zh,{rotationMode:'旋转',load_local:'读取本地模型',load_read:'下载模型数据',load_decode:'解码模型数据',load_unpack:'解压模型数据',load_parse:'解析建筑几何',load_scene:'准备建筑与景观',load_render:'绘制首个视图',load_ready:'加载完成',load_total:'总体',helpOrbit:'鼠标左键拖动平移，右键拖动旋转，滚轮以指针所在位置缩放。触屏单指平移，双指平移或捏合缩放；开启“旋转”后可单指旋转。模型获得焦点时，方向键平移，＋／－缩放。',mouseHelp:'拖动平移 · 右键旋转 · 滚轮缩放'});
 let stored=null;try{stored=localStorage.getItem('umich-model-language');}catch{}
 let lang=initialLanguage(navigator.languages?.length?navigator.languages:[navigator.language||'en'],stored);
 const t=key=>(lang==='zh'?zh[key]:en[key])||en[key]||key;
@@ -50,7 +52,7 @@ $('help-dialog').addEventListener('click',e=>{if(e.target===e.currentTarget){con
 function download(blob,name){const url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);}
 let bytes=null;
 $('download-3ds').onclick=()=>{if(bytes)download(new Blob([bytes],{type:'application/octet-stream'}),'UMich_AnnArbor.3ds');else{const a=document.createElement('a');a.href=data.downloadUrl||data.modelUrl;a.download='UMich_AnnArbor.3ds';a.click();}};
-$('download-image').onclick=()=>{if(!renderer||!modelReady)return;drawScene();renderer.domElement.toBlob(b=>{if(b)download(b,'UMich_AnnArbor_view.png');});};
+$('download-image').onclick=()=>{if(!renderer||!modelReady)return;viewportLoop.drawNow();renderer.domElement.toBlob(b=>{if(b)download(b,'UMich_AnnArbor_view.png');});};
 function listRecords(){const q=$('search').value.trim().toLowerCase();return records.filter(r=>(category==='all'||(category==='landmark'?r.landmark:r.zone===category))&&(!q||[r.name,r.name_zh,r.code,r.short,r.short_zh,...(r.aliases_zh||[])].some(s=>s?.toLowerCase().includes(q))));}
 function refreshList(){
  const list=$('building-list');list.replaceChildren();const shown=listRecords();
@@ -121,7 +123,7 @@ function applyLanguage(){
  for(const[r,el]of labelNodes)el.textContent=brief(byCode.get(r));
  const err=$('render-error');if(err)err.textContent=t('error');refreshTour();refreshList();refreshDetail();loadingView.refresh();render();
 }
-$('language').onclick=()=>{lang=lang==='en'?'zh':'en';try{localStorage.setItem('umich-model-language',lang);}catch{}applyLanguage();};
+$('language').onclick=()=>{$('hover-tip').style.display='none';lang=lang==='en'?'zh':'en';try{localStorage.setItem('umich-model-language',lang);}catch{}applyLanguage();};
 function aspect(){return Math.max(host.clientWidth,1)/Math.max(host.clientHeight,1);}
 function updateFrustum(){if(!camera)return;const a=aspect();camera.left=-frameHeight*a/2;camera.right=frameHeight*a/2;camera.top=frameHeight/2;camera.bottom=-frameHeight/2;camera.updateProjectionMatrix();if(controls){controls.syncViewOffset();updateCampusZoomLimit(camera,controls,campusDiagonal);}}
 function fitBox(b,mode='aerial',pad=1.16,focus=false,direction,minimumHeight=50){
@@ -131,7 +133,6 @@ function setViewButtons(){for(const key of ['aerial','core','north-view','medica
 function syncRotationButton(){const b=$('rotation-mode');b.classList.toggle('active',Boolean(controls?.rotationMode));b.setAttribute('aria-pressed',String(Boolean(controls?.rotationMode)));}
 function resetInteraction(){if(controls)setRotationMode(controls,false);syncRotationButton();}
 $('rotation-mode').onclick=()=>{if(controls)setRotationMode(controls,!controls.rotationMode);syncRotationButton();};
-$('level-view').onclick=()=>{if(!controls)return;viewMode='level';setViewButtons();levelCampusView(controls);render(false);};
 function fullView(mode){
  if(mode==='plan')resetInteraction();viewMode=mode;setViewButtons();if(!campus)return;
  const overview=mode==='aerial',zone={core:'central','north-view':'north','medical-view':'medical','athletic-view':'athletic'}[mode];
@@ -157,10 +158,10 @@ function updateLabels(){
   if(code!==selected&&boxes.length>9)continue;boxes.push(b);el.style.left=xx+'px';el.style.top=yy+'px';el.style.display='block';el.classList.toggle('selected',code===selected);
  }
 }
-let renderQueued=false;
-function render(updateShadows=true){if(renderer&&updateShadows!==false)renderer.shadowMap.needsUpdate=true;if(!renderer||!modelReady||renderQueued)return;renderQueued=true;requestAnimationFrame(()=>{renderQueued=false;drawScene();});}
+let viewportLoop=null;
+function render(updateShadows=true){if(renderer&&updateShadows!==false)renderer.shadowMap.needsUpdate=true;if(!renderer||!modelReady)return;viewportLoop?.request();}
 function drawScene(){
- if(!renderer||!modelReady)return;updateCampusDepthRange(camera,renderBounds);updateCampusDetailDepth(camera,campus,depthBits);renderer.render(scene,camera);const level=Math.abs(controls?.getPolarAngle()-Math.PI/2)<1e-7;$('level-view').classList.toggle('active',level);$('level-view').setAttribute('aria-pressed',String(level));const n=new THREE.Vector3(0,1,0).transformDirection(camera.matrixWorldInverse);$('north-arrow').style.transform='rotate('+Math.atan2(n.x,n.y)+'rad)';
+ if(!renderer||!modelReady)return;updateCampusDepthRange(camera,renderBounds);updateCampusDetailDepth(camera,campus,depthBits);renderer.render(scene,camera);const n=new THREE.Vector3(0,1,0).transformDirection(camera.matrixWorldInverse);$('north-arrow').style.transform='rotate('+Math.atan2(n.x,n.y)+'rad)';
  const mpp=(camera.right-camera.left)/camera.zoom/Math.max(host.clientWidth,1),raw=mpp*80,pow=10**Math.floor(Math.log10(raw));const length=[1,2,5,10].map(x=>x*pow).find(x=>x>=raw)||10*pow;
  $('scale-line').style.width=(length/mpp)+'px';$('scale-text').textContent=length<1?Math.round(length*100)+' cm':length+' m';updateLabels();
 }
@@ -185,14 +186,22 @@ try{
  reportLoad({phase:'scene',loaded:1,total:1});
  scene.add(campus);renderBounds=new THREE.Box3().setFromObject(campus);fitCampusSun(sun,renderBounds);renderer.shadowMap.autoUpdate=false;renderer.shadowMap.needsUpdate=true;campusDiagonal=new THREE.Box3().setFromObject(campus).getSize(new THREE.Vector3()).length();envMeshes.forEach(m=>m.visible=$('environment').checked);details.forEach(m=>m.visible=$('details').checked);renderer.shadowMap.enabled=$('shadows').checked;sun.castShadow=$('shadows').checked;updateCut();controls=new CampusMapControls(camera,renderer.domElement);controls.groundHeight=(x,y)=>groundHeight(data,x,y);controls.addEventListener('change',()=>render(false));controls.listenToKeyEvents(renderer.domElement);syncRotationButton();
  renderer.domElement.addEventListener('keydown',e=>{if(e.ctrlKey||e.metaKey||e.altKey)return;if(['+','=','-','_'].includes(e.key)){e.preventDefault();if(e.key==='+'||e.key==='=')controls.dollyIn(.9);else controls.dollyOut(.9);}if(!e.repeat&&e.key.toLowerCase()==='r'){$('rotation-mode').click();}});
- let lastHeight=host.clientHeight;const observer=new ResizeObserver(()=>{const h=host.clientHeight;if(h<1||host.clientWidth<1)return;if(lastHeight>0)frameHeight*=h/lastHeight;lastHeight=h;renderer.setSize(host.clientWidth,h);updateFrustum();render();});observer.observe(host);
+ viewportLoop=createViewportRenderLoop({host,renderer,resize:ratio=>{frameHeight*=ratio;updateFrustum();},draw:drawScene});
+ const observer=new ResizeObserver(()=>{if(viewportLoop.needsResize())render(false);});observer.observe(host);
  reportLoad({phase:'render',loaded:0,total:1});await nextPaint();modelReady=true;
- renderer.setSize(host.clientWidth,host.clientHeight);fullView('aerial');if(selected)selectBuilding(selected,Boolean(pendingFocus));pendingFocus=null;refreshList();
+ fullView('aerial');if(selected)selectBuilding(selected,Boolean(pendingFocus));pendingFocus=null;refreshList();
  const ray=new THREE.Raycaster(),pointer=new THREE.Vector2();
  function pick(e){const b=renderer.domElement.getBoundingClientRect();pointer.set((e.clientX-b.left)/b.width*2-1,-(e.clientY-b.top)/b.height*2+1);ray.setFromCamera(pointer,camera);return ray.intersectObjects(pickMeshes.filter(m=>m.visible&&m.parent.visible),false).find(h=>!$('cut-enabled').checked||h.point.z<=clipPlane.constant)?.object.userData.code||null;}
  installMapSelection(renderer.domElement,e=>selectBuilding(pick(e)));
- renderer.domElement.addEventListener('pointermove',e=>{const tip=$('hover-tip');if(e.buttons||e.pointerType==='touch'){tip.style.display='none';return;}const code=pick(e);if(code){const r=byCode.get(code);tip.textContent=nameOf(r)+' · '+r.height.toFixed(2)+' m';tip.style.display='block';const b=host.getBoundingClientRect();tip.style.left=Math.min(e.clientX-b.left+14,host.clientWidth-tip.offsetWidth-10)+'px';tip.style.top=Math.min(e.clientY-b.top+14,host.clientHeight-tip.offsetHeight-38)+'px';renderer.domElement.style.cursor='pointer';}else{tip.style.display='none';renderer.domElement.style.cursor='grab';}});
- renderer.domElement.addEventListener('pointerleave',()=>$('hover-tip').style.display='none');renderer.domElement.addEventListener('webglcontextlost',e=>{e.preventDefault();$('status-text').textContent=t('lost');});
+ const outdoorPicker=createOutdoorPicker(data.hoverPlaces||data.places||[]);
+ installCampusHover(renderer.domElement,{resolve:e=>{
+  const code=pick(e);if(code){const r=byCode.get(code);return {text:nameOf(r)+' · '+r.height.toFixed(2)+' m',building:true};}
+  if(!$('environment').checked)return null;
+  const p=groundPoint(ray.ray,(x,y)=>groundHeight(data,x,y),controls.target.z,Math.max(5000,campusDiagonal*8));
+  if(!p||($('cut-enabled').checked&&p.z>clipPlane.constant))return null;
+  const place=outdoorPicker(p.x,p.y);return place?{text:nameOf(place),building:false}:null;
+ },show:(value,e)=>{const tip=$('hover-tip');tip.textContent=value.text;tip.style.display='block';const b=host.getBoundingClientRect();tip.style.left=Math.min(e.clientX-b.left+14,host.clientWidth-tip.offsetWidth-10)+'px';tip.style.top=Math.min(e.clientY-b.top+14,host.clientHeight-tip.offsetHeight-38)+'px';renderer.domElement.style.cursor=value.building?'pointer':'grab';},hide:()=>{$('hover-tip').style.display='none';renderer.domElement.style.cursor='grab';}});
+ renderer.domElement.addEventListener('webglcontextlost',e=>{e.preventDefault();$('status-text').textContent=t('lost');});
  reportLoad({phase:'ready',loaded:1,total:1});await nextPaint();$('download-image').disabled=false;$('loading').remove();
 }catch(err){console.error(err);modelReady=false;if(controls)controls.dispose();if(renderer)renderer.dispose();renderer=null;staticMode=true;$('canvas-host').replaceChildren();$('fallback').src=data.preview;$('fallback').style.display='block';$('loading').remove();const note=document.createElement('div');note.className='error-message';note.id='render-error';note.textContent=t('error');host.append(note);$('download-image').disabled=true;updateCount();}
 

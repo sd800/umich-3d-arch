@@ -1,0 +1,25 @@
+import assert from 'node:assert/strict';
+import {readFileSync} from 'node:fs';
+import {Ray,Vector3} from 'three';
+import {createOutdoorPicker,groundPoint,installCampusHover} from './outdoor_hover.js';
+const polygon=(a,b,c,d)=>({type:'Polygon',coordinates:[[[a,b],[c,b],[c,d],[a,d],[a,b]]]});
+const pond={name:'Pond',hitArea:polygon(2,2,4,4)},plaza={name:'Plaza',hitArea:polygon(0,0,10,10)},hole={name:'Ring',hitArea:{type:'Polygon',coordinates:[...polygon(20,20,30,30).coordinates,...polygon(23,23,27,27).coordinates]}};
+const pick=createOutdoorPicker([plaza,pond,hole,{name:'Disconnected',hitArea:{type:'MultiPolygon',coordinates:[polygon(40,40,45,45).coordinates,polygon(50,50,55,55).coordinates]}}]);
+assert.equal(pick(3,3).name,'Pond');assert.equal(pick(8,8).name,'Plaza');assert.equal(pick(0,2).name,'Plaza');assert.equal(pick(21,21).name,'Ring');assert.equal(pick(25,25),null);assert.equal(pick(53,53).name,'Disconnected');assert.equal(pick(60,60),null);
+const ray=new Ray(new Vector3(4,5,100),new Vector3(.1,.2,-1).normalize()),point=groundPoint(ray,()=>12,0);
+assert.ok(Math.abs(point.z-12)<.02);assert.equal(groundPoint(new Ray(new Vector3(0,0,100),new Vector3(1,0,0)),()=>0),null);
+assert.equal(groundPoint(new Ray(new Vector3(0,0,100),new Vector3(0,0,1)),()=>0),null);
+let shown=0,hidden=0,resolved=0;const listeners={},jobs=[];
+const canvas={addEventListener:(event,fn)=>listeners[event]=fn,removeEventListener:(event)=>delete listeners[event],getBoundingClientRect:()=>({left:0,top:0,right:100,bottom:100,width:100,height:100})};
+const dispose=installCampusHover(canvas,{resolve:()=>{resolved++;return 'place';},show:()=>shown++,hide:()=>hidden++,requestFrame:fn=>jobs.push(fn)});
+const move=(x=20,buttons=0,pointerType='mouse')=>listeners.pointermove({clientX:x,clientY:30,buttons,pointerType});
+move();move(30);move(40);assert.equal(jobs.length,1);jobs.shift()();assert.equal(resolved,1);assert.equal(shown,1);
+move();listeners.pointerleave();jobs.shift()();assert.equal(resolved,1,'Leaving cancels a pending hit');
+move(20,1);move(20,0,'touch');assert.equal(jobs.length,0,'Dragging/touch never resolve hover');
+move(200);jobs.shift()();assert.equal(resolved,1,'Outside coordinates never resolve hover');assert.ok(hidden>=4);dispose();assert.equal(Object.keys(listeners).length,0);
+const html=readFileSync(new URL('../index.html',import.meta.url),'utf8'),data=JSON.parse(html.match(/<script id="campus-data" type="application\/json">(.*?)<\/script>/s)[1]);
+const places=data.hoverPlaces||data.places;assert.ok(places.length>=7);assert.ok(places.every(p=>p.name&&p.name_zh&&p.hitArea));
+const realPick=createOutdoorPicker(places);let valid=0;
+for(const p of places){const polys=p.hitArea.type==='Polygon'?[p.hitArea.coordinates]:p.hitArea.coordinates;assert.ok(['Polygon','MultiPolygon'].includes(p.hitArea.type));for(const rings of polys){assert.ok(rings[0].length>=4);for(const ring of rings)for(const v of ring)assert.ok(v.slice(0,2).every(Number.isFinite));}if(p.position&&realPick(p.position[0],p.position[1]))valid++;}
+const viewer=readFileSync(new URL('./viewer.js',import.meta.url),'utf8');assert.ok(viewer.indexOf('const code=pick(e);if(code)')<viewer.indexOf('const p=groundPoint('));assert.ok(viewer.includes("if(!$('environment').checked)return null"));
+console.log(`Outdoor hover passed: polygon holes/boundaries, nested/disconnected spaces, ground rays, coalescing, drag/touch/leave safeguards; ${places.length} bilingual mapped places.`);

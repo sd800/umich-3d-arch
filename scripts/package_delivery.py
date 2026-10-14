@@ -6,7 +6,7 @@ readme=f'''# UMich Campus 3D Model
 
 A bilingual exterior model of the **University of Michigan, Ann Arbor**. Open `index.html` by double-clicking it with its `assets` and `output` folders beside it, or use the standalone offline HTML in `output`.
 
-密西根大学安娜堡校区的室外三维模型，覆盖中央校区、北校区、医学中心和体育区。英文为默认语言；设备语言偏好中有中文时，首次打开默认中文，也可手动切换。
+密西根大学安娜堡校区的室外三维模型，覆盖中央校区、北校区、医学中心和体育区。英文为默认语言；首次打开统一使用英文，可手动切换中英文。
 
 ## Deliverables
 
@@ -84,9 +84,9 @@ python3 scripts/package_delivery.py
 The source snapshots are included; rebuilding the delivered geometry does not require live GIS access. Temporary building caches are ignored and are invalidated when building code, curation or footprints change. Model sources and third-party notices are retained in the delivery archive.
 '''
 readme+='''
-## Level views
+## Low-angle navigation
 
-The view can tilt continuously from overhead to exactly horizontal. The Level control keeps the current bearing and scale. Low-angle vertical panning adjusts orthographic framing instead of intersecting nearly parallel ground rays, and cursor zoom stays anchored without tilting the camera. Ground pivots, immediate stopping and explicit rotation are retained. `npm run check:interaction` includes 144 low-angle cases across elevations, bearings and viewport proportions.
+The view can tilt continuously from overhead to exactly horizontal. Low-angle vertical panning adjusts orthographic framing instead of intersecting nearly parallel ground rays, and cursor zoom stays anchored without tilting the camera. Ground pivots, immediate stopping and explicit rotation are retained. `npm run check:interaction` includes 144 low-angle cases across elevations, bearings and viewport proportions.
 
 ## Rendering checks
 
@@ -96,6 +96,7 @@ Run `npm run check:rendering` for CAD surface and depth-frustum checks. Run `npm
 
 Roof shadow filtering uses a fixed PCF kernel with receiver-plane depth correction. The sun volume is fixed to campus bounds. Ordinary flat roofs use one neutral gray base color across metal, slate, concrete and body caps; pitched surfaces retain natural directional shading. Small orthographic depth priorities separate roof sheets and concrete accents while retaining ordinary building occlusion and original CAD coordinates. The GPU check also covers roof lighting and coplanar details during pan, rotation and zoom.
 '''
+readme+='\n## Project layout\n\n- `index.html`: website entry; root SEO files and `CNAME` support publishing.\n- `assets/`: browser engine, fonts, icons and local model payload.\n- `config/`: custom site configuration.\n- `docs/`: project decisions and third-party license notices.\n- `scripts/`: model generators, packaging and necessary checks.\n- `sources/`: source snapshots and provenance.\n- `output/`: CAD files, offline edition, reports and delivery archive.\n- Root `VERSION`, `CHANGELOG.md` and package manifests record releases and builds.\n'
 (r/'README.md').write_text(readme)
 sources='''# Sources and modeling decisions
 
@@ -149,7 +150,7 @@ usage=f'''# 密西根大学安娜堡校区模型使用说明
 
 1. 保留 `index.html`、`assets`、`output` 的相对位置，直接双击根目录的 `index.html`。
 2. 仅需单个网页文件时，打开 `output/UMich_Campus_Offline.html`。三维显示需要当前版本浏览器的 WebGL 2 和压缩流支持。
-3. 默认英文；设备语言偏好含中文时首次默认中文，右上角可切换。
+3. 默认英文；不受设备语言影响，右上角可切换中英文。
 4. 左键拖动平移、右键拖动旋转，滚轮按指针位置缩放；触屏单指平移、双指平移或捏合缩放，开启“旋转”后可单指旋转。选择地标后可以继续缩回全校范围。
 5. 选择建筑以查看平面尺寸、模型最高点和资料说明，可单独查看或逐栋隐藏。片区按钮切换镜头，列表中的片区标签用于筛选建筑。
 6. “高程剖切”使用模型局部高程基准：Z=0对应公开DEM基准中的225米。它不是每栋建筑的相对层高，也不表示室内楼层。
@@ -167,6 +168,7 @@ validation=f'''# Delivery validation
 - {checks['rhino']['closed_native_solids']} valid closed native massing solids, {checks['rhino']['closed_mesh_objects']} closed mesh objects, {checks['rhino']['plan_curves']} footprint curves.
 - Independent Three.js 3DS import: {checks['3ds']['objects']} preserved object names, {checks['3ds']['triangles']:,} triangles. All 3DS object names comply with the 10-character mapping convention.
 - Published / municipal landmark peaks agree with their selected model height values within 1 cm.
+- Current update: atomic same-frame resize/draw, preserved framing, no Level toolbar option, and bilingual hover picking for 69 mapped outdoor places. English is the default regardless of device locale. Finder metadata is ignored without deleting local files.
 - Viewer tests: English/Chinese language selection; HTTP compressed binary, local classic script, inline model and error paths; SHA-256 equality with original CAD bytes.
 - Camera checks: {len(records)} building targets × three viewport proportions = {len(records)*3} zoom-out/refit cases, retaining access to the whole campus.
 - Navigation: 48 viewport, bearing and view combinations plus 144 exact-level/low-angle cases; mouse/touch direction, terrain pivots, cursor zoom, horizon and zoom-step limits, no inertia, drag/pinch selection and local preset checks.
@@ -178,7 +180,7 @@ validation=f'''# Delivery validation
 The checks validate deliverable integrity and behavior; they do not certify public-source geometry as an as-built survey.
 '''
 (out/'VALIDATION.md').write_text(validation)
-files=[p for p in r.rglob('*') if p.is_file() and '.git' not in p.parts and 'node_modules' not in p.parts and 'tmp' not in p.parts and '__pycache__' not in p.parts and p.suffix not in ['.zip','.npz']]
+files=[p for p in r.rglob('*') if p.is_file() and p.name!='.DS_Store' and not p.name.startswith('._') and '.git' not in p.parts and 'node_modules' not in p.parts and 'tmp' not in p.parts and '__pycache__' not in p.parts and p.suffix not in ['.zip','.npz']]
 archive=out/'UMich_AnnArbor_Delivery.zip'
 with zipfile.ZipFile(archive,'w',compression=zipfile.ZIP_DEFLATED,compresslevel=6) as z:
     for p in sorted(files):z.write(p,p.relative_to(r))

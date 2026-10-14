@@ -6,13 +6,13 @@ from datetime import date
 import numpy as np
 from PIL import Image
 from scipy.interpolate import RegularGridInterpolator
-from shapely.geometry import shape
+from shapely.geometry import shape,mapping,box
 from shapely.ops import transform
 from pyproj import Transformer
 from curation import LANDMARKS
 
 root=Path(__file__).resolve().parents[1];out=root/'output';assets=root/'assets'
-config=json.loads((root/'site.config.json').read_text());site=config['url']
+config=json.loads((root/'config/site.config.json').read_text());site=config['url']
 assert site=='https://'+config['domain']+'/'
 records=json.loads((out/'buildings.json').read_text());summary=json.loads((out/'model_summary.json').read_text())
 short={
@@ -108,9 +108,10 @@ xs=np.linspace(e['xmin'],e['xmax'],dem.shape[1],endpoint=False)+(e['xmax']-e['xm
 ys=np.linspace(e['ymin'],e['ymax'],dem.shape[0],endpoint=False)+(e['ymax']-e['ymin'])/dem.shape[0]/2-oy
 interpolate=RegularGridInterpolator((ys,xs),dem[::-1]-225,bounds_error=False,fill_value=None)
 featured={'The Diag','Ingalls Mall','William W. Cook Law Quadrangle','Gerstacker Grove','Ferry Field','Palmer Field','Nichols Arboretum','North Campus Research Complex','Wave Field','Regents Plaza','UM Golf Course'}
-places=[];glossary=[]
+places=[];glossary=[];hover_places=[]
 for i,f in enumerate(source_places):
     en=f['properties']['NamedSpace'].strip();q=transform(project,shape(f['geometry']));c=q.centroid
+    hover_places.append({'id':'P'+str(i),'name':en,'name_zh':place_terms[en],'hitArea':mapping(q.simplify(.25,preserve_topology=True)),'source':'https://map.fo.umich.edu/'})
     glossary.append({'name':en,'name_zh':place_terms[en],'source':'https://map.fo.umich.edu/','note':'English is the original GIS label; Chinese is an independent faithful translation. GIS typos are retained here for traceability.'})
     if en in featured:places.append({'id':'P'+str(i),'name':en,'name_zh':place_terms[en],'position':[round(c.x,2),round(c.y,2),round(float(interpolate([[c.y,c.x]])[0])+1,2)]})
 diag=next(f for f in source_places if f['properties']['NamedSpace'].strip()=='The Diag Proper')
@@ -118,6 +119,7 @@ diag_center=transform(project,shape(diag['geometry'])).centroid
 overview_center=[round(diag_center.x,4),round(diag_center.y,4)]
 river=max((f for f in json.loads((root/'sources/official_water.geojson').read_text())['features'] if (f['properties'].get('Name') or '').strip()=='Huron River'),key=lambda f:shape(f['geometry']).area)
 from shapely.geometry import box
+hover_places.append({'id':'HURON','name':'Huron River','name_zh':'休伦河','hitArea':mapping(transform(project,shape(river['geometry'])).simplify(.5,preserve_topology=True)),'source':'https://map.fo.umich.edu/'})
 river_area=transform(project,shape(river['geometry'])).intersection(box(500,900,1400,1700));anchor=river_area.representative_point();hx,hy=anchor.x,anchor.y;hz=float(interpolate([[hy,hx]])[0])+1
 places.append({'id':'HURON','name':'Huron River','name_zh':'休伦河（Huron River）','position':[hx,hy,hz]})
 (root/'sources/place_names_zh.json').write_text(json.dumps(glossary,ensure_ascii=False,indent=2))
@@ -127,7 +129,7 @@ if yi[-1]!=len(ys)-1:yi.append(len(ys)-1)
 ground_grid={'x':[round(float(xs[i]),2) for i in xi],'y':[round(float(ys[i]),2) for i in yi],'heights':np.round((dem[::-1]-225)[np.ix_(yi,xi)],2).tolist()}
 seo={'en':{k:config[k] for k in ['title','description','imageAlt']},'zh':config['zh']}
 model=(out/'UMich_AnnArbor.3ds').read_bytes();compressed=gzip.compress(model,compresslevel=6,mtime=0);(out/'UMich_AnnArbor.3ds.gz').write_bytes(compressed);encoded=base64.b64encode(compressed).decode();preview=base64.b64encode((out/'campus_aerial.png').read_bytes()).decode()
-b=summary['bounds'];data={'overviewCenter':overview_center,'groundGrid':ground_grid,'modelByteLength':len(model),'modelTransferBytes':len(compressed),'layers':json.loads((out/'layer_map.json').read_text()),'palette':json.loads((out/'palette.json').read_text()),'records':records,'preview':'output/campus_aerial.png','modelUrl':'output/UMich_AnnArbor.3ds.gz','downloadUrl':'output/UMich_AnnArbor.3ds','compression':'gzip','offlineModelScript':'assets/model-local.js','seo':seo,'landmarkOrder':LANDMARKS,'districtBounds':{**summary['district_bounds'],'central':[-650,-650,1000,800]},'siteCenter':[(b[0]+b[2])/2,(b[1]+b[3])/2],'places':places}
+b=summary['bounds'];data={'overviewCenter':overview_center,'groundGrid':ground_grid,'modelByteLength':len(model),'modelTransferBytes':len(compressed),'layers':json.loads((out/'layer_map.json').read_text()),'palette':json.loads((out/'palette.json').read_text()),'records':records,'preview':'output/campus_aerial.png','modelUrl':'output/UMich_AnnArbor.3ds.gz','downloadUrl':'output/UMich_AnnArbor.3ds','compression':'gzip','offlineModelScript':'assets/model-local.js','seo':seo,'landmarkOrder':LANDMARKS,'districtBounds':{**summary['district_bounds'],'central':[-650,-650,1000,800]},'siteCenter':[(b[0]+b[2])/2,(b[1]+b[3])/2],'places':places,'hoverPlaces':hover_places}
 schema={'@context':'https://schema.org','@graph':[
 {'@type':'WebSite','@id':site+'#website','url':site,'name':'UMich Campus 3D Model','inLanguage':['en','zh-CN'],'sameAs':config['repository'],'image':site+'assets/brand/m-map.png'},
 {'@type':'WebPage','@id':site+'#webpage','url':site,'name':config['title'],'description':config['description'],'inLanguage':['en','zh-CN'],'isPartOf':{'@id':site+'#website'},'mainEntity':{'@id':site+'#model'},'dateModified':date.today().isoformat(),'primaryImageOfPage':{'@type':'ImageObject','url':site+'output/campus_aerial.png','width':2400,'height':1850}},
@@ -139,7 +141,7 @@ initial=[]
 for r in records:
     initial.append(f'<div class="row"><span class="building-name" data-building-name="{escape(r["code"])}">{escape(r["name"])}</span><span class="building-meta">{escape(r["name_zh"])} · {escape(r["code"])}</span></div>')
 for token,value in {'__SITE_URL__':site,'__SEO_TITLE__':escape(config['title'],quote=True),'__SEO_DESCRIPTION__':escape(config['description'],quote=True),'__IMAGE_ALT__':escape(config['imageAlt'],quote=True),'__STRUCTURED_DATA__':jsjson(schema),'__INITIAL_BUILDINGS__':''.join(initial),'__INITIAL_COUNT__':str(len(records))}.items():template=template.replace(token,value)
-license=((root/'THIRD_PARTY_NOTICES.md').read_text()+'\n'+(assets/'fonts/OFL.txt').read_text()).replace('--','- -');template=template.replace('</head>','<!--\n'+license+'\n-->\n</head>')
+license=((root/'docs/THIRD_PARTY_NOTICES.md').read_text()+'\n'+(assets/'fonts/OFL.txt').read_text()).replace('--','- -');template=template.replace('</head>','<!--\n'+license+'\n-->\n</head>')
 def edition(payload,font,preview,icons,logo,script,robots,rhino):
     html=template
     for token,value in {'__CAMPUS_DATA__':jsjson(payload),'__TITLE_FONT_URL__':font,'__PREVIEW_IMAGE__':preview,'__FAVICON__':icons['32'],'__FAVICON_16__':icons['16'],'__APPLE_ICON__':icons['apple'],'__LOGO__':logo,'__VIEWER_SCRIPT__':script,'__ROBOTS__':robots,'__RHINO_URL__':rhino}.items():html=html.replace(token,value)

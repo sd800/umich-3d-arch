@@ -3,7 +3,7 @@ from urllib.parse import urlsplit
 from pathlib import Path
 import json,re,hashlib,xml.etree.ElementTree as ET
 from html.parser import HTMLParser
-r=Path(__file__).resolve().parents[1];config=json.loads((r/'site.config.json').read_text());site=config['url'];text=(r/'index.html').read_text()
+r=Path(__file__).resolve().parents[1];config=json.loads((r/'config/site.config.json').read_text());site=config['url'];text=(r/'index.html').read_text()
 class Page(HTMLParser):
     def __init__(self):super().__init__();self.meta={};self.links=[];self.local=[];self.h1=0;self.rows=[]
     def handle_starttag(self,tag,attrs):

@@ -1,4 +1,4 @@
-# macOS
+# macOS — ignore Finder metadata at every depth; retain local files
 .DS_Store
 ._*
 
