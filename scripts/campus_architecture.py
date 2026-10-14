@@ -42,7 +42,7 @@ def accents(ms,p,base,ident,volumes,t):
                 for g in t.polygons(edge):ms['RoofEdge'if zz>base+hh/2 else 'Sandstone'].append(t.extrusion(g,zz,.16))
         if ident in ROSS:
             edge_fins(ms,q,base+.6,hh-.7,t,'Terracotta',2.35,.32,.13)
-        elif ident in ['1005418','1005504','1005092']:
+        elif ident in ['1005418','1005092']:
             edge_fins(ms,q,base+1,hh-1.3,t,'RoofEdge',4.8,.38,.12)
     if ident=='1005188':
         # Low north/south pavilions and a real green terrace, separated from the
@@ -66,7 +66,8 @@ def accents(ms,p,base,ident,volumes,t):
         for q in t.polygons(p.buffer(-1.3)):ms['RoofGreen'].append(t.extrusion(q,base+13.48,.15))
         edge_fins(ms,p.intersection(box(a,b,c,b+5)),base+2,10,t,'Glass',1.8,.4,.10)
     elif ident in ['1000135','1000139','1000253']:
-        edge_fins(ms,p,base+1,max(v[1]for v in volumes)-1,t,'Terracotta'if ident!='1000253'else 'RoofZinc',2.6,.65,.12)
+        for q,hh,n,wall,roof in volumes:
+            edge_fins(ms,q,base+1,hh-1.3,t,'Terracotta'if ident!='1000253'else 'RoofZinc',2.6,.32,.12)
     elif ident=='1000396':
         main=p.intersection(box(1878,1530,1960,1630));portico=main.intersection(box(1878,1611,1960,1630))
         for q in t.polygons(main):
@@ -95,8 +96,27 @@ def accents(ms,p,base,ident,volumes,t):
         studio=p.intersection(box(1377,1311,1413,1343)).buffer(-1.5)
         for q in t.polygons(studio):ms['Glass'].append(t.extrusion(q,base+9.18,1.1));ms['RoofMembrane'].append(t.extrusion(q,base+10.28,.16))
     elif ident=='1005504':
-        # Five-storey brick elevations with restrained projecting sunshades.
-        edge_fins(ms,p,base+3,18.2,t,'Sandstone',3.7,.65,.13)
+        # Built 2025 photographs show buff brick and framed projecting glazing,
+        # not freestanding full-height rods above low wings.
+        for q,hh,n,wall,roof in volumes:
+            for part in t.polygons(q):
+                for aa,bb in zip(np.asarray(part.exterior.coords)[:-1],np.asarray(part.exterior.coords)[1:]):
+                    ln=np.linalg.norm(bb-aa)
+                    if ln<9:continue
+                    u=(bb-aa)/ln;normal=np.array([u[1],-u[0]])
+                    if p.buffer(.03).contains(Point(*((aa+bb)/2+normal*.30))):continue
+                    for dist in np.arange(3.1,ln-2,6.2):
+                        c0=aa+u*dist+normal*.14;bay=Polygon([c0-u*1.15,c0+u*1.15,c0+u*1.15+normal*.45,c0-u*1.15+normal*.45])
+                        for floor in range(n):
+                            zz=base+floor*hh/n+.65;wh=min(2.8,hh/n-.95)
+                            ms['Glass'].append(t.extrusion(bay,zz,wh))
+                            frame=bay.buffer(.12,join_style=2).difference(bay)
+                            for edge in t.polygons(frame):ms['WhitePanel'].append(t.extrusion(edge,zz-.12,wh+.24))
+        # The one mapped-photo mechanical penthouse is above the tall main wing.
+        main=max(volumes,key=lambda v:v[1]);q=main[0].buffer(-5.5)
+        if not q.is_empty:
+            cp=q.representative_point();plant=box(cp.x-7,cp.y-5,cp.x+7,cp.y+5).intersection(q)
+            for part in t.polygons(plant):ms['MetalPanel'].append(t.extrusion(part,base+main[1]+.18,2.6));roof_finish(ms,part,base+main[1]+2.78,'RoofMembrane',t,parapet=False)
     elif ident=='1005418':
         # Curved mapped robot-lab frontage retains a continuous glazed lower zone.
         q=p.intersection(box(a-1,b-1,c+1,b+18));edge_fins(ms,q,base+1,10.6,t,'RoofEdge',5.8,.5,.15)
@@ -106,10 +126,4 @@ def generic_roof(ms,p,z,roof,t,residential=False):
     if residential:return
     # Modest edge thickness replaces the previous flush, coplanar inset plate.
     roof_finish(ms,p,z,roof,t,parapet=p.area>250)
-    # A compact screened service enclosure rather than a huge second roof sheet.
-    if p.area>1800:
-        q=p.buffer(-6);c=q.representative_point()if not q.is_empty else None
-        if c:
-            enclosure=box(c.x-3,c.y-2,c.x+3,c.y+2).intersection(q)
-            for g in t.polygons(enclosure):
-                ms['MetalPanel'].append(t.extrusion(g,z+.18,1.0));ms['RoofEdge'].append(t.extrusion(g,z+1.18,.14))
+    # Rooftop plant is added only in a building-specific, documented design.

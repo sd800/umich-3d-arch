@@ -1,0 +1,2606 @@
+{
+  "line_width_m": 0.09,
+  "native_cad_or_observed_paint_segments": 64,
+  "interpreted_row_paths": 159,
+  "outlined_bays": 3788,
+  "row_results": [
+    {
+      "lot": "umich-018",
+      "name": "NC31 Hubbard Road Lot",
+      "outlined_bays": 14,
+      "path": [
+        [
+          1402.38,
+          2101.99
+        ],
+        [
+          1423.323,
+          2101.32
+        ]
+      ],
+      "source": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export?f=json&bbox=-83.7233573745068%2C42.29409130155569%2C-83.72042497992676%2C42.29641226025057&bboxSR=4326&imageSR=4326&size=640%2C640&format=png"
+    },
+    {
+      "lot": "umich-018",
+      "name": "NC31 Hubbard Road Lot",
+      "outlined_bays": 18,
+      "path": [
+        [
+          1400.27,
+          2079.708
+        ],
+        [
+          1425.401,
+          2078.904
+        ]
+      ],
+      "source": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export?f=json&bbox=-83.7233573745068%2C42.29409130155569%2C-83.72042497992676%2C42.29641226025057&bboxSR=4326&imageSR=4326&size=640%2C640&format=png"
+    },
+    {
+      "lot": "umich-018",
+      "name": "NC31 Hubbard Road Lot",
+      "outlined_bays": 18,
+      "path": [
+        [
+          1399.579,
+          2058.125
+        ],
+        [
+          1424.71,
+          2057.321
+        ]
+      ],
+      "source": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export?f=json&bbox=-83.7233573745068%2C42.29409130155569%2C-83.72042497992676%2C42.29641226025057&bboxSR=4326&imageSR=4326&size=640%2C640&format=png"
+    },
+    {
+      "lot": "umich-018",
+      "name": "NC31 Hubbard Road Lot",
+      "outlined_bays": 18,
+      "path": [
+        [
+          1398.865,
+          2035.799
+        ],
+        [
+          1423.996,
+          2034.995
+        ]
+      ],
+      "source": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export?f=json&bbox=-83.7233573745068%2C42.29409130155569%2C-83.72042497992676%2C42.29641226025057&bboxSR=4326&imageSR=4326&size=640%2C640&format=png"
+    },
+    {
+      "lot": "umich-018",
+      "name": "NC31 Hubbard Road Lot",
+      "outlined_bays": 18,
+      "path": [
+        [
+          1398.174,
+          2014.216
+        ],
+        [
+          1423.305,
+          2013.412
+        ]
+      ],
+      "source": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export?f=json&bbox=-83.7233573745068%2C42.29409130155569%2C-83.72042497992676%2C42.29641226025057&bboxSR=4326&imageSR=4326&size=640%2C640&format=png"
+    },
+    {
+      "lot": "umich-018",
+      "name": "NC31 Hubbard Road Lot",
+      "outlined_bays": 10,
+      "path": [
+        [
+          1388.102,
+          2114.367
+        ],
+        [
+          1384.553,
+          2003.477
+        ]
+      ],
+      "source": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export?f=json&bbox=-83.7233573745068%2C42.29409130155569%2C-83.72042497992676%2C42.29641226025057&bboxSR=4326&imageSR=4326&size=640%2C640&format=png"
+    },
+    {
+      "lot": "umich-018",
+      "name": "NC31 Hubbard Road Lot",
+      "outlined_bays": 25,
+      "path": [
+        [
+          1438.339,
+          2112.015
+        ],
+        [
+          1434.816,
+          2001.869
+        ]
+      ],
+      "source": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export?f=json&bbox=-83.7233573745068%2C42.29409130155569%2C-83.72042497992676%2C42.29641226025057&bboxSR=4326&imageSR=4326&size=640%2C640&format=png"
+    },
+    {
+      "lot": "umich-021",
+      "name": "M75 Fuller Road Lot",
+      "outlined_bays": 0,
+      "path": [
+        [
+          1267.322,
+          1218.667
+        ],
+        [
+          1405.927,
+          1214.232
+        ]
+      ],
+      "source": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export?f=json&bbox=-83.7250280676549%2C42.2849566987015%2C-83.7202501667462%2C42.28873889166334&bboxSR=4326&imageSR=4326&size=640%2C640&format=png"
+    },
+    {
+      "lot": "umich-021",
+      "name": "M75 Fuller Road Lot",
+      "outlined_bays": 0,
+      "path": [
+        [
+          1271.835,
+          1242.51
+        ],
+        [
+          1399.201,
+          1238.434
+        ]
+      ],
+      "source": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export?f=json&bbox=-83.7250280676549%2C42.2849566987015%2C-83.7202501667462%2C42.28873889166334&bboxSR=4326&imageSR=4326&size=640%2C640&format=png"
+    },
+    {
+      "lot": "umich-021",
+      "name": "M75 Fuller Road Lot",
+      "outlined_bays": 0,
+      "path": [
+        [
+          1270.109,
+          1188.593
+        ],
+        [
+          1397.477,
+          1184.518
+        ]
+      ],
+      "source": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export?f=json&bbox=-83.7250280676549%2C42.2849566987015%2C-83.7202501667462%2C42.28873889166334&bboxSR=4326&imageSR=4326&size=640%2C640&format=png"
+    },
+    {
+      "lot": "umich-021",
+      "name": "M75 Fuller Road Lot",
+      "outlined_bays": 54,
+      "path": [
+        [
+          1155.168,
+          1112.315
+        ],
+        [
+          1470.164,
+          1112.23
+        ]
+      ],
+      "source": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export?f=json&bbox=-83.7250280676549%2C42.2849566987015%2C-83.7202501667462%2C42.28873889166334&bboxSR=4326&imageSR=4326&size=640%2C640&format=png"
+    },
+    {
+      "lot": "umich-032",
+      "name": "NC32 Baits Drive Lot",
+      "outlined_bays": 78,
+      "path": [
+        [
+          1205.604,
+          1753.714
+        ],
+        [
+          1246.632,
+          1656.608
+        ]
+      ],
+      "source": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export?f=json&bbox=-83.72531227572401%2C42.291023793211444%2C-83.72238009221351%2C42.29334479689902&bboxSR=4326&imageSR=4326&size=640%2C640&format=png"
+    },
+    {
+      "lot": "umich-032",
+      "name": "NC32 Baits Drive Lot",
+      "outlined_bays": 80,
+      "path": [
+        [
+          1233.403,
+          1760.386
+        ],
+        [
+          1274.35,
+          1660.763
+        ]
+      ],
+      "source": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export?f=json&bbox=-83.72531227572401%2C42.291023793211444%2C-83.72238009221351%2C42.29334479689902&bboxSR=4326&imageSR=4326&size=640%2C640&format=png"
+    },
+    {
+      "lot": "umich-032",
+      "name": "NC32 Baits Drive Lot",
+      "outlined_bays": 30,
+      "path": [
+        [
+          1264.789,
+          1756.021
+        ],
+        [
+          1298.481,
+          1675.956
+        ]
+      ],
+      "source": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export?f=json&bbox=-83.72531227572401%2C42.291023793211444%2C-83.72238009221351%2C42.29334479689902&bboxSR=4326&imageSR=4326&size=640%2C640&format=png"
+    },
+    {
+      "lot": "umich-032",
+      "name": "NC32 Baits Drive Lot",
+      "outlined_bays": 22,
+      "path": [
+        [
+          1186.359,
+          1743.407
+        ],
+        [
+          1229.936,
+          1652.101
+        ]
+      ],
+      "source": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export?f=json&bbox=-83.72531227572401%2C42.291023793211444%2C-83.72238009221351%2C42.29334479689902&bboxSR=4326&imageSR=4326&size=640%2C640&format=png"
+    },
+    {
+      "lot": "umich-037",
+      "name": "NC27 Murfin Street Lot",
+      "outlined_bays": 74,
+      "path": [
+        [
+          1700.998,
+          1718.499
+        ],
+        [
+          1804.249,
+          1716.87
+        ]
+      ],
+      "source": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export?f=json&bbox=-83.71909059813899%2C42.29072447185946%2C-83.71615819094828%2C42.29304532254414&bboxSR=4326&imageSR=4326&size=640%2C640&format=png"
+    },
+    {
+      "lot": "umich-037",
+      "name": "NC27 Murfin Street Lot",
+      "outlined_bays": 37,
+      "path": [
+        [
+          1696.005,
+          1733.675
+        ],
+        [
+          1800.846,
+          1732.829
+        ]
+      ],
+      "source": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export?f=json&bbox=-83.71909059813899%2C42.29072447185946%2C-83.71615819094828%2C42.29304532254414&bboxSR=4326&imageSR=4326&size=640%2C640&format=png"
+    },
+    {
+      "lot": "umich-037",
+      "name": "NC27 Murfin Street Lot",
+      "outlined_bays": 30,
+      "path": [
+        [
+          1694.967,
+          1701.172
+        ],
+        [
+          1784.938,
+          1700.301
+        ]
+      ],
+      "source": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export?f=json&bbox=-83.71909059813899%2C42.29072447185946%2C-83.71615819094828%2C42.29304532254414&bboxSR=4326&imageSR=4326&size=640%2C640&format=png"
+    },
+    {
+      "lot": "umich-040",
+      "name": "M95 Washington Heights ",
+      "outlined_bays": 0,
+      "path": [
+        [
+          906.514,
+          499.55
+        ],
+        [
+          907.91,
+          462.161
+        ]
+      ],
+      "source": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export?f=json&bbox=-83.72866904795235%2C42.27980447270001%2C-83.72573749165986%2C42.28212554780941&bboxSR=4326&imageSR=4326&size=640%2C640&format=png"
+    },
+    {
+      "lot": "umich-040",
+      "name": "M95 Washington Heights ",
+      "outlined_bays": 2,
+      "path": [
+        [
+          928.127,
+          499.318
+        ],
+        [
+          925.056,
+          457.462
+        ]
+      ],
+      "source": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export?f=json&bbox=-83.72866904795235%2C42.27980447270001%2C-83.72573749165986%2C42.28212554780941&bboxSR=4326&imageSR=4326&size=640%2C640&format=png"
+    },
+    {
+      "lot": "umich-040",
+      "name": "M95 Washington Heights ",
+      "outlined_bays": 2,
+      "path": [
+        [
+          886.892,
+          486.348
+        ],
+        [
+          887.416,
+          456.824
+        ]
+      ],
+      "source": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export?f=json&bbox=-83.72866904795235%2C42.27980447270001%2C-83.72573749165986%2C42.28212554780941&bboxSR=4326&imageSR=4326&size=640%2C640&format=png"
+    },
+    {
+      "lot": "umich-040",
+      "name": "M95 Washington Heights ",
+      "outlined_bays": 0,
+      "path": [
+        [
+          884.411,
+          444.011
+        ],
+        [
+          906.873,
+          443.291
+        ]
+      ],
+      "source": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export?f=json&bbox=-83.72866904795235%2C42.27980447270001%2C-83.72573749165986%2C42.28212554780941&bboxSR=4326&imageSR=4326&size=640%2C640&format=png"
+    },
+    {
+      "lot": "umich-045",
+      "name": "NC8 Fuller Beal Ave Lot / NC5 Fuller Road Lot / NC6 Fuller Road Lot",
+      "outlined_bays": 2,
+      "path": [
+        [
+          1986.064,
+          1250.842
+        ],
+        [
+          1985.872,
+          1217.952
+        ]
+      ],
+      "source": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export?f=json&bbox=-83.71553017163689%2C42.2871468281159%2C-83.71259778814925%2C42.28946758792679&bboxSR=4326&imageSR=4326&size=640%2C640&format=png"
+    },
+    {
+      "lot": "umich-045",
+      "name": "NC8 Fuller Beal Ave Lot / NC5 Fuller Road Lot / NC6 Fuller Road Lot",
+      "outlined_bays": 6,
+      "path": [
+        [
+          2014.238,
+          1247.202
+        ],
+        [
+          2012.804,
+          1218.372
+        ]
+      ],
+      "source": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export?f=json&bbox=-83.71553017163689%2C42.2871468281159%2C-83.71259778814925%2C42.28946758792679&bboxSR=4326&imageSR=4326&size=640%2C640&format=png"
+    },
+    {
+      "lot": "umich-045",
+      "name": "NC8 Fuller Beal Ave Lot / NC5 Fuller Road Lot / NC6 Fuller Road Lot",
+      "outlined_bays": 0,
+      "path": [
+        [
+          1966.652,
+          1206.686
+        ],
+        [
+          2025.745,
+          1204.801
+        ]
+      ],
+      "source": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export?f=json&bbox=-83.71553017163689%2C42.2871468281159%2C-83.71259778814925%2C42.28946758792679&bboxSR=4326&imageSR=4326&size=640%2C640&format=png"
+    },
+    {
+      "lot": "umich-045",
+      "name": "NC8 Fuller Beal Ave Lot / NC5 Fuller Road Lot / NC6 Fuller Road Lot",
+      "outlined_bays": 6,
+      "path": [
+        [
+          1985.44,
+          1258.172
+        ],
+        [
+          2041.107,
+          1256.396
+        ]
+      ],
+      "source": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export?f=json&bbox=-83.71553017163689%2C42.2871468281159%2C-83.71259778814925%2C42.28946758792679&bboxSR=4326&imageSR=4326&size=640%2C640&format=png"
+    },
+    {
+      "lot": "umich-045",
+      "name": "NC8 Fuller Beal Ave Lot / NC5 Fuller Road Lot / NC6 Fuller Road Lot",
+      "outlined_bays": 19,
+      "path": [
+        [
+          2065.827,
+          1251.953
+        ],
+        [
+          2065.461,
+          1213.586
+        ]
+      ],
+      "source": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export?f=json&bbox=-83.71553017163689%2C42.2871468281159%2C-83.71259778814925%2C42.28946758792679&bboxSR=4326&imageSR=4326&size=640%2C640&format=png"
+    },
+    {
+      "lot": "umich-045",
+      "name": "NC8 Fuller Beal Ave Lot / NC5 Fuller Road Lot / NC6 Fuller Road Lot",
+      "outlined_bays": 27,
+      "path": [
+        [
+          2089.836,
+          1252.101
+        ],
+        [
+          2089.983,
+          1213.718
+        ]
+      ],
+      "source": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export?f=json&bbox=-83.71553017163689%2C42.2871468281159%2C-83.71259778814925%2C42.28946758792679&bboxSR=4326&imageSR=4326&size=640%2C640&format=png"
+    },
+    {
+      "lot": "umich-045",
+      "name": "NC8 Fuller Beal Ave Lot / NC5 Fuller Road Lot / NC6 Fuller Road Lot",
+      "outlined_bays": 0,
+      "path": [
+        [
+          2109.388,
+          1246.909
+        ],
+        [
+          2108.165,
+          1208.569
+        ]
+      ],
+      "source": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export?f=json&bbox=-83.71553017163689%2C42.2871468281159%2C-83.71259778814925%2C42.28946758792679&bboxSR=4326&imageSR=4326&size=640%2C640&format=png"
+    },
+    {
+      "lot": "umich-048",
+      "name": "SC5 Kipke Drive Lot / SC4 Kipke Drive Lot / SC1 / SC6 Kipke Drive Lot",
+      "outlined_bays": 72,
+      "path": [
+        [
+          -764.741,
+          -934.374
+        ],
+        [
+          -760.359,
+          -1037.171
+        ]
+      ],
+      "source": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export?f=json&bbox=-83.74842772867738%2C42.264281527373925%2C-83.74353092828056%2C42.26816115367406&bboxSR=4326&imageSR=4326&size=640%2C640&format=png"
+    },
+    {
+      "lot": "umich-048",
+      "name": "SC5 Kipke Drive Lot / SC4 Kipke Drive Lot / SC1 / SC6 Kipke Drive Lot",
+      "outlined_bays": 33,
+      "path": [
+        [
+          -728.275,
+          -937.604
+        ],
+        [
+          -724.689,
+          -1041.196
+        ]
+      ],
+      "source": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export?f=json&bbox=-83.74842772867738%2C42.264281527373925%2C-83.74353092828056%2C42.26816115367406&bboxSR=4326&imageSR=4326&size=640%2C640&format=png"
+    },
+    {
+      "lot": "umich-048",
+      "name": "SC5 Kipke Drive Lot / SC4 Kipke Drive Lot / SC1 / SC6 Kipke Drive Lot",
+      "outlined_bays": 36,
+      "path": [
+        [
+          -719.912,
+          -1095.963
+        ],
+        [
+          -720.731,
+          -1145.211
+        ]
+      ],
+      "source": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export?f=json&bbox=-83.74842772867738%2C42.264281527373925%2C-83.74353092828056%2C42.26816115367406&bboxSR=4326&imageSR=4326&size=640%2C640&format=png"
+    },
+    {
+      "lot": "umich-048",
+      "name": "SC5 Kipke Drive Lot / SC4 Kipke Drive Lot / SC1 / SC6 Kipke Drive Lot",
+      "outlined_bays": 38,
+      "path": [
+        [
+          -685.103,
+          -1090.927
+        ],
+        [
+          -685.736,
+          -1146.34
+        ]
+      ],
+      "source": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export?f=json&bbox=-83.74842772867738%2C42.264281527373925%2C-83.74353092828056%2C42.26816115367406&bboxSR=4326&imageSR=4326&size=640%2C640&format=png"
+    },
+    {
+      "lot": "umich-048",
+      "name": "SC5 Kipke Drive Lot / SC4 Kipke Drive Lot / SC1 / SC6 Kipke Drive Lot",
+      "outlined_bays": 44,
+      "path": [
+        [
+          -646.714,
+          -1094.218
+        ],
+        [
+          -644.76,
+          -1153.0
+        ]
+      ],
+      "source": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export?f=json&bbox=-83.74842772867738%2C42.264281527373925%2C-83.74353092828056%2C42.26816115367406&bboxSR=4326&imageSR=4326&size=640%2C640&format=png"
+    },
+    {
+      "lot": "umich-048",
+      "name": "SC5 Kipke Drive Lot / SC4 Kipke Drive Lot / SC1 / SC6 Kipke Drive Lot",
+      "outlined_bays": 31,
+      "path": [
+        [
+          -638.524,
+          -1198.369
+        ],
+        [
+          -582.723,
+          -1198.937
+        ]
+      ],
+      "source": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export?f=json&bbox=-83.74842772867738%2C42.264281527373925%2C-83.74353092828056%2C42.26816115367406&bboxSR=4326&imageSR=4326&size=640%2C640&format=png"
+    },
+    {
+      "lot": "umich-048",
+      "name": "SC5 Kipke Drive Lot / SC4 Kipke Drive Lot / SC1 / SC6 Kipke Drive Lot",
+      "outlined_bays": 36,
+      "path": [
+        [
+          -636.149,
+          -1220.209
+        ],
+        [
+          -575.772,
+          -1222.156
+        ]
+      ],
+      "source": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export?f=json&bbox=-83.74842772867738%2C42.264281527373925%2C-83.74353092828056%2C42.26816115367406&bboxSR=4326&imageSR=4326&size=640%2C640&format=png"
+    },
+    {
+      "lot": "umich-048",
+      "name": "SC5 Kipke Drive Lot / SC4 Kipke Drive Lot / SC1 / SC6 Kipke Drive Lot",
+      "outlined_bays": 34,
+      "path": [
+        [
+          -626.467,
+          -1242.284
+        ],
+        [
+          -576.46,
+          -1243.486
+        ]
+      ],
+      "source": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export?f=json&bbox=-83.74842772867738%2C42.264281527373925%2C-83.74353092828056%2C42.26816115367406&bboxSR=4326&imageSR=4326&size=640%2C640&format=png"
+    },
+    {
+      "lot": "umich-048",
+      "name": "SC5 Kipke Drive Lot / SC4 Kipke Drive Lot / SC1 / SC6 Kipke Drive Lot",
+      "outlined_bays": 26,
+      "path": [
+        [
+          -614.451,
+          -1263.613
+        ],
+        [
+          -579.071,
+          -1264.754
+        ]
+      ],
+      "source": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export?f=json&bbox=-83.74842772867738%2C42.264281527373925%2C-83.74353092828056%2C42.26816115367406&bboxSR=4326&imageSR=4326&size=640%2C640&format=png"
+    },
+    {
+      "lot": "umich-048",
+      "name": "SC5 Kipke Drive Lot / SC4 Kipke Drive Lot / SC1 / SC6 Kipke Drive Lot",
+      "outlined_bays": 8,
+      "path": [
+        [
+          -608.522,
+          -1282.693
+        ],
+        [
+          -585.448,
+          -1283.437
+        ]
+      ],
+      "source": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export?f=json&bbox=-83.74842772867738%2C42.264281527373925%2C-83.74353092828056%2C42.26816115367406&bboxSR=4326&imageSR=4326&size=640%2C640&format=png"
+    },
+    {
+      "lot": "umich-062",
+      "name": "NC78 Fuller Rd Lot",
+      "outlined_bays": 15,
+      "path": [
+        [
+          1282.212,
+          1244.392
+        ],
+        [
+          1331.372,
+          1244.36
+        ]
+      ],
+      "source": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export?f=json&bbox=-83.72391545376975%2C42.28649908449761%2C-83.7209834184865%2C42.288820049493715&bboxSR=4326&imageSR=4326&size=640%2C640&format=png"
+    },
+    {
+      "lot": "umich-062",
+      "name": "NC78 Fuller Rd Lot",
+      "outlined_bays": 34,
+      "path": [
+        [
+          1281.3,
+          1215.903
+        ],
+        [
+          1328.294,
+          1215.941
+        ]
+      ],
+      "source": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export?f=json&bbox=-83.72391545376975%2C42.28649908449761%2C-83.7209834184865%2C42.288820049493715&bboxSR=4326&imageSR=4326&size=640%2C640&format=png"
+    },
+    {
+      "lot": "umich-062",
+      "name": "NC78 Fuller Rd Lot",
+      "outlined_bays": 13,
+      "path": [
+        [
+          1290.253,
+          1179.391
+        ],
+        [
+          1327.136,
+          1179.752
+        ]
+      ],
+      "source": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export?f=json&bbox=-83.72391545376975%2C42.28649908449761%2C-83.7209834184865%2C42.288820049493715&bboxSR=4326&imageSR=4326&size=640%2C640&format=png"
+    },
+    {
+      "lot": "umich-062",
+      "name": "NC78 Fuller Rd Lot",
+      "outlined_bays": 19,
+      "path": [
+        [
+          1348.286,
+          1230.716
+        ],
+        [
+          1399.628,
+          1231.078
+        ]
+      ],
+      "source": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export?f=json&bbox=-83.72391545376975%2C42.28649908449761%2C-83.7209834184865%2C42.288820049493715&bboxSR=4326&imageSR=4326&size=640%2C640&format=png"
+    },
+    {
+      "lot": "umich-062",
+      "name": "NC78 Fuller Rd Lot",
+      "outlined_bays": 38,
+      "path": [
+        [
+          1347.375,
+          1202.228
+        ],
+        [
+          1398.702,
+          1202.127
+        ]
+      ],
+      "source": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export?f=json&bbox=-83.72391545376975%2C42.28649908449761%2C-83.7209834184865%2C42.288820049493715&bboxSR=4326&imageSR=4326&size=640%2C640&format=png"
+    },
+    {
+      "lot": "umich-062",
+      "name": "NC78 Fuller Rd Lot",
+      "outlined_bays": 0,
+      "path": [
+        [
+          1346.464,
+          1173.739
+        ],
+        [
+          1397.791,
+          1173.638
+        ]
+      ],
+      "source": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export?f=json&bbox=-83.72391545376975%2C42.28649908449761%2C-83.7209834184865%2C42.288820049493715&bboxSR=4326&imageSR=4326&size=640%2C640&format=png"
+    },
+    {
+      "lot": "umich-065",
+      "name": "M79 Washington Heights Lot / M28 Washington Heights Lot",
+      "outlined_bays": 83,
+      "path": [
+        [
+          750.538,
+          418.249
+        ],
+        [
+          862.943,
+          414.645
+        ]
+      ],
+      "source": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export?f=json&bbox=-83.72991450568962%2C42.2791364892428%2C-83.72698302655084%2C42.28145759425586&bboxSR=4326&imageSR=4326&size=640%2C640&format=png"
+    },
+    {
+      "lot": "umich-065",
+      "name": "M79 Washington Heights Lot / M28 Washington Heights Lot",
+      "outlined_bays": 0,
+      "path": [
+        [
+          755.21,
+          430.005
+        ],
+        [
+          860.75,
+          426.621
+        ]
+      ],
+      "source": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export?f=json&bbox=-83.72991450568962%2C42.2791364892428%2C-83.72698302655084%2C42.28145759425586&bboxSR=4326&imageSR=4326&size=640%2C640&format=png"
+    },
+    {
+      "lot": "umich-065",
+      "name": "M79 Washington Heights Lot / M28 Washington Heights Lot",
+      "outlined_bays": 41,
+      "path": [
+        [
+          752.525,
+          399.868
+        ],
+        [
+          863.215,
+          396.319
+        ]
+      ],
+      "source": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export?f=json&bbox=-83.72991450568962%2C42.2791364892428%2C-83.72698302655084%2C42.28145759425586&bboxSR=4326&imageSR=4326&size=640%2C640&format=png"
+    },
+    {
+      "lot": "umich-087",
+      "name": "M50 Wall St Lot",
+      "outlined_bays": 36,
+      "path": [
+        [
+          32.126,
+          1377.887
+        ],
+        [
+          80.383,
+          1358.657
+        ]
+      ],
+      "source": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export?f=json&bbox=-83.73947380747447%2C42.28745641027516%2C-83.73654232231772%2C42.28977775795366&bboxSR=4326&imageSR=4326&size=640%2C640&format=png"
+    },
+    {
+      "lot": "umich-087",
+      "name": "M50 Wall St Lot",
+      "outlined_bays": 31,
+      "path": [
+        [
+          24.896,
+          1364.522
+        ],
+        [
+          72.573,
+          1345.763
+        ]
+      ],
+      "source": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export?f=json&bbox=-83.73947380747447%2C42.28745641027516%2C-83.73654232231772%2C42.28977775795366&bboxSR=4326&imageSR=4326&size=640%2C640&format=png"
+    },
+    {
+      "lot": "umich-087",
+      "name": "M50 Wall St Lot",
+      "outlined_bays": 23,
+      "path": [
+        [
+          23.595,
+          1350.512
+        ],
+        [
+          65.161,
+          1334.67
+        ]
+      ],
+      "source": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export?f=json&bbox=-83.73947380747447%2C42.28745641027516%2C-83.73654232231772%2C42.28977775795366&bboxSR=4326&imageSR=4326&size=640%2C640&format=png"
+    },
+    {
+      "lot": "umich-087",
+      "name": "M50 Wall St Lot",
+      "outlined_bays": 0,
+      "path": [
+        [
+          38.156,
+          1393.558
+        ],
+        [
+          93.118,
+          1371.392
+        ]
+      ],
+      "source": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export?f=json&bbox=-83.73947380747447%2C42.28745641027516%2C-83.73654232231772%2C42.28977775795366&bboxSR=4326&imageSR=4326&size=640%2C640&format=png"
+    },
+    {
+      "lot": "umich-087",
+      "name": "M50 Wall St Lot",
+      "outlined_bays": 12,
+      "path": [
+        [
+          22.03,
+          1341.497
+        ],
+        [
+          64.87,
+          1325.614
+        ]
+      ],
+      "source": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export?f=json&bbox=-83.73947380747447%2C42.28745641027516%2C-83.73654232231772%2C42.28977775795366&bboxSR=4326&imageSR=4326&size=640%2C640&format=png"
+    },
+    {
+      "lot": "umich-088",
+      "name": "NC46 Hubbard Road Lot",
+      "outlined_bays": 29,
+      "path": [
+        [
+          2482.953,
+          2084.718
+        ],
+        [
+          2518.939,
+          2117.24
+        ]
+      ],
+      "source": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export?f=json&bbox=-83.7098795831305%2C42.29459924175316%2C-83.70694665251064%2C42.29691987005084&bboxSR=4326&imageSR=4326&size=640%2C640&format=png"
+    },
+    {
+      "lot": "umich-088",
+      "name": "NC46 Hubbard Road Lot",
+      "outlined_bays": 51,
+      "path": [
+        [
+          2484.193,
+          2060.323
+        ],
+        [
+          2541.449,
+          2106.494
+        ]
+      ],
+      "source": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export?f=json&bbox=-83.7098795831305%2C42.29459924175316%2C-83.70694665251064%2C42.29691987005084&bboxSR=4326&imageSR=4326&size=640%2C640&format=png"
+    },
+    {
+      "lot": "umich-088",
+      "name": "NC46 Hubbard Road Lot",
+      "outlined_bays": 59,
+      "path": [
+        [
+          2494.933,
+          2038.778
+        ],
+        [
+          2559.635,
+          2086.575
+        ]
+      ],
+      "source": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export?f=json&bbox=-83.7098795831305%2C42.29459924175316%2C-83.70694665251064%2C42.29691987005084&bboxSR=4326&imageSR=4326&size=640%2C640&format=png"
+    },
+    {
+      "lot": "umich-088",
+      "name": "NC46 Hubbard Road Lot",
+      "outlined_bays": 54,
+      "path": [
+        [
+          2509.862,
+          2022.114
+        ],
+        [
+          2573.814,
+          2067.499
+        ]
+      ],
+      "source": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export?f=json&bbox=-83.7098795831305%2C42.29459924175316%2C-83.70694665251064%2C42.29691987005084&bboxSR=4326&imageSR=4326&size=640%2C640&format=png"
+    },
+    {
+      "lot": "umich-088",
+      "name": "NC46 Hubbard Road Lot",
+      "outlined_bays": 0,
+      "path": [
+        [
+          2545.43,
+          2020.408
+        ],
+        [
+          2580.585,
+          2047.943
+        ]
+      ],
+      "source": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export?f=json&bbox=-83.7098795831305%2C42.29459924175316%2C-83.70694665251064%2C42.29691987005084&bboxSR=4326&imageSR=4326&size=640%2C640&format=png"
+    },
+    {
+      "lot": "umich-088",
+      "name": "NC46 Hubbard Road Lot",
+      "outlined_bays": 4,
+      "path": [
+        [
+          2465.801,
+          2031.54
+        ],
+        [
+          2512.904,
+          2012.132
+        ]
+      ],
+      "source": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export?f=json&bbox=-83.7098795831305%2C42.29459924175316%2C-83.70694665251064%2C42.29691987005084&bboxSR=4326&imageSR=4326&size=640%2C640&format=png"
+    },
+    {
+      "lot": "umich-089",
+      "name": "NC52 Glazier Way Lot / NC51 Glazier Way Huron PKWY Lot",
+      "outlined_bays": 4,
+      "path": [
+        [
+          2694.518,
+          1422.82
+        ],
+        [
+          2768.681,
+          1423.622
+        ]
+      ],
+      "source": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export?f=json&bbox=-83.70791356301201%2C42.28760784547693%2C-83.70408582193541%2C42.290636601050686&bboxSR=4326&imageSR=4326&size=640%2C640&format=png"
+    },
+    {
+      "lot": "umich-089",
+      "name": "NC52 Glazier Way Lot / NC51 Glazier Way Huron PKWY Lot",
+      "outlined_bays": 2,
+      "path": [
+        [
+          2676.618,
+          1372.823
+        ],
+        [
+          2784.951,
+          1375.699
+        ]
+      ],
+      "source": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export?f=json&bbox=-83.70791356301201%2C42.28760784547693%2C-83.70408582193541%2C42.290636601050686&bboxSR=4326&imageSR=4326&size=640%2C640&format=png"
+    },
+    {
+      "lot": "umich-089",
+      "name": "NC52 Glazier Way Lot / NC51 Glazier Way Huron PKWY Lot",
+      "outlined_bays": 3,
+      "path": [
+        [
+          2666.927,
+          1347.849
+        ],
+        [
+          2784.148,
+          1350.442
+        ]
+      ],
+      "source": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export?f=json&bbox=-83.70791356301201%2C42.28760784547693%2C-83.70408582193541%2C42.290636601050686&bboxSR=4326&imageSR=4326&size=640%2C640&format=png"
+    },
+    {
+      "lot": "umich-089",
+      "name": "NC52 Glazier Way Lot / NC51 Glazier Way Huron PKWY Lot",
+      "outlined_bays": 3,
+      "path": [
+        [
+          2655.554,
+          1316.607
+        ],
+        [
+          2783.144,
+          1318.87
+        ]
+      ],
+      "source": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export?f=json&bbox=-83.70791356301201%2C42.28760784547693%2C-83.70408582193541%2C42.290636601050686&bboxSR=4326&imageSR=4326&size=640%2C640&format=png"
+    },
+    {
+      "lot": "umich-089",
+      "name": "NC52 Glazier Way Lot / NC51 Glazier Way Huron PKWY Lot",
+      "outlined_bays": 9,
+      "path": [
+        [
+          2600.821,
+          1274.103
+        ],
+        [
+          2781.839,
+          1277.827
+        ]
+      ],
+      "source": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export?f=json&bbox=-83.70791356301201%2C42.28760784547693%2C-83.70408582193541%2C42.290636601050686&bboxSR=4326&imageSR=4326&size=640%2C640&format=png"
+    },
+    {
+      "lot": "umich-089",
+      "name": "NC52 Glazier Way Lot / NC51 Glazier Way Huron PKWY Lot",
+      "outlined_bays": 21,
+      "path": [
+        [
+          2598.336,
+          1242.578
+        ],
+        [
+          2780.856,
+          1246.887
+        ]
+      ],
+      "source": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export?f=json&bbox=-83.70791356301201%2C42.28760784547693%2C-83.70408582193541%2C42.290636601050686&bboxSR=4326&imageSR=4326&size=640%2C640&format=png"
+    },
+    {
+      "lot": "umich-089",
+      "name": "NC52 Glazier Way Lot / NC51 Glazier Way Huron PKWY Lot",
+      "outlined_bays": 14,
+      "path": [
+        [
+          2597.482,
+          1215.742
+        ],
+        [
+          2771.095,
+          1219.702
+        ]
+      ],
+      "source": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export?f=json&bbox=-83.70791356301201%2C42.28760784547693%2C-83.70408582193541%2C42.290636601050686&bboxSR=4326&imageSR=4326&size=640%2C640&format=png"
+    },
+    {
+      "lot": "umich-094",
+      "name": "NC60 Beal Bonisteel Lot",
+      "outlined_bays": 19,
+      "path": [
+        [
+          2131.192,
+          1577.135
+        ],
+        [
+          2183.01,
+          1601.391
+        ]
+      ],
+      "source": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export?f=json&bbox=-83.71421340221875%2C42.29001832968575%2C-83.71128084071067%2C42.292339059955935&bboxSR=4326&imageSR=4326&size=640%2C640&format=png"
+    },
+    {
+      "lot": "umich-094",
+      "name": "NC60 Beal Bonisteel Lot",
+      "outlined_bays": 37,
+      "path": [
+        [
+          2132.04,
+          1552.926
+        ],
+        [
+          2181.458,
+          1578.123
+        ]
+      ],
+      "source": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export?f=json&bbox=-83.71421340221875%2C42.29001832968575%2C-83.71128084071067%2C42.292339059955935&bboxSR=4326&imageSR=4326&size=640%2C640&format=png"
+    },
+    {
+      "lot": "umich-094",
+      "name": "NC60 Beal Bonisteel Lot",
+      "outlined_bays": 21,
+      "path": [
+        [
+          2131.297,
+          1529.632
+        ],
+        [
+          2183.144,
+          1554.751
+        ]
+      ],
+      "source": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export?f=json&bbox=-83.71421340221875%2C42.29001832968575%2C-83.71128084071067%2C42.292339059955935&bboxSR=4326&imageSR=4326&size=640%2C640&format=png"
+    },
+    {
+      "lot": "umich-094",
+      "name": "NC60 Beal Bonisteel Lot",
+      "outlined_bays": 2,
+      "path": [
+        [
+          2146.394,
+          1596.513
+        ],
+        [
+          2183.45,
+          1615.195
+        ]
+      ],
+      "source": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export?f=json&bbox=-83.71421340221875%2C42.29001832968575%2C-83.71128084071067%2C42.292339059955935&bboxSR=4326&imageSR=4326&size=640%2C640&format=png"
+    },
+    {
+      "lot": "umich-094",
+      "name": "NC60 Beal Bonisteel Lot",
+      "outlined_bays": 15,
+      "path": [
+        [
+          2144.563,
+          1513.664
+        ],
+        [
+          2185.749,
+          1534.805
+        ]
+      ],
+      "source": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export?f=json&bbox=-83.71421340221875%2C42.29001832968575%2C-83.71128084071067%2C42.292339059955935&bboxSR=4326&imageSR=4326&size=640%2C640&format=png"
+    },
+    {
+      "lot": "umich-096",
+      "name": "SC7 Kipke Drive Lot",
+      "outlined_bays": 89,
+      "path": [
+        [
+          -547.962,
+          -1322.661
+        ],
+        [
+          -429.953,
+          -1361.675
+        ]
+      ],
+      "source": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export?f=json&bbox=-83.74507687093127%2C42.26277325444166%2C-83.74214669673538%2C42.26509471523775&bboxSR=4326&imageSR=4326&size=640%2C640&format=png"
+    },
+    {
+      "lot": "umich-096",
+      "name": "SC7 Kipke Drive Lot",
+      "outlined_bays": 107,
+      "path": [
+        [
+          -554.93,
+          -1340.61
+        ],
+        [
+          -419.019,
+          -1385.879
+        ]
+      ],
+      "source": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export?f=json&bbox=-83.74507687093127%2C42.26277325444166%2C-83.74214669673538%2C42.26509471523775&bboxSR=4326&imageSR=4326&size=640%2C640&format=png"
+    },
+    {
+      "lot": "umich-096",
+      "name": "SC7 Kipke Drive Lot",
+      "outlined_bays": 119,
+      "path": [
+        [
+          -561.934,
+          -1359.693
+        ],
+        [
+          -409.039,
+          -1406.646
+        ]
+      ],
+      "source": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export?f=json&bbox=-83.74507687093127%2C42.26277325444166%2C-83.74214669673538%2C42.26509471523775&bboxSR=4326&imageSR=4326&size=640%2C640&format=png"
+    },
+    {
+      "lot": "umich-096",
+      "name": "SC7 Kipke Drive Lot",
+      "outlined_bays": 21,
+      "path": [
+        [
+          -521.883,
+          -1306.465
+        ],
+        [
+          -433.403,
+          -1336.576
+        ]
+      ],
+      "source": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export?f=json&bbox=-83.74507687093127%2C42.26277325444166%2C-83.74214669673538%2C42.26509471523775&bboxSR=4326&imageSR=4326&size=640%2C640&format=png"
+    },
+    {
+      "lot": "umich-096",
+      "name": "SC7 Kipke Drive Lot",
+      "outlined_bays": 60,
+      "path": [
+        [
+          -573.929,
+          -1368.393
+        ],
+        [
+          -401.04,
+          -1422.805
+        ]
+      ],
+      "source": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export?f=json&bbox=-83.74507687093127%2C42.26277325444166%2C-83.74214669673538%2C42.26509471523775&bboxSR=4326&imageSR=4326&size=640%2C640&format=png"
+    },
+    {
+      "lot": "umich-099",
+      "name": "NC92 Plymouth Rd Lot",
+      "outlined_bays": 62,
+      "path": [
+        [
+          2667.262,
+          2326.748
+        ],
+        [
+          2751.105,
+          2324.081
+        ]
+      ],
+      "source": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export?f=json&bbox=-83.70763216697098%2C42.29678890631364%2C-83.70469905318888%2C42.29910948153793&bboxSR=4326&imageSR=4326&size=640%2C640&format=png"
+    },
+    {
+      "lot": "umich-099",
+      "name": "NC92 Plymouth Rd Lot",
+      "outlined_bays": 62,
+      "path": [
+        [
+          2666.635,
+          2307.06
+        ],
+        [
+          2750.479,
+          2304.393
+        ]
+      ],
+      "source": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export?f=json&bbox=-83.70763216697098%2C42.29678890631364%2C-83.70469905318888%2C42.29910948153793&bboxSR=4326&imageSR=4326&size=640%2C640&format=png"
+    },
+    {
+      "lot": "umich-099",
+      "name": "NC92 Plymouth Rd Lot",
+      "outlined_bays": 56,
+      "path": [
+        [
+          2666.009,
+          2287.372
+        ],
+        [
+          2741.326,
+          2284.976
+        ]
+      ],
+      "source": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export?f=json&bbox=-83.70763216697098%2C42.29678890631364%2C-83.70469905318888%2C42.29910948153793&bboxSR=4326&imageSR=4326&size=640%2C640&format=png"
+    },
+    {
+      "lot": "umich-099",
+      "name": "NC92 Plymouth Rd Lot",
+      "outlined_bays": 32,
+      "path": [
+        [
+          2666.322,
+          2341.937
+        ],
+        [
+          2751.586,
+          2339.225
+        ]
+      ],
+      "source": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export?f=json&bbox=-83.70763216697098%2C42.29678890631364%2C-83.70469905318888%2C42.29910948153793&bboxSR=4326&imageSR=4326&size=640%2C640&format=png"
+    },
+    {
+      "lot": "umich-099",
+      "name": "NC92 Plymouth Rd Lot",
+      "outlined_bays": 15,
+      "path": [
+        [
+          2667.731,
+          2274.431
+        ],
+        [
+          2731.679,
+          2272.397
+        ]
+      ],
+      "source": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export?f=json&bbox=-83.70763216697098%2C42.29678890631364%2C-83.70469905318888%2C42.29910948153793&bboxSR=4326&imageSR=4326&size=640%2C640&format=png"
+    },
+    {
+      "lot": "umich-104",
+      "name": "NC96 Plymouth Rd Lot",
+      "outlined_bays": 38,
+      "path": [
+        [
+          2510.714,
+          2489.337
+        ],
+        [
+          2562.025,
+          2487.703
+        ]
+      ],
+      "source": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export?f=json&bbox=-83.70991957287703%2C42.29784979543888%2C-83.70698649894979%2C42.30017042786227&bboxSR=4326&imageSR=4326&size=640%2C640&format=png"
+    },
+    {
+      "lot": "umich-104",
+      "name": "NC96 Plymouth Rd Lot",
+      "outlined_bays": 38,
+      "path": [
+        [
+          2510.074,
+          2469.231
+        ],
+        [
+          2561.385,
+          2467.598
+        ]
+      ],
+      "source": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export?f=json&bbox=-83.70991957287703%2C42.29784979543888%2C-83.70698649894979%2C42.30017042786227&bboxSR=4326&imageSR=4326&size=640%2C640&format=png"
+    },
+    {
+      "lot": "umich-104",
+      "name": "NC96 Plymouth Rd Lot",
+      "outlined_bays": 19,
+      "path": [
+        [
+          2509.485,
+          2450.735
+        ],
+        [
+          2560.796,
+          2449.101
+        ]
+      ],
+      "source": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export?f=json&bbox=-83.70991957287703%2C42.29784979543888%2C-83.70698649894979%2C42.30017042786227&bboxSR=4326&imageSR=4326&size=640%2C640&format=png"
+    },
+    {
+      "lot": "umich-104",
+      "name": "NC96 Plymouth Rd Lot",
+      "outlined_bays": 26,
+      "path": [
+        [
+          2508.614,
+          2423.392
+        ],
+        [
+          2546.343,
+          2422.191
+        ]
+      ],
+      "source": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export?f=json&bbox=-83.70991957287703%2C42.29784979543888%2C-83.70698649894979%2C42.30017042786227&bboxSR=4326&imageSR=4326&size=640%2C640&format=png"
+    },
+    {
+      "lot": "umich-104",
+      "name": "NC96 Plymouth Rd Lot",
+      "outlined_bays": 26,
+      "path": [
+        [
+          2508.051,
+          2405.699
+        ],
+        [
+          2545.78,
+          2404.498
+        ]
+      ],
+      "source": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export?f=json&bbox=-83.70991957287703%2C42.29784979543888%2C-83.70698649894979%2C42.30017042786227&bboxSR=4326&imageSR=4326&size=640%2C640&format=png"
+    },
+    {
+      "lot": "umich-104",
+      "name": "NC96 Plymouth Rd Lot",
+      "outlined_bays": 16,
+      "path": [
+        [
+          2507.488,
+          2388.007
+        ],
+        [
+          2545.217,
+          2386.806
+        ]
+      ],
+      "source": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export?f=json&bbox=-83.70991957287703%2C42.29784979543888%2C-83.70698649894979%2C42.30017042786227&bboxSR=4326&imageSR=4326&size=640%2C640&format=png"
+    },
+    {
+      "lot": "umich-104",
+      "name": "NC96 Plymouth Rd Lot",
+      "outlined_bays": 0,
+      "path": [
+        [
+          2581.771,
+          2443.603
+        ],
+        [
+          2579.851,
+          2383.288
+        ]
+      ],
+      "source": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export?f=json&bbox=-83.70991957287703%2C42.29784979543888%2C-83.70698649894979%2C42.30017042786227&bboxSR=4326&imageSR=4326&size=640%2C640&format=png"
+    },
+    {
+      "lot": "umich-116",
+      "name": "NC43 Fuller Road Lot / 7012241",
+      "outlined_bays": 0,
+      "path": [
+        [
+          1737.267,
+          1293.985
+        ],
+        [
+          1737.608,
+          1246.311
+        ]
+      ],
+      "source": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export?f=json&bbox=-83.7186254937971%2C42.28714899790382%2C-83.71569322809685%2C42.28946983369717&bboxSR=4326&imageSR=4326&size=640%2C640&format=png"
+    },
+    {
+      "lot": "umich-116",
+      "name": "NC43 Fuller Road Lot / 7012241",
+      "outlined_bays": 0,
+      "path": [
+        [
+          1755.322,
+          1295.395
+        ],
+        [
+          1756.84,
+          1245.696
+        ]
+      ],
+      "source": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export?f=json&bbox=-83.7186254937971%2C42.28714899790382%2C-83.71569322809685%2C42.28946983369717&bboxSR=4326&imageSR=4326&size=640%2C640&format=png"
+    },
+    {
+      "lot": "umich-116",
+      "name": "NC43 Fuller Road Lot / 7012241",
+      "outlined_bays": 0,
+      "path": [
+        [
+          1788.823,
+          1294.325
+        ],
+        [
+          1791.308,
+          1235.99
+        ]
+      ],
+      "source": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export?f=json&bbox=-83.7186254937971%2C42.28714899790382%2C-83.71569322809685%2C42.28946983369717&bboxSR=4326&imageSR=4326&size=640%2C640&format=png"
+    },
+    {
+      "lot": "umich-116",
+      "name": "NC43 Fuller Road Lot / 7012241",
+      "outlined_bays": 0,
+      "path": [
+        [
+          1813.512,
+          1289.564
+        ],
+        [
+          1817.364,
+          1235.158
+        ]
+      ],
+      "source": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export?f=json&bbox=-83.7186254937971%2C42.28714899790382%2C-83.71569322809685%2C42.28946983369717&bboxSR=4326&imageSR=4326&size=640%2C640&format=png"
+    },
+    {
+      "lot": "umich-116",
+      "name": "NC43 Fuller Road Lot / 7012241",
+      "outlined_bays": 0,
+      "path": [
+        [
+          1725.501,
+          1295.023
+        ],
+        [
+          1724.191,
+          1254.021
+        ]
+      ],
+      "source": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export?f=json&bbox=-83.7186254937971%2C42.28714899790382%2C-83.71569322809685%2C42.28946983369717&bboxSR=4326&imageSR=4326&size=640%2C640&format=png"
+    },
+    {
+      "lot": "umich-116",
+      "name": "NC43 Fuller Road Lot / 7012241",
+      "outlined_bays": 16,
+      "path": [
+        [
+          1735.187,
+          1306.63
+        ],
+        [
+          1821.936,
+          1300.549
+        ]
+      ],
+      "source": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export?f=json&bbox=-83.7186254937971%2C42.28714899790382%2C-83.71569322809685%2C42.28946983369717&bboxSR=4326&imageSR=4326&size=640%2C640&format=png"
+    },
+    {
+      "lot": "umich-123",
+      "name": "NC86 Plymouth Rd Lot",
+      "outlined_bays": 25,
+      "path": [
+        [
+          3033.091,
+          2454.554
+        ],
+        [
+          3100.984,
+          2452.398
+        ]
+      ],
+      "source": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export?f=json&bbox=-83.70345416922522%2C42.29804807189859%2C-83.7005208402004%2C42.300368545725554&bboxSR=4326&imageSR=4326&size=640%2C640&format=png"
+    },
+    {
+      "lot": "umich-123",
+      "name": "NC86 Plymouth Rd Lot",
+      "outlined_bays": 50,
+      "path": [
+        [
+          3032.595,
+          2438.94
+        ],
+        [
+          3100.488,
+          2436.784
+        ]
+      ],
+      "source": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export?f=json&bbox=-83.70345416922522%2C42.29804807189859%2C-83.7005208402004%2C42.300368545725554&bboxSR=4326&imageSR=4326&size=640%2C640&format=png"
+    },
+    {
+      "lot": "umich-123",
+      "name": "NC86 Plymouth Rd Lot",
+      "outlined_bays": 8,
+      "path": [
+        [
+          3032.132,
+          2424.367
+        ],
+        [
+          3100.025,
+          2422.21
+        ]
+      ],
+      "source": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export?f=json&bbox=-83.70345416922522%2C42.29804807189859%2C-83.7005208402004%2C42.300368545725554&bboxSR=4326&imageSR=4326&size=640%2C640&format=png"
+    },
+    {
+      "lot": "umich-123",
+      "name": "NC86 Plymouth Rd Lot",
+      "outlined_bays": 6,
+      "path": [
+        [
+          3109.254,
+          2451.093
+        ],
+        [
+          3108.51,
+          2427.672
+        ]
+      ],
+      "source": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export?f=json&bbox=-83.70345416922522%2C42.29804807189859%2C-83.7005208402004%2C42.300368545725554&bboxSR=4326&imageSR=4326&size=640%2C640&format=png"
+    },
+    {
+      "lot": "umich-139",
+      "name": "NC48 Hayward Murfin St Lot",
+      "outlined_bays": 24,
+      "path": [
+        [
+          1776.455,
+          1866.464
+        ],
+        [
+          1809.537,
+          1865.407
+        ]
+      ],
+      "source": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export?f=json&bbox=-83.7186638509398%2C42.2924719914885%2C-83.71573134967065%2C42.294792833395626&bboxSR=4326&imageSR=4326&size=640%2C640&format=png"
+    },
+    {
+      "lot": "umich-139",
+      "name": "NC48 Hayward Murfin St Lot",
+      "outlined_bays": 24,
+      "path": [
+        [
+          1775.854,
+          1847.655
+        ],
+        [
+          1808.937,
+          1846.599
+        ]
+      ],
+      "source": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export?f=json&bbox=-83.7186638509398%2C42.2924719914885%2C-83.71573134967065%2C42.294792833395626&bboxSR=4326&imageSR=4326&size=640%2C640&format=png"
+    },
+    {
+      "lot": "umich-139",
+      "name": "NC48 Hayward Murfin St Lot",
+      "outlined_bays": 13,
+      "path": [
+        [
+          1777.373,
+          1883.693
+        ],
+        [
+          1815.602,
+          1882.472
+        ]
+      ],
+      "source": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export?f=json&bbox=-83.7186638509398%2C42.2924719914885%2C-83.71573134967065%2C42.294792833395626&bboxSR=4326&imageSR=4326&size=640%2C640&format=png"
+    },
+    {
+      "lot": "umich-139",
+      "name": "NC48 Hayward Murfin St Lot",
+      "outlined_bays": 17,
+      "path": [
+        [
+          1772.325,
+          1829.333
+        ],
+        [
+          1823.052,
+          1827.713
+        ]
+      ],
+      "source": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export?f=json&bbox=-83.7186638509398%2C42.2924719914885%2C-83.71573134967065%2C42.294792833395626&bboxSR=4326&imageSR=4326&size=640%2C640&format=png"
+    },
+    {
+      "lot": "umich-139",
+      "name": "NC48 Hayward Murfin St Lot",
+      "outlined_bays": 13,
+      "path": [
+        [
+          1762.027,
+          1875.554
+        ],
+        [
+          1760.9,
+          1840.288
+        ]
+      ],
+      "source": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export?f=json&bbox=-83.7186638509398%2C42.2924719914885%2C-83.71573134967065%2C42.294792833395626&bboxSR=4326&imageSR=4326&size=640%2C640&format=png"
+    },
+    {
+      "lot": "umich-139",
+      "name": "NC48 Hayward Murfin St Lot",
+      "outlined_bays": 13,
+      "path": [
+        [
+          1825.251,
+          1873.535
+        ],
+        [
+          1824.15,
+          1839.053
+        ]
+      ],
+      "source": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export?f=json&bbox=-83.7186638509398%2C42.2924719914885%2C-83.71573134967065%2C42.294792833395626&bboxSR=4326&imageSR=4326&size=640%2C640&format=png"
+    },
+    {
+      "lot": "umich-142",
+      "name": "NC105 Plymouth Rd Lot",
+      "outlined_bays": 18,
+      "path": [
+        [
+          2517.538,
+          2531.442
+        ],
+        [
+          2542.092,
+          2530.66
+        ]
+      ],
+      "source": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export?f=json&bbox=-83.70996953713178%2C42.29872583428775%2C-83.70703642607114%2C42.30104646878535&bboxSR=4326&imageSR=4326&size=640%2C640&format=png"
+    },
+    {
+      "lot": "umich-142",
+      "name": "NC105 Plymouth Rd Lot",
+      "outlined_bays": 0,
+      "path": [
+        [
+          2515.71,
+          2550.257
+        ],
+        [
+          2546.023,
+          2549.291
+        ]
+      ],
+      "source": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export?f=json&bbox=-83.70996953713178%2C42.29872583428775%2C-83.70703642607114%2C42.30104646878535&bboxSR=4326&imageSR=4326&size=640%2C640&format=png"
+    },
+    {
+      "lot": "umich-142",
+      "name": "NC105 Plymouth Rd Lot",
+      "outlined_bays": 9,
+      "path": [
+        [
+          2515.739,
+          2513.066
+        ],
+        [
+          2541.808,
+          2512.235
+        ]
+      ],
+      "source": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export?f=json&bbox=-83.70996953713178%2C42.29872583428775%2C-83.70703642607114%2C42.30104646878535&bboxSR=4326&imageSR=4326&size=640%2C640&format=png"
+    },
+    {
+      "lot": "umich-142",
+      "name": "NC105 Plymouth Rd Lot",
+      "outlined_bays": 0,
+      "path": [
+        [
+          2512.096,
+          2503.48
+        ],
+        [
+          2544.834,
+          2502.437
+        ]
+      ],
+      "source": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export?f=json&bbox=-83.70996953713178%2C42.29872583428775%2C-83.70703642607114%2C42.30104646878535&bboxSR=4326&imageSR=4326&size=640%2C640&format=png"
+    },
+    {
+      "lot": "umich-143",
+      "name": "NC26 Hayward Street Lot / NC53 Hayward Street Lot",
+      "outlined_bays": 6,
+      "path": [
+        [
+          2505.46,
+          1951.669
+        ],
+        [
+          2533.139,
+          1979.348
+        ],
+        [
+          2570.144,
+          2005.303
+        ],
+        [
+          2611.027,
+          2026.85
+        ],
+        [
+          2664.796,
+          2032.279
+        ],
+        [
+          2720.516,
+          2014.799
+        ]
+      ],
+      "source": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export?f=json&bbox=-83.7091578811655%2C42.29322407083202%2C-83.70567598344675%2C42.29597904186578&bboxSR=4326&imageSR=4326&size=640%2C640&format=png"
+    },
+    {
+      "lot": "umich-143",
+      "name": "NC26 Hayward Street Lot / NC53 Hayward Street Lot",
+      "outlined_bays": 38,
+      "path": [
+        [
+          2520.705,
+          1925.48
+        ],
+        [
+          2550.087,
+          1964.529
+        ],
+        [
+          2595.213,
+          1993.081
+        ],
+        [
+          2641.087,
+          2003.045
+        ],
+        [
+          2679.951,
+          2003.237
+        ],
+        [
+          2714.663,
+          1999.277
+        ]
+      ],
+      "source": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export?f=json&bbox=-83.7091578811655%2C42.29322407083202%2C-83.70567598344675%2C42.29597904186578&bboxSR=4326&imageSR=4326&size=640%2C640&format=png"
+    },
+    {
+      "lot": "umich-143",
+      "name": "NC26 Hayward Street Lot / NC53 Hayward Street Lot",
+      "outlined_bays": 44,
+      "path": [
+        [
+          2530.506,
+          1896.607
+        ],
+        [
+          2566.807,
+          1942.576
+        ],
+        [
+          2609.12,
+          1966.934
+        ],
+        [
+          2641.473,
+          1973.045
+        ],
+        [
+          2665.386,
+          1966.572
+        ]
+      ],
+      "source": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export?f=json&bbox=-83.7091578811655%2C42.29322407083202%2C-83.70567598344675%2C42.29597904186578&bboxSR=4326&imageSR=4326&size=640%2C640&format=png"
+    },
+    {
+      "lot": "umich-143",
+      "name": "NC26 Hayward Street Lot / NC53 Hayward Street Lot",
+      "outlined_bays": 29,
+      "path": [
+        [
+          2546.042,
+          1879.548
+        ],
+        [
+          2612.773,
+          1955.394
+        ],
+        [
+          2637.23,
+          1966.04
+        ],
+        [
+          2659.85,
+          1961.036
+        ]
+      ],
+      "source": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export?f=json&bbox=-83.7091578811655%2C42.29322407083202%2C-83.70567598344675%2C42.29597904186578&bboxSR=4326&imageSR=4326&size=640%2C640&format=png"
+    },
+    {
+      "lot": "umich-145",
+      "name": "NC90 Plymouth Rd Lot",
+      "outlined_bays": 41,
+      "path": [
+        [
+          2698.561,
+          2228.672
+        ],
+        [
+          2695.128,
+          2120.751
+        ]
+      ],
+      "source": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export?f=json&bbox=-83.7077478699631%2C42.2956004771172%2C-83.70481481354238%2C42.29792105403487&bboxSR=4326&imageSR=4326&size=640%2C640&format=png"
+    },
+    {
+      "lot": "umich-145",
+      "name": "NC90 Plymouth Rd Lot",
+      "outlined_bays": 47,
+      "path": [
+        [
+          2711.605,
+          2229.029
+        ],
+        [
+          2708.271,
+          2124.191
+        ]
+      ],
+      "source": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export?f=json&bbox=-83.7077478699631%2C42.2956004771172%2C-83.70481481354238%2C42.29792105403487&bboxSR=4326&imageSR=4326&size=640%2C640&format=png"
+    },
+    {
+      "lot": "umich-145",
+      "name": "NC90 Plymouth Rd Lot",
+      "outlined_bays": 47,
+      "path": [
+        [
+          2730.89,
+          2220.699
+        ],
+        [
+          2728.242,
+          2137.445
+        ]
+      ],
+      "source": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export?f=json&bbox=-83.7077478699631%2C42.2956004771172%2C-83.70481481354238%2C42.29792105403487&bboxSR=4326&imageSR=4326&size=640%2C640&format=png"
+    },
+    {
+      "lot": "umich-145",
+      "name": "NC90 Plymouth Rd Lot",
+      "outlined_bays": 18,
+      "path": [
+        [
+          2670.621,
+          2238.049
+        ],
+        [
+          2667.285,
+          2133.211
+        ]
+      ],
+      "source": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export?f=json&bbox=-83.7077478699631%2C42.2956004771172%2C-83.70481481354238%2C42.29792105403487&bboxSR=4326&imageSR=4326&size=640%2C640&format=png"
+    },
+    {
+      "lot": "umich-145",
+      "name": "NC90 Plymouth Rd Lot",
+      "outlined_bays": 0,
+      "path": [
+        [
+          2749.734,
+          2198.493
+        ],
+        [
+          2747.895,
+          2140.678
+        ]
+      ],
+      "source": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export?f=json&bbox=-83.7077478699631%2C42.2956004771172%2C-83.70481481354238%2C42.29792105403487&bboxSR=4326&imageSR=4326&size=640%2C640&format=png"
+    },
+    {
+      "lot": "umich-149",
+      "name": "NW52 Stone Rd Lot ",
+      "outlined_bays": 40,
+      "path": [
+        [
+          3110.452,
+          1779.754
+        ],
+        [
+          3166.136,
+          1778.458
+        ]
+      ],
+      "source": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export?f=json&bbox=-83.70226441485748%2C42.29214911144806%2C-83.69933130339429%2C42.29446955036929&bboxSR=4326&imageSR=4326&size=640%2C640&format=png"
+    },
+    {
+      "lot": "umich-149",
+      "name": "NW52 Stone Rd Lot ",
+      "outlined_bays": 0,
+      "path": [
+        [
+          3107.118,
+          1800.125
+        ],
+        [
+          3177.854,
+          1799.293
+        ]
+      ],
+      "source": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export?f=json&bbox=-83.70226441485748%2C42.29214911144806%2C-83.69933130339429%2C42.29446955036929&bboxSR=4326&imageSR=4326&size=640%2C640&format=png"
+    },
+    {
+      "lot": "umich-149",
+      "name": "NW52 Stone Rd Lot ",
+      "outlined_bays": 24,
+      "path": [
+        [
+          3106.364,
+          1762.447
+        ],
+        [
+          3170.915,
+          1761.812
+        ]
+      ],
+      "source": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export?f=json&bbox=-83.70226441485748%2C42.29214911144806%2C-83.69933130339429%2C42.29446955036929&bboxSR=4326&imageSR=4326&size=640%2C640&format=png"
+    },
+    {
+      "lot": "umich-151",
+      "name": "NC84 Plymouth Rd Lot",
+      "outlined_bays": 18,
+      "path": [
+        [
+          2925.129,
+          2586.744
+        ],
+        [
+          2951.279,
+          2585.913
+        ]
+      ],
+      "source": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export?f=json&bbox=-83.70501821345482%2C42.299333236226225%2C-83.70208488672306%2C42.30165374970802&bboxSR=4326&imageSR=4326&size=640%2C640&format=png"
+    },
+    {
+      "lot": "umich-151",
+      "name": "NC84 Plymouth Rd Lot",
+      "outlined_bays": 18,
+      "path": [
+        [
+          2925.741,
+          2606.005
+        ],
+        [
+          2951.122,
+          2605.198
+        ]
+      ],
+      "source": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export?f=json&bbox=-83.70501821345482%2C42.299333236226225%2C-83.70208488672306%2C42.30165374970802&bboxSR=4326&imageSR=4326&size=640%2C640&format=png"
+    },
+    {
+      "lot": "umich-151",
+      "name": "NC84 Plymouth Rd Lot",
+      "outlined_bays": 9,
+      "path": [
+        [
+          2924.543,
+          2568.303
+        ],
+        [
+          2950.693,
+          2567.472
+        ]
+      ],
+      "source": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export?f=json&bbox=-83.70501821345482%2C42.299333236226225%2C-83.70208488672306%2C42.30165374970802&bboxSR=4326&imageSR=4326&size=640%2C640&format=png"
+    },
+    {
+      "lot": "umich-151",
+      "name": "NC84 Plymouth Rd Lot",
+      "outlined_bays": 15,
+      "path": [
+        [
+          2966.133,
+          2605.132
+        ],
+        [
+          2964.791,
+          2562.922
+        ]
+      ],
+      "source": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export?f=json&bbox=-83.70501821345482%2C42.299333236226225%2C-83.70208488672306%2C42.30165374970802&bboxSR=4326&imageSR=4326&size=640%2C640&format=png"
+    },
+    {
+      "lot": "umich-151",
+      "name": "NC84 Plymouth Rd Lot",
+      "outlined_bays": 0,
+      "path": [
+        [
+          2931.809,
+          2615.247
+        ],
+        [
+          2962.574,
+          2614.27
+        ]
+      ],
+      "source": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export?f=json&bbox=-83.70501821345482%2C42.299333236226225%2C-83.70208488672306%2C42.30165374970802&bboxSR=4326&imageSR=4326&size=640%2C640&format=png"
+    },
+    {
+      "lot": "umich-162",
+      "name": "SC36 Main Street Keech Lot",
+      "outlined_bays": 30,
+      "path": [
+        [
+          -993.131,
+          -849.64
+        ],
+        [
+          -951.934,
+          -850.971
+        ]
+      ],
+      "source": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export?f=json&bbox=-83.75105921612855%2C42.267032353676505%2C-83.74812908051595%2C42.26935396532595&bboxSR=4326&imageSR=4326&size=640%2C640&format=png"
+    },
+    {
+      "lot": "umich-162",
+      "name": "SC36 Main Street Keech Lot",
+      "outlined_bays": 36,
+      "path": [
+        [
+          -994.677,
+          -865.183
+        ],
+        [
+          -945.136,
+          -866.783
+        ]
+      ],
+      "source": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export?f=json&bbox=-83.75105921612855%2C42.267032353676505%2C-83.74812908051595%2C42.26935396532595&bboxSR=4326&imageSR=4326&size=640%2C640&format=png"
+    },
+    {
+      "lot": "umich-162",
+      "name": "SC36 Main Street Keech Lot",
+      "outlined_bays": 38,
+      "path": [
+        [
+          -996.349,
+          -884.619
+        ],
+        [
+          -943.679,
+          -886.321
+        ]
+      ],
+      "source": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export?f=json&bbox=-83.75105921612855%2C42.267032353676505%2C-83.74812908051595%2C42.26935396532595&bboxSR=4326&imageSR=4326&size=640%2C640&format=png"
+    },
+    {
+      "lot": "umich-162",
+      "name": "SC36 Main Street Keech Lot",
+      "outlined_bays": 38,
+      "path": [
+        [
+          -998.039,
+          -904.613
+        ],
+        [
+          -946.412,
+          -906.28
+        ]
+      ],
+      "source": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export?f=json&bbox=-83.75105921612855%2C42.267032353676505%2C-83.74812908051595%2C42.26935396532595&bboxSR=4326&imageSR=4326&size=640%2C640&format=png"
+    },
+    {
+      "lot": "umich-162",
+      "name": "SC36 Main Street Keech Lot",
+      "outlined_bays": 0,
+      "path": [
+        [
+          -1011.527,
+          -853.501
+        ],
+        [
+          -1013.468,
+          -913.581
+        ]
+      ],
+      "source": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export?f=json&bbox=-83.75105921612855%2C42.267032353676505%2C-83.74812908051595%2C42.26935396532595&bboxSR=4326&imageSR=4326&size=640%2C640&format=png"
+    },
+    {
+      "lot": "umich-162",
+      "name": "SC36 Main Street Keech Lot",
+      "outlined_bays": 21,
+      "path": [
+        [
+          -998.651,
+          -923.527
+        ],
+        [
+          -937.115,
+          -925.515
+        ]
+      ],
+      "source": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export?f=json&bbox=-83.75105921612855%2C42.267032353676505%2C-83.74812908051595%2C42.26935396532595&bboxSR=4326&imageSR=4326&size=640%2C640&format=png"
+    },
+    {
+      "lot": "umich-165",
+      "name": "NC91 Plymouth Rd Lot",
+      "outlined_bays": 44,
+      "path": [
+        [
+          2587.276,
+          2237.248
+        ],
+        [
+          2585.412,
+          2178.679
+        ]
+      ],
+      "source": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export?f=json&bbox=-83.70891924518355%2C42.29568649226986%2C-83.70598622954525%2C42.298007098036464&bboxSR=4326&imageSR=4326&size=640%2C640&format=png"
+    },
+    {
+      "lot": "umich-165",
+      "name": "NC91 Plymouth Rd Lot",
+      "outlined_bays": 52,
+      "path": [
+        [
+          2608.014,
+          2233.218
+        ],
+        [
+          2605.786,
+          2163.205
+        ]
+      ],
+      "source": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export?f=json&bbox=-83.70891924518355%2C42.29568649226986%2C-83.70598622954525%2C42.298007098036464&bboxSR=4326&imageSR=4326&size=640%2C640&format=png"
+    },
+    {
+      "lot": "umich-165",
+      "name": "NC91 Plymouth Rd Lot",
+      "outlined_bays": 56,
+      "path": [
+        [
+          2625.422,
+          2223.904
+        ],
+        [
+          2623.023,
+          2148.505
+        ]
+      ],
+      "source": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export?f=json&bbox=-83.70891924518355%2C42.29568649226986%2C-83.70598622954525%2C42.298007098036464&bboxSR=4326&imageSR=4326&size=640%2C640&format=png"
+    },
+    {
+      "lot": "umich-165",
+      "name": "NC91 Plymouth Rd Lot",
+      "outlined_bays": 31,
+      "path": [
+        [
+          2643.077,
+          2242.211
+        ],
+        [
+          2639.436,
+          2127.766
+        ]
+      ],
+      "source": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export?f=json&bbox=-83.70891924518355%2C42.29568649226986%2C-83.70598622954525%2C42.298007098036464&bboxSR=4326&imageSR=4326&size=640%2C640&format=png"
+    },
+    {
+      "lot": "umich-165",
+      "name": "NC91 Plymouth Rd Lot",
+      "outlined_bays": 0,
+      "path": [
+        [
+          2572.116,
+          2237.73
+        ],
+        [
+          2570.637,
+          2191.279
+        ]
+      ],
+      "source": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export?f=json&bbox=-83.70891924518355%2C42.29568649226986%2C-83.70598622954525%2C42.298007098036464&bboxSR=4326&imageSR=4326&size=640%2C640&format=png"
+    },
+    {
+      "lot": "umich-171",
+      "name": "NC99 Plymouth Rd Lot",
+      "outlined_bays": 30,
+      "path": [
+        [
+          2656.898,
+          2718.901
+        ],
+        [
+          2701.564,
+          2717.971
+        ]
+      ],
+      "source": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export?f=json&bbox=-83.70826156254475%2C42.30030034944043%2C-83.70532831625444%2C42.30262094351444&bboxSR=4326&imageSR=4326&size=640%2C640&format=png"
+    },
+    {
+      "lot": "umich-171",
+      "name": "NC99 Plymouth Rd Lot",
+      "outlined_bays": 30,
+      "path": [
+        [
+          2658.099,
+          2698.729
+        ],
+        [
+          2700.924,
+          2697.857
+        ]
+      ],
+      "source": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export?f=json&bbox=-83.70826156254475%2C42.30030034944043%2C-83.70532831625444%2C42.30262094351444&bboxSR=4326&imageSR=4326&size=640%2C640&format=png"
+    },
+    {
+      "lot": "umich-171",
+      "name": "NC99 Plymouth Rd Lot",
+      "outlined_bays": 19,
+      "path": [
+        [
+          2654.573,
+          2732.725
+        ],
+        [
+          2707.065,
+          2731.546
+        ]
+      ],
+      "source": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export?f=json&bbox=-83.70826156254475%2C42.30030034944043%2C-83.70532831625444%2C42.30262094351444&bboxSR=4326&imageSR=4326&size=640%2C640&format=png"
+    },
+    {
+      "lot": "umich-171",
+      "name": "NC99 Plymouth Rd Lot",
+      "outlined_bays": 0,
+      "path": [
+        [
+          2657.225,
+          2671.256
+        ],
+        [
+          2702.368,
+          2670.802
+        ]
+      ],
+      "source": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export?f=json&bbox=-83.70826156254475%2C42.30030034944043%2C-83.70532831625444%2C42.30262094351444&bboxSR=4326&imageSR=4326&size=640%2C640&format=png"
+    },
+    {
+      "lot": "umich-171",
+      "name": "NC99 Plymouth Rd Lot",
+      "outlined_bays": 10,
+      "path": [
+        [
+          2718.12,
+          2716.953
+        ],
+        [
+          2717.199,
+          2688.009
+        ]
+      ],
+      "source": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export?f=json&bbox=-83.70826156254475%2C42.30030034944043%2C-83.70532831625444%2C42.30262094351444&bboxSR=4326&imageSR=4326&size=640%2C640&format=png"
+    },
+    {
+      "lot": "umich-172",
+      "name": "NW44 McIntyre Dr Lot ",
+      "outlined_bays": 28,
+      "path": [
+        [
+          2415.296,
+          2656.058
+        ],
+        [
+          2452.3,
+          2669.963
+        ]
+      ],
+      "source": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export?f=json&bbox=-83.71125210584339%2C42.29989707119683%2C-83.70831899144882%2C42.302217738324195&bboxSR=4326&imageSR=4326&size=640%2C640&format=png"
+    },
+    {
+      "lot": "umich-172",
+      "name": "NW44 McIntyre Dr Lot ",
+      "outlined_bays": 17,
+      "path": [
+        [
+          2409.193,
+          2674.269
+        ],
+        [
+          2455.27,
+          2689.143
+        ]
+      ],
+      "source": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export?f=json&bbox=-83.71125210584339%2C42.29989707119683%2C-83.70831899144882%2C42.302217738324195&bboxSR=4326&imageSR=4326&size=640%2C640&format=png"
+    },
+    {
+      "lot": "umich-172",
+      "name": "NW44 McIntyre Dr Lot ",
+      "outlined_bays": 0,
+      "path": [
+        [
+          2407.913,
+          2634.086
+        ],
+        [
+          2454.776,
+          2648.934
+        ]
+      ],
+      "source": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export?f=json&bbox=-83.71125210584339%2C42.29989707119683%2C-83.70831899144882%2C42.302217738324195&bboxSR=4326&imageSR=4326&size=640%2C640&format=png"
+    },
+    {
+      "lot": "umich-173",
+      "name": "W11 Krause St Lot",
+      "outlined_bays": 0,
+      "path": [
+        [
+          -1376.688,
+          432.24
+        ],
+        [
+          -1356.002,
+          431.57
+        ]
+      ],
+      "source": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export?f=json&bbox=-83.75640062872836%2C42.278306441719124%2C-83.7534701955475%2C42.280628195464004&bboxSR=4326&imageSR=4326&size=640%2C640&format=png"
+    },
+    {
+      "lot": "umich-173",
+      "name": "W11 Krause St Lot",
+      "outlined_bays": 0,
+      "path": [
+        [
+          -1377.231,
+          415.466
+        ],
+        [
+          -1356.545,
+          414.796
+        ]
+      ],
+      "source": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export?f=json&bbox=-83.75640062872836%2C42.278306441719124%2C-83.7534701955475%2C42.280628195464004&bboxSR=4326&imageSR=4326&size=640%2C640&format=png"
+    },
+    {
+      "lot": "umich-173",
+      "name": "W11 Krause St Lot",
+      "outlined_bays": 0,
+      "path": [
+        [
+          -1377.945,
+          393.396
+        ],
+        [
+          -1356.432,
+          392.699
+        ]
+      ],
+      "source": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export?f=json&bbox=-83.75640062872836%2C42.278306441719124%2C-83.7534701955475%2C42.280628195464004&bboxSR=4326&imageSR=4326&size=640%2C640&format=png"
+    },
+    {
+      "lot": "umich-173",
+      "name": "W11 Krause St Lot",
+      "outlined_bays": 0,
+      "path": [
+        [
+          -1385.39,
+          444.894
+        ],
+        [
+          -1356.429,
+          443.956
+        ]
+      ],
+      "source": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export?f=json&bbox=-83.75640062872836%2C42.278306441719124%2C-83.7534701955475%2C42.280628195464004&bboxSR=4326&imageSR=4326&size=640%2C640&format=png"
+    },
+    {
+      "lot": "umich-173",
+      "name": "W11 Krause St Lot",
+      "outlined_bays": 0,
+      "path": [
+        [
+          -1347.784,
+          429.536
+        ],
+        [
+          -1349.156,
+          387.161
+        ]
+      ],
+      "source": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export?f=json&bbox=-83.75640062872836%2C42.278306441719124%2C-83.7534701955475%2C42.280628195464004&bboxSR=4326&imageSR=4326&size=640%2C640&format=png"
+    },
+    {
+      "lot": "umich-173",
+      "name": "W11 Krause St Lot",
+      "outlined_bays": 0,
+      "path": [
+        [
+          -1391.668,
+          430.073
+        ],
+        [
+          -1392.868,
+          392.995
+        ]
+      ],
+      "source": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export?f=json&bbox=-83.75640062872836%2C42.278306441719124%2C-83.7534701955475%2C42.280628195464004&bboxSR=4326&imageSR=4326&size=640%2C640&format=png"
+    },
+    {
+      "lot": "umich-183",
+      "name": "M40 Wall Street Lot",
+      "outlined_bays": 57,
+      "path": [
+        [
+          207.178,
+          1279.932
+        ],
+        [
+          274.572,
+          1241.165
+        ]
+      ],
+      "source": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export?f=json&bbox=-83.73735221425333%2C42.28656204059016%2C-83.7344206880537%2C42.288883335344494&bboxSR=4326&imageSR=4326&size=640%2C640&format=png"
+    },
+    {
+      "lot": "umich-183",
+      "name": "M40 Wall Street Lot",
+      "outlined_bays": 54,
+      "path": [
+        [
+          194.692,
+          1260.37
+        ],
+        [
+          265.161,
+          1220.172
+        ]
+      ],
+      "source": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export?f=json&bbox=-83.73735221425333%2C42.28656204059016%2C-83.7344206880537%2C42.288883335344494&bboxSR=4326&imageSR=4326&size=640%2C640&format=png"
+    },
+    {
+      "lot": "umich-183",
+      "name": "M40 Wall Street Lot",
+      "outlined_bays": 0,
+      "path": [
+        [
+          211.947,
+          1292.423
+        ],
+        [
+          280.567,
+          1252.951
+        ]
+      ],
+      "source": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export?f=json&bbox=-83.73735221425333%2C42.28656204059016%2C-83.7344206880537%2C42.288883335344494&bboxSR=4326&imageSR=4326&size=640%2C640&format=png"
+    },
+    {
+      "lot": "umich-183",
+      "name": "M40 Wall Street Lot",
+      "outlined_bays": 28,
+      "path": [
+        [
+          189.923,
+          1247.879
+        ],
+        [
+          256.092,
+          1209.816
+        ]
+      ],
+      "source": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export?f=json&bbox=-83.73735221425333%2C42.28656204059016%2C-83.7344206880537%2C42.288883335344494&bboxSR=4326&imageSR=4326&size=640%2C640&format=png"
+    },
+    {
+      "lot": "umich-187",
+      "name": "NC85 Plymouth Rd Lot",
+      "outlined_bays": 28,
+      "path": [
+        [
+          2958.328,
+          2443.717
+        ],
+        [
+          2957.051,
+          2403.548
+        ]
+      ],
+      "source": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export?f=json&bbox=-83.70454209527217%2C42.29795904594065%2C-83.70160881165062%2C42.300279546402955&bboxSR=4326&imageSR=4326&size=640%2C640&format=png"
+    },
+    {
+      "lot": "umich-187",
+      "name": "NC85 Plymouth Rd Lot",
+      "outlined_bays": 28,
+      "path": [
+        [
+          2976.373,
+          2443.143
+        ],
+        [
+          2975.151,
+          2404.684
+        ]
+      ],
+      "source": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export?f=json&bbox=-83.70454209527217%2C42.29795904594065%2C-83.70160881165062%2C42.300279546402955&bboxSR=4326&imageSR=4326&size=640%2C640&format=png"
+    },
+    {
+      "lot": "umich-187",
+      "name": "NC85 Plymouth Rd Lot",
+      "outlined_bays": 28,
+      "path": [
+        [
+          2993.616,
+          2442.596
+        ],
+        [
+          2992.394,
+          2404.136
+        ]
+      ],
+      "source": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export?f=json&bbox=-83.70454209527217%2C42.29795904594065%2C-83.70160881165062%2C42.300279546402955&bboxSR=4326&imageSR=4326&size=640%2C640&format=png"
+    },
+    {
+      "lot": "umich-187",
+      "name": "NC85 Plymouth Rd Lot",
+      "outlined_bays": 19,
+      "path": [
+        [
+          2949.648,
+          2461.103
+        ],
+        [
+          3002.179,
+          2459.434
+        ]
+      ],
+      "source": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export?f=json&bbox=-83.70454209527217%2C42.29795904594065%2C-83.70160881165062%2C42.300279546402955&bboxSR=4326&imageSR=4326&size=640%2C640&format=png"
+    },
+    {
+      "lot": "umich-187",
+      "name": "NC85 Plymouth Rd Lot",
+      "outlined_bays": 10,
+      "path": [
+        [
+          3009.255,
+          2442.099
+        ],
+        [
+          3008.359,
+          2413.895
+        ]
+      ],
+      "source": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export?f=json&bbox=-83.70454209527217%2C42.29795904594065%2C-83.70160881165062%2C42.300279546402955&bboxSR=4326&imageSR=4326&size=640%2C640&format=png"
+    }
+  ],
+  "array_from_lot_envelope": false,
+  "planting_and_buildings_override_paint": true
+}

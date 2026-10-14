@@ -13,8 +13,9 @@ ROOT=pathlib.Path(__file__).resolve().parents[1]; OUT=ROOT/'output';OUT.mkdir(ex
 TF=Transformer.from_crs(4326,32617,always_xy=True)
 LON,LAT=-83.7382,42.2764;OX,OY=TF.transform(LON,LAT)
 COLORS={
+ 'Granite':(167,162,149),'BuffBrick':(190,174,146),'RoofCopper':(90,125,110),'Bronze':(166,132,80),
  'Foundation':(174,172,151),'NorthBrick':(149,99,77),'Terracotta':(162,77,50),'Sandstone':(190,166,133),'MetalPanel':(147,154,154),
- 'RoofGlazing':(119,157,170),'RoofMembrane':(85,91,88),'RoofGravel':(149,145,132),'RoofZinc':(132,148,153),'RoofGreen':(105,132,76),'RoofEdge':(93,103,103),'Seat':(161,169,169),'Screen':(24,35,44),
+ 'RoofShingle':(88,84,78),'RoofGlazing':(119,157,170),'RoofMembrane':(85,91,88),'RoofGravel':(149,145,132),'RoofZinc':(132,148,153),'RoofGreen':(105,132,76),'RoofEdge':(93,103,103),'Seat':(161,169,169),'Screen':(24,35,44),
  'Limestone':(207,194,166),'LightStone':(225,217,195),'Brick':(144,86,67),
  'Slate':(71,75,79),'Tile':(137,67,47),'Concrete':(197,198,193),'WhitePanel':(225,226,219),
  'Metal':(113,124,128),'Glass':(113,157,174),'DarkGlass':(59,83,91),'Frame':(64,65,64),
@@ -127,6 +128,7 @@ def pitched(p,z,rise,axis=None):
             m=extrusion(q,z,.12);h=rise*np.maximum(.001,1-abs(m.vertices[:,0 if axis=='y' else 1]-mid)/max(half,.1))
             top=m.vertices[:,2]>z+.06;m.vertices[top,2]+=h[top];ms.append(m)
     return ms
+facade_context=[]
 def facade(ms,p,z,h,levels,gothic=False,continuous=False,spacing=3.7):
     # Windows are illustrative repeated bays, not measured facade openings.
     for ring in [p.exterior]+list(p.interiors):
@@ -136,12 +138,14 @@ def facade(ms,p,z,h,levels,gothic=False,continuous=False,spacing=3.7):
             if length<3.7:continue
             u=v/length;n=np.array([u[1],-u[0]])
             for k in range(max(1,int(levels))):
-                zz=z+(k+.23)*h/max(1,levels);wh=min(h/max(1,levels)*.56,2.8)
+                zz=z+(k+.23)*h/max(1,levels);wh=min(h/max(1,levels)*.56,8.5 if gothic and levels==1 else 2.8)
                 if zz+wh>z+h-.25:continue
                 nwin=max(1,int(length/spacing));ww=min(spacing*.48,2.0)
                 if continuous:ww=length/nwin-.16
                 for j in range(nwin):
                     c=a+u*((j+.5)*length/nwin)+n*.07
+                    probe=Point(*(c+n*.22))
+                    if any(other.covers(probe) and zz+wh < top-.2 for other,top in facade_context):continue
                     pts=[(-ww/2,0),(ww/2,0),(ww/2,wh*.73),(ww*.28,wh*.92),(0,wh),(-ww*.28,wh*.92),(-ww/2,wh*.73)] if gothic else [(-ww/2,0),(ww/2,0),(ww/2,wh),(-ww/2,wh)]
                     wm=trimesh.creation.extrude_polygon(Polygon(pts),.08,engine='earcut')
                     # local window plane X/Z; thickness points away from wall.
@@ -171,6 +175,8 @@ from PIL import Image
 from types import SimpleNamespace
 from architecture_profiles import NORTH,ROSS,REFERENCES,volumes as architecture_volumes
 from campus_architecture import accents as architecture_accents,generic_roof
+from core_architecture import CORE,REFS as CORE_REFS,build_core,lurie,hipped
+BUILDING_SPECS=json.loads((ROOT/'sources/building_specs.json').read_text())
 from michigan_stadium import build_stadium,stadium_outline,field_opening
 from curation import names, ZONES, LANDMARKS, GOTHIC, HEIGHTS, HEIGHT_ESTIMATES, EXTERIOR_LEVELS, REFS, GIS, CITY_HEIGHT, BURTON, BURTON_HISTORY, TOUR
 TF=Transformer.from_crs(4326,32617,always_xy=True)
@@ -247,7 +253,7 @@ print('Preparing',len(buildings),'building layers; terrain and public mapped lan
 
 # BUILDING CACHE: regenerate when geometry inputs or building code change.
 import hashlib,pickle
-signature=hashlib.sha256(b''.join((ROOT/'scripts'/name).read_bytes()for name in ['architecture_profiles.py','campus_architecture.py','michigan_stadium.py'])+(ROOT/'sources/architecture_parts.geojson').read_bytes()+(ROOT/'scripts/curation.py').read_bytes()+(ROOT/'sources/official_base_buildings.geojson').read_bytes()+pathlib.Path(__file__).read_text().split('# LANDSCAPE')[0].encode()).hexdigest()
+signature=hashlib.sha256(b''.join((ROOT/'scripts'/name).read_bytes()for name in ['architecture_profiles.py','campus_architecture.py','michigan_stadium.py','core_architecture.py'])+(ROOT/'sources/architecture_parts.geojson').read_bytes()+(ROOT/'sources/building_specs.json').read_bytes()+(ROOT/'scripts/curation.py').read_bytes()+(ROOT/'sources/official_base_buildings.geojson').read_bytes()+pathlib.Path(__file__).read_text().split('# LANDSCAPE')[0].encode()).hexdigest()
 cache=ROOT/'tmp/building-cache.pkl';cache_signature=ROOT/'tmp/building-cache.sha';cache_rhino=ROOT/'tmp/building-cache.3dm'
 if cache.exists() and cache_signature.exists() and cache_rhino.exists() and cache_signature.read_text()==signature:
     saved=pickle.loads(cache.read_bytes());model=rh.File3dm.Read(str(cache_rhino));assert model is not None
@@ -258,6 +264,12 @@ else:
         ident,p,t=f['id'],f['poly'],f['properties'];code=f'M{j:03d}';name=f['name'];zh=f['name_zh'];zone=f['zone'];base=f['ground'];a,b,c,d=p.bounds;x,y=p.centroid.x,p.centroid.y
         original_fc=t.get('FloorCount');residential=(450<=int(ident[3:])<=684 if ident.startswith('100') and ident[3:].isdigit() else False) or any(w in name.lower() for w in ['residence','quadrangle','northwood']) or ident in {str(v) for v in range(1000040,1000067)} or ident in ['1000108','1000109','1000555','1000203']
         lev=EXTERIOR_LEVELS.get(ident,max(1,min(12,math.ceil(float(original_fc)*.65))) if original_fc else (2 if residential else 3))
+        spec=BUILDING_SPECS.get(ident,{})
+        if ident not in EXTERIOR_LEVELS and spec.get('footprint_overlap',0)>.60:
+            try:
+                tagged=int(spec.get('building:levels','0'))
+                if 1<=tagged<=25:lev=tagged
+            except (ValueError,TypeError):pass
         if name.startswith('Northwood'):lev=2
         if p.area<100 or any(w in name.lower() for w in ['storage','garage','trailer','pump','switching','helipad','mcity','m-air']):lev=1
         height=max(4.5,lev*(3.1 if residential else 3.8)+.8)
@@ -275,11 +287,16 @@ else:
                 basis='模型最高点采用学校 The University Record 所载212英尺（64.6176米）；本特利历史图书馆记载192英尺。来源存在差异，模型取212英尺，未实测核定。'
                 basis_en='Model peak follows the university Record: 212 ft / 64.6176 m. Bentley Historical Library gives 192 ft. Published sources disagree; this model uses 212 ft without a measured resolution of that discrepancy.'
         wall='Limestone' if gothic or ident in ['1000155','1000152','1000172','1000159','1000191'] else ('Brick' if residential or ident in ['1000120','1000177','1000709'] else 'LightStone')
+        if spec.get('building:material')=='brick':wall='Brick'
+        if ident in CORE:lev,height,wall,roof=CORE[ident]
         profile=(NORTH|ROSS).get(ident)
-        if not profile and zone=='north'and not residential and p.area>250 and not any(w in name.lower()for w in ['mcity','switching','chiller','power plant','support','pumping','storage','m-air','ground service']):
+        if ident not in CORE and not profile and zone=='north'and not residential and p.area>250 and not any(w in name.lower()for w in ['mcity','switching','chiller','power plant','support','pumping','storage','m-air','ground service']):
             profile=(lev,height,'NorthBrick','RoofGravel');NORTH[ident]=profile
         if profile:lev,height,wall,roof=profile
-        else:roof='Slate'if gothic else ('RoofGravel'if wall in ['Limestone','LightStone']else 'RoofMembrane')
+        elif ident not in CORE:roof='Slate'if gothic else ('RoofGravel'if wall in ['Limestone','LightStone']else 'RoofMembrane')
+        if status=='estimated':
+            basis=f'官方 GIS FloorCount 为 {original_fc if original_fc is not None else "未提供"}，不直接等同于地上层数。模型采用 {lev} 个地上层的公开资料与外观近似，局部标高和构件未经实测。'
+            basis_en=f'Official GIS FloorCount: {original_fc if original_fc is not None else "not provided"}; not equated with above-ground stories. Modeled exterior storeys: {lev}, interpreted from public map tags and facility/photo references. Local elevations and members are approximate.'
         lay=code+'_'+name.replace('/','_').replace(':','_')[:88];layer(lay,wall);ms={k:[] for k in COLORS};bodyidx=0
         info={'Building':name,'ChineseName':zh,'Code':code,'FacilityID':ident,'Units':'meters','FootprintSource':GIS,'HeightBasis':basis_en,'GroundDatum':'USGS 3DEP sampled terrain, local Z0=225m DEM datum; building pad flattened','GeometryDetail':'Public exterior approximation; no interior or surveyed facade reconstruction'}
         partition='保留官方地图中的建筑轮廓与庭院空隙；屋顶、重复窗格、檐口和地上层数为形态近似。建筑基座按公开地形采样，局部地面作平整处理。'
@@ -297,7 +314,7 @@ else:
         def gable(g,z,rise,axis=None,mat=roof):
             for q in polygons(g):ms[mat].extend(pitched(q,base+z,rise,axis))
         def block(xx0,yy0,z,sx,sy,hh,mat=wall):ms[mat].append(boxmesh(xx0,yy0,base+z,sx,sy,hh))
-        detail_record={}
+        detail_record={};facade_context=[]
         if ident!='1000711':
             for q in polygons(segmentize(p,5)):
                 support=extrusion(q,base-1.5,1.51);bottom=support.vertices[:,2]<base-.7
@@ -311,21 +328,22 @@ else:
             partition='方形石灰岩塔身、36.576米标高的钟室底层、开敞钟室与收分塔冠；模型峰值采用212英尺。学校资料另有192英尺记载，差异未实测核定；各段构造与窗位为近似。'
             partition_en='Square limestone shaft, open belfry above its published 120 ft floor and a stepped crown. Model peak uses 212 ft; an official historical source gives 192 ft. Segment dimensions and facade bays are approximate.'
         elif ident=='1000394':
-            # Open tapered concrete piers and separated belfry volumes.
-            for dx,dy in [(-.27,-.28),(-.27,.28),(.29,-.28),(.29,.28)]:
-                ww=(c-a)*.16;dd=(d-b)*.18;cx=x+dx*(c-a);cy=y+dy*(d-b)
-                m=boxmesh(cx,cy,base,ww,dd,height-2.2);top=m.vertices[:,2]>base+height/2;m.vertices[top,0]-=dx*1.5;m.vertices[top,1]-=dy*1.0;ms['Concrete'].append(m)
-            for zz in [12,29,height-8]:block(x,y,zz,(c-a)*.76,(d-b)*.8,1.1,'Concrete')
-            upper=box(x-(c-a)*.4,y-(d-b)*.4,x+(c-a)*.4,y+(d-b)*.4);body(upper.difference(upper.buffer(-1.3)),height-7,4.8,'Concrete',False);flat(upper,height-.12,'Metal')
-            partition='开敞的收分混凝土塔柱、横梁与独立钟室体块；采用安娜堡市2009年清单中的165英尺估算值（50.292米），构件位置与局部尺寸为示意。'
-            partition_en='Open tapered concrete piers, cross-beams and separated belfry volumes. Overall 165 ft / 50.292 m follows the city’s 2009 estimate; member sizes and positions are illustrative.'
+            detail_record=lurie(ms,p,base,height,SimpleNamespace(**globals()))
+            partition='砖砌塔身、错落塔柱、开放钟架、悬挂声学板、演奏室平台、60枚简化钟体和铜质四坡屋顶；塔高保留市政历史估算，局部尺寸依据公开照片作近似。'
+            partition_en='Brick shaft and stepped piers, open bell cage, suspended acoustic blades, flared playing-cabin platform, 60 simplified bells and copper hip cap. Overall height retains the historical city estimate; members follow public-photo approximations.'
+            src=detail_record['reference']
+        elif ident in CORE:
+            detail_record=build_core(ms,p,base,ident,body,SimpleNamespace(**globals()))
+            partition='依据学校、图书馆与建筑项目外观资料，分别重建翼楼、屋顶、柱廊、庭院及立面；保留官方范围，层高与局部构件仍为近似。'
+            partition_en='Individual wings, roof ranges, porticoes, courtyards and facades rebuilt from university/library/project exterior references; official footprint retained, with estimated section elevations and members.'
+            src=detail_record['reference']
         elif ident=='1000711':
             detail_record=build_stadium(ms,p,base,f['parts'],body,SimpleNamespace(**globals()))
             partition='下沉式碗形看台、44组通道、灰色座席、东西包厢楼、南北视频屏和沿实际场地长轴的比赛标线；保留官方轮廓，场地为360×160英尺。剖面、楼层和构件尺寸为形态近似。'
             partition_en='Sunken bowl with gray seating, 44 aisle divisions, mapped east/west premium buildings, north/south video boards and field-aligned markings. Official footprint; 360 × 160 ft playing field. Section heights, seating bands and members are approximate exterior interpretations.'
             src=detail_record['reference']
         elif profile:
-            volumes=architecture_volumes(ident,p,f['parts'])
+            volumes=architecture_volumes(ident,p,f['parts']);facade_context=[(q,base+hh)for q,hh,n,mat,roofmat in volumes]
             for q,hh,n,mat,roofmat in volumes:body(q,0,hh,mat,True,levels=n,arch=False,cont=mat in ['Glass','MetalPanel']or ident in ['1005188','1005370'])
             detail_record=architecture_accents(ms,p,base,ident,volumes,SimpleNamespace(**globals()))
             partition='保留官方建筑范围与庭院，重新划分高低翼楼、门廊、中庭和屋顶，按各楼特点表达砖、陶板、石材、金属和玻璃；局部分界、外部层数、构件和标高为公开资料基础上的近似。'
@@ -377,10 +395,11 @@ else:
             partition='按映射轮廓区分高低翼楼、玻璃公共空间、退台与屋顶机房；局部体块分界、地上层数、幕墙模数及高度为估算。';partition_en='Mapped irregular footprint divided into approximate high/low wings, glazed communal spaces, setbacks and rooftop plant. Segment boundaries, curtain-wall modules and heights are estimated.'
             if ident=='1005440':
                 partition+='卡恩医疗楼已于2025年开放；地上12层依据项目资料，官方GIS仍使用原工程名称。';partition_en+=' Kahn Pavilion opened in 2025; project sources document 12 storeys while GIS retains its former project name.';src=REFS[ident]
-        elif gothic or name.startswith('Northwood') or ident=='1000709':
-            rise=min(4.8,height*.24);body(p,0,height-rise,levels=lev,arch=gothic);gable(p,height-rise,rise)
+        elif gothic or name.startswith('Northwood') or ident=='1000709' or spec.get('roof:shape') in ['hipped','gabled','saltbox','quadruple_saltbox']:
+            rise=min(4.8,height*.24);body(p,0,height-rise,levels=lev,arch=gothic)
+            hipped(ms,p,base+height-rise,rise,roof if roof=='Slate'else ('Metal'if ident=='1000709'else 'RoofShingle'),SimpleNamespace(**globals()))
         else:
-            roof_allowance=1.32 if p.area>1800 else (.54 if p.area>250 else .16)
+            roof_allowance=.54 if p.area>250 else .16
             body(p,0,height-roof_allowance,levels=lev,arch=False,cont=(t.get('Building_Type')=='PARK'))
             generic_roof(ms,p,base+height-roof_allowance,roof,SimpleNamespace(**globals()))
         for k,(mat,parts) in enumerate(ms.items()):
@@ -388,7 +407,7 @@ else:
         for q in polygons(p):
             crv=rh.PolylineCurve([rh.Point3d(float(x0),float(y0),base) for x0,y0 in q.exterior.coords]);model.Objects.AddCurve(crv,attr(code+'_PLAN',lay,wall,info))
         meshes=[o['mesh'] for o in objects if layer_map[o['name']]['layer']==lay];actual_top=max(m.bounds[1,2] for m in meshes);actual_bottom=min(m.bounds[0,2] for m in meshes)
-        r={'code':code,'facility_id':ident,'name':name,'name_zh':zh,'official_name':t.get('ObjectName'),'layer':lay,'zone':zone,'landmark':ident in LANDMARKS,'height':round(float(actual_top-base),4),'height_status':status,'levels':lev,'gis_floor_count':original_fc,'area':round(p.area,2),'width':round(c-a,2),'depth':round(d-b,2),'center':[round(x,3),round(y,3)],'ground_m':round(base,3),'peak_m':round(float(actual_top),3),'bottom_m':round(float(actual_bottom),3),'basis':basis,'basis_en':basis_en,'partition':partition,'partition_en':partition_en,'source':src,'footprint_source':GIS,'architecture_reference':REFS.get(ident,TOUR if ident in LANDMARKS else None),'short':name,'short_zh':zh,'aliases_zh':[],'construction_status':t.get('Status'),'architecture_detail':detail_record,'ground_contact':'bowl perimeter'if ident=='1000711'else 'flat grade pad'}
+        r={'code':code,'facility_id':ident,'name':name,'name_zh':zh,'official_name':t.get('ObjectName'),'layer':lay,'zone':zone,'landmark':ident in LANDMARKS,'height':round(float(actual_top-base),4),'height_status':status,'levels':lev,'gis_floor_count':original_fc,'area':round(p.area,2),'width':round(c-a,2),'depth':round(d-b,2),'center':[round(x,3),round(y,3)],'ground_m':round(base,3),'peak_m':round(float(actual_top),3),'bottom_m':round(float(actual_bottom),3),'basis':basis,'basis_en':basis_en,'partition':partition,'partition_en':partition_en,'source':src,'footprint_source':GIS,'architecture_reference':REFS.get(ident,TOUR if ident in LANDMARKS else None),'short':name,'short_zh':zh,'aliases_zh':[],'construction_status':t.get('Status'),'architecture_detail':{**detail_record,'mapped_exterior_spec':spec,'automatic_rooftop_boxes':False},'ground_contact':'bowl perimeter'if ident=='1000711'else 'flat grade pad'}
         if ident in HEIGHTS:assert abs(r['height']-HEIGHTS[ident][0])<.01,(ident,r['height'],HEIGHTS[ident][0])
         records.append(r);f['record']=r
         if j%75==0:print('Buildings',j,flush=True)
@@ -431,7 +450,11 @@ for group,label in [(parking,'parking'),(sidewalks,'sidewalks'),(surfaces,'surfa
         p,t=f['poly'],f['properties'];g=p.difference(footprints).difference(roadarea)
         if g.is_empty:continue
         material=t.get('Material') or '';use=t.get('LandUse') or ''
-        if use=='Wall':env(g,.13,1.0,'LightStone');continue
+        detail=t.get('FurtherDesc')or''
+        if detail=='Public Art - Block M':env(g,.203,.014,'Bronze');continue
+        if use=='Wall':
+            hh=.48 if detail in ['Bench','Seat Wall']else(.15 if 'Curb'in detail else 1.0)
+            env(g,.13,hh,'LightStone');continue
         if material in ['Grass','Native Grass Mix','Trees'] or use in ['Lawn','Meadow','Woodlot','Golf, Tee Box']:mat='Grass'
         elif material in ['Wood Mulch','Flowers'] or use.startswith('Bed'):mat='Garden'
         elif material=='Water' or use.startswith('Pond'):mat='Water'
@@ -442,6 +465,25 @@ for group,label in [(parking,'parking'),(sidewalks,'sidewalks'),(surfaces,'surfa
         elif material=='Sand':mat='Sand'
         else:mat='Walk'
         env(g,.12,.07,mat)
+from parking_detail import parking_detail
+parking_green=unary_union([f['poly']for f in surfaces if (f['properties'].get('Material')or'')in ['Grass','Native Grass Mix','Trees','Wood Mulch','Flowers']or(f['properties'].get('LandUse')or'').startswith(('Lawn','Meadow','Bed','Woodlot'))])
+parking_paint=parking_detail(ROOT,scope,footprints,parking_green)
+env(parking_paint,.23,.014,'Marking');landscape_counts['parking_paint']='Explicit satellite row paths and observed dividers; current buildings and planting override paint.'
+# Fine outdoor details use actual GIS placement. Member heights are approximate.
+diag_flags=[f for f in surfaces if f['properties'].get('FurtherDesc')=='Public Art - Central Campus Flagpole']
+for f in diag_flags:
+    c0=f['poly'].centroid;z=float(ground(c0.x,c0.y));eg['MetalPanel'].append(cylinder((c0.x,c0.y,z+.1),(c0.x,c0.y,z+17.5),.075,8))
+for f in surfaces:
+    if f['properties'].get('LandUse')!='Parking, Bike' or not(-230<f['poly'].centroid.x<240 and -170<f['poly'].centroid.y<240):continue
+    q=f['poly'].buffer(-.7)
+    if q.is_empty:continue
+    c0=q.representative_point()
+    for dx in [-2.2,-1.1,0,1.1,2.2]:
+        x0,y0=c0.x+dx,c0.y
+        if not q.contains(Point(x0,y0)):continue
+        z=float(ground(x0,y0))
+        for xx in [x0-.33,x0+.33]:eg['Furniture'].append(cylinder((xx,y0,z+.1),(xx,y0,z+.90),.035,5))
+        eg['Furniture'].append(cylinder((x0-.33,y0,z+.90),(x0+.33,y0,z+.90),.035,5))
 for f in water:env(f['poly'].difference(footprints),.10,.035,'Water')
 # Native sports markings retain their georeferenced shapes.
 markings=read_features('athletic_markings')

@@ -20,8 +20,15 @@ Public data snapshot: 12 October 2026. All measurements in the model are meters.
 
 University map layers are those explicitly published by its web application. Paginated layers were fetched by object ID in batches and checked against the complete returned ID list. `retrieval_manifest.json` records complete tree, sidewalk and campus-surface queries. Public editor identities were removed from snapshots.
 
-Ann Arbor municipal footprint-service retrieval and OSM retrieval were unavailable; neither dataset is used as a hidden height source. U-M official footprints are the model’s XY source. Above-ground facility pieces are grouped by facility number; underground-only outlines and planning-only features are omitted from raised massing and recorded separately.
+Ann Arbor municipal footprint-service retrieval was unavailable. Later public OSM snapshots supply matched building levels, roof-shape tags and selected secondary building-part edges; contradictory tags yield to specific university references, and heights remain explicitly estimated. OSM is not used as a hidden measured-height source. U-M official footprints are the model’s XY source. Above-ground facility pieces are grouped by facility number; underground-only outlines and planning-only features are omitted from raised massing and recorded separately.
 
 Official GIS floor counts may include underground, roof and mezzanine labels or multiple wings. The original field is retained, while estimated exterior storeys are separately recorded. Published heights, source conflicts and historical city estimates have distinct viewer badges and bilingual notes.
 
 Surface topology cleanup removes tiny sliver holes; a valid 2D footprint with point-touching boundaries may be represented as adjacent closed triangular volume cells to avoid an open extrusion. All deliverable Rhino objects are read back and checked for valid geometry and closed solids/meshes.
+
+
+## Architecture review
+
+`ARCHITECTURE_REFERENCES.md` and `ARCHITECTURE_EXTENDED_REFERENCES.md` record the primary exterior images actually inspected and separate documented floor counts from visual and metric approximations. `building_specs.json` links matched public roof/storey tags to the official facility footprint. Specific photographs override generic tags (including the built five-storey Leinweber and the distinct Hatcher North stack sublevels). No automatic rooftop machinery is inferred from footprint size.
+
+All facility layers are reviewed for roof form, exterior-level interpretation and source association. Detail is strongest where current university images or published descriptions resolve the form; unreconstructed individual window modules remain approximate. No raw architectural photography is redistributed.

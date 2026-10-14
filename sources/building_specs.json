@@ -1,0 +1,2152 @@
+{
+  "1000191": {
+    "building": "university",
+    "building:levels": "4",
+    "building:material": "brick",
+    "name": "Michigan League",
+    "roof:shape": "gabled",
+    "osm_id": "way/154203580",
+    "footprint_overlap": 0.929
+  },
+  "1005324": {
+    "building": "yes",
+    "osm_id": "way/495053507",
+    "footprint_overlap": 0.972
+  },
+  "1000887": {
+    "building": "office",
+    "osm_id": "way/453538408",
+    "footprint_overlap": 0.834
+  },
+  "1000177": {
+    "building": "university",
+    "building:levels": "4",
+    "name": "Hill Auditorium",
+    "roof:shape": "quadruple_saltbox",
+    "osm_id": "way/154203557",
+    "footprint_overlap": 0.961
+  },
+  "1005024": {
+    "building": "retail",
+    "building:levels": "2",
+    "osm_id": "way/314799721",
+    "footprint_overlap": 0.921
+  },
+  "1008054": {
+    "building": "retail",
+    "building:levels": "2",
+    "name": "Roumanis Square",
+    "osm_id": "way/154203670",
+    "footprint_overlap": 0.569
+  },
+  "1005169": {
+    "building": "university",
+    "building:levels": "5",
+    "name": "Biological Sciences Building",
+    "osm_id": "way/420814614",
+    "footprint_overlap": 0.85
+  },
+  "1000837": {
+    "building": "retail",
+    "building:levels": "2",
+    "osm_id": "way/366476387",
+    "footprint_overlap": 0.822
+  },
+  "1000064": {
+    "building": "dormitory",
+    "building:levels": "5",
+    "name": "Stockwell",
+    "osm_id": "way/154232154",
+    "footprint_overlap": 0.94
+  },
+  "1005231": {
+    "building": "office",
+    "building:levels": "5",
+    "name": "The Collegian Building",
+    "osm_id": "way/154202641",
+    "footprint_overlap": 0.888
+  },
+  "1000193": {
+    "building": "university",
+    "building:levels": "4",
+    "name": "Ruthven Building",
+    "osm_id": "way/154202605",
+    "footprint_overlap": 0.962
+  },
+  "1000211": {
+    "building": "university",
+    "building:levels": "4",
+    "name": "School of Kinesiology Building",
+    "osm_id": "way/99883679",
+    "footprint_overlap": 0.984
+  },
+  "1005445": {
+    "building": "university",
+    "name": "Hadley Family Recreation & Well-Being Center",
+    "osm_id": "way/1357847242",
+    "footprint_overlap": 0.829
+  },
+  "1000158": {
+    "building:levels": "4",
+    "osm_id": "way/984790881",
+    "footprint_overlap": 0.196
+  },
+  "1005451": {
+    "building": "university",
+    "building:levels": "3",
+    "name": "Central Campus Classroom Building",
+    "roof:shape": "flat",
+    "osm_id": "way/1020956721",
+    "footprint_overlap": 0.846
+  },
+  "1000830": {
+    "building": "university",
+    "building:levels": "4",
+    "name": "Argus Building I",
+    "osm_id": "way/302527802",
+    "footprint_overlap": 0.895
+  },
+  "1000222": {
+    "building": "university",
+    "building:levels": "2",
+    "name": "Michigan News Building",
+    "roof:shape": "flat",
+    "osm_id": "way/154232140",
+    "footprint_overlap": 0.734
+  },
+  "1000051": {
+    "building": "dormitory",
+    "building:levels": "3",
+    "name": "Betsy\u00a0Barbour Residence",
+    "roof:shape": "hipped",
+    "osm_id": "way/154203645",
+    "footprint_overlap": 0.882
+  },
+  "1000189": {
+    "building:levels": "5",
+    "osm_id": "way/984790870",
+    "footprint_overlap": 0.98
+  },
+  "1005619": {
+    "building": "house",
+    "building:levels": "2",
+    "roof:shape": "gabled",
+    "osm_id": "way/505916198",
+    "footprint_overlap": 0.688
+  },
+  "1000105": {
+    "building": "university",
+    "building:levels": "2",
+    "name": "Stanford\u00a0Lipsey Student Publications Building",
+    "roof:shape": "gabled",
+    "osm_id": "way/154232157",
+    "footprint_overlap": 0.897
+  },
+  "1005413": {
+    "building": "university",
+    "building:levels": "2",
+    "name": "Trotter Multicultural Center",
+    "osm_id": "way/590012064",
+    "footprint_overlap": 0.874
+  },
+  "1000197": {
+    "building": "university",
+    "building:levels": "4",
+    "name": "Mason Hall",
+    "roof:shape": "flat",
+    "osm_id": "way/300676079",
+    "footprint_overlap": 0.971
+  },
+  "1005628": {
+    "building": "house",
+    "building:levels": "2",
+    "roof:shape": "gabled",
+    "osm_id": "way/442872440",
+    "footprint_overlap": 0.676
+  },
+  "1000062": {
+    "building": "dormitory",
+    "building:levels": "5",
+    "name": "Helen Newberry Residence",
+    "osm_id": "way/154202651",
+    "footprint_overlap": 0.964
+  },
+  "1005626": {
+    "building": "house",
+    "building:levels": "2",
+    "osm_id": "way/505916200",
+    "footprint_overlap": 0.705
+  },
+  "1005629": {
+    "building": "house",
+    "building:levels": "2",
+    "roof:shape": "gabled",
+    "osm_id": "way/512618990",
+    "footprint_overlap": 0.712
+  },
+  "1005606": {
+    "building": "house",
+    "building:levels": "2",
+    "roof:shape": "gabled",
+    "osm_id": "way/512618991",
+    "footprint_overlap": 0.879
+  },
+  "1000145": {
+    "building": "university",
+    "building:levels": "6",
+    "name": "Institute for Social Research",
+    "osm_id": "way/154232156",
+    "footprint_overlap": 0.893
+  },
+  "1000178": {
+    "building": "university",
+    "name": "Kelsey Museum of Archaeology",
+    "osm_id": "way/154202607",
+    "footprint_overlap": 0.919
+  },
+  "1005603": {
+    "building": "house",
+    "building:levels": "2",
+    "osm_id": "way/505916205",
+    "footprint_overlap": 0.689
+  },
+  "1000152": {
+    "building": "university",
+    "building:levels": "5",
+    "name": "Angell Hall",
+    "roof:shape": "flat",
+    "osm_id": "way/300676078",
+    "footprint_overlap": 0.746
+  },
+  "1005327": {
+    "building": "house",
+    "osm_id": "way/482763992",
+    "footprint_overlap": 0.796
+  },
+  "1005604": {
+    "building": "apartments",
+    "building:levels": "2",
+    "osm_id": "way/505916208",
+    "footprint_overlap": 0.886
+  },
+  "1000165": {
+    "building": "university",
+    "building:levels": "2",
+    "name": "Weiser Hall",
+    "roof:shape": "flat",
+    "osm_id": "way/249659008",
+    "footprint_overlap": 0.535
+  },
+  "1005517": {
+    "building": "university",
+    "building:levels": "5",
+    "name": "Randall Lab",
+    "osm_id": "way/154202689",
+    "footprint_overlap": 0.837
+  },
+  "1005567": {
+    "building": "apartments",
+    "building:levels": "3",
+    "name": "Carriage House",
+    "roof:shape": "double_saltbox",
+    "osm_id": "way/459925829",
+    "footprint_overlap": 0.934
+  },
+  "1000175": {
+    "building": "university",
+    "building:levels": "8",
+    "name": "Haven Hall",
+    "roof:shape": "flat",
+    "osm_id": "way/300676080",
+    "footprint_overlap": 0.951
+  },
+  "1000185": {
+    "building": "university",
+    "building:levels": "9",
+    "name": "Hatcher Graduate Library",
+    "osm_id": "way/99883675",
+    "footprint_overlap": 0.967
+  },
+  "1000150": {
+    "building": "university",
+    "building:levels": "6",
+    "name": "Literature Science And The Arts",
+    "osm_id": "way/154203686",
+    "footprint_overlap": 0.946
+  },
+  "1000252": {
+    "building": "yes",
+    "name": "Forest\u00a0Avenue Switching Station",
+    "osm_id": "way/442872454",
+    "footprint_overlap": 0.805
+  },
+  "1000181": {
+    "building:levels": "8",
+    "osm_id": "way/992531140",
+    "footprint_overlap": 0.789
+  },
+  "1000257": {
+    "building": "yes",
+    "name": "Church St. Structure",
+    "osm_id": "way/97181956",
+    "footprint_overlap": 0.969
+  },
+  "1000167": {
+    "building": "university",
+    "building:levels": "4",
+    "name": "West Hall",
+    "osm_id": "way/99883661",
+    "footprint_overlap": 0.949
+  },
+  "1000166": {
+    "building": "university",
+    "building:levels": "4",
+    "name": "East Hall",
+    "roof:shape": "flat",
+    "osm_id": "way/154203635",
+    "footprint_overlap": 0.975
+  },
+  "1000255": {
+    "building": "yes",
+    "name": "Thompson Structure / UM Lot W3",
+    "osm_id": "way/382245084",
+    "footprint_overlap": 0.972
+  },
+  "1005287": {
+    "building": "university",
+    "building:levels": "2",
+    "name": "523 South\u00a0Division Building",
+    "roof:shape": "flat",
+    "osm_id": "way/382245085",
+    "footprint_overlap": 0.839
+  },
+  "1000151": {
+    "building": "university",
+    "name": "University of Michigan Museum of Art",
+    "osm_id": "way/154202613",
+    "footprint_overlap": 0.905
+  },
+  "1000227": {
+    "building": "university",
+    "building:levels": "4",
+    "name": "Shapiro Undergraduate Library",
+    "osm_id": "way/99883665",
+    "footprint_overlap": 0.939
+  },
+  "1000216": {
+    "building": "university",
+    "name": "Tappan Hall",
+    "osm_id": "way/154202660",
+    "footprint_overlap": 0.982
+  },
+  "1000159": {
+    "building": "university",
+    "building:levels": "2",
+    "name": "William L. Clements Library",
+    "osm_id": "way/99883671",
+    "footprint_overlap": 0.883
+  },
+  "1000203": {
+    "building": "university",
+    "building:levels": "3",
+    "name": "President's Residence",
+    "roof:shape": "quadruple_saltbox",
+    "osm_id": "way/154202652",
+    "footprint_overlap": 0.85
+  },
+  "1000120": {
+    "building": "university",
+    "building:levels": "7",
+    "height": "15",
+    "name": "Michigan Union",
+    "osm_id": "way/154203582",
+    "footprint_overlap": 0.925
+  },
+  "1000879": {
+    "building": "university",
+    "osm_id": "way/499534403",
+    "footprint_overlap": 0.811
+  },
+  "1000066": {
+    "building:levels": "5",
+    "osm_id": "way/986839486",
+    "footprint_overlap": 0.663
+  },
+  "1005369": {
+    "building": "residential",
+    "building:levels": "7",
+    "name": "Munger Graduate Residences",
+    "roof:shape": "flat",
+    "osm_id": "way/382245086",
+    "footprint_overlap": 0.919
+  },
+  "1000890": {
+    "building": "university",
+    "building:levels": "3",
+    "name": "Perry Building",
+    "osm_id": "way/154202608",
+    "footprint_overlap": 0.949
+  },
+  "1005081": {
+    "building": "commercial",
+    "osm_id": "way/512092374",
+    "footprint_overlap": 0.64
+  },
+  "1000108": {
+    "building": "university",
+    "building:levels": "3",
+    "height": "12",
+    "name": "Lawyer's Club",
+    "roof:shape": "gabled",
+    "osm_id": "way/154203671",
+    "footprint_overlap": 0.929
+  },
+  "1000858": {
+    "building": "university",
+    "building:levels": "3",
+    "name": "Division of Public Safety and Security",
+    "roof:shape": "flat",
+    "osm_id": "way/443277789",
+    "footprint_overlap": 0.877
+  },
+  "1000219": {
+    "building": "university",
+    "building:levels": "5",
+    "name": "School of Social Work",
+    "osm_id": "way/154203581",
+    "footprint_overlap": 0.871
+  },
+  "1000052": {
+    "building": "dormitory",
+    "building:levels": "3",
+    "name": "Martha Cook",
+    "roof:shape": "gabled",
+    "osm_id": "way/154203688",
+    "footprint_overlap": 0.91
+  },
+  "1000109": {
+    "building:levels": "3",
+    "height": "12",
+    "roof:shape": "gabled",
+    "osm_id": "way/1021029491",
+    "footprint_overlap": 0.933
+  },
+  "1005049": {
+    "building": "parking",
+    "name": "Forest Parking Structure",
+    "osm_id": "way/30839268",
+    "footprint_overlap": 0.9
+  },
+  "1000184": {
+    "building": "university",
+    "height": "15",
+    "name": "Cook Legal Research Library",
+    "osm_id": "way/154202681",
+    "footprint_overlap": 0.667
+  },
+  "1000063": {
+    "building": "dormitory",
+    "building:levels": "10",
+    "name": "South Quadrangle",
+    "roof:shape": "flat",
+    "osm_id": "way/154232151",
+    "footprint_overlap": 0.97
+  },
+  "1000154": {
+    "building": "university",
+    "building:levels": "5",
+    "name": "Lorch Hall",
+    "osm_id": "way/154203584",
+    "footprint_overlap": 0.812
+  },
+  "1005568": {
+    "building": "university",
+    "building:levels": "1",
+    "osm_id": "way/1358242372",
+    "footprint_overlap": 0.865
+  },
+  "1000179": {
+    "building": "university",
+    "building:levels": "4",
+    "height": "15",
+    "name": "Hutchins Hall",
+    "osm_id": "way/154203693",
+    "footprint_overlap": 0.617
+  },
+  "1005571": {
+    "building": "yes",
+    "osm_id": "way/1358242375",
+    "footprint_overlap": 0.602
+  },
+  "1005570": {
+    "building": "university",
+    "osm_id": "way/1358242373",
+    "footprint_overlap": 0.887
+  },
+  "1005240": {
+    "building": "yes",
+    "name": "Towsley Chidren House",
+    "osm_id": "way/487058610",
+    "footprint_overlap": 0.905
+  },
+  "1005577": {
+    "building": "house",
+    "building:levels": "2",
+    "roof:shape": "gabled",
+    "osm_id": "way/460625821",
+    "footprint_overlap": 0.775
+  },
+  "1005578": {
+    "building": "house",
+    "building:levels": "2",
+    "roof:shape": "gabled",
+    "osm_id": "way/485228242",
+    "footprint_overlap": 0.808
+  },
+  "1005370": {
+    "building": "university",
+    "building:levels": "6",
+    "name": "Blau Hall",
+    "roof:shape": "flat",
+    "osm_id": "way/154202662",
+    "footprint_overlap": 0.876
+  },
+  "1005235": {
+    "building": "university",
+    "building:levels": "4",
+    "name": "Jeffries Hall",
+    "roof:shape": "gabled",
+    "osm_id": "way/249659161",
+    "footprint_overlap": 0.929
+  },
+  "1000137": {
+    "building": "university",
+    "name": "Kresge Business Admin Library",
+    "osm_id": "way/154202674",
+    "footprint_overlap": 0.893
+  },
+  "1000139": {
+    "building": "dormitory",
+    "building:levels": "8",
+    "name": "Business Administration Executive Dorm",
+    "roof:shape": "flat",
+    "osm_id": "way/303632984",
+    "footprint_overlap": 0.963
+  },
+  "1005188": {
+    "building": "university",
+    "name": "Ross School of Business Building",
+    "osm_id": "way/154232149",
+    "footprint_overlap": 0.844
+  },
+  "1005101": {
+    "building": "university",
+    "building:levels": "5",
+    "name": "Gerald R. Ford School of Public Policy - Weill Hall",
+    "osm_id": "way/154202653",
+    "footprint_overlap": 0.88
+  },
+  "1000135": {
+    "building": "university",
+    "building:levels": "5",
+    "name": "Wyly Hall",
+    "roof:shape": "flat",
+    "osm_id": "way/154202673",
+    "footprint_overlap": 0.83
+  },
+  "1000253": {
+    "building": "yes",
+    "name": "Hill Structure",
+    "osm_id": "way/97181955",
+    "footprint_overlap": 0.954
+  },
+  "1000710": {
+    "building": "university",
+    "building:levels": "2",
+    "name": "Sports Coliseum",
+    "osm_id": "way/190113034",
+    "footprint_overlap": 0.973
+  },
+  "1008098": {
+    "building": "detached",
+    "building:levels": "3",
+    "name": "Institute of Religion",
+    "roof:shape": "gabled",
+    "osm_id": "way/473398698",
+    "footprint_overlap": 0.802
+  },
+  "1000057": {
+    "building": "dormitory",
+    "building:levels": "2",
+    "name": "Henderson House",
+    "roof:shape": "gabled",
+    "osm_id": "way/501503472",
+    "footprint_overlap": 0.819
+  },
+  "1005507": {
+    "building": "university",
+    "building:levels": "2",
+    "name": "Ginsberg Center",
+    "osm_id": "way/1362424667",
+    "footprint_overlap": 0.798
+  },
+  "1005615": {
+    "building": "dormitory",
+    "name": "Wolverine Village Building 2",
+    "osm_id": "way/1495290791",
+    "footprint_overlap": 0.959
+  },
+  "1000799": {
+    "building": "university",
+    "name": "Buhr Building",
+    "osm_id": "way/302527801",
+    "footprint_overlap": 0.935
+  },
+  "1005617": {
+    "building": "dormitory",
+    "name": "Wolverine Village Building 4",
+    "osm_id": "way/1429018506",
+    "footprint_overlap": 0.88
+  },
+  "1005616": {
+    "building": "dormitory",
+    "name": "Wolverine Village Building 3",
+    "osm_id": "way/1429018504",
+    "footprint_overlap": 0.918
+  },
+  "1000055": {
+    "building": "dormitory",
+    "building:levels": "4",
+    "name": "Fletcher Hall",
+    "roof:shape": "flat",
+    "osm_id": "way/302431407",
+    "footprint_overlap": 0.951
+  },
+  "1005618": {
+    "building": "dormitory",
+    "name": "Wolverine Village Building 5",
+    "osm_id": "way/1429018505",
+    "footprint_overlap": 0.964
+  },
+  "1000880": {
+    "building": "university",
+    "name": "Boyer Building",
+    "osm_id": "way/302304851",
+    "footprint_overlap": 0.944
+  },
+  "1000642": {
+    "building": "apartments",
+    "osm_id": "way/303368755",
+    "footprint_overlap": 0.896
+  },
+  "1000641": {
+    "building": "apartments",
+    "osm_id": "way/303368753",
+    "footprint_overlap": 0.848
+  },
+  "1000643": {
+    "building": "apartments",
+    "osm_id": "way/303368752",
+    "footprint_overlap": 0.884
+  },
+  "1000651": {
+    "building": "apartments",
+    "osm_id": "way/303368781",
+    "footprint_overlap": 0.934
+  },
+  "1000640": {
+    "building": "apartments",
+    "osm_id": "way/303368750",
+    "footprint_overlap": 0.898
+  },
+  "1005272": {
+    "building": "parking",
+    "name": "NC100",
+    "osm_id": "way/192429436",
+    "footprint_overlap": 0.98
+  },
+  "1000650": {
+    "building": "apartments",
+    "osm_id": "way/303368784",
+    "footprint_overlap": 0.967
+  },
+  "1000652": {
+    "building": "apartments",
+    "osm_id": "way/303368779",
+    "footprint_overlap": 0.944
+  },
+  "1000644": {
+    "building": "apartments",
+    "osm_id": "way/303368751",
+    "footprint_overlap": 0.966
+  },
+  "1000639": {
+    "building": "apartments",
+    "osm_id": "way/303368754",
+    "footprint_overlap": 0.998
+  },
+  "1000649": {
+    "building": "apartments",
+    "osm_id": "way/303368782",
+    "footprint_overlap": 0.943
+  },
+  "1005018": {
+    "building": "kindergarten",
+    "building:levels": "1",
+    "name": "North Campus Children's Center",
+    "roof:shape": "gabled",
+    "osm_id": "way/366478252",
+    "footprint_overlap": 0.894
+  },
+  "1000653": {
+    "building": "apartments",
+    "osm_id": "way/303368778",
+    "footprint_overlap": 0.962
+  },
+  "1000648": {
+    "building": "apartments",
+    "osm_id": "way/303368783",
+    "footprint_overlap": 0.855
+  },
+  "1000647": {
+    "building": "apartments",
+    "osm_id": "way/303368772",
+    "footprint_overlap": 0.979
+  },
+  "1000646": {
+    "building": "apartments",
+    "osm_id": "way/303368756",
+    "footprint_overlap": 0.97
+  },
+  "1000645": {
+    "building": "apartments",
+    "osm_id": "way/303368759",
+    "footprint_overlap": 0.92
+  },
+  "1005277": {
+    "building:levels": "1",
+    "name": "NCRC Building\u00a0200",
+    "osm_id": "way/292341753",
+    "footprint_overlap": 0.94
+  },
+  "1000638": {
+    "building": "apartments",
+    "osm_id": "way/303368758",
+    "footprint_overlap": 0.873
+  },
+  "1000654": {
+    "building": "apartments",
+    "osm_id": "way/303368777",
+    "footprint_overlap": 0.892
+  },
+  "1000655": {
+    "building": "apartments",
+    "osm_id": "way/303368773",
+    "footprint_overlap": 0.909
+  },
+  "1000656": {
+    "building": "apartments",
+    "osm_id": "way/303368760",
+    "footprint_overlap": 0.857
+  },
+  "1005276": {
+    "building:levels": "1",
+    "name": "NCRC Building\u00a0100",
+    "osm_id": "way/292341752",
+    "footprint_overlap": 0.89
+  },
+  "1000637": {
+    "building": "apartments",
+    "osm_id": "way/303368757",
+    "footprint_overlap": 0.953
+  },
+  "1000657": {
+    "building": "apartments",
+    "osm_id": "way/303368762",
+    "footprint_overlap": 0.962
+  },
+  "1000634": {
+    "building": "apartments",
+    "osm_id": "way/303368764",
+    "footprint_overlap": 0.919
+  },
+  "1000636": {
+    "building": "apartments",
+    "osm_id": "way/303368767",
+    "footprint_overlap": 0.841
+  },
+  "1000635": {
+    "building": "apartments",
+    "osm_id": "way/303368765",
+    "footprint_overlap": 0.939
+  },
+  "1000409": {
+    "building": "fire_station",
+    "name": "Ann Arbor Fire Department Station 5",
+    "osm_id": "way/298600690",
+    "footprint_overlap": 0.914
+  },
+  "1000633": {
+    "building": "apartments",
+    "osm_id": "way/303368763",
+    "footprint_overlap": 0.917
+  },
+  "1005278": {
+    "building:levels": "1",
+    "name": "NCRC Building\u00a0300",
+    "osm_id": "way/292341751",
+    "footprint_overlap": 0.964
+  },
+  "1000658": {
+    "building": "apartments",
+    "osm_id": "way/303368776",
+    "footprint_overlap": 0.964
+  },
+  "1000632": {
+    "building": "apartments",
+    "osm_id": "way/303368770",
+    "footprint_overlap": 0.999
+  },
+  "1000631": {
+    "building": "apartments",
+    "osm_id": "way/303368771",
+    "footprint_overlap": 0.919
+  },
+  "1000630": {
+    "building": "apartments",
+    "osm_id": "way/303368769",
+    "footprint_overlap": 0.841
+  },
+  "1005279": {
+    "building:levels": "1",
+    "name": "NCRC Building\u00a0400",
+    "osm_id": "way/292341750",
+    "footprint_overlap": 0.994
+  },
+  "1000659": {
+    "building": "apartments",
+    "osm_id": "way/303368761",
+    "footprint_overlap": 0.954
+  },
+  "1000629": {
+    "building": "apartments",
+    "osm_id": "way/303370600",
+    "footprint_overlap": 0.836
+  },
+  "1000628": {
+    "building": "apartments",
+    "osm_id": "way/303370602",
+    "footprint_overlap": 0.888
+  },
+  "1000660": {
+    "building": "apartments",
+    "osm_id": "way/303370601",
+    "footprint_overlap": 0.984
+  },
+  "1000625": {
+    "building": "apartments",
+    "osm_id": "way/303474559",
+    "footprint_overlap": 0.939
+  },
+  "1005282": {
+    "building:levels": "4",
+    "name": "NCRC Building\u00a0550",
+    "osm_id": "way/292341749",
+    "footprint_overlap": 0.974
+  },
+  "1005281": {
+    "building:levels": "4",
+    "name": "NCRC Building\u00a0520",
+    "osm_id": "way/292341748",
+    "footprint_overlap": 0.869
+  },
+  "1000626": {
+    "building": "apartments",
+    "osm_id": "way/303474558",
+    "footprint_overlap": 0.951
+  },
+  "1000627": {
+    "building": "apartments",
+    "osm_id": "way/303370603",
+    "footprint_overlap": 0.868
+  },
+  "1000624": {
+    "building": "apartments",
+    "osm_id": "way/303474560",
+    "footprint_overlap": 0.985
+  },
+  "1000661": {
+    "building": "apartments",
+    "osm_id": "way/303474556",
+    "footprint_overlap": 0.951
+  },
+  "1000622": {
+    "building": "apartments",
+    "osm_id": "way/303474563",
+    "footprint_overlap": 0.854
+  },
+  "1000623": {
+    "building": "apartments",
+    "osm_id": "way/303474561",
+    "footprint_overlap": 0.974
+  },
+  "1000662": {
+    "building": "apartments",
+    "osm_id": "way/303474557",
+    "footprint_overlap": 0.872
+  },
+  "1000621": {
+    "building": "apartments",
+    "osm_id": "way/303474565",
+    "footprint_overlap": 0.882
+  },
+  "1000663": {
+    "building": "apartments",
+    "osm_id": "way/303474574",
+    "footprint_overlap": 0.948
+  },
+  "1000620": {
+    "building": "apartments",
+    "osm_id": "way/303474566",
+    "footprint_overlap": 0.957
+  },
+  "1000619": {
+    "building": "apartments",
+    "osm_id": "way/303474568",
+    "footprint_overlap": 0.986
+  },
+  "1000664": {
+    "building": "apartments",
+    "osm_id": "way/303474578",
+    "footprint_overlap": 0.954
+  },
+  "1000464": {
+    "building": "apartments",
+    "osm_id": "way/298600700",
+    "footprint_overlap": 0.97
+  },
+  "1000617": {
+    "building": "apartments",
+    "osm_id": "way/303474572",
+    "footprint_overlap": 0.878
+  },
+  "1005273": {
+    "name": "NCRC Central Energy Plant",
+    "osm_id": "way/292341747",
+    "footprint_overlap": 0.944
+  },
+  "1000618": {
+    "building": "apartments",
+    "osm_id": "way/303474571",
+    "footprint_overlap": 0.95
+  },
+  "1000667": {
+    "building": "apartments",
+    "osm_id": "way/303474583",
+    "footprint_overlap": 0.965
+  },
+  "1000666": {
+    "building": "apartments",
+    "osm_id": "way/303474581",
+    "footprint_overlap": 0.953
+  },
+  "1000665": {
+    "building": "apartments",
+    "osm_id": "way/303474580",
+    "footprint_overlap": 0.831
+  },
+  "1000684": {
+    "building": "yes",
+    "osm_id": "way/303474569",
+    "footprint_overlap": 0.928
+  },
+  "1000668": {
+    "building": "apartments",
+    "osm_id": "way/303474585",
+    "footprint_overlap": 0.993
+  },
+  "1000616": {
+    "building": "apartments",
+    "osm_id": "way/303474576",
+    "footprint_overlap": 0.916
+  },
+  "1000670": {
+    "building": "apartments",
+    "osm_id": "way/303474588",
+    "footprint_overlap": 0.902
+  },
+  "1000669": {
+    "building": "apartments",
+    "osm_id": "way/303474586",
+    "footprint_overlap": 0.947
+  },
+  "1000458": {
+    "building": "yes",
+    "name": "Northwood II Service Building",
+    "osm_id": "way/298600699",
+    "footprint_overlap": 0.853
+  },
+  "1000467": {
+    "building": "apartments",
+    "osm_id": "way/298600697",
+    "footprint_overlap": 0.946
+  },
+  "1000465": {
+    "building": "apartments",
+    "osm_id": "way/298600696",
+    "footprint_overlap": 0.958
+  },
+  "1000462": {
+    "building": "apartments",
+    "osm_id": "way/298600698",
+    "footprint_overlap": 0.89
+  },
+  "1000615": {
+    "building": "apartments",
+    "osm_id": "way/303474591",
+    "footprint_overlap": 0.753
+  },
+  "1000671": {
+    "building": "apartments",
+    "osm_id": "way/303474590",
+    "footprint_overlap": 0.827
+  },
+  "1000481": {
+    "building": "apartments",
+    "osm_id": "way/228374720",
+    "footprint_overlap": 0.815
+  },
+  "1000614": {
+    "building": "apartments",
+    "osm_id": "way/303474593",
+    "footprint_overlap": 0.918
+  },
+  "1000468": {
+    "building": "apartments",
+    "osm_id": "way/297185040",
+    "footprint_overlap": 0.963
+  },
+  "1000613": {
+    "building": "apartments",
+    "osm_id": "way/303474596",
+    "footprint_overlap": 0.897
+  },
+  "1000466": {
+    "building": "apartments",
+    "osm_id": "way/298600695",
+    "footprint_overlap": 0.947
+  },
+  "1000480": {
+    "building": "apartments",
+    "osm_id": "way/228374725",
+    "footprint_overlap": 0.838
+  },
+  "1000470": {
+    "building": "apartments",
+    "osm_id": "way/297185039",
+    "footprint_overlap": 0.947
+  },
+  "1000612": {
+    "building": "apartments",
+    "osm_id": "way/303474598",
+    "footprint_overlap": 0.947
+  },
+  "1005334": {
+    "building": "yes",
+    "building:levels": "1",
+    "name": "North Campus Support Facility",
+    "osm_id": "way/993303260",
+    "footprint_overlap": 0.454
+  },
+  "1000672": {
+    "building": "apartments",
+    "osm_id": "way/303474594",
+    "footprint_overlap": 0.725
+  },
+  "1000479": {
+    "building": "apartments",
+    "osm_id": "way/228374722",
+    "footprint_overlap": 0.809
+  },
+  "1000472": {
+    "building": "apartments",
+    "building:levels": "2",
+    "osm_id": "way/297185026",
+    "footprint_overlap": 0.932
+  },
+  "1000611": {
+    "building": "apartments",
+    "osm_id": "way/303474600",
+    "footprint_overlap": 0.927
+  },
+  "1000478": {
+    "building": "apartments",
+    "osm_id": "way/228374718",
+    "footprint_overlap": 0.849
+  },
+  "1000444": {
+    "building": "university",
+    "name": "Transportation Research Institute",
+    "osm_id": "way/292322284",
+    "footprint_overlap": 0.547
+  },
+  "1000610": {
+    "building": "apartments",
+    "osm_id": "way/303474599",
+    "footprint_overlap": 0.902
+  },
+  "1000673": {
+    "building": "apartments",
+    "osm_id": "way/303474602",
+    "footprint_overlap": 0.69
+  },
+  "1000459": {
+    "building": "yes",
+    "name": "Northwood II Service Building",
+    "osm_id": "way/228374723",
+    "footprint_overlap": 0.733
+  },
+  "1000675": {
+    "building": "apartments",
+    "osm_id": "way/303476058",
+    "footprint_overlap": 0.917
+  },
+  "1005381": {
+    "building": "yes",
+    "building:levels": "1",
+    "name": "Mcity (Mobility Transformation Center)",
+    "osm_id": "way/541403374",
+    "footprint_overlap": 0.89
+  },
+  "1000676": {
+    "building": "apartments",
+    "osm_id": "way/303476059",
+    "footprint_overlap": 0.866
+  },
+  "1000609": {
+    "building": "apartments",
+    "osm_id": "way/303474604",
+    "footprint_overlap": 0.87
+  },
+  "1000457": {
+    "building": "yes",
+    "name": "Northwood II Service Building",
+    "osm_id": "way/292062579",
+    "footprint_overlap": 0.927
+  },
+  "1000483": {
+    "building": "apartments",
+    "osm_id": "way/228374719",
+    "footprint_overlap": 0.912
+  },
+  "1000477": {
+    "building": "apartments",
+    "osm_id": "way/228374724",
+    "footprint_overlap": 0.848
+  },
+  "1000608": {
+    "building": "apartments",
+    "osm_id": "way/303474605",
+    "footprint_overlap": 0.976
+  },
+  "1000674": {
+    "building": "apartments",
+    "osm_id": "way/303476055",
+    "footprint_overlap": 0.938
+  },
+  "1000607": {
+    "building": "apartments",
+    "osm_id": "way/303476057",
+    "footprint_overlap": 0.925
+  },
+  "1000677": {
+    "building": "apartments",
+    "osm_id": "way/303476060",
+    "footprint_overlap": 0.943
+  },
+  "1000486": {
+    "building": "apartments",
+    "osm_id": "way/228374715",
+    "footprint_overlap": 0.928
+  },
+  "1000678": {
+    "building": "apartments",
+    "osm_id": "way/303476061",
+    "footprint_overlap": 0.879
+  },
+  "1000679": {
+    "building": "apartments",
+    "osm_id": "way/303476062",
+    "footprint_overlap": 0.79
+  },
+  "1000606": {
+    "building": "apartments",
+    "osm_id": "way/303476056",
+    "footprint_overlap": 0.795
+  },
+  "1000482": {
+    "building": "apartments",
+    "osm_id": "way/228374721",
+    "footprint_overlap": 0.788
+  },
+  "1000488": {
+    "building": "apartments",
+    "osm_id": "way/228374726",
+    "footprint_overlap": 0.845
+  },
+  "1000476": {
+    "building": "apartments",
+    "osm_id": "way/228374716",
+    "footprint_overlap": 0.881
+  },
+  "1000600": {
+    "building": "university",
+    "name": "Northwood IV Community Center",
+    "osm_id": "way/298600694",
+    "footprint_overlap": 0.748
+  },
+  "1000469": {
+    "building": "apartments",
+    "osm_id": "way/292062569",
+    "footprint_overlap": 0.855
+  },
+  "1000473": {
+    "building": "apartments",
+    "osm_id": "way/292062570",
+    "footprint_overlap": 0.789
+  },
+  "1000456": {
+    "building": "apartments",
+    "osm_id": "way/292062572",
+    "footprint_overlap": 0.839
+  },
+  "1000680": {
+    "building": "apartments",
+    "osm_id": "way/303476063",
+    "footprint_overlap": 0.938
+  },
+  "1000471": {
+    "building": "apartments",
+    "osm_id": "way/292062575",
+    "footprint_overlap": 0.967
+  },
+  "1000490": {
+    "building": "apartments",
+    "osm_id": "way/228374717",
+    "footprint_overlap": 0.86
+  },
+  "1000605": {
+    "building": "apartments",
+    "osm_id": "way/303476064",
+    "footprint_overlap": 0.984
+  },
+  "1000885": {
+    "building": "yes",
+    "osm_id": "way/1354346409",
+    "footprint_overlap": 0.896
+  },
+  "1000498": {
+    "building": "university",
+    "building:levels": "1",
+    "name": "Northwood I/II/III Community Center",
+    "roof:shape": "flat",
+    "osm_id": "way/303371322",
+    "footprint_overlap": 0.8
+  },
+  "1000602": {
+    "building": "apartments",
+    "osm_id": "way/303476071",
+    "footprint_overlap": 0.916
+  },
+  "1000603": {
+    "building": "apartments",
+    "osm_id": "way/303476070",
+    "footprint_overlap": 0.957
+  },
+  "1000604": {
+    "building": "apartments",
+    "osm_id": "way/303476068",
+    "footprint_overlap": 0.874
+  },
+  "1000681": {
+    "building": "apartments",
+    "osm_id": "way/303476066",
+    "footprint_overlap": 0.96
+  },
+  "1000891": {
+    "building": "yes",
+    "osm_id": "way/1354346410",
+    "footprint_overlap": 0.819
+  },
+  "1000455": {
+    "building": "apartments",
+    "osm_id": "way/292062574",
+    "footprint_overlap": 1.0
+  },
+  "1000460": {
+    "building": "yes",
+    "name": "Northwood II Service Building",
+    "osm_id": "way/292063615",
+    "footprint_overlap": 0.843
+  },
+  "1000601": {
+    "building": "apartments",
+    "osm_id": "way/303476072",
+    "footprint_overlap": 0.945
+  },
+  "1000682": {
+    "building": "apartments",
+    "osm_id": "way/303476067",
+    "footprint_overlap": 0.978
+  },
+  "1000683": {
+    "building": "apartments",
+    "osm_id": "way/303476069",
+    "footprint_overlap": 0.919
+  },
+  "1000453": {
+    "building": "apartments",
+    "osm_id": "way/292062573",
+    "footprint_overlap": 0.977
+  },
+  "1000484": {
+    "building": "apartments",
+    "osm_id": "way/292063616",
+    "footprint_overlap": 0.994
+  },
+  "1000491": {
+    "building": "apartments",
+    "osm_id": "way/292063617",
+    "footprint_overlap": 0.96
+  },
+  "1000454": {
+    "building": "apartments",
+    "osm_id": "way/292062577",
+    "footprint_overlap": 0.792
+  },
+  "1000475": {
+    "building": "apartments",
+    "osm_id": "way/292063624",
+    "footprint_overlap": 0.913
+  },
+  "1000487": {
+    "building": "apartments",
+    "osm_id": "way/292063621",
+    "footprint_overlap": 0.944
+  },
+  "1000485": {
+    "building": "apartments",
+    "osm_id": "way/292063623",
+    "footprint_overlap": 0.936
+  },
+  "1000399": {
+    "building": "university",
+    "building:levels": "2",
+    "name": "North Campus Administrative Complex",
+    "osm_id": "way/292320668",
+    "footprint_overlap": 0.936
+  },
+  "1000492": {
+    "building": "apartments",
+    "osm_id": "way/292063622",
+    "footprint_overlap": 0.909
+  },
+  "1000452": {
+    "building": "apartments",
+    "osm_id": "way/292062576",
+    "footprint_overlap": 0.953
+  },
+  "1000500": {
+    "building": "yes",
+    "osm_id": "way/1469661950",
+    "footprint_overlap": 0.814
+  },
+  "1000489": {
+    "building": "apartments",
+    "osm_id": "way/292063620",
+    "footprint_overlap": 0.97
+  },
+  "1000474": {
+    "building": "apartments",
+    "osm_id": "way/292063625",
+    "footprint_overlap": 0.944
+  },
+  "1000494": {
+    "building": "apartments",
+    "osm_id": "way/292063626",
+    "footprint_overlap": 0.862
+  },
+  "1000497": {
+    "building": "apartments",
+    "osm_id": "way/292063627",
+    "footprint_overlap": 0.722
+  },
+  "1000445": {
+    "building": "university",
+    "name": "Stearns Building",
+    "osm_id": "way/292064176",
+    "footprint_overlap": 0.935
+  },
+  "1000450": {
+    "building": "yes",
+    "name": "Northwood I Service Building",
+    "osm_id": "way/292062578",
+    "footprint_overlap": 1.0
+  },
+  "1000451": {
+    "building": "apartments",
+    "osm_id": "way/292062571",
+    "footprint_overlap": 0.951
+  },
+  "1000495": {
+    "building": "apartments",
+    "osm_id": "way/292063618",
+    "footprint_overlap": 0.975
+  },
+  "1000461": {
+    "building": "yes",
+    "name": "Northwood II Service Building",
+    "osm_id": "way/292063619",
+    "footprint_overlap": 0.867
+  },
+  "1000493": {
+    "building": "apartments",
+    "osm_id": "way/292063629",
+    "footprint_overlap": 0.954
+  },
+  "1000496": {
+    "building": "apartments",
+    "osm_id": "way/292063628",
+    "footprint_overlap": 0.927
+  },
+  "1002518": {
+    "building": "service",
+    "building:levels": "1",
+    "building:material": "brick",
+    "roof:shape": "flat",
+    "osm_id": "way/1076090596",
+    "footprint_overlap": 0.889
+  },
+  "1000519": {
+    "building": "dormitory",
+    "name": "Ziwet House",
+    "osm_id": "way/256664640",
+    "footprint_overlap": 0.821
+  },
+  "1005418": {
+    "building": "university",
+    "building:levels": "4",
+    "name": "Ford Motor Company Robotics Building",
+    "roof:shape": "flat",
+    "osm_id": "way/905192719",
+    "footprint_overlap": 0.953
+  },
+  "1002704": {
+    "building": "residential",
+    "osm_id": "way/831978561",
+    "footprint_overlap": 0.988
+  },
+  "1002703": {
+    "building": "residential",
+    "osm_id": "way/831978562",
+    "footprint_overlap": 1.0
+  },
+  "1000441": {
+    "building:levels": "2",
+    "osm_id": "way/1086126774",
+    "footprint_overlap": 0.161
+  },
+  "1002705": {
+    "building": "residential",
+    "osm_id": "way/831978560",
+    "footprint_overlap": 0.989
+  },
+  "1000515": {
+    "building": "dormitory",
+    "name": "Coman House",
+    "osm_id": "way/256664461",
+    "footprint_overlap": 0.45
+  },
+  "1000518": {
+    "building": "dormitory",
+    "name": "Thieme House",
+    "osm_id": "way/256664760",
+    "footprint_overlap": 0.73
+  },
+  "1002728": {
+    "building": "residential",
+    "osm_id": "way/831978566",
+    "footprint_overlap": 0.996
+  },
+  "1002727": {
+    "building": "residential",
+    "osm_id": "way/831978567",
+    "footprint_overlap": 0.931
+  },
+  "1002726": {
+    "building": "residential",
+    "osm_id": "way/831978568",
+    "footprint_overlap": 0.948
+  },
+  "1002706": {
+    "building": "residential",
+    "osm_id": "way/831978569",
+    "footprint_overlap": 0.96
+  },
+  "1000517": {
+    "building": "dormitory",
+    "name": "Cross House",
+    "osm_id": "way/256664460",
+    "footprint_overlap": 0.91
+  },
+  "1002725": {
+    "building": "residential",
+    "osm_id": "way/831978570",
+    "footprint_overlap": 0.976
+  },
+  "1000555": {
+    "building": "dormitory",
+    "building:levels": "3",
+    "name": "Bursley Hall",
+    "osm_id": "way/224112759",
+    "footprint_overlap": 0.317
+  },
+  "1000516": {
+    "building": "dormitory",
+    "building:levels": "3",
+    "name": "Conger House",
+    "osm_id": "way/256664314",
+    "footprint_overlap": 0.682
+  },
+  "1002707": {
+    "building": "residential",
+    "osm_id": "way/831978572",
+    "footprint_overlap": 1.0
+  },
+  "1002724": {
+    "building": "residential",
+    "osm_id": "way/831978571",
+    "footprint_overlap": 0.992
+  },
+  "1000426": {
+    "building": "service",
+    "roof:shape": "flat",
+    "osm_id": "way/1073711937",
+    "footprint_overlap": 0.751
+  },
+  "1000421": {
+    "building:levels": "1",
+    "name": "Wind Tunnel Laboratory",
+    "osm_id": "way/1121025357",
+    "footprint_overlap": 0.63
+  },
+  "1002722": {
+    "building": "residential",
+    "osm_id": "way/831978575",
+    "footprint_overlap": 0.933
+  },
+  "1002723": {
+    "building": "residential",
+    "osm_id": "way/831978574",
+    "footprint_overlap": 0.978
+  },
+  "1005511": {
+    "building": "yes",
+    "osm_id": "way/1358241994",
+    "footprint_overlap": 0.723
+  },
+  "1002708": {
+    "building": "residential",
+    "osm_id": "way/831978573",
+    "footprint_overlap": 0.972
+  },
+  "1000395": {
+    "building": "university",
+    "building:levels": "3",
+    "building:material": "brick",
+    "name": "Francois\u2011Xavier Bagnoud Building",
+    "roof:shape": "flat",
+    "osm_id": "way/249660520",
+    "footprint_overlap": 0.973
+  },
+  "1002719": {
+    "building": "residential",
+    "osm_id": "way/831978578",
+    "footprint_overlap": 1.0
+  },
+  "1002718": {
+    "building": "residential",
+    "osm_id": "way/831978579",
+    "footprint_overlap": 0.983
+  },
+  "1000417": {
+    "building": "university",
+    "name": "Radiation Sciences Lab #2",
+    "osm_id": "way/292060477",
+    "footprint_overlap": 0.852
+  },
+  "1000416": {
+    "building": "university",
+    "name": "Radiation Sciences Lab #1",
+    "osm_id": "way/292060478",
+    "footprint_overlap": 0.917
+  },
+  "1000407": {
+    "building": "university",
+    "building:levels": "3",
+    "name": "G.\u00a0G.\u00a0Brown Building",
+    "roof:shape": "flat",
+    "osm_id": "way/82249280",
+    "footprint_overlap": 0.965
+  },
+  "1002709": {
+    "building": "residential",
+    "osm_id": "way/831978581",
+    "footprint_overlap": 0.921
+  },
+  "1002717": {
+    "building": "residential",
+    "osm_id": "way/831978580",
+    "footprint_overlap": 0.909
+  },
+  "1000447": {
+    "building": "university",
+    "building:levels": "3",
+    "building:material": "brick",
+    "name": "Herbert\u00a0H.\u00a0Dow Building",
+    "roof:shape": "flat",
+    "osm_id": "way/82246798",
+    "footprint_overlap": 0.959
+  },
+  "1005092": {
+    "building": "university",
+    "building:levels": "4",
+    "name": "Bob and Betty Beyster Building",
+    "osm_id": "way/82246736",
+    "footprint_overlap": 0.929
+  },
+  "1005504": {
+    "building": "university",
+    "building:levels": "4",
+    "name": "Leinweber Computer\u00a0Science Building",
+    "osm_id": "way/1073629320",
+    "footprint_overlap": 0.812
+  },
+  "1000415": {
+    "building": "university",
+    "building:levels": "2",
+    "name": "Naval\u00a0Architecture and Marine\u00a0Engineering",
+    "osm_id": "way/291967192",
+    "footprint_overlap": 0.869
+  },
+  "1002716": {
+    "building": "residential",
+    "osm_id": "way/831978583",
+    "footprint_overlap": 0.994
+  },
+  "1002710": {
+    "building": "residential",
+    "osm_id": "way/831978582",
+    "footprint_overlap": 0.99
+  },
+  "1000510": {
+    "building": "residential",
+    "osm_id": "way/256664893",
+    "footprint_overlap": 0.709
+  },
+  "1000408": {
+    "building": "university",
+    "building:levels": "1",
+    "building:material": "brick",
+    "name": "North\u00a0Campus\u00a0Switching\u00a0Station",
+    "roof:shape": "flat",
+    "osm_id": "way/1073711941",
+    "footprint_overlap": 0.855
+  },
+  "1000414": {
+    "building": "university",
+    "building:levels": "4",
+    "name": "Environmental and Water Resources Engineering",
+    "osm_id": "way/242379150",
+    "footprint_overlap": 0.915
+  },
+  "1002715": {
+    "building": "residential",
+    "osm_id": "way/831978585",
+    "footprint_overlap": 0.976
+  },
+  "1002711": {
+    "building": "residential",
+    "osm_id": "way/831978584",
+    "footprint_overlap": 0.968
+  },
+  "1002714": {
+    "building": "residential",
+    "osm_id": "way/831978588",
+    "footprint_overlap": 0.955
+  },
+  "1002712": {
+    "building": "residential",
+    "osm_id": "way/831978586",
+    "footprint_overlap": 0.99
+  },
+  "1000448": {
+    "building": "university",
+    "building:levels": "4",
+    "name": "Electrical\u00a0Engineering and Computer\u00a0Science Building",
+    "osm_id": "way/242379149",
+    "footprint_overlap": 0.954
+  },
+  "1005139": {
+    "building": "university",
+    "name": "NC Chiller Plant",
+    "osm_id": "way/292062565",
+    "footprint_overlap": 0.939
+  },
+  "1002713": {
+    "building": "residential",
+    "osm_id": "way/831978587",
+    "footprint_overlap": 0.992
+  },
+  "1000511": {
+    "building": "residential",
+    "osm_id": "way/256665092",
+    "footprint_overlap": 0.705
+  },
+  "1005223": {
+    "building": "university",
+    "name": "NC Auxillary Support Building",
+    "osm_id": "way/292062567",
+    "footprint_overlap": 0.918
+  },
+  "1002514": {
+    "building": "university",
+    "name": "NC Grounds Services",
+    "osm_id": "way/292062566",
+    "footprint_overlap": 0.959
+  },
+  "1000394": {
+    "building": "bell_tower",
+    "height": "50.3",
+    "name": "Ann and Robert H. Lurie Tower",
+    "osm_id": "way/82249123",
+    "footprint_overlap": 0.848
+  },
+  "1005059": {
+    "building": "university",
+    "building:levels": "3",
+    "name": "Walgreen Drama Center",
+    "roof:shape": "flat",
+    "osm_id": "way/82246737",
+    "footprint_overlap": 0.979
+  },
+  "1000400": {
+    "building": "university",
+    "building:levels": "2",
+    "name": "Lay Automotive\u00a0Engineering Laboratory",
+    "roof:shape": "flat",
+    "osm_id": "way/291762175",
+    "footprint_overlap": 0.88
+  },
+  "1000512": {
+    "building": "residential",
+    "osm_id": "way/256665208",
+    "footprint_overlap": 0.587
+  },
+  "1000397": {
+    "building": "university",
+    "building:levels": "2",
+    "name": "Robert\u00a0H.\u00a0Lurie\u00a0Engineering Center",
+    "roof:shape": "quadruple_saltbox",
+    "osm_id": "way/291762176",
+    "footprint_overlap": 0.807
+  },
+  "1000514": {
+    "building": "residential",
+    "osm_id": "way/256665328",
+    "footprint_overlap": 0.913
+  },
+  "1000405": {
+    "building": "university",
+    "name": "Nuclear Engineering Laboratory",
+    "osm_id": "way/1160729163",
+    "footprint_overlap": 0.979
+  },
+  "1000442": {
+    "building": "university",
+    "building:levels": "2",
+    "name": "Pierpont Commons",
+    "roof:shape": "flat",
+    "osm_id": "way/82245561",
+    "footprint_overlap": 0.841
+  },
+  "1000513": {
+    "building": "residential",
+    "osm_id": "way/256665283",
+    "footprint_overlap": 0.723
+  },
+  "1000429": {
+    "building": "university",
+    "name": "Industrial\u00a0and Operations Engineering Building",
+    "osm_id": "way/291762177",
+    "footprint_overlap": 0.932
+  },
+  "1000404": {
+    "building": "university",
+    "building:levels": "3",
+    "name": "Michigan Memorial Phoenix Project",
+    "osm_id": "way/291965362",
+    "footprint_overlap": 0.96
+  },
+  "1000443": {
+    "building": "university",
+    "building:levels": "1",
+    "name": "Chrysler Center",
+    "roof:shape": "flat",
+    "osm_id": "way/249660507",
+    "footprint_overlap": 0.878
+  },
+  "1000403": {
+    "building": "university",
+    "building:levels": "2",
+    "name": "Cooley Laboratory",
+    "osm_id": "way/291762178",
+    "footprint_overlap": 0.736
+  },
+  "1000440": {
+    "building:levels": "5",
+    "osm_id": "way/256656082",
+    "footprint_overlap": 0.892
+  },
+  "1000402": {
+    "building": "university",
+    "name": "Bonisteel Interdisciplinary Research Building",
+    "osm_id": "way/291965359",
+    "footprint_overlap": 0.796
+  },
+  "1005348": {
+    "building": "yes",
+    "name": "Modular MRI Building",
+    "osm_id": "way/1161548420",
+    "footprint_overlap": 0.767
+  },
+  "1000437": {
+    "building": "university",
+    "building:levels": "2",
+    "name": "Gerstacker Building",
+    "osm_id": "way/291965358",
+    "footprint_overlap": 0.917
+  },
+  "1000436": {
+    "building": "university",
+    "building:levels": "1",
+    "name": "Engineering Research Building\u00a0II",
+    "osm_id": "way/291965654",
+    "footprint_overlap": 0.933
+  },
+  "1000435": {
+    "building": "university",
+    "building:levels": "7",
+    "name": "Engineering Research Building\u00a0I",
+    "osm_id": "way/291965655",
+    "footprint_overlap": 0.907
+  },
+  "1000439": {
+    "building": "library",
+    "name": "Bentley Historical Library",
+    "osm_id": "way/291927192",
+    "footprint_overlap": 0.939
+  },
+  "1000434": {
+    "building": "service",
+    "osm_id": "way/1161352945",
+    "footprint_overlap": 0.606
+  },
+  "1005439": {
+    "building": "university",
+    "building:levels": "1",
+    "name": "Dance Building",
+    "osm_id": "way/1185535306",
+    "footprint_overlap": 0.946
+  },
+  "1000420": {
+    "building": "university",
+    "building:levels": "3",
+    "name": "School\u00a0of\u00a0Information North",
+    "osm_id": "way/291965656",
+    "footprint_overlap": 0.593
+  },
+  "1000406": {
+    "building": "university",
+    "name": "Lurie Biomedical Engineering Building",
+    "osm_id": "way/291965361",
+    "footprint_overlap": 0.934
+  },
+  "1000446": {
+    "building": "library",
+    "name": "Gerald\u00a0R.\u00a0Ford Presidential Library",
+    "osm_id": "way/291926400",
+    "footprint_overlap": 0.944
+  },
+  "1000390": {
+    "building": "university",
+    "building:levels": "1",
+    "name": "Child Care Center",
+    "osm_id": "way/292062568",
+    "footprint_overlap": 0.891
+  },
+  "1002500": {
+    "building": "yes",
+    "name": "Mitchell Field Building",
+    "osm_id": "way/226571545",
+    "footprint_overlap": 0.933
+  },
+  "1005380": {
+    "building": "roof",
+    "osm_id": "way/1447807029",
+    "footprint_overlap": 0.439
+  },
+  "1000719": {
+    "building": "university",
+    "name": "Intramural Sports Building",
+    "osm_id": "way/154232135",
+    "footprint_overlap": 0.976
+  },
+  "1005607": {
+    "building": "house",
+    "osm_id": "way/445709926",
+    "footprint_overlap": 0.813
+  },
+  "1000807": {
+    "building": "yes",
+    "osm_id": "way/384454218",
+    "footprint_overlap": 0.831
+  },
+  "1000732": {
+    "building": "university",
+    "name": "Cliff Keen Arena",
+    "osm_id": "way/154232130",
+    "footprint_overlap": 0.951
+  },
+  "1000718": {
+    "building": "university",
+    "name": "Canham Natatorium",
+    "osm_id": "way/154232126",
+    "footprint_overlap": 0.98
+  },
+  "1005609": {
+    "building": "house",
+    "osm_id": "way/445709928",
+    "footprint_overlap": 0.633
+  },
+  "1000813": {
+    "building": "university",
+    "name": "Revelli Band Rehearsal Hall",
+    "osm_id": "way/300681320",
+    "footprint_overlap": 0.98
+  },
+  "1000731": {
+    "building": "university",
+    "name": "Weidenbach Hall (Administration)",
+    "osm_id": "way/393535463",
+    "footprint_overlap": 0.97
+  },
+  "1005608": {
+    "building": "house",
+    "osm_id": "way/445709930",
+    "footprint_overlap": 0.5
+  },
+  "1005610": {
+    "building": "yes",
+    "name": "Hoover Street Auto Repair Shop",
+    "osm_id": "way/445709927",
+    "footprint_overlap": 0.911
+  },
+  "1000804": {
+    "building": "yes",
+    "osm_id": "way/519406617",
+    "footprint_overlap": 0.828
+  },
+  "1000815": {
+    "building": "university",
+    "osm_id": "way/384454220",
+    "footprint_overlap": 0.553
+  },
+  "1000803": {
+    "building": "yes",
+    "osm_id": "way/460002072",
+    "footprint_overlap": 0.882
+  },
+  "1000201": {
+    "building": "university",
+    "name": "Marie Hartwig Building (Ticket Office)",
+    "osm_id": "way/393535457",
+    "footprint_overlap": 0.941
+  },
+  "1000805": {
+    "building": "yes",
+    "osm_id": "way/384455072",
+    "footprint_overlap": 0.899
+  },
+  "1005195": {
+    "building": "yes",
+    "osm_id": "way/519406656",
+    "footprint_overlap": 0.94
+  },
+  "1000814": {
+    "building": "college",
+    "name": "The Institute of Continuing Legal Education",
+    "osm_id": "way/445709929",
+    "footprint_overlap": 0.914
+  },
+  "1000800": {
+    "building": "yes",
+    "osm_id": "way/384454221",
+    "footprint_overlap": 0.58
+  },
+  "1005120": {
+    "building": "university",
+    "name": "Stephen M. Ross Academic Center",
+    "osm_id": "way/154232148",
+    "footprint_overlap": 0.962
+  },
+  "1000816": {
+    "building": "yes",
+    "osm_id": "way/501446765",
+    "footprint_overlap": 0.891
+  },
+  "1000802": {
+    "building": "yes",
+    "osm_id": "way/384455073",
+    "footprint_overlap": 0.967
+  },
+  "1008052": {
+    "building": "yes",
+    "osm_id": "way/384455074",
+    "footprint_overlap": 0.971
+  },
+  "1000733": {
+    "building": "stadium",
+    "osm_id": "way/1292377895",
+    "footprint_overlap": 0.531
+  },
+  "1008051": {
+    "building": "yes",
+    "osm_id": "way/384455076",
+    "footprint_overlap": 0.989
+  },
+  "1005243": {
+    "building": "yes",
+    "name": "Concessions",
+    "osm_id": "way/460494756",
+    "footprint_overlap": 0.919
+  },
+  "1005242": {
+    "building": "yes",
+    "name": "First Aid",
+    "osm_id": "way/490236476",
+    "footprint_overlap": 0.486
+  },
+  "1008050": {
+    "building": "yes",
+    "osm_id": "way/384455075",
+    "footprint_overlap": 0.973
+  },
+  "1000709": {
+    "building": "yes",
+    "name": "Yost Ice Arena",
+    "osm_id": "way/128634894",
+    "footprint_overlap": 0.967
+  },
+  "1000703": {
+    "building": "yes",
+    "name": "Indoor Track Building",
+    "osm_id": "way/154232133",
+    "footprint_overlap": 0.962
+  },
+  "1000801": {
+    "building": "yes",
+    "osm_id": "way/384454219",
+    "footprint_overlap": 0.913
+  },
+  "1005450": {
+    "building": "yes",
+    "osm_id": "way/1354221032",
+    "footprint_overlap": 0.905
+  },
+  "1005503": {
+    "building": "yes",
+    "osm_id": "way/1354221026",
+    "footprint_overlap": 0.855
+  },
+  "1000808": {
+    "building": "yes",
+    "osm_id": "way/384441487",
+    "footprint_overlap": 0.326
+  },
+  "1005123": {
+    "building": "yes",
+    "osm_id": "way/1354221028",
+    "footprint_overlap": 0.177
+  },
+  "1000705": {
+    "building": "university",
+    "name": "Schembechler Hall",
+    "osm_id": "way/193805531",
+    "footprint_overlap": 0.948
+  },
+  "1000704": {
+    "building": "yes",
+    "name": "Oosterbaan Field House",
+    "osm_id": "way/190113045",
+    "footprint_overlap": 0.946
+  },
+  "1005160": {
+    "building": "yes",
+    "name": "Junge Family Champions Center",
+    "osm_id": "way/393535456",
+    "footprint_overlap": 0.835
+  },
+  "1000742": {
+    "building": "yes",
+    "name": "Campus Safety Services Building",
+    "osm_id": "way/384441488",
+    "footprint_overlap": 0.94
+  },
+  "1005121": {
+    "building": "yes",
+    "name": "Glick Field House",
+    "osm_id": "way/190113093",
+    "footprint_overlap": 0.929
+  },
+  "1000700": {
+    "building": "stadium",
+    "height": "15",
+    "name": "Crisler Center",
+    "osm_id": "way/128634617",
+    "footprint_overlap": 0.836
+  },
+  "1005289": {
+    "building": "yes",
+    "osm_id": "way/393535464",
+    "footprint_overlap": 0.441
+  },
+  "1005357": {
+    "building": "yes",
+    "name": "South Ferry Field Locker Complex",
+    "osm_id": "way/393535461",
+    "footprint_overlap": 0.846
+  },
+  "1005385": {
+    "building": "yes",
+    "name": "University of Michigan Golf Course Clubhouse",
+    "osm_id": "way/721963128",
+    "footprint_overlap": 0.863
+  },
+  "1005371": {
+    "building": "yes",
+    "name": "Athletic Operations Center",
+    "osm_id": "way/493359073",
+    "footprint_overlap": 0.917
+  }
+}

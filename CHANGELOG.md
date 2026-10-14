@@ -1,5 +1,14 @@
 # Changelog
 
+## 26.10.14.1 — 2026-10-14
+
+- Remove automatically repeated rooftop service boxes and replace over-tall whole-building facade rods with locally bounded, building-specific geometry.
+- Rebuild the Law Quadrangle as individual granite and limestone ranges, residential roofs and dormers, a lower reading hall and a crenellated tower, retaining courtyard voids.
+- Reconstruct the Diag core: Angell and Tisch flat roofs and portico, separate Mason/Haven heights, Hatcher North/South, Clements arches, Shapiro projecting bays, Dana, Chemistry/Dow, Randall and West Hall roof forms.
+- Rebuild Lurie Tower with its compact brick shaft, stepped piers, open bell cage, acoustic blades, playing-cabin platform and copper hip cap; remodel Leinweber using current built photographs.
+- Review all 554 facility layers and incorporate 368 matched public exterior-tag records alongside curated university references. Distinguish roof materials, local roof ranges and residence/common wings without treating GIS FloorCount as exterior storeys.
+- Add satellite-referenced outdoor parking rows and observed dividers, respecting current buildings, planting, drive aisles, construction and unmarked areas. Retain per-area source URLs and review results.
+
 ## 26.10.13.13 — 2026-10-13
 
 - Rebuild Michigan Stadium with a sunken gray seating bowl, aisles, mapped premium-building footprints, end-zone video boards and a correctly aligned marked field.

@@ -47,7 +47,7 @@ NORTH={
 '1005224':(1,11.4,'NorthBrick','RoofZinc'),
 '1005418':(4,19.6,'MetalPanel','RoofZinc'),
 '1005439':(2,10.8,'NorthBrick','RoofMembrane'),
-'1005504':(5,23.8,'NorthBrick','RoofMembrane'),
+'1005504':(5,21.8,'BuffBrick','RoofMembrane'),
 }
 ROSS={'1005188':(6,28.0,'Terracotta','RoofZinc'),'1005370':(6,25.4,'Terracotta','RoofZinc'),'1000137':(3,13.3,'Sandstone','RoofGreen'),'1000139':(8,28.8,'Terracotta','RoofMembrane'),'1000135':(5,19.6,'Terracotta','RoofMembrane'),'1000253':(4,13.6,'Concrete','RoofGravel')}
 # xmin, ymin, xmax, ymax, eaves, storeys, wall. Clip every piece to the source footprint.
@@ -69,7 +69,7 @@ WINGS={
 '1005092':[(1840,1745,1909,1765,12.2,3,'NorthBrick'),(1867,1765,1885,1814,18.4,4,'Glass')],
 '1005418':[(2395,1907,2495,1934,12.8,2,'MetalPanel')],
 '1005439':[(1375,1309,1415,1344,9.0,1,'NorthBrick'),(1415,1344,1436,1385,11.5,2,'NorthBrick')],
-'1005504':[(1737,1747,1772,1782,14.8,3,'Glass'),(1772,1747,1847,1762,18.7,4,'NorthBrick')],
+'1005504':[(1737,1747,1772,1782,14.8,3,'BuffBrick'),(1772,1747,1847,1762,18.7,4,'BuffBrick')],
 }
 REFERENCES={
 '1005188':'https://www.kpf.com/story/the-making-of-university-of-michigan-stephen-m-ross-school-of-business',
@@ -90,7 +90,7 @@ def volumes(ident,p,osm_parts=()):
     if ident=='1000396':remaining=remaining.difference(box(1878,1611,1960,1630))
     for a,b,c,d,hh,n,mat in WINGS.get(ident,[]):
         q=remaining.intersection(box(a,b,c,d));remaining=remaining.difference(q)
-        if not q.is_empty:result.append((q,hh,n,mat,'RoofGlazing'if mat=='Glass'else roof))
+        if not q.is_empty:result.append((q,hh,n,mat,'RoofGlazing'if mat=='Glass'and ident in ['1005188','1005092']else roof))
     # A few laboratories have individually mapped storey-height parts. Do not
     # use contradictory height=10m / six-storey tags as measured roof elevations.
     if ident=='1000441':

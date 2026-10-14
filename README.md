@@ -89,7 +89,7 @@ Map skins use stable compositing and continuous lighting from the existing DEM s
 
 Run `npm run check:rendering` for CAD surface and depth-frustum checks. Run `npm run build:rendering-check`, serve the repository root, and open `tmp/rendering-check.html` for GPU pixel, glass-occlusion, section-shadow and 800 roof-sample regression checks.
 
-Roof shadow filtering uses a fixed PCF kernel with receiver-plane depth correction. The sun volume is fixed to campus bounds. Ordinary flat roofs use one neutral gray base color across metal, slate, concrete and body caps; pitched surfaces retain natural directional shading. Small orthographic depth priorities separate roof sheets and concrete accents while retaining ordinary building occlusion and original CAD coordinates. The GPU check also covers roof lighting and coplanar details during pan, rotation and zoom.
+Roof shadow filtering uses a fixed PCF kernel with receiver-plane depth correction. The sun volume is fixed to campus bounds. Hidden body caps use neutral shading; individually designed membrane, gravel, slate, shingle, zinc, copper, glass and planted roofs retain their materials. Pitched surfaces retain natural directional shading. Small orthographic depth priorities separate roof sheets and concrete accents while retaining ordinary building occlusion and original CAD coordinates. The GPU check also covers roof lighting and coplanar details during pan, rotation and zoom.
 
 ## Project layout
 
@@ -104,6 +104,14 @@ Roof shadow filtering uses a fixed PCF kernel with receiver-plane depth correcti
 
 ## Website model compression
 
-The initial model transfer is **17.39 MB**, down from **35.59 MB** (51.1% smaller). The web stream uses meshoptimizer 1.3.0 lossless vertex/index-sequence coding followed by gzip. No quantization or simplification is applied; its decoded SHA-256 matches the original 3DS. Rhino and original 3DS downloads stay unchanged.
+The initial model transfer is **20.11 MB**, down from **41.66 MB** (51.7% smaller). The web stream uses meshoptimizer 1.3.0 lossless vertex/index-sequence coding followed by gzip. No quantization or simplification is applied; its decoded SHA-256 matches the original 3DS. Rhino and original 3DS downloads stay unchanged.
 
 A single browser worker streams gzip decompression, restores small geometry blocks and parses the CAD model. Its compressed input and resulting geometry buffers are transferred rather than copied. The full intermediate archive is never retained. Scene setup yields to rendering between time slices; browsers that block workers use cooperative per-object parsing. Standalone HTML restores the downloadable CAD on demand in a worker. Decoder JavaScript/WebAssembly is bundled locally and requires no CDN. See `output/web_model_report.json` for byte counts, source digest and maximum block size. `npm run build:model` rebuilds the stream; `npm run check:compression` checks lossless restoration and worker behavior.
+
+## Architectural and parking refinement
+
+The Law Quadrangle, The Diag core, Lurie Tower and Leinweber use individual public-reference reconstructions. Roof ranges, local wing heights, dormers, porticoes, window bays and material finishes are specific to those buildings; footprint area no longer generates rooftop machinery. Mapped exterior tags supplement all-campus review, with primary university sources taking precedence over conflicting generic tags.
+
+See `sources/ARCHITECTURE_REFERENCES.md`, `sources/ARCHITECTURE_EXTENDED_REFERENCES.md` and `sources/building_specs.json`. Detail previews are in `output/law_quadrangle_detail.png`, `output/diag_core_detail.png`, `output/lurie_tower_detail.png` and `output/leinweber_detail.png`. Heights and individual facade modules remain public-source estimates where surveyed dimensions are unavailable.
+
+Outdoor parking uses explicit satellite-referenced row paths and observed paint, clipped clear of current buildings and planting. `sources/parking_satellite_review.json` retains each imagery reference and review result. Unmarked, construction, service and obscured areas do not receive an inferred stripe grid.

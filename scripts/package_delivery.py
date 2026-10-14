@@ -94,10 +94,20 @@ Map skins use stable compositing and continuous lighting from the existing DEM s
 
 Run `npm run check:rendering` for CAD surface and depth-frustum checks. Run `npm run build:rendering-check`, serve the repository root, and open `tmp/rendering-check.html` for GPU pixel, glass-occlusion, section-shadow and 800 roof-sample regression checks.
 
-Roof shadow filtering uses a fixed PCF kernel with receiver-plane depth correction. The sun volume is fixed to campus bounds. Ordinary flat roofs use one neutral gray base color across metal, slate, concrete and body caps; pitched surfaces retain natural directional shading. Small orthographic depth priorities separate roof sheets and concrete accents while retaining ordinary building occlusion and original CAD coordinates. The GPU check also covers roof lighting and coplanar details during pan, rotation and zoom.
+Roof shadow filtering uses a fixed PCF kernel with receiver-plane depth correction. The sun volume is fixed to campus bounds. Hidden body caps use neutral shading; individually designed membrane, gravel, slate, shingle, zinc, copper, glass and planted roofs retain their materials. Pitched surfaces retain natural directional shading. Small orthographic depth priorities separate roof sheets and concrete accents while retaining ordinary building occlusion and original CAD coordinates. The GPU check also covers roof lighting and coplanar details during pan, rotation and zoom.
 '''
 readme+='\n## Project layout\n\n- `index.html`: website entry; root SEO files and `CNAME` support publishing.\n- `assets/`: browser engine, fonts, icons and local model payload.\n- `config/`: custom site configuration.\n- `docs/`: project decisions and third-party license notices.\n- `scripts/`: model generators, packaging and necessary checks.\n- `sources/`: source snapshots and provenance.\n- `output/`: CAD files, offline edition, reports and delivery archive.\n- Root `VERSION`, `CHANGELOG.md` and package manifests record releases and builds.\n'
-readme+='\n## Website model compression\n\nThe initial model transfer is **17.39 MB**, down from **35.59 MB** (51.1% smaller). The web stream uses meshoptimizer 1.3.0 lossless vertex/index-sequence coding followed by gzip. No quantization or simplification is applied; its decoded SHA-256 matches the original 3DS. Rhino and original 3DS downloads stay unchanged.\n\nA single browser worker streams gzip decompression, restores small geometry blocks and parses the CAD model. Its compressed input and resulting geometry buffers are transferred rather than copied. The full intermediate archive is never retained. Scene setup yields to rendering between time slices; browsers that block workers use cooperative per-object parsing. Standalone HTML restores the downloadable CAD on demand in a worker. Decoder JavaScript/WebAssembly is bundled locally and requires no CDN. See `output/web_model_report.json` for byte counts, source digest and maximum block size. `npm run build:model` rebuilds the stream; `npm run check:compression` checks lossless restoration and worker behavior.\n'
+web_report=json.loads((out/'web_model_report.json').read_text())
+readme+=f'\n## Website model compression\n\nThe initial model transfer is **{web_report["transferBytes"]/1e6:.2f} MB**, down from **{web_report["previousTransferBytes"]/1e6:.2f} MB** ({100*(1-web_report["transferBytes"]/web_report["previousTransferBytes"]):.1f}% smaller). The web stream uses meshoptimizer 1.3.0 lossless vertex/index-sequence coding followed by gzip. No quantization or simplification is applied; its decoded SHA-256 matches the original 3DS. Rhino and original 3DS downloads stay unchanged.\n\nA single browser worker streams gzip decompression, restores small geometry blocks and parses the CAD model. Its compressed input and resulting geometry buffers are transferred rather than copied. The full intermediate archive is never retained. Scene setup yields to rendering between time slices; browsers that block workers use cooperative per-object parsing. Standalone HTML restores the downloadable CAD on demand in a worker. Decoder JavaScript/WebAssembly is bundled locally and requires no CDN. See `output/web_model_report.json` for byte counts, source digest and maximum block size. `npm run build:model` rebuilds the stream; `npm run check:compression` checks lossless restoration and worker behavior.\n'
+readme+='''
+## Architectural and parking refinement
+
+The Law Quadrangle, The Diag core, Lurie Tower and Leinweber use individual public-reference reconstructions. Roof ranges, local wing heights, dormers, porticoes, window bays and material finishes are specific to those buildings; footprint area no longer generates rooftop machinery. Mapped exterior tags supplement all-campus review, with primary university sources taking precedence over conflicting generic tags.
+
+See `sources/ARCHITECTURE_REFERENCES.md`, `sources/ARCHITECTURE_EXTENDED_REFERENCES.md` and `sources/building_specs.json`. Detail previews are in `output/law_quadrangle_detail.png`, `output/diag_core_detail.png`, `output/lurie_tower_detail.png` and `output/leinweber_detail.png`. Heights and individual facade modules remain public-source estimates where surveyed dimensions are unavailable.
+
+Outdoor parking uses explicit satellite-referenced row paths and observed paint, clipped clear of current buildings and planting. `sources/parking_satellite_review.json` retains each imagery reference and review result. Unmarked, construction, service and obscured areas do not receive an inferred stripe grid.
+'''
 (r/'README.md').write_text(readme)
 sources='''# Sources and modeling decisions
 
@@ -121,11 +131,18 @@ Public data snapshot: 12 October 2026. All measurements in the model are meters.
 
 University map layers are those explicitly published by its web application. Paginated layers were fetched by object ID in batches and checked against the complete returned ID list. `retrieval_manifest.json` records complete tree, sidewalk and campus-surface queries. Public editor identities were removed from snapshots.
 
-Ann Arbor municipal footprint-service retrieval and OSM retrieval were unavailable; neither dataset is used as a hidden height source. U-M official footprints are the model’s XY source. Above-ground facility pieces are grouped by facility number; underground-only outlines and planning-only features are omitted from raised massing and recorded separately.
+Ann Arbor municipal footprint-service retrieval was unavailable. Later public OSM snapshots supply matched building levels, roof-shape tags and selected secondary building-part edges; contradictory tags yield to specific university references, and heights remain explicitly estimated. OSM is not used as a hidden measured-height source. U-M official footprints are the model’s XY source. Above-ground facility pieces are grouped by facility number; underground-only outlines and planning-only features are omitted from raised massing and recorded separately.
 
 Official GIS floor counts may include underground, roof and mezzanine labels or multiple wings. The original field is retained, while estimated exterior storeys are separately recorded. Published heights, source conflicts and historical city estimates have distinct viewer badges and bilingual notes.
 
 Surface topology cleanup removes tiny sliver holes; a valid 2D footprint with point-touching boundaries may be represented as adjacent closed triangular volume cells to avoid an open extrusion. All deliverable Rhino objects are read back and checked for valid geometry and closed solids/meshes.
+
+
+## Architecture review
+
+`ARCHITECTURE_REFERENCES.md` and `ARCHITECTURE_EXTENDED_REFERENCES.md` record the primary exterior images actually inspected and separate documented floor counts from visual and metric approximations. `building_specs.json` links matched public roof/storey tags to the official facility footprint. Specific photographs override generic tags (including the built five-storey Leinweber and the distinct Hatcher North stack sublevels). No automatic rooftop machinery is inferred from footprint size.
+
+All facility layers are reviewed for roof form, exterior-level interpretation and source association. Detail is strongest where current university images or published descriptions resolve the form; unreconstructed individual window modules remain approximate. No raw architectural photography is redistributed.
 '''
 (r/'sources/SOURCES.md').write_text(sources)
 translations='''# Chinese naming decisions / 中文译名校对
@@ -162,6 +179,7 @@ usage=f'''# 密西根大学安娜堡校区模型使用说明
 “Michigan”统一译为“密西根”，“Ann Arbor”统一译为“安娜堡”。地名与建筑译名保持原义，英文专名保留以便查证。来源与完整中文译名说明见 `sources`。
 '''
 (out/'usage_guide.md').write_text(usage)
+web_report=json.loads((out/'web_model_report.json').read_text())
 checks={'rhino':json.loads((out/'rhino_validation.json').read_text()),'3ds':json.loads((out/'3ds_validation.json').read_text())}
 validation=f'''# Delivery validation
 
@@ -169,8 +187,8 @@ validation=f'''# Delivery validation
 - {checks['rhino']['closed_native_solids']} valid closed native massing solids, {checks['rhino']['closed_mesh_objects']} closed mesh objects, {checks['rhino']['plan_curves']} footprint curves.
 - Independent Three.js 3DS import: {checks['3ds']['objects']} preserved object names, {checks['3ds']['triangles']:,} triangles. All 3DS object names comply with the 10-character mapping convention.
 - Published / municipal landmark peaks agree with their selected model height values within 1 cm.
-- Current update: atomic same-frame resize/draw, preserved framing, no Level toolbar option, and bilingual hover picking for 69 mapped outdoor places. English is the default regardless of device locale. Finder metadata is ignored without deleting local files.
-- Current compression: 35.59 MB → 17.39 MB; exact restored CAD SHA-256 and all mesh positions/normals/indices/material groups. Single-worker transfer, bounded streaming decode and cooperative fallback checks pass.
+- Current architecture: individual Law Quadrangle, Diag core, Lurie and Leinweber reconstructions, corrected exterior-level interpretation and local roof ranges. No automatically generated rooftop machinery. Satellite-referenced parking rows retain drive aisles and exclude unmarked areas. English is the default regardless of device locale.
+- Current compression: {web_report["previousTransferBytes"]/1e6:.2f} MB → {web_report["transferBytes"]/1e6:.2f} MB; exact restored CAD SHA-256 and all mesh positions/normals/indices/material groups. Single-worker transfer, bounded streaming decode and cooperative fallback checks pass.
 - Viewer tests: English/Chinese language selection; HTTP compressed binary, local classic script, inline model and error paths; SHA-256 equality with original CAD bytes.
 - Camera checks: {len(records)} building targets × three viewport proportions = {len(records)*3} zoom-out/refit cases, retaining access to the whole campus.
 - Navigation: 48 viewport, bearing and view combinations plus 144 exact-level/low-angle cases; mouse/touch direction, terrain pivots, cursor zoom, horizon and zoom-step limits, no inertia, drag/pinch selection and local preset checks.
