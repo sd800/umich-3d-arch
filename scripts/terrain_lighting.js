@@ -15,6 +15,7 @@ export function createTerrainLighting(grid) {
   return {texture,bounds:[grid.x[0],grid.y[0],grid.x.at(-1)-grid.x[0],grid.y.at(-1)-grid.y[0]],size:[width,height]};
 }
 export function applyTerrainLighting(material,field) {
+  if(material.userData.campusTerrainWall||material.userData.campusTerrainDepth)return;
   if(!field||material.name==='Water')return;
   const previous=material.onBeforeCompile,previousKey=material.customProgramCacheKey();
   material.onBeforeCompile=function(shader,renderer){

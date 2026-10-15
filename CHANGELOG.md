@@ -1,5 +1,12 @@
 # Changelog
 
+## 26.10.14.2 — 2026-10-14
+
+- Extend shallow terrain-tile undersides to a shared display datum and softly fade their unlit earth sides downward, removing the exposed faceted wedges in downhill horizontal views. Preserve the original CAD elevations and files.
+- Restore closed terrain sides and undersides in the web viewer, including locally leveled building pads, to prevent floating or see-through bases at horizontal and low angles.
+- Add a terrain and water depth barrier after stable road/lawn painting so underground geometry is occluded without reintroducing flickering surface overlaps.
+- Keep the original CAD geometry, camera bearings and full horizontal rotation; add a focused horizontal/low-angle occlusion regression.
+
 ## 26.10.14.1 — 2026-10-14
 
 - Remove automatically repeated rooftop service boxes and replace over-tall whole-building facade rods with locally bounded, building-specific geometry.

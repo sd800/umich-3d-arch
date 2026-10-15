@@ -1,7 +1,7 @@
 import {createOutdoorPicker,groundPoint,installCampusHover} from './outdoor_hover.js';
 import {createViewportRenderLoop} from './viewport_rendering.js';
 import {createTerrainLighting,applyTerrainLighting} from './terrain_lighting.js';
-import {prepareLandscape,prepareBuildingRoofs,stabilizeBuildingMaterial,updateCampusDepthRange,setCampusClipping,updateCampusDetailDepth,stabilizeCampusShadows,fitCampusSun} from './surface_rendering.js';
+import {createTerrainMass,prepareLandscape,prepareBuildingRoofs,stabilizeBuildingMaterial,updateCampusDepthRange,setCampusClipping,updateCampusDetailDepth,stabilizeCampusShadows,fitCampusSun} from './surface_rendering.js';
 import {groundHeight} from './ground_height.js';
 import {installMapSelection} from './map_selection.js';
 import {CampusMapControls,setRotationMode,frameCampusBox} from './campus_controls.js';
@@ -173,14 +173,16 @@ try{
  renderer.domElement.setAttribute('aria-label',t('modelLabel'));renderer.domElement.tabIndex=0;$('canvas-host').append(renderer.domElement);
  scene=new THREE.Scene();camera=new THREE.OrthographicCamera(-1000,1000,1000,-1000,.1,100000);camera.up.set(0,0,1);scene.add(new THREE.HemisphereLight(0xffffff,0x849177,2.0));
  sun=new THREE.DirectionalLight(0xffffff,2.2);const siteCenter=new THREE.Vector3(...data.siteCenter,50);sun.position.copy(siteCenter).add(new THREE.Vector3(-4000,-6000,9000));sun.target.position.copy(siteCenter);sun.castShadow=true;sun.shadow.mapSize.set(2048,2048);sun.shadow.camera.left=-6500;sun.shadow.camera.right=6500;sun.shadow.camera.top=6500;sun.shadow.camera.bottom=-6500;sun.shadow.camera.near=1;sun.shadow.camera.far=30000;sun.shadow.bias=-.00015;sun.shadow.normalBias=.35;scene.add(sun,sun.target);
+ const terrainBase=Math.min(-30,...(data.groundGrid?.heights||[]).flat().map(z=>z-30));
  const input=bytes;bytes=null;campus=await parseCampusModel(input,reportLoad,data);const meshes=[];campus.traverse(o=>{if(o.isMesh)meshes.push(o);});
+ const terrainMass=createTerrainMass(meshes,terrainBase);
  const terrainLighting=createTerrainLighting(data.groundGrid);let prepared=0,lastPrepared=performance.now();
  for(const m of meshes){
   const old=Array.isArray(m.material)?m.material:[m.material];const materials=old.map(mm=>{const mat=mm.clone();const co=data.palette[mat.name];if(co)mat.color.setRGB(co[0]/255,co[1]/255,co[2]/255,THREE.SRGBColorSpace);mat.shininess=mat.name==='Glass'?25:0;mat.specular.set(mat.name==='Glass'?0x222222:0);mat.flatShading=true;mat.emissiveIntensity=0;stabilizeBuildingMaterial(mat,m.name.includes('D'));stabilizeCampusShadows(mat);return mat;});
   m.material=Array.isArray(m.material)?materials:materials[0];m.receiveShadow=true;
   const r=byLayer.get(data.layers[m.name]?.layer);
   if(r){let g=buildings.get(r.code);if(!g){g=new THREE.Group();g.name=r.code;buildings.set(r.code,g);campus.add(g);}const center=new THREE.Box3().setFromObject(m).getCenter(new THREE.Vector3());for(const part of prepareBuildingRoofs(m,groundHeight(data,center.x,center.y),m.name.includes('D'),false)){g.attach(part);part.castShadow=true;part.userData.code=r.code;pickMeshes.push(part);if(part.name.includes('D'))details.push(part);}}
-  else{m.castShadow=materials.some(mat=>['Leaves','Trunk','Furniture'].includes(mat.name));const parts=prepareLandscape(m);for(const part of parts)if(part.renderOrder<0)applyTerrainLighting(part.material,terrainLighting);envMeshes.push(...parts);}
+  else{m.castShadow=materials.some(mat=>['Leaves','Trunk','Furniture'].includes(mat.name));const parts=prepareLandscape(m,terrainMass);for(const part of parts)if(part.renderOrder<0)applyTerrainLighting(part.material,terrainLighting);envMeshes.push(...parts);}
   prepared++;if(performance.now()-lastPrepared>8){reportLoad({phase:'scene',loaded:meshes.length+prepared,total:meshes.length*2});await nextPaint();lastPrepared=performance.now();}
  }
  reportLoad({phase:'scene',loaded:1,total:1});

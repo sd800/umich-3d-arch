@@ -20,7 +20,9 @@
     "check:hover": "node scripts/check_outdoor_hover.mjs",
     "build:model": "node scripts/pack_web_model.mjs",
     "check:compression": "node scripts/check_compression.mjs",
-    "check:ground": "node scripts/check_ground_contact.mjs"
+    "check:ground": "node scripts/check_ground_contact.mjs",
+    "check:terrain": "node scripts/check_terrain_occlusion.mjs",
+    "build:terrain-check": "esbuild scripts/check_terrain_gpu.js --bundle --format=iife --target=es2020 --outfile=tmp/terrain-check.js && python3 scripts/package_terrain_check.py"
   },
   "dependencies": {
     "three": "0.186.1"

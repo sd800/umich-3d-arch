@@ -1,4 +1,4 @@
-import {BufferAttribute,BufferGeometry,FrontSide,Matrix3,Mesh,Vector3,ShaderChunk} from 'three';
+import {BufferAttribute,BufferGeometry,Float32BufferAttribute,MeshBasicMaterial,Color,DoubleSide,FrontSide,Matrix3,Mesh,Vector3,ShaderChunk} from 'three';
 
 // Map surfaces are a cartographic stack. Independently draped CAD triangles
 // can cross by meters; no depth bias can repair those crossings reliably.
@@ -21,46 +21,103 @@ export function smoothLandscapeNormals(geometry) {
   // A fresh attribute preserves the CAD-imported normals shared by other parts.
   geometry.setAttribute('normal',new BufferAttribute(normals,3));
 }
-export function prepareLandscape(mesh) {
+/** Shared top heights also join CAD chunks containing only sides/undersides. */
+export function createTerrainMass(meshes,base=-30){
+  const heights=new Map(),a=new Vector3(),b=new Vector3(),c=new Vector3(),normal=new Vector3();
+  for(const mesh of meshes){
+    const multi=Array.isArray(mesh.material),materials=multi?mesh.material:[mesh.material];
+    if(!materials.some(m=>['Ground','ContextGround','ShoreGround'].includes(m.name)))continue;
+    mesh.updateWorldMatrix(true,false);const source=mesh.geometry,p=source.attributes.position,index=source.index;
+    for(const group of source.groups.length?source.groups:[{start:0,count:index?.count??p.count,materialIndex:0}]){
+      if(!['Ground','ContextGround','ShoreGround'].includes(materials[multi?group.materialIndex:0].name))continue;
+      for(let i=group.start;i<group.start+group.count;i+=3){
+        const ids=[0,1,2].map(k=>index?index.getX(i+k):i+k);
+        a.fromBufferAttribute(p,ids[0]).applyMatrix4(mesh.matrixWorld);b.fromBufferAttribute(p,ids[1]).applyMatrix4(mesh.matrixWorld);c.fromBufferAttribute(p,ids[2]).applyMatrix4(mesh.matrixWorld);
+        normal.subVectors(b,a).cross(c.clone().sub(a));if(normal.z<=1e-10||normal.z<normal.length()*.1)continue;
+        for(const v of [a,b,c]){const key=Math.round(v.x*1000)+','+Math.round(v.y*1000);heights.set(key,Math.max(heights.get(key)??-Infinity,v.z));}
+      }
+    }
+  }
+  return {base,heights};
+}
+
+/** Keep painted map skins stable, but retain a physical, opaque terrain shell. */
+export function prepareLandscape(mesh,terrainMass=-30) {
   const multi=Array.isArray(mesh.material),materials=multi?mesh.material:[mesh.material];
   if(!materials.some(m=>m.name in SURFACE_ORDER))return [mesh];
   mesh.updateWorldMatrix(true,false);
   const source=mesh.geometry,position=source.getAttribute('position'),index=source.getIndex();
   const normalMatrix=new Matrix3().getNormalMatrix(mesh.matrixWorld).elements;
-  const buckets=materials.map(()=>[]),a=new Vector3(),b=new Vector3(),c=new Vector3(),ab=new Vector3(),ac=new Vector3();
+  const buckets=materials.map(()=>({top:[],shell:[]})),a=new Vector3(),b=new Vector3(),c=new Vector3(),ab=new Vector3(),ac=new Vector3();
+  const solid=name=>['Ground','ContextGround','ShoreGround'].includes(name);
+  const water=name=>['Water','Ocean','CoastalWater','ShallowWater','PoolWater'].includes(name);
   const groups=source.groups.length?source.groups:[{start:0,count:index?.count??position.count,materialIndex:0}];
   for(const group of groups){
-    const id=multi?group.materialIndex:0,material=materials[id],surface=material.name in SURFACE_ORDER,out=buckets[id];
+    const id=multi?group.materialIndex:0,material=materials[id],surface=material.name in SURFACE_ORDER;
     for(let i=group.start;i<group.start+group.count;i+=3){
       const ia=index?index.getX(i):i,ib=index?index.getX(i+1):i+1,ic=index?index.getX(i+2):i+2;
+      let top=true;
       if(surface){
         a.fromBufferAttribute(position,ia);b.fromBufferAttribute(position,ib);c.fromBufferAttribute(position,ic);
         ab.subVectors(b,a).cross(ac.subVectors(c,a));
         const nx=ab.x*normalMatrix[0]+ab.y*normalMatrix[3]+ab.z*normalMatrix[6],ny=ab.x*normalMatrix[1]+ab.y*normalMatrix[4]+ab.z*normalMatrix[7],nz=ab.x*normalMatrix[2]+ab.y*normalMatrix[5]+ab.z*normalMatrix[8];
-        // Rounded CAD vertices can tilt an extrusion side just above horizontal
-        // in the normal test. Exclude near-vertical seams from map skins.
-        if(nz<=1e-10||nz<Math.hypot(nx,ny,nz)*.1)continue;
+        top=nz>1e-10&&nz>=Math.hypot(nx,ny,nz)*.1;
+        // Decorative road/grass extrusion seams stay excluded. Actual terrain
+        // sides and bottoms close the land, including flat building pads.
+        if(!top&&!solid(material.name))continue;
       }
-      out.push(ia,ib,ic);
+      buckets[id][top?'top':'shell'].push(ia,ib,ic);
     }
   }
   const result=[];
-  for(let i=0;i<materials.length;i++){
-    if(!buckets[i].length)continue;
+  function part(indices,material,order){
     const geometry=new BufferGeometry();
     for(const [name,attribute] of Object.entries(source.attributes))geometry.setAttribute(name,attribute);
-    geometry.setIndex(buckets[i]);
-    const material=materials[i],part=new Mesh(geometry,material);
-    part.name=mesh.name;part.position.copy(mesh.position);part.quaternion.copy(mesh.quaternion);part.scale.copy(mesh.scale);part.userData={...mesh.userData};
-    part.receiveShadow=mesh.receiveShadow;part.castShadow=mesh.castShadow;
-    if(material.name in SURFACE_ORDER){
-      material.transparent=false;material.opacity=1;material.depthWrite=false;material.depthTest=true;material.side=FrontSide;
-      part.renderOrder=SURFACE_ORDER[material.name];part.castShadow=false;
-      smoothLandscapeNormals(geometry);material.flatShading=false;material.needsUpdate=true;
-      // No polygon offset: the stack must stay stable at grazing angles too.
-      material.polygonOffset=false;
+    geometry.setIndex(indices);
+    const object=new Mesh(geometry,material);
+    object.name=mesh.name;object.position.copy(mesh.position);object.quaternion.copy(mesh.quaternion);object.scale.copy(mesh.scale);object.userData={...mesh.userData};
+    object.receiveShadow=mesh.receiveShadow;object.castShadow=mesh.castShadow;
+    if(order!==undefined){object.renderOrder=order;object.castShadow=false;}
+    result.push(object);return object;
+  }
+  for(let i=0;i<materials.length;i++){
+    const material=materials[i],{top,shell}=buckets[i];
+    if(!(material.name in SURFACE_ORDER)){if(top.length)part(top,material);continue;}
+    material.transparent=false;material.opacity=1;material.depthWrite=false;material.depthTest=true;material.side=FrontSide;material.polygonOffset=false;
+    if(shell.length){
+      // Imported terrain is a collection of shallow, separately closed tiles.
+      // Extend only their undersides to a shared datum; keep every top vertex.
+      // Otherwise the undersides form floating wedges when viewed from downhill.
+      const state=typeof terrainMass==='number'?createTerrainMass([mesh],terrainMass):terrainMass;
+      const inverse=mesh.matrixWorld.clone().invert(),world=new Vector3();
+      const wall=new MeshBasicMaterial({name:material.name,color:material.color.clone().lerp(new Color(0x7a826a),.24),side:DoubleSide});
+      wall.userData.campusTerrainWall=true;wall.depthWrite=true;
+      const object=part(shell,wall,SURFACE_ORDER[material.name]-1000);object.receiveShadow=false;
+      const vertices=position.clone(),drop=new Float32Array(position.count);
+      for(const id of new Set(shell)){
+        world.fromBufferAttribute(position,id).applyMatrix4(mesh.matrixWorld);
+        const key=Math.round(world.x*1000)+','+Math.round(world.y*1000),grade=state.heights.get(key)??world.z;
+        if(world.z<grade-.005){drop[id]=Math.max(0,grade-state.base);world.z=state.base;world.applyMatrix4(inverse);vertices.setXYZ(id,world.x,world.y,world.z);}
+      }
+      object.geometry.setAttribute('position',vertices);object.geometry.setAttribute('campusTerrainDrop',new Float32BufferAttribute(drop,1));
+      wall.onBeforeCompile=shader=>{
+        shader.vertexShader='attribute float campusTerrainDrop;\nvarying float vCampusTerrainDrop;\n'+shader.vertexShader;
+        shader.vertexShader=shader.vertexShader.replace('#include <begin_vertex>','#include <begin_vertex>\nvCampusTerrainDrop=campusTerrainDrop;');
+        shader.fragmentShader='varying float vCampusTerrainDrop;\n'+shader.fragmentShader;
+        shader.fragmentShader=shader.fragmentShader.replace('#include <opaque_fragment>','outgoingLight=mix(outgoingLight,vec3(0.8148466,0.838799,0.7681511),smoothstep(12.0,32.0,vCampusTerrainDrop));\n#include <opaque_fragment>');
+      };
+      wall.customProgramCacheKey=()=> 'campus-continuous-earth-mass-v1';
     }
-    result.push(part);
+    if(!top.length)continue;
+    const skin=part(top,material,SURFACE_ORDER[material.name]);
+    smoothLandscapeNormals(skin.geometry);material.flatShading=false;material.needsUpdate=true;
+    if(solid(material.name)||water(material.name)){
+      // Write depth AFTER every cartographic paint layer and BEFORE buildings.
+      // This hides buried bases without letting independently draped terrain
+      // punch holes through roads, markings or lawns during navigation.
+      const depth=material.clone();depth.userData.campusTerrainDepth=true;depth.colorWrite=false;depth.depthWrite=true;depth.side=DoubleSide;
+      const occluder=part(top,depth,-1);occluder.receiveShadow=false;
+    }
   }
   const parent=mesh.parent;if(parent){parent.remove(mesh);parent.add(...result);}
   return result;
