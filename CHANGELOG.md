@@ -1,5 +1,9 @@
 # Changelog
 
+## 26.10.16.5 — 2026-10-16
+
+- Update delivery documentation with current model sizes and distinguish regional browsing derivatives from exact full-CAD restoration and downloads.
+
 ## 26.10.16.4 — 2026-10-16
 
 - Refine all 29 architectural highlights with shaped window reveals, framed glazing, transoms and supported roof coping; retain existing bespoke masses and courtyards.

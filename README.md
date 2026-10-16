@@ -108,9 +108,9 @@ Roof shadow filtering uses a fixed PCF kernel with receiver-plane depth correcti
 
 ## Website model compression
 
-The initial model transfer is **37.95 MB**, down from **70.40 MB** (46.1% smaller). The web stream uses meshoptimizer 1.3.0 lossless vertex/index-sequence coding followed by gzip. No quantization or simplification is applied; its decoded SHA-256 matches the original 3DS. The decoded geometry is identical to the original full 3DS. Published CAD is losslessly archived; the web Download 3DS action still saves the native file.
+Interactive browsing starts with a **16.65 MB** regional overview. It does not restore the entire source CAD at startup. Nearby full-detail packets are requested within explicit geometry budgets and disposed when they leave the working area. Repeated components use shared templates and instancing; distant facades and tree crowns use a simplified browsing derivative.
 
-A single browser worker streams gzip decompression, restores small geometry blocks and parses the CAD model. Its compressed input and resulting geometry buffers are transferred rather than copied. The full intermediate archive is never retained. Scene setup yields to rendering between time slices; browsers that block workers use cooperative per-object parsing. Standalone HTML restores the downloadable CAD on demand in a worker. Decoder JavaScript/WebAssembly is bundled locally and requires no CDN. See `output/web_model_report.json` for byte counts, source digest and maximum block size. `npm run build:model` rebuilds the stream; `npm run check:compression` checks lossless restoration and worker behavior.
+The lossless full-CAD web stream is 39.15 MB for the current 157.20 MB 3DS, but it is separate from initial regional browsing. Full CAD downloads use the unchanged metric source archived as `.3ds.gz`; the standalone edition uses the adjacent archive. Regional geometry is a visual derivative, while original CAD archive/codec restoration is byte-exact. See `docs/REGIONAL_RENDERING.md`, `output/streaming_model_report.json` and `output/web_model_report.json` for scope, limits, exact sizes and digests.
 
 ## Architectural and parking refinement
 

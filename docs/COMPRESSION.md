@@ -1,14 +1,7 @@
-# Web model transport
+# Web model delivery
 
+Interactive browsing starts with a **16.65 MB** regional overview. It does not restore the entire source CAD at startup. Nearby full-detail packets are requested within explicit geometry budgets and disposed when they leave the working area. Repeated components use shared templates and instancing; distant facades and tree crowns use a simplified browsing derivative.
 
-The initial model transfer is **17.39 MB**, down from **35.59 MB** (51.1% smaller). The web stream uses meshoptimizer 1.3.0 lossless vertex/index-sequence coding followed by gzip. No quantization or simplification is applied; its decoded SHA-256 matches the original 3DS. Rhino and original 3DS downloads stay unchanged.
+The lossless full-CAD web stream is 39.15 MB for the current 157.20 MB 3DS, but it is separate from initial regional browsing. Full CAD downloads use the unchanged metric source archived as `.3ds.gz`; the standalone edition uses the adjacent archive. Regional geometry is a visual derivative, while original CAD archive/codec restoration is byte-exact. See `docs/REGIONAL_RENDERING.md`, `output/streaming_model_report.json` and `output/web_model_report.json` for scope, limits, exact sizes and digests.
 
-A single browser worker streams gzip decompression, restores small geometry blocks and parses the CAD model. Its compressed input and resulting geometry buffers are transferred rather than copied. The full intermediate archive is never retained. Scene setup yields to rendering between time slices; browsers that block workers use cooperative per-object parsing. Standalone HTML restores the downloadable CAD on demand in a worker. Decoder JavaScript/WebAssembly is bundled locally and requires no CDN. See `output/web_model_report.json` for byte counts, source digest and maximum block size. `npm run build:model` rebuilds the stream; `npm run check:compression` checks lossless restoration and worker behavior.
-
-## Memory and responsiveness
-
-- At most one decode/parse worker per load. No worker pool is created.
-- A full source CAD buffer still exists temporarily inside that worker; meshes and GPU resources necessarily consume memory too. Compression reduces transfer and duplicate input buffers, not the final model complexity.
-- Native gzip output is consumed a block at a time. Blocks are limited to 4 MiB; the current maximum is recorded in the report. Face decoding needs one additional local 16-bit index array.
-- The no-worker path yields between objects; a single 3DS object remains the indivisible parsing unit. This improves responsiveness but cannot guarantee identical performance on every browser/device.
-- HTTP and root file editions download the original CAD directly on request. The standalone edition recovers the same CAD bytes in a separate on-demand worker after startup.
+HTTP uses binary assets. Local double-click editions load classic-script assets; standalone HTML embeds its compressed browsing data. Parsing/decompression is cooperative or worker-based where appropriate. Geometry, framebuffers and browser storage remain additional memory costs.
