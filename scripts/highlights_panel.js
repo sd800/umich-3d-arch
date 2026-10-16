@@ -4,6 +4,7 @@ export function installHighlightsPanel({panel,button,content,title,label,text}) 
   function refresh() {
     const focusInside=content.contains(content.ownerDocument.activeElement);
     panel.classList.toggle('is-collapsed',collapsed);
+    button.classList.toggle('map-action',collapsed);
     content.hidden=collapsed;title.hidden=collapsed;label.hidden=!collapsed;
     title.textContent=text('tourTitle');label.textContent=text('exploreHighlights');
     panel.setAttribute('aria-labelledby',collapsed?label.id:title.id);

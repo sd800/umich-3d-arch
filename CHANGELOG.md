@@ -1,5 +1,10 @@
 # Changelog
 
+## 26.10.15.6 — 2026-10-15
+
+- Match the collapsed Explore button to Guide, including size, typography, colors, border and hover/focus states.
+- Keep Guide right-aligned in the wrapping map toolbar on phones; use available row space instead of forcing a separate line. Position Highlights below the actual toolbar height in both languages and at different viewport widths.
+
 ## 26.10.15.5 — 2026-10-15
 
 - Add an accessible top-right collapse button to Architectural Highlights. Collapsing replaces the panel with a single Explore button (localized in Chinese); clicking that button restores the panel.
