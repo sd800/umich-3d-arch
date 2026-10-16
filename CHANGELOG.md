@@ -1,5 +1,9 @@
 # Changelog
 
+## 26.10.16.8 — 2026-10-16
+
+- Declare the campus sitemap hosted by the Campus 3D Models collection for cross-site discovery, alongside the existing campus sitemap. Preserve both declarations when packaging future website releases.
+
 ## 26.10.16.7 — 2026-10-16
 
 - Include all regenerated regional geometry assets and the dedicated Courtyards generator in the published model delivery.
