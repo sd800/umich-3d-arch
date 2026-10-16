@@ -103,8 +103,8 @@ export function createRegionStream({data,parent,renderer,camera,host,onChange=()
   for(let i=0;i<index.length;i++){const t=index[i],cell=await makeCell(bytes.subarray(start+t.offset,start+t.offset+t.length));base.set(t.key,cell);root.add(cell);report({phase:'scene',loaded:i+1,total:index.length});}
   refreshStats();return root;
  }
- function setState({buildings,selected:nextSelected,environment:env,details:det,neighbors:near,cut}){
-  lastView='';states=buildings;selected=nextSelected;environment=env;details=det;neighbors=near;uniforms.campusSelected.value=codeIds.get(selected)||0;uniforms.campusCut.value=cut??100000;
+ function setState({buildings,selected:nextSelected,highlighted=nextSelected,environment:env,details:det,neighbors:near,cut}){
+  lastView='';states=buildings;selected=nextSelected;environment=env;details=det;neighbors=near;uniforms.campusSelected.value=codeIds.get(highlighted)||0;uniforms.campusCut.value=cut??100000;
   pixels.fill(255);for(let i=0;i<codes.length;i++)if(buildings.get(codes[i])?.visible===false||neighborCodes.has(codes[i])&&!neighbors)pixels[i+1]=0;
   texture.needsUpdate=true;for(const group of [...base.values(),...[...resident.values()].map(x=>x.group)])applyOptions(group);
  }

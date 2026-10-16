@@ -7095,7 +7095,7 @@
     "zone": "neighbors",
     "neighbor": true,
     "landmark": false,
-    "height": 12.8,
+    "height": 15.75,
     "height_status": "estimated",
     "levels": 4,
     "area": 3146.43,
@@ -7106,15 +7106,15 @@
       2231.625
     ],
     "ground_m": 51.661,
-    "peak_m": 64.461,
+    "peak_m": 67.411,
     "basis_en": "Mapped OSM height/storey tags where available; missing heights and all secondary dimensions are estimates.",
     "basis": "优先采用 OpenStreetMap 已有高度与层数标记；缺失高度及次要构件尺寸为估算。",
-    "partition_en": "Mapped footprint and courtyard holes, continuous closed ground support, individual flat or pitched roofs, attached facade windows and street-facing entries. Secondary members are approximate.",
-    "partition": "保留地图轮廓与庭院空隙，采用接地的闭合基座、独立平屋顶或坡屋顶、附着于立面的窗格和临街入口；次要构件为近似表达。",
+    "partition_en": "Four main residential storeys and a partially exposed lower street level, red brick with pale lower masonry and vertical cladding fields, framed narrow windows, supported entry porticoes, courtyard-respecting gray hipped roofs and open landscaped court decks. Secondary dimensions and site furniture are approximate.",
+    "partition": "四层住宅与局部临街下层，红砖、浅色基座与竖向墙面分区、附墙窗框、入口门廊、保留庭院的灰色坡屋顶及庭院铺装绿化。次要尺寸和景观构件为近似表达。",
     "source": "https://www.openstreetmap.org/relation/3874939",
     "footprint_source": "https://www.openstreetmap.org/relation/3874939",
     "address": "1760 Broadway Street",
-    "roof_shape": "flat",
+    "roof_shape": "hipped",
     "height_tags": {
       "building:levels": "4",
       "building:material": "brick"
@@ -7122,7 +7122,12 @@
     "automatic_rooftop_boxes": false,
     "exterior_source": "https://courtyardsapts.com/gallery/",
     "courtyard_voids": 1,
-    "contextLabel": true
+    "contextLabel": false,
+    "architecture_detail": {
+      "window_bays": 500,
+      "open_courts": 1,
+      "hip_roof": true
+    }
   },
   {
     "code": "N0193",
@@ -8652,7 +8657,7 @@
     "zone": "neighbors",
     "neighbor": true,
     "landmark": false,
-    "height": 12.8,
+    "height": 15.75,
     "height_status": "estimated",
     "levels": 4,
     "area": 3079.87,
@@ -8663,15 +8668,15 @@
       2139.752
     ],
     "ground_m": 54.985,
-    "peak_m": 67.785,
+    "peak_m": 70.735,
     "basis_en": "Mapped OSM height/storey tags where available; missing heights and all secondary dimensions are estimates.",
     "basis": "优先采用 OpenStreetMap 已有高度与层数标记；缺失高度及次要构件尺寸为估算。",
-    "partition_en": "Mapped footprint and courtyard holes, continuous closed ground support, individual flat or pitched roofs, attached facade windows and street-facing entries. Secondary members are approximate.",
-    "partition": "保留地图轮廓与庭院空隙，采用接地的闭合基座、独立平屋顶或坡屋顶、附着于立面的窗格和临街入口；次要构件为近似表达。",
+    "partition_en": "Four main residential storeys and a partially exposed lower street level, red brick with pale lower masonry and vertical cladding fields, framed narrow windows, supported entry porticoes, courtyard-respecting gray hipped roofs and open landscaped court decks. Secondary dimensions and site furniture are approximate.",
+    "partition": "四层住宅与局部临街下层，红砖、浅色基座与竖向墙面分区、附墙窗框、入口门廊、保留庭院的灰色坡屋顶及庭院铺装绿化。次要尺寸和景观构件为近似表达。",
     "source": "https://www.openstreetmap.org/relation/3874940",
     "footprint_source": "https://www.openstreetmap.org/relation/3874940",
     "address": "1770 Broadway Street",
-    "roof_shape": "flat",
+    "roof_shape": "hipped",
     "height_tags": {
       "building:levels": "4",
       "building:material": "brick"
@@ -8679,7 +8684,12 @@
     "automatic_rooftop_boxes": false,
     "exterior_source": "https://courtyardsapts.com/gallery/",
     "courtyard_voids": 1,
-    "contextLabel": true
+    "contextLabel": false,
+    "architecture_detail": {
+      "window_bays": 480,
+      "open_courts": 1,
+      "hip_roof": true
+    }
   },
   {
     "code": "N0235",
@@ -10246,7 +10256,7 @@
     "zone": "neighbors",
     "neighbor": true,
     "landmark": false,
-    "height": 12.8,
+    "height": 15.75,
     "height_status": "estimated",
     "levels": 4,
     "area": 2967.38,
@@ -10257,15 +10267,15 @@
       2049.48
     ],
     "ground_m": 57.71,
-    "peak_m": 70.51,
+    "peak_m": 73.46,
     "basis_en": "Mapped OSM height/storey tags where available; missing heights and all secondary dimensions are estimates.",
     "basis": "优先采用 OpenStreetMap 已有高度与层数标记；缺失高度及次要构件尺寸为估算。",
-    "partition_en": "Mapped footprint and courtyard holes, continuous closed ground support, individual flat or pitched roofs, attached facade windows and street-facing entries. Secondary members are approximate.",
-    "partition": "保留地图轮廓与庭院空隙，采用接地的闭合基座、独立平屋顶或坡屋顶、附着于立面的窗格和临街入口；次要构件为近似表达。",
+    "partition_en": "Four main residential storeys and a partially exposed lower street level, red brick with pale lower masonry and vertical cladding fields, framed narrow windows, supported entry porticoes, courtyard-respecting gray hipped roofs and open landscaped court decks. Secondary dimensions and site furniture are approximate.",
+    "partition": "四层住宅与局部临街下层，红砖、浅色基座与竖向墙面分区、附墙窗框、入口门廊、保留庭院的灰色坡屋顶及庭院铺装绿化。次要尺寸和景观构件为近似表达。",
     "source": "https://www.openstreetmap.org/relation/3874941",
     "footprint_source": "https://www.openstreetmap.org/relation/3874941",
     "address": "1780 Broadway Street",
-    "roof_shape": "flat",
+    "roof_shape": "hipped",
     "height_tags": {
       "building:levels": "4",
       "building:material": "brick"
@@ -10273,7 +10283,12 @@
     "automatic_rooftop_boxes": false,
     "exterior_source": "https://courtyardsapts.com/gallery/",
     "courtyard_voids": 1,
-    "contextLabel": true
+    "contextLabel": false,
+    "architecture_detail": {
+      "window_bays": 476,
+      "open_courts": 1,
+      "hip_roof": true
+    }
   },
   {
     "code": "N0278",

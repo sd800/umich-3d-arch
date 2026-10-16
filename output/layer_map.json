@@ -21344,10 +21344,25 @@
     "category": "neighbor-building",
     "material": "ContextBrick"
   },
-  "N0192M5800": {
+  "N0192D1900": {
     "layer": "N0192_The Courtyards · 1760 Broadway",
     "category": "neighbor-building",
-    "material": "ContextBrick"
+    "material": "LightStone"
+  },
+  "N0192D2400": {
+    "layer": "N0192_The Courtyards · 1760 Broadway",
+    "category": "neighbor-building",
+    "material": "WhitePanel"
+  },
+  "N0192M4000": {
+    "layer": "N0192_The Courtyards · 1760 Broadway",
+    "category": "neighbor-building",
+    "material": "Trunk"
+  },
+  "N0192D4100": {
+    "layer": "N0192_The Courtyards · 1760 Broadway",
+    "category": "neighbor-building",
+    "material": "Furniture"
   },
   "N0192M5900": {
     "layer": "N0192_The Courtyards · 1760 Broadway",
@@ -21359,10 +21374,15 @@
     "category": "neighbor-building",
     "material": "ContextGlass"
   },
-  "N0192M6300": {
+  "N0192M6200": {
     "layer": "N0192_The Courtyards · 1760 Broadway",
     "category": "neighbor-building",
-    "material": "RoofContext"
+    "material": "ContextLeaves"
+  },
+  "N0192M6400": {
+    "layer": "N0192_The Courtyards · 1760 Broadway",
+    "category": "neighbor-building",
+    "material": "RoofContextSlate"
   },
   "N0193B0": {
     "layer": "N0193_Ann Arbor building 1354331446",
@@ -22189,10 +22209,25 @@
     "category": "neighbor-building",
     "material": "ContextBrick"
   },
-  "N0234M5800": {
+  "N0234D1900": {
     "layer": "N0234_The Courtyards · 1770 Broadway",
     "category": "neighbor-building",
-    "material": "ContextBrick"
+    "material": "LightStone"
+  },
+  "N0234D2400": {
+    "layer": "N0234_The Courtyards · 1770 Broadway",
+    "category": "neighbor-building",
+    "material": "WhitePanel"
+  },
+  "N0234M4000": {
+    "layer": "N0234_The Courtyards · 1770 Broadway",
+    "category": "neighbor-building",
+    "material": "Trunk"
+  },
+  "N0234D4100": {
+    "layer": "N0234_The Courtyards · 1770 Broadway",
+    "category": "neighbor-building",
+    "material": "Furniture"
   },
   "N0234M5900": {
     "layer": "N0234_The Courtyards · 1770 Broadway",
@@ -22204,10 +22239,15 @@
     "category": "neighbor-building",
     "material": "ContextGlass"
   },
-  "N0234M6300": {
+  "N0234M6200": {
     "layer": "N0234_The Courtyards · 1770 Broadway",
     "category": "neighbor-building",
-    "material": "RoofContext"
+    "material": "ContextLeaves"
+  },
+  "N0234M6400": {
+    "layer": "N0234_The Courtyards · 1770 Broadway",
+    "category": "neighbor-building",
+    "material": "RoofContextSlate"
   },
   "N0235B0": {
     "layer": "N0235_Ann Arbor building 899677506",
@@ -23054,10 +23094,25 @@
     "category": "neighbor-building",
     "material": "ContextBrick"
   },
-  "N0277M5800": {
+  "N0277D1900": {
     "layer": "N0277_The Courtyards · 1780 Broadway",
     "category": "neighbor-building",
-    "material": "ContextBrick"
+    "material": "LightStone"
+  },
+  "N0277D2400": {
+    "layer": "N0277_The Courtyards · 1780 Broadway",
+    "category": "neighbor-building",
+    "material": "WhitePanel"
+  },
+  "N0277M4000": {
+    "layer": "N0277_The Courtyards · 1780 Broadway",
+    "category": "neighbor-building",
+    "material": "Trunk"
+  },
+  "N0277D4100": {
+    "layer": "N0277_The Courtyards · 1780 Broadway",
+    "category": "neighbor-building",
+    "material": "Furniture"
   },
   "N0277M5900": {
     "layer": "N0277_The Courtyards · 1780 Broadway",
@@ -23069,10 +23124,15 @@
     "category": "neighbor-building",
     "material": "ContextGlass"
   },
-  "N0277M6300": {
+  "N0277M6200": {
     "layer": "N0277_The Courtyards · 1780 Broadway",
     "category": "neighbor-building",
-    "material": "RoofContext"
+    "material": "ContextLeaves"
+  },
+  "N0277M6400": {
+    "layer": "N0277_The Courtyards · 1780 Broadway",
+    "category": "neighbor-building",
+    "material": "RoofContextSlate"
   },
   "N0278B0": {
     "layer": "N0278_Ann Arbor building 1354346400",

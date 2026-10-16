@@ -1,5 +1,11 @@
 # Changelog
 
+## 26.10.16.6 — 2026-10-16
+
+- Optimize all three Courtyards apartment buildings from the property’s aerial and exterior photographs: gray hipped roofs around open courts, pale masonry bases, alternating brick/light facade fields, framed windows, supported entrances and furnished courtyard decks. Keep them in neighboring areas and remove their standing labels while preserving hover inspection.
+
+- Keep buildings selected in Highlights Explore, previous/next and dropdown navigation while preserving their original material colors. Direct model/list clicks retain the existing selection highlight. Preserve this distinction during loading and regional-detail updates.
+
 ## 26.10.16.5 — 2026-10-16
 
 - Update delivery documentation with current model sizes and distinguish regional browsing derivatives from exact full-CAD restoration and downloads.

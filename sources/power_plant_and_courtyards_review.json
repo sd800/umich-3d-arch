@@ -24,7 +24,11 @@
       "relation/3874940",
       "relation/3874941"
     ],
-    "exterior_storeys": 4
+    "exterior_storeys": 4,
+    "optimization_reviewed": "2026-10-16",
+    "aerial_source": "https://courtyardsapts.com/assets/images/cache/cMe9cnw5XtAzri9NaNEF5Cv2ZI4I6BwBE6ZDj6Dk-4d8d171fb758355329d243db2d541432.jpg",
+    "roof": "Gray hipped ranges around the three mapped open courtyard rings",
+    "standing_labels": false
   },
   "limits": "Public-source exterior study: stack heights published, other local dimensions interpreted; images inspected locally and excluded from redistribution."
 }

@@ -35,6 +35,8 @@
       "courtyard_voids": 1
     }
   ],
-  "courtyard_body_cap_intrusions": 0,
+  "courtyard_body_or_roof_intrusions": 0,
+  "hip_roofs": 3,
+  "standing_labels": false,
   "passed": true
 }

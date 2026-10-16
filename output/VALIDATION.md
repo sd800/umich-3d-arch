@@ -1,11 +1,11 @@
 # Delivery validation
 
 - Rhino v7, meter units; 3941 nonempty layers.
-- 4101 valid closed native massing solids, 12948 closed mesh objects, 604 footprint curves.
-- Independent Three.js 3DS import: 17049 preserved object names, 8,820,432 triangles. All 3DS object names comply with the 10-character mapping convention.
+- 4101 valid closed native massing solids, 13010 closed mesh objects, 604 footprint curves.
+- Independent Three.js 3DS import: 17111 preserved object names, 9,369,232 triangles. All 3DS object names comply with the 10-character mapping convention.
 - Published / municipal landmark peaks agree with their selected model height values within 1 cm.
 - Current architecture: individual Law Quadrangle, Diag core, Lurie and Leinweber reconstructions, corrected exterior-level interpretation and local roof ranges. No automatically generated rooftop machinery. Satellite-referenced parking rows retain drive aisles and exclude unmarked areas. English is the default regardless of device locale.
-- Current compression: 70.40 MB → 37.95 MB; exact restored CAD SHA-256 and all mesh positions/normals/indices/material groups. Single-worker transfer, bounded streaming decode and cooperative fallback checks pass.
+- Current regional overview: 16.66 MB; lossless full-CAD stream: 158.60 MB source to 39.33 MB transfer. Full-CAD restoration preserves the exact SHA-256.
 - Viewer tests: English/Chinese language selection; HTTP compressed binary, local classic script, inline model and error paths; SHA-256 equality with original CAD bytes.
 - Camera checks: 554 building targets × three viewport proportions = 1662 zoom-out/refit cases, retaining access to the whole campus.
 - Navigation: 48 viewport, bearing and view combinations plus 144 exact-level/low-angle cases; mouse/touch direction, terrain pivots, cursor zoom, horizon and zoom-step limits, no inertia, drag/pinch selection and local preset checks.
@@ -32,3 +32,10 @@ The checks validate deliverable integrity and behavior; they do not certify publ
 
 - Central Power Plant: both exported stack peaks match the published heights; separate industrial halls retained.
 - Courtyards: three four-storey footprints, three open courtyards and no apartment body caps intruding into the mapped court voids.
+
+## Release 26.10.16.6 focused follow-up
+
+- Three four-storey Courtyards rings retain their open courts. Exported body/roof checks find zero intrusions into the court interiors; all three roofs have a physical hip rise. Mitred contour ranges replace the initially faceted grid roof.
+- Regional assets and overview retain owner IDs, native-source digest, local classic-script byte integrity, hysteresis and explicit mobile/desktop residency limits.
+- Current root/standalone data, SEO and native CAD integrity checks pass. Earlier general navigation/loading reports above remain historical regression coverage.
+- A four-campus selection check confirms original material colors for Explore, normal tint for direct selection and correct tint removal on tour changes. Actual UW WebGL verifies Explore and direct model/list clicks. Actual UMich WebGL verifies the three Courtyards records, no standing label registration and near-detail geometry.

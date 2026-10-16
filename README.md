@@ -108,9 +108,9 @@ Roof shadow filtering uses a fixed PCF kernel with receiver-plane depth correcti
 
 ## Website model compression
 
-Interactive browsing starts with a **16.65 MB** regional overview. It does not restore the entire source CAD at startup. Nearby full-detail packets are requested within explicit geometry budgets and disposed when they leave the working area. Repeated components use shared templates and instancing; distant facades and tree crowns use a simplified browsing derivative.
+Interactive browsing starts with a **16.66 MB** regional overview. It does not restore the entire source CAD at startup. Nearby full-detail packets are requested within explicit geometry budgets and disposed when they leave the working area. Repeated components use shared templates and instancing; distant facades and tree crowns use a simplified browsing derivative.
 
-The lossless full-CAD web stream is 39.15 MB for the current 157.20 MB 3DS, but it is separate from initial regional browsing. Full CAD downloads use the unchanged metric source archived as `.3ds.gz`; the standalone edition uses the adjacent archive. Regional geometry is a visual derivative, while original CAD archive/codec restoration is byte-exact. See `docs/REGIONAL_RENDERING.md`, `output/streaming_model_report.json` and `output/web_model_report.json` for scope, limits, exact sizes and digests.
+The lossless full-CAD web stream is 39.33 MB for the current 158.60 MB 3DS, but it is separate from initial regional browsing. Full CAD downloads use the unchanged metric source archived as `.3ds.gz`; the standalone edition uses the adjacent archive. Regional geometry is a visual derivative, while original CAD archive/codec restoration is byte-exact. See `docs/REGIONAL_RENDERING.md`, `output/streaming_model_report.json` and `output/web_model_report.json` for scope, limits, exact sizes and digests.
 
 ## Architectural and parking refinement
 
@@ -131,3 +131,9 @@ Ann Arbor context is visible by default. In All, the first item is **⁺Campus n
 The scope includes State Street, South University, Main Street/Kerrytown, Packard/stadium streets, Broadway and Plymouth Road. Footprints retain courtyard holes; windows and street-facing entrances attach to individual flat/pitched volumes. Closed foundations meet the same USGS terrain as campus. A restrained context palette distinguishes surrounding buildings. The new geometry fills streets and walks missing from the broad study-ground extent while preserving mapped university surfaces. Mapped surface parking and green areas are retained; no invented parking stripes or automatic roof boxes are introduced.
 
 See `sources/NEIGHBORHOOD_REFERENCES.md` and `sources/neighboring_source_manifest.json`. Separate records, metric footprints, dimensions/sources and validation are in the `output/neighboring_*` files. The neighboring database is © OpenStreetMap contributors, ODbL 1.0. Untagged heights, secondary facade modules and roof forms remain exterior interpretations.
+
+## Courtyards apartments
+
+All three neighboring Courtyards buildings at 1760, 1770 and 1780 Broadway retain their mapped open courts and now have photo-referenced gray hipped roofs, alternating brick/pale facade fields, framed windows, supported entrances and furnished courtyard decks. They remain separate neighboring-area layers, without standing labels; hover and search are available. Exterior dimensions and secondary details remain approximate.
+
+Highlights Explore preserves the selected building’s original materials; direct model and list clicks retain the existing highlight.

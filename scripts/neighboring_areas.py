@@ -2,6 +2,7 @@
 Building footprints and streets are mapped; facade members and untagged heights
 are exterior interpretations. Campus-owned footprints always take precedence.
 """
+from courtyards_architecture import build_courtyards
 from pathlib import Path
 import csv,gzip,json,math,re,xml.etree.ElementTree as ET
 import numpy as np
@@ -216,13 +217,15 @@ def build_neighbors(c,prepared):
   wall='ContextBrick'if t.get('building:material')=='brick'or kind in ['house','detached','dormitory']else 'ContextStone'if kind in ['church','retail','yes']else 'ContextPanel';source='https://www.openstreetmap.org/'+t['osm_id']
   height_status='estimated'
   if name in PROFILES:levels,h,wall,source=PROFILES[name];height_status='municipal'
+  is_courtyards=t['osm_id']in COURTYARDS
+  if is_courtyards:h=15.75;levels=4;wall='ContextBrick'
   roof_shape=t.get('roof:shape','gabled'if kind in ['house','detached']and p.area<400 else'flat');rise=min(3.4,h*.24)if roof_shape in ['gabled','hipped','half-hipped','mansard']else 0;body=h-rise-.15
   roof='RoofContextSlate'if rise else 'RoofContextWarm'if t.get('roof:colour')in ['white','beige','silver']else 'RoofContext'
   lay=code+'_'+name.replace('/',' ').replace(':',' ')[:80];c.layer(lay,wall);ms={m:[]for m in c.COLORS}
-  is_courtyards=t['osm_id']in COURTYARDS
   info={'NameEN':name,'Scope':'Campus neighboring areas','Units':'meters','FootprintSource':'https://www.openstreetmap.org/'+t['osm_id'],'Source':source,'Approximation':'Public-source exterior study; untagged height, roof shape and facade modules approximate.'}
   body_no=0
-  for q in c.polygons(p):
+  courtyard_detail=build_courtyards(c,p,z,code,lay,info,ms,add_surface,ground,street_union)if is_courtyards else None
+  for q in ([]if is_courtyards else c.polygons(p)):
    c.native_extrude(q,z,body,code+'_Body'+str(body_no),lay,wall,info);c.push(code+'B'+str(body_no),c.extrusion(q,z,body),wall,lay,native=False,info=info);body_no+=1
    support=c.extrusion(segmentize(q,7),z-1.5,1.5);bottom=support.vertices[:,2]<z-.7;support.vertices[bottom,2]=np.minimum(z-1,c.raw_ground(support.vertices[bottom,0],support.vertices[bottom,1])-1.2);ms[wall].append(support)
    add_surface(q,z-.15,.15,'ContextGround',False,False)
@@ -247,24 +250,16 @@ def build_neighbors(c,prepared):
      if near and length>8:
       # A restrained entrance on the street-facing elevation.
       origin=mid;ww=min(1.8,length*.2);door=c.boxmesh(0,0,0,ww,.09,2.25);vv=door.vertices.copy();door.vertices=np.column_stack((origin[0]+vv[:,0]*u[0]+(vv[:,1]+.12)*n[0],origin[1]+vv[:,0]*u[1]+(vv[:,1]+.12)*n[1],z+.03+vv[:,2]));trimesh.repair.fix_normals(door);ms['ContextGlass'].append(door)
-   if is_courtyards:
-    # Official exterior photos show a pale stone lower half, brick upper
-    # floors and a continuous light cornice. Keep the real courtyard open.
-    base_skin=q.buffer(.14,join_style=2).difference(q)
-    for edge in c.polygons(base_skin):ms['ContextStone'].append(c.extrusion(edge,z,min(body,5.65)))
-    cornice=q.buffer(.24,join_style=2).difference(q.buffer(-.12,join_style=2))
-    for edge in c.polygons(cornice):ms['ContextStone'].append(c.extrusion(edge,z+body-.1,.34))
-    for ring in q.interiors:
-     court=Polygon(ring);add_surface(court,z+.02,.055,'ContextGrass',False,False)
-     path=court.boundary.buffer(1.05).intersection(court);add_surface(path,z+.09,.035,'ContextWalk',False,False)
    if not rise:
     edge=q.boundary.buffer(.09,join_style=2).intersection(q)
     for pp in c.polygons(edge):ms[roof].append(c.extrusion(pp,z+body+.15,.16))
   for k,(mat,parts)in enumerate(ms.items()):
-   if parts:c.chunk_meshes(code+('D'if mat=='ContextGlass'else'M')+f'{k:02d}',parts,mat,lay,info)
+   if parts:c.chunk_meshes(code+('D'if mat=='ContextGlass'or is_courtyards and mat in ['LightStone','Furniture','WhitePanel']else'M')+f'{k:02d}',parts,mat,lay,info)
   a,b,d,e=p.bounds;zh=CHINESE.get(name,'安娜堡建筑 '+t['osm_id'].split('/')[-1] if name.startswith('Ann Arbor building ') else name)
   if is_courtyards:zh='The Courtyards 公寓 · Broadway 街 '+COURTYARDS[t['osm_id']]+'号'
-  r={'code':code,'facility_id':t['osm_id'],'name':name,'name_zh':zh,'short':name,'short_zh':zh,'layer':lay,'zone':'neighbors','neighbor':True,'landmark':False,'height':round(h,3),'height_status':height_status,'levels':levels,'area':round(p.area,2),'width':round(d-a,2),'depth':round(e-b,2),'center':[round(p.centroid.x,3),round(p.centroid.y,3)],'ground_m':round(z,3),'peak_m':round(z+h,3),'basis_en':('Height and storeys follow the city’s 2023 downtown inventory; these are historical municipal estimates. Other dimensions and facade subdivisions are approximate.' if height_status=='municipal' else 'Mapped OSM height/storey tags where available; missing heights and all secondary dimensions are estimates.'),'basis':('高度与层数采用市政府2023年市中心建筑清单，属于市级历史估算；其他尺寸与立面分格为近似表达。' if height_status=='municipal' else '优先采用 OpenStreetMap 已有高度与层数标记；缺失高度及次要构件尺寸为估算。'),'partition_en':'Mapped footprint and courtyard holes, continuous closed ground support, individual flat or pitched roofs, attached facade windows and street-facing entries. Secondary members are approximate.','partition':'保留地图轮廓与庭院空隙，采用接地的闭合基座、独立平屋顶或坡屋顶、附着于立面的窗格和临街入口；次要构件为近似表达。','source':source,'footprint_source':'https://www.openstreetmap.org/'+t['osm_id'],'address':address,'roof_shape':roof_shape,'height_tags':{k:t[k]for k in ['height','building:levels','roof:shape','building:material']if k in t},'automatic_rooftop_boxes':False,'exterior_source':'https://courtyardsapts.com/gallery/'if is_courtyards else EXTERIOR_REFERENCES.get(name,''),'courtyard_voids':sum(len(q.interiors)for q in c.polygons(p)),'contextLabel':is_courtyards}
+  r={'code':code,'facility_id':t['osm_id'],'name':name,'name_zh':zh,'short':name,'short_zh':zh,'layer':lay,'zone':'neighbors','neighbor':True,'landmark':False,'height':round(h,3),'height_status':height_status,'levels':levels,'area':round(p.area,2),'width':round(d-a,2),'depth':round(e-b,2),'center':[round(p.centroid.x,3),round(p.centroid.y,3)],'ground_m':round(z,3),'peak_m':round(z+h,3),'basis_en':('Height and storeys follow the city’s 2023 downtown inventory; these are historical municipal estimates. Other dimensions and facade subdivisions are approximate.' if height_status=='municipal' else 'Mapped OSM height/storey tags where available; missing heights and all secondary dimensions are estimates.'),'basis':('高度与层数采用市政府2023年市中心建筑清单，属于市级历史估算；其他尺寸与立面分格为近似表达。' if height_status=='municipal' else '优先采用 OpenStreetMap 已有高度与层数标记；缺失高度及次要构件尺寸为估算。'),'partition_en':'Mapped footprint and courtyard holes, continuous closed ground support, individual flat or pitched roofs, attached facade windows and street-facing entries. Secondary members are approximate.','partition':'保留地图轮廓与庭院空隙，采用接地的闭合基座、独立平屋顶或坡屋顶、附着于立面的窗格和临街入口；次要构件为近似表达。','source':source,'footprint_source':'https://www.openstreetmap.org/'+t['osm_id'],'address':address,'roof_shape':roof_shape,'height_tags':{k:t[k]for k in ['height','building:levels','roof:shape','building:material']if k in t},'automatic_rooftop_boxes':False,'exterior_source':'https://courtyardsapts.com/gallery/'if is_courtyards else EXTERIOR_REFERENCES.get(name,''),'courtyard_voids':sum(len(q.interiors)for q in c.polygons(p)),'contextLabel':False}
+  if is_courtyards:
+   r.update({'roof_shape':'hipped','architecture_detail':courtyard_detail,'partition_en':'Four main residential storeys and a partially exposed lower street level, red brick with pale lower masonry and vertical cladding fields, framed narrow windows, supported entry porticoes, courtyard-respecting gray hipped roofs and open landscaped court decks. Secondary dimensions and site furniture are approximate.','partition':'四层住宅与局部临街下层，红砖、浅色基座与竖向墙面分区、附墙窗框、入口门廊、保留庭院的灰色坡屋顶及庭院铺装绿化。次要尺寸和景观构件为近似表达。'})
   records.append(r);f['record']=r;pads.append({'code':code,'height':z,'bounds':list(p.bounds),'geometry':mapping(p)})
   samples.append({'code':code,'position':[p.representative_point().x,p.representative_point().y,z]})
   if j%200==0:print('Neighboring buildings',j,'/',len(accepted),flush=True)
@@ -280,7 +275,7 @@ def build_neighbors(c,prepared):
   elif entry['layer'].startswith('N'):entry['category']='neighbor-building'
  (OUT/'neighboring_records.json').write_text(json.dumps(records,ensure_ascii=False,indent=2))
  with (OUT/'neighboring_building_dimensions_and_sources.csv').open('w',encoding='utf-8-sig',newline='')as fp:
-  writer=csv.DictWriter(fp,fieldnames=list(records[0]));writer.writeheader();writer.writerows(records)
+  writer=csv.DictWriter(fp,fieldnames=list(dict.fromkeys(k for row in records for k in row)));writer.writeheader();writer.writerows(records)
  (OUT/'neighboring_footprints.geojson').write_text(json.dumps({'type':'FeatureCollection','coordinate_system':{'epsg': 32617, 'origin_easting': 274204.49096132047, 'origin_northing': 4684096.36214401, 'origin_wgs84': [-83.7382, 42.2764], 'unit': 'm', 'z_datum': 'local Z0=225m USGS DEM datum', 'note': 'Local projected meters, not RFC7946 longitude/latitude'},'features':[{'type':'Feature','properties':f['record'],'geometry':mapping(f['poly'])}for f in accepted]},ensure_ascii=False,separators=(',',':')))
  report={'ground_cover':ground_cover,'buildings':len(records),'trees':trees,'bounds':list(selection.bounds),'landscape_layer':'Neighboring_Environment','default_visible':True,'street_network':'State Street, South University, Main Street, Kerrytown, Packard, Broadway and Plymouth Road','pads':pads,'ground_samples':samples,'scope_geometry':mapping(area),'land_extent':mapping(selection),'mapped_road_area_m2':roads.area,'mapped_walk_area_m2':walks.area,'mapped_green_area_m2':lawn.area,'mapped_parking_area_m2':lot.area,'footprint_overlap_campus_m2':neighbor_fp.intersection(prepared['protected']).area,'regions_wgs84':REGIONS}
  (OUT/'neighboring_areas.json').write_text(json.dumps(report,ensure_ascii=False,separators=(',',':')))
