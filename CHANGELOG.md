@@ -1,5 +1,9 @@
 # Changelog
 
+## 26.10.16.2 — 2026-10-16
+
+- Rename the English Guide source heading to Reference and add arch.Songming.org after the model download links, linking to the campus model collection.
+
 ## 26.10.16.1 — 2026-10-16
 
 - Keep Guide on the toolbar row when there is room for Guide alone; place collapsed Explore directly below it. Retain Explore to the left of Guide when both fit.
