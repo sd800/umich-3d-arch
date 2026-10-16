@@ -1,5 +1,9 @@
 # Changelog
 
+## 26.10.15.7 — 2026-10-15
+
+- Bring the collapsed Explore button closer to Guide with a consistent 6 px gap on desktop and mobile.
+
 ## 26.10.15.6 — 2026-10-15
 
 - Match the collapsed Explore button to Guide, including size, typography, colors, border and hover/focus states.
