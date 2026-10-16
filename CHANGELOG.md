@@ -1,5 +1,10 @@
 # Changelog
 
+## 26.10.15.2 — 2026-10-15
+
+- Wrap generated offline model Base64 in bounded JavaScript literal lines to prevent compressed binary text from being mistaken for an API credential. Preserve the exact model bytes and existing decoding path without runtime concatenation.
+- Verify the generated classic script with the JavaScript parser and check HTTP, local and standalone model integrity; document the reported alert’s binary-data provenance.
+
 ## 26.10.15.1 — 2026-10-15
 
 - Add independently layered Ann Arbor neighboring buildings, streets, walks, mapped greenery and surface parking around the four campus sectors, using retained georeferenced public sources and terrain-aligned foundations.

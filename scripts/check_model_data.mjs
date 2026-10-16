@@ -1,13 +1,23 @@
 import assert from 'node:assert/strict';
 import {readFile} from 'node:fs/promises';
 import {createHash} from 'node:crypto';
+import {runInNewContext} from 'node:vm';
 import {loadModelBytes} from './model_data.js';
 import {restoreCampusBytes} from './campus_codec.js';
 const html=await readFile(new URL('../index.html',import.meta.url),'utf8'),data=JSON.parse(html.match(/<script id="campus-data"[^>]*>(.*?)<\/script>/s)[1]);
 const report=JSON.parse(await readFile(new URL('../output/web_model_report.json',import.meta.url),'utf8'));
 const expected=await readFile(new URL('../'+report.source,import.meta.url)),compressed=await readFile(new URL('../assets/campus-model.bin',import.meta.url));
 const hash=value=>createHash('sha256').update(value).digest('hex');
-const source=await readFile(new URL('../assets/model-local.js',import.meta.url),'utf8'),encoded=JSON.parse(source.slice(source.indexOf('=')+1,-2));
+const source=await readFile(new URL('../assets/model-local.js',import.meta.url),'utf8');
+// Evaluate our generated classic script with the JS parser, including literal
+// line continuations, in an isolated context without Node or browser services.
+const globals={window:{}};
+runInNewContext(source,globals,{timeout:10000,contextCodeGeneration:{strings:false,wasm:false}});
+const encoded=globals.window[data.modelGlobal];
+assert.equal(typeof encoded,'string');
+assert.match(encoded,/^[A-Za-z0-9+/]+={0,2}$/);
+assert.ok(!/[A-Za-z0-9+/]{33}/.test(source.replace(/^\/\/.*$/gm,'')), 'Keep generated binary text in bounded physical lines');
+assert.equal(hash(Buffer.from(encoded,'base64')),hash(compressed));
 assert.equal(hash(await loadModelBytes({...data,model:encoded})),hash(compressed));
 let requested;
 const http=await loadModelBytes(data,{protocol:'https:',fetch:async url=>{requested=url;return {ok:true,arrayBuffer:async()=>compressed.buffer.slice(compressed.byteOffset,compressed.byteOffset+compressed.byteLength)};}});

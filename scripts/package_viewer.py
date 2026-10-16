@@ -181,7 +181,16 @@ def edition(payload,font,preview,icons,logo,script,robots,rhino):
     assert not any(token in html for token in ['__CAMPUS_DATA__','__TITLE_FONT_URL__','__PREVIEW_IMAGE__','__FAVICON__','__APPLE_ICON__','__LOGO__','__VIEWER_SCRIPT__','__ROBOTS__','__RHINO_URL__'])
     return html
 (assets/'viewer.bundle.js').write_text(bundle)
-(assets/'model-local.js').write_text('window.__UMICH_MODEL_BASE64__='+json.dumps(encoded)+';\n')
+# This is generated binary model data, not configuration or credentials. Keep
+# short physical lines without runtime concatenation or extra decode buffers.
+# JavaScript removes each backslash-newline while parsing the string literal.
+with (assets/'model-local.js').open('w') as local_model:
+    local_model.write('// Generated lossless model data; source: assets/campus-model.bin.\n')
+    local_model.write('window.__UMICH_MODEL_BASE64__="')
+    for offset in range(0,len(encoded),32):
+        if offset:local_model.write('\\\n')
+        local_model.write(encoded[offset:offset+32])
+    local_model.write('";\n')
 html=edition(data,'assets/fonts/Manrope.ttf','output/campus_aerial.png',{'32':'assets/favicon-32.png','16':'assets/favicon-16.png','apple':'assets/apple-touch-icon.png'},'assets/brand/m-map-192.png','<script defer src="assets/viewer.bundle.js?v='+hashlib.sha256(bundle.encode()).hexdigest()[:12]+'"></script>','index, follow, max-image-preview:large','output/UMich_AnnArbor_Layered.3dm.xz')
 (root/'index.html').write_text(html)
 def png(path):return 'data:image/png;base64,'+base64.b64encode((assets/path).read_bytes()).decode()
