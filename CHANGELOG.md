@@ -1,5 +1,11 @@
 # Changelog
 
+## 26.10.15.5 — 2026-10-15
+
+- Add an accessible top-right collapse button to Architectural Highlights. Collapsing replaces the panel with a single Explore button (localized in Chinese); clicking that button restores the panel.
+- Shrink the collapsed panel, adapt its toggle for mobile layouts and preserve the current landmark, camera view and collapse state during language changes.
+- Rename the guide entry to Guide, open its dialog at the heading instead of automatically scrolling to a link on phones, and place Sources after the model downloads.
+
 ## 26.10.15.4 — 2026-10-15
 
 - Add two-finger parallel vertical dragging to adjust pitch directly, without enabling Rotate. Keep single-finger pan, two-finger twist, pinch zoom and desktop controls available.
