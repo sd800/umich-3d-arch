@@ -64,6 +64,11 @@
     "category": "building",
     "material": "LightStone"
   },
+  "M003HD0000": {
+    "layer": "M003_Detroit Observatory",
+    "category": "building",
+    "material": "Frame"
+  },
   "M003M0400": {
     "layer": "M003_Detroit Observatory",
     "category": "building",
@@ -194,6 +199,16 @@
     "category": "building",
     "material": "Sandstone"
   },
+  "M007HD0000": {
+    "layer": "M007_Rackham Graduate School",
+    "category": "building",
+    "material": "Frame"
+  },
+  "M007HD0100": {
+    "layer": "M007_Rackham Graduate School",
+    "category": "building",
+    "material": "Metal"
+  },
   "M007M0400": {
     "layer": "M007_Rackham Graduate School",
     "category": "building",
@@ -243,6 +258,16 @@
     "layer": "M008_North Quadrangle Residential & Academic Complex",
     "category": "building",
     "material": "Brick"
+  },
+  "M008HD0000": {
+    "layer": "M008_North Quadrangle Residential & Academic Complex",
+    "category": "building",
+    "material": "Frame"
+  },
+  "M008HD0100": {
+    "layer": "M008_North Quadrangle Residential & Academic Complex",
+    "category": "building",
+    "material": "Metal"
   },
   "M008M0400": {
     "layer": "M008_North Quadrangle Residential & Academic Complex",
@@ -1099,6 +1124,11 @@
     "category": "building",
     "material": "Limestone"
   },
+  "M035M0300": {
+    "layer": "M035_Burton Memorial Tower",
+    "category": "building",
+    "material": "Bronze"
+  },
   "M035M0400": {
     "layer": "M035_Burton Memorial Tower",
     "category": "building",
@@ -1113,6 +1143,11 @@
     "layer": "M035_Burton Memorial Tower",
     "category": "building",
     "material": "Slate"
+  },
+  "M035D2800": {
+    "layer": "M035_Burton Memorial Tower",
+    "category": "building",
+    "material": "Frame"
   },
   "M036B00": {
     "layer": "M036_Michigan Square",
@@ -1183,6 +1218,11 @@
     "layer": "M038_Michigan League",
     "category": "building",
     "material": "Brick"
+  },
+  "M038HD0000": {
+    "layer": "M038_Michigan League",
+    "category": "building",
+    "material": "Frame"
   },
   "M038M0400": {
     "layer": "M038_Michigan League",
@@ -1313,6 +1353,11 @@
     "layer": "M042_Hill Auditorium",
     "category": "building",
     "material": "Brick"
+  },
+  "M042HD0000": {
+    "layer": "M042_Hill Auditorium",
+    "category": "building",
+    "material": "Frame"
   },
   "M042M0400": {
     "layer": "M042_Hill Auditorium",
@@ -2444,6 +2489,16 @@
     "category": "building",
     "material": "Brick"
   },
+  "M080HD0000": {
+    "layer": "M080_Angell Hall and Tisch Hall",
+    "category": "building",
+    "material": "Frame"
+  },
+  "M080HD0100": {
+    "layer": "M080_Angell Hall and Tisch Hall",
+    "category": "building",
+    "material": "Metal"
+  },
   "M080M0400": {
     "layer": "M080_Angell Hall and Tisch Hall",
     "category": "building",
@@ -2759,6 +2814,11 @@
     "category": "building",
     "material": "Brick"
   },
+  "M089HD0000": {
+    "layer": "M089_Hatcher Graduate Library · North",
+    "category": "building",
+    "material": "Frame"
+  },
   "M089M0400": {
     "layer": "M089_Hatcher Graduate Library · North",
     "category": "building",
@@ -3064,6 +3124,16 @@
     "category": "building",
     "material": "Limestone"
   },
+  "M098HD0000": {
+    "layer": "M098_University of Michigan Museum of Art",
+    "category": "building",
+    "material": "Frame"
+  },
+  "M098HD0100": {
+    "layer": "M098_University of Michigan Museum of Art",
+    "category": "building",
+    "material": "Metal"
+  },
   "M098M0400": {
     "layer": "M098_University of Michigan Museum of Art",
     "category": "building",
@@ -3184,6 +3254,16 @@
     "category": "building",
     "material": "Limestone"
   },
+  "M101HD0000": {
+    "layer": "M101_William L. Clements Library",
+    "category": "building",
+    "material": "Frame"
+  },
+  "M101HD0100": {
+    "layer": "M101_William L. Clements Library",
+    "category": "building",
+    "material": "Metal"
+  },
   "M101M0400": {
     "layer": "M101_William L. Clements Library",
     "category": "building",
@@ -3283,6 +3363,16 @@
     "layer": "M103_Michigan Union",
     "category": "building",
     "material": "Brick"
+  },
+  "M103HD0000": {
+    "layer": "M103_Michigan Union",
+    "category": "building",
+    "material": "Frame"
+  },
+  "M103HD0100": {
+    "layer": "M103_Michigan Union",
+    "category": "building",
+    "material": "Metal"
   },
   "M103M0400": {
     "layer": "M103_Michigan Union",
@@ -3658,6 +3748,11 @@
     "layer": "M112_Lawyers Club and Charles T. Munger Residences",
     "category": "building",
     "material": "Granite"
+  },
+  "M112HD0000": {
+    "layer": "M112_Lawyers Club and Charles T. Munger Residences",
+    "category": "building",
+    "material": "LightStone"
   },
   "M112M0000": {
     "layer": "M112_Lawyers Club and Charles T. Munger Residences",
@@ -4164,6 +4259,16 @@
     "category": "building",
     "material": "Granite"
   },
+  "M126HD0000": {
+    "layer": "M126_William W. Cook Legal Research Library",
+    "category": "building",
+    "material": "LightStone"
+  },
+  "M126HD0100": {
+    "layer": "M126_William W. Cook Legal Research Library",
+    "category": "building",
+    "material": "Metal"
+  },
   "M126M0400": {
     "layer": "M126_William W. Cook Legal Research Library",
     "category": "building",
@@ -4388,6 +4493,16 @@
     "layer": "M132_Hutchins Hall",
     "category": "building",
     "material": "Granite"
+  },
+  "M132HD0000": {
+    "layer": "M132_Hutchins Hall",
+    "category": "building",
+    "material": "LightStone"
+  },
+  "M132HD0100": {
+    "layer": "M132_Hutchins Hall",
+    "category": "building",
+    "material": "Metal"
   },
   "M132M0000": {
     "layer": "M132_Hutchins Hall",
@@ -4803,6 +4918,16 @@
     "layer": "M144_Ross School of Business",
     "category": "building",
     "material": "Terracotta"
+  },
+  "M144HD0000": {
+    "layer": "M144_Ross School of Business",
+    "category": "building",
+    "material": "Frame"
+  },
+  "M144HD0100": {
+    "layer": "M144_Ross School of Business",
+    "category": "building",
+    "material": "Metal"
   },
   "M144M0400": {
     "layer": "M144_Ross School of Business",
@@ -10204,6 +10329,16 @@
     "category": "building",
     "material": "MetalPanel"
   },
+  "M342HD0000": {
+    "layer": "M342_Ford Robotics Building",
+    "category": "building",
+    "material": "Frame"
+  },
+  "M342HD0100": {
+    "layer": "M342_Ford Robotics Building",
+    "category": "building",
+    "material": "Metal"
+  },
   "M342M0400": {
     "layer": "M342_Ford Robotics Building",
     "category": "building",
@@ -11329,6 +11464,16 @@
     "category": "building",
     "material": "NorthBrick"
   },
+  "M377HD0000": {
+    "layer": "M377_Bob & Betty Beyster Building",
+    "category": "building",
+    "material": "Frame"
+  },
+  "M377HD0100": {
+    "layer": "M377_Bob & Betty Beyster Building",
+    "category": "building",
+    "material": "Metal"
+  },
   "M377M0400": {
     "layer": "M377_Bob & Betty Beyster Building",
     "category": "building",
@@ -11403,6 +11548,16 @@
     "layer": "M379_Leinweber Computer Science & Information Building",
     "category": "building",
     "material": "BuffBrick"
+  },
+  "M379HD0000": {
+    "layer": "M379_Leinweber Computer Science & Information Building",
+    "category": "building",
+    "material": "Frame"
+  },
+  "M379HD0100": {
+    "layer": "M379_Leinweber Computer Science & Information Building",
+    "category": "building",
+    "material": "Metal"
   },
   "M379M0400": {
     "layer": "M379_Leinweber Computer Science & Information Building",
@@ -12464,6 +12619,16 @@
     "category": "building",
     "material": "Sandstone"
   },
+  "M410HD0000": {
+    "layer": "M410_Duderstadt Center",
+    "category": "building",
+    "material": "Frame"
+  },
+  "M410HD0100": {
+    "layer": "M410_Duderstadt Center",
+    "category": "building",
+    "material": "Metal"
+  },
   "M410M0400": {
     "layer": "M410_Duderstadt Center",
     "category": "building",
@@ -12844,6 +13009,16 @@
     "category": "building",
     "material": "NorthBrick"
   },
+  "M420HD0000": {
+    "layer": "M420_Art & Architecture Building",
+    "category": "building",
+    "material": "Frame"
+  },
+  "M420HD0100": {
+    "layer": "M420_Art & Architecture Building",
+    "category": "building",
+    "material": "Metal"
+  },
   "M420M0400": {
     "layer": "M420_Art & Architecture Building",
     "category": "building",
@@ -13158,6 +13333,16 @@
     "layer": "M428_Gerald R. Ford Presidential Library",
     "category": "building",
     "material": "NorthBrick"
+  },
+  "M428HD0000": {
+    "layer": "M428_Gerald R. Ford Presidential Library",
+    "category": "building",
+    "material": "Frame"
+  },
+  "M428HD0100": {
+    "layer": "M428_Gerald R. Ford Presidential Library",
+    "category": "building",
+    "material": "Metal"
   },
   "M428M0400": {
     "layer": "M428_Gerald R. Ford Presidential Library",
@@ -14244,6 +14429,16 @@
     "category": "building",
     "material": "LightStone"
   },
+  "M464HD0000": {
+    "layer": "M464_Frankel Cardiovascular Center",
+    "category": "building",
+    "material": "Frame"
+  },
+  "M464HD0100": {
+    "layer": "M464_Frankel Cardiovascular Center",
+    "category": "building",
+    "material": "Metal"
+  },
   "M464M0400": {
     "layer": "M464_Frankel Cardiovascular Center",
     "category": "building",
@@ -14488,6 +14683,16 @@
     "layer": "M472_D. Dan & Betty Kahn Health Care Pavilion",
     "category": "building",
     "material": "LightStone"
+  },
+  "M472HD0000": {
+    "layer": "M472_D. Dan & Betty Kahn Health Care Pavilion",
+    "category": "building",
+    "material": "LightStone"
+  },
+  "M472HD0100": {
+    "layer": "M472_D. Dan & Betty Kahn Health Care Pavilion",
+    "category": "building",
+    "material": "Metal"
   },
   "M472M0400": {
     "layer": "M472_D. Dan & Betty Kahn Health Care Pavilion",
@@ -14739,6 +14944,11 @@
     "category": "building",
     "material": "LightStone"
   },
+  "M480HD0000": {
+    "layer": "M480_Taubman Biomedical Science Research Building",
+    "category": "building",
+    "material": "Frame"
+  },
   "M480M0400": {
     "layer": "M480_Taubman Biomedical Science Research Building",
     "category": "building",
@@ -14768,6 +14978,21 @@
     "layer": "M481_C. S. Mott Children's Hospital & Von Voigtlander Women's Hospital",
     "category": "building",
     "material": "LightStone"
+  },
+  "M481HD0000": {
+    "layer": "M481_C. S. Mott Children's Hospital & Von Voigtlander Women's Hospital",
+    "category": "building",
+    "material": "Frame"
+  },
+  "M481HD0001": {
+    "layer": "M481_C. S. Mott Children's Hospital & Von Voigtlander Women's Hospital",
+    "category": "building",
+    "material": "Frame"
+  },
+  "M481HD0100": {
+    "layer": "M481_C. S. Mott Children's Hospital & Von Voigtlander Women's Hospital",
+    "category": "building",
+    "material": "Metal"
   },
   "M481M0400": {
     "layer": "M481_C. S. Mott Children's Hospital & Von Voigtlander Women's Hospital",
@@ -15654,6 +15879,11 @@
     "category": "building",
     "material": "Brick"
   },
+  "M512HD0000": {
+    "layer": "M512_Yost Ice Arena",
+    "category": "building",
+    "material": "Frame"
+  },
   "M512M0400": {
     "layer": "M512_Yost Ice Arena",
     "category": "building",
@@ -15904,6 +16134,16 @@
     "category": "building",
     "material": "Brick"
   },
+  "M520HD0000": {
+    "layer": "M520_Michigan Stadium",
+    "category": "building",
+    "material": "Frame"
+  },
+  "M520HD0100": {
+    "layer": "M520_Michigan Stadium",
+    "category": "building",
+    "material": "Metal"
+  },
   "M520M0700": {
     "layer": "M520_Michigan Stadium",
     "category": "building",
@@ -16153,6 +16393,16 @@
     "layer": "M526_Crisler Center",
     "category": "building",
     "material": "LightStone"
+  },
+  "M526HD0000": {
+    "layer": "M526_Crisler Center",
+    "category": "building",
+    "material": "Frame"
+  },
+  "M526HD0100": {
+    "layer": "M526_Crisler Center",
+    "category": "building",
+    "material": "Metal"
   },
   "M526M0400": {
     "layer": "M526_Crisler Center",

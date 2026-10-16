@@ -68,7 +68,7 @@ for tag,a,z in chunks(6,len(blob)):
   input_tri+=len(f);mat=meta['material'];owner=owners.get(meta['layer'],0);neighbor=meta['category'].startswith('neighbor');detail='D'in name and owner>0
   if owner:
    r=byid[owner];key=tile(*r['center']);n=normals(v,f);centers=v[f].mean(axis=1)
-   roof=(mat in ROOF)&(n[:,2]>.7)&(centers[:,2]>r['ground_m']+3)
+   roof=(mat in ROOF)&(not detail or mat=='Concrete')&(n[:,2]>.7)&(centers[:,2]>r['ground_m']+3)
    for sel,material in [(~roof,mat),(roof,'__RoofCap')]:
     ff=f[sel]
     if not len(ff):continue
@@ -223,7 +223,7 @@ keys=sorted(set(high)|set(instances));coarse_mesh=defaultdict(lambda:defaultdict
 for region,key in enumerate(keys,1):
  h=packet(high.get(key,{}),instances.get(key,{}),'high')
  if not h:continue
- high_item=write('tile_'+key,h);high_item['key']=key;high_item['regionId']=region;high_item['neighborOnly']=all(k[2]for k in high.get(key,{}))and all(k[1]for k in instances.get(key,{}));manifest['tiles'].append(high_item)
+ high_item=write('tile_'+key,h);high_item['key']=key;high_item['hasBuildings']=any(k[1]>0 for k in high.get(key,{}))or any(row[6]>0 for rows in instances.get(key,{}).values()for row in rows);high_item['regionId']=region;high_item['neighborOnly']=all(k[2]for k in high.get(key,{}))and all(k[1]for k in instances.get(key,{}));manifest['tiles'].append(high_item)
  x,y=map(int,key.split('_'));coarse=f'{x//4}_{y//4}'
  for ident,parts in low.get(key,{}).items():coarse_mesh[coarse][(*ident,region)].extend(parts)
  for ident,values in instances.get(key,{}).items():coarse_instances[coarse][ident].extend([*row,region]for row in values)

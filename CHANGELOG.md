@@ -1,5 +1,11 @@
 # Changelog
 
+## 26.10.16.4 — 2026-10-16
+
+- Refine all 29 architectural highlights with shaped window reveals, framed glazing, transoms and supported roof coping; retain existing bespoke masses and courtyards.
+- Add deeper precast reveals to Kahn Pavilion and hollow bell geometry to the Burton and Lurie carillons.
+- Keep the overview byte-identical and place new small details in streamed near regions, retaining mobile/desktop residency budgets.
+
 ## 26.10.16.3 — 2026-10-16
 
 - Load a lightweight regional overview first, then fetch nearby source-detail tiles within explicit desktop/mobile geometry budgets. Evict distant detail, retain per-building selection/visibility, and keep HTTP, local double-click and standalone offline browsing.

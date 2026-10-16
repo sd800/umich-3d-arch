@@ -33,6 +33,8 @@
     "short_zh": "校区辅助建筑G832120",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -73,6 +75,8 @@
     "short_zh": "库曾斯宿舍楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -113,6 +117,14 @@
     "short_zh": "底特律天文台",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": {
+      "framed_openings": 21,
+      "transoms": 0,
+      "roof_coping_m": 0.0,
+      "hollow_bells": 0,
+      "added_triangles": 672
+    },
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -153,6 +165,8 @@
     "short_zh": "药学院楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -193,6 +207,8 @@
     "short_zh": "东休伦街617号楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -233,6 +249,8 @@
     "short_zh": "艾丽斯·劳埃德宿舍楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -273,6 +291,14 @@
     "short_zh": "拉克姆研究生院",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": {
+      "framed_openings": 273,
+      "transoms": 0,
+      "roof_coping_m": 305.56,
+      "hollow_bells": 0,
+      "added_triangles": 9116
+    },
+    "highlight_reference": null,
     "architecture_detail": {
       "reference": "https://tour.umich.edu/text-based/locations/rackham-school-of-graduate-studies/",
       "individual_roof_ranges": 2,
@@ -317,6 +343,14 @@
     "short_zh": "北庭院住宿与教学综合楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": {
+      "framed_openings": 694,
+      "transoms": 694,
+      "roof_coping_m": 246.22,
+      "hollow_bells": 0,
+      "added_triangles": 31352
+    },
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -357,6 +391,8 @@
     "short_zh": "鲍尔表演艺术中心",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -397,6 +433,8 @@
     "short_zh": "中央动力站",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "reference": "https://umaec.umich.edu/projects/completed-projects/central-power-plant-expansion-2/project-data/",
       "stack_source": "https://regents.umich.edu/files/meetings/07-17/2017-07-IX-6.pdf",
@@ -462,6 +500,8 @@
     "short_zh": "玛丽·马克利宿舍楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "reference": "https://tour.umich.edu/text-based/locations/mary-markley-hall/",
       "individual_roof_ranges": 2,
@@ -506,6 +546,8 @@
     "short_zh": "沃恩公共卫生楼 · SPHⅠ",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -546,6 +588,8 @@
     "short_zh": "帕尔默公共活动中心",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -586,6 +630,8 @@
     "short_zh": "公用设施服务楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -626,6 +672,8 @@
     "short_zh": "中央校区开关站",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -666,6 +714,8 @@
     "short_zh": "南第五大道210—212号楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -706,6 +756,8 @@
     "short_zh": "伯纳姆住宅",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -746,6 +798,8 @@
     "short_zh": "南塞耶街202号楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -786,6 +840,8 @@
     "short_zh": "校友中心",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -826,6 +882,8 @@
     "short_zh": "弗莱彻街停车楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -866,6 +924,8 @@
     "short_zh": "麦当劳叔叔之家",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -906,6 +966,8 @@
     "short_zh": "弗朗西斯公共卫生楼 · SPHⅡ",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -946,6 +1008,8 @@
     "short_zh": "莱恩楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -986,6 +1050,8 @@
     "short_zh": "帕尔默路停车楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -1026,6 +1092,8 @@
     "short_zh": "天文台宿舍楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -1066,6 +1134,8 @@
     "short_zh": "莫舍—乔丹宿舍楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -1106,6 +1176,8 @@
     "short_zh": "Hillside Towne Centre 楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -1146,6 +1218,8 @@
     "short_zh": "现代语言楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -1186,6 +1260,8 @@
     "short_zh": "本科科学楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -1226,6 +1302,8 @@
     "short_zh": "塞耶街停车楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -1266,6 +1344,8 @@
     "short_zh": "大学健康服务中心",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -1306,6 +1386,8 @@
     "short_zh": "南斯泰特街214号楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -1346,6 +1428,8 @@
     "short_zh": "东利伯蒂街625号楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -1386,6 +1470,8 @@
     "short_zh": "玛丽·苏·科尔曼楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -1426,6 +1512,14 @@
     "short_zh": "伯顿纪念塔",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": {
+      "framed_openings": 0,
+      "transoms": 0,
+      "roof_coping_m": 0.0,
+      "hollow_bells": 0,
+      "added_triangles": 0
+    },
+    "highlight_reference": "https://smtd.umich.edu/facilities/burton-memorial-tower/charles-baird-carillon/",
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -1466,6 +1560,8 @@
     "short_zh": "密西根广场楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -1506,6 +1602,8 @@
     "short_zh": "卡弗楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -1546,6 +1644,14 @@
     "short_zh": "密西根联盟会馆",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": {
+      "framed_openings": 174,
+      "transoms": 0,
+      "roof_coping_m": 0.0,
+      "hollow_bells": 0,
+      "added_triangles": 5568
+    },
+    "highlight_reference": null,
     "architecture_detail": {
       "reference": "https://tour.umich.edu/text-based/locations/michigan-league/",
       "individual_roof_ranges": 2,
@@ -1598,6 +1704,8 @@
     "short_zh": "西利伯蒂街305号楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "yes",
@@ -1642,6 +1750,8 @@
     "short_zh": "东利伯蒂街540号楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "office",
@@ -1686,6 +1796,8 @@
     "short_zh": "牙医学院楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -1726,6 +1838,14 @@
     "short_zh": "希尔礼堂",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": {
+      "framed_openings": 87,
+      "transoms": 0,
+      "roof_coping_m": 0.0,
+      "hollow_bells": 0,
+      "added_triangles": 2784
+    },
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "university",
@@ -1773,6 +1893,8 @@
     "short_zh": "梅纳德街309号楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "retail",
@@ -1818,6 +1940,8 @@
     "short_zh": "W·K·凯洛格基金会研究所",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -1858,6 +1982,8 @@
     "short_zh": "汉密尔顿广场楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "retail",
@@ -1904,6 +2030,8 @@
     "short_zh": "生物科学楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "university",
@@ -1950,6 +2078,8 @@
     "short_zh": "梅纳德街317号楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -1990,6 +2120,8 @@
     "short_zh": "休伦银行楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "retail",
@@ -2035,6 +2167,8 @@
     "short_zh": "斯托克韦尔宿舍楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "dormitory",
@@ -2081,6 +2215,8 @@
     "short_zh": "尼科尔斯树木园住宅",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -2121,6 +2257,8 @@
     "short_zh": "Collegian 楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "office",
@@ -2167,6 +2305,8 @@
     "short_zh": "尼科尔斯树木园车库与工坊",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -2207,6 +2347,8 @@
     "short_zh": "尼科尔斯树木园储藏棚",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -2247,6 +2389,8 @@
     "short_zh": "阿格斯楼Ⅱ",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -2287,6 +2431,8 @@
     "short_zh": "亚历山大·G·鲁思文楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "university",
@@ -2333,6 +2479,8 @@
     "short_zh": "运动机能学学院楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "reference": "https://tour.umich.edu/text-based/locations/school-of-kinesiology/",
       "individual_roof_ranges": 1,
@@ -2383,6 +2531,8 @@
     "short_zh": "哈德利家族文体活动中心",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "university",
@@ -2428,6 +2578,8 @@
     "short_zh": "化学楼与陶氏实验楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "reference": "https://bentley.umich.edu/discover/bentley-materials/campus-tour/building-index/chemistry-building/",
       "individual_roof_ranges": 2,
@@ -2476,6 +2628,8 @@
     "short_zh": "中央校区教学楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "university",
@@ -2523,6 +2677,8 @@
     "short_zh": "阿格斯楼Ⅰ",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "university",
@@ -2569,6 +2725,8 @@
     "short_zh": "密西根大学新闻楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "university",
@@ -2616,6 +2774,8 @@
     "short_zh": "北大学大道1100号楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -2656,6 +2816,8 @@
     "short_zh": "贝齐·巴伯宿舍楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "dormitory",
@@ -2703,6 +2865,8 @@
     "short_zh": "达纳楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "reference": "https://bentley.umich.edu/discover/bentley-materials/campus-tour/building-index/dana-building/",
       "individual_roof_ranges": 1,
@@ -2751,6 +2915,8 @@
     "short_zh": "校区辅助建筑1005619",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "house",
@@ -2797,6 +2963,8 @@
     "short_zh": "利普西学生出版楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "university",
@@ -2844,6 +3012,8 @@
     "short_zh": "威廉·门罗·特罗特多元文化中心",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "university",
@@ -2890,6 +3060,8 @@
     "short_zh": "梅森楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "reference": "https://umaec.umich.edu/projects/completed-projects/mason-hall-and-haven-hall-addition-and-renovation/",
       "individual_roof_ranges": 1,
@@ -2941,6 +3113,8 @@
     "short_zh": "校区辅助建筑1005628",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "house",
@@ -2987,6 +3161,8 @@
     "short_zh": "丘奇街428号楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -3027,6 +3203,8 @@
     "short_zh": "海伦·纽伯里宿舍楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "dormitory",
@@ -3073,6 +3251,8 @@
     "short_zh": "校区辅助建筑1005626",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "house",
@@ -3118,6 +3298,8 @@
     "short_zh": "校区辅助建筑1005629",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "house",
@@ -3164,6 +3346,8 @@
     "short_zh": "校区辅助建筑1005606",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "house",
@@ -3210,6 +3394,8 @@
     "short_zh": "社会研究所",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "university",
@@ -3256,6 +3442,8 @@
     "short_zh": "纽伯里楼 · 凯尔西考古博物馆",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "university",
@@ -3301,6 +3489,8 @@
     "short_zh": "校区辅助建筑1005603",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "house",
@@ -3346,6 +3536,8 @@
     "short_zh": "兰德尔实验楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "reference": "https://maps.studentlife.umich.edu/building/harrison-m-randall-laboratory",
       "individual_roof_ranges": 1,
@@ -3390,6 +3582,8 @@
     "short_zh": "学生活动楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -3430,6 +3624,14 @@
     "short_zh": "安杰尔楼与蒂施楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": {
+      "framed_openings": 548,
+      "transoms": 0,
+      "roof_coping_m": 802.95,
+      "hollow_bells": 0,
+      "added_triangles": 17920
+    },
+    "highlight_reference": null,
     "architecture_detail": {
       "reference": "https://bentley.umich.edu/discover/bentley-materials/campus-tour/building-index/angell-hall/",
       "individual_roof_ranges": 3,
@@ -3481,6 +3683,8 @@
     "short_zh": "安杰尔楼阶梯教室群",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "reference": "https://tour.umich.edu/text-based/tours/diag/",
       "individual_roof_ranges": 1,
@@ -3525,6 +3729,8 @@
     "short_zh": "南迪维申街439号楼",
     "aliases_zh": [],
     "construction_status": "Construction",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "house",
@@ -3569,6 +3775,8 @@
     "short_zh": "校区辅助建筑1005604",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -3614,6 +3822,8 @@
     "short_zh": "韦瑟楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "university",
@@ -3661,6 +3871,8 @@
     "short_zh": "尼尔实验楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "reference": "https://tour.umich.edu/text-based/tours/diag/",
       "individual_roof_ranges": 1,
@@ -3711,6 +3923,8 @@
     "short_zh": "马车房",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -3758,6 +3972,8 @@
     "short_zh": "黑文楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "reference": "https://umaec.umich.edu/projects/completed-projects/mason-hall-and-haven-hall-addition-and-renovation/",
       "individual_roof_ranges": 1,
@@ -3809,6 +4025,8 @@
     "short_zh": "瓦伦贝里住宅",
     "aliases_zh": [],
     "construction_status": "Construction",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -3849,6 +4067,14 @@
     "short_zh": "哈彻研究生图书馆 · 北馆",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": {
+      "framed_openings": 218,
+      "transoms": 0,
+      "roof_coping_m": 0.0,
+      "hollow_bells": 0,
+      "added_triangles": 6976
+    },
+    "highlight_reference": null,
     "architecture_detail": {
       "reference": "https://www.lib.umich.edu/visit-and-study/floor-plans/hatcher-library-north-floors/",
       "individual_roof_ranges": 2,
@@ -3899,6 +4125,8 @@
     "short_zh": "文理学院楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "university",
@@ -3945,6 +4173,8 @@
     "short_zh": "福里斯特大道开关站",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "yes",
@@ -3990,6 +4220,8 @@
     "short_zh": "哈彻研究生图书馆 · 南馆",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "reference": "https://www.lib.umich.edu/visit-and-study/floor-plans/hatcher-library-south-floors/",
       "individual_roof_ranges": 1,
@@ -4038,6 +4270,8 @@
     "short_zh": "丘奇街停车楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "yes",
@@ -4083,6 +4317,8 @@
     "short_zh": "西楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "reference": "https://regents.umich.edu/files/meetings/09-14/2014-09-IX-9.pdf",
       "individual_roof_ranges": 1,
@@ -4133,6 +4369,8 @@
     "short_zh": "东楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "university",
@@ -4180,6 +4418,8 @@
     "short_zh": "汤普森街停车楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "yes",
@@ -4225,6 +4465,8 @@
     "short_zh": "南迪维申街523号楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "university",
@@ -4272,6 +4514,14 @@
     "short_zh": "密西根大学艺术博物馆",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": {
+      "framed_openings": 98,
+      "transoms": 0,
+      "roof_coping_m": 408.61,
+      "hollow_bells": 0,
+      "added_triangles": 3964
+    },
+    "highlight_reference": null,
     "architecture_detail": {
       "reference": "https://tour.umich.edu/text-based/tours/diag/",
       "individual_roof_ranges": 2,
@@ -4321,6 +4571,8 @@
     "short_zh": "夏皮罗图书馆",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "reference": "https://www.lib.umich.edu/visit-and-study/floor-plans/shapiro-library-floors/",
       "individual_roof_ranges": 1,
@@ -4371,6 +4623,8 @@
     "short_zh": "塔潘楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "reference": "https://tour.umich.edu/text-based/tours/diag/",
       "individual_roof_ranges": 1,
@@ -4420,6 +4674,14 @@
     "short_zh": "威廉·L·克莱门茨图书馆",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": {
+      "framed_openings": 35,
+      "transoms": 3,
+      "roof_coping_m": 115.36,
+      "hollow_bells": 0,
+      "added_triangles": 1580
+    },
+    "highlight_reference": null,
     "architecture_detail": {
       "reference": "https://clements.umich.edu/about/history/construction-of-the-library/",
       "individual_roof_ranges": 1,
@@ -4470,6 +4732,8 @@
     "short_zh": "校长官邸",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "university",
@@ -4517,6 +4781,14 @@
     "short_zh": "密西根学生会馆",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": {
+      "framed_openings": 378,
+      "transoms": 0,
+      "roof_coping_m": 118.58,
+      "hollow_bells": 0,
+      "added_triangles": 12384
+    },
+    "highlight_reference": null,
     "architecture_detail": {
       "reference": "https://tour.umich.edu/text-based/locations/michigan-union/",
       "individual_roof_ranges": 3,
@@ -4568,6 +4840,8 @@
     "short_zh": "南福里斯特大道555号楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "university",
@@ -4612,6 +4886,8 @@
     "short_zh": "格迪斯宿舍楼 · 牛津宿舍区",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -4652,6 +4928,8 @@
     "short_zh": "西庭院宿舍区",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "reference": "https://tour.umich.edu/text-based/locations/west-quad/",
       "individual_roof_ranges": 1,
@@ -4700,6 +4978,8 @@
     "short_zh": "奇弗宿舍楼 · 牛津宿舍区",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -4740,6 +5020,8 @@
     "short_zh": "芒格研究生宿舍",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "residential",
@@ -4787,6 +5069,8 @@
     "short_zh": "佩里楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "university",
@@ -4833,6 +5117,8 @@
     "short_zh": "伊曼纽尔宿舍楼 · 牛津宿舍区",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -4873,6 +5159,8 @@
     "short_zh": "安娜堡广场楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "commercial",
@@ -4917,6 +5205,14 @@
     "short_zh": "律师俱乐部与查尔斯·T·芒格宿舍",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": {
+      "framed_openings": 137,
+      "transoms": 0,
+      "roof_coping_m": 0.0,
+      "hollow_bells": 0,
+      "added_triangles": 4904
+    },
+    "highlight_reference": null,
     "architecture_detail": {
       "reference": "https://michigan.law.umich.edu/about-michigan-law/michigan-law-architecture",
       "individual_roof_ranges": 4,
@@ -4969,6 +5265,8 @@
     "short_zh": "麦迪逊楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "university",
@@ -5016,6 +5314,8 @@
     "short_zh": "社会工作学院楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "university",
@@ -5062,6 +5362,8 @@
     "short_zh": "玛莎·库克宿舍楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "dormitory",
@@ -5109,6 +5411,8 @@
     "short_zh": "戈达德宿舍楼 · 牛津宿舍区",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -5149,6 +5453,8 @@
     "short_zh": "约翰·P·库克宿舍楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "reference": "https://michigan.law.umich.edu/about-michigan-law/michigan-law-architecture",
       "individual_roof_ranges": 1,
@@ -5199,6 +5505,8 @@
     "short_zh": "诺布尔宿舍楼 · 牛津宿舍区",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -5239,6 +5547,8 @@
     "short_zh": "沃什特诺大道1443号楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -5279,6 +5589,8 @@
     "short_zh": "华莱士住宅",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -5319,6 +5631,8 @@
     "short_zh": "范登堡宿舍楼 · 牛津宿舍区",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -5359,6 +5673,8 @@
     "short_zh": "校区辅助建筑G832122",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -5399,6 +5715,8 @@
     "short_zh": "福里斯特大道停车楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "parking",
@@ -5444,6 +5762,8 @@
     "short_zh": "西利宿舍楼 · 牛津宿舍区",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -5484,6 +5804,8 @@
     "short_zh": "户外领导力项目临时办公室",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -5524,6 +5846,14 @@
     "short_zh": "威廉·W·库克法律研究图书馆",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": {
+      "framed_openings": 292,
+      "transoms": 0,
+      "roof_coping_m": 61.45,
+      "hollow_bells": 0,
+      "added_triangles": 9800
+    },
+    "highlight_reference": null,
     "architecture_detail": {
       "reference": "https://michigan.law.umich.edu/about-michigan-law/michigan-law-architecture",
       "individual_roof_ranges": 4,
@@ -5574,6 +5904,8 @@
     "short_zh": "教育学院楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -5614,6 +5946,8 @@
     "short_zh": "牛津宿舍区设施服务楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -5654,6 +5988,8 @@
     "short_zh": "南庭院宿舍区",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "reference": "https://tour.umich.edu/text-based/locations/south-quad/",
       "individual_roof_ranges": 2,
@@ -5705,6 +6041,8 @@
     "short_zh": "洛尔奇楼",
     "aliases_zh": [],
     "construction_status": "Construction",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "university",
@@ -5751,6 +6089,8 @@
     "short_zh": "休闲体育户外领导力装备租赁中心",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "university",
@@ -5796,6 +6136,14 @@
     "short_zh": "哈钦斯楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": {
+      "framed_openings": 278,
+      "transoms": 0,
+      "roof_coping_m": 370.65,
+      "hollow_bells": 0,
+      "added_triangles": 12144
+    },
+    "highlight_reference": null,
     "architecture_detail": {
       "reference": "https://michigan.law.umich.edu/about-michigan-law/michigan-law-architecture",
       "individual_roof_ranges": 3,
@@ -5847,6 +6195,8 @@
     "short_zh": "临时卫生间设施",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "yes",
@@ -5891,6 +6241,8 @@
     "short_zh": "密西根大学行进乐队临时活动房",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "university",
@@ -5935,6 +6287,8 @@
     "short_zh": "埃尔贝尔运动场视听控制室",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -5975,6 +6329,8 @@
     "short_zh": "陶斯利儿童之家",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "yes",
@@ -6020,6 +6376,8 @@
     "short_zh": "校区辅助建筑1005577",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "house",
@@ -6066,6 +6424,8 @@
     "short_zh": "校区辅助建筑1005578",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "house",
@@ -6112,6 +6472,8 @@
     "short_zh": "杰夫·T·布劳楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "reference": "https://www.kpf.com/story/the-making-of-university-of-michigan-stephen-m-ross-school-of-business",
       "volumes": [
@@ -6169,6 +6531,8 @@
     "short_zh": "杰弗里斯楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "reference": "https://michigan.law.umich.edu/about-michigan-law/michigan-law-architecture",
       "individual_roof_ranges": 1,
@@ -6220,6 +6584,8 @@
     "short_zh": "东庭院宿舍区",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "reference": "https://tour.umich.edu/text-based/locations/east-quad/",
       "individual_roof_ranges": 1,
@@ -6264,6 +6630,8 @@
     "short_zh": "克雷斯吉楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "reference": null,
       "volumes": [
@@ -6319,6 +6687,8 @@
     "short_zh": "密西根罗斯商学院 Catalyst 酒店",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "reference": null,
       "volumes": [
@@ -6376,6 +6746,14 @@
     "short_zh": "罗斯商学院",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": {
+      "framed_openings": 303,
+      "transoms": 303,
+      "roof_coping_m": 576.02,
+      "hollow_bells": 0,
+      "added_triangles": 15828
+    },
+    "highlight_reference": null,
     "architecture_detail": {
       "reference": "https://www.kpf.com/story/the-making-of-university-of-michigan-stephen-m-ross-school-of-business",
       "volumes": [
@@ -6466,6 +6844,8 @@
     "short_zh": "韦尔楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "university",
@@ -6512,6 +6892,8 @@
     "short_zh": "怀利楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "reference": null,
       "volumes": [
@@ -6569,6 +6951,8 @@
     "short_zh": "中央校区宿舍施工活动房",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -6609,6 +6993,8 @@
     "short_zh": "希尔街停车楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "reference": null,
       "volumes": [
@@ -6664,6 +7050,8 @@
     "short_zh": "综合体育馆",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "university",
@@ -6710,6 +7098,8 @@
     "short_zh": "希尔街914号楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "detached",
@@ -6757,6 +7147,8 @@
     "short_zh": "亨德森宿舍楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "dormitory",
@@ -6804,6 +7196,8 @@
     "short_zh": "金斯伯格中心楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "university",
@@ -6850,6 +7244,8 @@
     "short_zh": "中央校区宿舍2号楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "dormitory",
@@ -6895,6 +7291,8 @@
     "short_zh": "中央校区宿舍1号楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -6935,6 +7333,8 @@
     "short_zh": "布尔楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "university",
@@ -6980,6 +7380,8 @@
     "short_zh": "中央校区宿舍4号楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "dormitory",
@@ -7025,6 +7427,8 @@
     "short_zh": "中央校区宿舍3号楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "dormitory",
@@ -7070,6 +7474,8 @@
     "short_zh": "弗莱彻宿舍楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "dormitory",
@@ -7117,6 +7523,8 @@
     "short_zh": "哈珀楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "dormitory",
@@ -7162,6 +7570,8 @@
     "short_zh": "博耶楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "university",
@@ -7207,6 +7617,8 @@
     "short_zh": "诺斯伍德4区 · 642号宿舍楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -7251,6 +7663,8 @@
     "short_zh": "诺斯伍德4区 · 641号宿舍楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -7295,6 +7709,8 @@
     "short_zh": "诺斯伍德4区 · 643号宿舍楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -7339,6 +7755,8 @@
     "short_zh": "诺斯伍德4区 · 651号宿舍楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -7383,6 +7801,8 @@
     "short_zh": "诺斯伍德4区 · 640号宿舍楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -7427,6 +7847,8 @@
     "short_zh": "北校区研究综合体73号楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "reference": null,
       "volumes": [
@@ -7482,6 +7904,8 @@
     "short_zh": "诺斯伍德4区 · 650号宿舍楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -7526,6 +7950,8 @@
     "short_zh": "诺斯伍德4区 · 652号宿舍楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -7570,6 +7996,8 @@
     "short_zh": "诺斯伍德4区 · 644号宿舍楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -7614,6 +8042,8 @@
     "short_zh": "诺斯伍德4区 · 639号宿舍楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -7658,6 +8088,8 @@
     "short_zh": "诺斯伍德4区 · 649号宿舍楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -7702,6 +8134,8 @@
     "short_zh": "北校区儿童中心",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "reference": null,
       "volumes": [
@@ -7759,6 +8193,8 @@
     "short_zh": "诺斯伍德4区 · 653号宿舍楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -7803,6 +8239,8 @@
     "short_zh": "诺斯伍德4区 · 648号宿舍楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -7847,6 +8285,8 @@
     "short_zh": "诺斯伍德4区 · 647号宿舍楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -7891,6 +8331,8 @@
     "short_zh": "诺斯伍德4区 · 646号宿舍楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -7935,6 +8377,8 @@
     "short_zh": "诺斯伍德4区 · 645号宿舍楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -7979,6 +8423,8 @@
     "short_zh": "北校区研究综合体200号楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "reference": null,
       "volumes": [
@@ -8034,6 +8480,8 @@
     "short_zh": "诺斯伍德4区 · 638号宿舍楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -8078,6 +8526,8 @@
     "short_zh": "诺斯伍德4区 · 654号宿舍楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -8122,6 +8572,8 @@
     "short_zh": "诺斯伍德4区 · 655号宿舍楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -8166,6 +8618,8 @@
     "short_zh": "诺斯伍德4区 · 656号宿舍楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -8210,6 +8664,8 @@
     "short_zh": "北校区研究综合体100号楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "reference": null,
       "volumes": [
@@ -8265,6 +8721,8 @@
     "short_zh": "诺斯伍德4区 · 637号宿舍楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -8309,6 +8767,8 @@
     "short_zh": "诺斯伍德4区 · 657号宿舍楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -8353,6 +8813,8 @@
     "short_zh": "北校区研究综合体16号楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "reference": null,
       "volumes": [
@@ -8403,6 +8865,8 @@
     "short_zh": "诺斯伍德4区 · 634号宿舍楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -8447,6 +8911,8 @@
     "short_zh": "诺斯伍德4区 · 636号宿舍楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -8491,6 +8957,8 @@
     "short_zh": "诺斯伍德4区 · 635号宿舍楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -8535,6 +9003,8 @@
     "short_zh": "消防站",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "reference": null,
       "volumes": [
@@ -8590,6 +9060,8 @@
     "short_zh": "诺斯伍德4区 · 633号宿舍楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -8634,6 +9106,8 @@
     "short_zh": "北校区研究综合体300号楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "reference": null,
       "volumes": [
@@ -8689,6 +9163,8 @@
     "short_zh": "北校区研究综合体18号楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "reference": null,
       "volumes": [
@@ -8739,6 +9215,8 @@
     "short_zh": "诺斯伍德4区 · 658号宿舍楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -8783,6 +9261,8 @@
     "short_zh": "诺斯伍德4区 · 632号宿舍楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -8827,6 +9307,8 @@
     "short_zh": "诺斯伍德4区 · 631号宿舍楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -8871,6 +9353,8 @@
     "short_zh": "诺斯伍德4区 · 630号宿舍楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -8915,6 +9399,8 @@
     "short_zh": "北校区研究综合体400号楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "reference": null,
       "volumes": [
@@ -8970,6 +9456,8 @@
     "short_zh": "北校区研究综合体10号楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "reference": null,
       "volumes": [
@@ -9020,6 +9508,8 @@
     "short_zh": "北校区研究综合体14号楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "reference": null,
       "volumes": [
@@ -9070,6 +9560,8 @@
     "short_zh": "诺斯伍德4区 · 659号宿舍楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -9114,6 +9606,8 @@
     "short_zh": "诺斯伍德4区 · 629号宿舍楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -9158,6 +9652,8 @@
     "short_zh": "诺斯伍德4区 · 628号宿舍楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -9202,6 +9698,8 @@
     "short_zh": "北校区研究综合体90号楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "reference": null,
       "volumes": [
@@ -9252,6 +9750,8 @@
     "short_zh": "北校区研究综合体25号楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "reference": null,
       "volumes": [
@@ -9302,6 +9802,8 @@
     "short_zh": "诺斯伍德4区 · 660号宿舍楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -9346,6 +9848,8 @@
     "short_zh": "北校区研究综合体20号楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "reference": null,
       "volumes": [
@@ -9396,6 +9900,8 @@
     "short_zh": "诺斯伍德4区 · 625号宿舍楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -9440,6 +9946,8 @@
     "short_zh": "北校区研究综合体550号楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "reference": null,
       "volumes": [
@@ -9495,6 +10003,8 @@
     "short_zh": "北校区研究综合体520号楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "reference": null,
       "volumes": [
@@ -9550,6 +10060,8 @@
     "short_zh": "诺斯伍德4区 · 626号宿舍楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -9594,6 +10106,8 @@
     "short_zh": "诺斯伍德4区 · 627号宿舍楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -9638,6 +10152,8 @@
     "short_zh": "诺斯伍德4区 · 624号宿舍楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -9682,6 +10198,8 @@
     "short_zh": "诺斯伍德4区 · 661号宿舍楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -9726,6 +10244,8 @@
     "short_zh": "北校区研究综合体22号楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "reference": null,
       "volumes": [
@@ -9776,6 +10296,8 @@
     "short_zh": "北校区研究综合体70号楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -9816,6 +10338,8 @@
     "short_zh": "诺斯伍德4区 · 622号宿舍楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -9860,6 +10384,8 @@
     "short_zh": "北校区研究综合体60号楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "reference": null,
       "volumes": [
@@ -9910,6 +10436,8 @@
     "short_zh": "诺斯伍德4区 · 623号宿舍楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -9954,6 +10482,8 @@
     "short_zh": "诺斯伍德4区 · 662号宿舍楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -9998,6 +10528,8 @@
     "short_zh": "诺斯伍德4区 · 621号宿舍楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -10042,6 +10574,8 @@
     "short_zh": "诺斯伍德4区 · 663号宿舍楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -10086,6 +10620,8 @@
     "short_zh": "诺斯伍德4区 · 620号宿舍楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -10130,6 +10666,8 @@
     "short_zh": "北校区研究综合体26号楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "reference": null,
       "volumes": [
@@ -10180,6 +10718,8 @@
     "short_zh": "诺斯伍德4区 · 619号宿舍楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -10224,6 +10764,8 @@
     "short_zh": "诺斯伍德4区 · 664号宿舍楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -10268,6 +10810,8 @@
     "short_zh": "北校区研究综合体30号楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "reference": null,
       "volumes": [
@@ -10318,6 +10862,8 @@
     "short_zh": "诺斯伍德2区 · 464号宿舍楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -10362,6 +10908,8 @@
     "short_zh": "诺斯伍德4区 · 617号宿舍楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -10406,6 +10954,8 @@
     "short_zh": "北校区研究综合体80号楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "reference": null,
       "volumes": [
@@ -10460,6 +11010,8 @@
     "short_zh": "诺斯伍德4区 · 618号宿舍楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -10504,6 +11056,8 @@
     "short_zh": "北校区研究综合体23号楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -10544,6 +11098,8 @@
     "short_zh": "诺斯伍德4区 · 667号宿舍楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -10588,6 +11144,8 @@
     "short_zh": "诺斯伍德4区 · 666号宿舍楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -10632,6 +11190,8 @@
     "short_zh": "诺斯伍德4区 · 665号宿舍楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -10676,6 +11236,8 @@
     "short_zh": "诺斯伍德4区 · 684号宿舍楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "yes",
@@ -10720,6 +11282,8 @@
     "short_zh": "北校区研究综合体32号楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "reference": null,
       "volumes": [
@@ -10770,6 +11334,8 @@
     "short_zh": "诺斯伍德4区 · 668号宿舍楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -10814,6 +11380,8 @@
     "short_zh": "诺斯伍德4区 · 616号宿舍楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -10858,6 +11426,8 @@
     "short_zh": "诺斯伍德4区 · 670号宿舍楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -10902,6 +11472,8 @@
     "short_zh": "诺斯伍德4区 · 669号宿舍楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -10946,6 +11518,8 @@
     "short_zh": "诺斯伍德2区服务楼458号",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "yes",
@@ -10991,6 +11565,8 @@
     "short_zh": "北校区研究综合体800号楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "reference": null,
       "volumes": [
@@ -11041,6 +11617,8 @@
     "short_zh": "诺斯伍德2区 · 467号宿舍楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -11085,6 +11663,8 @@
     "short_zh": "北校区研究综合体35号楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "reference": null,
       "volumes": [
@@ -11135,6 +11715,8 @@
     "short_zh": "诺斯伍德2区 · 465号宿舍楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -11179,6 +11761,8 @@
     "short_zh": "诺斯伍德2区 · 462号宿舍楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -11223,6 +11807,8 @@
     "short_zh": "北校区研究综合体28号楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "reference": null,
       "volumes": [
@@ -11273,6 +11859,8 @@
     "short_zh": "诺斯伍德4区 · 615号宿舍楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -11317,6 +11905,8 @@
     "short_zh": "诺斯伍德4区 · 671号宿舍楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -11361,6 +11951,8 @@
     "short_zh": "诺斯伍德2区 · 481号宿舍楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -11405,6 +11997,8 @@
     "short_zh": "诺斯伍德4区 · 614号宿舍楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -11449,6 +12043,8 @@
     "short_zh": "诺斯伍德2区 · 468号宿舍楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -11493,6 +12089,8 @@
     "short_zh": "诺斯伍德4区 · 613号宿舍楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -11537,6 +12135,8 @@
     "short_zh": "校区辅助建筑G831536",
     "aliases_zh": [],
     "construction_status": "Construction",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -11577,6 +12177,8 @@
     "short_zh": "诺斯伍德2区 · 466号宿舍楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -11621,6 +12223,8 @@
     "short_zh": "诺斯伍德2区 · 480号宿舍楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -11665,6 +12269,8 @@
     "short_zh": "诺斯伍德2区 · 470号宿舍楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -11709,6 +12315,8 @@
     "short_zh": "诺斯伍德4区 · 612号宿舍楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -11753,6 +12361,8 @@
     "short_zh": "北校区支持设施楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "yes",
@@ -11799,6 +12409,8 @@
     "short_zh": "诺斯伍德4区 · 672号宿舍楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -11843,6 +12455,8 @@
     "short_zh": "诺斯伍德2区 · 479号宿舍楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -11887,6 +12501,8 @@
     "short_zh": "诺斯伍德2区 · 472号宿舍楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -11932,6 +12548,8 @@
     "short_zh": "北校区研究综合体85号楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "reference": null,
       "volumes": [
@@ -11982,6 +12600,8 @@
     "short_zh": "诺斯伍德4区 · 611号宿舍楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -12026,6 +12646,8 @@
     "short_zh": "诺斯伍德2区 · 478号宿舍楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -12070,6 +12692,8 @@
     "short_zh": "密西根大学交通研究所",
     "aliases_zh": [],
     "construction_status": "Construction",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "reference": null,
       "volumes": [
@@ -12125,6 +12749,8 @@
     "short_zh": "北校区研究综合体86号楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -12165,6 +12791,8 @@
     "short_zh": "诺斯伍德4区 · 610号宿舍楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -12209,6 +12837,8 @@
     "short_zh": "诺斯伍德4区 · 673号宿舍楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -12253,6 +12883,8 @@
     "short_zh": "诺斯伍德2区服务楼459号",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "yes",
@@ -12298,6 +12930,8 @@
     "short_zh": "北校区研究综合体36号楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "reference": null,
       "volumes": [
@@ -12348,6 +12982,8 @@
     "short_zh": "诺斯伍德4区 · 675号宿舍楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -12392,6 +13028,8 @@
     "short_zh": "Mcity 智能网联汽车试验场",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "yes",
@@ -12438,6 +13076,8 @@
     "short_zh": "诺斯伍德4区 · 676号宿舍楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -12482,6 +13122,8 @@
     "short_zh": "诺斯伍德4区 · 609号宿舍楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -12526,6 +13168,8 @@
     "short_zh": "诺斯伍德2区服务楼457号",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "yes",
@@ -12571,6 +13215,8 @@
     "short_zh": "诺斯伍德2区 · 483号宿舍楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -12615,6 +13261,8 @@
     "short_zh": "诺斯伍德2区 · 477号宿舍楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -12659,6 +13307,8 @@
     "short_zh": "诺斯伍德4区 · 608号宿舍楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -12703,6 +13353,8 @@
     "short_zh": "诺斯伍德4区 · 674号宿舍楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -12747,6 +13399,8 @@
     "short_zh": "诺斯伍德4区 · 607号宿舍楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -12791,6 +13445,8 @@
     "short_zh": "诺斯伍德4区 · 677号宿舍楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -12835,6 +13491,8 @@
     "short_zh": "诺斯伍德2区 · 486号宿舍楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -12879,6 +13537,8 @@
     "short_zh": "诺斯伍德4区 · 678号宿舍楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -12923,6 +13583,8 @@
     "short_zh": "诺斯伍德4区 · 679号宿舍楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -12967,6 +13629,8 @@
     "short_zh": "诺斯伍德4区 · 606号宿舍楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -13011,6 +13675,8 @@
     "short_zh": "诺斯伍德2区 · 482号宿舍楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -13055,6 +13721,8 @@
     "short_zh": "诺斯伍德2区 · 488号宿舍楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -13099,6 +13767,8 @@
     "short_zh": "诺斯伍德2区 · 476号宿舍楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -13143,6 +13813,8 @@
     "short_zh": "家庭宿舍社区中心",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "university",
@@ -13188,6 +13860,8 @@
     "short_zh": "诺斯伍德2区 · 469号宿舍楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -13232,6 +13906,8 @@
     "short_zh": "诺斯伍德2区 · 473号宿舍楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -13276,6 +13952,8 @@
     "short_zh": "诺斯伍德1区 · 456号宿舍楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -13320,6 +13998,8 @@
     "short_zh": "诺斯伍德4区 · 680号宿舍楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -13364,6 +14044,8 @@
     "short_zh": "诺斯伍德2区 · 471号宿舍楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -13408,6 +14090,8 @@
     "short_zh": "诺斯伍德2区 · 490号宿舍楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -13452,6 +14136,8 @@
     "short_zh": "诺斯伍德4区 · 605号宿舍楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -13496,6 +14182,8 @@
     "short_zh": "百老汇街1736号住宅",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "yes",
@@ -13540,6 +14228,8 @@
     "short_zh": "克拉姆社区中心",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "university",
@@ -13587,6 +14277,8 @@
     "short_zh": "诺斯伍德4区 · 602号宿舍楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -13631,6 +14323,8 @@
     "short_zh": "诺斯伍德4区 · 603号宿舍楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -13675,6 +14369,8 @@
     "short_zh": "诺斯伍德4区 · 604号宿舍楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -13719,6 +14415,8 @@
     "short_zh": "诺斯伍德4区 · 681号宿舍楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -13763,6 +14461,8 @@
     "short_zh": "百老汇街1736号车库",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "yes",
@@ -13807,6 +14507,8 @@
     "short_zh": "诺斯伍德1区 · 455号宿舍楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -13851,6 +14553,8 @@
     "short_zh": "诺斯伍德2区服务楼460号",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "yes",
@@ -13896,6 +14600,8 @@
     "short_zh": "诺斯伍德4区 · 601号宿舍楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -13940,6 +14646,8 @@
     "short_zh": "诺斯伍德4区 · 682号宿舍楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -13984,6 +14692,8 @@
     "short_zh": "诺斯伍德4区 · 683号宿舍楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -14028,6 +14738,8 @@
     "short_zh": "诺斯伍德1区 · 453号宿舍楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -14072,6 +14784,8 @@
     "short_zh": "诺斯伍德2区 · 484号宿舍楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -14116,6 +14830,8 @@
     "short_zh": "诺斯伍德2区 · 491号宿舍楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -14160,6 +14876,8 @@
     "short_zh": "诺斯伍德1区 · 454号宿舍楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -14204,6 +14922,8 @@
     "short_zh": "诺斯伍德2区 · 475号宿舍楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -14248,6 +14968,8 @@
     "short_zh": "诺斯伍德2区 · 487号宿舍楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -14292,6 +15014,8 @@
     "short_zh": "诺斯伍德2区 · 485号宿舍楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -14336,6 +15060,8 @@
     "short_zh": "北校区行政楼群",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "reference": null,
       "volumes": [
@@ -14392,6 +15118,8 @@
     "short_zh": "诺斯伍德2区 · 492号宿舍楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -14436,6 +15164,8 @@
     "short_zh": "诺斯伍德1区 · 452号宿舍楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -14480,6 +15210,8 @@
     "short_zh": "诺斯伍德3区服务楼500号",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "yes",
@@ -14524,6 +15256,8 @@
     "short_zh": "诺斯伍德2区 · 489号宿舍楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -14568,6 +15302,8 @@
     "short_zh": "诺斯伍德2区 · 474号宿舍楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -14612,6 +15348,8 @@
     "short_zh": "诺斯伍德2区 · 494号宿舍楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -14656,6 +15394,8 @@
     "short_zh": "诺斯伍德2区 · 497号宿舍楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -14700,6 +15440,8 @@
     "short_zh": "斯特恩斯楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "reference": null,
       "volumes": [
@@ -14755,6 +15497,8 @@
     "short_zh": "诺斯伍德1区服务楼450号",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "yes",
@@ -14800,6 +15544,8 @@
     "short_zh": "诺斯伍德1区 · 451号宿舍楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -14844,6 +15590,8 @@
     "short_zh": "诺斯伍德2区 · 495号宿舍楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -14888,6 +15636,8 @@
     "short_zh": "北校区文体活动楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "reference": null,
       "volumes": [
@@ -14938,6 +15688,8 @@
     "short_zh": "诺斯伍德2区服务楼461号",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "yes",
@@ -14983,6 +15735,8 @@
     "short_zh": "诺斯伍德2区 · 493号宿舍楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -15027,6 +15781,8 @@
     "short_zh": "诺斯伍德2区 · 496号宿舍楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -15071,6 +15827,8 @@
     "short_zh": "办公单元D",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -15111,6 +15869,8 @@
     "short_zh": "卫生间单元C",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -15151,6 +15911,8 @@
     "short_zh": "支持单元E",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -15191,6 +15953,8 @@
     "short_zh": "卫生间单元B",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -15231,6 +15995,8 @@
     "short_zh": "支持单元F",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -15271,6 +16037,8 @@
     "short_zh": "储藏单元A",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -15311,6 +16079,8 @@
     "short_zh": "北校区比尔开关站",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "service",
@@ -15358,6 +16128,8 @@
     "short_zh": "齐韦特楼 · 贝茨宿舍区",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "dormitory",
@@ -15403,6 +16175,14 @@
     "short_zh": "福特机器人楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": {
+      "framed_openings": 176,
+      "transoms": 176,
+      "roof_coping_m": 162.58,
+      "hollow_bells": 0,
+      "added_triangles": 7848
+    },
+    "highlight_reference": null,
     "architecture_detail": {
       "reference": "https://tour.umich.edu/text-based/tours/engineering/",
       "volumes": [
@@ -15467,6 +16247,8 @@
     "short_zh": "诺斯伍德5区 · 2702号宿舍楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -15507,6 +16289,8 @@
     "short_zh": "诺斯伍德5区 · 2704号宿舍楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "residential",
@@ -15551,6 +16335,8 @@
     "short_zh": "诺斯伍德5区 · 2703号宿舍楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "residential",
@@ -15595,6 +16381,8 @@
     "short_zh": "M-Air 无人机试验设施",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -15635,6 +16423,8 @@
     "short_zh": "气候与空间研究楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "reference": null,
       "volumes": [
@@ -15724,6 +16514,8 @@
     "short_zh": "诺斯伍德5区 · 2705号宿舍楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "residential",
@@ -15768,6 +16560,8 @@
     "short_zh": "科曼楼 · 贝茨宿舍区",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "dormitory",
@@ -15813,6 +16607,8 @@
     "short_zh": "蒂姆楼 · 贝茨宿舍区",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "dormitory",
@@ -15858,6 +16654,8 @@
     "short_zh": "诺斯伍德5区 · 2728号宿舍楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "residential",
@@ -15902,6 +16700,8 @@
     "short_zh": "诺斯伍德5区 · 2727号宿舍楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "residential",
@@ -15946,6 +16746,8 @@
     "short_zh": "诺斯伍德5区 · 2726号宿舍楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "residential",
@@ -15990,6 +16792,8 @@
     "short_zh": "诺斯伍德5区 · 2706号宿舍楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "residential",
@@ -16034,6 +16838,8 @@
     "short_zh": "克罗斯楼 · 贝茨宿舍区",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "dormitory",
@@ -16079,6 +16885,8 @@
     "short_zh": "诺斯伍德5区 · 2725号宿舍楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "residential",
@@ -16123,6 +16931,8 @@
     "short_zh": "伯斯利宿舍楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "reference": "https://tour.umich.edu/text-based/locations/bursley-hall/",
       "individual_roof_ranges": 2,
@@ -16173,6 +16983,8 @@
     "short_zh": "康格楼 · 贝茨宿舍区",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "dormitory",
@@ -16219,6 +17031,8 @@
     "short_zh": "诺斯伍德5区 · 2707号宿舍楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "residential",
@@ -16263,6 +17077,8 @@
     "short_zh": "诺斯伍德5区 · 2724号宿舍楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "residential",
@@ -16307,6 +17123,8 @@
     "short_zh": "航空航天动力站",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "service",
@@ -16352,6 +17170,8 @@
     "short_zh": "航空航天风洞实验楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "reference": null,
       "volumes": [
@@ -16407,6 +17227,8 @@
     "short_zh": "诺斯伍德5区 · 2722号宿舍楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "residential",
@@ -16451,6 +17273,8 @@
     "short_zh": "诺斯伍德5区 · 2723号宿舍楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "residential",
@@ -16495,6 +17319,8 @@
     "short_zh": "校区辅助建筑1005511",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "reference": null,
       "volumes": [
@@ -16549,6 +17375,8 @@
     "short_zh": "诺斯伍德5区 · 2708号宿舍楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "residential",
@@ -16593,6 +17421,8 @@
     "short_zh": "弗朗索瓦—泽维尔·巴尼奥楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "reference": null,
       "volumes": [
@@ -16651,6 +17481,8 @@
     "short_zh": "诺斯伍德5区 · 2719号宿舍楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "residential",
@@ -16695,6 +17527,8 @@
     "short_zh": "诺斯伍德5区 · 2718号宿舍楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "residential",
@@ -16739,6 +17573,8 @@
     "short_zh": "辐射科学实验楼2号",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "reference": null,
       "volumes": [
@@ -16794,6 +17630,8 @@
     "short_zh": "辐射科学实验楼1号",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "reference": null,
       "volumes": [
@@ -16849,6 +17687,8 @@
     "short_zh": "戈古兹家族实验楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "reference": null,
       "volumes": [
@@ -16899,6 +17739,8 @@
     "short_zh": "G·G·布朗楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "reference": null,
       "volumes": [
@@ -16977,6 +17819,8 @@
     "short_zh": "诺斯伍德5区 · 2709号宿舍楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "residential",
@@ -17021,6 +17865,8 @@
     "short_zh": "诺斯伍德5区 · 2717号宿舍楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "residential",
@@ -17065,6 +17911,8 @@
     "short_zh": "H·H·陶氏楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "reference": null,
       "volumes": [
@@ -17123,6 +17971,14 @@
     "short_zh": "鲍勃与贝蒂·拜斯特楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": {
+      "framed_openings": 201,
+      "transoms": 30,
+      "roof_coping_m": 188.95,
+      "hollow_bells": 0,
+      "added_triangles": 7004
+    },
+    "highlight_reference": null,
     "architecture_detail": {
       "reference": "https://tour.umich.edu/text-based/tours/engineering/",
       "volumes": [
@@ -17193,6 +18049,8 @@
     "short_zh": "航空航天泵站",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -17233,6 +18091,14 @@
     "short_zh": "莱因韦伯计算机科学与信息楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": {
+      "framed_openings": 333,
+      "transoms": 54,
+      "roof_coping_m": 288.68,
+      "hollow_bells": 0,
+      "added_triangles": 11656
+    },
+    "highlight_reference": null,
     "architecture_detail": {
       "reference": "https://leinweber.bldg.umich.edu/about/",
       "volumes": [
@@ -17303,6 +18169,8 @@
     "short_zh": "航空航天推进实验楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "reference": null,
       "volumes": [
@@ -17353,6 +18221,8 @@
     "short_zh": "船舶与海洋工程楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "reference": null,
       "volumes": [
@@ -17416,6 +18286,8 @@
     "short_zh": "诺斯伍德5区 · 2716号宿舍楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "residential",
@@ -17460,6 +18332,8 @@
     "short_zh": "诺斯伍德5区 · 2710号宿舍楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "residential",
@@ -17504,6 +18378,8 @@
     "short_zh": "航空航天等离子体研究楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "reference": null,
       "volumes": [
@@ -17554,6 +18430,8 @@
     "short_zh": "伊顿楼 · 贝茨宿舍区",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "residential",
@@ -17598,6 +18476,8 @@
     "short_zh": "北校区开关站",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "university",
@@ -17646,6 +18526,8 @@
     "short_zh": "环境与水资源工程楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "reference": null,
       "volumes": [
@@ -17702,6 +18584,8 @@
     "short_zh": "诺斯伍德5区 · 2715号宿舍楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "residential",
@@ -17746,6 +18630,8 @@
     "short_zh": "诺斯伍德5区 · 2711号宿舍楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "residential",
@@ -17790,6 +18676,8 @@
     "short_zh": "诺斯伍德5区 · 2714号宿舍楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "residential",
@@ -17834,6 +18722,8 @@
     "short_zh": "诺斯伍德5区 · 2712号宿舍楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "residential",
@@ -17878,6 +18768,8 @@
     "short_zh": "电气工程与计算机科学楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "reference": null,
       "volumes": [
@@ -17948,6 +18840,8 @@
     "short_zh": "北校区制冷站",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "university",
@@ -17993,6 +18887,8 @@
     "short_zh": "诺斯伍德5区 · 2713号宿舍楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "residential",
@@ -18037,6 +18933,8 @@
     "short_zh": "李楼 · 贝茨宿舍区",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "residential",
@@ -18081,6 +18979,8 @@
     "short_zh": "北校区辅助支持楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "university",
@@ -18126,6 +19026,8 @@
     "short_zh": "北校区场地储藏棚",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -18166,6 +19068,8 @@
     "short_zh": "北校区场地服务附楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -18206,6 +19110,8 @@
     "short_zh": "北校区场地服务楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "university",
@@ -18251,6 +19157,8 @@
     "short_zh": "斯坦普斯礼堂",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "reference": null,
       "volumes": [
@@ -18301,6 +19209,14 @@
     "short_zh": "安·卢里与罗伯特·H·卢里纪念塔",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": {
+      "framed_openings": 0,
+      "transoms": 0,
+      "roof_coping_m": 0.0,
+      "hollow_bells": 60,
+      "added_triangles": 0
+    },
+    "highlight_reference": null,
     "architecture_detail": {
       "reference": "https://smtd.umich.edu/facilities/ann-and-robert-h-lurie-carillon/",
       "bells": 60,
@@ -18351,6 +19267,8 @@
     "short_zh": "汽车实验室燃料储藏楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -18391,6 +19309,8 @@
     "short_zh": "沃尔格林戏剧中心",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "reference": null,
       "volumes": [
@@ -18462,6 +19382,8 @@
     "short_zh": "沃尔特·E·莱汽车实验楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "reference": null,
       "volumes": [
@@ -18519,6 +19441,8 @@
     "short_zh": "帕克楼 · 贝茨宿舍区",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "residential",
@@ -18563,6 +19487,8 @@
     "short_zh": "罗伯特·H·卢里工程中心",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "reference": null,
       "volumes": [
@@ -18634,6 +19560,8 @@
     "short_zh": "斯坦利楼 · 贝茨宿舍区",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "residential",
@@ -18678,6 +19606,8 @@
     "short_zh": "核工程实验楼群",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "reference": null,
       "volumes": [
@@ -18733,6 +19663,8 @@
     "short_zh": "皮尔庞特公共活动中心",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "reference": null,
       "volumes": [
@@ -18804,6 +19736,14 @@
     "short_zh": "杜德施塔特中心",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": {
+      "framed_openings": 263,
+      "transoms": 0,
+      "roof_coping_m": 1221.38,
+      "hollow_bells": 0,
+      "added_triangles": 9944
+    },
+    "highlight_reference": null,
     "architecture_detail": {
       "reference": "https://www.dc.umich.edu/about-the-dc/history/",
       "volumes": [
@@ -18868,6 +19808,8 @@
     "short_zh": "史密斯楼 · 贝茨宿舍区",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "residential",
@@ -18912,6 +19854,8 @@
     "short_zh": "工业与运营工程楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "reference": null,
       "volumes": [
@@ -18974,6 +19918,8 @@
     "short_zh": "密西根纪念凤凰实验楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "reference": null,
       "volumes": [
@@ -19030,6 +19976,8 @@
     "short_zh": "克莱斯勒中心",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "reference": null,
       "volumes": [
@@ -19087,6 +20035,8 @@
     "short_zh": "库利实验楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "reference": null,
       "volumes": [
@@ -19143,6 +20093,8 @@
     "short_zh": "厄尔·V·穆尔楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "reference": "https://smtd.umich.edu/facilities/earl-v-moore-building/",
       "volumes": [
@@ -19218,6 +20170,8 @@
     "short_zh": "博尼斯蒂尔跨学科研究楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "reference": null,
       "volumes": [
@@ -19273,6 +20227,8 @@
     "short_zh": "模块化磁共振成像楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "yes",
@@ -19318,6 +20274,8 @@
     "short_zh": "卡尔·A·格斯塔克尔楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "reference": null,
       "volumes": [
@@ -19374,6 +20332,14 @@
     "short_zh": "艺术与建筑楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": {
+      "framed_openings": 349,
+      "transoms": 0,
+      "roof_coping_m": 953.7,
+      "hollow_bells": 0,
+      "added_triangles": 11460
+    },
+    "highlight_reference": null,
     "architecture_detail": {
       "reference": "https://taubmancollege.umich.edu/about/facilities/art-architecture-building/",
       "volumes": [
@@ -19438,6 +20404,8 @@
     "short_zh": "工程研究楼2号",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "reference": null,
       "volumes": [
@@ -19501,6 +20469,8 @@
     "short_zh": "工程研究楼1号",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "reference": null,
       "volumes": [
@@ -19557,6 +20527,8 @@
     "short_zh": "本特利历史图书馆",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "reference": null,
       "volumes": [
@@ -19612,6 +20584,8 @@
     "short_zh": "IST 储藏楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "service",
@@ -19656,6 +20630,8 @@
     "short_zh": "舞蹈楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "reference": null,
       "volumes": [
@@ -19726,6 +20702,8 @@
     "short_zh": "信息学院北楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "reference": null,
       "volumes": [
@@ -19782,6 +20760,8 @@
     "short_zh": "卢里生物医学工程楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "reference": null,
       "volumes": [
@@ -19844,6 +20824,14 @@
     "short_zh": "杰拉尔德·R·福特总统图书馆",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": {
+      "framed_openings": 70,
+      "transoms": 0,
+      "roof_coping_m": 150.97,
+      "hollow_bells": 0,
+      "added_triangles": 2344
+    },
+    "highlight_reference": null,
     "architecture_detail": {
       "reference": "https://www.fordlibrarymuseum.gov/visit/library",
       "volumes": [
@@ -19906,6 +20894,8 @@
     "short_zh": "儿童照护中心",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "reference": null,
       "volumes": [
@@ -19962,6 +20952,8 @@
     "short_zh": "米切尔运动场楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "yes",
@@ -20007,6 +20999,8 @@
     "short_zh": "米切尔运动场活动楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "reference": null,
       "volumes": [
@@ -20061,6 +21055,8 @@
     "short_zh": "沃尔街西停车楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -20101,6 +21097,8 @@
     "short_zh": "布雷姆塔楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -20141,6 +21139,8 @@
     "short_zh": "沃尔街东停车楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -20181,6 +21181,8 @@
     "short_zh": "凯洛格眼科中心",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -20221,6 +21223,8 @@
     "short_zh": "除冰盐储藏楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -20261,6 +21265,8 @@
     "short_zh": "设备维修车间",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -20301,6 +21307,8 @@
     "short_zh": "富勒街1018号楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -20341,6 +21349,8 @@
     "short_zh": "北英格尔斯街426号楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -20381,6 +21391,8 @@
     "short_zh": "大学医院直升机坪",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -20421,6 +21433,8 @@
     "short_zh": "模块化加速器楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -20461,6 +21475,8 @@
     "short_zh": "医学科学研究楼Ⅱ",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -20501,6 +21517,8 @@
     "short_zh": "北入口停车楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -20541,6 +21559,8 @@
     "short_zh": "新儿童照护中心",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -20581,6 +21601,8 @@
     "short_zh": "医学科学研究楼Ⅰ",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -20621,6 +21643,8 @@
     "short_zh": "医学科学辅助楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -20661,6 +21685,8 @@
     "short_zh": "大学医院",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -20701,6 +21727,8 @@
     "short_zh": "儿童照护中心施工活动房1号",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -20741,6 +21769,8 @@
     "short_zh": "罗格尔癌症中心与老年医学中心",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -20781,6 +21811,8 @@
     "short_zh": "医学科学研究楼Ⅲ",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -20821,6 +21853,8 @@
     "short_zh": "中央校区与大学医院负荷中心",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -20861,6 +21895,8 @@
     "short_zh": "医学科学楼Ⅰ",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -20901,6 +21937,8 @@
     "short_zh": "北英格尔斯街400号楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -20941,6 +21979,8 @@
     "short_zh": "医学科学楼Ⅱ",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -20981,6 +22021,8 @@
     "short_zh": "北英格尔斯街锅炉房",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -21021,6 +22063,8 @@
     "short_zh": "维克托·沃恩楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -21061,6 +22105,8 @@
     "short_zh": "格伦大道停车楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -21101,6 +22147,8 @@
     "short_zh": "Med-Inn 医疗楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -21141,6 +22189,8 @@
     "short_zh": "陶布曼健康科学图书馆",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -21181,6 +22231,8 @@
     "short_zh": "北英格尔斯街300号楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -21221,6 +22273,8 @@
     "short_zh": "陶斯利医学继续教育中心",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -21261,6 +22315,8 @@
     "short_zh": "陶布曼医疗中心",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -21301,6 +22357,8 @@
     "short_zh": "布尔人类遗传学研究中心",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -21341,6 +22399,14 @@
     "short_zh": "弗兰克尔心血管中心",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": {
+      "framed_openings": 610,
+      "transoms": 610,
+      "roof_coping_m": 261.49,
+      "hollow_bells": 0,
+      "added_triangles": 27120
+    },
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -21381,6 +22447,8 @@
     "short_zh": "大学医院南楼4号",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -21421,6 +22489,8 @@
     "short_zh": "大学医院南楼2号",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -21461,6 +22531,8 @@
     "short_zh": "凯瑟琳街1100号楼",
     "aliases_zh": [],
     "construction_status": "Idle",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -21501,6 +22573,8 @@
     "short_zh": "凯瑟琳街停车楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -21541,6 +22615,8 @@
     "short_zh": "医院东侧设备楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -21581,6 +22657,8 @@
     "short_zh": "大学医院南楼3号",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -21621,6 +22699,8 @@
     "short_zh": "医学中心路停车楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -21661,6 +22741,14 @@
     "short_zh": "D·丹与贝蒂·卡恩医疗楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": {
+      "framed_openings": 1128,
+      "transoms": 1128,
+      "roof_coping_m": 247.37,
+      "hollow_bells": 0,
+      "added_triangles": 49728
+    },
+    "highlight_reference": "https://www.hok.com/projects/view/michigan-medicine-kahn-health-care-pavilion/",
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -21701,6 +22789,8 @@
     "short_zh": "齐纳·皮彻街停车楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -21741,6 +22831,8 @@
     "short_zh": "大学医院南楼1号",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -21781,6 +22873,8 @@
     "short_zh": "安街停车楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -21821,6 +22915,8 @@
     "short_zh": "大学医院模块楼A",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -21861,6 +22957,8 @@
     "short_zh": "心血管中心停车楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -21901,6 +22999,8 @@
     "short_zh": "医学校区东南开关站",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -21941,6 +23041,8 @@
     "short_zh": "医疗专业楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -21981,6 +23083,14 @@
     "short_zh": "陶布曼生物医学科学研究楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": {
+      "framed_openings": 424,
+      "transoms": 424,
+      "roof_coping_m": 0.0,
+      "hollow_bells": 0,
+      "added_triangles": 18656
+    },
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -22021,6 +23131,14 @@
     "short_zh": "C·S·莫特儿童医院与冯·福格特兰德妇女医院",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": {
+      "framed_openings": 1548,
+      "transoms": 1548,
+      "roof_coping_m": 406.76,
+      "hollow_bells": 0,
+      "added_triangles": 68488
+    },
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -22061,6 +23179,8 @@
     "short_zh": "辛普森环路停车楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -22101,6 +23221,8 @@
     "short_zh": "辛普森纪念研究所",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -22141,6 +23263,8 @@
     "short_zh": "校内文体活动楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "university",
@@ -22186,6 +23310,8 @@
     "short_zh": "校区辅助建筑1005607",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "house",
@@ -22230,6 +23356,8 @@
     "short_zh": "Physical Properties 楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "yes",
@@ -22274,6 +23402,8 @@
     "short_zh": "克利夫·基恩体育馆",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "university",
@@ -22319,6 +23449,8 @@
     "short_zh": "坎纳姆游泳馆",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "university",
@@ -22364,6 +23496,8 @@
     "short_zh": "校区辅助建筑1005609",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "house",
@@ -22408,6 +23542,8 @@
     "short_zh": "雷韦利楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "university",
@@ -22453,6 +23589,8 @@
     "short_zh": "魏登巴赫楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "university",
@@ -22498,6 +23636,8 @@
     "short_zh": "校区辅助建筑1005608",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "house",
@@ -22542,6 +23682,8 @@
     "short_zh": "校区辅助建筑1005610",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "yes",
@@ -22587,6 +23729,8 @@
     "short_zh": "胡佛附楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "yes",
@@ -22631,6 +23775,8 @@
     "short_zh": "行政服务楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "university",
@@ -22675,6 +23821,8 @@
     "short_zh": "体育区开关站",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "yes",
@@ -22719,6 +23867,8 @@
     "short_zh": "雷韦利临时储藏楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -22759,6 +23909,8 @@
     "short_zh": "哈特维格行政楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "university",
@@ -22804,6 +23956,8 @@
     "short_zh": "胡佛供热站",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "yes",
@@ -22848,6 +24002,8 @@
     "short_zh": "体育设施维修楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "yes",
@@ -22892,6 +24048,8 @@
     "short_zh": "法律继续教育学院",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "college",
@@ -22937,6 +24095,8 @@
     "short_zh": "设施服务楼A",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "yes",
@@ -22981,6 +24141,8 @@
     "short_zh": "罗斯学业辅导中心",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "university",
@@ -23026,6 +24188,8 @@
     "short_zh": "格林街1032号楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "yes",
@@ -23070,6 +24234,8 @@
     "short_zh": "设施服务楼C",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "yes",
@@ -23114,6 +24280,8 @@
     "short_zh": "设施储藏楼3号",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "yes",
@@ -23158,6 +24326,8 @@
     "short_zh": "雷·费舍尔棒球场",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "stadium",
@@ -23202,6 +24372,8 @@
     "short_zh": "设施储藏楼2号",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "yes",
@@ -23246,6 +24418,8 @@
     "short_zh": "北广场楼B",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "yes",
@@ -23291,6 +24465,8 @@
     "short_zh": "北广场楼A",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "yes",
@@ -23336,6 +24512,8 @@
     "short_zh": "设施储藏楼1号",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "yes",
@@ -23380,6 +24558,14 @@
     "short_zh": "约斯特冰球馆",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": {
+      "framed_openings": 104,
+      "transoms": 0,
+      "roof_coping_m": 0.0,
+      "hollow_bells": 0,
+      "added_triangles": 3328
+    },
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "yes",
@@ -23425,6 +24611,8 @@
     "short_zh": "室内训练中心",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "yes",
@@ -23470,6 +24658,8 @@
     "short_zh": "设施服务楼B",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "yes",
@@ -23514,6 +24704,8 @@
     "short_zh": "交通车队临时办公楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "yes",
@@ -23558,6 +24750,8 @@
     "short_zh": "多项目体育储藏楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "yes",
@@ -23602,6 +24796,8 @@
     "short_zh": "交通服务楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "yes",
@@ -23646,6 +24842,8 @@
     "short_zh": "校友垒球场与室内击球训练馆",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "yes",
@@ -23690,6 +24888,8 @@
     "short_zh": "舍姆贝克勒楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "university",
@@ -23735,6 +24935,14 @@
     "short_zh": "密西根体育场",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": {
+      "framed_openings": 756,
+      "transoms": 504,
+      "roof_coping_m": 2602.35,
+      "hollow_bells": 0,
+      "added_triangles": 41340
+    },
+    "highlight_reference": null,
     "architecture_detail": {
       "field_z": 20.159175204423875,
       "rim_z": 44.05917520442387,
@@ -23788,6 +24996,8 @@
     "short_zh": "唐纳德·R·谢泼德垒球中心",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -23828,6 +25038,8 @@
     "short_zh": "奥斯特班室内体育馆",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "yes",
@@ -23873,6 +25085,8 @@
     "short_zh": "容格家族冠军中心",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "yes",
@@ -23918,6 +25132,8 @@
     "short_zh": "校园安全服务楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "yes",
@@ -23963,6 +25179,8 @@
     "short_zh": "阿尔·格利克室内体育馆",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "yes",
@@ -24008,6 +25226,14 @@
     "short_zh": "克里斯勒中心",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": {
+      "framed_openings": 138,
+      "transoms": 138,
+      "roof_coping_m": 656.71,
+      "hollow_bells": 0,
+      "added_triangles": 8684
+    },
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "stadium",
@@ -24054,6 +25280,8 @@
     "short_zh": "戴维森球员发展中心",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "yes",
@@ -24098,6 +25326,8 @@
     "short_zh": "费里运动场泵房",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -24138,6 +25368,8 @@
     "short_zh": "曲棍球场售票处",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -24178,6 +25410,8 @@
     "short_zh": "曲棍球场",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -24218,6 +25452,8 @@
     "short_zh": "曲棍球场西售票处",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -24258,6 +25494,8 @@
     "short_zh": "曲棍球队中心",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "yes",
@@ -24303,6 +25541,8 @@
     "short_zh": "波斯特马高尔夫会馆",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "yes",
@@ -24348,6 +25588,8 @@
     "short_zh": "体育部运营中心",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "yes",
@@ -24393,6 +25635,8 @@
     "short_zh": "体育区车库",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -24433,6 +25677,8 @@
     "short_zh": "维修楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -24473,6 +25719,8 @@
     "short_zh": "高尔夫球场公共卫生间A",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -24513,6 +25761,8 @@
     "short_zh": "高尔夫球场1号泵房",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -24553,6 +25803,8 @@
     "short_zh": "魏斯费尔德家族高尔夫中心",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -24593,6 +25845,8 @@
     "short_zh": "高尔夫练习场楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -24633,6 +25887,8 @@
     "short_zh": "高尔夫球场公共卫生间B",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -24673,6 +25929,8 @@
     "short_zh": "体育设施支持楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -24713,6 +25971,8 @@
     "short_zh": "蒂施网球中心",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -24753,6 +26013,8 @@
     "short_zh": "密西根大学足球场",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -24793,6 +26055,8 @@
     "short_zh": "谢泼德女子体操训练馆",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -24833,6 +26097,8 @@
     "short_zh": "足球场售票楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -24873,6 +26139,8 @@
     "short_zh": "巴纳摔跤中心",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -24913,6 +26181,8 @@
     "short_zh": "长曲棍球场售票楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -24953,6 +26223,8 @@
     "short_zh": "运动表现中心",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -24993,6 +26265,8 @@
     "short_zh": "密西根大学长曲棍球场",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -25033,6 +26307,8 @@
     "short_zh": "室外田径场辅助楼",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -25073,6 +26349,8 @@
     "short_zh": "室内田径馆",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -25113,6 +26391,8 @@
     "short_zh": "田径场",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -25153,6 +26433,8 @@
     "short_zh": "伯灵顿办公中心",
     "aliases_zh": [],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false

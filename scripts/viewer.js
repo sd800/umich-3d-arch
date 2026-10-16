@@ -248,7 +248,7 @@ try{
  const pads=new Map([...(data.groundPads||[]),...(data.neighborPads||[])].map(p=>[p.code,p]));
  for(const r of allRecords){const g=new THREE.Group(),pad=pads.get(r.code),b=pad?.bounds||[r.center[0]-r.width/2,r.center[1]-r.depth/2,r.center[0]+r.width/2,r.center[1]+r.depth/2];g.userData.bounds=new THREE.Box3(new THREE.Vector3(b[0]-1,b[1]-1,r.ground_m),new THREE.Vector3(b[2]+1,b[3]+1,r.peak_m));buildings.set(r.code,g);}
  renderBounds=new THREE.Box3(new THREE.Vector3(...data.regions.base.bounds.slice(0,3)),new THREE.Vector3(...data.regions.base.bounds.slice(3)));campusDiagonal=renderBounds.getSize(new THREE.Vector3()).length();fitCampusSun(sun,renderBounds);
- streaming=createRegionStream({data,parent:campus,renderer,camera,host,report:reportLoad,onChange:()=>render(false)});await streaming.initialize();
+ streaming=createRegionStream({data,parent:campus,renderer,camera,host,viewTarget:()=>controls?.target,report:reportLoad,onChange:()=>render(false)});await streaming.initialize();
  renderer.shadowMap.autoUpdate=false;renderer.shadowMap.enabled=$('shadows').checked;renderer.shadowMap.needsUpdate=true;sun.castShadow=$('shadows').checked;
  controls=new CampusMapControls(camera,renderer.domElement);controls.groundHeight=mapGround;controls.addEventListener('change',()=>render(false));controls.listenToKeyEvents(renderer.domElement);syncRotationButton();
  renderer.domElement.addEventListener('keydown',e=>{if(e.ctrlKey||e.metaKey||e.altKey)return;if(['+','=','-','_'].includes(e.key)){e.preventDefault();if(e.key==='+'||e.key==='=')controls.dollyIn(.9);else controls.dollyOut(.9);}if(!e.repeat&&e.key.toLowerCase()==='r')$('rotation-mode').click();});

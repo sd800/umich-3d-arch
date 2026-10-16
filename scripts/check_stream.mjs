@@ -27,3 +27,8 @@ for(const mobile of [true,false]){
  const t=tiles.find(t=>t.gpuBytes<limits.bytes&&t.triangles<limits.triangles);assert.deepEqual(chooseRegions([t],{mpp:(limits.enterMpp+limits.exitMpp)/2,visible:()=>true,limits}),[]);assert.equal(chooseRegions([t],{mpp:(limits.enterMpp+limits.exitMpp)/2,visible:()=>true,resident:new Set([t.key]),limits}).length,1);
 }
 console.log(`Streaming checks passed: ${manifest.tiles.length} regional assets, overview IDs, indices, integrity, local scripts, mobile/desktop budgets and LOD hysteresis.`);
+
+// Large source terrain triangles must not pull detail away from the map pivot.
+const one={...regionLimits(),regions:1},tile=(key,bounds,hasBuildings=true)=>({key,bounds,hasBuildings,gpuBytes:10,triangles:10});
+assert.equal(chooseRegions([tile('4_4',[0,0,0,1,1,1]),tile('0_0',[0,0,0,5000,5000,1])],{mpp:.1,visible:()=>true,center:[96,96],limits:one})[0].key,'0_0');
+assert.equal(chooseRegions([tile('0_0',[0,0,0,192,192,1],false),tile('0_1',[0,192,0,192,384,1])],{mpp:.1,visible:()=>true,center:[96,96],limits:one})[0].key,'0_1');

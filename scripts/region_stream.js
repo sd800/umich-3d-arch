@@ -32,7 +32,7 @@ export async function readRegionAsset(asset,inline,report=()=>{},signal){
  return bytes;
 }
 
-export function createRegionStream({data,parent,renderer,camera,host,onChange=()=>{},report=()=>{},mobile=matchMedia('(pointer:coarse)').matches||innerWidth<=760}){
+export function createRegionStream({data,parent,renderer,camera,host,onChange=()=>{},report=()=>{},viewTarget=()=>null,mobile=matchMedia('(pointer:coarse)').matches||innerWidth<=760}){
  const manifest=data.regions,root=new THREE.Group();root.name='Regional campus LOD';parent.add(root);
  const base=new Map(),resident=new Map(),materials=new Map(),limits=regionLimits(mobile),codes=manifest.ownerCodes,neighborCodes=new Set((data.neighbors||[]).map(r=>r.code)),codeIds=new Map(codes.map((code,i)=>[code,i+1])),field=createTerrainLighting(data.groundGrid);
  const texWidth=256,texHeight=Math.ceil((codes.length+1)/texWidth),pixels=new Uint8Array(texWidth*texHeight).fill(255),texture=new THREE.DataTexture(pixels,texWidth,texHeight,THREE.RedFormat,THREE.UnsignedByteType);texture.minFilter=texture.magFilter=THREE.NearestFilter;texture.needsUpdate=true;
@@ -127,7 +127,7 @@ export function createRegionStream({data,parent,renderer,camera,host,onChange=()
   let evicted=false;for(const[key,cell]of resident)if(!wanted.has(key)){evicted=true;release(cell.group);resident.delete(key);regionPixels[regionIds.get(key)]=255;regionTexture.needsUpdate=true;}
   refreshStats();pump();if(evicted){renderer.shadowMap.needsUpdate=true;onChange();}
  }
- function groundCenter(){const p=new THREE.Vector3();camera.getWorldDirection(p);const d=Math.abs(p.z)>.01?(50-camera.position.z)/p.z:0;return[camera.position.x+p.x*d,camera.position.y+p.y*d];}
+ function groundCenter(){const target=viewTarget();if(target)return[target.x,target.y];const p=new THREE.Vector3();camera.getWorldDirection(p);const d=Math.abs(p.z)>.01?(50-camera.position.z)/p.z:0;return[camera.position.x+p.x*d,camera.position.y+p.y*d];}
  async function pump(){
   if(loading||disposed)return;
   const tile=desired.find(t=>!resident.has(t.key)&&!(t.retryAt>Date.now()));if(!tile)return;

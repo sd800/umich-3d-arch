@@ -1,6 +1,6 @@
 # Regional rendering
 
-Scope: all UMich regions. Original CAD remains unchanged.
+Scope: all UMich regions. The streaming build reads the current CAD without changing it.
 
 The web viewer first loads a simplified overview, then downloads full-detail 192 m regions near the view center or a selected building. Overview batches span 768 m to reduce draw calls; a region mask prevents double surfaces during detail replacement. Pixel-scale thresholds have hysteresis; requests wait until navigation settles, run one at a time, and stale requests are aborted. Failed detail requests retain the overview.
 

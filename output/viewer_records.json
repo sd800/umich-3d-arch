@@ -36,6 +36,8 @@
       ""
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -79,6 +81,8 @@
       "Couzens Hall"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -122,6 +126,14 @@
       "Detroit Observatory"
     ],
     "construction_status": "Active",
+    "highlight_joinery": {
+      "framed_openings": 21,
+      "transoms": 0,
+      "roof_coping_m": 0.0,
+      "hollow_bells": 0,
+      "added_triangles": 672
+    },
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -165,6 +177,8 @@
       "College of Pharmacy Building"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -208,6 +222,8 @@
       "617 E Huron"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -251,6 +267,8 @@
       "Alice Lloyd"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -294,6 +312,14 @@
       "Rackham"
     ],
     "construction_status": "Active",
+    "highlight_joinery": {
+      "framed_openings": 273,
+      "transoms": 0,
+      "roof_coping_m": 305.56,
+      "hollow_bells": 0,
+      "added_triangles": 9116
+    },
+    "highlight_reference": null,
     "architecture_detail": {
       "reference": "https://tour.umich.edu/text-based/locations/rackham-school-of-graduate-studies/",
       "individual_roof_ranges": 2,
@@ -341,6 +367,14 @@
       "North Quad Complex"
     ],
     "construction_status": "Active",
+    "highlight_joinery": {
+      "framed_openings": 694,
+      "transoms": 694,
+      "roof_coping_m": 246.22,
+      "hollow_bells": 0,
+      "added_triangles": 31352
+    },
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -384,6 +418,8 @@
       "Power Center"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -427,6 +463,8 @@
       "Central Power Plant"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "reference": "https://umaec.umich.edu/projects/completed-projects/central-power-plant-expansion-2/project-data/",
       "stack_source": "https://regents.umich.edu/files/meetings/07-17/2017-07-IX-6.pdf",
@@ -495,6 +533,8 @@
       "Mary Markley"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "reference": "https://tour.umich.edu/text-based/locations/mary-markley-hall/",
       "individual_roof_ranges": 2,
@@ -542,6 +582,8 @@
       "Vaughan SPH-I"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -585,6 +627,8 @@
       "Palmer Commons"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -628,6 +672,8 @@
       "Utilities Service Building"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -671,6 +717,8 @@
       "Central Campus Switching Station"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -714,6 +762,8 @@
       "210-212 S Fifth Ave"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -757,6 +807,8 @@
       "Burnham House"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -800,6 +852,8 @@
       "202 South Thayer Building"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -843,6 +897,8 @@
       "Alumni Center"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -886,6 +942,8 @@
       "Fletcher St. Parking Structure"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -929,6 +987,8 @@
       "Ronald McDonald House"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -972,6 +1032,8 @@
       "Francis SPH-II"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -1015,6 +1077,8 @@
       "Lane Hall"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -1058,6 +1122,8 @@
       "Palmer Dr. Parking Structure"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -1101,6 +1167,8 @@
       "Observatory Hall"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -1144,6 +1212,8 @@
       "Mosher-Jordan"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -1187,6 +1257,8 @@
       "Hillside Towne Centre"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -1230,6 +1302,8 @@
       "MLB"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -1273,6 +1347,8 @@
       "Undergraduate Science Building (USB)"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -1316,6 +1392,8 @@
       "Thayer St. Parking Structure"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -1359,6 +1437,8 @@
       "Health Service"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -1402,6 +1482,8 @@
       "214 S. State"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -1445,6 +1527,8 @@
       "625 E Liberty"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -1488,6 +1572,8 @@
       "Mary Sue Coleman Hall"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -1531,6 +1617,14 @@
       "Burton Tower"
     ],
     "construction_status": "Active",
+    "highlight_joinery": {
+      "framed_openings": 0,
+      "transoms": 0,
+      "roof_coping_m": 0.0,
+      "hollow_bells": 0,
+      "added_triangles": 0
+    },
+    "highlight_reference": "https://smtd.umich.edu/facilities/burton-memorial-tower/charles-baird-carillon/",
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -1574,6 +1668,8 @@
       "Michigan Square"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -1617,6 +1713,8 @@
       "Carver Building"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -1660,6 +1758,14 @@
       "Michigan League"
     ],
     "construction_status": "Active",
+    "highlight_joinery": {
+      "framed_openings": 174,
+      "transoms": 0,
+      "roof_coping_m": 0.0,
+      "hollow_bells": 0,
+      "added_triangles": 5568
+    },
+    "highlight_reference": null,
     "architecture_detail": {
       "reference": "https://tour.umich.edu/text-based/locations/michigan-league/",
       "individual_roof_ranges": 2,
@@ -1715,6 +1821,8 @@
       "305 W Liberty"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "yes",
@@ -1762,6 +1870,8 @@
       "540 E Liberty St"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "office",
@@ -1809,6 +1919,8 @@
       "School of Dentistry Bldg"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -1852,6 +1964,14 @@
       "Hill Auditorium"
     ],
     "construction_status": "Active",
+    "highlight_joinery": {
+      "framed_openings": 87,
+      "transoms": 0,
+      "roof_coping_m": 0.0,
+      "hollow_bells": 0,
+      "added_triangles": 2784
+    },
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "university",
@@ -1902,6 +2022,8 @@
       "309 Maynard"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "retail",
@@ -1950,6 +2072,8 @@
       "W.K. Kellogg Foundation Institute"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -1993,6 +2117,8 @@
       "Hamilton Square"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "retail",
@@ -2042,6 +2168,8 @@
       "Biological Science Building"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "university",
@@ -2091,6 +2219,8 @@
       "317 Maynard St"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -2134,6 +2264,8 @@
       "Huron Bank"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "retail",
@@ -2182,6 +2314,8 @@
       "Stockwell Hall"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "dormitory",
@@ -2231,6 +2365,8 @@
       "Residence"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -2274,6 +2410,8 @@
       "Collegian Building"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "office",
@@ -2323,6 +2461,8 @@
       "Garage & Workshop"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -2366,6 +2506,8 @@
       "Storage Shed"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -2409,6 +2551,8 @@
       "Argus II"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -2452,6 +2596,8 @@
       "Alexander G. Ruthven Building"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "university",
@@ -2501,6 +2647,8 @@
       "School of Kinesiology Building"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "reference": "https://tour.umich.edu/text-based/locations/school-of-kinesiology/",
       "individual_roof_ranges": 1,
@@ -2554,6 +2702,8 @@
       "Hadley Family Recreation Center"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "university",
@@ -2602,6 +2752,8 @@
       "Chemistry & Dow Lab."
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "reference": "https://bentley.umich.edu/discover/bentley-materials/campus-tour/building-index/chemistry-building/",
       "individual_roof_ranges": 2,
@@ -2653,6 +2805,8 @@
       "Central Campus Classroom Building"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "university",
@@ -2703,6 +2857,8 @@
       "Argus Building 1"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "university",
@@ -2752,6 +2908,8 @@
       "Michigan News "
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "university",
@@ -2802,6 +2960,8 @@
       "1100 North University Building "
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -2845,6 +3005,8 @@
       "Betsy Barbour"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "dormitory",
@@ -2895,6 +3057,8 @@
       "Dana Building"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "reference": "https://bentley.umich.edu/discover/bentley-materials/campus-tour/building-index/dana-building/",
       "individual_roof_ranges": 1,
@@ -2946,6 +3110,8 @@
       ""
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "house",
@@ -2995,6 +3161,8 @@
       "Lipsey Student Publications"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "university",
@@ -3045,6 +3213,8 @@
       "Trotter William Monroe Multicultural Center "
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "university",
@@ -3094,6 +3264,8 @@
       "Mason Hall"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "reference": "https://umaec.umich.edu/projects/completed-projects/mason-hall-and-haven-hall-addition-and-renovation/",
       "individual_roof_ranges": 1,
@@ -3148,6 +3320,8 @@
       ""
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "house",
@@ -3197,6 +3371,8 @@
       "428 Church Building"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -3240,6 +3416,8 @@
       "Helen Newberry"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "dormitory",
@@ -3289,6 +3467,8 @@
       ""
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "house",
@@ -3337,6 +3517,8 @@
       ""
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "house",
@@ -3386,6 +3568,8 @@
       ""
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "house",
@@ -3435,6 +3619,8 @@
       "Institute for Social Research"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "university",
@@ -3484,6 +3670,8 @@
       "Newberry Hall (Kelsey Museum)"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "university",
@@ -3532,6 +3720,8 @@
       ""
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "house",
@@ -3580,6 +3770,8 @@
       "Randall Lab"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "reference": "https://maps.studentlife.umich.edu/building/harrison-m-randall-laboratory",
       "individual_roof_ranges": 1,
@@ -3627,6 +3819,8 @@
       "Student Activities Building (SAB)"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -3670,6 +3864,14 @@
       "Angell Hall and Tisch Hall"
     ],
     "construction_status": "Active",
+    "highlight_joinery": {
+      "framed_openings": 548,
+      "transoms": 0,
+      "roof_coping_m": 802.95,
+      "hollow_bells": 0,
+      "added_triangles": 17920
+    },
+    "highlight_reference": null,
     "architecture_detail": {
       "reference": "https://bentley.umich.edu/discover/bentley-materials/campus-tour/building-index/angell-hall/",
       "individual_roof_ranges": 3,
@@ -3724,6 +3926,8 @@
       "Angell Hall Auditoriums"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "reference": "https://tour.umich.edu/text-based/tours/diag/",
       "individual_roof_ranges": 1,
@@ -3771,6 +3975,8 @@
       "439 S. Division "
     ],
     "construction_status": "Construction",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "house",
@@ -3818,6 +4024,8 @@
       ""
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -3866,6 +4074,8 @@
       "Weiser Hall"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "university",
@@ -3916,6 +4126,8 @@
       "Neal Lab"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "reference": "https://tour.umich.edu/text-based/tours/diag/",
       "individual_roof_ranges": 1,
@@ -3969,6 +4181,8 @@
       "Carriage House"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -4019,6 +4233,8 @@
       "Haven Hall"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "reference": "https://umaec.umich.edu/projects/completed-projects/mason-hall-and-haven-hall-addition-and-renovation/",
       "individual_roof_ranges": 1,
@@ -4073,6 +4289,8 @@
       "Wallenberg House"
     ],
     "construction_status": "Construction",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -4116,6 +4334,14 @@
       "Hatcher - North"
     ],
     "construction_status": "Active",
+    "highlight_joinery": {
+      "framed_openings": 218,
+      "transoms": 0,
+      "roof_coping_m": 0.0,
+      "hollow_bells": 0,
+      "added_triangles": 6976
+    },
+    "highlight_reference": null,
     "architecture_detail": {
       "reference": "https://www.lib.umich.edu/visit-and-study/floor-plans/hatcher-library-north-floors/",
       "individual_roof_ranges": 2,
@@ -4169,6 +4395,8 @@
       "Literature Science & Arts Building"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "university",
@@ -4218,6 +4446,8 @@
       "FOREST STA "
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "yes",
@@ -4266,6 +4496,8 @@
       "Hatcher - South"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "reference": "https://www.lib.umich.edu/visit-and-study/floor-plans/hatcher-library-south-floors/",
       "individual_roof_ranges": 1,
@@ -4317,6 +4549,8 @@
       "Church St. Parking Structure"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "yes",
@@ -4365,6 +4599,8 @@
       "West Hall"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "reference": "https://regents.umich.edu/files/meetings/09-14/2014-09-IX-9.pdf",
       "individual_roof_ranges": 1,
@@ -4418,6 +4654,8 @@
       "East Hall"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "university",
@@ -4468,6 +4706,8 @@
       "Thompson St. Parking Structure"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "yes",
@@ -4516,6 +4756,8 @@
       "523 South Division Building"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "university",
@@ -4566,6 +4808,14 @@
       "Alumni Memorial (Museum of Art)"
     ],
     "construction_status": "Active",
+    "highlight_joinery": {
+      "framed_openings": 98,
+      "transoms": 0,
+      "roof_coping_m": 408.61,
+      "hollow_bells": 0,
+      "added_triangles": 3964
+    },
+    "highlight_reference": null,
     "architecture_detail": {
       "reference": "https://tour.umich.edu/text-based/tours/diag/",
       "individual_roof_ranges": 2,
@@ -4618,6 +4868,8 @@
       "Shapiro Library"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "reference": "https://www.lib.umich.edu/visit-and-study/floor-plans/shapiro-library-floors/",
       "individual_roof_ranges": 1,
@@ -4671,6 +4923,8 @@
       "Tappan Hall"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "reference": "https://tour.umich.edu/text-based/tours/diag/",
       "individual_roof_ranges": 1,
@@ -4723,6 +4977,14 @@
       "Clements Library"
     ],
     "construction_status": "Active",
+    "highlight_joinery": {
+      "framed_openings": 35,
+      "transoms": 3,
+      "roof_coping_m": 115.36,
+      "hollow_bells": 0,
+      "added_triangles": 1580
+    },
+    "highlight_reference": null,
     "architecture_detail": {
       "reference": "https://clements.umich.edu/about/history/construction-of-the-library/",
       "individual_roof_ranges": 1,
@@ -4776,6 +5038,8 @@
       "Presidents Residence"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "university",
@@ -4826,6 +5090,14 @@
       "Michigan Union"
     ],
     "construction_status": "Active",
+    "highlight_joinery": {
+      "framed_openings": 378,
+      "transoms": 0,
+      "roof_coping_m": 118.58,
+      "hollow_bells": 0,
+      "added_triangles": 12384
+    },
+    "highlight_reference": null,
     "architecture_detail": {
       "reference": "https://tour.umich.edu/text-based/locations/michigan-union/",
       "individual_roof_ranges": 3,
@@ -4880,6 +5152,8 @@
       "555 South Forest"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "university",
@@ -4927,6 +5201,8 @@
       "Geddes"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -4970,6 +5246,8 @@
       "West Quad"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "reference": "https://tour.umich.edu/text-based/locations/west-quad/",
       "individual_roof_ranges": 1,
@@ -5021,6 +5299,8 @@
       "Cheever"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -5064,6 +5344,8 @@
       "Munger Graduate Residences"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "residential",
@@ -5114,6 +5396,8 @@
       "Perry Building"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "university",
@@ -5163,6 +5447,8 @@
       "Emanuel"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -5206,6 +5492,8 @@
       "Ann Arbor Plaza"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "commercial",
@@ -5253,6 +5541,14 @@
       "Lawyers Club and Munger Charles T Residences"
     ],
     "construction_status": "Active",
+    "highlight_joinery": {
+      "framed_openings": 137,
+      "transoms": 0,
+      "roof_coping_m": 0.0,
+      "hollow_bells": 0,
+      "added_triangles": 4904
+    },
+    "highlight_reference": null,
     "architecture_detail": {
       "reference": "https://michigan.law.umich.edu/about-michigan-law/michigan-law-architecture",
       "individual_roof_ranges": 4,
@@ -5308,6 +5604,8 @@
       "Madison Building"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "university",
@@ -5358,6 +5656,8 @@
       "School of Social Work"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "university",
@@ -5407,6 +5707,8 @@
       "Martha Cook"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "dormitory",
@@ -5457,6 +5759,8 @@
       "Goddard"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -5500,6 +5804,8 @@
       "Cook John P Building"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "reference": "https://michigan.law.umich.edu/about-michigan-law/michigan-law-architecture",
       "individual_roof_ranges": 1,
@@ -5553,6 +5859,8 @@
       "Noble"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -5596,6 +5904,8 @@
       "1443 Washtenaw Avenue Building"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -5639,6 +5949,8 @@
       "Wallace House"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -5682,6 +5994,8 @@
       "Vandenberg"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -5725,6 +6039,8 @@
       ""
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -5768,6 +6084,8 @@
       "Forest Ave Parking Structure"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "parking",
@@ -5816,6 +6134,8 @@
       "Seeley"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -5859,6 +6179,8 @@
       "Rec Sports Adventure Leadership Rental Center Offices Temp Trailer"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -5902,6 +6224,14 @@
       "Cook Legal Research (Law Library )"
     ],
     "construction_status": "Active",
+    "highlight_joinery": {
+      "framed_openings": 292,
+      "transoms": 0,
+      "roof_coping_m": 61.45,
+      "hollow_bells": 0,
+      "added_triangles": 9800
+    },
+    "highlight_reference": null,
     "architecture_detail": {
       "reference": "https://michigan.law.umich.edu/about-michigan-law/michigan-law-architecture",
       "individual_roof_ranges": 4,
@@ -5955,6 +6285,8 @@
       "School of Education"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -5998,6 +6330,8 @@
       "Plant Service"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -6041,6 +6375,8 @@
       "South Quad"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "reference": "https://tour.umich.edu/text-based/locations/south-quad/",
       "individual_roof_ranges": 2,
@@ -6095,6 +6431,8 @@
       "Lorch Hall"
     ],
     "construction_status": "Construction",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "university",
@@ -6144,6 +6482,8 @@
       "Rec Sports Adventure Leadership Rental Center"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "university",
@@ -6192,6 +6532,14 @@
       "Hutchins Hall"
     ],
     "construction_status": "Active",
+    "highlight_joinery": {
+      "framed_openings": 278,
+      "transoms": 0,
+      "roof_coping_m": 370.65,
+      "hollow_bells": 0,
+      "added_triangles": 12144
+    },
+    "highlight_reference": null,
     "architecture_detail": {
       "reference": "https://michigan.law.umich.edu/about-michigan-law/michigan-law-architecture",
       "individual_roof_ranges": 3,
@@ -6246,6 +6594,8 @@
       "Restroom Facilities Temp Trailer"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "yes",
@@ -6293,6 +6643,8 @@
       "Michigan Marching Band Temporary Trailer"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "university",
@@ -6340,6 +6692,8 @@
       "Elbel Field Audiovisual Booth"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -6383,6 +6737,8 @@
       "Towsley Children's House"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "yes",
@@ -6431,6 +6787,8 @@
       ""
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "house",
@@ -6480,6 +6838,8 @@
       ""
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "house",
@@ -6529,6 +6889,8 @@
       "Blau Jeff T Hall"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "reference": "https://www.kpf.com/story/the-making-of-university-of-michigan-stephen-m-ross-school-of-business",
       "volumes": [
@@ -6589,6 +6951,8 @@
       "Jeffries Hall"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "reference": "https://michigan.law.umich.edu/about-michigan-law/michigan-law-architecture",
       "individual_roof_ranges": 1,
@@ -6643,6 +7007,8 @@
       "East Quad"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "reference": "https://tour.umich.edu/text-based/locations/east-quad/",
       "individual_roof_ranges": 1,
@@ -6690,6 +7056,8 @@
       "Kresge Hall"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "reference": null,
       "volumes": [
@@ -6748,6 +7116,8 @@
       "The Catalyst Hotel at Michigan Ross"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "reference": null,
       "volumes": [
@@ -6808,6 +7178,14 @@
       "Ross School of Business"
     ],
     "construction_status": "Active",
+    "highlight_joinery": {
+      "framed_openings": 303,
+      "transoms": 303,
+      "roof_coping_m": 576.02,
+      "hollow_bells": 0,
+      "added_triangles": 15828
+    },
+    "highlight_reference": null,
     "architecture_detail": {
       "reference": "https://www.kpf.com/story/the-making-of-university-of-michigan-stephen-m-ross-school-of-business",
       "volumes": [
@@ -6901,6 +7279,8 @@
       "Weill Hall"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "university",
@@ -6950,6 +7330,8 @@
       "Wyly Hall"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "reference": null,
       "volumes": [
@@ -7010,6 +7392,8 @@
       "CCRD Phase II Temp Construction Trailer A"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -7053,6 +7437,8 @@
       "Hill St. Parking Structure"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "reference": null,
       "volumes": [
@@ -7111,6 +7497,8 @@
       "Sports Coliseum"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "university",
@@ -7160,6 +7548,8 @@
       "914 Hill"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "detached",
@@ -7210,6 +7600,8 @@
       "Henderson House"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "dormitory",
@@ -7260,6 +7652,8 @@
       "Ginsberg Building"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "university",
@@ -7309,6 +7703,8 @@
       "Building 2"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "dormitory",
@@ -7357,6 +7753,8 @@
       "Building 1"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -7400,6 +7798,8 @@
       "Buhr"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "university",
@@ -7448,6 +7848,8 @@
       "Building 4"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "dormitory",
@@ -7496,6 +7898,8 @@
       "Building 3"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "dormitory",
@@ -7544,6 +7948,8 @@
       "Fletcher Hall"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "dormitory",
@@ -7594,6 +8000,8 @@
       "Harper Hall"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "dormitory",
@@ -7642,6 +8050,8 @@
       "Boyer"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "university",
@@ -7690,6 +8100,8 @@
       "NW4 642"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -7737,6 +8149,8 @@
       "NW4 641"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -7784,6 +8198,8 @@
       "NW4 643"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -7831,6 +8247,8 @@
       "NW4 651"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -7878,6 +8296,8 @@
       "NW4 640"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -7925,6 +8345,8 @@
       "NCRC Bldg 73"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "reference": null,
       "volumes": [
@@ -7983,6 +8405,8 @@
       "NW4 650"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -8030,6 +8454,8 @@
       "NW4 652"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -8077,6 +8503,8 @@
       "NW4 644"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -8124,6 +8552,8 @@
       "NW4 639"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -8171,6 +8601,8 @@
       "NW4 649"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -8218,6 +8650,8 @@
       "North Campus Children's Center Bldg 75"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "reference": null,
       "volumes": [
@@ -8278,6 +8712,8 @@
       "NW4 653"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -8325,6 +8761,8 @@
       "NW4 648"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -8372,6 +8810,8 @@
       "NW4 647"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -8419,6 +8859,8 @@
       "NW4 646"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -8466,6 +8908,8 @@
       "NW4 645"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -8513,6 +8957,8 @@
       "NCRC Bldg 200"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "reference": null,
       "volumes": [
@@ -8571,6 +9017,8 @@
       "NW4 638"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -8618,6 +9066,8 @@
       "NW4 654"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -8665,6 +9115,8 @@
       "NW4 655"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -8712,6 +9164,8 @@
       "NW4 656"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -8759,6 +9213,8 @@
       "NCRC Bldg 100"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "reference": null,
       "volumes": [
@@ -8817,6 +9273,8 @@
       "NW4 637"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -8864,6 +9322,8 @@
       "NW4 657"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -8911,6 +9371,8 @@
       "NCRC Bldg 16"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "reference": null,
       "volumes": [
@@ -8964,6 +9426,8 @@
       "NW4 634"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -9011,6 +9475,8 @@
       "NW4 636"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -9058,6 +9524,8 @@
       "NW4 635"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -9105,6 +9573,8 @@
       "Fire Station"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "reference": null,
       "volumes": [
@@ -9163,6 +9633,8 @@
       "NW4 633"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -9210,6 +9682,8 @@
       "NCRC Bldg 300"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "reference": null,
       "volumes": [
@@ -9268,6 +9742,8 @@
       "NCRC Bldg 18"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "reference": null,
       "volumes": [
@@ -9321,6 +9797,8 @@
       "NW4 658"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -9368,6 +9846,8 @@
       "NW4 632"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -9415,6 +9895,8 @@
       "NW4 631"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -9462,6 +9944,8 @@
       "NW4 630"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -9509,6 +9993,8 @@
       "NCRC Bldg 400"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "reference": null,
       "volumes": [
@@ -9567,6 +10053,8 @@
       "NCRC Bldg 10"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "reference": null,
       "volumes": [
@@ -9620,6 +10108,8 @@
       "NCRC Bldg 14"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "reference": null,
       "volumes": [
@@ -9673,6 +10163,8 @@
       "NW4 659"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -9720,6 +10212,8 @@
       "NW4 629"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -9767,6 +10261,8 @@
       "NW4 628"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -9814,6 +10310,8 @@
       "NCRC Bldg 90"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "reference": null,
       "volumes": [
@@ -9867,6 +10365,8 @@
       "NCRC Bldg 25"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "reference": null,
       "volumes": [
@@ -9920,6 +10420,8 @@
       "NW4 660"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -9967,6 +10469,8 @@
       "NCRC Bldg 20"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "reference": null,
       "volumes": [
@@ -10020,6 +10524,8 @@
       "NW4 625"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -10067,6 +10573,8 @@
       "NCRC Bldg 550"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "reference": null,
       "volumes": [
@@ -10125,6 +10633,8 @@
       "NCRC Bldg 520"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "reference": null,
       "volumes": [
@@ -10183,6 +10693,8 @@
       "NW4 626"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -10230,6 +10742,8 @@
       "NW4 627"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -10277,6 +10791,8 @@
       "NW4 624"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -10324,6 +10840,8 @@
       "NW4 661"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -10371,6 +10889,8 @@
       "NCRC Bldg 22"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "reference": null,
       "volumes": [
@@ -10424,6 +10944,8 @@
       "NCRC Bldg 70"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -10467,6 +10989,8 @@
       "NW4 622"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -10514,6 +11038,8 @@
       "NCRC Bldg 60"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "reference": null,
       "volumes": [
@@ -10567,6 +11093,8 @@
       "NW4 623"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -10614,6 +11142,8 @@
       "NW4 662"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -10661,6 +11191,8 @@
       "NW4 621"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -10708,6 +11240,8 @@
       "NW4 663"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -10755,6 +11289,8 @@
       "NW4 620"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -10802,6 +11338,8 @@
       "NCRC Bldg 26"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "reference": null,
       "volumes": [
@@ -10855,6 +11393,8 @@
       "NW4 619"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -10902,6 +11442,8 @@
       "NW4 664"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -10949,6 +11491,8 @@
       "NCRC Bldg 30"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "reference": null,
       "volumes": [
@@ -11002,6 +11546,8 @@
       "NW2 AP 464"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -11049,6 +11595,8 @@
       "NW4 617"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -11096,6 +11644,8 @@
       "NCRC Bldg 80"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "reference": null,
       "volumes": [
@@ -11153,6 +11703,8 @@
       "NW4 618"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -11200,6 +11752,8 @@
       "NCRC Bldg 23"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -11243,6 +11797,8 @@
       "NW4 667"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -11290,6 +11846,8 @@
       "NW4 666"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -11337,6 +11895,8 @@
       "NW4 665"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -11384,6 +11944,8 @@
       "NW4 684"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "yes",
@@ -11431,6 +11993,8 @@
       "NCRC Bldg 32"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "reference": null,
       "volumes": [
@@ -11484,6 +12048,8 @@
       "NW4 668"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -11531,6 +12097,8 @@
       "NW4 616"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -11578,6 +12146,8 @@
       "NW4 670"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -11625,6 +12195,8 @@
       "NW4 669"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -11672,6 +12244,8 @@
       "Northwood II Svc Building 458"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "yes",
@@ -11720,6 +12294,8 @@
       "NCRC Bldg 800"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "reference": null,
       "volumes": [
@@ -11773,6 +12349,8 @@
       "NW2 AP 467"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -11820,6 +12398,8 @@
       "NCRC Bldg 35"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "reference": null,
       "volumes": [
@@ -11873,6 +12453,8 @@
       "NW2 AP 465"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -11920,6 +12502,8 @@
       "NW2 AP 462"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -11967,6 +12551,8 @@
       "NCRC Bldg 28"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "reference": null,
       "volumes": [
@@ -12020,6 +12606,8 @@
       "NW4 615"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -12067,6 +12655,8 @@
       "NW4 671"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -12114,6 +12704,8 @@
       "NW2 AP 481"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -12161,6 +12753,8 @@
       "NW4 614"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -12208,6 +12802,8 @@
       "NW2 AP 468"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -12255,6 +12851,8 @@
       "NW4 613"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -12302,6 +12900,8 @@
       ""
     ],
     "construction_status": "Construction",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -12345,6 +12945,8 @@
       "NW2 AP 466"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -12392,6 +12994,8 @@
       "NW2 AP 480"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -12439,6 +13043,8 @@
       "NW2 AP 470"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -12486,6 +13092,8 @@
       "NW4 612"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -12533,6 +13141,8 @@
       "North Campus Support Facility"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "yes",
@@ -12582,6 +13192,8 @@
       "NW4 672"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -12629,6 +13241,8 @@
       "NW2 AP 479"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -12676,6 +13290,8 @@
       "NW2 AP 472"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -12724,6 +13340,8 @@
       "NCRC Bldg 85"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "reference": null,
       "volumes": [
@@ -12777,6 +13395,8 @@
       "NW4 611"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -12824,6 +13444,8 @@
       "NW2 AP 478"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -12871,6 +13493,8 @@
       "UM Transportation Research (UMTRI)"
     ],
     "construction_status": "Construction",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "reference": null,
       "volumes": [
@@ -12929,6 +13553,8 @@
       "NCRC Bldg 86"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -12972,6 +13598,8 @@
       "NW4 610"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -13019,6 +13647,8 @@
       "NW4 673"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -13066,6 +13696,8 @@
       "Northwood II Svc Building 459"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "yes",
@@ -13114,6 +13746,8 @@
       "NCRC Bldg 36"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "reference": null,
       "volumes": [
@@ -13167,6 +13801,8 @@
       "NW4 675"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -13214,6 +13850,8 @@
       "Mcity "
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "yes",
@@ -13263,6 +13901,8 @@
       "NW4 676"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -13310,6 +13950,8 @@
       "NW4 609"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -13357,6 +13999,8 @@
       "Northwood II Svc Building 457"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "yes",
@@ -13405,6 +14049,8 @@
       "NW2 AP 483"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -13452,6 +14098,8 @@
       "NW2 AP 477"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -13499,6 +14147,8 @@
       "NW4 608"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -13546,6 +14196,8 @@
       "NW4 674"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -13593,6 +14245,8 @@
       "NW4 607"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -13640,6 +14294,8 @@
       "NW4 677"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -13687,6 +14343,8 @@
       "NW2 AP 486"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -13734,6 +14392,8 @@
       "NW4 678"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -13781,6 +14441,8 @@
       "NW4 679"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -13828,6 +14490,8 @@
       "NW4 606"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -13875,6 +14539,8 @@
       "NW2 AP 482"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -13922,6 +14588,8 @@
       "NW2 AP 488"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -13969,6 +14637,8 @@
       "NW2 AP 476"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -14016,6 +14686,8 @@
       "Family Housing Community Center"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "university",
@@ -14064,6 +14736,8 @@
       "NW2 AP 469"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -14111,6 +14785,8 @@
       "NW2 AP 473"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -14158,6 +14834,8 @@
       "NW1 AP 456"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -14205,6 +14883,8 @@
       "NW4 680"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -14252,6 +14932,8 @@
       "NW2 AP 471"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -14299,6 +14981,8 @@
       "NW2 AP 490"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -14346,6 +15030,8 @@
       "NW4 605"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -14393,6 +15079,8 @@
       "House 1736 Broadway"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "yes",
@@ -14440,6 +15128,8 @@
       "Cram Place Community Center"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "university",
@@ -14490,6 +15180,8 @@
       "NW4 602"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -14537,6 +15229,8 @@
       "NW4 603"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -14584,6 +15278,8 @@
       "NW4 604"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -14631,6 +15327,8 @@
       "NW4 681"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -14678,6 +15376,8 @@
       "Garage 1736 Broadway"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "yes",
@@ -14725,6 +15425,8 @@
       "NW1 AP 455"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -14772,6 +15474,8 @@
       "Northwood II Svc Building 460"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "yes",
@@ -14820,6 +15524,8 @@
       "NW4 601"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -14867,6 +15573,8 @@
       "NW4 682"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -14914,6 +15622,8 @@
       "NW4 683"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -14961,6 +15671,8 @@
       "NW1 AP 453"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -15008,6 +15720,8 @@
       "NW2 AP 484"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -15055,6 +15769,8 @@
       "NW2 AP 491"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -15102,6 +15818,8 @@
       "NW1 AP 454"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -15149,6 +15867,8 @@
       "NW2 AP 475"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -15196,6 +15916,8 @@
       "NW2 AP 487"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -15243,6 +15965,8 @@
       "NW2 AP 485"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -15290,6 +16014,8 @@
       "North Campus Admin. Complex"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "reference": null,
       "volumes": [
@@ -15349,6 +16075,8 @@
       "NW2 AP 492"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -15396,6 +16124,8 @@
       "NW1 AP 452"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -15443,6 +16173,8 @@
       "Northwood III Svc Building 500"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "yes",
@@ -15490,6 +16222,8 @@
       "NW2 AP 489"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -15537,6 +16271,8 @@
       "NW2 AP 474"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -15584,6 +16320,8 @@
       "NW2 AP 494"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -15631,6 +16369,8 @@
       "NW2 AP 497"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -15678,6 +16418,8 @@
       "Stearns Building"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "reference": null,
       "volumes": [
@@ -15736,6 +16478,8 @@
       "Northwood I Svc Building 450"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "yes",
@@ -15784,6 +16528,8 @@
       "NW1 AP 451"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -15831,6 +16577,8 @@
       "NW2 AP 495"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -15878,6 +16626,8 @@
       "North Campus Recreation Building (NCRB)"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "reference": null,
       "volumes": [
@@ -15931,6 +16681,8 @@
       "Northwood II Svc Building 461"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "yes",
@@ -15979,6 +16731,8 @@
       "NW2 AP 493"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -16026,6 +16780,8 @@
       "NW2 AP 496"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "apartments",
@@ -16073,6 +16829,8 @@
       "Office Unit D"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -16116,6 +16874,8 @@
       "Restroom Unit C"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -16159,6 +16919,8 @@
       "Support Unit E"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -16202,6 +16964,8 @@
       "Restroom Unit B"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -16245,6 +17009,8 @@
       "Support Unit F"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -16288,6 +17054,8 @@
       "Storage Unit A"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -16331,6 +17099,8 @@
       "NC BEAL SW"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "service",
@@ -16381,6 +17151,8 @@
       "Ziwet"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "dormitory",
@@ -16429,6 +17201,14 @@
       "Ford Motor Company Robotics Building "
     ],
     "construction_status": "Active",
+    "highlight_joinery": {
+      "framed_openings": 176,
+      "transoms": 176,
+      "roof_coping_m": 162.58,
+      "hollow_bells": 0,
+      "added_triangles": 7848
+    },
+    "highlight_reference": null,
     "architecture_detail": {
       "reference": "https://tour.umich.edu/text-based/tours/engineering/",
       "volumes": [
@@ -16496,6 +17276,8 @@
       "NWV2702"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -16539,6 +17321,8 @@
       "NWV2704"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "residential",
@@ -16586,6 +17370,8 @@
       "NWV2703"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "residential",
@@ -16633,6 +17419,8 @@
       "M-Air "
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -16676,6 +17464,8 @@
       "Climate and Space Research Building "
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "reference": null,
       "volumes": [
@@ -16768,6 +17558,8 @@
       "NWV2705"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "residential",
@@ -16815,6 +17607,8 @@
       "Coman"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "dormitory",
@@ -16863,6 +17657,8 @@
       "Thieme"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "dormitory",
@@ -16911,6 +17707,8 @@
       "NWV2728"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "residential",
@@ -16958,6 +17756,8 @@
       "NWV2727"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "residential",
@@ -17005,6 +17805,8 @@
       "NWV2726"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "residential",
@@ -17052,6 +17854,8 @@
       "NWV2706"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "residential",
@@ -17099,6 +17903,8 @@
       "Cross"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "dormitory",
@@ -17147,6 +17953,8 @@
       "NWV2725"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "residential",
@@ -17194,6 +18002,8 @@
       "Bursley Hall"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "reference": "https://tour.umich.edu/text-based/locations/bursley-hall/",
       "individual_roof_ranges": 2,
@@ -17247,6 +18057,8 @@
       "Conger"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "dormitory",
@@ -17296,6 +18108,8 @@
       "NWV2707"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "residential",
@@ -17343,6 +18157,8 @@
       "NWV2724"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "residential",
@@ -17390,6 +18206,8 @@
       "Aerospace Power Plant"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "service",
@@ -17438,6 +18256,8 @@
       "Aerospace Wind Tunnel Lab"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "reference": null,
       "volumes": [
@@ -17496,6 +18316,8 @@
       "NWV2722"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "residential",
@@ -17543,6 +18365,8 @@
       "NWV2723"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "residential",
@@ -17590,6 +18414,8 @@
       ""
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "reference": null,
       "volumes": [
@@ -17647,6 +18473,8 @@
       "NWV2708"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "residential",
@@ -17694,6 +18522,8 @@
       "Francois-Xavier Bagnoud (FXB)"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "reference": null,
       "volumes": [
@@ -17755,6 +18585,8 @@
       "NWV2719"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "residential",
@@ -17802,6 +18634,8 @@
       "NWV2718"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "residential",
@@ -17849,6 +18683,8 @@
       "Radiation Sciences Laboratory #2"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "reference": null,
       "volumes": [
@@ -17907,6 +18743,8 @@
       "Radiation Sciences Laboratory #1"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "reference": null,
       "volumes": [
@@ -17965,6 +18803,8 @@
       "Gorguze Family Laboratory"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "reference": null,
       "volumes": [
@@ -18018,6 +18858,8 @@
       "G.G. Brown"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "reference": null,
       "volumes": [
@@ -18099,6 +18941,8 @@
       "NWV2709"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "residential",
@@ -18146,6 +18990,8 @@
       "NWV2717"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "residential",
@@ -18193,6 +19039,8 @@
       "H.H. Dow Building"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "reference": null,
       "volumes": [
@@ -18254,6 +19102,14 @@
       "Beyster Building"
     ],
     "construction_status": "Active",
+    "highlight_joinery": {
+      "framed_openings": 201,
+      "transoms": 30,
+      "roof_coping_m": 188.95,
+      "hollow_bells": 0,
+      "added_triangles": 7004
+    },
+    "highlight_reference": null,
     "architecture_detail": {
       "reference": "https://tour.umich.edu/text-based/tours/engineering/",
       "volumes": [
@@ -18327,6 +19183,8 @@
       "Aerospace Pumping Station"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -18370,6 +19228,14 @@
       "Leinweber Building"
     ],
     "construction_status": "Active",
+    "highlight_joinery": {
+      "framed_openings": 333,
+      "transoms": 54,
+      "roof_coping_m": 288.68,
+      "hollow_bells": 0,
+      "added_triangles": 11656
+    },
+    "highlight_reference": null,
     "architecture_detail": {
       "reference": "https://leinweber.bldg.umich.edu/about/",
       "volumes": [
@@ -18443,6 +19309,8 @@
       "Aerospace Propulsion Lab"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "reference": null,
       "volumes": [
@@ -18496,6 +19364,8 @@
       "Naval Arch. & Marine Engin."
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "reference": null,
       "volumes": [
@@ -18562,6 +19432,8 @@
       "NWV2716"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "residential",
@@ -18609,6 +19481,8 @@
       "NWV2710"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "residential",
@@ -18656,6 +19530,8 @@
       "Aerospace Plasma Research"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "reference": null,
       "volumes": [
@@ -18709,6 +19585,8 @@
       "Eaton"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "residential",
@@ -18756,6 +19634,8 @@
       "NC SW STA"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "university",
@@ -18807,6 +19687,8 @@
       "EWRE"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "reference": null,
       "volumes": [
@@ -18866,6 +19748,8 @@
       "NWV2715"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "residential",
@@ -18913,6 +19797,8 @@
       "NWV2711"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "residential",
@@ -18960,6 +19846,8 @@
       "NWV2714"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "residential",
@@ -19007,6 +19895,8 @@
       "NWV2712"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "residential",
@@ -19054,6 +19944,8 @@
       "Electrical Engin. & Computer Science"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "reference": null,
       "volumes": [
@@ -19127,6 +20019,8 @@
       "North Campus Chiller Plant"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "university",
@@ -19175,6 +20069,8 @@
       "NWV2713"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "residential",
@@ -19222,6 +20118,8 @@
       "Lee"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "residential",
@@ -19269,6 +20167,8 @@
       "North Campus Auxiliary Support Building"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "university",
@@ -19317,6 +20217,8 @@
       "NC Grounds Storage Shed"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -19360,6 +20262,8 @@
       "NCGS ANNEX"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -19403,6 +20307,8 @@
       "NC Ground Services"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "university",
@@ -19451,6 +20357,8 @@
       "Stamps Auditorium"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "reference": null,
       "volumes": [
@@ -19504,6 +20412,14 @@
       "Lurie Tower"
     ],
     "construction_status": "Active",
+    "highlight_joinery": {
+      "framed_openings": 0,
+      "transoms": 0,
+      "roof_coping_m": 0.0,
+      "hollow_bells": 60,
+      "added_triangles": 0
+    },
+    "highlight_reference": null,
     "architecture_detail": {
       "reference": "https://smtd.umich.edu/facilities/ann-and-robert-h-lurie-carillon/",
       "bells": 60,
@@ -19557,6 +20473,8 @@
       "Auto Lab Fuel Storage Building"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -19600,6 +20518,8 @@
       "Walgreen Drama Center"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "reference": null,
       "volumes": [
@@ -19674,6 +20594,8 @@
       "Lay Auto. Lab."
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "reference": null,
       "volumes": [
@@ -19734,6 +20656,8 @@
       "Parker"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "residential",
@@ -19781,6 +20705,8 @@
       "Lurie Engineering Center"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "reference": null,
       "volumes": [
@@ -19855,6 +20781,8 @@
       "Stanley"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "residential",
@@ -19902,6 +20830,8 @@
       "Nuclear Engineering Laboratories"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "reference": null,
       "volumes": [
@@ -19960,6 +20890,8 @@
       "Pierpont Commons"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "reference": null,
       "volumes": [
@@ -20034,6 +20966,14 @@
       "Duderstadt Center"
     ],
     "construction_status": "Active",
+    "highlight_joinery": {
+      "framed_openings": 263,
+      "transoms": 0,
+      "roof_coping_m": 1221.38,
+      "hollow_bells": 0,
+      "added_triangles": 9944
+    },
+    "highlight_reference": null,
     "architecture_detail": {
       "reference": "https://www.dc.umich.edu/about-the-dc/history/",
       "volumes": [
@@ -20101,6 +21041,8 @@
       "Smith"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "residential",
@@ -20148,6 +21090,8 @@
       "Industrial and Operations Engineering (IOE)"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "reference": null,
       "volumes": [
@@ -20213,6 +21157,8 @@
       "Phoenix Memorial Lab"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "reference": null,
       "volumes": [
@@ -20272,6 +21218,8 @@
       "Chrysler Center"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "reference": null,
       "volumes": [
@@ -20332,6 +21280,8 @@
       "Cooley Laboratory"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "reference": null,
       "volumes": [
@@ -20391,6 +21341,8 @@
       "Moore Building"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "reference": "https://smtd.umich.edu/facilities/earl-v-moore-building/",
       "volumes": [
@@ -20469,6 +21421,8 @@
       "Bonisteel Interdisciplinary Research Building (BIRB)"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "reference": null,
       "volumes": [
@@ -20527,6 +21481,8 @@
       "Modular MRI Building"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "yes",
@@ -20575,6 +21531,8 @@
       "Gerstacker Building"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "reference": null,
       "volumes": [
@@ -20634,6 +21592,14 @@
       "Art & Architecture"
     ],
     "construction_status": "Active",
+    "highlight_joinery": {
+      "framed_openings": 349,
+      "transoms": 0,
+      "roof_coping_m": 953.7,
+      "hollow_bells": 0,
+      "added_triangles": 11460
+    },
+    "highlight_reference": null,
     "architecture_detail": {
       "reference": "https://taubmancollege.umich.edu/about/facilities/art-architecture-building/",
       "volumes": [
@@ -20701,6 +21667,8 @@
       "Engineering Research Building 2"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "reference": null,
       "volumes": [
@@ -20767,6 +21735,8 @@
       "Engineering Research Building 1"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "reference": null,
       "volumes": [
@@ -20826,6 +21796,8 @@
       "Bentley Historical Library"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "reference": null,
       "volumes": [
@@ -20884,6 +21856,8 @@
       "IST STG"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "service",
@@ -20931,6 +21905,8 @@
       "New Dance Building"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "reference": null,
       "volumes": [
@@ -21004,6 +21980,8 @@
       "School of Information North"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "reference": null,
       "volumes": [
@@ -21063,6 +22041,8 @@
       "Lurie Biomedical Engineering"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "reference": null,
       "volumes": [
@@ -21128,6 +22108,14 @@
       "Ford Presidential Library"
     ],
     "construction_status": "Active",
+    "highlight_joinery": {
+      "framed_openings": 70,
+      "transoms": 0,
+      "roof_coping_m": 150.97,
+      "hollow_bells": 0,
+      "added_triangles": 2344
+    },
+    "highlight_reference": null,
     "architecture_detail": {
       "reference": "https://www.fordlibrarymuseum.gov/visit/library",
       "volumes": [
@@ -21193,6 +22181,8 @@
       "Child Care Center"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "reference": null,
       "volumes": [
@@ -21252,6 +22242,8 @@
       "Mitchell Field Building"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "yes",
@@ -21300,6 +22292,8 @@
       "Mitchell Field Recreation Building"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "reference": null,
       "volumes": [
@@ -21357,6 +22351,8 @@
       "Wall Street West Parking Structure "
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -21400,6 +22396,8 @@
       "Brehm Tower"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -21443,6 +22441,8 @@
       "Wall Street East Parking Structure "
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -21486,6 +22486,8 @@
       "Kellogg Eye Center"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -21529,6 +22531,8 @@
       "Salt Storage"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -21572,6 +22576,8 @@
       "Equip. Maint. Shop"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -21615,6 +22621,8 @@
       "1018 Fuller Building"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -21658,6 +22666,8 @@
       "426 North Ingalls Building"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -21701,6 +22711,8 @@
       "UMH Helipad"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -21744,6 +22756,8 @@
       "Modular Accelerator"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -21787,6 +22801,8 @@
       "MSRB II"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -21830,6 +22846,8 @@
       "North Entrance Parking Structure"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -21873,6 +22891,8 @@
       "New Child Care Center"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -21916,6 +22936,8 @@
       "MSRB I"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -21959,6 +22981,8 @@
       "Med Sci Aux Bldg"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -22002,6 +23026,8 @@
       "University Hospital"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -22045,6 +23071,8 @@
       "New Child Care Temporary Construction Trailer 1"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -22088,6 +23116,8 @@
       "Cancer Center and Geriatrics Center"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -22131,6 +23161,8 @@
       "MSRB III"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -22174,6 +23206,8 @@
       "Central Campus and UM Hospital Load Center"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -22217,6 +23251,8 @@
       "Med Sci I"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -22260,6 +23296,8 @@
       "400 North Ingalls Building"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -22303,6 +23341,8 @@
       "Med Sci II"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -22346,6 +23386,8 @@
       "NB BOILER"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -22389,6 +23431,8 @@
       "Victor Vaughan"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -22432,6 +23476,8 @@
       "Glen Ave Parking Structure"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -22475,6 +23521,8 @@
       "Med-Inn"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -22518,6 +23566,8 @@
       "Taubman Health Sciences Library"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -22561,6 +23611,8 @@
       "300 North Ingalls Building"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -22604,6 +23656,8 @@
       "Towsley Center for Cont. Medical Ed."
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -22647,6 +23701,8 @@
       "Taubman Health Care Center"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -22690,6 +23746,8 @@
       "Buhl"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -22733,6 +23791,14 @@
       "Cardiovascular Center"
     ],
     "construction_status": "Active",
+    "highlight_joinery": {
+      "framed_openings": 610,
+      "transoms": 610,
+      "roof_coping_m": 261.49,
+      "hollow_bells": 0,
+      "added_triangles": 27120
+    },
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -22776,6 +23842,8 @@
       "University Hospital South Unit 4"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -22819,6 +23887,8 @@
       "University Hospital South Unit 2"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -22862,6 +23932,8 @@
       "1100 Catherine St"
     ],
     "construction_status": "Idle",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -22905,6 +23977,8 @@
       "Catherine St. Parking Structure"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -22948,6 +24022,8 @@
       "EH MECH"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -22991,6 +24067,8 @@
       "University Hospital South Unit 3"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -23034,6 +24112,8 @@
       "Med.Center Dr. Parking Structure"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -23077,6 +24157,14 @@
       "MMED Clinical Inpatient Tower"
     ],
     "construction_status": "Active",
+    "highlight_joinery": {
+      "framed_openings": 1128,
+      "transoms": 1128,
+      "roof_coping_m": 247.37,
+      "hollow_bells": 0,
+      "added_triangles": 49728
+    },
+    "highlight_reference": "https://www.hok.com/projects/view/michigan-medicine-kahn-health-care-pavilion/",
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -23120,6 +24208,8 @@
       "Zina Pitcher Parking Structure"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -23163,6 +24253,8 @@
       "University Hospital South Unit 1"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -23206,6 +24298,8 @@
       "Ann St. Parking Structure"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -23249,6 +24343,8 @@
       "UMH MOD A"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -23292,6 +24388,8 @@
       "Cardiovascular Center Parking Structure"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -23335,6 +24433,8 @@
       "MD SSTA SE "
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -23378,6 +24478,8 @@
       "Med. Professional Building"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -23421,6 +24523,14 @@
       "Taubman Biomedical Science Research Building"
     ],
     "construction_status": "Active",
+    "highlight_joinery": {
+      "framed_openings": 424,
+      "transoms": 424,
+      "roof_coping_m": 0.0,
+      "hollow_bells": 0,
+      "added_triangles": 18656
+    },
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -23464,6 +24574,14 @@
       "Mott Children's Hospital and Von Voigtlander Women's Hospital"
     ],
     "construction_status": "Active",
+    "highlight_joinery": {
+      "framed_openings": 1548,
+      "transoms": 1548,
+      "roof_coping_m": 406.76,
+      "hollow_bells": 0,
+      "added_triangles": 68488
+    },
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -23507,6 +24625,8 @@
       "Simpson Circle Parking Structure"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -23550,6 +24670,8 @@
       "Simpson"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -23593,6 +24715,8 @@
       "Intramural Sports"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "university",
@@ -23641,6 +24765,8 @@
       ""
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "house",
@@ -23688,6 +24814,8 @@
       "Physical Properties"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "yes",
@@ -23735,6 +24863,8 @@
       "Keen Arena"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "university",
@@ -23783,6 +24913,8 @@
       "Canham Natatorium"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "university",
@@ -23831,6 +24963,8 @@
       ""
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "house",
@@ -23878,6 +25012,8 @@
       "Revelli Hall"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "university",
@@ -23926,6 +25062,8 @@
       "Weidenbach Hall"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "university",
@@ -23974,6 +25112,8 @@
       ""
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "house",
@@ -24021,6 +25161,8 @@
       ""
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "yes",
@@ -24069,6 +25211,8 @@
       "Hoover Annex"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "yes",
@@ -24116,6 +25260,8 @@
       "Administrative Services"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "university",
@@ -24163,6 +25309,8 @@
       "Athletic Campus Switch Station"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "yes",
@@ -24210,6 +25358,8 @@
       "Revelli Temporary Storage Building "
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -24253,6 +25403,8 @@
       "Hartwig"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "university",
@@ -24301,6 +25453,8 @@
       "Hoover Heating Plant"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "yes",
@@ -24348,6 +25502,8 @@
       "Athletics Maintenance"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "yes",
@@ -24395,6 +25551,8 @@
       "Institute of Cont. Legal Education (ICLE)"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "college",
@@ -24443,6 +25601,8 @@
       "Facilities Services Building A"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "yes",
@@ -24490,6 +25650,8 @@
       "Ross Academic Center"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "university",
@@ -24538,6 +25700,8 @@
       "1032 Greene Building"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "yes",
@@ -24585,6 +25749,8 @@
       "Facilities Services Building C"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "yes",
@@ -24632,6 +25798,8 @@
       "Plant Storage #3"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "yes",
@@ -24679,6 +25847,8 @@
       "Fisher Baseball Stadium"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "stadium",
@@ -24726,6 +25896,8 @@
       "Plant Storage #2"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "yes",
@@ -24773,6 +25945,8 @@
       "North Plaza Building B"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "yes",
@@ -24821,6 +25995,8 @@
       "North Plaza Building A"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "yes",
@@ -24869,6 +26045,8 @@
       "Plant Storage #1"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "yes",
@@ -24916,6 +26094,14 @@
       "Yost Ice Arena"
     ],
     "construction_status": "Active",
+    "highlight_joinery": {
+      "framed_openings": 104,
+      "transoms": 0,
+      "roof_coping_m": 0.0,
+      "hollow_bells": 0,
+      "added_triangles": 3328
+    },
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "yes",
@@ -24964,6 +26150,8 @@
       "Indoor Training Center"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "yes",
@@ -25012,6 +26200,8 @@
       "Facilities Services Building B"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "yes",
@@ -25059,6 +26249,8 @@
       "Temporary Transportation Fleet Office Building"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "yes",
@@ -25106,6 +26298,8 @@
       "Multi-Sport Storage"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "yes",
@@ -25153,6 +26347,8 @@
       "Transportation Services"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "yes",
@@ -25200,6 +26396,8 @@
       "Alumni Field & Indoor Hitting Facility"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "yes",
@@ -25247,6 +26445,8 @@
       "Schembechler Hall"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "university",
@@ -25295,6 +26495,14 @@
       "Michigan Stadium"
     ],
     "construction_status": "Active",
+    "highlight_joinery": {
+      "framed_openings": 756,
+      "transoms": 504,
+      "roof_coping_m": 2602.35,
+      "hollow_bells": 0,
+      "added_triangles": 41340
+    },
+    "highlight_reference": null,
     "architecture_detail": {
       "field_z": 20.159175204423875,
       "rim_z": 44.05917520442387,
@@ -25351,6 +26559,8 @@
       "Shepherd Donald R Softball Center"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -25394,6 +26604,8 @@
       "Oosterbaan Field House"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "yes",
@@ -25442,6 +26654,8 @@
       "Junge Family Champions Center"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "yes",
@@ -25490,6 +26704,8 @@
       "Campus Safety Services Building (CSSB)"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "yes",
@@ -25538,6 +26754,8 @@
       "Al Glick Field House"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "yes",
@@ -25586,6 +26804,14 @@
       "Crisler Center"
     ],
     "construction_status": "Active",
+    "highlight_joinery": {
+      "framed_openings": 138,
+      "transoms": 138,
+      "roof_coping_m": 656.71,
+      "hollow_bells": 0,
+      "added_triangles": 8684
+    },
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "stadium",
@@ -25635,6 +26861,8 @@
       "Davidson Player Development Center"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "yes",
@@ -25682,6 +26910,8 @@
       "Ferry Field Pump House"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -25725,6 +26955,8 @@
       "Field Hockey Ticket Office"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -25768,6 +27000,8 @@
       "Field Hockey Stadium"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -25811,6 +27045,8 @@
       "Field Hockey Ticket Office West"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -25854,6 +27090,8 @@
       "Field Hockey Team Center"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "yes",
@@ -25902,6 +27140,8 @@
       "Postma Golf Clubhouse"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "yes",
@@ -25950,6 +27190,8 @@
       "Athletic Department Operations Center"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
         "building": "yes",
@@ -25998,6 +27240,8 @@
       "Garage"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -26041,6 +27285,8 @@
       "Maintenance Building"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -26084,6 +27330,8 @@
       "Golf Course Comfort Station A"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -26127,6 +27375,8 @@
       "Golf Course Pump House I"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -26170,6 +27420,8 @@
       "Weisfeld Family Golf Center"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -26213,6 +27465,8 @@
       "Golf Course Practice Range Building"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -26256,6 +27510,8 @@
       "Golf Course Comfort Station B"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -26299,6 +27555,8 @@
       "Athletic Facility Support Building"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -26342,6 +27600,8 @@
       "Tisch Tennis Centerfhfh"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -26385,6 +27645,8 @@
       "Intercollegiate Soccer Stadium"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -26428,6 +27690,8 @@
       "Shepherd Womens Gymnastics Facility"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -26471,6 +27735,8 @@
       "Soccer Ticket Building"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -26514,6 +27780,8 @@
       "Bahna Wrestling Center"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -26557,6 +27825,8 @@
       "Lacrosse Ticket Building  "
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -26600,6 +27870,8 @@
       "Sports Performance Center"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -26643,6 +27915,8 @@
       "Lacrosse Stadium"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -26686,6 +27960,8 @@
       "Outdoor Track Auxillary Building"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -26729,6 +28005,8 @@
       "Indoor Track Building"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -26772,6 +28050,8 @@
       "Track and Field Stadium"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false
@@ -26815,6 +28095,8 @@
       "Burlington Office Center"
     ],
     "construction_status": "Active",
+    "highlight_joinery": null,
+    "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
       "automatic_rooftop_boxes": false

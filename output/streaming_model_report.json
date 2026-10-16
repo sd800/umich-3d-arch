@@ -1,10 +1,10 @@
 {
-  "sourceSha256": "0da23d80650b2a75263a724ff38e55f95240efce00eae14353af04cb7fb53767",
-  "originalTriangles": 8820432,
-  "originalObjects": 17049,
+  "sourceSha256": "63c8545d9bd3257b8dddee1a546dc6aa337324ff0276dcfb0da55a957e717619",
+  "originalTriangles": 9285488,
+  "originalObjects": 17099,
   "regions": 462,
-  "instancedParts": 171552,
-  "geometryTemplates": 23988,
+  "instancedParts": 186188,
+  "geometryTemplates": 25505,
   "overview": {
     "id": "overview",
     "url": "assets/stream/overview-9d0b40454f0b.bin",
@@ -24,7 +24,7 @@
       122.98653411865234
     ]
   },
-  "allRegionalTransferBytes": 33524656,
+  "allRegionalTransferBytes": 34475277,
   "preservesCAD": true,
   "overviewApproximation": "Position-only error-bounded simplification; 20-face tree crowns at unchanged source positions. Near regions retain source building triangles and repeated facade geometry; no CAD edits."
 }
