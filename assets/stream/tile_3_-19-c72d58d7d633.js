@@ -1,0 +1,24 @@
+// Generated regional model data, not credentials.
+window.__UMICH_REGION__="H4sIAAAAAAAAE6WRvW/TQBTAL05CChJK\
+kToDOiF1uVj35Y94s2SJPWuVgEsujVXH\
+pk6CoFGUoercGQbYGBgiMSEhsRCFP4D/\
+oCuwNAQmKnFO7NaJ6AA8vSe/9+59/O7c\
+VgAYwCci6nphAC2CoAh6kSe60NoZwI7b\
+gxa8H4X9oAkRDIS3194NI2i1XL8rEGyK\
+nuv5F+G+J8ss2G0L35flYdQUsrZCCMYI\
+Rm6wDy3pPA67Xm+xbQcjgs06grJPPJWx\
+jJJMS7i9fiRkjhIdkTgVhFHH9eMM0xE1\
+6kP0z4D9qOU+ElnEqwipzhHPIjJCEeUr\
+hEzyrAAyzhGhGcBa6P4XnnkFHdN0pOMM\
+HZePtUbHefzKWTyuUUS0+lDmduOHi/+1\
+ZlDVIBqmuqlpXDdNVGGagVXD5FVCCa4y\
+Q0MVjlWMNBOrdL2Ua2oVVy9LGVZ1jplB\
+GKU6IybT68OtxqbzrfRgCsDdj8dHm87B\
+dmPhT27eck7fL/0Xp2XnBC1rxq+k/7K+\
+8NPer2++22nvjdqZnfZOrJmd9n56PbeB\
+lJw0JfnGkpdWklZM8krix3ItOcslVsqc\
+b4BL2UjmFJKeHPiz7L37eXjv1/DL+cPx\
+WZ8A/wN4tg1G14E7BuBv77J+B7C2t6CM\
+llpURum851sze1IpOwcnjentz3N7bJSd\
+ydvGdHDnx8We2vnMTlkOO3O7kMxXMjvy\
+YFWK+VGsSqK/AQB33Tc/BAAA";

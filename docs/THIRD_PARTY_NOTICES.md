@@ -44,7 +44,7 @@ University and architect pages provide exterior-form references. Their photograp
 
 ## meshoptimizer 1.3.0
 
-Official source: https://github.com/zeux/meshoptimizer/tree/v1.3/js . Used for lossless vertex and index-stream coding. The JavaScript/WebAssembly decoder is bundled locally; the encoder runs only at build time.
+Official source: https://github.com/zeux/meshoptimizer/tree/v1.3/js . Used for lossless vertex and index-stream coding. The JavaScript/WebAssembly decoder is bundled locally; the encoder runs only at build time. The pinned MeshoptSimplifier also runs offline at build time to prepare regional overview LOD geometry.
 
 MIT License
 

@@ -30,6 +30,8 @@ assert.equal(hash(await restoreCampusBytes(local,data)),hash(expected));
 const brokenDocument={createElement:()=>({remove(){}}),head:{append(script){script.onerror();}}};await assert.rejects(loadModelBytes(data,{protocol:'file:',document:brokenDocument,target:{}}),/could not be loaded/);
 const offlinePath={'uchicago-hydepark-model':'UChicago','umich-ann-arbor-model':'UMich','uw-seattle-model':'UW'}[JSON.parse(await readFile(new URL('../package.json',import.meta.url),'utf8')).name];
 const offline=await readFile(new URL(`../output/${offlinePath}_Campus_Offline.html`,import.meta.url),'utf8'),inline=JSON.parse(offline.match(/<script id="campus-data"[^>]*>(.*?)<\/script>/s)[1]);
-assert.equal(hash(await loadModelBytes(inline)),hash(compressed));
+assert.ok(!inline.model,'Standalone viewer does not retain the complete CAD payload in memory');
+for(const tile of [data.regions.base,...data.regions.tiles]){const expected=await readFile(new URL('../'+tile.url,import.meta.url));assert.equal(hash(Buffer.from(inline.inlineRegions[tile.id],'base64')),hash(expected));}
+assert.equal(inline.downloadArchiveUrl,'UMich_AnnArbor.3ds.gz');
 assert.equal(data.modelFormat,'campus-3ds-v1');assert.equal(data.downloadUrl,report.source);assert.equal(report.sourceSha256,hash(expected));
 console.log('Model data passed: HTTP, local classic-script and standalone compressed payloads match; exact source CAD SHA-256 is restored, download URLs and error paths preserved.');

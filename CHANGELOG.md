@@ -1,5 +1,11 @@
 # Changelog
 
+## 26.10.16.3 — 2026-10-16
+
+- Load a lightweight regional overview first, then fetch nearby source-detail tiles within explicit desktop/mobile geometry budgets. Evict distant detail, retain per-building selection/visibility, and keep HTTP, local double-click and standalone offline browsing.
+- Instance repeated trees and facade members, share materials, and batch building draws by region while preserving individual selection and clipping.
+- Preserve the full original CAD download independently of browsing derivatives.
+
 ## 26.10.16.2 — 2026-10-16
 
 - Rename the English Guide source heading to Reference and add arch.Songming.org after the model download links, linking to the campus model collection.

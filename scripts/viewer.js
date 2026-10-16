@@ -1,3 +1,4 @@
+import {createRegionStream} from './region_stream.js';
 import {installHighlightsPanel} from './highlights_panel.js';
 import {createOutdoorPicker,groundPoint,installCampusHover} from './outdoor_hover.js';
 import {createViewportRenderLoop} from './viewport_rendering.js';
@@ -69,8 +70,8 @@ $('open-help').onclick=()=>{
 $('close-help').onclick=()=>$('help-dialog').close();
 $('help-dialog').addEventListener('click',e=>{if(e.target===e.currentTarget){const b=e.target.getBoundingClientRect();if(e.clientX<b.left||e.clientX>b.right||e.clientY<b.top||e.clientY>b.bottom)e.target.close();}});
 function download(blob,name){const url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);}
-let bytes=null;
-$('download-3ds').onclick=async()=>{const button=$('download-3ds');button.disabled=true;try{const input=await loadModelBytes(data);download(await recoverCampusDownload(input,data),'UMich_AnnArbor.3ds');}catch(error){console.error(error);$('status-text').textContent=lang==='zh'?'模型下载失败，请重试':'Model download failed. Please try again.';}finally{button.disabled=false;}};
+let bytes=null,streaming=null;
+$('download-3ds').onclick=async()=>{if(data.regions){const a=document.createElement('a');a.href=data.downloadArchiveUrl;a.download='UMich_AnnArbor.3ds.gz';a.click();return;}const button=$('download-3ds');button.disabled=true;try{const input=await loadModelBytes(data);download(await recoverCampusDownload(input,data),'UMich_AnnArbor.3ds');}catch(error){console.error(error);$('status-text').textContent=lang==='zh'?'模型下载失败，请重试':'Model download failed. Please try again.';}finally{button.disabled=false;}};
 $('download-image').onclick=()=>{if(!renderer||!modelReady)return;viewportLoop.drawNow();renderer.domElement.toBlob(b=>{if(b)download(b,'UMich_AnnArbor_view.png');});};
 function listRecords(){const q=$('search').value.trim().toLowerCase();return allRecords.filter(r=>(category==='all'||(category==='landmark'?r.landmark:r.zone===category))&&(!q||[r.name,r.name_zh,r.code,r.short,r.short_zh,...(r.aliases_zh||[])].some(s=>s?.toLowerCase().includes(q))));}
 function refreshList(){
@@ -103,7 +104,7 @@ $('details').onchange=()=>{details.forEach(m=>m.visible=$('details').checked);re
 $('labels').onchange=render;
 $('shadows').onchange=()=>{if(renderer){renderer.shadowMap.enabled=$('shadows').checked;sun.castShadow=$('shadows').checked;scene.traverse(o=>{if(o.isMesh)(Array.isArray(o.material)?o.material:[o.material]).forEach(m=>m.needsUpdate=true);});render();}};
 const clipPlane=new THREE.Plane(new THREE.Vector3(0,0,-1),65);
-function updateCut(){const on=$('cut-enabled').checked,h=Number($('cut-height').value);$('cut-height').disabled=!on;$('cut-value').textContent=h+' m';clipPlane.constant=h;if(renderer){setCampusClipping(renderer,campus,on?clipPlane:null);render();}}
+function updateCut(){const on=$('cut-enabled').checked,h=Number($('cut-height').value);$('cut-height').disabled=!on;$('cut-value').textContent=h+' m';clipPlane.constant=h;if(renderer){if(!streaming)setCampusClipping(renderer,campus,on?clipPlane:null);render();}}
 $('cut-enabled').onchange=updateCut;$('cut-height').oninput=updateCut;
 function emptyDetail(){const p=$('detail');p.replaceChildren();for(const [key,cls] of [['exploreTitle','detail-title'],['exploreSub','detail-sub'],['intro','detail-note']]){const el=document.createElement('div');el.className=cls;el.textContent=t(key);p.append(el);}}
 function refreshDetail(){
@@ -169,7 +170,7 @@ function fullView(mode){
  if(overview){const center=b.getCenter(new THREE.Vector3()),[x,y]=data.overviewCenter;b.translate(new THREE.Vector3(x-center.x,y-center.y,0));}
  fitBox(b,mode==='plan'?'plan':'aerial',overview?1.3:1.16,false,overview?new THREE.Vector3(-1.15,-.95,1.2):undefined,overview?2500:50);
 }
-function focusBuilding(code){if(!modelReady){pendingFocus=code;return;}const g=buildings.get(code);if(!g||!camera)return;g.visible=true;g.updateWorldMatrix(true,true);viewMode='focus';setViewButtons();fitBox(new THREE.Box3().setFromObject(g),'aerial',1.55,true);}
+function focusBuilding(code){if(!modelReady){pendingFocus=code;return;}const g=buildings.get(code);if(!g||!camera)return;g.visible=true;g.updateWorldMatrix(true,true);viewMode='focus';setViewButtons();fitBox(g.userData.bounds||new THREE.Box3().setFromObject(g),'aerial',1.55,true);}
 for(const id of ['north-view','medical-view','athletic-view'])$(id).onclick=()=>fullView(id);
 $('aerial').onclick=()=>fullView('aerial');$('plan').onclick=()=>fullView('plan');$('core').onclick=()=>fullView('core');$('reset-view').onclick=()=>{resetInteraction();selectBuilding(null);$('cut-enabled').checked=false;updateCut();fullView('aerial');};
 function updateLabels(){
@@ -186,9 +187,9 @@ function updateLabels(){
  }
 }
 let viewportLoop=null;
-function render(updateShadows=true){if(renderer&&updateShadows!==false)renderer.shadowMap.needsUpdate=true;if(!renderer||!modelReady)return;viewportLoop?.request();}
+function render(updateShadows=true){if(streaming&&updateShadows!==false)streaming.setState({buildings,selected,environment:$('environment').checked,details:$('details').checked,neighbors:neighborsVisible,cut:$('cut-enabled').checked?Number($('cut-height').value):null});if(renderer&&updateShadows!==false)renderer.shadowMap.needsUpdate=true;if(!renderer||!modelReady)return;viewportLoop?.request();}
 function drawScene(){
- if(!renderer||!modelReady)return;updateCampusDepthRange(camera,renderBounds);updateCampusDetailDepth(camera,campus,depthBits);renderer.render(scene,camera);const n=new THREE.Vector3(0,1,0).transformDirection(camera.matrixWorldInverse);$('north-arrow').style.transform='rotate('+Math.atan2(n.x,n.y)+'rad)';
+ if(!renderer||!modelReady)return;updateCampusDepthRange(camera,renderBounds);if(streaming)streaming.updateView();else updateCampusDetailDepth(camera,campus,depthBits);renderer.render(scene,camera);host.dataset.modelDrawCalls=String(renderer.info.render.calls);host.dataset.modelDrawTriangles=String(renderer.info.render.triangles);const n=new THREE.Vector3(0,1,0).transformDirection(camera.matrixWorldInverse);$('north-arrow').style.transform='rotate('+Math.atan2(n.x,n.y)+'rad)';
  const mpp=(camera.right-camera.left)/camera.zoom/Math.max(host.clientWidth,1),raw=mpp*80,pow=10**Math.floor(Math.log10(raw));const length=[1,2,5,10].map(x=>x*pow).find(x=>x>=raw)||10*pow;
  $('scale-line').style.width=(length/mpp)+'px';$('scale-text').textContent=length<1?Math.round(length*100)+' cm':length+' m';updateLabels();
 }
@@ -236,4 +237,30 @@ try{
 }catch(err){console.error(err);$('download-3ds').disabled=false;modelReady=false;if(controls)controls.dispose();if(renderer)renderer.dispose();renderer=null;staticMode=true;$('canvas-host').replaceChildren();$('fallback').src=data.preview;$('fallback').style.display='block';$('loading').remove();const note=document.createElement('div');note.className='error-message';note.id='render-error';note.textContent=t('error');host.append(note);$('download-image').disabled=true;updateCount();}
 
 }
-initializeModel();
+async function initializeRegionalModel(){
+try{
+ THREE.Object3D.DEFAULT_UP.set(0,0,1);
+ renderer=new THREE.WebGLRenderer({antialias:true,preserveDrawingBuffer:true});renderer.setPixelRatio(Math.min(devicePixelRatio||1,1.5));renderer.setClearColor(0xe9ece3);renderer.outputColorSpace=THREE.SRGBColorSpace;renderer.toneMapping=THREE.NoToneMapping;renderer.shadowMap.enabled=true;renderer.shadowMap.type=THREE.PCFShadowMap;
+ renderer.domElement.setAttribute('aria-label',t('modelLabel'));renderer.domElement.tabIndex=0;$('canvas-host').append(renderer.domElement);
+ scene=new THREE.Scene();camera=new THREE.OrthographicCamera(-1000,1000,1000,-1000,.1,100000);camera.up.set(0,0,1);scene.add(new THREE.HemisphereLight(0xffffff,0x849177,2));
+ sun=new THREE.DirectionalLight(0xffffff,2.2);const center=new THREE.Vector3(...data.siteCenter,50);sun.position.copy(center).add(new THREE.Vector3(-4000,-6000,9000));sun.target.position.copy(center);sun.castShadow=true;sun.shadow.mapSize.set(2048,2048);sun.shadow.camera.near=1;sun.shadow.camera.far=30000;sun.shadow.bias=-.00015;sun.shadow.normalBias=.35;scene.add(sun,sun.target);
+ campus=new THREE.Group();scene.add(campus);neighborGroup=new THREE.Group();
+ const pads=new Map([...(data.groundPads||[]),...(data.neighborPads||[])].map(p=>[p.code,p]));
+ for(const r of allRecords){const g=new THREE.Group(),pad=pads.get(r.code),b=pad?.bounds||[r.center[0]-r.width/2,r.center[1]-r.depth/2,r.center[0]+r.width/2,r.center[1]+r.depth/2];g.userData.bounds=new THREE.Box3(new THREE.Vector3(b[0]-1,b[1]-1,r.ground_m),new THREE.Vector3(b[2]+1,b[3]+1,r.peak_m));buildings.set(r.code,g);}
+ renderBounds=new THREE.Box3(new THREE.Vector3(...data.regions.base.bounds.slice(0,3)),new THREE.Vector3(...data.regions.base.bounds.slice(3)));campusDiagonal=renderBounds.getSize(new THREE.Vector3()).length();fitCampusSun(sun,renderBounds);
+ streaming=createRegionStream({data,parent:campus,renderer,camera,host,report:reportLoad,onChange:()=>render(false)});await streaming.initialize();
+ renderer.shadowMap.autoUpdate=false;renderer.shadowMap.enabled=$('shadows').checked;renderer.shadowMap.needsUpdate=true;sun.castShadow=$('shadows').checked;
+ controls=new CampusMapControls(camera,renderer.domElement);controls.groundHeight=mapGround;controls.addEventListener('change',()=>render(false));controls.listenToKeyEvents(renderer.domElement);syncRotationButton();
+ renderer.domElement.addEventListener('keydown',e=>{if(e.ctrlKey||e.metaKey||e.altKey)return;if(['+','=','-','_'].includes(e.key)){e.preventDefault();if(e.key==='+'||e.key==='=')controls.dollyIn(.9);else controls.dollyOut(.9);}if(!e.repeat&&e.key.toLowerCase()==='r')$('rotation-mode').click();});
+ viewportLoop=createViewportRenderLoop({host,renderer,resize:ratio=>{frameHeight*=ratio;updateFrustum();},draw:drawScene});new ResizeObserver(()=>{if(viewportLoop.needsResize())render(false);}).observe(host);
+ modelReady=true;fullView('aerial');if(selected)selectBuilding(selected,Boolean(pendingFocus));pendingFocus=null;refreshList();
+ const ray=new THREE.Raycaster(),pointer=new THREE.Vector2();
+ function pick(e){const b=renderer.domElement.getBoundingClientRect();pointer.set((e.clientX-b.left)/b.width*2-1,-(e.clientY-b.top)/b.height*2+1);ray.setFromCamera(pointer,camera);return streaming.pick(ray);}
+ installMapSelection(renderer.domElement,e=>selectBuilding(pick(e)));
+ const outdoorPicker=createOutdoorPicker(data.hoverPlaces||data.places||[]);
+ installCampusHover(renderer.domElement,{resolve:e=>{const code=pick(e);if(code){const r=byCode.get(code);return{text:nameOf(r)+' · '+r.height.toFixed(2)+' m',building:true};}if(!$('environment').checked)return null;const p=groundPoint(ray.ray,mapGround,controls.target.z,Math.max(5000,campusDiagonal*8));if(!p||($('cut-enabled').checked&&p.z>clipPlane.constant))return null;const place=outdoorPicker(p.x,p.y,p=>neighborsVisible||!p.neighbor);return place?{text:nameOf(place),building:false}:null;},show:(value,e)=>{const tip=$('hover-tip');tip.textContent=value.text;tip.style.display='block';const b=host.getBoundingClientRect();tip.style.left=Math.min(e.clientX-b.left+14,host.clientWidth-tip.offsetWidth-10)+'px';tip.style.top=Math.min(e.clientY-b.top+14,host.clientHeight-tip.offsetHeight-38)+'px';renderer.domElement.style.cursor=value.building?'pointer':'grab';},hide:()=>{$('hover-tip').style.display='none';renderer.domElement.style.cursor='grab';}});
+ renderer.domElement.addEventListener('webglcontextlost',e=>{e.preventDefault();streaming.dispose();$('status-text').textContent=t('lost');});
+ reportLoad({phase:'ready',loaded:1,total:1});await nextPaint();$('loading').remove();$('download-image').disabled=false;$('download-3ds').disabled=false;
+}catch(error){console.error(error);streaming?.dispose();modelReady=false;staticMode=true;controls?.dispose();renderer?.dispose();renderer=null;$('canvas-host').replaceChildren();$('fallback').src=data.preview;$('fallback').style.display='block';$('loading')?.remove();$('download-3ds').disabled=false;const note=document.createElement('div');note.className='error-message';note.textContent=t('error');host.append(note);updateCount();}
+}
+if(data.regions)initializeRegionalModel();else initializeModel();
