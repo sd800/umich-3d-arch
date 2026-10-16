@@ -137,7 +137,7 @@ export class CampusMapControls extends MapControls {
   }
   disconnect() {this._flushTouchMove(true);this._touchTwist=null;super.disconnect();}
   _touchPair(event) {
-    if(this._pointers.length!==2)return null;
+    if(this._pointers.length!==2||!this.domElement||this.domElement.clientWidth<1||this.domElement.clientHeight<1)return null;
     const a=this._pointerPositions[this._pointers[0]],b=this._pointerPositions[this._pointers[1]];
     if(!a||!b)return null;
     const dx=b.x-a.x,dy=b.y-a.y;
@@ -145,7 +145,7 @@ export class CampusMapControls extends MapControls {
     const offset=this._touchClientOffset||{x:0,y:0};
     // Very close or crossed contacts have no reliable angular direction.
     if(Math.hypot(dx,dy)<24)return null;
-    return {angle:Math.atan2(dy,dx),x:(a.x+b.x)/2+offset.x,y:(a.y+b.y)/2+offset.y};
+    return {angle:Math.atan2(dy,dx),distance:Math.hypot(dx,dy),ax:a.x,ay:a.y,bx:b.x,by:b.y,x:(a.x+b.x)/2+offset.x,y:(a.y+b.y)/2+offset.y};
   }
   _startTouchTwist(pair) {
     const camera=this.object,b=this.domElement.getBoundingClientRect();camera.updateMatrixWorld(true);
@@ -153,18 +153,52 @@ export class CampusMapControls extends MapControls {
     const anchor=new Vector3(x,y,this.target.clone().project(camera).z).unproject(camera);
     const direction=camera.getWorldDirection(new Vector3());
     if(direction.z<-GROUND_TILT)anchor.addScaledVector(direction,(this.target.z-anchor.z)/direction.z);
-    return {angle:pair.angle,pending:0,active:false,anchor};
+    return {angle:pair.angle,pending:0,active:false,anchor,start:pair,mode:null,tiltY:pair.y};
   }
   _handleTouchStartDollyPan(event) {
     super._handleTouchStartDollyPan(event);
     const pair=this._touchPair(event);
     this._touchTwist=pair?this._startTouchTwist(pair):null;
   }
+  _twoFingerIntent(previous,pair) {
+    if(previous.mode)return previous.mode;
+    const start=previous.start,dx=pair.x-start.x,dy=pair.y-start.y;
+    const a=pair.ay-start.ay,b=pair.by-start.by;
+    const turn=Math.atan2(Math.sin(pair.angle-start.angle),Math.cos(pair.angle-start.angle));
+    // Decide once per contact pair. Pinching or turning first keeps normal map
+    // navigation; a deliberate parallel vertical drag enters tilt instead.
+    if(!this.enableRotate||Math.abs(pair.distance-start.distance)>Math.max(6,start.distance*.05)||Math.abs(turn)>3*Math.PI/180||Math.abs(dx)>=8&&Math.abs(dx)*1.5>=Math.abs(dy))previous.mode='map';
+    else if(a*b>0&&Math.min(Math.abs(a),Math.abs(b))>=6&&Math.abs(dy)>=8&&Math.abs(dy)>Math.abs(dx)*1.5)previous.mode='tilt';
+    else if(Math.hypot(dx,dy)>18)previous.mode='map';
+    return previous.mode;
+  }
+  _applyTouchOrbit(previous,x,y,turn,tilt=0) {
+    // Keep one world-space anchor for the whole gesture, including passage
+    // through the low-angle view-offset/ground-plane transition.
+    this.update();
+    const camera=this.object,b=this.domElement.getBoundingClientRect();
+    this._rotateLeft(-turn);this._rotateUp(tilt);this.update();
+    const after=previous.anchor.clone().project(camera);
+    this._pan(((x-b.left)/b.width*2-1-after.x)*b.width/2,(after.y-(1-(y-b.top)/b.height*2))*b.height/2);
+  }
   _handleTouchMoveDollyPan(event) {
-    super._handleTouchMoveDollyPan(event);
     const pair=this._touchPair(event),previous=this._touchTwist;
-    if(!pair||!this.enableRotate){this._touchTwist=null;return;}
-    if(!previous){this.update();this._touchTwist=this._startTouchTwist(pair);return;}
+    if(!pair){super._handleTouchStartDollyPan(event);this._touchTwist=null;return;}
+    if(!previous){super._handleTouchStartDollyPan(event);this._touchTwist=this._startTouchTwist(pair);return;}
+    const hadMode=previous.mode,mode=this._twoFingerIntent(previous,pair);
+    if(!mode)return;
+    if(mode==='tilt'){
+      if(!this.enableRotate)return;
+      // The first 8 CSS pixels establish intent without moving the camera.
+      // Vertical travel controls pitch, so its on-screen anchor does not pan.
+      const dy=pair.y-previous.tiltY-(hadMode?0:Math.sign(pair.y-previous.start.y)*8);
+      previous.tiltY=pair.y;
+      const angle=2*Math.PI*dy*this.rotateSpeed/Math.max(this.domElement.clientHeight,1);
+      this._applyTouchOrbit(previous,previous.start.x,previous.start.y,0,Math.max(-Math.PI/18,Math.min(Math.PI/18,angle)));
+      return;
+    }
+    super._handleTouchMoveDollyPan(event);
+    if(!this.enableRotate)return;
     let angle=Math.atan2(Math.sin(pair.angle-previous.angle),Math.cos(pair.angle-previous.angle));
     previous.angle=pair.angle;
     if(!previous.active){
@@ -175,15 +209,7 @@ export class CampusMapControls extends MapControls {
     }
     angle=Math.max(-Math.PI/8,Math.min(Math.PI/8,angle));
     if(Math.abs(angle)<1e-10)return;
-    // Apply pan/pinch first, then keep the visible point under the two-finger
-    // midpoint fixed through rotation. Never intersect a nearly horizontal ray
-    // with the ground: its screen-facing pivot plane remains well-conditioned.
-    this.update();
-    const camera=this.object,b=this.domElement.getBoundingClientRect();
-    const x=(pair.x-b.left)/b.width*2-1,y=1-(pair.y-b.top)/b.height*2;
-    this._rotateLeft(-angle);this.update();
-    const after=previous.anchor.clone().project(camera);
-    this._pan((x-after.x)*b.width/2,(after.y-y)*b.height/2);
+    this._applyTouchOrbit(previous,pair.x,pair.y,angle);
   }
   _customWheelEvent(event) {
     const normalized=super._customWheelEvent(event);

@@ -67,3 +67,43 @@ for(const [width,height] of [[1000,650],[390,740]])for(const elevation of [90,45
  s.move(1,400,300);assert.equal(frames.size,1);s.controls.dispose();assert.equal(frames.size,0);paint();
 }
 console.log(`Touch passed: ${cases} view/bearing/viewport cases; real batched pointer events, twist direction and midpoint, pure pinch/pan, no tilt/roll/inertia, finger replacement, third contact, cancellation and disposal.`);
+
+let tiltCases=0;
+for(const [width,height] of [[1000,650],[390,740]])for(const elevation of [90,45,0])for(const bearing of [0,Math.PI/2,Math.PI,3*Math.PI/2]){
+ const s=setup(elevation,bearing,width,height),k=s.controls,cx=17+width*.57,cy=39+height*.46,direction=elevation===90?-1:1;
+ s.pair(cx,cy,60,.2,true);
+ const anchor=s.anchor(cx,cy),pose=s.camera.position.clone(),angle=k.getAzimuthalAngle(),polar=k.getPolarAngle(),zoom=s.camera.zoom;
+ s.pair(cx,cy+direction*6,60,.2);paint();near(s.camera.position.distanceTo(pose),0,'Small parallel noise does not pan or tilt');
+ for(const distance of [12,28,60]){
+  s.pair(cx,cy+direction*distance,60,.2);paint();
+  pixelNear(s.pixel(anchor).x,cx,'Tilt anchor X');pixelNear(s.pixel(anchor).y,cy,'Tilt anchor stays fixed instead of following vertical fingers');
+  near(difference(k.getAzimuthalAngle(),angle),0,'Parallel tilt keeps bearing');near(s.camera.zoom,zoom,'Parallel tilt never zooms');near(k.target.z,0,'Tilt keeps a ground pivot');
+  const expected=Math.max(1e-6,Math.min(Math.PI/2,polar-2*Math.PI*direction*(distance-8)*k.rotateSpeed/height));near(k.getPolarAngle(),expected,'Vertical drag controls pitch without an activation jump');
+  assert.ok(s.camera.position.toArray().every(Number.isFinite));assert.ok(s.camera.position.z>=k.target.z-1e-6);
+ }
+ const frozen=s.camera.position.clone(),rotation=s.camera.quaternion.clone();s.up(2,cx+60,cy+direction*60);s.up(1,cx-60,cy+direction*60);paint();for(let i=0;i<30;i++)k.update();
+ near(s.camera.position.distanceTo(frozen),0,'Tilt release stops immediately');near(s.camera.quaternion.angleTo(rotation),0,'Tilt has no inertia');assert.equal(frames.size,0);tiltCases++;
+}
+{
+ const s=setup(),k=s.controls;s.pair(510,350,60,0,true);
+ for(let i=1;i<=10;i++){s.pair(510,350+i*120,60,0);paint();}
+ near(k.getPolarAngle(),1e-6,'Tilt stops at plan');
+ for(let i=9;i>=-2;i--){s.pair(510,350+i*120,60,0);paint();}
+ near(k.getPolarAngle(),Math.PI/2,'Tilt stops exactly at the horizon');assert.ok(s.camera.position.z>=k.target.z-1e-6);
+ s.pair(510,350-2*120+12,60,0);paint();assert.ok(k.getPolarAngle()<Math.PI/2,'Reversing at the horizon responds immediately');
+ const frozen=s.camera.position.clone(),rotation=s.camera.quaternion.clone(),zoom=s.camera.zoom;
+ s.pair(510,110,1,0);paint();s.pair(510,110,60,0);paint();near(s.camera.position.distanceTo(frozen),0,'Close-contact recovery does not jump');near(s.camera.zoom,zoom,'Close-contact recovery does not zoom');near(s.camera.quaternion.angleTo(rotation),0,'Close-contact recovery does not tilt');
+ s.up(2,570,110);s.up(1,450,110);paint();
+}
+{
+ const s=setup(),k=s.controls;s.pair(510,350,60,0,true);s.pair(510,350,68,0);paint();const polar=k.getPolarAngle();
+ s.pair(510,410,68,0);paint();near(k.getPolarAngle(),polar,'A pinch-first gesture cannot unexpectedly turn into tilt');s.up(2,578,410);s.up(1,442,410);paint();
+ const t=setup();t.pair(510,350,60,0,true);t.pair(510,378,60,0);paint();const frozen=t.camera.position.clone(),rotation=t.camera.quaternion.clone();
+ t.pair(510,410,60,0);t.up(2,570,410,true);paint();near(t.camera.position.distanceTo(frozen),0,'Canceled queued tilt does not move');near(t.camera.quaternion.angleTo(rotation),0,'Canceled queued tilt does not rotate');t.up(1,450,410);paint();assert.equal(frames.size,0);
+}
+{
+ const s=setup();s.pair(510,350,60,Math.PI/2,true);s.pair(510,378,60,Math.PI/2);paint();const pose=s.camera.position.clone();
+ s.controls.domElement.clientWidth=0;s.pair(510,410,60,Math.PI/2);paint();near(s.camera.position.distanceTo(pose),0,'Hidden viewport cannot corrupt a tilt');
+ s.controls.domElement.clientWidth=1000;s.pair(510,410,60,Math.PI/2);paint();near(s.camera.position.distanceTo(pose),0,'Visible viewport resumes from a fresh touch baseline');s.up(2,510,470);s.up(1,510,350);paint();assert.equal(frames.size,0);
+}
+console.log(`Tilt passed: ${tiltCases} real pointer traces; parallel-drag intent, stable anchor, unchanged zoom/bearing, plan/horizon limits, immediate reversal, close-contact recovery, cancellation and release.`);

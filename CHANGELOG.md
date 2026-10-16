@@ -1,5 +1,11 @@
 # Changelog
 
+## 26.10.15.4 — 2026-10-15
+
+- Add two-finger parallel vertical dragging to adjust pitch directly, without enabling Rotate. Keep single-finger pan, two-finger twist, pinch zoom and desktop controls available.
+- Distinguish deliberate tilt from pinch/turn/pan intent for each contact pair. Keep the tilt anchor fixed, prevent accidental zoom or heading changes, and stop at plan and horizon limits without inversion or inertia.
+- Handle cancellation and close-contact recovery without queued movement or jumps; update English and Chinese controls help.
+
 ## 26.10.15.3 — 2026-10-15
 
 - Add two-finger twist rotation around the gesture midpoint while preserving touch pan, pinch zoom, single-finger rotation mode and desktop navigation.
