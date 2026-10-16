@@ -32,7 +32,7 @@ Object.assign(zh,{exploreHighlights:'探索',collapseHighlights:'收起校园地
 let stored=null;try{stored=localStorage.getItem('umich-model-language');}catch{}
 let lang=initialLanguage([],stored);
 const t=key=>(lang==='zh'?zh[key]:en[key])||en[key]||key;
-const highlightsPanel=installHighlightsPanel({panel:$('highlights-panel'),button:$('toggle-highlights'),content:$('highlights-content'),title:$('highlights-title'),label:$('highlights-toggle-label'),text:t});
+const highlightsPanel=installHighlightsPanel({panel:$('highlights-panel'),button:$('toggle-highlights'),content:$('highlights-content'),title:$('highlights-title'),label:$('highlights-toggle-label'),actions:$('map-actions'),guide:$('open-help'),text:t});
 const loadingView=loadingIndicator($('load-progress'),$('load-status'),t);
 const reportLoad=event=>loadingView.update(event);
 $('download-image').disabled=true;$('download-3ds').disabled=true;

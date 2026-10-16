@@ -1,5 +1,10 @@
 # Changelog
 
+## 26.10.15.8 — 2026-10-15
+
+- Place collapsed Explore immediately to the left of Guide in a right-aligned action group, retaining the 6 px spacing and matching button styles. Wrap the pair together when the toolbar row has insufficient room.
+- Preserve keyboard focus, selected landmark and language state when moving the collapse control between the panel and toolbar. Use UChicago or UW for concise browser verification of shared interface changes.
+
 ## 26.10.15.7 — 2026-10-15
 
 - Bring the collapsed Explore button closer to Guide with a consistent 6 px gap on desktop and mobile.

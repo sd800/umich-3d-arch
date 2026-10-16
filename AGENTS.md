@@ -11,3 +11,5 @@
 - Preserve CAD geometry and original source data when changing website interaction. Keep camera pivots ground-aligned, disable inertia, and make rotation an explicit interaction.
 
 - Use English filenames for all project files and generated deliverables. Update references when renaming files.
+
+- For browser checks of UI or interaction shared by all four campus sites, use UChicago or UW. Avoid loading the heavier UMich model for shared-interface checks; use it only when validation is specific to UMich geometry or data. Keep checks necessary and concise.
