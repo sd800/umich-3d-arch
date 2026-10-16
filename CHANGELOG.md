@@ -1,5 +1,9 @@
 # Changelog
 
+## 26.10.16.1 — 2026-10-16
+
+- Keep Guide on the toolbar row when there is room for Guide alone; place collapsed Explore directly below it. Retain Explore to the left of Guide when both fit.
+
 ## 26.10.15.8 — 2026-10-15
 
 - Place collapsed Explore immediately to the left of Guide in a right-aligned action group, retaining the 6 px spacing and matching button styles. Wrap the pair together when the toolbar row has insufficient room.

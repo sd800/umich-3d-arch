@@ -55,6 +55,11 @@ html:lang(zh) dialog h2{font-family:inherit;font-size:19px;font-weight:600}
 .map-controls .toolbar>button{flex:none;white-space:nowrap;pointer-events:auto}
 .map-controls .map-actions{display:flex;align-items:center;gap:6px;flex:none;margin-left:auto;pointer-events:none}
 .map-controls .map-actions>button{white-space:nowrap;pointer-events:auto}
+/* Keep Guide on its row when only one action fits; Explore sits below it. */
+.map-controls .toolbar{align-items:flex-start}
+.map-controls .map-actions.stacked-actions{flex-direction:column-reverse;align-items:flex-end;align-self:flex-start;flex-basis:var(--guide-width);width:var(--guide-width)}
+.map-controls .map-actions.stacked-actions>button{flex:none}
+
 .map-controls .help-button{position:static;margin:0}
 .map-controls .tour{position:relative;top:auto;right:auto;margin:14px 0 0 auto;pointer-events:auto}
 .map-controls .tour[hidden]{display:none}
