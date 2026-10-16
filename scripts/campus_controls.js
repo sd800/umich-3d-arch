@@ -18,6 +18,17 @@ export class CampusMapControls extends MapControls {
     this.maxZoom=60;
     this.touches.TWO=TOUCH.DOLLY_PAN;
     this.rotationMode=false;
+    // Consume both contacts together so alternating pointer events cannot turn
+    // a straight pinch or pan into a transient twist.
+    this._touchMoveNow=this._onTouchMove;
+    this._onTouchMove=event=>{
+      if(this._pointers.length!==2||typeof requestAnimationFrame!=='function'){
+        this._touchMoveNow(event);return;
+      }
+      this._trackPointer(event);
+      this._queuedTouchMove=event;
+      if(this._touchFrame==null)this._touchFrame=requestAnimationFrame(()=>this._flushTouchMove());
+    };
   }
   syncViewOffset() {
     const camera=this.object;
@@ -103,6 +114,76 @@ export class CampusMapControls extends MapControls {
     const previous=this._scale;super._handleTouchMoveDolly(event);
     if(!Number.isFinite(this._scale)||this._scale<=0)this._scale=previous;
     this._scale=Math.max(previous/1.2,Math.min(previous*1.2,this._scale));
+    const second=this._getSecondPointerPosition(event);
+    if(second)this._updateZoomParameters((event.pageX+second.x)/2+(event.clientX-event.pageX||0),(event.pageY+second.y)/2+(event.clientY-event.pageY||0));
+  }
+  _flushTouchMove(discard=false) {
+    if(this._touchFrame!=null){cancelAnimationFrame(this._touchFrame);this._touchFrame=null;}
+    const event=this._queuedTouchMove;this._queuedTouchMove=null;
+    if(!discard&&this.enabled&&event&&this._pointers.length===2)this._touchMoveNow(event);
+  }
+  _addPointer(event) {
+    this._flushTouchMove();this._touchTwist=null;super._addPointer(event);
+  }
+  _removePointer(event) {
+    this._flushTouchMove(event.type==='pointercancel');this._touchTwist=null;
+    super._removePointer(event);
+    // OrbitControls resumes one remaining contact itself; also resume two
+    // after an accidental third contact, using fresh positions and baselines.
+    if(this._pointers.length===2){
+      const id=this._pointers[0],p=this._pointerPositions[id];
+      this._onTouchStart({pointerId:id,pageX:p.x,pageY:p.y});
+    }
+  }
+  disconnect() {this._flushTouchMove(true);this._touchTwist=null;super.disconnect();}
+  _touchPair(event) {
+    if(this._pointers.length!==2)return null;
+    const a=this._pointerPositions[this._pointers[0]],b=this._pointerPositions[this._pointers[1]];
+    if(!a||!b)return null;
+    const dx=b.x-a.x,dy=b.y-a.y;
+    if(Number.isFinite(event.clientX)&&Number.isFinite(event.clientY))this._touchClientOffset={x:event.clientX-event.pageX,y:event.clientY-event.pageY};
+    const offset=this._touchClientOffset||{x:0,y:0};
+    // Very close or crossed contacts have no reliable angular direction.
+    if(Math.hypot(dx,dy)<24)return null;
+    return {angle:Math.atan2(dy,dx),x:(a.x+b.x)/2+offset.x,y:(a.y+b.y)/2+offset.y};
+  }
+  _startTouchTwist(pair) {
+    const camera=this.object,b=this.domElement.getBoundingClientRect();camera.updateMatrixWorld(true);
+    const x=(pair.x-b.left)/b.width*2-1,y=1-(pair.y-b.top)/b.height*2;
+    const anchor=new Vector3(x,y,this.target.clone().project(camera).z).unproject(camera);
+    const direction=camera.getWorldDirection(new Vector3());
+    if(direction.z<-GROUND_TILT)anchor.addScaledVector(direction,(this.target.z-anchor.z)/direction.z);
+    return {angle:pair.angle,pending:0,active:false,anchor};
+  }
+  _handleTouchStartDollyPan(event) {
+    super._handleTouchStartDollyPan(event);
+    const pair=this._touchPair(event);
+    this._touchTwist=pair?this._startTouchTwist(pair):null;
+  }
+  _handleTouchMoveDollyPan(event) {
+    super._handleTouchMoveDollyPan(event);
+    const pair=this._touchPair(event),previous=this._touchTwist;
+    if(!pair||!this.enableRotate){this._touchTwist=null;return;}
+    if(!previous){this.update();this._touchTwist=this._startTouchTwist(pair);return;}
+    let angle=Math.atan2(Math.sin(pair.angle-previous.angle),Math.cos(pair.angle-previous.angle));
+    previous.angle=pair.angle;
+    if(!previous.active){
+      previous.pending+=angle;
+      const threshold=3*Math.PI/180;
+      if(Math.abs(previous.pending)<=threshold)return;
+      angle=previous.pending-Math.sign(previous.pending)*threshold;previous.active=true;
+    }
+    angle=Math.max(-Math.PI/8,Math.min(Math.PI/8,angle));
+    if(Math.abs(angle)<1e-10)return;
+    // Apply pan/pinch first, then keep the visible point under the two-finger
+    // midpoint fixed through rotation. Never intersect a nearly horizontal ray
+    // with the ground: its screen-facing pivot plane remains well-conditioned.
+    this.update();
+    const camera=this.object,b=this.domElement.getBoundingClientRect();
+    const x=(pair.x-b.left)/b.width*2-1,y=1-(pair.y-b.top)/b.height*2;
+    this._rotateLeft(-angle);this.update();
+    const after=previous.anchor.clone().project(camera);
+    this._pan((x-after.x)*b.width/2,(after.y-y)*b.height/2);
   }
   _customWheelEvent(event) {
     const normalized=super._customWheelEvent(event);

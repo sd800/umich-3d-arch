@@ -1,5 +1,11 @@
 # Changelog
 
+## 26.10.15.3 — 2026-10-15
+
+- Add two-finger twist rotation around the gesture midpoint while preserving touch pan, pinch zoom, single-finger rotation mode and desktop navigation.
+- Batch the two contacts once per frame, require a small intentional twist, and reset gesture baselines when fingers change or a gesture is canceled. Keep pitch, ground pivots and immediate stopping stable.
+- Correct pinch centers when page and viewport coordinates differ; update English and Chinese controls help and verify combined gestures at plan, oblique and horizontal angles.
+
 ## 26.10.15.2 — 2026-10-15
 
 - Wrap generated offline model Base64 in bounded JavaScript literal lines to prevent compressed binary text from being mistaken for an API credential. Preserve the exact model bytes and existing decoding path without runtime concatenation.

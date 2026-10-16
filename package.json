@@ -29,7 +29,8 @@
     "check:ground-context": "python3 scripts/check_ground_context.py",
     "check:roofs": "python3 scripts/check_roof_surfaces.py",
     "build:roof-check": "esbuild scripts/check_medical_roofs_gpu.js --bundle --format=iife --target=es2020 --outfile=tmp/medical-roofs-check.js",
-    "check:feature-rebuilds": "python3 scripts/check_feature_rebuilds.py"
+    "check:feature-rebuilds": "python3 scripts/check_feature_rebuilds.py",
+    "check:touch": "node scripts/check_touch.mjs"
   },
   "dependencies": {
     "three": "0.186.1"
