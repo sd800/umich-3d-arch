@@ -1,5 +1,9 @@
 # Changelog
 
+## 26.10.16.9 — 2026-10-16
+
+- Keep the campus' own sitemap declaration and remove the retired central single-site sitemap reference from robots and future website packaging. The collection now offers one combined cross-site sitemap for verified Search Console submission.
+
 ## 26.10.16.8 — 2026-10-16
 
 - Declare the campus sitemap hosted by the Campus 3D Models collection for cross-site discovery, alongside the existing campus sitemap. Preserve both declarations when packaging future website releases.

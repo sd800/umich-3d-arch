@@ -200,6 +200,6 @@ inline_regions={item['id']:base64.b64encode((root/item['url']).read_bytes()).dec
 offline=edition({**data,'inlineRegions':inline_regions,'downloadArchiveUrl':'UMich_AnnArbor.3ds.gz','preview':'data:image/png;base64,'+preview},'data:font/ttf;base64,'+base64.b64encode((assets/'fonts/Manrope.ttf').read_bytes()).decode(),'data:image/png;base64,'+preview,{'32':png('favicon-32.png'),'16':png('favicon-16.png'),'apple':png('apple-touch-icon.png')},png('brand/m-map-192.png'),'<script>'+bundle.replace('</script',r'<\/script')+'</script>','noindex, follow','UMich_AnnArbor_Layered.3dm.xz')
 (out/'UMich_Campus_Offline.html').write_text(offline)
 (root/'CNAME').write_text(config['domain']+'\n')
-(root/'robots.txt').write_text('User-agent: *\nAllow: /\n\nSitemap: '+site+'sitemap.xml\nSitemap: https://arch.songming.org/sitemaps/umich.xml\n')
+(root/'robots.txt').write_text('User-agent: *\nAllow: /\n\nSitemap: '+site+'sitemap.xml\n')
 (root/'sitemap.xml').write_text('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url><loc>'+site+'</loc><lastmod>'+date.today().isoformat()+'</lastmod></url></urlset>\n')
 print('Root index:',len(html.encode()),'bytes; offline single file:',len(offline.encode()),'bytes; buildings:',len(records),'places:',len(places))

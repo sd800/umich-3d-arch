@@ -2,4 +2,3 @@ User-agent: *
 Allow: /
 
 Sitemap: https://umich.arch.songming.org/sitemap.xml
-Sitemap: https://arch.songming.org/sitemaps/umich.xml
