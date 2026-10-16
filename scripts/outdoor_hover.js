@@ -9,7 +9,7 @@ function inRing(ring,x,y){let inside=false;for(let i=0,j=ring.length-1;i<ring.le
 export function createOutdoorPicker(places){
  const entries=places.flatMap(place=>{const g=place.hitArea;if(!g)return [];const polygons=g.type==='Polygon'?[g.coordinates]:g.type==='MultiPolygon'?g.coordinates:[];
  return polygons.filter(p=>p[0]?.length>=4).map(rings=>{const xs=rings[0].map(p=>p[0]),ys=rings[0].map(p=>p[1]);return {place,rings,area:ringArea(rings[0])-rings.slice(1).reduce((a,r)=>a+ringArea(r),0),bounds:[Math.min(...xs),Math.min(...ys),Math.max(...xs),Math.max(...ys)]};});}).sort((a,b)=>a.area-b.area);
- return (x,y)=>entries.find(({bounds:b,rings:r})=>x>=b[0]&&x<=b[2]&&y>=b[1]&&y<=b[3]&&inRing(r[0],x,y)&&!r.slice(1).some(h=>inRing(h,x,y)))?.place||null;
+ return (x,y,visible=()=>true)=>entries.find(({place,bounds:b,rings:r})=>visible(place)&&x>=b[0]&&x<=b[2]&&y>=b[1]&&y<=b[3]&&inRing(r[0],x,y)&&!r.slice(1).some(h=>inRing(h,x,y)))?.place||null;
 }
 /** Resolve the ray against sampled ground, avoiding nearly horizontal rays. */
 export function groundPoint(ray,height,z=0,maxDistance=50000){

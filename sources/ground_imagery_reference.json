@@ -1,0 +1,41 @@
+{
+  "source": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export?bbox=-83.753%2C42.270%2C-83.721%2C42.288&bboxSR=4326&imageSR=4326&size=1400%2C1000&format=jpg&f=json",
+  "provider": "Esri World Imagery",
+  "retrieved": "2026-10-15",
+  "purpose": "Visual reference for lawns, paved blocks, cemetery, arboretum and street setbacks; no raster image redistributed",
+  "response": {
+    "href": "https://server.arcgisonline.com/arcgis/rest/directories/arcgisoutput/World_Imagery_MapServer/_ags_map9bb16f8c501c4fdb8f95d2e5ec569f97.jpg",
+    "width": 1400,
+    "height": 1000,
+    "extent": {
+      "xmin": -83.75299999999999,
+      "ymin": 42.26757142857142,
+      "xmax": -83.72099999999999,
+      "ymax": 42.29042857142856,
+      "spatialReference": {
+        "wkid": 4326,
+        "latestWkid": 4326
+      }
+    },
+    "scale": 9616.78267069593
+  },
+  "north_campus": {
+    "source": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export?bbox=-83.738%2C42.285%2C-83.698%2C42.305&bboxSR=4326&imageSR=4326&size=1400%2C900&format=jpg&f=json",
+    "response": {
+      "href": "https://server.arcgisonline.com/arcgis/rest/directories/arcgisoutput/World_Imagery_MapServer/_ags_map1ec7aea8d01a4b75849009d73ffaee14.jpg",
+      "width": 1400,
+      "height": 900,
+      "extent": {
+        "xmin": -83.73799999999999,
+        "ymin": 42.282142857142844,
+        "xmax": -83.69799999999998,
+        "ymax": 42.30785714285713,
+        "spatialReference": {
+          "wkid": 4326,
+          "latestWkid": 4326
+        }
+      },
+      "scale": 12020.978338373114
+    }
+  }
+}

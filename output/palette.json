@@ -228,5 +228,105 @@
     213,
     198,
     159
+  ],
+  "ContextGround": [
+    191,
+    194,
+    176
+  ],
+  "ContextSoil": [
+    180,
+    184,
+    164
+  ],
+  "ContextGrass": [
+    125,
+    151,
+    107
+  ],
+  "ContextForest": [
+    103,
+    132,
+    88
+  ],
+  "ContextLot": [
+    158,
+    159,
+    146
+  ],
+  "ContextGravel": [
+    172,
+    166,
+    146
+  ],
+  "ContextPaving": [
+    193,
+    187,
+    168
+  ],
+  "ContextWalk": [
+    207,
+    201,
+    180
+  ],
+  "ContextPath": [
+    156,
+    157,
+    136
+  ],
+  "RailBallast": [
+    145,
+    138,
+    119
+  ],
+  "RailSleeper": [
+    111,
+    99,
+    80
+  ],
+  "Rail": [
+    75,
+    79,
+    77
+  ],
+  "ContextBrick": [
+    148,
+    113,
+    93
+  ],
+  "ContextStone": [
+    185,
+    181,
+    164
+  ],
+  "ContextPanel": [
+    161,
+    167,
+    165
+  ],
+  "ContextGlass": [
+    105,
+    137,
+    147
+  ],
+  "ContextLeaves": [
+    85,
+    118,
+    83
+  ],
+  "RoofContext": [
+    113,
+    118,
+    112
+  ],
+  "RoofContextSlate": [
+    79,
+    85,
+    85
+  ],
+  "RoofContextWarm": [
+    157,
+    150,
+    134
   ]
 }

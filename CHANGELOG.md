@@ -1,5 +1,19 @@
 # Changelog
 
+## 26.10.15.1 — 2026-10-15
+
+- Add independently layered Ann Arbor neighboring buildings, streets, walks, mapped greenery and surface parking around the four campus sectors, using retained georeferenced public sources and terrain-aligned foundations.
+- Show ⁺Campus neighboring areas by default at the top of All, with one control to restore the campus-only view without moving the camera. Include neighbors in bilingual search and prefix their names with ⁺.
+- Keep university facilities, campus visibility counts, architectural highlights and camera presets distinct from the surrounding context.
+- Reconnect missing terrain patches and fill north-campus, residential and commercial ground with mapped woodland, lawns, yards, paved aprons and entries. Rebuild Forest Hill Cemetery ground and distinguish its internal drives from arterial roads.
+- Extend Nichols Arboretum ground, woodland cover and riverfront transitions; retain mapped campus surfaces and model missing forest canopies without creating fictitious surveyed tree locations.
+- Remove buried generic rooftop plant blocks and coplanar metal caps from Frankel Cardiovascular Center, Kahn Pavilion, Mott/Women's Hospital and North Quad. Eliminate competing roof surfaces at the geometry source while preserving roof materials and selection highlighting.
+- Replace the blank Ann Arbor Railroad strip near Buhr and the athletic district with mapped ballast, standard-gauge rails and sleepers, preserving road surfaces at level crossings.
+- Add all three four-storey Courtyards apartment buildings beside NCRB, preserving interior courtyards and differentiating the stone lower facade, brick upper floors and cornices.
+- Rebuild Central Power Plant as stepped industrial halls and the turbine wing, with twin tapered hollow brick stacks at the published 238 ft / 185 ft heights, tall louvres, roof glazing and service ductwork.
+- Correct building-cache invalidation so changes anywhere in the building generator rebuild actual geometry.
+- Update local/offline model packages, CAD exports, source documentation and search metadata.
+
 ## 26.10.14.2 — 2026-10-14
 
 - Extend shallow terrain-tile undersides to a shared display datum and softly fade their unlit earth sides downward, removing the exposed faceted wedges in downhill horizontal views. Preserve the original CAD elevations and files.

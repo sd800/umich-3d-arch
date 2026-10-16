@@ -10,8 +10,8 @@ A bilingual exterior model of the **University of Michigan, Ann Arbor**. Open `i
 | --- | --- |
 | `index.html` | Root website and double-click viewer |
 | `output/UMich_Campus_Offline.html` | Self-contained offline viewer |
-| `output/UMich_AnnArbor.3ds` | 3DS mesh model, coordinates in meters |
-| `output/UMich_AnnArbor_Layered.3dm` | Rhino v7 model with native layers and metric units |
+| `output/UMich_AnnArbor.3ds.gz` | Losslessly archived 3DS mesh model; coordinates in meters |
+| `output/UMich_AnnArbor_Layered.3dm.xz` | XZ-archived Rhino v7 model with native layers and meter units |
 | `output/layer_map.json` | 3DS object names → individual building / environment layers |
 | `scripts/apply_layers_rhino.py` | Restore layers after importing the 3DS into Rhino |
 | `output/building_dimensions_and_sources.csv` | Building dimensions, height certainty and source references |
@@ -19,7 +19,7 @@ A bilingual exterior model of the **University of Michigan, Ann Arbor**. Open `i
 | `output/campus_overview.png` | Four-sector overview |
 | `output/campus_plan.png` | North-up campus plan |
 
-The model contains **554 building layers + one environment layer**, 29 architectural highlights and 13,233 mapped tree positions. Buildings sharing one official facility number share one layer, including disconnected mapped pieces. Underground-only footprints and planning-only buildings are listed in `output/excluded_records.json`.
+The model contains **554 campus building layers + one campus environment layer**, plus **3,385 neighboring building layers and a separate neighboring environment layer**, 29 architectural highlights and 13,406 mapped tree positions. Buildings sharing one official facility number share one layer, including disconnected mapped pieces. Underground-only footprints and planning-only buildings are listed in `output/excluded_records.json`.
 
 The initial view is centered on The Diag’s central plaza, looking from the southwest at a lower oblique angle with Central Campus clearly visible. Campus and Reset restore the same center, bearing and scale; district buttons provide closer views.
 
@@ -30,7 +30,8 @@ The viewer supports English/Chinese search, individual visibility, architectural
 - Footprints, road/sidewalk areas, plazas, planting, sports fields and tree positions: [U-M Facilities & Operations public GIS](https://map.fo.umich.edu/).
 - Terrain: [USGS 3DEP bare-earth DEM](https://elevation.nationalmap.gov/arcgis/rest/services/3DEPElevation/ImageServer), resampled at approximately 18 m. Landscape surfaces are draped in smaller patches; building pads are locally flattened.
 - Projection: EPSG:32617, local meter offsets from [-83.7382, 42.2764]. Model Z = 0 corresponds to 225 m in the DEM datum. Elevation slices use this local datum, rather than measuring height above every building’s pad.
-- Heights: one building uses a published peak with conflicting official accounts; six use the city’s **historical estimates**; the remaining heights, roof partitions, facade bays and exterior storeys are explicit estimates. U-M GIS `FloorCount` is preserved separately and is **not assumed to mean above-ground storeys**.
+- Heights: Burton Tower and Central Power Plant use published peak/stack heights; six buildings use the city’s **historical estimates**; the remaining heights, roof partitions, facade bays and exterior storeys are explicit estimates. U-M GIS `FloorCount` is preserved separately and is **not assumed to mean above-ground storeys**.
+- Central Power Plant: north/south stack heights use the 2017 Regents refurbishment record, 238 ft / 185 ft respectively. Industrial hall levels, stack positions and secondary members remain approximate.
 - Burton Tower: the selected university Record figure is 212 ft / 64.6176 m. Bentley Historical Library reports 192 ft. This discrepancy is disclosed in the viewer and has not been resolved by measurement.
 - Wave Field: its published 90 ft square footprint informs the artwork’s scale; wave amplitude and phase are illustrative.
 
@@ -38,11 +39,11 @@ This is an independent exterior study model. Mapped XY dimensions are georeferen
 
 ### Rhino and 3DS
 
-Use the `.3dm` file for native building layers and editable closed massing solids. 3DS does not encode Rhino’s native layer structure. When importing `.3ds`, set the import units to meters, then run `scripts/apply_layers_rhino.py` and select `output/layer_map.json`. All outdoor meshes are assigned to `环境_Environment`.
+Use the `.3dm` file for native building layers and editable closed massing solids. 3DS does not encode Rhino’s native layer structure. When importing `.3ds`, set the import units to meters, then run `scripts/apply_layers_rhino.py` and select `output/layer_map.json`. Campus outdoor meshes use `环境_Environment`; context landscape uses `Neighboring_Environment` and each neighboring building has an individual `N` layer. Published CAD archives use gzip for 3DS and XZ for Rhino to fit GitHub’s per-file limit. Run `python3 scripts/cad_delivery.py --extract` after cloning to restore both native CAD files locally. The website’s Download 3DS button restores the original native file in a worker on demand.
 
 ## Website and SEO
 
-The intended domain is **umich.arch.songming.org**. Canonical URL, Open Graph/Twitter cards, bilingual titles/descriptions, structured WebSite/WebPage/3DModel data, sitemap, robots and `CNAME` are configured consistently. The static HTML includes all 554 English and Chinese building names for crawling and no-JavaScript browsing.
+The intended domain is **umich.arch.songming.org**. Canonical URL, Open Graph/Twitter cards, bilingual titles/descriptions, structured WebSite/WebPage/3DModel data, sitemap, robots and `CNAME` are configured consistently. The static HTML includes all 3939 campus and neighboring English/Chinese building names for crawling and no-JavaScript browsing.
 
 The interactive payload uses lossless geometry coding plus gzip; the original `.3ds` remains available to download. The root local edition loads compressed data through a classic script to avoid `file://` fetch restrictions. The single-file offline edition embeds the model, font, preview and engine. Use a current browser with WebGL 2 and Compression Streams support.
 
@@ -60,6 +61,8 @@ source .venv/bin/activate
 python3 -m pip install -r scripts/requirements.txt
 npm ci
 python3 scripts/build_campus.py
+python3 scripts/cad_delivery.py
+npm run build:model
 python3 scripts/render_preview.py
 cp output/campus_aerial.png output/campus_overview.png
 python3 scripts/render_preview.py --central
@@ -74,6 +77,7 @@ npm run check:loading
 npm run check:rendering
 npm run check:release
 npm run check:seo
+npm run check:neighbors
 python3 scripts/package_delivery.py
 ```
 
@@ -104,7 +108,7 @@ Roof shadow filtering uses a fixed PCF kernel with receiver-plane depth correcti
 
 ## Website model compression
 
-The initial model transfer is **20.11 MB**, down from **41.66 MB** (51.7% smaller). The web stream uses meshoptimizer 1.3.0 lossless vertex/index-sequence coding followed by gzip. No quantization or simplification is applied; its decoded SHA-256 matches the original 3DS. Rhino and original 3DS downloads stay unchanged.
+The initial model transfer is **37.95 MB**, down from **70.40 MB** (46.1% smaller). The web stream uses meshoptimizer 1.3.0 lossless vertex/index-sequence coding followed by gzip. No quantization or simplification is applied; its decoded SHA-256 matches the original 3DS. The decoded geometry is identical to the original full 3DS. Published CAD is losslessly archived; the web Download 3DS action still saves the native file.
 
 A single browser worker streams gzip decompression, restores small geometry blocks and parses the CAD model. Its compressed input and resulting geometry buffers are transferred rather than copied. The full intermediate archive is never retained. Scene setup yields to rendering between time slices; browsers that block workers use cooperative per-object parsing. Standalone HTML restores the downloadable CAD on demand in a worker. Decoder JavaScript/WebAssembly is bundled locally and requires no CDN. See `output/web_model_report.json` for byte counts, source digest and maximum block size. `npm run build:model` rebuilds the stream; `npm run check:compression` checks lossless restoration and worker behavior.
 
@@ -115,3 +119,15 @@ The Law Quadrangle, The Diag core, Lurie Tower and Leinweber use individual publ
 See `sources/ARCHITECTURE_REFERENCES.md`, `sources/ARCHITECTURE_EXTENDED_REFERENCES.md` and `sources/building_specs.json`. Detail previews are in `output/law_quadrangle_detail.png`, `output/diag_core_detail.png`, `output/lurie_tower_detail.png` and `output/leinweber_detail.png`. Heights and individual facade modules remain public-source estimates where surveyed dimensions are unavailable.
 
 Outdoor parking uses explicit satellite-referenced row paths and observed paint, clipped clear of current buildings and planting. `sources/parking_satellite_review.json` retains each imagery reference and review result. Unmarked, construction, service and obscured areas do not receive an inferred stripe grid.
+
+## Ground continuity
+
+North Campus and the arboretum have connected terrain, mapped woodland/meadow cover and estimated supplementary canopies. Neighboring residential/commercial parcels use turf, paved aprons and mapped parking rather than undifferentiated pale ground. Forest Hill Cemetery retains its mapped circulation as subdued internal paths with grass and canopy cover. See `output/ground_context_validation.json` and the ground review in `sources/NEIGHBORHOOD_REFERENCES.md`.
+
+## Campus neighboring areas
+
+Ann Arbor context is visible by default. In All, the first item is **⁺Campus neighboring areas**; clear its checkbox to restore campus-only rendering without moving the camera. The control is not pinned while searching. Neighboring buildings are searchable, selectable and individually visible, with ⁺ before every neighboring name. Campus visibility counts, tours and camera presets remain independent.
+
+The scope includes State Street, South University, Main Street/Kerrytown, Packard/stadium streets, Broadway and Plymouth Road. Footprints retain courtyard holes; windows and street-facing entrances attach to individual flat/pitched volumes. Closed foundations meet the same USGS terrain as campus. A restrained context palette distinguishes surrounding buildings. The new geometry fills streets and walks missing from the broad study-ground extent while preserving mapped university surfaces. Mapped surface parking and green areas are retained; no invented parking stripes or automatic roof boxes are introduced.
+
+See `sources/NEIGHBORHOOD_REFERENCES.md` and `sources/neighboring_source_manifest.json`. Separate records, metric footprints, dimensions/sources and validation are in the `output/neighboring_*` files. The neighboring database is © OpenStreetMap contributors, ODbL 1.0. Untagged heights, secondary facade modules and roof forms remain exterior interpretations.

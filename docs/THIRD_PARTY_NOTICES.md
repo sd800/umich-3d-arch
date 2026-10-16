@@ -67,3 +67,7 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+
+## Ann Arbor neighboring-area data
+
+© OpenStreetMap contributors. Source snapshots and the derived neighboring building/landscape database are available under the Open Database License 1.0: https://www.openstreetmap.org/copyright and https://opendatacommons.org/licenses/odbl/1-0/. The retained snapshots, source manifest, English-named dimension tables and footprint GeoJSON accompany the model. University GIS remains the source for campus facilities; the neighboring database is separately identified.

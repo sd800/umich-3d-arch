@@ -1,5 +1,5 @@
 import {MeshoptDecoder} from './vendor/meshopt_decoder.mjs';
-const MAGIC='CMP3DS01',MAX_MODEL=128*1024*1024,MAX_BLOCK=4*1024*1024;
+const MAGIC='CMP3DS01',MAX_MODEL=192*1024*1024,MAX_BLOCK=4*1024*1024;
 const pauseTask=()=>new Promise(resolve=>setTimeout(resolve,0));
 
 /** Losslessly restore CAD bytes one block at a time; never retain an inflated archive. */
@@ -25,7 +25,7 @@ export async function restoreCampusBytes(bytes,options={},report=()=>{},pause=pa
     const length=view.getUint32(8,true),headerLength=view.getUint32(12,true);
     if(length<6||length>MAX_MODEL||options.modelByteLength&&length!==options.modelByteLength)throw new Error('Invalid restored model size');
     const segments=JSON.parse(new TextDecoder().decode(await read(headerLength)));
-    if(!Array.isArray(segments)||segments.length>50000)throw new Error('Invalid model directory');
+    if(!Array.isArray(segments)||segments.length>100000)throw new Error('Invalid model directory');
     const output=new Uint8Array(length),dv=new DataView(output.buffer);let position=0;
     for(const item of segments){
       if(!Array.isArray(item)||item.length!==4||!item.every(Number.isSafeInteger))throw new Error('Invalid model segment');

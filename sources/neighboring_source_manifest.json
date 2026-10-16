@@ -1,0 +1,39 @@
+{
+  "sources": [
+    {
+      "file": "osm_neighbors_downtown.xml.gz",
+      "url": "https://api.openstreetmap.org/api/0.6/map?bbox=-83.758,42.277,-83.727,42.2875",
+      "retrieved": "2026-10-15",
+      "raw_sha256": "084c60c4b0506d545a5354ba657e846d0ca007a32f1f3712ba9893a74aad1155",
+      "bytes": 9042069
+    },
+    {
+      "file": "osm_neighbors_broadway.xml.gz",
+      "url": "https://api.openstreetmap.org/api/0.6/map?bbox=-83.745,42.286,-83.719,42.304",
+      "retrieved": "2026-10-15",
+      "raw_sha256": "b4e1c236fd2aea37cfa47f36bdd4adece9824c02f76aa61970134f590d28f05e",
+      "bytes": 6521353
+    },
+    {
+      "file": "osm_neighbors_river_arboretum.xml.gz",
+      "url": "https://api.openstreetmap.org/api/0.6/map?bbox=-83.734,42.272,-83.710,42.288",
+      "retrieved": "2026-10-15",
+      "raw_sha256": "cc38455de68f98c155204ec332107898bf1f3f90465e5e63f8dca2993ed7e820",
+      "bytes": 5778258
+    },
+    {
+      "file": "osm_architecture_central_athletic.xml.gz",
+      "retrieved": "2026-10-13",
+      "url": "https://api.openstreetmap.org/api/0.6/map?bbox=-83.754,42.261,-83.730,42.279",
+      "raw_sha256": "1b6e3d3d95014d4d52c1bc6e5625d9da7ddeb71c51226cf0bd33a74c4a79eee6"
+    },
+    {
+      "file": "osm_architecture_north.xml.gz",
+      "retrieved": "2026-10-13",
+      "url": "https://api.openstreetmap.org/api/0.6/map?bbox=-83.728,42.285,-83.692,42.309",
+      "raw_sha256": "4c0b5fd9abfa4b65c508032610ae6bf6147ab53d6f265ba8d7c43880ac421176"
+    }
+  ],
+  "license": "OpenStreetMap contributors, ODbL 1.0",
+  "license_url": "https://www.openstreetmap.org/copyright"
+}

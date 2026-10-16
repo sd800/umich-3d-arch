@@ -1,6 +1,6 @@
 """Write source provenance, bilingual usage notes and a portable delivery archive."""
 from pathlib import Path
-import json,hashlib,zipfile
+import json,hashlib,zipfile,subprocess
 r=Path(__file__).resolve().parents[1];out=r/'output';s=json.loads((out/'model_summary.json').read_text());records=json.loads((out/'viewer_records.json').read_text())
 readme=f'''# UMich Campus 3D Model
 
@@ -14,8 +14,8 @@ A bilingual exterior model of the **University of Michigan, Ann Arbor**. Open `i
 | --- | --- |
 | `index.html` | Root website and double-click viewer |
 | `output/UMich_Campus_Offline.html` | Self-contained offline viewer |
-| `output/UMich_AnnArbor.3ds` | 3DS mesh model, coordinates in meters |
-| `output/UMich_AnnArbor_Layered.3dm` | Rhino v7 model with native layers and metric units |
+| `output/UMich_AnnArbor.3ds.gz` | Losslessly archived 3DS mesh model; coordinates in meters |
+| `output/UMich_AnnArbor_Layered.3dm.xz` | XZ-archived Rhino v7 model with native layers and meter units |
 | `output/layer_map.json` | 3DS object names → individual building / environment layers |
 | `scripts/apply_layers_rhino.py` | Restore layers after importing the 3DS into Rhino |
 | `output/building_dimensions_and_sources.csv` | Building dimensions, height certainty and source references |
@@ -23,7 +23,7 @@ A bilingual exterior model of the **University of Michigan, Ann Arbor**. Open `i
 | `output/campus_overview.png` | Four-sector overview |
 | `output/campus_plan.png` | North-up campus plan |
 
-The model contains **{s['buildings']} building layers + one environment layer**, {s['landmarks']} architectural highlights and {s['trees']:,} mapped tree positions. Buildings sharing one official facility number share one layer, including disconnected mapped pieces. Underground-only footprints and planning-only buildings are listed in `output/excluded_records.json`.
+The model contains **{s['buildings']} campus building layers + one campus environment layer**, plus **{s['neighboring_buildings']:,} neighboring building layers and a separate neighboring environment layer**, {s['landmarks']} architectural highlights and {s['trees']:,} mapped tree positions. Buildings sharing one official facility number share one layer, including disconnected mapped pieces. Underground-only footprints and planning-only buildings are listed in `output/excluded_records.json`.
 
 The initial view is centered on The Diag’s central plaza, looking from the southwest at a lower oblique angle with Central Campus clearly visible. Campus and Reset restore the same center, bearing and scale; district buttons provide closer views.
 
@@ -34,7 +34,8 @@ The viewer supports English/Chinese search, individual visibility, architectural
 - Footprints, road/sidewalk areas, plazas, planting, sports fields and tree positions: [U-M Facilities & Operations public GIS](https://map.fo.umich.edu/).
 - Terrain: [USGS 3DEP bare-earth DEM](https://elevation.nationalmap.gov/arcgis/rest/services/3DEPElevation/ImageServer), resampled at approximately 18 m. Landscape surfaces are draped in smaller patches; building pads are locally flattened.
 - Projection: EPSG:32617, local meter offsets from {s['origin_wgs84']}. Model Z = 0 corresponds to 225 m in the DEM datum. Elevation slices use this local datum, rather than measuring height above every building’s pad.
-- Heights: one building uses a published peak with conflicting official accounts; six use the city’s **historical estimates**; the remaining heights, roof partitions, facade bays and exterior storeys are explicit estimates. U-M GIS `FloorCount` is preserved separately and is **not assumed to mean above-ground storeys**.
+- Heights: Burton Tower and Central Power Plant use published peak/stack heights; six buildings use the city’s **historical estimates**; the remaining heights, roof partitions, facade bays and exterior storeys are explicit estimates. U-M GIS `FloorCount` is preserved separately and is **not assumed to mean above-ground storeys**.
+- Central Power Plant: north/south stack heights use the 2017 Regents refurbishment record, 238 ft / 185 ft respectively. Industrial hall levels, stack positions and secondary members remain approximate.
 - Burton Tower: the selected university Record figure is 212 ft / 64.6176 m. Bentley Historical Library reports 192 ft. This discrepancy is disclosed in the viewer and has not been resolved by measurement.
 - Wave Field: its published 90 ft square footprint informs the artwork’s scale; wave amplitude and phase are illustrative.
 
@@ -42,11 +43,11 @@ This is an independent exterior study model. Mapped XY dimensions are georeferen
 
 ### Rhino and 3DS
 
-Use the `.3dm` file for native building layers and editable closed massing solids. 3DS does not encode Rhino’s native layer structure. When importing `.3ds`, set the import units to meters, then run `scripts/apply_layers_rhino.py` and select `output/layer_map.json`. All outdoor meshes are assigned to `环境_Environment`.
+Use the `.3dm` file for native building layers and editable closed massing solids. 3DS does not encode Rhino’s native layer structure. When importing `.3ds`, set the import units to meters, then run `scripts/apply_layers_rhino.py` and select `output/layer_map.json`. Campus outdoor meshes use `环境_Environment`; context landscape uses `Neighboring_Environment` and each neighboring building has an individual `N` layer. Published CAD archives use gzip for 3DS and XZ for Rhino to fit GitHub’s per-file limit. Run `python3 scripts/cad_delivery.py --extract` after cloning to restore both native CAD files locally. The website’s Download 3DS button restores the original native file in a worker on demand.
 
 ## Website and SEO
 
-The intended domain is **umich.arch.songming.org**. Canonical URL, Open Graph/Twitter cards, bilingual titles/descriptions, structured WebSite/WebPage/3DModel data, sitemap, robots and `CNAME` are configured consistently. The static HTML includes all {s['buildings']} English and Chinese building names for crawling and no-JavaScript browsing.
+The intended domain is **umich.arch.songming.org**. Canonical URL, Open Graph/Twitter cards, bilingual titles/descriptions, structured WebSite/WebPage/3DModel data, sitemap, robots and `CNAME` are configured consistently. The static HTML includes all {s['buildings'] + s['neighboring_buildings']} campus and neighboring English/Chinese building names for crawling and no-JavaScript browsing.
 
 The interactive payload uses lossless geometry coding plus gzip; the original `.3ds` remains available to download. The root local edition loads compressed data through a classic script to avoid `file://` fetch restrictions. The single-file offline edition embeds the model, font, preview and engine. Use a current browser with WebGL 2 and Compression Streams support.
 
@@ -64,6 +65,8 @@ source .venv/bin/activate
 python3 -m pip install -r scripts/requirements.txt
 npm ci
 python3 scripts/build_campus.py
+python3 scripts/cad_delivery.py
+npm run build:model
 python3 scripts/render_preview.py
 cp output/campus_aerial.png output/campus_overview.png
 python3 scripts/render_preview.py --central
@@ -78,6 +81,7 @@ npm run check:loading
 npm run check:rendering
 npm run check:release
 npm run check:seo
+npm run check:neighbors
 python3 scripts/package_delivery.py
 ```
 
@@ -98,7 +102,7 @@ Roof shadow filtering uses a fixed PCF kernel with receiver-plane depth correcti
 '''
 readme+='\n## Project layout\n\n- `index.html`: website entry; root SEO files and `CNAME` support publishing.\n- `assets/`: browser engine, fonts, icons and local model payload.\n- `config/`: custom site configuration.\n- `docs/`: project decisions and third-party license notices.\n- `scripts/`: model generators, packaging and necessary checks.\n- `sources/`: source snapshots and provenance.\n- `output/`: CAD files, offline edition, reports and delivery archive.\n- Root `VERSION`, `CHANGELOG.md` and package manifests record releases and builds.\n'
 web_report=json.loads((out/'web_model_report.json').read_text())
-readme+=f'\n## Website model compression\n\nThe initial model transfer is **{web_report["transferBytes"]/1e6:.2f} MB**, down from **{web_report["previousTransferBytes"]/1e6:.2f} MB** ({100*(1-web_report["transferBytes"]/web_report["previousTransferBytes"]):.1f}% smaller). The web stream uses meshoptimizer 1.3.0 lossless vertex/index-sequence coding followed by gzip. No quantization or simplification is applied; its decoded SHA-256 matches the original 3DS. Rhino and original 3DS downloads stay unchanged.\n\nA single browser worker streams gzip decompression, restores small geometry blocks and parses the CAD model. Its compressed input and resulting geometry buffers are transferred rather than copied. The full intermediate archive is never retained. Scene setup yields to rendering between time slices; browsers that block workers use cooperative per-object parsing. Standalone HTML restores the downloadable CAD on demand in a worker. Decoder JavaScript/WebAssembly is bundled locally and requires no CDN. See `output/web_model_report.json` for byte counts, source digest and maximum block size. `npm run build:model` rebuilds the stream; `npm run check:compression` checks lossless restoration and worker behavior.\n'
+readme+=f'\n## Website model compression\n\nThe initial model transfer is **{web_report["transferBytes"]/1e6:.2f} MB**, down from **{web_report["previousTransferBytes"]/1e6:.2f} MB** ({100*(1-web_report["transferBytes"]/web_report["previousTransferBytes"]):.1f}% smaller). The web stream uses meshoptimizer 1.3.0 lossless vertex/index-sequence coding followed by gzip. No quantization or simplification is applied; its decoded SHA-256 matches the original 3DS. The decoded geometry is identical to the original full 3DS. Published CAD is losslessly archived; the web Download 3DS action still saves the native file.\n\nA single browser worker streams gzip decompression, restores small geometry blocks and parses the CAD model. Its compressed input and resulting geometry buffers are transferred rather than copied. The full intermediate archive is never retained. Scene setup yields to rendering between time slices; browsers that block workers use cooperative per-object parsing. Standalone HTML restores the downloadable CAD on demand in a worker. Decoder JavaScript/WebAssembly is bundled locally and requires no CDN. See `output/web_model_report.json` for byte counts, source digest and maximum block size. `npm run build:model` rebuilds the stream; `npm run check:compression` checks lossless restoration and worker behavior.\n'
 readme+='''
 ## Architectural and parking refinement
 
@@ -108,6 +112,19 @@ See `sources/ARCHITECTURE_REFERENCES.md`, `sources/ARCHITECTURE_EXTENDED_REFEREN
 
 Outdoor parking uses explicit satellite-referenced row paths and observed paint, clipped clear of current buildings and planting. `sources/parking_satellite_review.json` retains each imagery reference and review result. Unmarked, construction, service and obscured areas do not receive an inferred stripe grid.
 '''
+readme+='''
+## Ground continuity
+
+North Campus and the arboretum have connected terrain, mapped woodland/meadow cover and estimated supplementary canopies. Neighboring residential/commercial parcels use turf, paved aprons and mapped parking rather than undifferentiated pale ground. Forest Hill Cemetery retains its mapped circulation as subdued internal paths with grass and canopy cover. See `output/ground_context_validation.json` and the ground review in `sources/NEIGHBORHOOD_REFERENCES.md`.
+
+## Campus neighboring areas
+
+Ann Arbor context is visible by default. In All, the first item is **⁺Campus neighboring areas**; clear its checkbox to restore campus-only rendering without moving the camera. The control is not pinned while searching. Neighboring buildings are searchable, selectable and individually visible, with ⁺ before every neighboring name. Campus visibility counts, tours and camera presets remain independent.
+
+The scope includes State Street, South University, Main Street/Kerrytown, Packard/stadium streets, Broadway and Plymouth Road. Footprints retain courtyard holes; windows and street-facing entrances attach to individual flat/pitched volumes. Closed foundations meet the same USGS terrain as campus. A restrained context palette distinguishes surrounding buildings. The new geometry fills streets and walks missing from the broad study-ground extent while preserving mapped university surfaces. Mapped surface parking and green areas are retained; no invented parking stripes or automatic roof boxes are introduced.
+
+See `sources/NEIGHBORHOOD_REFERENCES.md` and `sources/neighboring_source_manifest.json`. Separate records, metric footprints, dimensions/sources and validation are in the `output/neighboring_*` files. The neighboring database is © OpenStreetMap contributors, ODbL 1.0. Untagged heights, secondary facade modules and roof forms remain exterior interpretations.
+''';
 (r/'README.md').write_text(readme)
 sources='''# Sources and modeling decisions
 
@@ -144,6 +161,7 @@ Surface topology cleanup removes tiny sliver holes; a valid 2D footprint with po
 
 All facility layers are reviewed for roof form, exterior-level interpretation and source association. Detail is strongest where current university images or published descriptions resolve the form; unreconstructed individual window modules remain approximate. No raw architectural photography is redistributed.
 '''
+sources+='\n## Neighboring areas\n\nAnn Arbor context sources, snapshot checksums, ownership exclusions, historical municipal heights and geometry interpretations are documented in [NEIGHBORHOOD_REFERENCES.md](NEIGHBORHOOD_REFERENCES.md). The separate neighboring database and retained snapshots are © OpenStreetMap contributors, ODbL 1.0.\n'
 (r/'sources/SOURCES.md').write_text(sources)
 translations='''# Chinese naming decisions / 中文译名校对
 
@@ -199,8 +217,19 @@ validation=f'''# Delivery validation
 
 The checks validate deliverable integrity and behavior; they do not certify public-source geometry as an as-built survey.
 '''
+neighbor_validation=json.loads((out/'neighboring_validation.json').read_text())
+validation+=f'\n## Neighboring-area checks\n\n- {neighbor_validation["neighboring_buildings"]:,} distinct neighboring footprints and independent CAD layers, with no duplicate or campus-footprint overlap.\n- All {neighbor_validation["retained_source_hashes_verified"]} retained source snapshot hashes verified.\n- {neighbor_validation["ground_samples"]:,} actual exported context-ground contact samples; maximum gap {neighbor_validation["maximum_ground_contact_gap_m"]:.8f} m.\n- Browser verification: default visibility, complete context toggle without camera movement, campus-only counts, unpinned search results, neighboring locate/highlight, Chinese labels, ordinary pan and exact horizontal terrain occlusion.\n'
+ground_validation=json.loads((out/'ground_context_validation.json').read_text())
+roof_validation=json.loads((out/'roof_surface_validation.json').read_text())
+roof_gpu=json.loads((out/'medical_roof_gpu_validation.json').read_text())
+validation+=f'\n## Ground and roof corrections\n\n- {ground_validation["filled_ground_probes"]} reported ground gaps have actual exported terrain below them. Forest Hill internal drives use a separate muted material.\n- Read back {roof_validation["checked_finish_planes"]:,} horizontal roof finish planes across all {roof_validation["campus_buildings"]} campus facilities: no overlapping different roof finishes.\n- Actual before/after roof geometry: {roof_gpu["frames"]} WebGL moving views; {roof_gpu["oldWrong"]} original color conflicts reproduced, corrected maximum sample color difference {roof_gpu["maxColorDelta"]}.\n- Ann Arbor Railroad uses retained active centerlines, standard gauge, ballast and sleepers; streets remain visible at level crossings.\n'
+feature_validation=json.loads((out/'feature_rebuild_validation.json').read_text())
+validation+='\n- Central Power Plant: both exported stack peaks match the published heights; separate industrial halls retained.\n- Courtyards: three four-storey footprints, three open courtyards and no apartment body caps intruding into the mapped court voids.\n'
 (out/'VALIDATION.md').write_text(validation)
-files=[p for p in r.rglob('*') if p.is_file() and p.name!='.DS_Store' and not p.name.startswith('._') and '.git' not in p.parts and 'node_modules' not in p.parts and 'tmp' not in p.parts and '__pycache__' not in p.parts and p.suffix not in ['.zip','.npz']]
+paths=subprocess.check_output(['git','ls-files','--cached','--others','--exclude-standard'],cwd=r,text=True).splitlines()
+files=[r/p for p in paths if (r/p).is_file()and (r/p).suffix not in ['.zip','.npz','.3ds','.3dm']and not p.endswith('.DS_Store')]
+files.append(out/'UMich_Campus_Offline.html')
+
 archive=out/'UMich_AnnArbor_Delivery.zip'
 with zipfile.ZipFile(archive,'w',compression=zipfile.ZIP_DEFLATED,compresslevel=6) as z:
     for p in sorted(files):z.write(p,p.relative_to(r))

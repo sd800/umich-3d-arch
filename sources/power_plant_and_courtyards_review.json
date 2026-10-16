@@ -1,0 +1,30 @@
+{
+  "reviewed": "2026-10-15",
+  "power_plant": {
+    "facility_id": "1000260",
+    "project": "https://umaec.umich.edu/projects/completed-projects/central-power-plant-expansion-2/project-data/",
+    "view": "https://umaec.umich.edu/wp-content/uploads/2018/12/CPP-View-from-Huron-Street.jpg",
+    "site": "https://umaec.umich.edu/wp-content/uploads/2018/12/CPP-Site-Plan.jpg",
+    "stack_heights_source": "https://regents.umich.edu/files/meetings/07-17/2017-07-IX-6.pdf",
+    "north_stack_height_m": 72.5424,
+    "south_stack_height_m": 56.388000000000005,
+    "aerial": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export?bbox=-83.7358,42.2797,-83.7318,42.2824&bboxSR=4326&imageSR=4326&size=1100,900&format=jpg&f=image"
+  },
+  "courtyards": {
+    "address_source": "https://courtyardsapts.com/",
+    "buildings_source": "https://courtyardsapts.com/p/movein/",
+    "exterior_source": "https://courtyardsapts.com/gallery/",
+    "addresses": [
+      "1760 Broadway Street",
+      "1770 Broadway Street",
+      "1780 Broadway Street"
+    ],
+    "footprints": [
+      "relation/3874939",
+      "relation/3874940",
+      "relation/3874941"
+    ],
+    "exterior_storeys": 4
+  },
+  "limits": "Public-source exterior study: stack heights published, other local dimensions interpreted; images inspected locally and excluded from redistribution."
+}

@@ -39,10 +39,17 @@ __pycache__/
 /output/*.zip
 /output/*.tmp
 
-# Keep index.html, the CAD models, previews and source data tracked.
+# Keep index.html, compressed CAD archives, previews and source data tracked.
 
 # Generated single-file edition is included in the local delivery ZIP.
 /output/UMich_Campus_Offline.html
 
 # Local preview and raw public map fetches
 /sources/official_raw/
+
+# Full CAD is generated locally; lossless compressed archives stay in the repository.
+/output/UMich_AnnArbor.3ds
+/output/UMich_AnnArbor_Layered.3dm
+
+# Superseded local gzip Rhino archive; published Rhino uses lossless XZ.
+/output/UMich_AnnArbor_Layered.3dm.gz

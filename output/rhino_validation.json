@@ -1,11 +1,11 @@
 {
   "format": "Rhino 3DM v7",
   "units": "meters",
-  "layers": 555,
-  "nonempty_layers": 555,
-  "objects": 4060,
-  "closed_native_solids": 720,
-  "closed_mesh_objects": 2736,
+  "layers": 3941,
+  "nonempty_layers": 3941,
+  "objects": 17653,
+  "closed_native_solids": 4101,
+  "closed_mesh_objects": 12948,
   "plan_curves": 604,
   "all_geometry_valid": true,
   "named_views": [

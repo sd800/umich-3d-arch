@@ -32,3 +32,7 @@ Surface topology cleanup removes tiny sliver holes; a valid 2D footprint with po
 `ARCHITECTURE_REFERENCES.md` and `ARCHITECTURE_EXTENDED_REFERENCES.md` record the primary exterior images actually inspected and separate documented floor counts from visual and metric approximations. `building_specs.json` links matched public roof/storey tags to the official facility footprint. Specific photographs override generic tags (including the built five-storey Leinweber and the distinct Hatcher North stack sublevels). No automatic rooftop machinery is inferred from footprint size.
 
 All facility layers are reviewed for roof form, exterior-level interpretation and source association. Detail is strongest where current university images or published descriptions resolve the form; unreconstructed individual window modules remain approximate. No raw architectural photography is redistributed.
+
+## Neighboring areas
+
+Ann Arbor context sources, snapshot checksums, ownership exclusions, historical municipal heights and geometry interpretations are documented in [NEIGHBORHOOD_REFERENCES.md](NEIGHBORHOOD_REFERENCES.md). The separate neighboring database and retained snapshots are © OpenStreetMap contributors, ODbL 1.0.

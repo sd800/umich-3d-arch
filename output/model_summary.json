@@ -1,16 +1,31 @@
 {
+  "campus_ground_refinement": {
+    "mapped_or_inferred_campus_meadow_m2": 46963.12,
+    "mapped_campus_woodland_m2": 114713.1,
+    "mapped_construction_ground_m2": 0.02,
+    "woodland_canopy_estimates": 199,
+    "arboretum_source": "U-M named-place GIS / OSM relation 10391031 / MBGNA natural-area maps"
+  },
+  "neighboring_buildings": 3385,
+  "neighboring_trees": 89,
+  "neighboring_bounds": [
+    -1580.5422555363398,
+    -3822.522315030166,
+    3833.112363446025,
+    3122.843675836275
+  ],
   "buildings": 554,
-  "layers": 555,
+  "layers": 3941,
   "environment_layer": "环境_Environment",
-  "native_closed_solids": 720,
-  "objects_3ds": 3456,
-  "vertices": 2941218,
-  "triangles": 5136448,
-  "trees": 13233,
+  "native_closed_solids": 4101,
+  "objects_3ds": 17049,
+  "vertices": 5034530,
+  "triangles": 8820432,
+  "trees": 13406,
   "landmarks": 29,
-  "published_height_buildings": 1,
+  "published_height_buildings": 2,
   "municipal_estimate_buildings": 6,
-  "estimated_height_buildings": 547,
+  "estimated_height_buildings": 546,
   "sectors": {
     "central": 160,
     "north": 271,
@@ -28,10 +43,10 @@
     4684096.36214401
   ],
   "bounds": [
-    -1503.707885389045,
-    -3827.338460971613,
-    3837.8647946547662,
-    3007.0218083256523
+    -1503.69852867359,
+    -3825.464801549101,
+    3836.20438046389,
+    3006.1914734206375
   ],
   "district_bounds": {
     "central": [
@@ -62,7 +77,7 @@
   "terrain": "USGS 3DEP F32 bare-earth DEM, bilinear samples ~18m; 80m landscape patches and locally flattened building pads; Z0=225m DEM datum",
   "terrain_source": "https://elevation.nationalmap.gov/arcgis/rest/services/3DEPElevation/ImageServer",
   "landscape": {
-    "mapped_road_area_m2": 656024.0,
+    "mapped_road_area_m2": 696908.33,
     "parking": 621,
     "sidewalks": 3266,
     "surface_patches": 7641,

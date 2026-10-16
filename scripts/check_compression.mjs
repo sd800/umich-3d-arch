@@ -28,6 +28,7 @@ const baseline=new CampusTDSLoader().parse(restored.buffer,'');const meshes=[];b
 for(let i=0;i<meshes.length;i++){
  const a=meshes[i],b=result.meshes[i];assert.equal(a.name,b.name);assert.equal(hash(a.geometry.attributes.position.array),hash(b.attributes.position.array));assert.equal(hash(a.geometry.attributes.normal.array),hash(b.attributes.normal.array));assert.equal(hash(a.geometry.index.array),hash(b.index));assert.deepEqual(a.geometry.groups,b.groups);
 }
+const nativeDownload=await run('download');assert.equal(hash(new Uint8Array(await nativeDownload.result.blob.arrayBuffer())),hash(source));
 if(report.source.includes('UChicago')){
  let pauses=0;const fallback=await parseTDSCooperatively(new CampusTDSLoader(),restored,()=>{},async()=>{pauses++;});assert.ok(pauses>2);assert.equal(fallback.children.length,meshes.length);
  for(let i=0;i<meshes.length;i++){assert.equal(hash(fallback.children[i].geometry.attributes.position.array),hash(meshes[i].geometry.attributes.position.array));assert.equal(hash(fallback.children[i].geometry.index.array),hash(meshes[i].geometry.index.array));}

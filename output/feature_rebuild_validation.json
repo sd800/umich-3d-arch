@@ -1,0 +1,40 @@
+{
+  "central_power_plant": {
+    "code": "M010",
+    "published_stack_heights": [
+      {
+        "name": "north",
+        "published_height_m": 72.5424,
+        "exported_height_m": 72.54226037597655
+      },
+      {
+        "name": "south",
+        "published_height_m": 56.388000000000005,
+        "exported_height_m": 56.38785668945312
+      }
+    ],
+    "industrial_volumes": 5
+  },
+  "courtyards_apartments": [
+    {
+      "code": "N0192",
+      "address": "1760 Broadway Street",
+      "exterior_storeys": 4,
+      "courtyard_voids": 1
+    },
+    {
+      "code": "N0234",
+      "address": "1770 Broadway Street",
+      "exterior_storeys": 4,
+      "courtyard_voids": 1
+    },
+    {
+      "code": "N0277",
+      "address": "1780 Broadway Street",
+      "exterior_storeys": 4,
+      "courtyard_voids": 1
+    }
+  ],
+  "courtyard_body_cap_intrusions": 0,
+  "passed": true
+}

@@ -1,0 +1,36 @@
+{
+  "status": "passed",
+  "buildings": [
+    {
+      "code": "M481",
+      "frames": 24,
+      "legacyWrong": 11
+    },
+    {
+      "code": "M472",
+      "frames": 24,
+      "legacyWrong": 11
+    },
+    {
+      "code": "M008",
+      "frames": 96,
+      "legacyWrong": 55
+    },
+    {
+      "code": "M464",
+      "frames": 24,
+      "legacyWrong": 15
+    }
+  ],
+  "frames": 168,
+  "oldWrong": 92,
+  "maxColorDelta": 0,
+  "depthBits": 24,
+  "checks": [
+    "Actual delivered before/after roof meshes",
+    "Pan, rotate and three zoom levels",
+    "Unchanged building heights and designed roof colors",
+    "No geometry overlap hidden with depth-test disabling"
+  ],
+  "sourceSha256": "0da23d80650b2a75263a724ff38e55f95240efce00eae14353af04cb7fb53767"
+}

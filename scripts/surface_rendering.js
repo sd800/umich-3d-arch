@@ -2,7 +2,7 @@ import {BufferAttribute,BufferGeometry,Float32BufferAttribute,MeshBasicMaterial,
 
 // Map surfaces are a cartographic stack. Independently draped CAD triangles
 // can cross by meters; no depth bias can repair those crossings reliably.
-export const SURFACE_ORDER=Object.freeze({Ground:-100,Sand:-95,Grass:-94,Garden:-93,Road:-80,Walk:-75,Paving:-70,Court:-65,Track:-64,Water:-60,Marking:-50});
+export const SURFACE_ORDER=Object.freeze({ContextGround:-101,Ground:-100,ContextSoil:-99,ContextGrass:-94.5,ContextForest:-93.5,ContextGravel:-92,ContextLot:-91,ContextPaving:-76,ContextWalk:-74.8,ContextPath:-78,RailBallast:-81,RailSleeper:-69,Rail:-68,Sand:-95,Grass:-94,Garden:-93,Road:-80,Walk:-75,Paving:-70,Court:-65,Track:-64,Water:-60,Marking:-50});
 /** Smooth only upward landscape skins; closed sides must not affect lighting. */
 export function smoothLandscapeNormals(geometry) {
   const position=geometry.attributes.position,index=geometry.index,records=new Map(),byVertex=new Array(position.count);
@@ -147,7 +147,7 @@ export function stabilizeBuildingMaterial(material,detail=false) {
 export function prepareBuildingRoofs(mesh,groundZ=0,detail=false,uniformFlatRoof=false) {
   const multi=Array.isArray(mesh.material),materials=multi?mesh.material:[mesh.material];
   const finishedRoof=material=>['Metal','Slate'].includes(material.name)||material.name.startsWith('Roof')||material.name.endsWith('Roof');
-  const eligible=material=>!material.transparent&&(['Brick','NorthBrick','Terracotta','Sandstone','Limestone','LightStone','Concrete','WhitePanel','MetalPanel'].includes(material.name)||(finishedRoof(material)&&uniformFlatRoof));
+  const eligible=material=>!material.transparent&&(['ContextBrick','ContextStone','ContextPanel','Brick','NorthBrick','Terracotta','Sandstone','Limestone','LightStone','Concrete','WhitePanel','MetalPanel'].includes(material.name)||(finishedRoof(material)&&uniformFlatRoof));
   if(!materials.some(eligible))return [mesh];
   mesh.updateWorldMatrix(true,false);
   const source=mesh.geometry,position=source.attributes.position,index=source.index;

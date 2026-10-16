@@ -175,6 +175,7 @@ from PIL import Image
 from types import SimpleNamespace
 from architecture_profiles import NORTH,ROSS,REFERENCES,volumes as architecture_volumes
 from campus_architecture import accents as architecture_accents,generic_roof
+from power_plant import build_power_plant,STACK_SOURCE
 from core_architecture import CORE,REFS as CORE_REFS,build_core,lurie,hipped
 BUILDING_SPECS=json.loads((ROOT/'sources/building_specs.json').read_text())
 from michigan_stadium import build_stadium,stadium_outline,field_opening
@@ -253,7 +254,7 @@ print('Preparing',len(buildings),'building layers; terrain and public mapped lan
 
 # BUILDING CACHE: regenerate when geometry inputs or building code change.
 import hashlib,pickle
-signature=hashlib.sha256(b''.join((ROOT/'scripts'/name).read_bytes()for name in ['architecture_profiles.py','campus_architecture.py','michigan_stadium.py','core_architecture.py'])+(ROOT/'sources/architecture_parts.geojson').read_bytes()+(ROOT/'sources/building_specs.json').read_bytes()+(ROOT/'scripts/curation.py').read_bytes()+(ROOT/'sources/official_base_buildings.geojson').read_bytes()+pathlib.Path(__file__).read_text().split('# LANDSCAPE')[0].encode()).hexdigest()
+signature=hashlib.sha256(b''.join((ROOT/'scripts'/name).read_bytes()for name in ['architecture_profiles.py','campus_architecture.py','michigan_stadium.py','core_architecture.py','power_plant.py'])+(ROOT/'sources/architecture_parts.geojson').read_bytes()+(ROOT/'sources/building_specs.json').read_bytes()+(ROOT/'scripts/curation.py').read_bytes()+(ROOT/'sources/official_base_buildings.geojson').read_bytes()+pathlib.Path(__file__).read_text().split('\n# LANDSCAPE geometry follows')[0].encode()).hexdigest()
 cache=ROOT/'tmp/building-cache.pkl';cache_signature=ROOT/'tmp/building-cache.sha';cache_rhino=ROOT/'tmp/building-cache.3dm'
 if cache.exists() and cache_signature.exists() and cache_rhino.exists() and cache_signature.read_text()==signature:
     saved=pickle.loads(cache.read_bytes());model=rh.File3dm.Read(str(cache_rhino));assert model is not None
@@ -286,6 +287,10 @@ else:
             else:
                 basis='模型最高点采用学校 The University Record 所载212英尺（64.6176米）；本特利历史图书馆记载192英尺。来源存在差异，模型取212英尺，未实测核定。'
                 basis_en='Model peak follows the university Record: 212 ft / 64.6176 m. Bentley Historical Library gives 192 ft. Published sources disagree; this model uses 212 ft without a measured resolution of that discrepancy.'
+        if ident=='1000260':
+            lev,height,status,src=3,238*.3048,'published',STACK_SOURCE
+            basis='烟囱高度依据校董会2017年文件：北烟囱238英尺（72.5424米），南烟囱185英尺（56.388米）；厂房各翼、局部构件与标高为公开照片及地图基础上的近似。'
+            basis_en='Stack heights follow the 2017 Regents communication: north 238 ft (72.5424 m), south 185 ft (56.388 m). Industrial wings, local members and roof levels are photo/map-based approximations.'
         wall='Limestone' if gothic or ident in ['1000155','1000152','1000172','1000159','1000191'] else ('Brick' if residential or ident in ['1000120','1000177','1000709'] else 'LightStone')
         if spec.get('building:material')=='brick':wall='Brick'
         if ident in CORE:lev,height,wall,roof=CORE[ident]
@@ -327,6 +332,11 @@ else:
             crown=p.buffer(-.6,join_style=2);body(crown,56.8,2.3,windows=False);gable(crown,59.1,height-59.1-.12,'x','Slate')
             partition='方形石灰岩塔身、36.576米标高的钟室底层、开敞钟室与收分塔冠；模型峰值采用212英尺。学校资料另有192英尺记载，差异未实测核定；各段构造与窗位为近似。'
             partition_en='Square limestone shaft, open belfry above its published 120 ft floor and a stepped crown. Model peak uses 212 ft; an official historical source gives 192 ft. Segment dimensions and facade bays are approximate.'
+        elif ident=='1000260':
+            detail_record=build_power_plant(ms,p,base,body,SimpleNamespace(**globals()))
+            partition='分别重建旧锅炉房、2022年涡轮机扩建翼、南侧与东侧厂房、双砖烟囱、工业大窗与百叶、女儿墙、屋面采光带及设备风道。保留官方建筑范围；烟囱采用公开高度，其他构件及定位为近似。'
+            partition_en='Distinct old boiler hall, 2022 turbine-addition wing, south/east industrial ranges, twin tapered brick stacks, tall industrial lights/louvres, parapets, glazed roof monitor and service duct. Official envelope retained; published stack heights, approximate member dimensions and positions.'
+            src=STACK_SOURCE
         elif ident=='1000394':
             detail_record=lurie(ms,p,base,height,SimpleNamespace(**globals()))
             partition='砖砌塔身、错落塔柱、开放钟架、悬挂声学板、演奏室平台、60枚简化钟体和铜质四坡屋顶；塔高保留市政历史估算，局部尺寸依据公开照片作近似。'
@@ -390,9 +400,9 @@ else:
             else:
                 cut=p.intersection(box(a-1,b-1,a+(c-a)*.28,d+1));main=p.difference(cut);lowheight=height*.65
                 body(cut,0,lowheight,levels=max(2,round(lev*.65)),cont=True);flat(cut,lowheight);body(main,0,height-.2,levels=lev,cont=True);flat(main,height-.12)
-                pent=main.buffer(-9,join_style=2)
-                if not pent.is_empty and height>30:body(pent,height-3.8,3.5,'Metal',False);flat(pent,height-.12,'Metal')
-            partition='按映射轮廓区分高低翼楼、玻璃公共空间、退台与屋顶机房；局部体块分界、地上层数、幕墙模数及高度为估算。';partition_en='Mapped irregular footprint divided into approximate high/low wings, glazed communal spaces, setbacks and rooftop plant. Segment boundaries, curtain-wall modules and heights are estimated.'
+                # No buried generic plant block: its cap used to overlap the
+                # entire roof finish at exactly the same elevation.
+            partition='按映射轮廓区分高低翼楼、玻璃公共空间与退台；局部体块分界、地上层数、幕墙模数及高度为估算。';partition_en='Mapped irregular footprint divided into approximate high/low wings, glazed communal spaces and setbacks. Segment boundaries, curtain-wall modules and heights are estimated.'
             if ident=='1005440':
                 partition+='卡恩医疗楼已于2025年开放；地上12层依据项目资料，官方GIS仍使用原工程名称。';partition_en+=' Kahn Pavilion opened in 2025; project sources document 12 storeys while GIS retains its former project name.';src=REFS[ident]
         elif gothic or name.startswith('Northwood') or ident=='1000709' or spec.get('roof:shape') in ['hipped','gabled','saltbox','quadruple_saltbox']:
@@ -420,10 +430,21 @@ for f in buildings:f['record']=by_facility[f['id']]
 
 # LANDSCAPE geometry follows mapped areas and tree positions. Terrain is sampled
 # on surface vertices; long surfaces are split into 80m patches for draping.
+from neighboring_areas import prepare_neighbors,build_neighbors,register_context_materials
+from ground_context import prepare_ground,add_campus_ground,close_ground
+neighbor_prepared=prepare_neighbors(SimpleNamespace(**globals()))
+register_context_materials(SimpleNamespace(**globals()))
+ground_plan=prepare_ground(SimpleNamespace(**globals()),neighbor_prepared)
+ground_plan['cemetery_drive_parts']=[]
+arb=ground_plan['arb'];scope=unary_union([close_ground(scope,65),arb]).buffer(0)
+
 eg={k:[] for k in COLORS};landscape_counts={}
 def env(g,z,hh,mat,drape=True):
     g=g.intersection(scope).buffer(0)
     if mat!='Ground':g=g.difference(stadium_void)
+    if mat in ['Road','Walk']:
+        ground_plan['cemetery_drive_parts'].append(g.intersection(ground_plan['cemetery']))
+        g=g.difference(ground_plan['cemetery'])
     if g.is_empty:return
     for q in polygons(g):
         q=q.simplify(.01 if mat=='Ground'else .09,preserve_topology=True)
@@ -443,6 +464,8 @@ env(scope.difference(footprints).difference(stadium_void),-5,5,'Ground')
 for f in buildings:
     env(stadium_grade_band if f['id']=='1000711'else f['poly'],f['ground']-.18,.18,'Ground',False)
 roadarea=unary_union([f['poly'].intersection(scope) for f in roads]).difference(footprints).buffer(0)
+ground_plan['cemetery_drives']=roadarea.intersection(ground_plan['cemetery'])
+roadarea=roadarea.difference(ground_plan['cemetery']).buffer(0)
 env(roadarea,.025,.07,'Road');landscape_counts['mapped_road_area_m2']=round(roadarea.area,2)
 for group,label in [(parking,'parking'),(sidewalks,'sidewalks'),(surfaces,'surface_patches'),(fields,'athletic_fields')]:
     landscape_counts[label]=len(group)
@@ -485,6 +508,7 @@ for f in surfaces:
         for xx in [x0-.33,x0+.33]:eg['Furniture'].append(cylinder((xx,y0,z+.1),(xx,y0,z+.90),.035,5))
         eg['Furniture'].append(cylinder((x0-.33,y0,z+.90),(x0+.33,y0,z+.90),.035,5))
 for f in water:env(f['poly'].difference(footprints),.10,.035,'Water')
+campus_ground_report=add_campus_ground(SimpleNamespace(**globals()),ground_plan,neighbor_prepared)
 # Native sports markings retain their georeferenced shapes.
 markings=read_features('athletic_markings')
 for f in markings:
@@ -492,7 +516,7 @@ for f in markings:
     if q.geom_type in ['LineString','MultiLineString']:q=q.buffer(.065,cap_style=2)
     env(q.difference(footprints),.205,.018,'Marking')
 from shapely import prepare
-footprint_clearance=footprints.buffer(.5);prepare(footprint_clearance);prepare(scope)
+footprint_clearance=unary_union([footprints,neighbor_prepared['footprints']]).buffer(.5);prepare(footprint_clearance);prepare(scope)
 # Maya Lin's Wave Field: published 90ft square artwork, mapped placement.
 wave_source=json.loads((ROOT/'sources/official_places.geojson').read_text())['features']
 wave=next(transform(project,shape(f['geometry'])) for f in wave_source if f['properties']['NamedSpace'].strip()=='Wave Field')
@@ -523,10 +547,14 @@ for k,(mat,parts) in enumerate(eg.items()):
     if parts:chunk_meshes(f'E{k:02d}',parts,mat,'环境_Environment',{'Landscape':'University mapped roads, surfaces, trees and USGS sampled terrain. Approximate surface thickness, walls, tree shapes and heights.','Units':'meters'})
 print('Landscape complete:',trees,'mapped trees',flush=True)
 
+ground_plan['cemetery_drives']=unary_union([ground_plan['cemetery_drives'],*ground_plan['cemetery_drive_parts']]).buffer(0)
+neighbor_report=build_neighbors(SimpleNamespace(**globals()),neighbor_prepared)
+print('Neighboring areas complete:',neighbor_report['buildings'],'buildings',flush=True)
+
 for zone,g in [('Campus',scope),*zone_shapes.items()]:
     aa,bb,cc,dd=g.bounds;cx=(aa+cc)/2;cy=(bb+dd)/2;size=max(cc-aa,dd-bb)*.75
     vv=rh.ViewInfo();vv.Name=zone;vv.Viewport.SetCameraLocation(rh.Point3d(cx+size,cy-size,1500));vv.Viewport.SetCameraDirection(rh.Vector3d(-size,size,-1450));vv.Viewport.SetCameraUp(rh.Vector3d(0,0,1));vv.Viewport.TargetPoint=rh.Point3d(cx,cy,50);vv.Viewport.ChangeToParallelProjection(True);vv.Viewport.SetFrustum(-size,size,-size,size,1,40000);model.NamedViews.Add(vv)
-model.Strings['ModelNotes']='University of Michigan Ann Arbor exterior approximation. Unit meters. One layer per facility; all environment on 环境_Environment. Source terrain: USGS 3DEP sampled to ~18m; local Z0=225m DEM datum, building pads simplified. Heights distinguish published source conflicts, historical municipal estimates and massing estimates. Not official university BIM or survey.'
+model.Strings['ModelNotes']='University of Michigan Ann Arbor exterior approximation. Unit meters. One layer per facility; campus environment on 环境_Environment; neighboring buildings on individual N layers and neighboring landscape on Neighboring_Environment. Source terrain: USGS 3DEP sampled to ~18m; local Z0=225m DEM datum, building pads simplified. Heights distinguish published source conflicts, historical municipal estimates and massing estimates. Not official university BIM or survey.'
 assert model.Write(str(OUT/'UMich_AnnArbor_Layered.3dm'),7)
 def chunk(tag,data=b''):return struct.pack('<HI',tag,len(data)+6)+data
 def zs(s):return s.encode('ascii')+b'\0'
@@ -547,7 +575,7 @@ with (OUT/'building_dimensions_and_sources.csv').open('w',encoding='utf-8-sig',n
 av=[];af=[];co=[];off=0
 for m,mat in meshdata:av.append(m.vertices);af.append(m.faces+off);co.extend([COLORS[mat]]*len(m.faces));off+=len(m.vertices)
 np.savez_compressed(OUT/'preview_mesh_data.npz',vertices=np.vstack(av),faces=np.vstack(af),colors=np.asarray(co,dtype=np.uint8))
-summary={'buildings':len(records),'layers':len(model.Layers),'environment_layer':'环境_Environment','native_closed_solids':native_count,'objects_3ds':len(objects),'vertices':off,'triangles':sum(len(m.faces) for m,_ in meshdata),'trees':trees,'landmarks':sum(r['landmark'] for r in records),'published_height_buildings':sum(r['height_status']=='published' for r in records),'municipal_estimate_buildings':sum(r['height_status']=='municipal' for r in records),'estimated_height_buildings':sum(r['height_status']=='estimated' for r in records),'sectors':{z:sum(r['zone']==z for r in records) for z in zone_shapes},'unit':'meters','crs':'EPSG:32617 local offsets','origin_wgs84':[LON,LAT],'origin_utm':[OX,OY],'bounds':scope.bounds,'district_bounds':{z:list(g.bounds) for z,g in zone_shapes.items()},'terrain':'USGS 3DEP F32 bare-earth DEM, bilinear samples ~18m; 80m landscape patches and locally flattened building pads; Z0=225m DEM datum','terrain_source':'https://elevation.nationalmap.gov/arcgis/rest/services/3DEPElevation/ImageServer','landscape':landscape_counts,'accuracy':'Official mapped footprints and surfaces; historical/published/estimated heights labeled individually. Not a surveyed as-built model.'}
+summary={'campus_ground_refinement':campus_ground_report,'neighboring_buildings':neighbor_report['buildings'],'neighboring_trees':neighbor_report['trees'],'neighboring_bounds':neighbor_report['bounds'],'buildings':len(records),'layers':len(model.Layers),'environment_layer':'环境_Environment','native_closed_solids':native_count,'objects_3ds':len(objects),'vertices':off,'triangles':sum(len(m.faces) for m,_ in meshdata),'trees':trees,'landmarks':sum(r['landmark'] for r in records),'published_height_buildings':sum(r['height_status']=='published' for r in records),'municipal_estimate_buildings':sum(r['height_status']=='municipal' for r in records),'estimated_height_buildings':sum(r['height_status']=='estimated' for r in records),'sectors':{z:sum(r['zone']==z for r in records) for z in zone_shapes},'unit':'meters','crs':'EPSG:32617 local offsets','origin_wgs84':[LON,LAT],'origin_utm':[OX,OY],'bounds':scope.bounds,'district_bounds':{z:list(g.bounds) for z,g in zone_shapes.items()},'terrain':'USGS 3DEP F32 bare-earth DEM, bilinear samples ~18m; 80m landscape patches and locally flattened building pads; Z0=225m DEM datum','terrain_source':'https://elevation.nationalmap.gov/arcgis/rest/services/3DEPElevation/ImageServer','landscape':landscape_counts,'accuracy':'Official mapped footprints and surfaces; historical/published/estimated heights labeled individually. Not a surveyed as-built model.'}
 (OUT/'model_summary.json').write_text(json.dumps(summary,ensure_ascii=False,indent=2))
 (OUT/'excluded_records.json').write_text(json.dumps(excluded,ensure_ascii=False,indent=2))
 print(json.dumps(summary,ensure_ascii=False,indent=2),flush=True)

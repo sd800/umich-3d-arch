@@ -1,0 +1,55 @@
+{
+  "filled_ground_probes": 7,
+  "probe_positions_local_m": [
+    [
+      1230,
+      2200
+    ],
+    [
+      1350,
+      2100
+    ],
+    [
+      2400,
+      1550
+    ],
+    [
+      2600,
+      1600
+    ],
+    [
+      2100,
+      1500
+    ],
+    [
+      850,
+      170
+    ],
+    [
+      1000,
+      1900
+    ]
+  ],
+  "forest_hill_internal_drive_area_m2": 25065.35,
+  "remaining_main_road_or_walk_overlap_m2": 0.0035,
+  "exported_railway_ballast_area_m2": 53387.32,
+  "ground_cover": {
+    "continuous_infill_m2": 4789057.7,
+    "mapped_park_and_cemetery_m2": 764407.63,
+    "mapped_woodland_m2": 385297.49,
+    "residential_landcover_m2": 2120480.44,
+    "interpreted_yard_transition_m2": 383341.16,
+    "commercial_ground_m2": 136406.87,
+    "parking_area_m2": 290754.83,
+    "construction_or_gravel_m2": 16826.02,
+    "paved_apron_m2": 85595.42,
+    "entry_paths_m2": 8404.1,
+    "railway_centerline_m": 7283.86,
+    "railway_ballast_m2": 53386.95,
+    "cemetery_drive_m2": 34773.25,
+    "woodland_canopy_estimates": 622,
+    "cemetery_canopy_estimates": 300,
+    "interpretation": "Mapped land use and aerial-reviewed surface character; unrecorded setbacks, entry links and canopy positions are approximate."
+  },
+  "passed": true
+}

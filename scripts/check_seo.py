@@ -3,6 +3,7 @@ from urllib.parse import urlsplit
 from pathlib import Path
 import json,re,hashlib,xml.etree.ElementTree as ET
 from html.parser import HTMLParser
+from html import unescape
 r=Path(__file__).resolve().parents[1];config=json.loads((r/'config/site.config.json').read_text());site=config['url'];text=(r/'index.html').read_text()
 class Page(HTMLParser):
     def __init__(self):super().__init__();self.meta={};self.links=[];self.local=[];self.h1=0;self.rows=[]
@@ -24,17 +25,17 @@ assert ET.parse(r/'sitemap.xml').find('.//{http://www.sitemaps.org/schemas/sitem
 for f in p.local:assert (r/urlsplit(f).path).is_file(),f
 data=json.loads(re.search(r'<script id="campus-data"[^>]*>(.*?)</script>',text,re.S).group(1))
 schema=json.loads(re.search(r'<script id="campus-schema"[^>]*>(.*?)</script>',text,re.S).group(1))
-assert len(p.rows)==len(data['records']) and len(set(p.rows))==len(p.rows)
-for record in data['records']:
-    assert record['name_zh'] and record['name_zh'] in text
+assert len(p.rows)==len(data['records'])+len(data.get('neighbors',[])) and len(set(p.rows))==len(p.rows)
+for record in [*data['records'],*data.get('neighbors',[])]:
+    assert record['name_zh'] and record['name_zh'] in unescape(text)
     assert record['basis'] and record['partition'] and record['basis_en'] and record['partition_en']
     assert record['height_status'] in ['estimated','published','municipal']
 assert data['compression']=='gzip' and (r/urlsplit(data['modelUrl']).path).is_file()
 assert {b['zone'] for b in data['records']}=={'central','north','medical','athletic'}
 assert len(data['landmarkOrder'])==len([b for b in data['records'] if b['landmark']])
 entity=next(x for x in schema['@graph'] if x['@type']=='3DModel')
-assert entity['sha256']==hashlib.sha256((r/'output/UMich_AnnArbor.3ds').read_bytes()).hexdigest()
-assert entity['contentUrl']==site+'output/UMich_AnnArbor.3ds'
+assert entity['sha256']==hashlib.sha256((r/'output/UMich_AnnArbor.3ds.gz').read_bytes()).hexdigest()
+assert entity['contentUrl']==site+'output/UMich_AnnArbor.3ds.gz'
 offline=(r/'output/UMich_Campus_Offline.html').read_text()
 assert not re.search(r'<script[^>]+src=',offline) and 'noindex, follow' in offline
 assert not any(bad in text for bad in ['uchicago.edu','UChicago','芝加哥大学','密歇根','安阿伯','__SITE_URL__','__CAMPUS_DATA__'])

@@ -3,11 +3,22 @@ import sys,pathlib,json,math
 import numpy as np
 from PIL import Image,ImageDraw,ImageFont
 ROOT=pathlib.Path(__file__).resolve().parents[1];OUT=ROOT/'output'
-d=np.load(OUT/'preview_mesh_data.npz');v=d['vertices'];f=d['faces'];c=d['colors']
+if '--power-plant'in sys.argv:
+    import pickle
+    cached=pickle.loads((ROOT/'tmp/building-cache.pkl').read_bytes());meshes=[o for o in cached['objects']if o['name'].startswith('M010')];palette=json.loads((OUT/'palette.json').read_text());vertices=[];faces=[];colors=[];offset=0
+    for o in meshes:
+        m=o['mesh'];vertices.append(m.vertices);faces.append(m.faces+offset);colors.extend([palette[o['mat']]]*len(m.faces));offset+=len(m.vertices)
+    v=np.vstack(vertices);f=np.vstack(faces);c=np.asarray(colors,dtype=np.uint8)
+else:
+    d=np.load(OUT/'preview_mesh_data.npz');v=d['vertices'];f=d['faces'];c=d['colors']
 MODE="plan" if "--plan" in sys.argv else "aerial"
 if '--central' in sys.argv:
     centroids=v[f].mean(axis=1)
     mask=(centroids[:,0]>-700)&(centroids[:,0]<1050)&(centroids[:,1]>-650)&(centroids[:,1]<850)
+    f=f[mask];c=c[mask];used=np.unique(f);remap=np.zeros(len(v),dtype=int);remap[used]=np.arange(len(used));v=v[used];f=remap[f]
+if '--north-ground' in sys.argv or '--cemetery-ground' in sys.argv:
+    region=(650,950,3250,3150)if '--north-ground'in sys.argv else(400,-160,1200,650)
+    centroids=v[f].mean(axis=1);a,b,d,e=region;mask=(centroids[:,0]>a)&(centroids[:,0]<d)&(centroids[:,1]>b)&(centroids[:,1]<e)
     f=f[mask];c=c[mask];used=np.unique(f);remap=np.zeros(len(v),dtype=int);remap[used]=np.arange(len(used));v=v[used];f=remap[f]
 S=1;W,H=2400,1850
 canvas=Image.new('RGB',(W*S,H*S),(245,246,241));draw=ImageDraw.Draw(canvas)
@@ -49,7 +60,7 @@ fonts=['/System/Library/Fonts/PingFang.ttc','/System/Library/Fonts/STHeiti Light
 fontpath=next((q for q in fonts if pathlib.Path(q).exists()),None)
 def font(n):return ImageFont.truetype(fontpath,n*S) if fontpath else ImageFont.load_default()
 draw.text((110*S,70*S),'UNIVERSITY OF MICHIGAN',font=font(54),fill=(39,66,71))
-draw.text((112*S,150*S),'Ann Arbor campus  /  '+('North-up roof plan' if MODE=='plan' else ('Central Campus exterior view' if '--central' in sys.argv else 'Four-sector exterior model'))+'  /  1 unit = 1 meter',font=font(24),fill=(87,111,110))
+draw.text((112*S,150*S),'Ann Arbor campus  /  '+('North-up roof plan' if MODE=='plan' else ('Central Power Plant industrial reconstruction'if '--power-plant'in sys.argv else 'North Campus ground and woodland'if '--north-ground'in sys.argv else 'Forest Hill Cemetery ground and internal drives'if '--cemetery-ground'in sys.argv else 'Central Campus exterior view' if '--central' in sys.argv else 'Four-sector exterior model'))+'  /  1 unit = 1 meter',font=font(24),fill=(87,111,110))
 draw.line((110*S,210*S,(W-110)*S,210*S),fill=(204,215,207),width=2*S)
 items=[('Limestone',(207,194,166)),('Glass',(113,157,174)),('Roads',(81,86,89)),('Plazas',(195,186,164)),('Green space',(116,149,96))]
 x=112;y=H-130
@@ -58,12 +69,13 @@ for text,color in items:
     draw.text(((x+36)*S,(y-5)*S),text,font=font(22),fill=(67,88,89));x+=215
 draw.text((112*S,(H-75)*S),'University GIS footprints & landscape; USGS terrain. Heights, roofs and facades carry explicit approximation notes.',font=font(20),fill=(102,116,111))
 # Scale is valid for the horizontal screen direction of this orthographic projection.
-bar=500*scale
+bar_m=50 if '--power-plant'in sys.argv else 500
+bar=bar_m*scale
 x=(W-110-bar);y=H-125
 draw.line((x*S,y*S,(x+bar)*S,y*S),fill=(51,75,74),width=3*S)
 draw.line((x*S,(y-8)*S,x*S,(y+8)*S),fill=(51,75,74),width=2*S)
 draw.line(((x+bar)*S,(y-8)*S,(x+bar)*S,(y+8)*S),fill=(51,75,74),width=2*S)
-draw.text(((x+bar/2-35)*S,(y+15)*S),'500 m',font=font(20),fill=(51,75,74))
+draw.text(((x+bar/2-35)*S,(y+15)*S),str(bar_m)+' m',font=font(20),fill=(51,75,74))
 if MODE=='plan':
     for r in json.loads((OUT/'buildings.json').read_text()):
         if not r['landmark']:continue
@@ -74,7 +86,7 @@ if MODE=='plan':
     draw.text((W-140,120),'N',font=font(28),fill=(0,39,76))
     draw.line((W-131,196,W-131,154),fill=(0,39,76),width=3)
     draw.polygon([(W-131,144),(W-139,158),(W-123,158)],fill=(0,39,76))
-canvas.resize((W,H),Image.Resampling.LANCZOS).save(OUT/('campus_plan.png' if MODE=='plan' else 'campus_aerial.png'))
+canvas.resize((W,H),Image.Resampling.LANCZOS).save(OUT/('central_power_plant_detail.png'if '--power-plant'in sys.argv else 'north_ground_refinement.png'if '--north-ground'in sys.argv else 'forest_hill_ground_refinement.png'if '--cemetery-ground'in sys.argv else 'campus_plan.png' if MODE=='plan' else 'campus_aerial.png'))
 
 
 print(MODE,'preview written')

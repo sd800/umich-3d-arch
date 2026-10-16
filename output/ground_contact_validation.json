@@ -2,7 +2,7 @@
   "source": "output/UMich_AnnArbor.3ds",
   "buildings": 554,
   "samples": 4193,
-  "ground_top_triangles": 56606,
+  "ground_top_triangles": 54874,
   "missing_ground_samples": 0,
   "max_floating_gap_m": 0.0004980468750019895,
   "max_intrusion_m": 0.0004999694824192602,
