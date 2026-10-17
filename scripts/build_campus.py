@@ -59,7 +59,10 @@ def rhmesh(m):
     r=rh.Mesh()
     for v in m.vertices:r.Vertices.Add(*map(float,v))
     for f in m.faces:r.Faces.AddFace(*map(int,f))
-    r.Normals.ComputeNormals();r.Compact();assert r.IsValid
+    # Meshes use the same F32 coordinates as the 3DS; retain native extrusions separately.
+    r.Vertices.UseDoublePrecisionVertices=False
+    # Normals are derived from unchanged faces by CAD readers; avoid storing another array.
+    r.Compact();assert r.IsValid
     return r
 def extrusion(p,z,h):
     triangles=constrained_delaunay_triangles(p)
@@ -256,7 +259,7 @@ print('Preparing',len(buildings),'building layers; terrain and public mapped lan
 
 # BUILDING CACHE: regenerate when geometry inputs or building code change.
 import hashlib,pickle
-signature=hashlib.sha256(b''.join((ROOT/'scripts'/name).read_bytes()for name in ['architecture_profiles.py','campus_architecture.py','michigan_stadium.py','core_architecture.py','power_plant.py'])+(ROOT/'sources/architecture_parts.geojson').read_bytes()+(ROOT/'sources/building_specs.json').read_bytes()+(ROOT/'scripts/curation.py').read_bytes()+(ROOT/'sources/official_base_buildings.geojson').read_bytes()+pathlib.Path(__file__).read_text().split('\n# LANDSCAPE geometry follows')[0].encode()).hexdigest()
+signature=hashlib.sha256(b''.join((ROOT/'scripts'/name).read_bytes()for name in ['architecture_profiles.py','campus_architecture.py','michigan_stadium.py','core_architecture.py','power_plant.py','highlight_finish.py'])+(ROOT/'sources/architecture_parts.geojson').read_bytes()+(ROOT/'sources/building_specs.json').read_bytes()+(ROOT/'scripts/curation.py').read_bytes()+(ROOT/'sources/official_base_buildings.geojson').read_bytes()+pathlib.Path(__file__).read_text().split('\n# LANDSCAPE geometry follows')[0].encode()).hexdigest()
 cache=ROOT/'tmp/building-cache.pkl';cache_signature=ROOT/'tmp/building-cache.sha';cache_rhino=ROOT/'tmp/building-cache.3dm'
 if cache.exists() and cache_signature.exists() and cache_rhino.exists() and cache_signature.read_text()==signature:
     saved=pickle.loads(cache.read_bytes());model=rh.File3dm.Read(str(cache_rhino));assert model is not None
@@ -420,7 +423,12 @@ else:
             roof_allowance=.54 if p.area>250 else .16
             body(p,0,height-roof_allowance,levels=lev,arch=False,cont=(t.get('Building_Type')=='PARK'))
             generic_roof(ms,p,base+height-roof_allowance,roof,SimpleNamespace(**globals()))
-        highlight_stats=None
+        highlight_stats=None;campus_finish=None
+        major=(p.area>=800 and height>=6 and t.get('Building_Type')!='PARK' and not any(word in name.lower()for word in ['storage','garage','parking','power plant','chiller','pump house','facility support','facilities services','transportation services']))
+        if major and ident not in LANDMARKS:
+            joinery,campus_finish=detailed_joinery(ms,p,base,height,SimpleNamespace(**globals()),gothic=gothic,frame_material='Frame',reveal=.09)
+            for kk,(mm,parts)in enumerate(joinery.items()):
+                if parts:chunk_meshes(code+f'CD{kk:02d}',parts,mm,lay,info)
         if ident in LANDMARKS:
             joinery,highlight_stats=detailed_joinery(ms,p,base,height,SimpleNamespace(**globals()),gothic=gothic,frame_material='LightStone'if ident=='1005440'else 'Frame',reveal=.24 if ident=='1005440'else .115)
             for kk,(mm,parts)in enumerate(joinery.items()):
@@ -430,7 +438,7 @@ else:
         for q in polygons(p):
             crv=rh.PolylineCurve([rh.Point3d(float(x0),float(y0),base) for x0,y0 in q.exterior.coords]);model.Objects.AddCurve(crv,attr(code+'_PLAN',lay,wall,info))
         meshes=[o['mesh'] for o in objects if layer_map[o['name']]['layer']==lay];actual_top=max(m.bounds[1,2] for m in meshes);actual_bottom=min(m.bounds[0,2] for m in meshes)
-        r={'code':code,'facility_id':ident,'name':name,'name_zh':zh,'official_name':t.get('ObjectName'),'layer':lay,'zone':zone,'landmark':ident in LANDMARKS,'height':round(float(actual_top-base),4),'height_status':status,'levels':lev,'gis_floor_count':original_fc,'area':round(p.area,2),'width':round(c-a,2),'depth':round(d-b,2),'center':[round(x,3),round(y,3)],'ground_m':round(base,3),'peak_m':round(float(actual_top),3),'bottom_m':round(float(actual_bottom),3),'basis':basis,'basis_en':basis_en,'partition':partition,'partition_en':partition_en,'source':src,'footprint_source':GIS,'architecture_reference':REFS.get(ident,TOUR if ident in LANDMARKS else None),'short':name,'short_zh':zh,'aliases_zh':[],'construction_status':t.get('Status'),'highlight_joinery':highlight_stats,'highlight_reference':'https://www.hok.com/projects/view/michigan-medicine-kahn-health-care-pavilion/'if ident=='1005440'else ('https://smtd.umich.edu/facilities/burton-memorial-tower/charles-baird-carillon/'if ident=='1000155'else None),'architecture_detail':{**detail_record,'mapped_exterior_spec':spec,'automatic_rooftop_boxes':False},'ground_contact':'bowl perimeter'if ident=='1000711'else 'flat grade pad'}
+        r={'code':code,'facility_id':ident,'name':name,'name_zh':zh,'official_name':t.get('ObjectName'),'layer':lay,'zone':zone,'landmark':ident in LANDMARKS,'height':round(float(actual_top-base),4),'height_status':status,'levels':lev,'gis_floor_count':original_fc,'area':round(p.area,2),'width':round(c-a,2),'depth':round(d-b,2),'center':[round(x,3),round(y,3)],'ground_m':round(base,3),'peak_m':round(float(actual_top),3),'bottom_m':round(float(actual_bottom),3),'basis':basis,'basis_en':basis_en,'partition':partition,'partition_en':partition_en,'source':src,'footprint_source':GIS,'architecture_reference':REFS.get(ident,TOUR if ident in LANDMARKS else None),'short':name,'short_zh':zh,'aliases_zh':[],'construction_status':t.get('Status'),'highlight_joinery':highlight_stats,'campus_joinery':campus_finish,'highlight_reference':'https://www.hok.com/projects/view/michigan-medicine-kahn-health-care-pavilion/'if ident=='1005440'else ('https://smtd.umich.edu/facilities/burton-memorial-tower/charles-baird-carillon/'if ident=='1000155'else None),'architecture_detail':{**detail_record,'mapped_exterior_spec':spec,'automatic_rooftop_boxes':False},'ground_contact':'bowl perimeter'if ident=='1000711'else 'flat grade pad'}
         if ident in HEIGHTS:assert abs(r['height']-HEIGHTS[ident][0])<.01,(ident,r['height'],HEIGHTS[ident][0])
         records.append(r);f['record']=r
         if j%75==0:print('Buildings',j,flush=True)
@@ -568,6 +576,7 @@ for zone,g in [('Campus',scope),*zone_shapes.items()]:
     aa,bb,cc,dd=g.bounds;cx=(aa+cc)/2;cy=(bb+dd)/2;size=max(cc-aa,dd-bb)*.75
     vv=rh.ViewInfo();vv.Name=zone;vv.Viewport.SetCameraLocation(rh.Point3d(cx+size,cy-size,1500));vv.Viewport.SetCameraDirection(rh.Vector3d(-size,size,-1450));vv.Viewport.SetCameraUp(rh.Vector3d(0,0,1));vv.Viewport.TargetPoint=rh.Point3d(cx,cy,50);vv.Viewport.ChangeToParallelProjection(True);vv.Viewport.SetFrustum(-size,size,-size,size,1,40000);model.NamedViews.Add(vv)
 model.Strings['ModelNotes']='University of Michigan Ann Arbor exterior approximation. Unit meters. One layer per facility; campus environment on 环境_Environment; neighboring buildings on individual N layers and neighboring landscape on Neighboring_Environment. Source terrain: USGS 3DEP sampled to ~18m; local Z0=225m DEM datum, building pads simplified. Heights distinguish published source conflicts, historical municipal estimates and massing estimates. Not official university BIM or survey.'
+model.Strings['MeshCoordinateStorage']='F32 as in 3DS; native extrusion profiles retained. Normals derive from the stored faces.'
 assert model.Write(str(OUT/'UMich_AnnArbor_Layered.3dm'),7)
 def chunk(tag,data=b''):return struct.pack('<HI',tag,len(data)+6)+data
 def zs(s):return s.encode('ascii')+b'\0'
@@ -588,7 +597,7 @@ with (OUT/'building_dimensions_and_sources.csv').open('w',encoding='utf-8-sig',n
 av=[];af=[];co=[];off=0
 for m,mat in meshdata:av.append(m.vertices);af.append(m.faces+off);co.extend([COLORS[mat]]*len(m.faces));off+=len(m.vertices)
 np.savez_compressed(OUT/'preview_mesh_data.npz',vertices=np.vstack(av),faces=np.vstack(af),colors=np.asarray(co,dtype=np.uint8))
-summary={'campus_ground_refinement':campus_ground_report,'neighboring_buildings':neighbor_report['buildings'],'neighboring_trees':neighbor_report['trees'],'neighboring_bounds':neighbor_report['bounds'],'buildings':len(records),'layers':len(model.Layers),'environment_layer':'环境_Environment','native_closed_solids':native_count,'objects_3ds':len(objects),'vertices':off,'triangles':sum(len(m.faces) for m,_ in meshdata),'trees':trees,'landmarks':sum(r['landmark'] for r in records),'published_height_buildings':sum(r['height_status']=='published' for r in records),'municipal_estimate_buildings':sum(r['height_status']=='municipal' for r in records),'estimated_height_buildings':sum(r['height_status']=='estimated' for r in records),'sectors':{z:sum(r['zone']==z for r in records) for z in zone_shapes},'unit':'meters','crs':'EPSG:32617 local offsets','origin_wgs84':[LON,LAT],'origin_utm':[OX,OY],'bounds':scope.bounds,'district_bounds':{z:list(g.bounds) for z,g in zone_shapes.items()},'terrain':'USGS 3DEP F32 bare-earth DEM, bilinear samples ~18m; 80m landscape patches and locally flattened building pads; Z0=225m DEM datum','terrain_source':'https://elevation.nationalmap.gov/arcgis/rest/services/3DEPElevation/ImageServer','landscape':landscape_counts,'accuracy':'Official mapped footprints and surfaces; historical/published/estimated heights labeled individually. Not a surveyed as-built model.'}
+summary={'major_buildings_refined':sum(bool(r.get('campus_joinery')or r.get('highlight_joinery'))for r in records),'additional_major_building_joinery':sum(bool(r.get('campus_joinery'))for r in records),'campus_ground_refinement':campus_ground_report,'neighboring_buildings':neighbor_report['buildings'],'neighboring_trees':neighbor_report['trees'],'neighboring_bounds':neighbor_report['bounds'],'buildings':len(records),'layers':len(model.Layers),'environment_layer':'环境_Environment','native_closed_solids':native_count,'objects_3ds':len(objects),'vertices':off,'triangles':sum(len(m.faces) for m,_ in meshdata),'trees':trees,'landmarks':sum(r['landmark'] for r in records),'published_height_buildings':sum(r['height_status']=='published' for r in records),'municipal_estimate_buildings':sum(r['height_status']=='municipal' for r in records),'estimated_height_buildings':sum(r['height_status']=='estimated' for r in records),'sectors':{z:sum(r['zone']==z for r in records) for z in zone_shapes},'unit':'meters','crs':'EPSG:32617 local offsets','origin_wgs84':[LON,LAT],'origin_utm':[OX,OY],'bounds':scope.bounds,'district_bounds':{z:list(g.bounds) for z,g in zone_shapes.items()},'terrain':'USGS 3DEP F32 bare-earth DEM, bilinear samples ~18m; 80m landscape patches and locally flattened building pads; Z0=225m DEM datum','terrain_source':'https://elevation.nationalmap.gov/arcgis/rest/services/3DEPElevation/ImageServer','landscape':landscape_counts,'accuracy':'Official mapped footprints and surfaces; historical/published/estimated heights labeled individually. Not a surveyed as-built model.'}
 (OUT/'model_summary.json').write_text(json.dumps(summary,ensure_ascii=False,indent=2))
 (OUT/'excluded_records.json').write_text(json.dumps(excluded,ensure_ascii=False,indent=2))
 print(json.dumps(summary,ensure_ascii=False,indent=2),flush=True)

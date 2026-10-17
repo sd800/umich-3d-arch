@@ -6,8 +6,8 @@
     "woodland_canopy_estimates": 199,
     "arboretum_source": "U-M named-place GIS / OSM relation 10391031 / MBGNA natural-area maps"
   },
-  "neighboring_buildings": 3385,
-  "neighboring_trees": 89,
+  "neighboring_buildings": 5818,
+  "neighboring_trees": 91,
   "neighboring_bounds": [
     -1580.5422555363398,
     -3822.522315030166,
@@ -15,13 +15,13 @@
     3122.843675836275
   ],
   "buildings": 554,
-  "layers": 3941,
+  "layers": 6374,
   "environment_layer": "环境_Environment",
-  "native_closed_solids": 4101,
-  "objects_3ds": 17111,
-  "vertices": 5325170,
-  "triangles": 9369232,
-  "trees": 13406,
+  "native_closed_solids": 6534,
+  "objects_3ds": 27171,
+  "vertices": 7331102,
+  "triangles": 13053768,
+  "trees": 13404,
   "landmarks": 29,
   "published_height_buildings": 2,
   "municipal_estimate_buildings": 6,
@@ -90,5 +90,7 @@
       "source": "https://umma.umich.edu/objects/wave-field-aps1995-1/"
     }
   },
-  "accuracy": "Official mapped footprints and surfaces; historical/published/estimated heights labeled individually. Not a surveyed as-built model."
+  "accuracy": "Official mapped footprints and surfaces; historical/published/estimated heights labeled individually. Not a surveyed as-built model.",
+  "major_buildings_refined": 205,
+  "additional_major_building_joinery": 176
 }

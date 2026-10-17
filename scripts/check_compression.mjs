@@ -33,7 +33,7 @@ if(report.source.includes('UChicago')){
  let pauses=0;const fallback=await parseTDSCooperatively(new CampusTDSLoader(),restored,()=>{},async()=>{pauses++;});assert.ok(pauses>2);assert.equal(fallback.children.length,meshes.length);
  for(let i=0;i<meshes.length;i++){assert.equal(hash(fallback.children[i].geometry.attributes.position.array),hash(meshes[i].geometry.attributes.position.array));assert.equal(hash(fallback.children[i].geometry.index.array),hash(meshes[i].geometry.index.array));}
  const download=await run('download');assert.equal(hash(new Uint8Array(await download.result.blob.arrayBuffer())),hash(source));
- const bad=Buffer.alloc(16);bad.write('CMP3DS01');bad.writeUInt32LE(256*1024*1024,8);bad.writeUInt32LE(2,12);
+ const bad=Buffer.alloc(16);bad.write('CMP3DS01');bad.writeUInt32LE(512*1024*1024,8);bad.writeUInt32LE(2,12);
  await assert.rejects(restoreCampusBytes(gzipSync(Buffer.concat([bad,Buffer.from('[]')])),{modelFormat:report.format}),/size/);
  await assert.rejects(restoreCampusBytes(gzipSync(Buffer.alloc(16)),options),/signature/);
 }

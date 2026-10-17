@@ -4,7 +4,7 @@ from urllib.request import Request,urlopen
 import json,gzip,hashlib,datetime
 R=Path(__file__).resolve().parents[1]
 entries=[]
-for name,bbox in [('downtown','-83.758,42.277,-83.727,42.2875'),('broadway','-83.745,42.286,-83.719,42.304'),('river_arboretum','-83.734,42.272,-83.710,42.288')]:
+for name,bbox in [('downtown','-83.758,42.277,-83.727,42.2875'),('broadway','-83.745,42.286,-83.719,42.304'),('river_arboretum','-83.734,42.272,-83.710,42.288'),('south_state_nw','-83.756,42.2545,-83.7375,42.2675'),('south_state_ne','-83.7375,42.2545,-83.719,42.2675'),('south_state_sw','-83.756,42.242,-83.7375,42.2545'),('south_state_se','-83.7375,42.242,-83.719,42.2545')]:
  p=R/'sources'/('osm_neighbors_'+name+'.xml.gz')
  url='https://api.openstreetmap.org/api/0.6/map?bbox='+bbox
  if not p.exists():
@@ -13,7 +13,7 @@ for name,bbox in [('downtown','-83.758,42.277,-83.727,42.2875'),('broadway','-83
   assert b'<osm 'in raw[:1500]
   p.write_bytes(gzip.compress(raw,compresslevel=9,mtime=0))
  else:raw=gzip.decompress(p.read_bytes())
- entries.append({'file':p.name,'url':url,'retrieved':'2026-10-15','raw_sha256':hashlib.sha256(raw).hexdigest(),'bytes':len(raw)})
+ entries.append({'file':p.name,'url':url,'retrieved':'2026-10-17'if name.startswith('south_state')else'2026-10-15','raw_sha256':hashlib.sha256(raw).hexdigest(),'bytes':len(raw)})
 for name in ['central_athletic','north']:
  p=R/'sources'/('osm_architecture_'+name+'.xml.gz')
  entries.append({'file':p.name,'retrieved':'2026-10-13','url':json.loads((R/'sources/architecture_osm_manifest.json').read_text())['sources'][0 if name=='north'else 1]['url'],'raw_sha256':hashlib.sha256(gzip.decompress(p.read_bytes())).hexdigest()})

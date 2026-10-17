@@ -32,6 +32,8 @@ def walk(a,b,name=''):
   a=end
 walk(0,len(data));polys=[Polygon(t[:,:2])for t in triangles];tree=STRtree(polys)
 samples=[(1230,2200),(1350,2100),(2400,1550),(2600,1600),(2100,1500),(850,170),(1000,1900)]
+# Southern join probes cross the previously detached athletic/community parcels.
+samples += [(-1100,-3000),(-600,-3200),(-300,-3500),(350,-2800),(700,-3250)]
 for x,y in samples:assert len(tree.query(Point(x,y),predicate='intersects')),('Unfilled terrain gap',x,y)
 assert path_area>1000,('Missing cemetery drives',path_area)
 assert bad_road<5,('Cemetery drives still use main-road or generic walk rendering',bad_road)

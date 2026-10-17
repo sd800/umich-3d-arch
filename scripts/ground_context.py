@@ -24,7 +24,7 @@ def prepare_ground(c,prepared):
   land,natural,leisure=t.get('landuse'),t.get('natural'),t.get('leisure')
   if land=='cemetery' or t.get('amenity')=='grave_yard':regions['cemetery'].append(g)
   elif natural in ['wood','scrub']or land=='forest':regions['forest'].append(g)
-  elif land in ['grass','meadow','village_green','recreation_ground','greenery','allotments']or natural in ['grassland','wetland']or leisure in ['park','garden','nature_reserve','pitch']:regions['grass'].append(g)
+  elif land in ['grass','meadow','village_green','recreation_ground','greenery','allotments']or natural in ['grassland','wetland']or leisure in ['park','garden','nature_reserve','pitch','golf_course']:regions['grass'].append(g)
   elif land=='residential':regions['residential'].append(g)
   elif land in ['commercial','retail','industrial','railway','religious']:regions['commercial'].append(g)
   elif land in ['construction','brownfield']or natural in ['bare_rock','sand']:regions['bare'].append(g)
@@ -120,4 +120,7 @@ def context_infill(c,plan,accepted,domain,roads,walks,all_fp,add_surface,env,gro
  clearance=unary_union([all_fp.buffer(3),roads.buffer(3),walks.buffer(2),lot,entrances.buffer(1),cemetery_drives.buffer(3)])
  forest_trees=canopy(c,wood,clearance,ground,env,'ContextLeaves',24,1000)
  cemetery_trees=canopy(c,available(plan['cemetery']),clearance,ground,env,'ContextLeaves',28,300)
- return {'continuous_infill_m2':round(open_ground.area,2),'mapped_park_and_cemetery_m2':round(park.area,2),'mapped_woodland_m2':round(wood.area,2),'residential_landcover_m2':round(residential.area,2),'interpreted_yard_transition_m2':round(yard.area,2),'commercial_ground_m2':round(commercial.area,2),'parking_area_m2':round(lot.area,2),'construction_or_gravel_m2':round(gravel.area,2),'paved_apron_m2':round(paving.area,2),'entry_paths_m2':round(entrances.area,2),'railway_centerline_m':round(sum(line.length for line in rail_lines),2),'railway_ballast_m2':round(ballast.area,2),'cemetery_drive_m2':round(cemetery_drives.area,2),'woodland_canopy_estimates':forest_trees,'cemetery_canopy_estimates':cemetery_trees,'interpretation':'Mapped land use and aerial-reviewed surface character; unrecorded setbacks, entry links and canopy positions are approximate.'}
+ from neighboring_areas import REGIONS,project
+ south=transform(project,box(*REGIONS['south_state']))
+ residential_trees=canopy(c,unary_union([residential,yard]).intersection(south),clearance,ground,env,'ContextLeaves',20,500)
+ return {'continuous_infill_m2':round(open_ground.area,2),'mapped_park_and_cemetery_m2':round(park.area,2),'mapped_woodland_m2':round(wood.area,2),'residential_landcover_m2':round(residential.area,2),'interpreted_yard_transition_m2':round(yard.area,2),'commercial_ground_m2':round(commercial.area,2),'parking_area_m2':round(lot.area,2),'construction_or_gravel_m2':round(gravel.area,2),'paved_apron_m2':round(paving.area,2),'entry_paths_m2':round(entrances.area,2),'railway_centerline_m':round(sum(line.length for line in rail_lines),2),'railway_ballast_m2':round(ballast.area,2),'cemetery_drive_m2':round(cemetery_drives.area,2),'woodland_canopy_estimates':forest_trees,'cemetery_canopy_estimates':cemetery_trees,'south_residential_canopy_estimates':residential_trees,'interpretation':'Mapped land use and aerial-reviewed surface character; unrecorded setbacks, entry links and canopy positions are approximate.'}

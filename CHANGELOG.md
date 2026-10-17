@@ -1,5 +1,12 @@
 # Changelog
 
+## 26.10.17.1 — 2026-10-17
+
+- Complete South State/Eisenhower neighboring context from four retained public map snapshots: buildings, mapped streets/paths, parking, golf-course turf, residential grounds and woodland transitions. Join the detached southern parcels to continuous terrain.
+- Refine 176 additional major campus buildings with attached window reveals/transoms and supported roof coping. Retain bespoke landmark forms and avoid generic rooftop equipment.
+- Allow the larger exact CAD stream within explicit 256 MiB / 160,000 segment restore limits, retaining 4 MiB block bounds and exact expected-length checks.
+- Regenerate exact CAD and bounded regional rendering derivatives; keep the neighboring-area visibility control and near-detail budgets. Store Rhino mesh positions at the same F32 precision as 3DS and omit rebuildable normal arrays, retaining native extrusions and losslessly archived files below GitHub's size limit.
+
 ## 26.10.16.9 — 2026-10-16
 
 - Keep the campus' own sitemap declaration and remove the retired central single-site sitemap reference from robots and future website packaging. The collection now offers one combined cross-site sitemap for verified Search Console submission.

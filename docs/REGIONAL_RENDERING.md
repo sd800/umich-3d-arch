@@ -8,7 +8,7 @@ Repeated trees and facade components share indexed templates and instance transf
 
 Detail residency budgets: 40 MiB / 1.1 million triangles / 7 regions for coarse pointers or screens no wider than 760 px; 100 MiB / 2.8 million triangles / 16 regions otherwise. These are detail geometry limits, not total browser memory limits. Overview, framebuffer and other browser resources are additional. Geometry and instance buffers are disposed on eviction.
 
-Generated overview: 16,645,997 transfer bytes; 2,264,636 triangles; 833 draw entries; 49,016,730 estimated geometry bytes. There are 462 detailed regions.
+Generated overview: 22,406,455 transfer bytes; 2,917,196 triangles; 975 draw entries; 65,969,650 estimated geometry bytes. There are 574 detailed regions.
 
 HTTP uses content-hashed binary packets; local double-click uses paired classic-script packets with integrity checks. The standalone edition embeds compressed packets and decodes only the overview and requested regions. Its full CAD download uses the adjacent .3ds.gz archive.
 

@@ -34,6 +34,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
@@ -76,6 +77,13 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": {
+      "framed_openings": 392,
+      "transoms": 0,
+      "roof_coping_m": 466.48,
+      "hollow_bells": 0,
+      "added_triangles": 13440
+    },
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
@@ -124,6 +132,7 @@
       "hollow_bells": 0,
       "added_triangles": 672
     },
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
@@ -166,6 +175,13 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": {
+      "framed_openings": 195,
+      "transoms": 0,
+      "roof_coping_m": 240.2,
+      "hollow_bells": 0,
+      "added_triangles": 6384
+    },
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
@@ -208,6 +224,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
@@ -250,6 +267,13 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": {
+      "framed_openings": 240,
+      "transoms": 0,
+      "roof_coping_m": 364.31,
+      "hollow_bells": 0,
+      "added_triangles": 9128
+    },
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
@@ -298,6 +322,7 @@
       "hollow_bells": 0,
       "added_triangles": 9116
     },
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "reference": "https://tour.umich.edu/text-based/locations/rackham-school-of-graduate-studies/",
@@ -350,6 +375,7 @@
       "hollow_bells": 0,
       "added_triangles": 31352
     },
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
@@ -392,6 +418,13 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": {
+      "framed_openings": 160,
+      "transoms": 0,
+      "roof_coping_m": 310.83,
+      "hollow_bells": 0,
+      "added_triangles": 9888
+    },
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
@@ -434,6 +467,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "reference": "https://umaec.umich.edu/projects/completed-projects/central-power-plant-expansion-2/project-data/",
@@ -501,6 +535,13 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": {
+      "framed_openings": 694,
+      "transoms": 0,
+      "roof_coping_m": 603.58,
+      "hollow_bells": 0,
+      "added_triangles": 22664
+    },
     "highlight_reference": null,
     "architecture_detail": {
       "reference": "https://tour.umich.edu/text-based/locations/mary-markley-hall/",
@@ -547,6 +588,13 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": {
+      "framed_openings": 360,
+      "transoms": 0,
+      "roof_coping_m": 489.0,
+      "hollow_bells": 0,
+      "added_triangles": 13128
+    },
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
@@ -589,6 +637,13 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": {
+      "framed_openings": 204,
+      "transoms": 0,
+      "roof_coping_m": 267.69,
+      "hollow_bells": 0,
+      "added_triangles": 7180
+    },
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
@@ -631,6 +686,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
@@ -673,6 +729,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
@@ -715,6 +772,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
@@ -757,6 +815,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
@@ -799,6 +858,13 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": {
+      "framed_openings": 90,
+      "transoms": 0,
+      "roof_coping_m": 136.64,
+      "hollow_bells": 0,
+      "added_triangles": 3184
+    },
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
@@ -841,6 +907,13 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": {
+      "framed_openings": 64,
+      "transoms": 0,
+      "roof_coping_m": 186.6,
+      "hollow_bells": 0,
+      "added_triangles": 2592
+    },
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
@@ -883,6 +956,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
@@ -925,6 +999,13 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": {
+      "framed_openings": 72,
+      "transoms": 0,
+      "roof_coping_m": 185.45,
+      "hollow_bells": 0,
+      "added_triangles": 2812
+    },
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
@@ -967,6 +1048,13 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": {
+      "framed_openings": 189,
+      "transoms": 0,
+      "roof_coping_m": 193.2,
+      "hollow_bells": 0,
+      "added_triangles": 6404
+    },
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
@@ -1009,6 +1097,13 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": {
+      "framed_openings": 57,
+      "transoms": 0,
+      "roof_coping_m": 140.46,
+      "hollow_bells": 0,
+      "added_triangles": 1996
+    },
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
@@ -1051,6 +1146,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
@@ -1093,6 +1189,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
@@ -1135,6 +1232,13 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": {
+      "framed_openings": 315,
+      "transoms": 0,
+      "roof_coping_m": 628.76,
+      "hollow_bells": 0,
+      "added_triangles": 12596
+    },
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
@@ -1177,6 +1281,13 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": {
+      "framed_openings": 162,
+      "transoms": 0,
+      "roof_coping_m": 337.41,
+      "hollow_bells": 0,
+      "added_triangles": 5396
+    },
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
@@ -1219,6 +1330,13 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": {
+      "framed_openings": 180,
+      "transoms": 0,
+      "roof_coping_m": 231.29,
+      "hollow_bells": 0,
+      "added_triangles": 5888
+    },
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
@@ -1261,6 +1379,13 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": {
+      "framed_openings": 220,
+      "transoms": 0,
+      "roof_coping_m": 341.94,
+      "hollow_bells": 0,
+      "added_triangles": 7260
+    },
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
@@ -1303,6 +1428,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
@@ -1345,6 +1471,13 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": {
+      "framed_openings": 126,
+      "transoms": 0,
+      "roof_coping_m": 193.51,
+      "hollow_bells": 0,
+      "added_triangles": 4492
+    },
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
@@ -1387,6 +1520,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
@@ -1429,6 +1563,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
@@ -1471,6 +1606,13 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": {
+      "framed_openings": 432,
+      "transoms": 0,
+      "roof_coping_m": 312.68,
+      "hollow_bells": 0,
+      "added_triangles": 14276
+    },
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
@@ -1519,6 +1661,7 @@
       "hollow_bells": 0,
       "added_triangles": 0
     },
+    "campus_joinery": null,
     "highlight_reference": "https://smtd.umich.edu/facilities/burton-memorial-tower/charles-baird-carillon/",
     "architecture_detail": {
       "mapped_exterior_spec": {},
@@ -1561,6 +1704,13 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": {
+      "framed_openings": 60,
+      "transoms": 0,
+      "roof_coping_m": 116.41,
+      "hollow_bells": 0,
+      "added_triangles": 1952
+    },
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
@@ -1603,6 +1753,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
@@ -1651,6 +1802,7 @@
       "hollow_bells": 0,
       "added_triangles": 5568
     },
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "reference": "https://tour.umich.edu/text-based/locations/michigan-league/",
@@ -1705,6 +1857,13 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": {
+      "framed_openings": 93,
+      "transoms": 0,
+      "roof_coping_m": 179.41,
+      "hollow_bells": 0,
+      "added_triangles": 3032
+    },
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -1751,6 +1910,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -1797,6 +1957,13 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": {
+      "framed_openings": 702,
+      "transoms": 0,
+      "roof_coping_m": 715.43,
+      "hollow_bells": 0,
+      "added_triangles": 28484
+    },
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
@@ -1845,6 +2012,7 @@
       "hollow_bells": 0,
       "added_triangles": 2784
     },
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -1894,6 +2062,13 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": {
+      "framed_openings": 70,
+      "transoms": 0,
+      "roof_coping_m": 198.42,
+      "hollow_bells": 0,
+      "added_triangles": 2288
+    },
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -1941,6 +2116,13 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": {
+      "framed_openings": 104,
+      "transoms": 0,
+      "roof_coping_m": 223.46,
+      "hollow_bells": 0,
+      "added_triangles": 3972
+    },
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
@@ -1983,6 +2165,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -2031,6 +2214,13 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": {
+      "framed_openings": 315,
+      "transoms": 0,
+      "roof_coping_m": 395.68,
+      "hollow_bells": 0,
+      "added_triangles": 10428
+    },
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -2079,6 +2269,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
@@ -2121,6 +2312,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -2168,6 +2360,13 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": {
+      "framed_openings": 165,
+      "transoms": 0,
+      "roof_coping_m": 0.0,
+      "hollow_bells": 0,
+      "added_triangles": 9900
+    },
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -2216,6 +2415,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
@@ -2258,6 +2458,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -2306,6 +2507,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
@@ -2348,6 +2550,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
@@ -2390,6 +2593,13 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": {
+      "framed_openings": 88,
+      "transoms": 0,
+      "roof_coping_m": 300.56,
+      "hollow_bells": 0,
+      "added_triangles": 3344
+    },
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
@@ -2432,6 +2642,13 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": {
+      "framed_openings": 168,
+      "transoms": 0,
+      "roof_coping_m": 322.48,
+      "hollow_bells": 0,
+      "added_triangles": 6040
+    },
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -2480,6 +2697,13 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": {
+      "framed_openings": 156,
+      "transoms": 0,
+      "roof_coping_m": 326.04,
+      "hollow_bells": 0,
+      "added_triangles": 7304
+    },
     "highlight_reference": null,
     "architecture_detail": {
       "reference": "https://tour.umich.edu/text-based/locations/school-of-kinesiology/",
@@ -2532,6 +2756,13 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": {
+      "framed_openings": 260,
+      "transoms": 0,
+      "roof_coping_m": 364.7,
+      "hollow_bells": 0,
+      "added_triangles": 8448
+    },
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -2579,6 +2810,13 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": {
+      "framed_openings": 440,
+      "transoms": 0,
+      "roof_coping_m": 802.87,
+      "hollow_bells": 0,
+      "added_triangles": 15720
+    },
     "highlight_reference": null,
     "architecture_detail": {
       "reference": "https://bentley.umich.edu/discover/bentley-materials/campus-tour/building-index/chemistry-building/",
@@ -2629,6 +2867,13 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": {
+      "framed_openings": 84,
+      "transoms": 0,
+      "roof_coping_m": 225.19,
+      "hollow_bells": 0,
+      "added_triangles": 3212
+    },
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -2678,6 +2923,13 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": {
+      "framed_openings": 232,
+      "transoms": 0,
+      "roof_coping_m": 353.28,
+      "hollow_bells": 0,
+      "added_triangles": 7616
+    },
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -2726,6 +2978,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -2775,6 +3028,13 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": {
+      "framed_openings": 240,
+      "transoms": 0,
+      "roof_coping_m": 366.72,
+      "hollow_bells": 0,
+      "added_triangles": 8456
+    },
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
@@ -2817,6 +3077,13 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": {
+      "framed_openings": 63,
+      "transoms": 0,
+      "roof_coping_m": 0.0,
+      "hollow_bells": 0,
+      "added_triangles": 2016
+    },
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -2866,6 +3133,13 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": {
+      "framed_openings": 116,
+      "transoms": 0,
+      "roof_coping_m": 235.12,
+      "hollow_bells": 0,
+      "added_triangles": 4220
+    },
     "highlight_reference": null,
     "architecture_detail": {
       "reference": "https://bentley.umich.edu/discover/bentley-materials/campus-tour/building-index/dana-building/",
@@ -2916,6 +3190,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -2964,6 +3239,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -3013,6 +3289,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -3061,6 +3338,13 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": {
+      "framed_openings": 168,
+      "transoms": 0,
+      "roof_coping_m": 258.1,
+      "hollow_bells": 0,
+      "added_triangles": 5600
+    },
     "highlight_reference": null,
     "architecture_detail": {
       "reference": "https://umaec.umich.edu/projects/completed-projects/mason-hall-and-haven-hall-addition-and-renovation/",
@@ -3114,6 +3398,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -3162,6 +3447,13 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": {
+      "framed_openings": 104,
+      "transoms": 0,
+      "roof_coping_m": 195.74,
+      "hollow_bells": 0,
+      "added_triangles": 3744
+    },
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
@@ -3204,6 +3496,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -3252,6 +3545,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -3299,6 +3593,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -3347,6 +3642,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -3395,6 +3691,13 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": {
+      "framed_openings": 300,
+      "transoms": 0,
+      "roof_coping_m": 394.82,
+      "hollow_bells": 0,
+      "added_triangles": 10488
+    },
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -3443,6 +3746,13 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": {
+      "framed_openings": 108,
+      "transoms": 0,
+      "roof_coping_m": 193.83,
+      "hollow_bells": 0,
+      "added_triangles": 3972
+    },
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -3490,6 +3800,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -3537,6 +3848,13 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": {
+      "framed_openings": 104,
+      "transoms": 0,
+      "roof_coping_m": 213.19,
+      "hollow_bells": 0,
+      "added_triangles": 3860
+    },
     "highlight_reference": null,
     "architecture_detail": {
       "reference": "https://maps.studentlife.umich.edu/building/harrison-m-randall-laboratory",
@@ -3583,6 +3901,13 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": {
+      "framed_openings": 212,
+      "transoms": 0,
+      "roof_coping_m": 379.58,
+      "hollow_bells": 0,
+      "added_triangles": 7392
+    },
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
@@ -3631,6 +3956,7 @@
       "hollow_bells": 0,
       "added_triangles": 17920
     },
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "reference": "https://bentley.umich.edu/discover/bentley-materials/campus-tour/building-index/angell-hall/",
@@ -3684,6 +4010,13 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": {
+      "framed_openings": 56,
+      "transoms": 0,
+      "roof_coping_m": 177.41,
+      "hollow_bells": 0,
+      "added_triangles": 1888
+    },
     "highlight_reference": null,
     "architecture_detail": {
       "reference": "https://tour.umich.edu/text-based/tours/diag/",
@@ -3730,6 +4063,7 @@
     "aliases_zh": [],
     "construction_status": "Construction",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -3776,6 +4110,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -3823,6 +4158,13 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": {
+      "framed_openings": 450,
+      "transoms": 0,
+      "roof_coping_m": 317.49,
+      "hollow_bells": 0,
+      "added_triangles": 14748
+    },
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -3872,6 +4214,13 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": {
+      "framed_openings": 180,
+      "transoms": 0,
+      "roof_coping_m": 272.45,
+      "hollow_bells": 0,
+      "added_triangles": 6396
+    },
     "highlight_reference": null,
     "architecture_detail": {
       "reference": "https://tour.umich.edu/text-based/tours/diag/",
@@ -3924,6 +4273,13 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": {
+      "framed_openings": 60,
+      "transoms": 0,
+      "roof_coping_m": 117.44,
+      "hollow_bells": 0,
+      "added_triangles": 1952
+    },
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -3973,6 +4329,13 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": {
+      "framed_openings": 216,
+      "transoms": 0,
+      "roof_coping_m": 209.81,
+      "hollow_bells": 0,
+      "added_triangles": 7628
+    },
     "highlight_reference": null,
     "architecture_detail": {
       "reference": "https://umaec.umich.edu/projects/completed-projects/mason-hall-and-haven-hall-addition-and-renovation/",
@@ -4026,6 +4389,7 @@
     "aliases_zh": [],
     "construction_status": "Construction",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
@@ -4074,6 +4438,7 @@
       "hollow_bells": 0,
       "added_triangles": 6976
     },
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "reference": "https://www.lib.umich.edu/visit-and-study/floor-plans/hatcher-library-north-floors/",
@@ -4126,6 +4491,13 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": {
+      "framed_openings": 288,
+      "transoms": 0,
+      "roof_coping_m": 305.07,
+      "hollow_bells": 0,
+      "added_triangles": 9420
+    },
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -4174,6 +4546,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -4221,6 +4594,13 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": {
+      "framed_openings": 312,
+      "transoms": 312,
+      "roof_coping_m": 261.46,
+      "hollow_bells": 0,
+      "added_triangles": 14304
+    },
     "highlight_reference": null,
     "architecture_detail": {
       "reference": "https://www.lib.umich.edu/visit-and-study/floor-plans/hatcher-library-south-floors/",
@@ -4271,6 +4651,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -4318,6 +4699,13 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": {
+      "framed_openings": 288,
+      "transoms": 0,
+      "roof_coping_m": 0.0,
+      "hollow_bells": 0,
+      "added_triangles": 9216
+    },
     "highlight_reference": null,
     "architecture_detail": {
       "reference": "https://regents.umich.edu/files/meetings/09-14/2014-09-IX-9.pdf",
@@ -4370,6 +4758,13 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": {
+      "framed_openings": 168,
+      "transoms": 0,
+      "roof_coping_m": 462.11,
+      "hollow_bells": 0,
+      "added_triangles": 7532
+    },
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -4419,6 +4814,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -4466,6 +4862,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -4521,6 +4918,7 @@
       "hollow_bells": 0,
       "added_triangles": 3964
     },
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "reference": "https://tour.umich.edu/text-based/tours/diag/",
@@ -4572,6 +4970,13 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": {
+      "framed_openings": 116,
+      "transoms": 0,
+      "roof_coping_m": 332.64,
+      "hollow_bells": 0,
+      "added_triangles": 4656
+    },
     "highlight_reference": null,
     "architecture_detail": {
       "reference": "https://www.lib.umich.edu/visit-and-study/floor-plans/shapiro-library-floors/",
@@ -4624,6 +5029,13 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": {
+      "framed_openings": 63,
+      "transoms": 0,
+      "roof_coping_m": 0.0,
+      "hollow_bells": 0,
+      "added_triangles": 2016
+    },
     "highlight_reference": null,
     "architecture_detail": {
       "reference": "https://tour.umich.edu/text-based/tours/diag/",
@@ -4681,6 +5093,7 @@
       "hollow_bells": 0,
       "added_triangles": 1580
     },
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "reference": "https://clements.umich.edu/about/history/construction-of-the-library/",
@@ -4733,6 +5146,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -4788,6 +5202,7 @@
       "hollow_bells": 0,
       "added_triangles": 12384
     },
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "reference": "https://tour.umich.edu/text-based/locations/michigan-union/",
@@ -4841,6 +5256,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -4887,6 +5303,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
@@ -4929,6 +5346,13 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": {
+      "framed_openings": 356,
+      "transoms": 0,
+      "roof_coping_m": 0.0,
+      "hollow_bells": 0,
+      "added_triangles": 11392
+    },
     "highlight_reference": null,
     "architecture_detail": {
       "reference": "https://tour.umich.edu/text-based/locations/west-quad/",
@@ -4979,6 +5403,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
@@ -5021,6 +5446,13 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": {
+      "framed_openings": 320,
+      "transoms": 0,
+      "roof_coping_m": 308.61,
+      "hollow_bells": 0,
+      "added_triangles": 10648
+    },
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -5070,6 +5502,13 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": {
+      "framed_openings": 114,
+      "transoms": 0,
+      "roof_coping_m": 277.34,
+      "hollow_bells": 0,
+      "added_triangles": 4008
+    },
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -5118,6 +5557,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
@@ -5160,6 +5600,13 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": {
+      "framed_openings": 90,
+      "transoms": 0,
+      "roof_coping_m": 175.02,
+      "hollow_bells": 0,
+      "added_triangles": 2928
+    },
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -5212,6 +5659,7 @@
       "hollow_bells": 0,
       "added_triangles": 4904
     },
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "reference": "https://michigan.law.umich.edu/about-michigan-law/michigan-law-architecture",
@@ -5266,6 +5714,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -5315,6 +5764,13 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": {
+      "framed_openings": 140,
+      "transoms": 0,
+      "roof_coping_m": 407.49,
+      "hollow_bells": 0,
+      "added_triangles": 5948
+    },
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -5363,6 +5819,13 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": {
+      "framed_openings": 60,
+      "transoms": 0,
+      "roof_coping_m": 0.0,
+      "hollow_bells": 0,
+      "added_triangles": 3600
+    },
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -5412,6 +5875,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
@@ -5454,6 +5918,13 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": {
+      "framed_openings": 51,
+      "transoms": 0,
+      "roof_coping_m": 0.0,
+      "hollow_bells": 0,
+      "added_triangles": 1632
+    },
     "highlight_reference": null,
     "architecture_detail": {
       "reference": "https://michigan.law.umich.edu/about-michigan-law/michigan-law-architecture",
@@ -5506,6 +5977,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
@@ -5548,6 +6020,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
@@ -5590,6 +6063,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
@@ -5632,6 +6106,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
@@ -5674,6 +6149,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
@@ -5716,6 +6192,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -5763,6 +6240,13 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": {
+      "framed_openings": 90,
+      "transoms": 0,
+      "roof_coping_m": 234.36,
+      "hollow_bells": 0,
+      "added_triangles": 3332
+    },
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
@@ -5805,6 +6289,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
@@ -5853,6 +6338,7 @@
       "hollow_bells": 0,
       "added_triangles": 9800
     },
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "reference": "https://michigan.law.umich.edu/about-michigan-law/michigan-law-architecture",
@@ -5905,6 +6391,13 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": {
+      "framed_openings": 174,
+      "transoms": 0,
+      "roof_coping_m": 556.65,
+      "hollow_bells": 0,
+      "added_triangles": 9824
+    },
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
@@ -5947,6 +6440,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
@@ -5989,6 +6483,13 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": {
+      "framed_openings": 514,
+      "transoms": 0,
+      "roof_coping_m": 398.86,
+      "hollow_bells": 0,
+      "added_triangles": 16896
+    },
     "highlight_reference": null,
     "architecture_detail": {
       "reference": "https://tour.umich.edu/text-based/locations/south-quad/",
@@ -6042,6 +6543,13 @@
     "aliases_zh": [],
     "construction_status": "Construction",
     "highlight_joinery": null,
+    "campus_joinery": {
+      "framed_openings": 170,
+      "transoms": 0,
+      "roof_coping_m": 282.88,
+      "hollow_bells": 0,
+      "added_triangles": 6160
+    },
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -6090,6 +6598,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -6143,6 +6652,7 @@
       "hollow_bells": 0,
       "added_triangles": 12144
     },
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "reference": "https://michigan.law.umich.edu/about-michigan-law/michigan-law-architecture",
@@ -6196,6 +6706,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -6242,6 +6753,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -6288,6 +6800,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
@@ -6330,6 +6843,13 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": {
+      "framed_openings": 90,
+      "transoms": 0,
+      "roof_coping_m": 209.04,
+      "hollow_bells": 0,
+      "added_triangles": 3216
+    },
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -6377,6 +6897,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -6425,6 +6946,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -6473,6 +6995,13 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": {
+      "framed_openings": 162,
+      "transoms": 162,
+      "roof_coping_m": 0.0,
+      "hollow_bells": 0,
+      "added_triangles": 7128
+    },
     "highlight_reference": null,
     "architecture_detail": {
       "reference": "https://www.kpf.com/story/the-making-of-university-of-michigan-stephen-m-ross-school-of-business",
@@ -6532,6 +7061,13 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": {
+      "framed_openings": 112,
+      "transoms": 0,
+      "roof_coping_m": 268.66,
+      "hollow_bells": 0,
+      "added_triangles": 4760
+    },
     "highlight_reference": null,
     "architecture_detail": {
       "reference": "https://michigan.law.umich.edu/about-michigan-law/michigan-law-architecture",
@@ -6585,6 +7121,13 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": {
+      "framed_openings": 231,
+      "transoms": 0,
+      "roof_coping_m": 0.0,
+      "hollow_bells": 0,
+      "added_triangles": 7392
+    },
     "highlight_reference": null,
     "architecture_detail": {
       "reference": "https://tour.umich.edu/text-based/locations/east-quad/",
@@ -6631,6 +7174,13 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": {
+      "framed_openings": 101,
+      "transoms": 0,
+      "roof_coping_m": 0.0,
+      "hollow_bells": 0,
+      "added_triangles": 3232
+    },
     "highlight_reference": null,
     "architecture_detail": {
       "reference": null,
@@ -6688,6 +7238,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "reference": null,
@@ -6753,6 +7304,7 @@
       "hollow_bells": 0,
       "added_triangles": 15828
     },
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "reference": "https://www.kpf.com/story/the-making-of-university-of-michigan-stephen-m-ross-school-of-business",
@@ -6845,6 +7397,13 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": {
+      "framed_openings": 110,
+      "transoms": 0,
+      "roof_coping_m": 284.95,
+      "hollow_bells": 0,
+      "added_triangles": 5340
+    },
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -6893,6 +7452,13 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": {
+      "framed_openings": 100,
+      "transoms": 0,
+      "roof_coping_m": 0.0,
+      "hollow_bells": 0,
+      "added_triangles": 3200
+    },
     "highlight_reference": null,
     "architecture_detail": {
       "reference": null,
@@ -6952,6 +7518,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
@@ -6994,6 +7561,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "reference": null,
@@ -7051,6 +7619,13 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": {
+      "framed_openings": 78,
+      "transoms": 0,
+      "roof_coping_m": 256.83,
+      "hollow_bells": 0,
+      "added_triangles": 3440
+    },
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -7099,6 +7674,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -7148,6 +7724,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -7197,6 +7774,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -7245,6 +7823,13 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": {
+      "framed_openings": 57,
+      "transoms": 0,
+      "roof_coping_m": 227.83,
+      "hollow_bells": 0,
+      "added_triangles": 2648
+    },
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -7292,6 +7877,13 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": {
+      "framed_openings": 81,
+      "transoms": 0,
+      "roof_coping_m": 370.53,
+      "hollow_bells": 0,
+      "added_triangles": 4116
+    },
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
@@ -7334,6 +7926,13 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": {
+      "framed_openings": 396,
+      "transoms": 0,
+      "roof_coping_m": 635.93,
+      "hollow_bells": 0,
+      "added_triangles": 13384
+    },
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -7381,6 +7980,13 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": {
+      "framed_openings": 57,
+      "transoms": 0,
+      "roof_coping_m": 207.52,
+      "hollow_bells": 0,
+      "added_triangles": 2624
+    },
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -7428,6 +8034,13 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": {
+      "framed_openings": 33,
+      "transoms": 0,
+      "roof_coping_m": 299.36,
+      "hollow_bells": 0,
+      "added_triangles": 2744
+    },
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -7475,6 +8088,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -7524,6 +8138,13 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": {
+      "framed_openings": 75,
+      "transoms": 0,
+      "roof_coping_m": 389.97,
+      "hollow_bells": 0,
+      "added_triangles": 4516
+    },
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -7571,6 +8192,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -7618,6 +8240,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -7664,6 +8287,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -7710,6 +8334,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -7756,6 +8381,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -7802,6 +8428,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -7848,6 +8475,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "reference": null,
@@ -7905,6 +8533,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -7951,6 +8580,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -7997,6 +8627,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -8043,6 +8674,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -8089,6 +8721,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -8135,6 +8768,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "reference": null,
@@ -8194,6 +8828,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -8240,6 +8875,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -8286,6 +8922,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -8332,6 +8969,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -8378,6 +9016,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -8424,6 +9063,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "reference": null,
@@ -8481,6 +9121,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -8527,6 +9168,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -8573,6 +9215,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -8619,6 +9262,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -8665,6 +9309,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "reference": null,
@@ -8722,6 +9367,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -8768,6 +9414,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -8814,6 +9461,13 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": {
+      "framed_openings": 125,
+      "transoms": 0,
+      "roof_coping_m": 0.0,
+      "hollow_bells": 0,
+      "added_triangles": 4000
+    },
     "highlight_reference": null,
     "architecture_detail": {
       "reference": null,
@@ -8866,6 +9520,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -8912,6 +9567,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -8958,6 +9614,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -9004,6 +9661,13 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": {
+      "framed_openings": 72,
+      "transoms": 0,
+      "roof_coping_m": 0.0,
+      "hollow_bells": 0,
+      "added_triangles": 2304
+    },
     "highlight_reference": null,
     "architecture_detail": {
       "reference": null,
@@ -9061,6 +9725,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -9107,6 +9772,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "reference": null,
@@ -9164,6 +9830,13 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": {
+      "framed_openings": 168,
+      "transoms": 0,
+      "roof_coping_m": 0.0,
+      "hollow_bells": 0,
+      "added_triangles": 5376
+    },
     "highlight_reference": null,
     "architecture_detail": {
       "reference": null,
@@ -9216,6 +9889,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -9262,6 +9936,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -9308,6 +9983,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -9354,6 +10030,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -9400,6 +10077,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "reference": null,
@@ -9457,6 +10135,13 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": {
+      "framed_openings": 216,
+      "transoms": 0,
+      "roof_coping_m": 0.0,
+      "hollow_bells": 0,
+      "added_triangles": 6912
+    },
     "highlight_reference": null,
     "architecture_detail": {
       "reference": null,
@@ -9509,6 +10194,13 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": {
+      "framed_openings": 62,
+      "transoms": 0,
+      "roof_coping_m": 0.0,
+      "hollow_bells": 0,
+      "added_triangles": 1984
+    },
     "highlight_reference": null,
     "architecture_detail": {
       "reference": null,
@@ -9561,6 +10253,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -9607,6 +10300,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -9653,6 +10347,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -9699,6 +10394,13 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": {
+      "framed_openings": 108,
+      "transoms": 0,
+      "roof_coping_m": 0.0,
+      "hollow_bells": 0,
+      "added_triangles": 3456
+    },
     "highlight_reference": null,
     "architecture_detail": {
       "reference": null,
@@ -9751,6 +10453,13 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": {
+      "framed_openings": 136,
+      "transoms": 0,
+      "roof_coping_m": 0.0,
+      "hollow_bells": 0,
+      "added_triangles": 4352
+    },
     "highlight_reference": null,
     "architecture_detail": {
       "reference": null,
@@ -9803,6 +10512,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -9849,6 +10559,13 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": {
+      "framed_openings": 144,
+      "transoms": 0,
+      "roof_coping_m": 0.0,
+      "hollow_bells": 0,
+      "added_triangles": 4608
+    },
     "highlight_reference": null,
     "architecture_detail": {
       "reference": null,
@@ -9901,6 +10618,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -9947,6 +10665,13 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": {
+      "framed_openings": 264,
+      "transoms": 0,
+      "roof_coping_m": 0.0,
+      "hollow_bells": 0,
+      "added_triangles": 8448
+    },
     "highlight_reference": null,
     "architecture_detail": {
       "reference": null,
@@ -10004,6 +10729,13 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": {
+      "framed_openings": 296,
+      "transoms": 0,
+      "roof_coping_m": 0.0,
+      "hollow_bells": 0,
+      "added_triangles": 9472
+    },
     "highlight_reference": null,
     "architecture_detail": {
       "reference": null,
@@ -10061,6 +10793,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -10107,6 +10840,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -10153,6 +10887,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -10199,6 +10934,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -10245,6 +10981,13 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": {
+      "framed_openings": 44,
+      "transoms": 0,
+      "roof_coping_m": 0.0,
+      "hollow_bells": 0,
+      "added_triangles": 1408
+    },
     "highlight_reference": null,
     "architecture_detail": {
       "reference": null,
@@ -10297,6 +11040,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
@@ -10339,6 +11083,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -10385,6 +11130,13 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": {
+      "framed_openings": 60,
+      "transoms": 0,
+      "roof_coping_m": 0.0,
+      "hollow_bells": 0,
+      "added_triangles": 1920
+    },
     "highlight_reference": null,
     "architecture_detail": {
       "reference": null,
@@ -10437,6 +11189,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -10483,6 +11236,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -10529,6 +11283,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -10575,6 +11330,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -10621,6 +11377,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -10667,6 +11424,13 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": {
+      "framed_openings": 220,
+      "transoms": 0,
+      "roof_coping_m": 0.0,
+      "hollow_bells": 0,
+      "added_triangles": 7040
+    },
     "highlight_reference": null,
     "architecture_detail": {
       "reference": null,
@@ -10719,6 +11483,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -10765,6 +11530,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -10811,6 +11577,13 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": {
+      "framed_openings": 54,
+      "transoms": 0,
+      "roof_coping_m": 0.0,
+      "hollow_bells": 0,
+      "added_triangles": 1728
+    },
     "highlight_reference": null,
     "architecture_detail": {
       "reference": null,
@@ -10863,6 +11636,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -10909,6 +11683,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -10955,6 +11730,13 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": {
+      "framed_openings": 58,
+      "transoms": 0,
+      "roof_coping_m": 0.0,
+      "hollow_bells": 0,
+      "added_triangles": 1856
+    },
     "highlight_reference": null,
     "architecture_detail": {
       "reference": null,
@@ -11011,6 +11793,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -11057,6 +11840,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
@@ -11099,6 +11883,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -11145,6 +11930,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -11191,6 +11977,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -11237,6 +12024,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -11283,6 +12071,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "reference": null,
@@ -11335,6 +12124,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -11381,6 +12171,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -11427,6 +12218,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -11473,6 +12265,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -11519,6 +12312,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -11566,6 +12360,13 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": {
+      "framed_openings": 48,
+      "transoms": 0,
+      "roof_coping_m": 0.0,
+      "hollow_bells": 0,
+      "added_triangles": 1536
+    },
     "highlight_reference": null,
     "architecture_detail": {
       "reference": null,
@@ -11618,6 +12419,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -11664,6 +12466,13 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": {
+      "framed_openings": 111,
+      "transoms": 0,
+      "roof_coping_m": 0.0,
+      "hollow_bells": 0,
+      "added_triangles": 3552
+    },
     "highlight_reference": null,
     "architecture_detail": {
       "reference": null,
@@ -11716,6 +12525,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -11762,6 +12572,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -11808,6 +12619,13 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": {
+      "framed_openings": 164,
+      "transoms": 0,
+      "roof_coping_m": 0.0,
+      "hollow_bells": 0,
+      "added_triangles": 5248
+    },
     "highlight_reference": null,
     "architecture_detail": {
       "reference": null,
@@ -11860,6 +12678,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -11906,6 +12725,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -11952,6 +12772,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -11998,6 +12819,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -12044,6 +12866,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -12090,6 +12913,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -12136,6 +12960,7 @@
     "aliases_zh": [],
     "construction_status": "Construction",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
@@ -12178,6 +13003,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -12224,6 +13050,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -12270,6 +13097,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -12316,6 +13144,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -12362,6 +13191,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -12410,6 +13240,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -12456,6 +13287,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -12502,6 +13334,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -12549,6 +13382,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "reference": null,
@@ -12601,6 +13435,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -12647,6 +13482,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -12693,6 +13529,13 @@
     "aliases_zh": [],
     "construction_status": "Construction",
     "highlight_joinery": null,
+    "campus_joinery": {
+      "framed_openings": 296,
+      "transoms": 0,
+      "roof_coping_m": 0.0,
+      "hollow_bells": 0,
+      "added_triangles": 9472
+    },
     "highlight_reference": null,
     "architecture_detail": {
       "reference": null,
@@ -12750,6 +13593,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
@@ -12792,6 +13636,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -12838,6 +13683,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -12884,6 +13730,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -12931,6 +13778,13 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": {
+      "framed_openings": 184,
+      "transoms": 0,
+      "roof_coping_m": 0.0,
+      "hollow_bells": 0,
+      "added_triangles": 5888
+    },
     "highlight_reference": null,
     "architecture_detail": {
       "reference": null,
@@ -12983,6 +13837,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -13029,6 +13884,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -13077,6 +13933,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -13123,6 +13980,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -13169,6 +14027,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -13216,6 +14075,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -13262,6 +14122,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -13308,6 +14169,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -13354,6 +14216,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -13400,6 +14263,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -13446,6 +14310,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -13492,6 +14357,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -13538,6 +14404,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -13584,6 +14451,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -13630,6 +14498,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -13676,6 +14545,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -13722,6 +14592,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -13768,6 +14639,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -13814,6 +14686,13 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": {
+      "framed_openings": 66,
+      "transoms": 0,
+      "roof_coping_m": 201.78,
+      "hollow_bells": 0,
+      "added_triangles": 2316
+    },
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -13861,6 +14740,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -13907,6 +14787,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -13953,6 +14834,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -13999,6 +14881,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -14045,6 +14928,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -14091,6 +14975,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -14137,6 +15022,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -14183,6 +15069,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -14229,6 +15116,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -14278,6 +15166,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -14324,6 +15213,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -14370,6 +15260,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -14416,6 +15307,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -14462,6 +15354,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -14508,6 +15401,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -14554,6 +15448,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -14601,6 +15496,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -14647,6 +15543,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -14693,6 +15590,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -14739,6 +15637,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -14785,6 +15684,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -14831,6 +15731,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -14877,6 +15778,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -14923,6 +15825,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -14969,6 +15872,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -15015,6 +15919,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -15061,6 +15966,13 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": {
+      "framed_openings": 126,
+      "transoms": 0,
+      "roof_coping_m": 0.0,
+      "hollow_bells": 0,
+      "added_triangles": 4032
+    },
     "highlight_reference": null,
     "architecture_detail": {
       "reference": null,
@@ -15119,6 +16031,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -15165,6 +16078,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -15211,6 +16125,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -15257,6 +16172,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -15303,6 +16219,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -15349,6 +16266,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -15395,6 +16313,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -15441,6 +16360,13 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": {
+      "framed_openings": 60,
+      "transoms": 0,
+      "roof_coping_m": 0.0,
+      "hollow_bells": 0,
+      "added_triangles": 1920
+    },
     "highlight_reference": null,
     "architecture_detail": {
       "reference": null,
@@ -15498,6 +16424,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -15545,6 +16472,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -15591,6 +16519,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -15637,6 +16566,13 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": {
+      "framed_openings": 176,
+      "transoms": 0,
+      "roof_coping_m": 0.0,
+      "hollow_bells": 0,
+      "added_triangles": 5632
+    },
     "highlight_reference": null,
     "architecture_detail": {
       "reference": null,
@@ -15689,6 +16625,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -15736,6 +16673,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -15782,6 +16720,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -15828,6 +16767,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
@@ -15870,6 +16810,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
@@ -15912,6 +16853,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
@@ -15954,6 +16896,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
@@ -15996,6 +16939,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
@@ -16038,6 +16982,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
@@ -16080,6 +17025,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -16129,6 +17075,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -16182,6 +17129,7 @@
       "hollow_bells": 0,
       "added_triangles": 7848
     },
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "reference": "https://tour.umich.edu/text-based/tours/engineering/",
@@ -16248,6 +17196,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
@@ -16290,6 +17239,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -16336,6 +17286,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -16382,6 +17333,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
@@ -16424,6 +17376,13 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": {
+      "framed_openings": 257,
+      "transoms": 0,
+      "roof_coping_m": 322.64,
+      "hollow_bells": 0,
+      "added_triangles": 8548
+    },
     "highlight_reference": null,
     "architecture_detail": {
       "reference": null,
@@ -16515,6 +17474,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -16561,6 +17521,13 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": {
+      "framed_openings": 148,
+      "transoms": 0,
+      "roof_coping_m": 308.51,
+      "hollow_bells": 0,
+      "added_triangles": 5336
+    },
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -16608,6 +17575,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -16655,6 +17623,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -16701,6 +17670,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -16747,6 +17717,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -16793,6 +17764,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -16839,6 +17811,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -16886,6 +17859,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -16932,6 +17906,13 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": {
+      "framed_openings": 1414,
+      "transoms": 0,
+      "roof_coping_m": 1298.78,
+      "hollow_bells": 0,
+      "added_triangles": 47036
+    },
     "highlight_reference": null,
     "architecture_detail": {
       "reference": "https://tour.umich.edu/text-based/locations/bursley-hall/",
@@ -16984,6 +17965,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -17032,6 +18014,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -17078,6 +18061,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -17124,6 +18108,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -17171,6 +18156,13 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": {
+      "framed_openings": 61,
+      "transoms": 0,
+      "roof_coping_m": 0.0,
+      "hollow_bells": 0,
+      "added_triangles": 1952
+    },
     "highlight_reference": null,
     "architecture_detail": {
       "reference": null,
@@ -17228,6 +18220,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -17274,6 +18267,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -17320,6 +18314,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "reference": null,
@@ -17376,6 +18371,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -17422,6 +18418,13 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": {
+      "framed_openings": 132,
+      "transoms": 0,
+      "roof_coping_m": 0.0,
+      "hollow_bells": 0,
+      "added_triangles": 4224
+    },
     "highlight_reference": null,
     "architecture_detail": {
       "reference": null,
@@ -17482,6 +18485,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -17528,6 +18532,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -17574,6 +18579,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "reference": null,
@@ -17631,6 +18637,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "reference": null,
@@ -17688,6 +18695,13 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": {
+      "framed_openings": 48,
+      "transoms": 0,
+      "roof_coping_m": 0.0,
+      "hollow_bells": 0,
+      "added_triangles": 1536
+    },
     "highlight_reference": null,
     "architecture_detail": {
       "reference": null,
@@ -17740,6 +18754,13 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": {
+      "framed_openings": 315,
+      "transoms": 56,
+      "roof_coping_m": 1519.22,
+      "hollow_bells": 0,
+      "added_triangles": 12316
+    },
     "highlight_reference": null,
     "architecture_detail": {
       "reference": null,
@@ -17820,6 +18841,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -17866,6 +18888,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -17912,6 +18935,13 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": {
+      "framed_openings": 147,
+      "transoms": 0,
+      "roof_coping_m": 0.0,
+      "hollow_bells": 0,
+      "added_triangles": 4704
+    },
     "highlight_reference": null,
     "architecture_detail": {
       "reference": null,
@@ -17978,6 +19008,7 @@
       "hollow_bells": 0,
       "added_triangles": 7004
     },
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "reference": "https://tour.umich.edu/text-based/tours/engineering/",
@@ -18050,6 +19081,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
@@ -18098,6 +19130,7 @@
       "hollow_bells": 0,
       "added_triangles": 11656
     },
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "reference": "https://leinweber.bldg.umich.edu/about/",
@@ -18170,6 +19203,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "reference": null,
@@ -18222,6 +19256,13 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": {
+      "framed_openings": 66,
+      "transoms": 0,
+      "roof_coping_m": 40.91,
+      "hollow_bells": 0,
+      "added_triangles": 2176
+    },
     "highlight_reference": null,
     "architecture_detail": {
       "reference": null,
@@ -18287,6 +19328,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -18333,6 +19375,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -18379,6 +19422,13 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": {
+      "framed_openings": 76,
+      "transoms": 0,
+      "roof_coping_m": 0.0,
+      "hollow_bells": 0,
+      "added_triangles": 2432
+    },
     "highlight_reference": null,
     "architecture_detail": {
       "reference": null,
@@ -18431,6 +19481,13 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": {
+      "framed_openings": 112,
+      "transoms": 0,
+      "roof_coping_m": 223.3,
+      "hollow_bells": 0,
+      "added_triangles": 3948
+    },
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -18477,6 +19534,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -18527,6 +19585,13 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": {
+      "framed_openings": 54,
+      "transoms": 0,
+      "roof_coping_m": 0.0,
+      "hollow_bells": 0,
+      "added_triangles": 1728
+    },
     "highlight_reference": null,
     "architecture_detail": {
       "reference": null,
@@ -18585,6 +19650,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -18631,6 +19697,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -18677,6 +19744,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -18723,6 +19791,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -18769,6 +19838,13 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": {
+      "framed_openings": 421,
+      "transoms": 0,
+      "roof_coping_m": 1686.68,
+      "hollow_bells": 0,
+      "added_triangles": 15120
+    },
     "highlight_reference": null,
     "architecture_detail": {
       "reference": null,
@@ -18841,6 +19917,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -18888,6 +19965,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -18934,6 +20012,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -18980,6 +20059,13 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": {
+      "framed_openings": 76,
+      "transoms": 0,
+      "roof_coping_m": 221.91,
+      "hollow_bells": 0,
+      "added_triangles": 2536
+    },
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -19027,6 +20113,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
@@ -19069,6 +20156,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
@@ -19111,6 +20199,13 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": {
+      "framed_openings": 104,
+      "transoms": 0,
+      "roof_coping_m": 322.65,
+      "hollow_bells": 0,
+      "added_triangles": 3540
+    },
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -19158,6 +20253,13 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": {
+      "framed_openings": 17,
+      "transoms": 0,
+      "roof_coping_m": 0.0,
+      "hollow_bells": 0,
+      "added_triangles": 544
+    },
     "highlight_reference": null,
     "architecture_detail": {
       "reference": null,
@@ -19216,6 +20318,7 @@
       "hollow_bells": 60,
       "added_triangles": 0
     },
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "reference": "https://smtd.umich.edu/facilities/ann-and-robert-h-lurie-carillon/",
@@ -19268,6 +20371,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
@@ -19310,6 +20414,13 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": {
+      "framed_openings": 140,
+      "transoms": 24,
+      "roof_coping_m": 163.46,
+      "hollow_bells": 0,
+      "added_triangles": 4932
+    },
     "highlight_reference": null,
     "architecture_detail": {
       "reference": null,
@@ -19383,6 +20494,13 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": {
+      "framed_openings": 120,
+      "transoms": 0,
+      "roof_coping_m": 0.0,
+      "hollow_bells": 0,
+      "added_triangles": 3840
+    },
     "highlight_reference": null,
     "architecture_detail": {
       "reference": null,
@@ -19442,6 +20560,13 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": {
+      "framed_openings": 84,
+      "transoms": 0,
+      "roof_coping_m": 202.37,
+      "hollow_bells": 0,
+      "added_triangles": 3116
+    },
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -19488,6 +20613,13 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": {
+      "framed_openings": 103,
+      "transoms": 14,
+      "roof_coping_m": 143.22,
+      "hollow_bells": 0,
+      "added_triangles": 3584
+    },
     "highlight_reference": null,
     "architecture_detail": {
       "reference": null,
@@ -19561,6 +20693,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -19607,6 +20740,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "reference": null,
@@ -19664,6 +20798,13 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": {
+      "framed_openings": 115,
+      "transoms": 0,
+      "roof_coping_m": 178.97,
+      "hollow_bells": 0,
+      "added_triangles": 3776
+    },
     "highlight_reference": null,
     "architecture_detail": {
       "reference": null,
@@ -19743,6 +20884,7 @@
       "hollow_bells": 0,
       "added_triangles": 9944
     },
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "reference": "https://www.dc.umich.edu/about-the-dc/history/",
@@ -19809,6 +20951,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -19855,6 +20998,13 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": {
+      "framed_openings": 79,
+      "transoms": 0,
+      "roof_coping_m": 167.97,
+      "hollow_bells": 0,
+      "added_triangles": 2836
+    },
     "highlight_reference": null,
     "architecture_detail": {
       "reference": null,
@@ -19919,6 +21069,13 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": {
+      "framed_openings": 51,
+      "transoms": 0,
+      "roof_coping_m": 0.0,
+      "hollow_bells": 0,
+      "added_triangles": 1632
+    },
     "highlight_reference": null,
     "architecture_detail": {
       "reference": null,
@@ -19977,6 +21134,13 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": {
+      "framed_openings": 96,
+      "transoms": 0,
+      "roof_coping_m": 0.0,
+      "hollow_bells": 0,
+      "added_triangles": 3072
+    },
     "highlight_reference": null,
     "architecture_detail": {
       "reference": null,
@@ -20036,6 +21200,13 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": {
+      "framed_openings": 102,
+      "transoms": 0,
+      "roof_coping_m": 0.0,
+      "hollow_bells": 0,
+      "added_triangles": 3264
+    },
     "highlight_reference": null,
     "architecture_detail": {
       "reference": null,
@@ -20094,6 +21265,13 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": {
+      "framed_openings": 362,
+      "transoms": 0,
+      "roof_coping_m": 1442.36,
+      "hollow_bells": 0,
+      "added_triangles": 16244
+    },
     "highlight_reference": null,
     "architecture_detail": {
       "reference": "https://smtd.umich.edu/facilities/earl-v-moore-building/",
@@ -20171,6 +21349,13 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": {
+      "framed_openings": 87,
+      "transoms": 0,
+      "roof_coping_m": 0.0,
+      "hollow_bells": 0,
+      "added_triangles": 2784
+    },
     "highlight_reference": null,
     "architecture_detail": {
       "reference": null,
@@ -20228,6 +21413,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -20275,6 +21461,13 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": {
+      "framed_openings": 160,
+      "transoms": 0,
+      "roof_coping_m": 0.0,
+      "hollow_bells": 0,
+      "added_triangles": 5120
+    },
     "highlight_reference": null,
     "architecture_detail": {
       "reference": null,
@@ -20339,6 +21532,7 @@
       "hollow_bells": 0,
       "added_triangles": 11460
     },
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "reference": "https://taubmancollege.umich.edu/about/facilities/art-architecture-building/",
@@ -20405,6 +21599,13 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": {
+      "framed_openings": 62,
+      "transoms": 0,
+      "roof_coping_m": 183.08,
+      "hollow_bells": 0,
+      "added_triangles": 2064
+    },
     "highlight_reference": null,
     "architecture_detail": {
       "reference": null,
@@ -20470,6 +21671,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "reference": null,
@@ -20528,6 +21730,13 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": {
+      "framed_openings": 102,
+      "transoms": 0,
+      "roof_coping_m": 0.0,
+      "hollow_bells": 0,
+      "added_triangles": 3264
+    },
     "highlight_reference": null,
     "architecture_detail": {
       "reference": null,
@@ -20585,6 +21794,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -20631,6 +21841,13 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": {
+      "framed_openings": 65,
+      "transoms": 0,
+      "roof_coping_m": 274.49,
+      "hollow_bells": 0,
+      "added_triangles": 3060
+    },
     "highlight_reference": null,
     "architecture_detail": {
       "reference": null,
@@ -20703,6 +21920,13 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": {
+      "framed_openings": 44,
+      "transoms": 0,
+      "roof_coping_m": 0.0,
+      "hollow_bells": 0,
+      "added_triangles": 1408
+    },
     "highlight_reference": null,
     "architecture_detail": {
       "reference": null,
@@ -20761,6 +21985,13 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": {
+      "framed_openings": 176,
+      "transoms": 54,
+      "roof_coping_m": 706.51,
+      "hollow_bells": 0,
+      "added_triangles": 7376
+    },
     "highlight_reference": null,
     "architecture_detail": {
       "reference": null,
@@ -20831,6 +22062,7 @@
       "hollow_bells": 0,
       "added_triangles": 2344
     },
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "reference": "https://www.fordlibrarymuseum.gov/visit/library",
@@ -20895,6 +22127,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "reference": null,
@@ -20953,6 +22186,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -21000,6 +22234,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "reference": null,
@@ -21056,6 +22291,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
@@ -21098,6 +22334,13 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": {
+      "framed_openings": 288,
+      "transoms": 0,
+      "roof_coping_m": 251.13,
+      "hollow_bells": 0,
+      "added_triangles": 9720
+    },
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
@@ -21140,6 +22383,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
@@ -21182,6 +22426,13 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": {
+      "framed_openings": 189,
+      "transoms": 0,
+      "roof_coping_m": 261.11,
+      "hollow_bells": 0,
+      "added_triangles": 6668
+    },
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
@@ -21224,6 +22475,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
@@ -21266,6 +22518,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
@@ -21308,6 +22561,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
@@ -21350,6 +22604,13 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": {
+      "framed_openings": 128,
+      "transoms": 0,
+      "roof_coping_m": 246.05,
+      "hollow_bells": 0,
+      "added_triangles": 4676
+    },
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
@@ -21392,6 +22653,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
@@ -21434,6 +22696,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
@@ -21476,6 +22739,13 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": {
+      "framed_openings": 264,
+      "transoms": 0,
+      "roof_coping_m": 233.46,
+      "hollow_bells": 0,
+      "added_triangles": 8836
+    },
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
@@ -21518,6 +22788,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
@@ -21560,6 +22831,13 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": {
+      "framed_openings": 72,
+      "transoms": 0,
+      "roof_coping_m": 182.65,
+      "hollow_bells": 0,
+      "added_triangles": 2576
+    },
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
@@ -21602,6 +22880,13 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": {
+      "framed_openings": 296,
+      "transoms": 0,
+      "roof_coping_m": 226.19,
+      "hollow_bells": 0,
+      "added_triangles": 9696
+    },
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
@@ -21644,6 +22929,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
@@ -21686,6 +22972,13 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": {
+      "framed_openings": 1001,
+      "transoms": 0,
+      "roof_coping_m": 739.75,
+      "hollow_bells": 0,
+      "added_triangles": 34060
+    },
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
@@ -21728,6 +23021,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
@@ -21770,6 +23064,13 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": {
+      "framed_openings": 517,
+      "transoms": 0,
+      "roof_coping_m": 339.11,
+      "hollow_bells": 0,
+      "added_triangles": 17116
+    },
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
@@ -21812,6 +23113,13 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": {
+      "framed_openings": 330,
+      "transoms": 0,
+      "roof_coping_m": 211.05,
+      "hollow_bells": 0,
+      "added_triangles": 10892
+    },
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
@@ -21854,6 +23162,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
@@ -21896,6 +23205,13 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": {
+      "framed_openings": 686,
+      "transoms": 0,
+      "roof_coping_m": 674.39,
+      "hollow_bells": 0,
+      "added_triangles": 23000
+    },
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
@@ -21938,6 +23254,13 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": {
+      "framed_openings": 252,
+      "transoms": 0,
+      "roof_coping_m": 458.48,
+      "hollow_bells": 0,
+      "added_triangles": 8696
+    },
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
@@ -21980,6 +23303,13 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": {
+      "framed_openings": 318,
+      "transoms": 0,
+      "roof_coping_m": 439.9,
+      "hollow_bells": 0,
+      "added_triangles": 11220
+    },
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
@@ -22022,6 +23352,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
@@ -22064,6 +23395,13 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": {
+      "framed_openings": 60,
+      "transoms": 0,
+      "roof_coping_m": 216.33,
+      "hollow_bells": 0,
+      "added_triangles": 3288
+    },
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
@@ -22106,6 +23444,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
@@ -22148,6 +23487,13 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": {
+      "framed_openings": 280,
+      "transoms": 0,
+      "roof_coping_m": 249.83,
+      "hollow_bells": 0,
+      "added_triangles": 9120
+    },
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
@@ -22190,6 +23536,13 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": {
+      "framed_openings": 145,
+      "transoms": 0,
+      "roof_coping_m": 221.5,
+      "hollow_bells": 0,
+      "added_triangles": 5312
+    },
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
@@ -22232,6 +23585,13 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": {
+      "framed_openings": 224,
+      "transoms": 0,
+      "roof_coping_m": 382.07,
+      "hollow_bells": 0,
+      "added_triangles": 7692
+    },
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
@@ -22274,6 +23634,13 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": {
+      "framed_openings": 208,
+      "transoms": 0,
+      "roof_coping_m": 336.34,
+      "hollow_bells": 0,
+      "added_triangles": 7056
+    },
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
@@ -22316,6 +23683,13 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": {
+      "framed_openings": 468,
+      "transoms": 0,
+      "roof_coping_m": 521.37,
+      "hollow_bells": 0,
+      "added_triangles": 15628
+    },
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
@@ -22358,6 +23732,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
@@ -22406,6 +23781,7 @@
       "hollow_bells": 0,
       "added_triangles": 27120
     },
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
@@ -22448,6 +23824,13 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": {
+      "framed_openings": 240,
+      "transoms": 0,
+      "roof_coping_m": 286.8,
+      "hollow_bells": 0,
+      "added_triangles": 8140
+    },
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
@@ -22490,6 +23873,13 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": {
+      "framed_openings": 357,
+      "transoms": 0,
+      "roof_coping_m": 384.57,
+      "hollow_bells": 0,
+      "added_triangles": 12092
+    },
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
@@ -22532,6 +23922,7 @@
     "aliases_zh": [],
     "construction_status": "Idle",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
@@ -22574,6 +23965,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
@@ -22616,6 +24008,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
@@ -22658,6 +24051,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
@@ -22700,6 +24094,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
@@ -22748,6 +24143,7 @@
       "hollow_bells": 0,
       "added_triangles": 49728
     },
+    "campus_joinery": null,
     "highlight_reference": "https://www.hok.com/projects/view/michigan-medicine-kahn-health-care-pavilion/",
     "architecture_detail": {
       "mapped_exterior_spec": {},
@@ -22790,6 +24186,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
@@ -22832,6 +24229,13 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": {
+      "framed_openings": 180,
+      "transoms": 0,
+      "roof_coping_m": 278.31,
+      "hollow_bells": 0,
+      "added_triangles": 6048
+    },
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
@@ -22874,6 +24278,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
@@ -22916,6 +24321,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
@@ -22958,6 +24364,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
@@ -23000,6 +24407,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
@@ -23042,6 +24450,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
@@ -23090,6 +24499,7 @@
       "hollow_bells": 0,
       "added_triangles": 18656
     },
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
@@ -23138,6 +24548,7 @@
       "hollow_bells": 0,
       "added_triangles": 68488
     },
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
@@ -23180,6 +24591,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
@@ -23222,6 +24634,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
@@ -23264,6 +24677,13 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": {
+      "framed_openings": 175,
+      "transoms": 0,
+      "roof_coping_m": 322.12,
+      "hollow_bells": 0,
+      "added_triangles": 7108
+    },
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -23311,6 +24731,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -23357,6 +24778,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -23403,6 +24825,13 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": {
+      "framed_openings": 81,
+      "transoms": 0,
+      "roof_coping_m": 180.52,
+      "hollow_bells": 0,
+      "added_triangles": 2816
+    },
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -23450,6 +24879,13 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": {
+      "framed_openings": 34,
+      "transoms": 0,
+      "roof_coping_m": 348.66,
+      "hollow_bells": 0,
+      "added_triangles": 3548
+    },
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -23497,6 +24933,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -23543,6 +24980,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -23590,6 +25028,13 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": {
+      "framed_openings": 66,
+      "transoms": 0,
+      "roof_coping_m": 168.97,
+      "hollow_bells": 0,
+      "added_triangles": 2520
+    },
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -23637,6 +25082,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -23683,6 +25129,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -23730,6 +25177,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -23776,6 +25224,13 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": {
+      "framed_openings": 180,
+      "transoms": 0,
+      "roof_coping_m": 360.29,
+      "hollow_bells": 0,
+      "added_triangles": 6080
+    },
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -23822,6 +25277,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -23868,6 +25324,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
@@ -23910,6 +25367,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -23957,6 +25415,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -24003,6 +25462,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -24049,6 +25509,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -24096,6 +25557,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -24142,6 +25604,13 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": {
+      "framed_openings": 90,
+      "transoms": 0,
+      "roof_coping_m": 212.61,
+      "hollow_bells": 0,
+      "added_triangles": 3248
+    },
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -24189,6 +25658,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -24235,6 +25705,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -24281,6 +25752,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -24327,6 +25799,13 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": {
+      "framed_openings": 106,
+      "transoms": 0,
+      "roof_coping_m": 501.5,
+      "hollow_bells": 0,
+      "added_triangles": 5644
+    },
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -24373,6 +25852,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -24419,6 +25899,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -24466,6 +25947,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -24513,6 +25995,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -24565,6 +26048,7 @@
       "hollow_bells": 0,
       "added_triangles": 3328
     },
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -24612,6 +26096,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -24659,6 +26144,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -24705,6 +26191,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -24751,6 +26238,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -24797,6 +26285,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -24843,6 +26332,13 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": {
+      "framed_openings": 74,
+      "transoms": 0,
+      "roof_coping_m": 288.38,
+      "hollow_bells": 0,
+      "added_triangles": 3076
+    },
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -24889,6 +26385,13 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": {
+      "framed_openings": 74,
+      "transoms": 0,
+      "roof_coping_m": 328.39,
+      "hollow_bells": 0,
+      "added_triangles": 3408
+    },
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -24942,6 +26445,7 @@
       "hollow_bells": 0,
       "added_triangles": 41340
     },
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "field_z": 20.159175204423875,
@@ -24997,6 +26501,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
@@ -25039,6 +26544,13 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": {
+      "framed_openings": 146,
+      "transoms": 0,
+      "roof_coping_m": 440.19,
+      "hollow_bells": 0,
+      "added_triangles": 5016
+    },
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -25086,6 +26598,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -25133,6 +26646,13 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": {
+      "framed_openings": 204,
+      "transoms": 0,
+      "roof_coping_m": 421.3,
+      "hollow_bells": 0,
+      "added_triangles": 6776
+    },
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -25180,6 +26700,13 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": {
+      "framed_openings": 216,
+      "transoms": 0,
+      "roof_coping_m": 476.05,
+      "hollow_bells": 0,
+      "added_triangles": 8568
+    },
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -25233,6 +26760,7 @@
       "hollow_bells": 0,
       "added_triangles": 8684
     },
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -25281,6 +26809,13 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": {
+      "framed_openings": 56,
+      "transoms": 0,
+      "roof_coping_m": 329.38,
+      "hollow_bells": 0,
+      "added_triangles": 3328
+    },
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -25327,6 +26862,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
@@ -25369,6 +26905,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
@@ -25411,6 +26948,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
@@ -25453,6 +26991,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
@@ -25495,6 +27034,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -25542,6 +27082,13 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": {
+      "framed_openings": 75,
+      "transoms": 0,
+      "roof_coping_m": 143.46,
+      "hollow_bells": 0,
+      "added_triangles": 2524
+    },
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -25589,6 +27136,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {
@@ -25636,6 +27184,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
@@ -25678,6 +27227,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
@@ -25720,6 +27270,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
@@ -25762,6 +27313,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
@@ -25804,6 +27356,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
@@ -25846,6 +27399,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
@@ -25888,6 +27442,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
@@ -25930,6 +27485,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
@@ -25972,6 +27528,13 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": {
+      "framed_openings": 124,
+      "transoms": 0,
+      "roof_coping_m": 362.68,
+      "hollow_bells": 0,
+      "added_triangles": 4104
+    },
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
@@ -26014,6 +27577,13 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": {
+      "framed_openings": 46,
+      "transoms": 0,
+      "roof_coping_m": 175.79,
+      "hollow_bells": 0,
+      "added_triangles": 1736
+    },
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
@@ -26056,6 +27626,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
@@ -26098,6 +27669,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
@@ -26140,6 +27712,13 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": {
+      "framed_openings": 50,
+      "transoms": 0,
+      "roof_coping_m": 165.12,
+      "hollow_bells": 0,
+      "added_triangles": 1776
+    },
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
@@ -26182,6 +27761,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
@@ -26224,6 +27804,13 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": {
+      "framed_openings": 156,
+      "transoms": 0,
+      "roof_coping_m": 337.06,
+      "hollow_bells": 0,
+      "added_triangles": 5444
+    },
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
@@ -26266,6 +27853,13 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": {
+      "framed_openings": 60,
+      "transoms": 0,
+      "roof_coping_m": 230.62,
+      "hollow_bells": 0,
+      "added_triangles": 2320
+    },
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
@@ -26308,6 +27902,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
@@ -26350,6 +27945,13 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": {
+      "framed_openings": 213,
+      "transoms": 0,
+      "roof_coping_m": 483.67,
+      "hollow_bells": 0,
+      "added_triangles": 7380
+    },
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
@@ -26392,6 +27994,7 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": null,
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},
@@ -26434,6 +28037,13 @@
     "aliases_zh": [],
     "construction_status": "Active",
     "highlight_joinery": null,
+    "campus_joinery": {
+      "framed_openings": 114,
+      "transoms": 0,
+      "roof_coping_m": 213.29,
+      "hollow_bells": 0,
+      "added_triangles": 3680
+    },
     "highlight_reference": null,
     "architecture_detail": {
       "mapped_exterior_spec": {},

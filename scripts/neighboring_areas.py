@@ -20,6 +20,7 @@ def project(x,y,z=None):
 REGIONS={
  'central':[-83.7520,42.2700,-83.7275,42.2860],
  'stadium':[-83.7545,42.2605,-83.7370,42.2705],
+ 'south_state':[-83.7545,42.2430,-83.7245,42.2665],
  'broadway':[-83.7380,42.2850,-83.7225,42.2980],
  'plymouth':[-83.7225,42.2980,-83.7030,42.3040],
 }
@@ -85,16 +86,16 @@ def read_osm():
 
 def prepare_neighbors(c):
  osm,pois=read_osm();print('Read neighboring source features:',len(osm),flush=True);selection=unary_union([*[transform(project,box(*b))for b in REGIONS.values()],*[f['poly']for f in osm if f['properties'].get('name')=='The Courtyards Student Apartments']]).buffer(0)
- # Protect every active university-owned building, including campus facilities
+ # Protect the facilities present in the campus model, including buildings
  # whose names or footprints differ in contributed maps.
- protected=unary_union([f['poly']for f in c.raw if f['properties'].get('Status')!='Planning'and f['properties'].get('Building_Type')not in ['BLDGU','PARKU']])
+ protected=c.footprints
  protected_buffer=protected.buffer(.12)
  accepted=[];candidates=[]
  for f in osm:
   p,t=f['poly'],f['properties']
   if not t.get('building')or p.geom_type not in ['Polygon','MultiPolygon']or p.area<24 or not selection.covers(p.representative_point()):continue
   if t.get('building')in ['roof','construction','demolished','ruins']or t.get('location')=='underground'or t.get('demolished:building'):continue
-  if 'university of michigan' in t.get('operator','').lower() or t.get('name','') in ['North Campus Storage Building','North Campus Facilities Service Building','North Campus Housing Service Building','Office of Property Disposition']:continue
+  if t.get('name','') in ['North Campus Storage Building','North Campus Facilities Service Building','North Campus Housing Service Building','Office of Property Disposition']:continue
   overlap=p.intersection(protected).area if p.intersects(protected)else 0
   if overlap>max(3,p.area*.02):continue
   if p.intersects(protected_buffer):p=p.difference(protected_buffer).buffer(0)
@@ -175,7 +176,10 @@ def build_neighbors(c,prepared):
   t,g=f['properties'],f['poly'];kind=t.get('highway')
   if g.geom_type not in ['LineString','MultiLineString']or not g.intersects(selection)or t.get('tunnel')=='yes'or t.get('layer','0').startswith('-'):continue
   if kind in widths:
-   width=numeric(t.get('width'),widths[kind],2,24);roadparts.append(g.buffer(width/2,cap_style=2,join_style=1));roadlines.append((g,width,t))
+   default_width=widths[kind]
+   if g.intersects(transform(project,box(*REGIONS['south_state'])))and kind not in ['service','living_street','pedestrian'] and t.get('lanes'):
+    default_width=max(default_width,numeric(t['lanes'],2,1,6)*3.05+.6)
+   width=numeric(t.get('width'),default_width,2,28);roadparts.append(g.buffer(width/2,cap_style=2,join_style=1));roadlines.append((g,width,t))
   elif kind in ['footway','path','steps','cycleway']:walkparts.append(g.buffer(numeric(t.get('width'),2.1 if kind!='cycleway'else 3,1,6)/2,cap_style=2,join_style=1))
  # Cemetery drives are real circulation, but their narrow light paving must
  # be classified before ordinary roads and roadside sidewalks are composed.
@@ -212,14 +216,14 @@ def build_neighbors(c,prepared):
  print('Neighbor landscape prepared:',len(accepted),'buildings',flush=True)
  for j,f in enumerate(accepted,1):
   p,t,z=f['poly'],f['properties'],f['grade'];code=f'N{j:04d}';address=' '.join(filter(None,[t.get('addr:housenumber'),t.get('addr:street')]))
-  name=t.get('name')or address or 'Ann Arbor building '+t['osm_id'].split('/')[-1];kind=t.get('building','yes');res=kind in ['house','detached','terrace','residential','apartments','dormitory']
+  name=t.get('name')or address or 'Ann Arbor building '+t['osm_id'].split('/')[-1];kind=t.get('building','yes');res=kind in ['house','detached','terrace','residential','apartments','dormitory'] or (kind=='yes' and p.area<500 and c.ground_plan['residential'].covers(p.representative_point()) and p.intersects(transform(project,box(*REGIONS['south_state']))))
   levels=int(numeric(t.get('building:levels'),2 if res or p.area<700 else 3,1,28));h=numeric(t.get('height'),levels*(3.05 if res else 3.55)+.6,3,100)
   wall='ContextBrick'if t.get('building:material')=='brick'or kind in ['house','detached','dormitory']else 'ContextStone'if kind in ['church','retail','yes']else 'ContextPanel';source='https://www.openstreetmap.org/'+t['osm_id']
   height_status='estimated'
   if name in PROFILES:levels,h,wall,source=PROFILES[name];height_status='municipal'
   is_courtyards=t['osm_id']in COURTYARDS
   if is_courtyards:h=15.75;levels=4;wall='ContextBrick'
-  roof_shape=t.get('roof:shape','gabled'if kind in ['house','detached']and p.area<400 else'flat');rise=min(3.4,h*.24)if roof_shape in ['gabled','hipped','half-hipped','mansard']else 0;body=h-rise-.15
+  roof_shape=t.get('roof:shape','gabled'if res and kind not in ['apartments','dormitory']and p.area<400 else'flat');rise=min(3.4,h*.24)if roof_shape in ['gabled','hipped','half-hipped','mansard']else 0;body=h-rise-.15
   roof='RoofContextSlate'if rise else 'RoofContextWarm'if t.get('roof:colour')in ['white','beige','silver']else 'RoofContext'
   lay=code+'_'+name.replace('/',' ').replace(':',' ')[:80];c.layer(lay,wall);ms={m:[]for m in c.COLORS}
   info={'NameEN':name,'Scope':'Campus neighboring areas','Units':'meters','FootprintSource':'https://www.openstreetmap.org/'+t['osm_id'],'Source':source,'Approximation':'Public-source exterior study; untagged height, roof shape and facade modules approximate.'}
@@ -277,6 +281,6 @@ def build_neighbors(c,prepared):
  with (OUT/'neighboring_building_dimensions_and_sources.csv').open('w',encoding='utf-8-sig',newline='')as fp:
   writer=csv.DictWriter(fp,fieldnames=list(dict.fromkeys(k for row in records for k in row)));writer.writeheader();writer.writerows(records)
  (OUT/'neighboring_footprints.geojson').write_text(json.dumps({'type':'FeatureCollection','coordinate_system':{'epsg': 32617, 'origin_easting': 274204.49096132047, 'origin_northing': 4684096.36214401, 'origin_wgs84': [-83.7382, 42.2764], 'unit': 'm', 'z_datum': 'local Z0=225m USGS DEM datum', 'note': 'Local projected meters, not RFC7946 longitude/latitude'},'features':[{'type':'Feature','properties':f['record'],'geometry':mapping(f['poly'])}for f in accepted]},ensure_ascii=False,separators=(',',':')))
- report={'ground_cover':ground_cover,'buildings':len(records),'trees':trees,'bounds':list(selection.bounds),'landscape_layer':'Neighboring_Environment','default_visible':True,'street_network':'State Street, South University, Main Street, Kerrytown, Packard, Broadway and Plymouth Road','pads':pads,'ground_samples':samples,'scope_geometry':mapping(area),'land_extent':mapping(selection),'mapped_road_area_m2':roads.area,'mapped_walk_area_m2':walks.area,'mapped_green_area_m2':lawn.area,'mapped_parking_area_m2':lot.area,'footprint_overlap_campus_m2':neighbor_fp.intersection(prepared['protected']).area,'regions_wgs84':REGIONS}
+ report={'ground_cover':ground_cover,'buildings':len(records),'trees':trees,'bounds':list(selection.bounds),'landscape_layer':'Neighboring_Environment','default_visible':True,'street_network':'State Street, South University, Main Street, Kerrytown, Packard, South State Street, South Industrial Highway, Eisenhower Parkway, Broadway and Plymouth Road','pads':pads,'ground_samples':samples,'scope_geometry':mapping(area),'land_extent':mapping(selection),'mapped_road_area_m2':roads.area,'mapped_walk_area_m2':walks.area,'mapped_green_area_m2':lawn.area,'mapped_parking_area_m2':lot.area,'footprint_overlap_campus_m2':neighbor_fp.intersection(prepared['protected']).area,'regions_wgs84':REGIONS}
  (OUT/'neighboring_areas.json').write_text(json.dumps(report,ensure_ascii=False,separators=(',',':')))
  return report

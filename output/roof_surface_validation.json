@@ -1,8 +1,8 @@
 {
-  "sourceSha256": "0da23d80650b2a75263a724ff38e55f95240efce00eae14353af04cb7fb53767",
+  "sourceSha256": "c6f928ce66de456ae2831155abeca36f539d26ffdefeaeeee1e7960e48a5011f",
   "campus_buildings": 554,
-  "horizontal_roof_triangles": 96016,
-  "checked_finish_planes": 1255,
+  "horizontal_roof_triangles": 139799,
+  "checked_finish_planes": 1564,
   "conflicting_surfaces": [],
   "passed": true
 }

@@ -32,6 +32,34 @@
       "retrieved": "2026-10-13",
       "url": "https://api.openstreetmap.org/api/0.6/map?bbox=-83.728,42.285,-83.692,42.309",
       "raw_sha256": "4c0b5fd9abfa4b65c508032610ae6bf6147ab53d6f265ba8d7c43880ac421176"
+    },
+    {
+      "file": "osm_neighbors_south_state_nw.xml.gz",
+      "url": "https://api.openstreetmap.org/api/0.6/map?bbox=-83.756,42.2545,-83.7375,42.2675",
+      "retrieved": "2026-10-17",
+      "raw_sha256": "ae60fa58374425c969aa65d8ac2d5b3eeed7039d1e92be8c686915eb8be1bafb",
+      "bytes": 4699281
+    },
+    {
+      "file": "osm_neighbors_south_state_ne.xml.gz",
+      "url": "https://api.openstreetmap.org/api/0.6/map?bbox=-83.7375,42.2545,-83.719,42.2675",
+      "retrieved": "2026-10-17",
+      "raw_sha256": "1885a69846bd3a03a47ff267f25fec879ebfc72aec04a229c000d970bc94923a",
+      "bytes": 5452559
+    },
+    {
+      "file": "osm_neighbors_south_state_sw.xml.gz",
+      "url": "https://api.openstreetmap.org/api/0.6/map?bbox=-83.756,42.242,-83.7375,42.2545",
+      "retrieved": "2026-10-17",
+      "raw_sha256": "6aef2bcca5d4d23300c0a56befc75f3d1447adb689ce314481993e9afa374fa1",
+      "bytes": 3621862
+    },
+    {
+      "file": "osm_neighbors_south_state_se.xml.gz",
+      "url": "https://api.openstreetmap.org/api/0.6/map?bbox=-83.7375,42.242,-83.719,42.2545",
+      "retrieved": "2026-10-17",
+      "raw_sha256": "9b0f9edbd2dad5e689a77c4782f0e588dc8cac576967b811fce3016b728dc5c4",
+      "bytes": 3776431
     }
   ],
   "license": "OpenStreetMap contributors, ODbL 1.0",

@@ -1,5 +1,5 @@
 {
-  "filled_ground_probes": 7,
+  "filled_ground_probes": 12,
   "probe_positions_local_m": [
     [
       1230,
@@ -28,27 +28,48 @@
     [
       1000,
       1900
+    ],
+    [
+      -1100,
+      -3000
+    ],
+    [
+      -600,
+      -3200
+    ],
+    [
+      -300,
+      -3500
+    ],
+    [
+      350,
+      -2800
+    ],
+    [
+      700,
+      -3250
     ]
   ],
   "forest_hill_internal_drive_area_m2": 25065.35,
   "remaining_main_road_or_walk_overlap_m2": 0.0035,
-  "exported_railway_ballast_area_m2": 53387.32,
+  "exported_railway_ballast_area_m2": 69750.66,
   "ground_cover": {
-    "continuous_infill_m2": 4789057.7,
-    "mapped_park_and_cemetery_m2": 764407.63,
-    "mapped_woodland_m2": 385297.49,
-    "residential_landcover_m2": 2120480.44,
-    "interpreted_yard_transition_m2": 383341.16,
-    "commercial_ground_m2": 136406.87,
-    "parking_area_m2": 290754.83,
-    "construction_or_gravel_m2": 16826.02,
-    "paved_apron_m2": 85595.42,
-    "entry_paths_m2": 8404.1,
-    "railway_centerline_m": 7283.86,
-    "railway_ballast_m2": 53386.95,
+    "continuous_infill_m2": 7618558.93,
+    "mapped_park_and_cemetery_m2": 1121177.3,
+    "mapped_woodland_m2": 554359.58,
+    "residential_landcover_m2": 3547106.71,
+    "interpreted_yard_transition_m2": 644080.5,
+    "commercial_ground_m2": 488757.4,
+    "parking_area_m2": 593189.65,
+    "construction_or_gravel_m2": 52869.97,
+    "paved_apron_m2": 184664.84,
+    "entry_paths_m2": 14366.46,
+    "railway_centerline_m": 9437.4,
+    "railway_ballast_m2": 69751.56,
     "cemetery_drive_m2": 34773.25,
-    "woodland_canopy_estimates": 622,
+    "woodland_canopy_estimates": 915,
     "cemetery_canopy_estimates": 300,
+    "south_residential_canopy_estimates": 500,
     "interpretation": "Mapped land use and aerial-reviewed surface character; unrecorded setbacks, entry links and canopy positions are approximate."
   },
   "passed": true

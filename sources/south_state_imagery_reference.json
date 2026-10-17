@@ -1,0 +1,22 @@
+{
+  "source": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export?bbox=-83.755%2C42.242%2C-83.719%2C42.2675&bboxSR=4326&imageSR=4326&size=1800%2C1350&format=jpg&f=json",
+  "provider": "Esri World Imagery",
+  "retrieved": "2026-10-17",
+  "purpose": "Review existing South State/Eisenhower neighborhoods, streets, parking, woods and drainage; no imagery pixels redistributed",
+  "response": {
+    "href": "https://server.arcgisonline.com/arcgis/rest/directories/arcgisoutput/World_Imagery_MapServer/_ags_mapca6318d6a92d4a98bcb494218fc2fdbc.jpg",
+    "width": 1800,
+    "height": 1350,
+    "extent": {
+      "xmin": -83.755,
+      "ymin": 42.24125,
+      "xmax": -83.719,
+      "ymax": 42.26825,
+      "spatialReference": {
+        "wkid": 4326,
+        "latestWkid": 4326
+      }
+    },
+    "scale": 8414.684836860184
+  }
+}

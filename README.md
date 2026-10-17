@@ -19,7 +19,7 @@ A bilingual exterior model of the **University of Michigan, Ann Arbor**. Open `i
 | `output/campus_overview.png` | Four-sector overview |
 | `output/campus_plan.png` | North-up campus plan |
 
-The model contains **554 campus building layers + one campus environment layer**, plus **3,385 neighboring building layers and a separate neighboring environment layer**, 29 architectural highlights and 13,406 mapped tree positions. Buildings sharing one official facility number share one layer, including disconnected mapped pieces. Underground-only footprints and planning-only buildings are listed in `output/excluded_records.json`.
+The model contains **554 campus building layers + one campus environment layer**, plus **5,818 neighboring building layers and a separate neighboring environment layer**, 29 architectural highlights and 13,404 mapped tree positions. Buildings sharing one official facility number share one layer, including disconnected mapped pieces. Underground-only footprints and planning-only buildings are listed in `output/excluded_records.json`.
 
 The initial view is centered on The Diag’s central plaza, looking from the southwest at a lower oblique angle with Central Campus clearly visible. Campus and Reset restore the same center, bearing and scale; district buttons provide closer views.
 
@@ -43,7 +43,7 @@ Use the `.3dm` file for native building layers and editable closed massing solid
 
 ## Website and SEO
 
-The intended domain is **umich.arch.songming.org**. Canonical URL, Open Graph/Twitter cards, bilingual titles/descriptions, structured WebSite/WebPage/3DModel data, sitemap, robots and `CNAME` are configured consistently. The static HTML includes all 3939 campus and neighboring English/Chinese building names for crawling and no-JavaScript browsing.
+The intended domain is **umich.arch.songming.org**. Canonical URL, Open Graph/Twitter cards, bilingual titles/descriptions, structured WebSite/WebPage/3DModel data, sitemap, robots and `CNAME` are configured consistently. The static HTML includes all 6372 campus and neighboring English/Chinese building names for crawling and no-JavaScript browsing.
 
 The interactive payload uses lossless geometry coding plus gzip; the original `.3ds` remains available to download. The root local edition loads compressed data through a classic script to avoid `file://` fetch restrictions. The single-file offline edition embeds the model, font, preview and engine. Use a current browser with WebGL 2 and Compression Streams support.
 
@@ -108,9 +108,9 @@ Roof shadow filtering uses a fixed PCF kernel with receiver-plane depth correcti
 
 ## Website model compression
 
-Interactive browsing starts with a **16.66 MB** regional overview. It does not restore the entire source CAD at startup. Nearby full-detail packets are requested within explicit geometry budgets and disposed when they leave the working area. Repeated components use shared templates and instancing; distant facades and tree crowns use a simplified browsing derivative.
+Interactive browsing starts with a **22.41 MB** regional overview. It does not restore the entire source CAD at startup. Nearby full-detail packets are requested within explicit geometry budgets and disposed when they leave the working area. Repeated components use shared templates and instancing; distant facades and tree crowns use a simplified browsing derivative.
 
-The lossless full-CAD web stream is 39.33 MB for the current 158.60 MB 3DS, but it is separate from initial regional browsing. Full CAD downloads use the unchanged metric source archived as `.3ds.gz`; the standalone edition uses the adjacent archive. Regional geometry is a visual derivative, while original CAD archive/codec restoration is byte-exact. See `docs/REGIONAL_RENDERING.md`, `output/streaming_model_report.json` and `output/web_model_report.json` for scope, limits, exact sizes and digests.
+The lossless full-CAD web stream is 54.16 MB for the current 220.12 MB 3DS, but it is separate from initial regional browsing. Full CAD downloads use the unchanged metric source archived as `.3ds.gz`; the standalone edition uses the adjacent archive. Regional geometry is a visual derivative, while original CAD archive/codec restoration is byte-exact. See `docs/REGIONAL_RENDERING.md`, `output/streaming_model_report.json` and `output/web_model_report.json` for scope, limits, exact sizes and digests.
 
 ## Architectural and parking refinement
 
@@ -137,3 +137,9 @@ See `sources/NEIGHBORHOOD_REFERENCES.md` and `sources/neighboring_source_manifes
 All three neighboring Courtyards buildings at 1760, 1770 and 1780 Broadway retain their mapped open courts and now have photo-referenced gray hipped roofs, alternating brick/pale facade fields, framed windows, supported entrances and furnished courtyard decks. They remain separate neighboring-area layers, without standing labels; hover and search are available. Exterior dimensions and secondary details remain approximate.
 
 Highlights Explore preserves the selected building’s original materials; direct model and list clicks retain the existing highlight.
+
+## South State community and major-building refinement
+
+The South State / South Industrial / Eisenhower context now joins the formerly detached southern athletic parcels with mapped streets, paths, buildings, parking outlines, golf-course turf and residential/woodland transitions. The neighboring inventory contains 5,818 buildings; mapped campus footprints remain authoritative. Heights, inferred residential roof forms and supplemental yard trees remain approximate.
+
+205 campus buildings now have detailed opening/roof-edge treatment, including 176 additional major buildings beyond the existing highlights. Existing building-specific wing divisions and courtyard voids are preserved. These attached details remain near-only in the regional viewer; full original CAD and the existing detail memory/triangle budgets are retained. See `docs/PROJECT_NOTES.md` and `sources/NEIGHBORHOOD_REFERENCES.md`.

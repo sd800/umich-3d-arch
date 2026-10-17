@@ -1,10 +1,10 @@
 {
-  "neighboring_buildings": 3385,
-  "retained_source_hashes_verified": 5,
+  "neighboring_buildings": 5818,
+  "retained_source_hashes_verified": 9,
   "duplicate_or_campus_overlaps": 0,
-  "ground_samples": 3385,
+  "ground_samples": 5818,
   "maximum_ground_contact_gap_m": 3.6475999110052726e-06,
-  "ground_triangles": 68325,
+  "ground_triangles": 135377,
   "separate_building_and_environment_layers": true,
   "passed": true
 }
