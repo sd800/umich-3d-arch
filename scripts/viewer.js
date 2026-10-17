@@ -1,3 +1,5 @@
+import highlightViews from '../config/highlight-views.json';
+import {highlightCamera} from './highlight_camera.js';
 import {createRegionStream} from './region_stream.js';
 import {installHighlightsPanel} from './highlights_panel.js';
 import {createOutdoorPicker,groundPoint,installCampusHover} from './outdoor_hover.js';
@@ -172,7 +174,7 @@ function fullView(mode){
  if(overview){const center=b.getCenter(new THREE.Vector3()),[x,y]=data.overviewCenter;b.translate(new THREE.Vector3(x-center.x,y-center.y,0));}
  fitBox(b,mode==='plan'?'plan':'aerial',overview?1.3:1.16,false,overview?new THREE.Vector3(-1.15,-.95,1.2):undefined,overview?2500:50);
 }
-function focusBuilding(code){if(!modelReady){pendingFocus=code;return;}const g=buildings.get(code);if(!g||!camera)return;g.visible=true;g.updateWorldMatrix(true,true);viewMode='focus';setViewButtons();fitBox(g.userData.bounds||new THREE.Box3().setFromObject(g),'aerial',1.55,true);}
+function focusBuilding(code){if(!modelReady){pendingFocus=code;return;}const g=buildings.get(code);if(!g||!camera)return;g.visible=true;g.updateWorldMatrix(true,true);viewMode='focus';setViewButtons();const shot=highlightCamera(byCode.get(code),highlightViews);fitBox(g.userData.bounds||new THREE.Box3().setFromObject(g),'aerial',shot.pad,true,shot.direction);}
 for(const id of ['north-view','medical-view','athletic-view'])$(id).onclick=()=>fullView(id);
 $('aerial').onclick=()=>fullView('aerial');$('plan').onclick=()=>fullView('plan');$('core').onclick=()=>fullView('core');$('reset-view').onclick=()=>{resetInteraction();selectBuilding(null);$('cut-enabled').checked=false;updateCut();fullView('aerial');};
 function updateLabels(){

@@ -1,5 +1,10 @@
 # Changelog
 
+## 26.10.17.2 — 2026-10-17
+
+- Give 29 architectural highlights individual architectural aerial-photography cameras, choosing principal entrances, courtyard-facing elevations or characteristic volumes instead of one shared viewing direction. Use lower facade views and higher courtyard/sports-bowl views with portrait/landscape-safe framing.
+- Bundle the stable-ID camera catalogue for online, local and standalone editions; preserve existing explicit record cameras, initial/district views, selection colors, source CAD and regional detail budgets.
+
 ## 26.10.17.1 — 2026-10-17
 
 - Complete South State/Eisenhower neighboring context from four retained public map snapshots: buildings, mapped streets/paths, parking, golf-course turf, residential grounds and woodland transitions. Join the detached southern parcels to continuous terrain.

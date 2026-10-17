@@ -1,0 +1,240 @@
+{
+  "review_date": "2026-10-17",
+  "coordinate_convention": "Camera-side azimuth clockwise from model north (+Y); elevation above ground. +X is east.",
+  "basis": "Editorial presentation choices inferred from the retained mapped plans and university/architect exterior references; not surveyed entrance bearings or a reproduction of a particular photograph.",
+  "views": {
+    "1000198": {
+      "name": "Detroit Observatory",
+      "azimuth_deg": 225,
+      "elevation_deg": 24,
+      "padding": 1.65,
+      "composition": "Southwest entrance and observatory drum/domes",
+      "reference": "https://tour.umich.edu/"
+    },
+    "1000172": {
+      "name": "Rackham Graduate School",
+      "azimuth_deg": 195,
+      "elevation_deg": 25,
+      "padding": 1.6,
+      "composition": "South ceremonial steps and symmetrical Rackham elevation",
+      "reference": "https://tour.umich.edu/"
+    },
+    "1005177": {
+      "name": "North Quadrangle Residential & Academic Complex",
+      "azimuth_deg": 315,
+      "elevation_deg": 30,
+      "padding": 1.65,
+      "composition": "State/Huron street corner and the upper residential silhouette",
+      "reference": "https://tour.umich.edu/"
+    },
+    "1000155": {
+      "name": "Burton Memorial Tower",
+      "azimuth_deg": 205,
+      "elevation_deg": 21,
+      "padding": 1.75,
+      "composition": "Southwest mall approach and open carillon silhouette",
+      "reference": "https://bentley.umich.edu/discover/bentley-materials/campus-tour/building-index/burton-tower/"
+    },
+    "1000191": {
+      "name": "Michigan League",
+      "azimuth_deg": 225,
+      "elevation_deg": 26,
+      "padding": 1.6,
+      "composition": "West public entrance, south wing and pitched roofs",
+      "reference": "https://tour.umich.edu/"
+    },
+    "1000177": {
+      "name": "Hill Auditorium",
+      "azimuth_deg": 195,
+      "elevation_deg": 24,
+      "padding": 1.6,
+      "composition": "North University entrance steps and monumental south facade",
+      "reference": "https://tour.umich.edu/"
+    },
+    "1000152": {
+      "name": "Angell Hall and Tisch Hall",
+      "azimuth_deg": 285,
+      "elevation_deg": 25,
+      "padding": 1.6,
+      "composition": "State Street Doric portico, with the classroom wings receding behind",
+      "reference": "https://tour.umich.edu/"
+    },
+    "1000185": {
+      "name": "Hatcher Graduate Library · North",
+      "azimuth_deg": 350,
+      "elevation_deg": 25,
+      "padding": 1.6,
+      "composition": "North reading-room entrance from The Diag",
+      "reference": "https://tour.umich.edu/"
+    },
+    "1000151": {
+      "name": "University of Michigan Museum of Art",
+      "azimuth_deg": 285,
+      "elevation_deg": 26,
+      "padding": 1.6,
+      "composition": "State Street museum portico and the original classical volume",
+      "reference": "https://tour.umich.edu/"
+    },
+    "1000159": {
+      "name": "William L. Clements Library",
+      "azimuth_deg": 340,
+      "elevation_deg": 25,
+      "padding": 1.6,
+      "composition": "North loggia, three entrance arches and broad steps",
+      "reference": "https://tour.umich.edu/"
+    },
+    "1000120": {
+      "name": "Michigan Union",
+      "azimuth_deg": 105,
+      "elevation_deg": 27,
+      "padding": 1.65,
+      "composition": "State Street east entrance and Union tower",
+      "reference": "https://tour.umich.edu/"
+    },
+    "1000108": {
+      "name": "Lawyers Club and Charles T. Munger Residences",
+      "azimuth_deg": 160,
+      "elevation_deg": 32,
+      "padding": 1.6,
+      "composition": "Law Quad interior-facing residential wings and slate roofs",
+      "reference": "https://michigan.law.umich.edu/about-michigan-law/michigan-law-architecture"
+    },
+    "1000184": {
+      "name": "William W. Cook Legal Research Library",
+      "azimuth_deg": 340,
+      "elevation_deg": 30,
+      "padding": 1.6,
+      "composition": "Law Quad north-facing reading-hall elevation and library tower",
+      "reference": "https://michigan.law.umich.edu/about-michigan-law/michigan-law-architecture"
+    },
+    "1000179": {
+      "name": "Hutchins Hall",
+      "azimuth_deg": 35,
+      "elevation_deg": 32,
+      "padding": 1.6,
+      "composition": "Law Quad courtyard-facing north/east elevations",
+      "reference": "https://michigan.law.umich.edu/about-michigan-law/michigan-law-architecture"
+    },
+    "1005188": {
+      "name": "Ross School of Business",
+      "azimuth_deg": 285,
+      "elevation_deg": 30,
+      "padding": 1.65,
+      "composition": "Tappan Street frontage, glazed Winter Garden and terracotta academic bar",
+      "reference": "https://tour.umich.edu/"
+    },
+    "1005418": {
+      "name": "Ford Robotics Building",
+      "azimuth_deg": 230,
+      "elevation_deg": 28,
+      "padding": 1.6,
+      "composition": "Southwest arrival glazing and distinct robotics research volumes",
+      "reference": "https://tour.umich.edu/text-based/tours/engineering/"
+    },
+    "1005092": {
+      "name": "Bob & Betty Beyster Building",
+      "azimuth_deg": 215,
+      "elevation_deg": 28,
+      "padding": 1.6,
+      "composition": "Campus-facing public glazing and connected research wings",
+      "reference": "https://tour.umich.edu/"
+    },
+    "1005504": {
+      "name": "Leinweber Computer Science & Information Building",
+      "azimuth_deg": 230,
+      "elevation_deg": 28,
+      "padding": 1.6,
+      "composition": "Campus-facing entrance and projecting framed glazing",
+      "reference": "https://cse.engin.umich.edu/about/our-facilities/"
+    },
+    "1000394": {
+      "name": "Ann & Robert H. Lurie Tower",
+      "azimuth_deg": 205,
+      "elevation_deg": 20,
+      "padding": 1.8,
+      "composition": "Southwest grove approach showing the shaft and open bell chamber",
+      "reference": "https://tour.umich.edu/text-based/locations/lurie-tower/"
+    },
+    "1000396": {
+      "name": "Duderstadt Center",
+      "azimuth_deg": 335,
+      "elevation_deg": 28,
+      "padding": 1.65,
+      "composition": "North portico and glazed commons facing the Grove",
+      "reference": "https://www.dc.umich.edu/about-the-dc/"
+    },
+    "1000432": {
+      "name": "Art & Architecture Building",
+      "azimuth_deg": 145,
+      "elevation_deg": 30,
+      "padding": 1.6,
+      "composition": "Bonisteel approach and the studio-wing roof profile",
+      "reference": "https://tour.umich.edu/"
+    },
+    "1000446": {
+      "name": "Gerald R. Ford Presidential Library",
+      "azimuth_deg": 315,
+      "elevation_deg": 27,
+      "padding": 1.6,
+      "composition": "Northwest entry court and low library roof composition",
+      "reference": "https://tour.umich.edu/"
+    },
+    "1005109": {
+      "name": "Frankel Cardiovascular Center",
+      "azimuth_deg": 205,
+      "elevation_deg": 30,
+      "padding": 1.65,
+      "composition": "Southwest arrival and layered glazed clinical wings",
+      "reference": "https://tour.umich.edu/"
+    },
+    "1005440": {
+      "name": "D. Dan & Betty Kahn Health Care Pavilion",
+      "azimuth_deg": 210,
+      "elevation_deg": 28,
+      "padding": 1.65,
+      "composition": "Southwest hospital tower frontage, avoiding the eastern hospital cluster",
+      "reference": "https://www.hok.com/projects/view/michigan-medicine-kahn-health-care-pavilion/"
+    },
+    "1005037": {
+      "name": "Taubman Biomedical Science Research Building",
+      "azimuth_deg": 225,
+      "elevation_deg": 30,
+      "padding": 1.6,
+      "composition": "Southwest public entrance and research-wing glazing",
+      "reference": "https://tour.umich.edu/"
+    },
+    "1005173": {
+      "name": "C. S. Mott Children's Hospital & Von Voigtlander Women's Hospital",
+      "azimuth_deg": 165,
+      "elevation_deg": 29,
+      "padding": 1.65,
+      "composition": "South arrival and stepped hospital tower frontage",
+      "reference": "https://tour.umich.edu/"
+    },
+    "1000709": {
+      "name": "Yost Ice Arena",
+      "azimuth_deg": 285,
+      "elevation_deg": 25,
+      "padding": 1.6,
+      "composition": "State Street brick gable and long arena elevation",
+      "reference": "https://tour.umich.edu/"
+    },
+    "1000711": {
+      "name": "Michigan Stadium",
+      "azimuth_deg": 45,
+      "elevation_deg": 43,
+      "padding": 1.65,
+      "composition": "Northeast open bowl showing the field, seating and west press-box front",
+      "reference": "https://bentley.umich.edu/athdept/stadium/stadtext/stadbild.htm"
+    },
+    "1000700": {
+      "name": "Crisler Center",
+      "azimuth_deg": 55,
+      "elevation_deg": 29,
+      "padding": 1.6,
+      "composition": "Northeast glazed arrival and low arena roof",
+      "reference": "https://tour.umich.edu/"
+    }
+  },
+  "preserved": {}
+}
