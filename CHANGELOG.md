@@ -1,5 +1,10 @@
 # Changelog
 
+## 26.10.18.3 — 2026-10-18
+
+- Gate the live view readout before activation on mobile: when one footer line cannot accommodate it, skip camera calculations, value formatting and view-data DOM creation entirely. Recheck only on layout or language changes, and restore the readout when space permits without adding footer rows.
+- Use the same regular text weight and row styling for Campus neighboring areas as the other sidebar entries, without a divider below.
+
 ## 26.10.18.2 — 2026-10-18
 
 - Show the live camera azimuth, elevation, vertical view span and model-space view center beside the public-source model status. Update on navigation, presets, zoom, resize and language changes, including off-axis horizontal framing.
