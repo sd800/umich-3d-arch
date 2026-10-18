@@ -10,6 +10,10 @@ Detail residency budgets: 40 MiB / 1.1 million triangles / 7 regions for coarse 
 
 Generated overview: 22,406,455 transfer bytes; 2,917,196 triangles; 975 draw entries; 65,969,650 estimated geometry bytes. There are 574 detailed regions.
 
-HTTP uses content-hashed binary packets; local double-click uses paired classic-script packets with integrity checks. The standalone edition embeds compressed packets and decodes only the overview and requested regions. Its full CAD download uses the adjacent .3ds.gz archive.
+HTTP uses content-hashed binary packets; local double-click uses paired classic-script packets with integrity checks. The standalone edition embeds compressed packets and decodes only the overview and requested regions. Its Guide links to adjacent 3DM, FBX and GLB downloads, with lossless XZ archives for oversized files.
 
 Build after CAD changes: `npm run build:stream`, then `npm run build`. The Python model toolchain needs NumPy, SciPy and trimesh; meshoptimizer 1.3.0 is a pinned build dependency. Focused checks: `npm run check:stream`, model-byte/SEO checks and applicable interaction checks.
+
+## GLB geometry delivery
+
+The region builder now reads the extension-free full GLB. Near cells and independent overview cells are standard gzipped GLBs; the overview file is only their directory/container. Instancing, feature ownership, visibility rules, detail thresholds and memory budgets are unchanged. The UCSB campus subset uses losslessly compressed GLB separately from its neighboring cells. See `COMPRESSION.md` for formats and integrity checks.

@@ -573,6 +573,8 @@ for zone,g in [('Campus',scope),*zone_shapes.items()]:
 model.Strings['ModelNotes']='University of Michigan Ann Arbor exterior approximation. Unit meters. One layer per facility; campus environment on 环境_Environment; neighboring buildings on individual N layers and neighboring landscape on Neighboring_Environment. Source terrain: USGS 3DEP sampled to ~18m; local Z0=225m DEM datum, building pads simplified. Heights distinguish published source conflicts, historical municipal estimates and massing estimates. Not official university BIM or survey.'
 model.Strings['MeshCoordinateStorage']='F32 as in 3DS; native extrusion profiles retained. Normals derive from the stored faces.'
 assert model.Write(str(OUT/'UMich_AnnArbor_Layered.3dm'),7)
+from campus_exchange import export_scene
+export_scene(ROOT,objects,COLORS,layer_map,records)
 def chunk(tag,data=b''):return struct.pack('<HI',tag,len(data)+6)+data
 def zs(s):return s.encode('ascii')+b'\0'
 def rgb(c):return chunk(0x0011,bytes(c))

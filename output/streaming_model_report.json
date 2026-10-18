@@ -1,5 +1,5 @@
 {
-  "sourceSha256": "f96e8f90e9bb3196b289ae8dd62e5cd79234e36fc3a1142c394e372d92bdc58d",
+  "sourceSha256": "656fdfbaf38e6cc20c63b6cc3377b7b70b6cc4637693540f9401415cd4c55163",
   "originalTriangles": 13255560,
   "originalObjects": 27236,
   "regions": 574,
@@ -7,10 +7,10 @@
   "geometryTemplates": 39219,
   "overview": {
     "id": "overview",
-    "url": "assets/stream/overview-aa0b6bbbc7d8.bin",
-    "local": "assets/stream/overview-aa0b6bbbc7d8.js",
-    "sha256": "aa0b6bbbc7d8b401aef9998df5b1d7ba48b6eb8a6bb8ca40df084d8b9ac43ff9",
-    "transferBytes": 22627512,
+    "url": "assets/stream/overview-28bbfdcfddca.bin",
+    "local": "assets/stream/overview-28bbfdcfddca.js",
+    "sha256": "28bbfdcfddca0899e52641d653d566ae79f59885a1f4181108a1e08140cb231a",
+    "transferBytes": 22888406,
     "triangles": 2946190,
     "gpuBytes": 66795110,
     "decodedBytes": 65774898,
@@ -24,7 +24,8 @@
       122.98653411865234
     ]
   },
-  "allRegionalTransferBytes": 49607178,
+  "allRegionalTransferBytes": 55130910,
   "preservesCAD": true,
-  "overviewApproximation": "Position-only error-bounded simplification; 20-face tree crowns at unchanged source positions. Near regions retain source building triangles and repeated facade geometry; no CAD edits."
+  "overviewApproximation": "Position-only error-bounded simplification; 20-face tree crowns at unchanged source positions. Near regions retain source building triangles and repeated facade geometry; no CAD edits.",
+  "deliveryFormat": "campus-glb-regions-v1"
 }

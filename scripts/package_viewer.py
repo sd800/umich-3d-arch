@@ -154,22 +154,29 @@ if xi[-1]!=len(xs)-1:xi.append(len(xs)-1)
 if yi[-1]!=len(ys)-1:yi.append(len(ys)-1)
 ground_grid={'x':[round(float(xs[i]),2) for i in xi],'y':[round(float(ys[i]),2) for i in yi],'heights':np.round((dem[::-1]-225)[np.ix_(yi,xi)],2).tolist()}
 seo={'en':{k:config[k] for k in ['title','description','imageAlt']},'zh':config['zh']}
-cad_archive=out/'UMich_AnnArbor.3ds.gz';cad_bytes=cad_archive.read_bytes()
-model=(out/'UMich_AnnArbor.3ds').read_bytes();from web_model_package import web_payload
+cad_bytes=(out/'UMich_AnnArbor.glb').read_bytes()
+model=(out/'UMich_AnnArbor.glb').read_bytes();from web_model_package import web_payload
 web,compressed=web_payload(root,model)
 encoded=base64.b64encode(compressed).decode();preview=base64.b64encode((out/'campus_aerial.png').read_bytes()).decode()
 rail_hits=unary_union([f['poly'].buffer(4)for f in context_features if f['properties'].get('railway')=='rail'and f['properties'].get('name')=='Ann Arbor Railroad'])
 if not rail_hits.is_empty:hover_places.append({'id':'NE_RAIL','name':'Ann Arbor Railroad','name_zh':'安娜堡铁路','neighbor':True,'hitArea':mapping(rail_hits.intersection(shape(neighbor_report['land_extent']))),'source':'https://www.openstreetmap.org/copyright'})
 
-b=summary['bounds'];data={**web,'neighbors':neighbors,'neighborPads':neighbor_report['pads'],'neighborBounds':neighbor_report['bounds'],'groundPads':grade_pads(out),'overviewCenter':overview_center,'groundGrid':ground_grid,'modelByteLength':len(model),'modelTransferBytes':len(compressed),'layers':json.loads((out/'layer_map.json').read_text()),'palette':json.loads((out/'palette.json').read_text()),'records':records,'preview':'output/campus_aerial.png','downloadUrl':'output/UMich_AnnArbor.3ds','downloadArchiveUrl':'output/UMich_AnnArbor.3ds.gz','compression':'gzip','offlineModelScript':'assets/model-local.js','seo':seo,'landmarkOrder':LANDMARKS,'districtBounds':{**summary['district_bounds'],'central':[-650,-650,1000,800]},'siteCenter':[(b[0]+b[2])/2,(b[1]+b[3])/2],'places':places,'hoverPlaces':hover_places}
+b=summary['bounds'];data={**web,'neighbors':neighbors,'neighborPads':neighbor_report['pads'],'neighborBounds':neighbor_report['bounds'],'groundPads':grade_pads(out),'overviewCenter':overview_center,'groundGrid':ground_grid,'modelByteLength':len(model),'modelTransferBytes':len(compressed),'layers':json.loads((out/'layer_map.json').read_text()),'palette':json.loads((out/'palette.json').read_text()),'records':records,'preview':'output/campus_aerial.png','downloadUrl':'output/UMich_AnnArbor.glb','compression':'gzip','offlineModelScript':'assets/model-local.js','seo':seo,'landmarkOrder':LANDMARKS,'districtBounds':{**summary['district_bounds'],'central':[-650,-650,1000,800]},'siteCenter':[(b[0]+b[2])/2,(b[1]+b[3])/2],'places':places,'hoverPlaces':hover_places}
 data['regions']=json.loads((assets/'stream/manifest.json').read_text())
 assert data['regions']['sourceSha256']==hashlib.sha256(model).hexdigest()
 schema={'@context':'https://schema.org','@graph':[
 {'@type':'WebSite','@id':site+'#website','url':site,'name':'UMich Campus 3D Model','inLanguage':['en','zh-CN'],'sameAs':config['repository'],'image':site+'assets/brand/m-map.png'},
 {'@type':'WebPage','@id':site+'#webpage','url':site,'name':config['title'],'description':config['description'],'inLanguage':['en','zh-CN'],'isPartOf':{'@id':site+'#website'},'mainEntity':{'@id':site+'#model'},'dateModified':date.today().isoformat(),'primaryImageOfPage':{'@type':'ImageObject','url':site+'output/campus_aerial.png','width':Image.open(out/'campus_aerial.png').width,'height':Image.open(out/'campus_aerial.png').height}},
-{'@type':'3DModel','@id':site+'#model','name':'University of Michigan Ann Arbor exterior campus model','description':f"Independent public-source model with {len(records)} campus building layers, {len(neighbors)} independently toggleable neighboring buildings, separate landscape layers, university GIS landscape and sampled USGS terrain. Heights and exterior geometry are approximate and carry source notes.",'contentUrl':site+'output/UMich_AnnArbor.3ds.gz','encodingFormat':'application/gzip','contentSize':str(len(cad_bytes))+' bytes','sha256':hashlib.sha256(cad_bytes).hexdigest(),'thumbnailUrl':site+'output/campus_aerial.png','contentLocation':{'@type':'Place','name':'University of Michigan Ann Arbor campus','address':{'@type':'PostalAddress','addressLocality':'Ann Arbor','addressRegion':'MI','addressCountry':'US'}},'isBasedOn':['https://www.openstreetmap.org/copyright','https://map.fo.umich.edu/','https://tour.umich.edu/','https://elevation.nationalmap.gov/arcgis/rest/services/3DEPElevation/ImageServer','https://www.a2gov.org/media/aoxh1zdd/appendixb_10-10-13.pdf']}
+{'@type':'3DModel','@id':site+'#model','name':'University of Michigan Ann Arbor exterior campus model','description':f"Independent public-source model with {len(records)} campus building layers, {len(neighbors)} independently toggleable neighboring buildings, separate landscape layers, university GIS landscape and sampled USGS terrain. Heights and exterior geometry are approximate and carry source notes.",'contentUrl':site+'output/UMich_AnnArbor.glb','encodingFormat':'model/gltf-binary','contentSize':str(len(cad_bytes))+' bytes','sha256':hashlib.sha256(cad_bytes).hexdigest(),'thumbnailUrl':site+'output/campus_aerial.png','contentLocation':{'@type':'Place','name':'University of Michigan Ann Arbor campus','address':{'@type':'PostalAddress','addressLocality':'Ann Arbor','addressRegion':'MI','addressCountry':'US'}},'isBasedOn':['https://www.openstreetmap.org/copyright','https://map.fo.umich.edu/','https://tour.umich.edu/','https://elevation.nationalmap.gov/arcgis/rest/services/3DEPElevation/ImageServer','https://www.a2gov.org/media/aoxh1zdd/appendixb_10-10-13.pdf']}
 ]}
 def jsjson(value):return json.dumps(value,ensure_ascii=False,separators=(',',':')).replace('</',r'<\/')
+from model_downloads import downloads,links
+data['downloads']=downloads(root)
+
+for item in schema['@graph']:
+ if item['@type']=='3DModel':
+  glb=data['downloads'][2];item['contentUrl']=site+glb['url'];item['encodingFormat']='application/x-xz'if glb['name'].endswith('.xz')else'model/gltf-binary';item['contentSize']=str((root/glb['url']).stat().st_size)+' bytes';item['sha256']=hashlib.sha256((root/glb['url']).read_bytes()).hexdigest()
+
 template=(root/'scripts/viewer.template.html').read_text();bundle=(root/'tmp/viewer.bundle.js').read_text()
 initial=[]
 for r in [*records,*neighbors]:
@@ -178,7 +185,7 @@ for r in [*records,*neighbors]:
 for token,value in {'__SITE_URL__':site,'__SEO_TITLE__':escape(config['title'],quote=True),'__SEO_DESCRIPTION__':escape(config['description'],quote=True),'__IMAGE_ALT__':escape(config['imageAlt'],quote=True),'__STRUCTURED_DATA__':jsjson(schema),'__INITIAL_BUILDINGS__':''.join(initial),'__INITIAL_COUNT__':str(len(records))}.items():template=template.replace(token,value)
 license=((root/'docs/THIRD_PARTY_NOTICES.md').read_text()+'\n'+(assets/'fonts/OFL.txt').read_text()).replace('--','- -');template=template.replace('</head>','<!--\n'+license+'\n-->\n</head>')
 def edition(payload,font,preview,icons,logo,script,robots,rhino):
-    html=template
+    html=template.replace('__MODEL_DOWNLOADS__',links(payload,robots.startswith('noindex')))
     for token,value in {'__CAMPUS_DATA__':jsjson(payload),'__TITLE_FONT_URL__':font,'__PREVIEW_IMAGE__':preview,'__FAVICON__':icons['32'],'__FAVICON_16__':icons['16'],'__APPLE_ICON__':icons['apple'],'__LOGO__':logo,'__VIEWER_SCRIPT__':script,'__ROBOTS__':robots,'__RHINO_URL__':rhino}.items():html=html.replace(token,value)
     assert not any(token in html for token in ['__CAMPUS_DATA__','__TITLE_FONT_URL__','__PREVIEW_IMAGE__','__FAVICON__','__APPLE_ICON__','__LOGO__','__VIEWER_SCRIPT__','__ROBOTS__','__RHINO_URL__'])
     return html
@@ -197,7 +204,7 @@ html=edition(data,'assets/fonts/Manrope.ttf','output/campus_aerial.png',{'32':'a
 (root/'index.html').write_text(html)
 def png(path):return 'data:image/png;base64,'+base64.b64encode((assets/path).read_bytes()).decode()
 inline_regions={item['id']:base64.b64encode((root/item['url']).read_bytes()).decode()for item in [data['regions']['base'],*data['regions']['tiles']]}
-offline=edition({**data,'inlineRegions':inline_regions,'downloadArchiveUrl':'UMich_AnnArbor.3ds.gz','preview':'data:image/png;base64,'+preview},'data:font/ttf;base64,'+base64.b64encode((assets/'fonts/Manrope.ttf').read_bytes()).decode(),'data:image/png;base64,'+preview,{'32':png('favicon-32.png'),'16':png('favicon-16.png'),'apple':png('apple-touch-icon.png')},png('brand/m-map-192.png'),'<script>'+bundle.replace('</script',r'<\/script')+'</script>','noindex, follow','UMich_AnnArbor_Layered.3dm.xz')
+offline=edition({**data,'downloads':[{**i,'url':i['name']}for i in data['downloads']],'inlineRegions':inline_regions,'preview':'data:image/png;base64,'+preview},'data:font/ttf;base64,'+base64.b64encode((assets/'fonts/Manrope.ttf').read_bytes()).decode(),'data:image/png;base64,'+preview,{'32':png('favicon-32.png'),'16':png('favicon-16.png'),'apple':png('apple-touch-icon.png')},png('brand/m-map-192.png'),'<script>'+bundle.replace('</script',r'<\/script')+'</script>','noindex, follow','UMich_AnnArbor_Layered.3dm.xz')
 (out/'UMich_Campus_Offline.html').write_text(offline)
 (root/'CNAME').write_text(config['domain']+'\n')
 (root/'robots.txt').write_text('User-agent: *\nAllow: /\n\nSitemap: '+site+'sitemap.xml\n')

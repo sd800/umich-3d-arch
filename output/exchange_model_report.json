@@ -1,0 +1,13 @@
+{
+  "format": "glTF 2.0 / FBX 7.4",
+  "name": "UMich_AnnArbor",
+  "meshCount": 27236,
+  "triangles": 13255560,
+  "vertices": 7454872,
+  "sourceCoordinateSystem": "meters, Z up, north +Y; GLB root maps to standard Y up",
+  "glbBytes": 189001600,
+  "fbxBytes": 691874479,
+  "glbSha256": "656fdfbaf38e6cc20c63b6cc3377b7b70b6cc4637693540f9401415cd4c55163",
+  "fbxSha256": "cc72f5d05ee07179b0bceeb274ca0ef8769405dc68195c76bb0cceba45fddc13",
+  "geometry": "Original construction positions rounded only to Float32 (same precision as previous mesh export); original face sequence and material assignments retained."
+}

@@ -12,6 +12,8 @@ A bilingual exterior model of the **University of Michigan, Ann Arbor**. Open `i
 | `output/UMich_Campus_Offline.html` | Self-contained offline viewer |
 | `output/UMich_AnnArbor.3ds.gz` | Losslessly archived 3DS mesh model; coordinates in meters |
 | `output/UMich_AnnArbor_Layered.3dm.xz` | XZ-archived Rhino v7 model with native layers and meter units |
+| `output/UMich_AnnArbor.fbx.xz` | Binary FBX 7.4 mesh model, grouped by building/layer |
+| `output/UMich_AnnArbor.glb.xz` | Standard extension-free glTF 2.0 binary model |
 | `output/layer_map.json` | 3DS object names → individual building / environment layers |
 | `scripts/apply_layers_rhino.py` | Restore layers after importing the 3DS into Rhino |
 | `output/building_dimensions_and_sources.csv` | Building dimensions, height certainty and source references |
@@ -23,7 +25,7 @@ The model contains **554 campus building layers + one campus environment layer**
 
 The initial view is centered on The Diag’s central plaza, looking from the southwest at a lower oblique angle with Central Campus clearly visible. Campus and Reset restore the same center, bearing and scale; district buttons provide closer views.
 
-The viewer supports English/Chinese search, individual visibility, architectural tours, locate/isolate, district camera presets, a north-up plan, metric scale, labels, shadows, exterior details, elevation slices, 3DS download and PNG view export. Zoom-out limits remain campus-wide after selecting any landmark.
+The viewer supports English/Chinese search, individual visibility, architectural tours, locate/isolate, district camera presets, a north-up plan, metric scale, labels, shadows, exterior details, elevation slices, ordered 3DM / FBX / GLB downloads and PNG view export. Zoom-out limits remain campus-wide after selecting any landmark.
 
 ## Data and dimensions
 
@@ -39,13 +41,13 @@ This is an independent exterior study model. Mapped XY dimensions are georeferen
 
 ### Rhino and 3DS
 
-Use the `.3dm` file for native building layers and editable closed massing solids. 3DS does not encode Rhino’s native layer structure. When importing `.3ds`, set the import units to meters, then run `scripts/apply_layers_rhino.py` and select `output/layer_map.json`. Campus outdoor meshes use `环境_Environment`; context landscape uses `Neighboring_Environment` and each neighboring building has an individual `N` layer. Published CAD archives use gzip for 3DS and XZ for Rhino to fit GitHub’s per-file limit. Run `python3 scripts/cad_delivery.py --extract` after cloning to restore both native CAD files locally. The website’s Download 3DS button restores the original native file in a worker on demand.
+Use the `.3dm` file for native building layers and editable closed massing solids. 3DS does not encode Rhino’s native layer structure. When importing `.3ds`, set the import units to meters, then run `scripts/apply_layers_rhino.py` and select `output/layer_map.json`. Campus outdoor meshes use `环境_Environment`; context landscape uses `Neighboring_Environment` and each neighboring building has an individual `N` layer. Published CAD archives use gzip for 3DS and XZ for Rhino to fit GitHub’s per-file limit. Run `python3 scripts/cad_delivery.py --extract` after cloning to restore both native CAD files locally. The primary Download 3DM button links to the editable Rhino file; Guide provides 3DM, FBX and GLB in that order.
 
 ## Website and SEO
 
 The intended domain is **umich.arch.songming.org**. Canonical URL, Open Graph/Twitter cards, bilingual titles/descriptions, structured WebSite/WebPage/3DModel data, sitemap, robots and `CNAME` are configured consistently. The static HTML includes all 6372 campus and neighboring English/Chinese building names for crawling and no-JavaScript browsing.
 
-The interactive payload uses lossless geometry coding plus gzip; the original `.3ds` remains available to download. The root local edition loads compressed data through a classic script to avoid `file://` fetch restrictions. The single-file offline edition embeds the model, font, preview and engine. Use a current browser with WebGL 2 and Compression Streams support.
+The interactive payload is losslessly compressed GLB; Guide offers 3DM, FBX and extension-free GLB downloads. The root local edition loads compressed data through a classic script to avoid `file://` fetch restrictions. The single-file offline edition embeds the model, font, preview and engine. Use a current browser with WebGL 2 and Compression Streams support.
 
 For GitHub Pages, publish the repository’s default branch from `/ (root)` and configure the domain’s DNS for the GitHub Pages host. `CNAME` alone does not enable hosting or install an HTTPS certificate.
 
@@ -106,11 +108,17 @@ Roof shadow filtering uses a fixed PCF kernel with receiver-plane depth correcti
 - `output/`: CAD files, offline edition, reports and delivery archive.
 - Root `VERSION`, `CHANGELOG.md` and package manifests record releases and builds.
 
-## Website model compression
+## Website model delivery
 
-Interactive browsing starts with a **22.41 MB** regional overview. It does not restore the entire source CAD at startup. Nearby full-detail packets are requested within explicit geometry budgets and disposed when they leave the working area. Repeated components use shared templates and instancing; distant facades and tree crowns use a simplified browsing derivative.
+The viewer uses standard glTF 2.0 binary (GLB). The lossless complete-model derivative is **36.29 MiB** transferred, from a **180.25 MiB** extension-free download GLB. `EXT_meshopt_compression` and gzip reduce transfer; decompressed position/index accessors match the native GLB byte for byte. No quantization or simplification is introduced by this format conversion.
 
-The lossless full-CAD web stream is 54.16 MB for the current 220.12 MB 3DS, but it is separate from initial regional browsing. Full CAD downloads use the unchanged metric source archived as `.3ds.gz`; the standalone edition uses the adjacent archive. Regional geometry is a visual derivative, while original CAD archive/codec restoration is byte-exact. See `docs/REGIONAL_RENDERING.md`, `output/streaming_model_report.json` and `output/web_model_report.json` for scope, limits, exact sizes and digests.
+Normal browsing retains regional streaming, instancing and distance-based detail. The complete model is not decoded for initial browsing. Existing mobile/desktop GPU and region budgets remain unchanged. Regional delivery uses gzipped GLBs with quantized normals, vertex colors, object IDs and `EXT_mesh_gpu_instancing`; the overview is a directory containing independent GLB cells. LOD is a visual derivative of the complete CAD export.
+
+A worker inflates/decompresses the complete GLB and calculates normals; geometry buffers transfer once to the main thread. Scene creation and no-worker fallback yield between work slices. The meshoptimizer JavaScript/WebAssembly codec is bundled locally. HTTP loads binary assets; double-click `file://` loads classic scripts, and the standalone edition embeds browsing data. WebGL 2, WebAssembly and Compression Streams are required by current delivery.
+
+Downloads are listed **3DM → FBX → GLB**. 3DM retains editable Rhino solids and individual layers. FBX and GLB retain mesh geometry and material assignments, grouped by building/layer. FBX uses meter units and Z up; GLB uses a standard Y-up root transform with the metric source vertices retained below it. The public download GLB requires no optional extensions. Files exceeding the hosting per-file limit are delivered losslessly as `.xz`; extract before importing.
+
+`output/exchange_model_report.json` records native mesh counts/hashes; `output/web_model_report.json` records complete GLB transfer counts/hashes. `npm run check:glb` verifies lossless accessor equality, HTTP/local/offline byte integrity and ordered downloads; `npm run check:exchange` compares every FBX vertex/index against GLB and checks units/normals. Rendering still needs memory for decoded geometry and framebuffers.
 
 ## Architectural and parking refinement
 

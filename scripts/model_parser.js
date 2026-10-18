@@ -1,7 +1,5 @@
 import {BufferAttribute,BufferGeometry,Group,MaterialLoader,Matrix4,Mesh} from 'three';
-import {CampusTDSLoader} from './campus_tds_loader.js';
-import {parseTDSCooperatively} from './async_tds.js';
-import {restoreCampusBytes} from './campus_codec.js';
+import {parseGLBMeshes,inflateGLB} from './glb_model.js';
 import workerSource from '../tmp/model-worker.bundle.txt';
 export const nextPaint=()=>new Promise(resolve=>requestAnimationFrame(()=>resolve()));
 
@@ -18,7 +16,7 @@ async function runWorker(bytes,options,report,action='parse'){
     worker.onerror=event=>{event.preventDefault?.();reject(new Error(event.message||'Geometry worker failed'));};
     // New compressed inputs are moved, not copied. They are no longer needed on
     // the UI thread; CAD downloads load the original separately when requested.
-    const buffer=options.modelFormat==='campus-3ds-v1'&&bytes.byteOffset===0&&bytes.byteLength===bytes.buffer.byteLength?bytes.buffer:bytes.buffer.slice(bytes.byteOffset,bytes.byteOffset+bytes.byteLength);
+    const buffer=bytes.byteOffset===0&&bytes.byteLength===bytes.buffer.byteLength?bytes.buffer:bytes.buffer.slice(bytes.byteOffset,bytes.byteOffset+bytes.byteLength);
     const settings={modelFormat:options.modelFormat,modelByteLength:options.modelByteLength,modelPackedByteLength:options.modelPackedByteLength};
     worker.postMessage({bytes:buffer,options:settings,action},[buffer]);
   });}finally{worker.terminate();URL.revokeObjectURL(url);}
@@ -27,18 +25,14 @@ async function runWorker(bytes,options,report,action='parse'){
 export async function recoverCampusDownload(bytes,options={}){
   const result=await runWorker(bytes,options,()=>{},'download');
   if(result)return result.blob;
-  return new Blob([await restoreCampusBytes(bytes,options)],{type:'application/octet-stream'});
+  return new Blob([await inflateGLB(bytes)],{type:'model/gltf-binary'});
 }
 
 export async function parseCampusModel(bytes,report=()=>{},options={}) {
   if(options.modelFormat)report({phase:'unpack',loaded:0,total:options.modelPackedByteLength});
   else report({phase:'parse',loaded:0,total:bytes.byteLength});
   await nextPaint();
-  const result=await runWorker(bytes,options,report);
-  if(!result){
-    const restored=await restoreCampusBytes(bytes,options,report);
-    return parseTDSCooperatively(new CampusTDSLoader(),restored,report);
-  }
+  const result=await runWorker(bytes,options,report)||await parseGLBMeshes(await inflateGLB(bytes),report,nextPaint);
   const group=new Group(),loader=new MaterialLoader(),materials=result.materials.map(json=>loader.parse(json));let lastYield=performance.now();
   for(let i=0;i<result.meshes.length;i++){
     const item=result.meshes[i],geometry=new BufferGeometry();

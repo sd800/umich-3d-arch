@@ -1,15 +1,12 @@
 {
-  "buildSignature": "03f406cb603313379f696fd416dbcd4eb9c14b787f572828f29e52bc0f05b80d",
-  "format": "campus-3ds-v1",
-  "codec": "meshoptimizer 1.3.0 lossless vertex/index-sequence codecs + gzip",
-  "source": "output/UMich_AnnArbor.3ds",
-  "sourceBytes": 223622591,
-  "sourceSha256": "f96e8f90e9bb3196b289ae8dd62e5cd79234e36fc3a1142c394e372d92bdc58d",
-  "ordinaryGzipBytes": 104654376,
-  "previousTransferBytes": 104654376,
-  "packedBytes": 143410422,
-  "transferBytes": 54750575,
-  "transferSha256": "a4ac0cc0331c0cc7f12eca92bc169058fd90a9ae8644b4b38517b32e380b1858",
-  "maxEncodedBlockBytes": 306448,
-  "decodedGeometryChanged": false
+  "format": "glb-meshopt-v1",
+  "codec": "glTF 2.0 + EXT_meshopt_compression (lossless) + gzip",
+  "source": "output/UMich_AnnArbor.glb",
+  "sourceBytes": 189001600,
+  "sourceSha256": "656fdfbaf38e6cc20c63b6cc3377b7b70b6cc4637693540f9401415cd4c55163",
+  "packedBytes": 114840580,
+  "transferBytes": 38048394,
+  "transferSha256": "c6055870606760fef11f6f099cdfc2517ea811cbe59d052e5577280da052c9db",
+  "compressedViews": 54472,
+  "geometryChanged": false
 }

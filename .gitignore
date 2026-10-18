@@ -53,3 +53,7 @@ __pycache__/
 
 # Superseded local gzip Rhino archive; published Rhino uses lossless XZ.
 /output/UMich_AnnArbor_Layered.3dm.gz
+
+# Oversized uncompressed exchange files have portable XZ download editions.
+/output/UMich_AnnArbor.glb
+/output/UMich_AnnArbor.fbx

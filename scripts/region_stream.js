@@ -1,3 +1,4 @@
+import {decodeGLB} from './glb_model.js';
 import * as THREE from 'three';
 import {applyTerrainLighting,createTerrainLighting} from './terrain_lighting.js';
 import {stabilizeBuildingMaterial,stabilizeCampusShadows} from './surface_rendering.js';
@@ -5,12 +6,10 @@ import {chooseRegions,regionLimits} from './region_policy.js';
 
 const pause=()=>new Promise(resolve=>setTimeout(resolve,0));
 const decoder=new TextDecoder();
-export function parseRegionPacket(buffer){
- const bytes=buffer instanceof Uint8Array?buffer:new Uint8Array(buffer),view=new DataView(bytes.buffer,bytes.byteOffset,bytes.byteLength),length=view.getUint32(0,true);
- if(length<2||length>bytes.byteLength-4)throw new Error('Invalid regional model header');
- const header=JSON.parse(decoder.decode(bytes.subarray(4,4+length))),start=4+length;
- const read=(range,Type)=>{const[offset,size]=range;if(offset<0||size<0||start+offset+size>bytes.byteLength||size%Type.BYTES_PER_ELEMENT)throw new Error('Invalid regional model buffer');return new Type(bytes.buffer,bytes.byteOffset+start+offset,size/Type.BYTES_PER_ELEMENT);};
- return {header,read};
+export async function parseRegionPacket(bytes){
+ const parsed=await decodeGLB(bytes),header=parsed.doc.extras?.campus;
+ if(!header?.entries)throw Error('Invalid regional GLB metadata');
+ return {header,read:(id,Type)=>{const array=parsed.accessor(id).array;return array instanceof Type?array:new Type(array);}};
 }
 export async function inflateRegion(bytes){return new Uint8Array(await new Response(new Blob([bytes]).stream().pipeThrough(new DecompressionStream('gzip'))).arrayBuffer());}
 async function decodeBase64(text,report=()=>{}){const bytes=new Uint8Array(text.length/4*3-(text.endsWith('==')?2:text.endsWith('=')?1:0));let at=0;for(let i=0;i<text.length;i+=262144){const s=atob(text.slice(i,i+262144));for(let j=0;j<s.length;j++)bytes[at++]=s.charCodeAt(j);report({phase:'decode',loaded:at,total:bytes.length});await pause();}return bytes;}
@@ -79,7 +78,7 @@ export function createRegionStream({data,parent,renderer,camera,host,onChange=()
   return g;
  }
  async function makeCell(bytes){
-  const p=parseRegionPacket(await inflateRegion(bytes)),group=new THREE.Group();let last=performance.now();
+  const p=await parseRegionPacket(await inflateRegion(bytes)),group=new THREE.Group();let last=performance.now();
   for(const e of p.header.entries){
    const geometry=makeGeometry(e,p);let mesh,isBuilding=e.kind==='building';
    if(e.kind==='instance'){
