@@ -1,5 +1,10 @@
 # Changelog
 
+## 26.10.18.7 — 2026-10-18
+
+- Move Guide source links into a clickable Reference floating panel below the retained public-data snapshot date; support outside-click dismissal, Escape and touch interaction.
+- Replace the previous source-link row with © 2026 Songming.org and place the third-party license statement beside the new Reference control, matching the snapshot's metadata text size.
+
 ## 26.10.18.6 — 2026-10-18
 
 - Label Guide downloads Download 3DM, Download FBX and Download GLB, preserving their order.

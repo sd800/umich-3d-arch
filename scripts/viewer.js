@@ -1,3 +1,4 @@
+import {installGuideReferences} from './guide_references.js';
 import {updateViewReadout} from './view_readout.js';
 import highlightViews from '../config/highlight-views.json';
 import {highlightCamera} from './highlight_camera.js';
@@ -40,7 +41,7 @@ const highlightsPanel=installHighlightsPanel({panel:$('highlights-panel'),button
 const loadingView=loadingIndicator($('load-progress'),$('load-status'),t);
 const reportLoad=event=>loadingView.update(event);
 $('download-image').disabled=true;$('download-model').disabled=true;
-Object.assign(en,{snapshot:'Public-source snapshots · 12–15 Oct 2026',helpAccuracy:'1 unit = 1 meter. Campus footprints, maintained surfaces and mapped tree positions follow U-M public GIS. Neighboring outlines, streets and land cover use retained public maps and aerial references. Untagged heights, facade modules, yard/entry transitions and supplemental woodland canopy positions are approximate. Ground follows USGS 3DEP terrain with local building pads; model Z = 0 corresponds to 225 m in the DEM datum. This is an independent exterior study model, not official BIM or a certified survey.',neighbors:'⁺Campus neighboring areas',neighborCount:'surrounding buildings',helpNeighbors:'Surrounding Ann Arbor buildings and landscape are shown by default. Turn off ⁺Campus neighboring areas in All to show the campus alone. Neighboring names carry a ⁺ prefix; missing heights and facade details are estimates.',helpLanguages:'English is the default. Use the language button to switch to Chinese; manual choices are remembered when browser storage is available.'});
+Object.assign(en,{snapshot:'Public-data snapshot · 12–15 Oct 2026',helpAccuracy:'1 unit = 1 meter. Campus footprints, maintained surfaces and mapped tree positions follow U-M public GIS. Neighboring outlines, streets and land cover use retained public maps and aerial references. Untagged heights, facade modules, yard/entry transitions and supplemental woodland canopy positions are approximate. Ground follows USGS 3DEP terrain with local building pads; model Z = 0 corresponds to 225 m in the DEM datum. This is an independent exterior study model, not official BIM or a certified survey.',neighbors:'⁺Campus neighboring areas',neighborCount:'surrounding buildings',helpNeighbors:'Surrounding Ann Arbor buildings and landscape are shown by default. Turn off ⁺Campus neighboring areas in All to show the campus alone. Neighboring names carry a ⁺ prefix; missing heights and facade details are estimates.',helpLanguages:'English is the default. Use the language button to switch to Chinese; manual choices are remembered when browser storage is available.'});
 Object.assign(zh,{snapshot:'公开资料快照 · 2026年10月12–15日',helpAccuracy:'1单位＝1米。校园建筑轮廓、已测绘地表与树位采用学校公开GIS；周边轮廓、道路与地表参照保留的公开地图及航拍。缺失高度、立面分格、庭院与入口衔接，以及补充林冠的树位均为近似表达。地面采用USGS 3DEP地形并设置局部建筑基座；模型Z＝0对应DEM基准中的225米。这是独立制作的室外空间研究模型，非学校官方BIM或实测模型。',neighbors:'⁺校园周边区域',neighborCount:'栋周边建筑',helpNeighbors:'默认显示安娜堡的校园周边建筑与景观。在“全部”下关闭“⁺校园周边区域”即可恢复仅显示校园。周边名称以 ⁺ 标识；缺失高度及立面细节为估算。',helpLanguages:'默认使用英文。可通过语言按钮切换中文；浏览器存储可用时会记住手动选择。'});
 const nameOf=r=>(r.neighbor?'⁺':'')+(lang==='zh'?(r.name_zh||r.name):r.name);
 const brief=r=>(r.neighbor?'⁺':'')+(lang==='zh'?(r.short_zh||r.name_zh||r.name):(r.short||r.name));
@@ -72,6 +73,7 @@ $('open-help').onclick=()=>{
  dialog.scrollTop=0;
 };
 $('close-help').onclick=()=>$('help-dialog').close();
+installGuideReferences({dialog:$('help-dialog'),trigger:$('open-reference'),panel:$('reference-popover')});
 $('help-dialog').addEventListener('click',e=>{if(e.target===e.currentTarget){const b=e.target.getBoundingClientRect();if(e.clientX<b.left||e.clientX>b.right||e.clientY<b.top||e.clientY>b.bottom)e.target.close();}});
 function download(blob,name){const url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);}
 let bytes=null,streaming=null;
