@@ -1,5 +1,10 @@
 # Changelog
 
+## 26.10.18.6 — 2026-10-18
+
+- Label Guide downloads Download 3DM, Download FBX and Download GLB, preserving their order.
+- Make the header Download FBX button download the FBX artifact in online and offline editions.
+
 ## 26.10.18.5 — 2026-10-18
 
 - Use GLB for browser geometry while preserving metric construction geometry, material colors, navigation and offline entry points.

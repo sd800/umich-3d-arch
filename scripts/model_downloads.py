@@ -16,7 +16,7 @@ def downloads(root):
     marker.write_text(digest)
    path=target
   if path.stat().st_size>=100*1024*1024:raise ValueError('Download exceeds GitHub per-file limit: '+str(path))
-  items.append({'format':kind,'name':path.name,'url':'output/'+path.name,'label':kind+(' (.xz)'if path.suffix=='.xz'else'')})
+  items.append({'format':kind,'name':path.name,'url':'output/'+path.name,'label':'Download '+kind})
  return items
 
 def links(payload,offline=False):

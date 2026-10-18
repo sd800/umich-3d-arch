@@ -41,7 +41,7 @@ This is an independent exterior study model. Mapped XY dimensions are georeferen
 
 ### Rhino and 3DS
 
-Use the `.3dm` file for native building layers and editable closed massing solids. 3DS does not encode Rhino’s native layer structure. When importing `.3ds`, set the import units to meters, then run `scripts/apply_layers_rhino.py` and select `output/layer_map.json`. Campus outdoor meshes use `环境_Environment`; context landscape uses `Neighboring_Environment` and each neighboring building has an individual `N` layer. Published CAD archives use gzip for 3DS and XZ for Rhino to fit GitHub’s per-file limit. Run `python3 scripts/cad_delivery.py --extract` after cloning to restore both native CAD files locally. The primary Download 3DM button links to the editable Rhino file; Guide provides 3DM, FBX and GLB in that order.
+Use the `.3dm` file for native building layers and editable closed massing solids. 3DS does not encode Rhino’s native layer structure. When importing `.3ds`, set the import units to meters, then run `scripts/apply_layers_rhino.py` and select `output/layer_map.json`. Campus outdoor meshes use `环境_Environment`; context landscape uses `Neighboring_Environment` and each neighboring building has an individual `N` layer. Published CAD archives use gzip for 3DS and XZ for Rhino to fit GitHub’s per-file limit. Run `python3 scripts/cad_delivery.py --extract` after cloning to restore both native CAD files locally. The primary Download FBX button links to the FBX file; Guide provides 3DM, FBX and GLB in that order.
 
 ## Website and SEO
 
