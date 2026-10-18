@@ -1,4 +1,5 @@
 from highlight_finish import detailed_joinery,bell_mesh
+from highlight_reconstruction import rebuild as rebuild_highlight, REFS as REBUILT_HIGHLIGHTS
 from types import SimpleNamespace
 """Ann Arbor exterior campus model: public GIS, USGS terrain, explicit height certainty."""
 import pathlib, json, math, csv, struct, xml.etree.ElementTree as ET
@@ -259,7 +260,7 @@ print('Preparing',len(buildings),'building layers; terrain and public mapped lan
 
 # BUILDING CACHE: regenerate when geometry inputs or building code change.
 import hashlib,pickle
-signature=hashlib.sha256(b''.join((ROOT/'scripts'/name).read_bytes()for name in ['architecture_profiles.py','campus_architecture.py','michigan_stadium.py','core_architecture.py','power_plant.py','highlight_finish.py'])+(ROOT/'sources/architecture_parts.geojson').read_bytes()+(ROOT/'sources/building_specs.json').read_bytes()+(ROOT/'scripts/curation.py').read_bytes()+(ROOT/'sources/official_base_buildings.geojson').read_bytes()+pathlib.Path(__file__).read_text().split('\n# LANDSCAPE geometry follows')[0].encode()).hexdigest()
+signature=hashlib.sha256(b''.join((ROOT/'scripts'/name).read_bytes()for name in ['architecture_profiles.py','campus_architecture.py','michigan_stadium.py','core_architecture.py','power_plant.py','highlight_finish.py','highlight_reconstruction.py'])+(ROOT/'sources/architecture_parts.geojson').read_bytes()+(ROOT/'sources/building_specs.json').read_bytes()+(ROOT/'scripts/curation.py').read_bytes()+(ROOT/'sources/official_base_buildings.geojson').read_bytes()+pathlib.Path(__file__).read_text().split('\n# LANDSCAPE geometry follows')[0].encode()).hexdigest()
 cache=ROOT/'tmp/building-cache.pkl';cache_signature=ROOT/'tmp/building-cache.sha';cache_rhino=ROOT/'tmp/building-cache.3dm'
 if cache.exists() and cache_signature.exists() and cache_rhino.exists() and cache_signature.read_text()==signature:
     saved=pickle.loads(cache.read_bytes());model=rh.File3dm.Read(str(cache_rhino));assert model is not None
@@ -304,6 +305,7 @@ else:
             profile=(lev,height,'NorthBrick','RoofGravel');NORTH[ident]=profile
         if profile:lev,height,wall,roof=profile
         elif ident not in CORE:roof='Slate'if gothic else ('RoofGravel'if wall in ['Limestone','LightStone']else 'RoofMembrane')
+        if ident in REBUILT_HIGHLIGHTS:lev={'1000177':4,'1000198':1,'1000172':4}.get(ident,lev)
         if status=='estimated':
             basis=f'官方 GIS FloorCount 为 {original_fc if original_fc is not None else "未提供"}，不直接等同于地上层数。模型采用 {lev} 个地上层的公开资料与外观近似，局部标高和构件未经实测。'
             basis_en=f'Official GIS FloorCount: {original_fc if original_fc is not None else "not provided"}; not equated with above-ground stories. Modeled exterior storeys: {lev}, interpreted from public map tags and facility/photo references. Local elevations and members are approximate.'
@@ -330,19 +332,12 @@ else:
                 support=extrusion(q,base-1.5,1.51);bottom=support.vertices[:,2]<base-.7
                 support.vertices[bottom,2]=np.minimum(base-.2,raw_ground(support.vertices[bottom,0],support.vertices[bottom,1])-1.5)
                 ms['Foundation'].append(support)
-        if ident=='1000155':
-            body(p,0,36.576,levels=8,arch=False)
-            inset=p.buffer(-1.25,join_style=2);piers=p.difference(inset);body(piers,36.576,20.2,windows=False)
-            for zz in [36.576,54.0,56.6]:flat(p.buffer(.15),zz,'LightStone')
-            # Open carillon chamber with shaped bronze bells and suspension
-            # rails. Arrangement and sizes are approximate exterior details.
-            for k in range(53):
-                row,col=divmod(k,9);cx=x+(col-4)*.75;cy=y+(row-2.5)*.88
-                ms['Bronze'].append(bell_mesh([cx,cy,base+42.0],.34-.0025*k,.78-.004*k))
-            for yy in np.arange(y-2.4,y+2.5,.88):ms['Frame'].append(cylinder((x-3.5,yy,base+43.0),(x+3.5,yy,base+43.0),.065,6))
-            crown=p.buffer(-.6,join_style=2);body(crown,56.8,2.3,windows=False);gable(crown,59.1,height-59.1-.12,'x','Slate')
-            partition='方形石灰岩塔身、36.576米标高的钟室底层、开敞钟室与收分塔冠；模型峰值采用212英尺。学校资料另有192英尺记载，差异未实测核定；各段构造与窗位为近似。'
-            partition_en='Square limestone shaft, open belfry above its published 120 ft floor and a stepped crown. Model peak uses 212 ft; an official historical source gives 192 ft. Segment dimensions and facade bays are approximate.'
+        if ident in REBUILT_HIGHLIGHTS:
+            detail_record=rebuild_highlight(ms,p,base,ident,height,body,SimpleNamespace(**globals()))
+            lev={'1000177':4,'1000198':1,'1000172':4}.get(ident,lev)
+            partition_en='; '.join(detail_record['features'])+'. Source-specific exterior interpretation; unmeasured dimensions approximate.'
+            partition='按公开建筑外观资料分体重建，区分主体、入口、屋顶与标志性构件；未公布尺寸为近似。'
+            src=detail_record['reference']
         elif ident=='1000260':
             detail_record=build_power_plant(ms,p,base,body,SimpleNamespace(**globals()))
             partition='分别重建旧锅炉房、2022年涡轮机扩建翼、南侧与东侧厂房、双砖烟囱、工业大窗与百叶、女儿墙、屋面采光带及设备风道。保留官方建筑范围；烟囱采用公开高度，其他构件及定位为近似。'
@@ -438,7 +433,7 @@ else:
         for q in polygons(p):
             crv=rh.PolylineCurve([rh.Point3d(float(x0),float(y0),base) for x0,y0 in q.exterior.coords]);model.Objects.AddCurve(crv,attr(code+'_PLAN',lay,wall,info))
         meshes=[o['mesh'] for o in objects if layer_map[o['name']]['layer']==lay];actual_top=max(m.bounds[1,2] for m in meshes);actual_bottom=min(m.bounds[0,2] for m in meshes)
-        r={'code':code,'facility_id':ident,'name':name,'name_zh':zh,'official_name':t.get('ObjectName'),'layer':lay,'zone':zone,'landmark':ident in LANDMARKS,'height':round(float(actual_top-base),4),'height_status':status,'levels':lev,'gis_floor_count':original_fc,'area':round(p.area,2),'width':round(c-a,2),'depth':round(d-b,2),'center':[round(x,3),round(y,3)],'ground_m':round(base,3),'peak_m':round(float(actual_top),3),'bottom_m':round(float(actual_bottom),3),'basis':basis,'basis_en':basis_en,'partition':partition,'partition_en':partition_en,'source':src,'footprint_source':GIS,'architecture_reference':REFS.get(ident,TOUR if ident in LANDMARKS else None),'short':name,'short_zh':zh,'aliases_zh':[],'construction_status':t.get('Status'),'highlight_joinery':highlight_stats,'campus_joinery':campus_finish,'highlight_reference':'https://www.hok.com/projects/view/michigan-medicine-kahn-health-care-pavilion/'if ident=='1005440'else ('https://smtd.umich.edu/facilities/burton-memorial-tower/charles-baird-carillon/'if ident=='1000155'else None),'architecture_detail':{**detail_record,'mapped_exterior_spec':spec,'automatic_rooftop_boxes':False},'ground_contact':'bowl perimeter'if ident=='1000711'else 'flat grade pad'}
+        r={'code':code,'facility_id':ident,'name':name,'name_zh':zh,'official_name':t.get('ObjectName'),'layer':lay,'zone':zone,'landmark':ident in LANDMARKS,'height':round(float(actual_top-base),4),'height_status':status,'levels':lev,'gis_floor_count':original_fc,'area':round(p.area,2),'width':round(c-a,2),'depth':round(d-b,2),'center':[round(x,3),round(y,3)],'ground_m':round(base,3),'peak_m':round(float(actual_top),3),'bottom_m':round(float(actual_bottom),3),'basis':basis,'basis_en':basis_en,'partition':partition,'partition_en':partition_en,'source':src,'footprint_source':GIS,'architecture_reference':REBUILT_HIGHLIGHTS.get(ident,REFS.get(ident,TOUR if ident in LANDMARKS else None)),'short':name,'short_zh':zh,'aliases_zh':[],'construction_status':t.get('Status'),'highlight_joinery':highlight_stats,'campus_joinery':campus_finish,'highlight_reference':'https://www.hok.com/projects/view/michigan-medicine-kahn-health-care-pavilion/'if ident=='1005440'else ('https://smtd.umich.edu/facilities/burton-memorial-tower/charles-baird-carillon/'if ident=='1000155'else None),'architecture_detail':{**detail_record,'mapped_exterior_spec':spec,'automatic_rooftop_boxes':False},'ground_contact':'bowl perimeter'if ident=='1000711'else 'flat grade pad'}
         if ident in HEIGHTS:assert abs(r['height']-HEIGHTS[ident][0])<.01,(ident,r['height'],HEIGHTS[ident][0])
         records.append(r);f['record']=r
         if j%75==0:print('Buildings',j,flush=True)

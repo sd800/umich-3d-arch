@@ -1,19 +1,19 @@
 {
-  "sourceSha256": "c6f928ce66de456ae2831155abeca36f539d26ffdefeaeeee1e7960e48a5011f",
-  "originalTriangles": 13053768,
-  "originalObjects": 27171,
+  "sourceSha256": "f96e8f90e9bb3196b289ae8dd62e5cd79234e36fc3a1142c394e372d92bdc58d",
+  "originalTriangles": 13255560,
+  "originalObjects": 27236,
   "regions": 574,
-  "instancedParts": 249297,
-  "geometryTemplates": 38544,
+  "instancedParts": 253151,
+  "geometryTemplates": 39219,
   "overview": {
     "id": "overview",
-    "url": "assets/stream/overview-3970a9df12bc.bin",
-    "local": "assets/stream/overview-3970a9df12bc.js",
-    "sha256": "3970a9df12bc5b1b68882be52804873866cc48aeeceb89b87c0e70f8ba4cc853",
-    "transferBytes": 22406455,
-    "triangles": 2917196,
-    "gpuBytes": 65969650,
-    "decodedBytes": 64949414,
+    "url": "assets/stream/overview-aa0b6bbbc7d8.bin",
+    "local": "assets/stream/overview-aa0b6bbbc7d8.js",
+    "sha256": "aa0b6bbbc7d8b401aef9998df5b1d7ba48b6eb8a6bb8ca40df084d8b9ac43ff9",
+    "transferBytes": 22627512,
+    "triangles": 2946190,
+    "gpuBytes": 66795110,
+    "decodedBytes": 65774898,
     "draws": 975,
     "bounds": [
       -1580.5400390625,
@@ -24,7 +24,7 @@
       122.98653411865234
     ]
   },
-  "allRegionalTransferBytes": 48503356,
+  "allRegionalTransferBytes": 49607178,
   "preservesCAD": true,
   "overviewApproximation": "Position-only error-bounded simplification; 20-face tree crowns at unchanged source positions. Near regions retain source building triangles and repeated facade geometry; no CAD edits."
 }

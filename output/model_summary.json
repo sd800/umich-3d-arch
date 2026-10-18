@@ -1,4 +1,6 @@
 {
+  "major_buildings_refined": 205,
+  "additional_major_building_joinery": 176,
   "campus_ground_refinement": {
     "mapped_or_inferred_campus_meadow_m2": 46963.12,
     "mapped_campus_woodland_m2": 114713.1,
@@ -17,10 +19,10 @@
   "buildings": 554,
   "layers": 6374,
   "environment_layer": "环境_Environment",
-  "native_closed_solids": 6534,
-  "objects_3ds": 27171,
-  "vertices": 7331102,
-  "triangles": 13053768,
+  "native_closed_solids": 6554,
+  "objects_3ds": 27236,
+  "vertices": 7454872,
+  "triangles": 13255560,
   "trees": 13404,
   "landmarks": 29,
   "published_height_buildings": 2,
@@ -90,7 +92,5 @@
       "source": "https://umma.umich.edu/objects/wave-field-aps1995-1/"
     }
   },
-  "accuracy": "Official mapped footprints and surfaces; historical/published/estimated heights labeled individually. Not a surveyed as-built model.",
-  "major_buildings_refined": 205,
-  "additional_major_building_joinery": 176
+  "accuracy": "Official mapped footprints and surfaces; historical/published/estimated heights labeled individually. Not a surveyed as-built model."
 }

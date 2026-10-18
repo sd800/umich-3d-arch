@@ -1,0 +1,434 @@
+{
+  "review_date": "2026-10-18",
+  "scope": "Every current architectural building Highlight; the individual exterior geometry is reviewed, not merely a shared joinery counter.",
+  "building_highlight_count": 29,
+  "reconstructed_this_review": 11,
+  "joinery_count_is_not_fidelity_evidence": true,
+  "audit": [
+    {
+      "id": "1000198",
+      "code": "M003",
+      "name": "Detroit Observatory",
+      "decision": "reconstructed source-specific exterior",
+      "features_reviewed": [
+        "historic three-part observatory",
+        "23-foot-diameter dome with observing slit",
+        "Doric porch facing Ann Street",
+        "meridian wing opening strip",
+        "separate low 2022 visitor addition and glazed connector"
+      ],
+      "reference": "https://detroitobservatory.umich.edu/history/",
+      "dimensions": "Retain published dimensions where available; all remaining section levels, bays and secondary members are approximate exterior interpretations."
+    },
+    {
+      "id": "1000172",
+      "code": "M007",
+      "name": "Rackham Graduate School",
+      "decision": "reconstructed source-specific exterior",
+      "features_reviewed": [
+        "Indiana limestone high central hall and lower wings",
+        "copper gabled roof",
+        "three bronze-framed entrance portals",
+        "broad granite approach stairs",
+        "five shallow relief panels and long horizontal cornice"
+      ],
+      "reference": "https://rackham.umich.edu/about/rackham-building/history-of-the-rackham-building/",
+      "dimensions": "Retain published dimensions where available; all remaining section levels, bays and secondary members are approximate exterior interpretations."
+    },
+    {
+      "id": "1005177",
+      "code": "M008",
+      "name": "North Quadrangle Residential & Academic Complex",
+      "decision": "reconstructed source-specific exterior",
+      "features_reviewed": [
+        "seven-storey L-shaped academic wing",
+        "ten-storey residence wing",
+        "two interlocking open courtyards",
+        "low cloister and tall dining lights",
+        "brick piers with limestone bands and entrance surrounds"
+      ],
+      "reference": "https://umaec.umich.edu/wp-content/uploads/2013/11/NQSustain.pdf",
+      "dimensions": "Retain published dimensions where available; all remaining section levels, bays and secondary members are approximate exterior interpretations."
+    },
+    {
+      "id": "1000155",
+      "code": "M035",
+      "name": "Burton Memorial Tower",
+      "decision": "reconstructed source-specific exterior",
+      "features_reviewed": [
+        "limestone shaft with shallow vertical buttresses",
+        "five actual bell-chamber openings per face",
+        "three arched central slots and rectangular side slots",
+        "open metal clock rings, hands and hour marks",
+        "stepped upper chamber and copper crown",
+        "53 suspended bronze bells"
+      ],
+      "reference": "https://tour.umich.edu/text-based/tours/diag/",
+      "dimensions": "Retain published dimensions where available; all remaining section levels, bays and secondary members are approximate exterior interpretations."
+    },
+    {
+      "id": "1000191",
+      "code": "M038",
+      "name": "Michigan League",
+      "decision": "retained existing individual exterior after review",
+      "features_reviewed": [
+        "Brick academic and ballroom wings",
+        "Separate roof ranges and entrance enclosure",
+        "Stone string courses and Gothic facade trim"
+      ],
+      "reference": "https://tour.umich.edu/text-based/locations/michigan-league/",
+      "dimensions": "Retain published dimensions where available; all remaining section levels, bays and secondary members are approximate exterior interpretations."
+    },
+    {
+      "id": "1000177",
+      "code": "M042",
+      "name": "Hill Auditorium",
+      "decision": "reconstructed source-specific exterior",
+      "features_reviewed": [
+        "four-storey brick auditorium",
+        "four Doric entrance columns and framed south portico",
+        "broad entrance steps",
+        "broken-slope raised hall roof",
+        "stone floor courses and brick attic frieze",
+        "separate low mapped ancillary footprint"
+      ],
+      "reference": "https://smtd.umich.edu/facilities/hill-auditorium/",
+      "dimensions": "Retain published dimensions where available; all remaining section levels, bays and secondary members are approximate exterior interpretations."
+    },
+    {
+      "id": "1000152",
+      "code": "M080",
+      "name": "Angell Hall and Tisch Hall",
+      "decision": "retained existing individual exterior after review",
+      "features_reviewed": [
+        "Long Angell academic wing and lower Tisch companion",
+        "Eight-column classical west portico",
+        "Broad steps, limestone entablature and cornice",
+        "Confirmed small rooftop observatory"
+      ],
+      "reference": "https://bentley.umich.edu/discover/bentley-materials/campus-tour/building-index/angell-hall/",
+      "dimensions": "Retain published dimensions where available; all remaining section levels, bays and secondary members are approximate exterior interpretations."
+    },
+    {
+      "id": "1000185",
+      "code": "M089",
+      "name": "Hatcher Graduate Library \u00b7 North",
+      "decision": "retained existing individual exterior after review",
+      "features_reviewed": [
+        "Original north reading-hall volume",
+        "Lower and higher mapped library wings",
+        "Separate clay roof ranges",
+        "Diag-facing tall triplet masonry bays"
+      ],
+      "reference": "https://www.lib.umich.edu/visit-and-study/floor-plans/hatcher-library-north-floors/",
+      "dimensions": "Retain published dimensions where available; all remaining section levels, bays and secondary members are approximate exterior interpretations."
+    },
+    {
+      "id": "1000151",
+      "code": "M098",
+      "name": "University of Michigan Museum of Art",
+      "decision": "retained existing individual exterior after review",
+      "features_reviewed": [
+        "Original neoclassical museum block",
+        "Four-column stone portico",
+        "Lower modern northern addition",
+        "Narrow glazed connecting wing and curved gallery edge"
+      ],
+      "reference": "https://tour.umich.edu/text-based/tours/diag/",
+      "dimensions": "Retain published dimensions where available; all remaining section levels, bays and secondary members are approximate exterior interpretations."
+    },
+    {
+      "id": "1000159",
+      "code": "M101",
+      "name": "William L. Clements Library",
+      "decision": "retained existing individual exterior after review",
+      "features_reviewed": [
+        "Two-storey Italianate limestone library",
+        "Three tall northern arched loggia bays",
+        "Four framing stone piers",
+        "Broad low entrance stair and supported cornice"
+      ],
+      "reference": "https://clements.umich.edu/about/history/construction-of-the-library/",
+      "dimensions": "Retain published dimensions where available; all remaining section levels, bays and secondary members are approximate exterior interpretations."
+    },
+    {
+      "id": "1000120",
+      "code": "M103",
+      "name": "Michigan Union",
+      "decision": "retained existing individual exterior after review",
+      "features_reviewed": [
+        "Original brick union ranges",
+        "Separate taller junction tower",
+        "Varied slate roof wings",
+        "Stone belts, framed entrance and mapped courtyards"
+      ],
+      "reference": "https://tour.umich.edu/text-based/locations/michigan-union/",
+      "dimensions": "Retain published dimensions where available; all remaining section levels, bays and secondary members are approximate exterior interpretations."
+    },
+    {
+      "id": "1000108",
+      "code": "M112",
+      "name": "Lawyers Club and Charles T. Munger Residences",
+      "decision": "retained existing individual exterior after review",
+      "features_reviewed": [
+        "Low dining hall and residential wings",
+        "Actual open Law Quad courtyards",
+        "Individual steep slate roofs and dormers",
+        "Granite masonry, limestone trim and tall hall tracery"
+      ],
+      "reference": "https://michigan.law.umich.edu/about-michigan-law/michigan-law-architecture",
+      "dimensions": "Retain published dimensions where available; all remaining section levels, bays and secondary members are approximate exterior interpretations."
+    },
+    {
+      "id": "1000184",
+      "code": "M126",
+      "name": "William W. Cook Legal Research Library",
+      "decision": "retained existing individual exterior after review",
+      "features_reviewed": [
+        "Tall stone tower and separate reading hall",
+        "Lower glazed library addition",
+        "Crenellated tower crown",
+        "Steep hall roof, tall Gothic lights and attached buttresses"
+      ],
+      "reference": "https://michigan.law.umich.edu/about-michigan-law/michigan-law-architecture",
+      "dimensions": "Retain published dimensions where available; all remaining section levels, bays and secondary members are approximate exterior interpretations."
+    },
+    {
+      "id": "1000179",
+      "code": "M132",
+      "name": "Hutchins Hall",
+      "decision": "retained existing individual exterior after review",
+      "features_reviewed": [
+        "Separate Law Quad teaching ranges",
+        "Lower inner wing and preserved courtyard void",
+        "Steep slate roofs by wing",
+        "Stone belts, Gothic openings and dormers"
+      ],
+      "reference": "https://michigan.law.umich.edu/about-michigan-law/michigan-law-architecture",
+      "dimensions": "Retain published dimensions where available; all remaining section levels, bays and secondary members are approximate exterior interpretations."
+    },
+    {
+      "id": "1005188",
+      "code": "M144",
+      "name": "Ross School of Business",
+      "decision": "retained existing individual exterior after review",
+      "features_reviewed": [
+        "Separate terracotta academic wings",
+        "Tall central glazed Winter Garden",
+        "Low pavilions with planted terraces",
+        "Window-zone terracotta shades and grounded Tappan canopy"
+      ],
+      "reference": "https://www.kpf.com/story/the-making-of-university-of-michigan-stephen-m-ross-school-of-business",
+      "dimensions": "Retain published dimensions where available; all remaining section levels, bays and secondary members are approximate exterior interpretations."
+    },
+    {
+      "id": "1005418",
+      "code": "M342",
+      "name": "Ford Robotics Building",
+      "decision": "retained existing individual exterior after review",
+      "features_reviewed": [
+        "Four-storey metal/glass robotics laboratory",
+        "Lower high-bay research wing",
+        "Curved mapped glazed frontage",
+        "Attached facade members bounded to their own wings"
+      ],
+      "reference": "https://tour.umich.edu/text-based/tours/engineering/",
+      "dimensions": "Retain published dimensions where available; all remaining section levels, bays and secondary members are approximate exterior interpretations."
+    },
+    {
+      "id": "1005092",
+      "code": "M377",
+      "name": "Bob & Betty Beyster Building",
+      "decision": "retained existing individual exterior after review",
+      "features_reviewed": [
+        "Brick teaching wings at different heights",
+        "Central glazed atrium and roof grid",
+        "Separate entrance volume",
+        "Roof edges and restrained wall-attached shades"
+      ],
+      "reference": "https://tour.umich.edu/text-based/tours/engineering/",
+      "dimensions": "Retain published dimensions where available; all remaining section levels, bays and secondary members are approximate exterior interpretations."
+    },
+    {
+      "id": "1005504",
+      "code": "M379",
+      "name": "Leinweber Computer Science & Information Building",
+      "decision": "retained existing individual exterior after review",
+      "features_reviewed": [
+        "Buff masonry high and low research wings",
+        "Framed projecting window groups",
+        "All facade members stop at their own wing eaves",
+        "One documented set-back mechanical enclosure"
+      ],
+      "reference": "https://leinweber.bldg.umich.edu/about/",
+      "dimensions": "Retain published dimensions where available; all remaining section levels, bays and secondary members are approximate exterior interpretations."
+    },
+    {
+      "id": "1000394",
+      "code": "M401",
+      "name": "Ann & Robert H. Lurie Tower",
+      "decision": "retained existing individual exterior after review",
+      "features_reviewed": [
+        "Brick shaft with stepped corner piers",
+        "Open bell cage and 60 bronze bells",
+        "Suspended acoustic blades",
+        "Flared playing cabin and copper hip cap"
+      ],
+      "reference": "https://smtd.umich.edu/facilities/ann-and-robert-h-lurie-carillon/",
+      "dimensions": "Retain published dimensions where available; all remaining section levels, bays and secondary members are approximate exterior interpretations."
+    },
+    {
+      "id": "1000396",
+      "code": "M410",
+      "name": "Duderstadt Center",
+      "decision": "retained existing individual exterior after review",
+      "features_reviewed": [
+        "High library block and lower service wings",
+        "North glazed frontage and columned entry edge",
+        "Individual roof levels",
+        "Pyramidal glazed roof lights"
+      ],
+      "reference": "https://www.dc.umich.edu/about-the-dc/history/",
+      "dimensions": "Retain published dimensions where available; all remaining section levels, bays and secondary members are approximate exterior interpretations."
+    },
+    {
+      "id": "1000432",
+      "code": "M420",
+      "name": "Art & Architecture Building",
+      "decision": "retained existing individual exterior after review",
+      "features_reviewed": [
+        "Older brick studio/classroom ranges",
+        "Separate white Taubman addition",
+        "Open courts and lower connection",
+        "Sloping addition roof and wall-attached glazing members"
+      ],
+      "reference": "https://taubmancollege.umich.edu/about/facilities/art-architecture-building/",
+      "dimensions": "Retain published dimensions where available; all remaining section levels, bays and secondary members are approximate exterior interpretations."
+    },
+    {
+      "id": "1000446",
+      "code": "M428",
+      "name": "Gerald R. Ford Presidential Library",
+      "decision": "retained existing individual exterior after review",
+      "features_reviewed": [
+        "Low brick library/archives wing",
+        "Taller reading/research block",
+        "Separate zinc roof levels",
+        "Glazed entry and restrained masonry bays"
+      ],
+      "reference": "https://www.fordlibrarymuseum.gov/visit/library",
+      "dimensions": "Retain published dimensions where available; all remaining section levels, bays and secondary members are approximate exterior interpretations."
+    },
+    {
+      "id": "1005109",
+      "code": "M464",
+      "name": "Frankel Cardiovascular Center",
+      "decision": "reconstructed source-specific exterior",
+      "features_reviewed": [
+        "separate clinical wings and low garden arrival",
+        "rounded winter-garden atrium",
+        "curved glazing and stone floor bands",
+        "courtyard-facing recesses",
+        "narrow mapped bridge wings kept low"
+      ],
+      "reference": "https://www.uofmhealth.org/locations-parking/floor-maps-ann-arbor-medical-campus-buildings/frankel-cardiovascular-center-floor-maps/floor-1-frankel-cardiovascular-center",
+      "dimensions": "Retain published dimensions where available; all remaining section levels, bays and secondary members are approximate exterior interpretations."
+    },
+    {
+      "id": "1005440",
+      "code": "M472",
+      "name": "D. Dan & Betty Kahn Health Care Pavilion",
+      "decision": "reconstructed source-specific exterior",
+      "features_reviewed": [
+        "set-back patient tower and lower clinical podium",
+        "pale three-dimensional precast window bays",
+        "recessed glazed ground arrival",
+        "supported patient-dropoff canopy",
+        "separate narrow connection to Frankel"
+      ],
+      "reference": "https://www.hok.com/projects/view/michigan-medicine-kahn-health-care-pavilion/",
+      "dimensions": "Retain published dimensions where available; all remaining section levels, bays and secondary members are approximate exterior interpretations."
+    },
+    {
+      "id": "1005037",
+      "code": "M480",
+      "name": "Taubman Biomedical Science Research Building",
+      "decision": "reconstructed source-specific exterior",
+      "features_reviewed": [
+        "terracotta laboratory bar",
+        "curved glazed office ribbon",
+        "sky-lit atrium between laboratory and office wings",
+        "independent round auditorium with tilted metal cap",
+        "continuous glass mullion and floor structure"
+      ],
+      "reference": "https://medschool.umich.edu/facility/alfred-taubman-biomedical-science-research-building-bsrb",
+      "dimensions": "Retain published dimensions where available; all remaining section levels, bays and secondary members are approximate exterior interpretations."
+    },
+    {
+      "id": "1005173",
+      "code": "M481",
+      "name": "C. S. Mott Children's Hospital & Von Voigtlander Women's Hospital",
+      "decision": "reconstructed source-specific exterior",
+      "features_reviewed": [
+        "nine-storey outpatient wing",
+        "twelve-storey inpatient wing",
+        "lower clinical podium",
+        "curved patient facades with pale precast and dark glass bands",
+        "double-height glazed arrival and supported canopy"
+      ],
+      "reference": "https://umaec.umich.edu/projects/completed-projects/c-s-mott-childrens-womens-hospitals-replacement-project/",
+      "dimensions": "Retain published dimensions where available; all remaining section levels, bays and secondary members are approximate exterior interpretations."
+    },
+    {
+      "id": "1000709",
+      "code": "M512",
+      "name": "Yost Ice Arena",
+      "decision": "reconstructed source-specific exterior",
+      "features_reviewed": [
+        "single tall Romanesque brick hall",
+        "tall round-headed side lights",
+        "ascending arched end windows",
+        "lower entrance blocks with arched doors",
+        "pitched roof with clay eaves and brick corbel course",
+        "masonry chimney"
+      ],
+      "reference": "https://tour.umich.edu/text-based/locations/yost-ice-arena/",
+      "dimensions": "Retain published dimensions where available; all remaining section levels, bays and secondary members are approximate exterior interpretations."
+    },
+    {
+      "id": "1000711",
+      "code": "M520",
+      "name": "Michigan Stadium",
+      "decision": "retained existing individual exterior after review",
+      "features_reviewed": [
+        "Sunken bowl with ninety seat bands",
+        "44 aisle divisions",
+        "Separate mapped east and west premium towers",
+        "North and south screens, correct playing-field axis and ground closure"
+      ],
+      "reference": "https://mgoblue.com/sports/2017/6/16/facilities-michigan-stadium-html",
+      "dimensions": "Retain published dimensions where available; all remaining section levels, bays and secondary members are approximate exterior interpretations."
+    },
+    {
+      "id": "1000700",
+      "code": "M526",
+      "name": "Crisler Center",
+      "decision": "reconstructed source-specific exterior",
+      "features_reviewed": [
+        "near-circular arena and lower annex",
+        "continuous curved closed roof",
+        "clerestory band below roof rim",
+        "radial structural roof seams",
+        "glazed entrance with supported canopy"
+      ],
+      "reference": "https://umaec.umich.edu/projects/completed-projects/crisler-center-renovation-and-addition/",
+      "dimensions": "Retain published dimensions where available; all remaining section levels, bays and secondary members are approximate exterior interpretations."
+    }
+  ],
+  "validation": {
+    "browser_geometry": "All individual exported building layers reviewed at the configured presentation view and opposite side; targeted low-angle checks for open structures. Full source geometry, without runtime regional simplification.",
+    "form_regressions": "scripts/check_highlight_forms.mjs",
+    "camera_regressions": "scripts/check_highlight_views.mjs",
+    "native_cad": "scripts/validate_rhino.py"
+  }
+}

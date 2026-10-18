@@ -4,18 +4,18 @@
     {
       "source": "output/UMich_AnnArbor.3ds",
       "archive": "output/UMich_AnnArbor.3ds.gz",
-      "sourceBytes": 220115821,
-      "archiveBytes": 102983120,
-      "sourceSha256": "c6f928ce66de456ae2831155abeca36f539d26ffdefeaeeee1e7960e48a5011f",
-      "archiveSha256": "91bcf80321e1174079834a27849e1941904310a29b452885b88a457133da31d9"
+      "sourceBytes": 223622591,
+      "archiveBytes": 104654376,
+      "sourceSha256": "f96e8f90e9bb3196b289ae8dd62e5cd79234e36fc3a1142c394e372d92bdc58d",
+      "archiveSha256": "02b04439a38280997b7a288d1a51abd2ba770e5fd3074cd8eb95c19a9cd8215b"
     },
     {
       "source": "output/UMich_AnnArbor_Layered.3dm",
       "archive": "output/UMich_AnnArbor_Layered.3dm.xz",
-      "sourceBytes": 184935062,
-      "archiveBytes": 51092636,
-      "sourceSha256": "e9fd99f0af5779d71a59ec339baf50e75b04c77ee23bc833e543d65c1e1a8210",
-      "archiveSha256": "80d6d043bbe44f5ff538a690c19a8d55afba91780f77d238459e9d2a2f455a0f"
+      "sourceBytes": 187204382,
+      "archiveBytes": 51771532,
+      "sourceSha256": "9c36804b804196717b35340b35006a3f4126014f1188eba66f6b2d3528ec67c9",
+      "archiveSha256": "6a26f0d6ab20e56e6a3e253455467d2ed76d1ab5fcb91ed55c3e0dc28d0883ee"
     }
   ]
 }

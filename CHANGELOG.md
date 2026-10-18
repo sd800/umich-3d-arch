@@ -1,5 +1,11 @@
 # Changelog
 
+## 26.10.18.1 — 2026-10-18
+
+- Individually audited all 29 building Highlights. Reconstructed Burton Memorial Tower, Hill Auditorium, Rackham, Detroit Observatory, Yost, Crisler, North Quad, Frankel, Kahn, BSRB and Mott/Women's Hospital from separate source-referenced exterior volumes.
+- Gave Burton five true bell openings per face, open clock rings and its 53 bells; added Hill's four-column portico, Rackham's three portals, the observatory's separate historic/visitor wings, Yost's Romanesque lights and Crisler's closed curved roof. Separated clinical wings, winter-garden glazing, auditorium, patient tower and podium levels.
+- Added individual architecture/reference records, actual-CAD review pages and physical opening/volume checks. Regenerated regional levels of detail, full compressed native CAD and offline assets while preserving the existing presentation cameras and bounded streaming budgets.
+
 ## 26.10.17.2 — 2026-10-17
 
 - Give 29 architectural highlights individual architectural aerial-photography cameras, choosing principal entrances, courtyard-facing elevations or characteristic volumes instead of one shared viewing direction. Use lower facade views and higher courtyard/sports-bowl views with portrait/landscape-safe framing.

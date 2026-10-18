@@ -1,15 +1,15 @@
 {
-  "buildSignature": "64d74c9e2ade409f843601a1b93e62a8a7b29e397758a017dc969162e4261571",
+  "buildSignature": "03f406cb603313379f696fd416dbcd4eb9c14b787f572828f29e52bc0f05b80d",
   "format": "campus-3ds-v1",
   "codec": "meshoptimizer 1.3.0 lossless vertex/index-sequence codecs + gzip",
   "source": "output/UMich_AnnArbor.3ds",
-  "sourceBytes": 220115821,
-  "sourceSha256": "c6f928ce66de456ae2831155abeca36f539d26ffdefeaeeee1e7960e48a5011f",
-  "ordinaryGzipBytes": 102983120,
-  "previousTransferBytes": 102983120,
-  "packedBytes": 141358388,
-  "transferBytes": 54159832,
-  "transferSha256": "79e4900a45b8cd7f13d7f12da7009a54c04fc5aeeb3374c03d56242930e62856",
+  "sourceBytes": 223622591,
+  "sourceSha256": "f96e8f90e9bb3196b289ae8dd62e5cd79234e36fc3a1142c394e372d92bdc58d",
+  "ordinaryGzipBytes": 104654376,
+  "previousTransferBytes": 104654376,
+  "packedBytes": 143410422,
+  "transferBytes": 54750575,
+  "transferSha256": "a4ac0cc0331c0cc7f12eca92bc169058fd90a9ae8644b4b38517b32e380b1858",
   "maxEncodedBlockBytes": 306448,
   "decodedGeometryChanged": false
 }

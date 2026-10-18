@@ -72,6 +72,16 @@
   "M003B01": {
     "layer": "M003_Detroit Observatory",
     "category": "building",
+    "material": "Sandstone"
+  },
+  "M003B02": {
+    "layer": "M003_Detroit Observatory",
+    "category": "building",
+    "material": "Glass"
+  },
+  "M003B03": {
+    "layer": "M003_Detroit Observatory",
+    "category": "building",
     "material": "LightStone"
   },
   "M003HD0000": {
@@ -83,6 +93,26 @@
     "layer": "M003_Detroit Observatory",
     "category": "building",
     "material": "Foundation"
+  },
+  "M003M1100": {
+    "layer": "M003_Detroit Observatory",
+    "category": "building",
+    "material": "RoofMembrane"
+  },
+  "M003M1300": {
+    "layer": "M003_Detroit Observatory",
+    "category": "building",
+    "material": "RoofZinc"
+  },
+  "M003M1400": {
+    "layer": "M003_Detroit Observatory",
+    "category": "building",
+    "material": "RoofGreen"
+  },
+  "M003M1800": {
+    "layer": "M003_Detroit Observatory",
+    "category": "building",
+    "material": "Limestone"
   },
   "M003M1900": {
     "layer": "M003_Detroit Observatory",
@@ -98,6 +128,11 @@
     "layer": "M003_Detroit Observatory",
     "category": "building",
     "material": "Glass"
+  },
+  "M003D2700": {
+    "layer": "M003_Detroit Observatory",
+    "category": "building",
+    "material": "DarkGlass"
   },
   "M003D2800": {
     "layer": "M003_Detroit Observatory",
@@ -222,12 +257,12 @@
   "M007B01": {
     "layer": "M007_Rackham Graduate School",
     "category": "building",
-    "material": "Sandstone"
+    "material": "Limestone"
   },
   "M007B02": {
     "layer": "M007_Rackham Graduate School",
     "category": "building",
-    "material": "Sandstone"
+    "material": "Limestone"
   },
   "M007HD0000": {
     "layer": "M007_Rackham Graduate School",
@@ -238,6 +273,16 @@
     "layer": "M007_Rackham Graduate School",
     "category": "building",
     "material": "Metal"
+  },
+  "M007M0200": {
+    "layer": "M007_Rackham Graduate School",
+    "category": "building",
+    "material": "RoofCopper"
+  },
+  "M007M0300": {
+    "layer": "M007_Rackham Graduate School",
+    "category": "building",
+    "material": "Bronze"
   },
   "M007M0400": {
     "layer": "M007_Rackham Graduate School",
@@ -254,10 +299,10 @@
     "category": "building",
     "material": "RoofMembrane"
   },
-  "M007M1300": {
+  "M007M1800": {
     "layer": "M007_Rackham Graduate School",
     "category": "building",
-    "material": "RoofZinc"
+    "material": "Limestone"
   },
   "M007M1900": {
     "layer": "M007_Rackham Graduate School",
@@ -268,6 +313,11 @@
     "layer": "M007_Rackham Graduate School",
     "category": "building",
     "material": "Glass"
+  },
+  "M007D2700": {
+    "layer": "M007_Rackham Graduate School",
+    "category": "building",
+    "material": "DarkGlass"
   },
   "M007D2800": {
     "layer": "M007_Rackham Graduate School",
@@ -289,6 +339,21 @@
     "category": "building",
     "material": "Brick"
   },
+  "M008B03": {
+    "layer": "M008_North Quadrangle Residential & Academic Complex",
+    "category": "building",
+    "material": "Brick"
+  },
+  "M008B04": {
+    "layer": "M008_North Quadrangle Residential & Academic Complex",
+    "category": "building",
+    "material": "Limestone"
+  },
+  "M008B05": {
+    "layer": "M008_North Quadrangle Residential & Academic Complex",
+    "category": "building",
+    "material": "Limestone"
+  },
   "M008HD0000": {
     "layer": "M008_North Quadrangle Residential & Academic Complex",
     "category": "building",
@@ -309,10 +374,20 @@
     "category": "building",
     "material": "RoofMembrane"
   },
-  "M008D2600": {
+  "M008M1800": {
     "layer": "M008_North Quadrangle Residential & Academic Complex",
     "category": "building",
-    "material": "Glass"
+    "material": "Limestone"
+  },
+  "M008M1900": {
+    "layer": "M008_North Quadrangle Residential & Academic Complex",
+    "category": "building",
+    "material": "LightStone"
+  },
+  "M008D2700": {
+    "layer": "M008_North Quadrangle Residential & Academic Complex",
+    "category": "building",
+    "material": "DarkGlass"
   },
   "M008D2800": {
     "layer": "M008_North Quadrangle Residential & Academic Complex",
@@ -1294,15 +1369,15 @@
     "category": "building",
     "material": "Limestone"
   },
-  "M035B01": {
+  "M035HD0000": {
     "layer": "M035_Burton Memorial Tower",
     "category": "building",
-    "material": "Limestone"
+    "material": "Frame"
   },
-  "M035B02": {
+  "M035M0200": {
     "layer": "M035_Burton Memorial Tower",
     "category": "building",
-    "material": "Limestone"
+    "material": "RoofCopper"
   },
   "M035M0300": {
     "layer": "M035_Burton Memorial Tower",
@@ -1314,15 +1389,25 @@
     "category": "building",
     "material": "Foundation"
   },
+  "M035M1800": {
+    "layer": "M035_Burton Memorial Tower",
+    "category": "building",
+    "material": "Limestone"
+  },
   "M035M1900": {
     "layer": "M035_Burton Memorial Tower",
     "category": "building",
     "material": "LightStone"
   },
-  "M035M2100": {
+  "M035M2400": {
     "layer": "M035_Burton Memorial Tower",
     "category": "building",
-    "material": "Slate"
+    "material": "WhitePanel"
+  },
+  "M035D2700": {
+    "layer": "M035_Burton Memorial Tower",
+    "category": "building",
+    "material": "DarkGlass"
   },
   "M035D2800": {
     "layer": "M035_Burton Memorial Tower",
@@ -1569,25 +1654,50 @@
     "category": "building",
     "material": "Frame"
   },
+  "M042HD0100": {
+    "layer": "M042_Hill Auditorium",
+    "category": "building",
+    "material": "Metal"
+  },
+  "M042M0300": {
+    "layer": "M042_Hill Auditorium",
+    "category": "building",
+    "material": "Bronze"
+  },
   "M042M0400": {
     "layer": "M042_Hill Auditorium",
     "category": "building",
     "material": "Foundation"
+  },
+  "M042M1300": {
+    "layer": "M042_Hill Auditorium",
+    "category": "building",
+    "material": "RoofZinc"
+  },
+  "M042M1800": {
+    "layer": "M042_Hill Auditorium",
+    "category": "building",
+    "material": "Limestone"
   },
   "M042M1900": {
     "layer": "M042_Hill Auditorium",
     "category": "building",
     "material": "LightStone"
   },
-  "M042M2500": {
+  "M042M2100": {
     "layer": "M042_Hill Auditorium",
     "category": "building",
-    "material": "Metal"
+    "material": "Slate"
   },
   "M042D2600": {
     "layer": "M042_Hill Auditorium",
     "category": "building",
     "material": "Glass"
+  },
+  "M042D2700": {
+    "layer": "M042_Hill Auditorium",
+    "category": "building",
+    "material": "DarkGlass"
   },
   "M042D2800": {
     "layer": "M042_Hill Auditorium",
@@ -15704,6 +15814,31 @@
     "category": "building",
     "material": "LightStone"
   },
+  "M464B02": {
+    "layer": "M464_Frankel Cardiovascular Center",
+    "category": "building",
+    "material": "LightStone"
+  },
+  "M464B03": {
+    "layer": "M464_Frankel Cardiovascular Center",
+    "category": "building",
+    "material": "LightStone"
+  },
+  "M464B04": {
+    "layer": "M464_Frankel Cardiovascular Center",
+    "category": "building",
+    "material": "LightStone"
+  },
+  "M464B05": {
+    "layer": "M464_Frankel Cardiovascular Center",
+    "category": "building",
+    "material": "LightStone"
+  },
+  "M464B06": {
+    "layer": "M464_Frankel Cardiovascular Center",
+    "category": "building",
+    "material": "LightStone"
+  },
   "M464HD0000": {
     "layer": "M464_Frankel Cardiovascular Center",
     "category": "building",
@@ -15719,15 +15854,40 @@
     "category": "building",
     "material": "Foundation"
   },
-  "M464M1200": {
+  "M464M0800": {
     "layer": "M464_Frankel Cardiovascular Center",
     "category": "building",
-    "material": "RoofGravel"
+    "material": "MetalPanel"
   },
-  "M464D2600": {
+  "M464M1100": {
     "layer": "M464_Frankel Cardiovascular Center",
     "category": "building",
-    "material": "Glass"
+    "material": "RoofMembrane"
+  },
+  "M464M1300": {
+    "layer": "M464_Frankel Cardiovascular Center",
+    "category": "building",
+    "material": "RoofZinc"
+  },
+  "M464M1500": {
+    "layer": "M464_Frankel Cardiovascular Center",
+    "category": "building",
+    "material": "RoofEdge"
+  },
+  "M464M1900": {
+    "layer": "M464_Frankel Cardiovascular Center",
+    "category": "building",
+    "material": "LightStone"
+  },
+  "M464M2300": {
+    "layer": "M464_Frankel Cardiovascular Center",
+    "category": "building",
+    "material": "Concrete"
+  },
+  "M464D2700": {
+    "layer": "M464_Frankel Cardiovascular Center",
+    "category": "building",
+    "material": "DarkGlass"
   },
   "M464D2800": {
     "layer": "M464_Frankel Cardiovascular Center",
@@ -15979,6 +16139,11 @@
     "category": "building",
     "material": "LightStone"
   },
+  "M472B02": {
+    "layer": "M472_D. Dan & Betty Kahn Health Care Pavilion",
+    "category": "building",
+    "material": "Limestone"
+  },
   "M472HD0000": {
     "layer": "M472_D. Dan & Betty Kahn Health Care Pavilion",
     "category": "building",
@@ -15994,20 +16159,40 @@
     "category": "building",
     "material": "Foundation"
   },
-  "M472M1200": {
+  "M472M0800": {
     "layer": "M472_D. Dan & Betty Kahn Health Care Pavilion",
     "category": "building",
-    "material": "RoofGravel"
+    "material": "MetalPanel"
   },
-  "M472D2600": {
+  "M472M1100": {
     "layer": "M472_D. Dan & Betty Kahn Health Care Pavilion",
     "category": "building",
-    "material": "Glass"
+    "material": "RoofMembrane"
   },
-  "M472D2800": {
+  "M472M1300": {
     "layer": "M472_D. Dan & Betty Kahn Health Care Pavilion",
     "category": "building",
-    "material": "Frame"
+    "material": "RoofZinc"
+  },
+  "M472M1500": {
+    "layer": "M472_D. Dan & Betty Kahn Health Care Pavilion",
+    "category": "building",
+    "material": "RoofEdge"
+  },
+  "M472M1900": {
+    "layer": "M472_D. Dan & Betty Kahn Health Care Pavilion",
+    "category": "building",
+    "material": "LightStone"
+  },
+  "M472M2300": {
+    "layer": "M472_D. Dan & Betty Kahn Health Care Pavilion",
+    "category": "building",
+    "material": "Concrete"
+  },
+  "M472D2700": {
+    "layer": "M472_D. Dan & Betty Kahn Health Care Pavilion",
+    "category": "building",
+    "material": "DarkGlass"
   },
   "M473B00": {
     "layer": "M473_Zina Pitcher Parking Structure",
@@ -16242,32 +16427,87 @@
   "M480B00": {
     "layer": "M480_Taubman Biomedical Science Research Building",
     "category": "building",
-    "material": "Glass"
+    "material": "LightStone"
   },
   "M480B01": {
     "layer": "M480_Taubman Biomedical Science Research Building",
     "category": "building",
+    "material": "Terracotta"
+  },
+  "M480B02": {
+    "layer": "M480_Taubman Biomedical Science Research Building",
+    "category": "building",
     "material": "LightStone"
+  },
+  "M480B03": {
+    "layer": "M480_Taubman Biomedical Science Research Building",
+    "category": "building",
+    "material": "Glass"
+  },
+  "M480B04": {
+    "layer": "M480_Taubman Biomedical Science Research Building",
+    "category": "building",
+    "material": "Glass"
+  },
+  "M480B05": {
+    "layer": "M480_Taubman Biomedical Science Research Building",
+    "category": "building",
+    "material": "Terracotta"
+  },
+  "M480B06": {
+    "layer": "M480_Taubman Biomedical Science Research Building",
+    "category": "building",
+    "material": "Terracotta"
+  },
+  "M480B07": {
+    "layer": "M480_Taubman Biomedical Science Research Building",
+    "category": "building",
+    "material": "Terracotta"
   },
   "M480HD0000": {
     "layer": "M480_Taubman Biomedical Science Research Building",
     "category": "building",
     "material": "Frame"
   },
+  "M480HD0100": {
+    "layer": "M480_Taubman Biomedical Science Research Building",
+    "category": "building",
+    "material": "Metal"
+  },
   "M480M0400": {
     "layer": "M480_Taubman Biomedical Science Research Building",
     "category": "building",
     "material": "Foundation"
   },
-  "M480M1200": {
+  "M480M1100": {
     "layer": "M480_Taubman Biomedical Science Research Building",
     "category": "building",
-    "material": "RoofGravel"
+    "material": "RoofMembrane"
   },
-  "M480D2600": {
+  "M480M1300": {
     "layer": "M480_Taubman Biomedical Science Research Building",
     "category": "building",
-    "material": "Glass"
+    "material": "RoofZinc"
+  },
+  "M480M1500": {
+    "layer": "M480_Taubman Biomedical Science Research Building",
+    "category": "building",
+    "material": "RoofEdge"
+  },
+  "M480M1900": {
+    "layer": "M480_Taubman Biomedical Science Research Building",
+    "category": "building",
+    "material": "LightStone"
+  },
+  "M480M2300": {
+    "layer": "M480_Taubman Biomedical Science Research Building",
+    "category": "building",
+    "material": "Concrete"
+  },
+  "M480D2700": {
+    "layer": "M480_Taubman Biomedical Science Research Building",
+    "category": "building",
+    "material": "DarkGlass"
   },
   "M480D2800": {
     "layer": "M480_Taubman Biomedical Science Research Building",
@@ -16280,6 +16520,11 @@
     "material": "LightStone"
   },
   "M481B01": {
+    "layer": "M481_C. S. Mott Children's Hospital & Von Voigtlander Women's Hospital",
+    "category": "building",
+    "material": "LightStone"
+  },
+  "M481B02": {
     "layer": "M481_C. S. Mott Children's Hospital & Von Voigtlander Women's Hospital",
     "category": "building",
     "material": "LightStone"
@@ -16304,15 +16549,35 @@
     "category": "building",
     "material": "Foundation"
   },
-  "M481M1200": {
+  "M481M0800": {
     "layer": "M481_C. S. Mott Children's Hospital & Von Voigtlander Women's Hospital",
     "category": "building",
-    "material": "RoofGravel"
+    "material": "MetalPanel"
   },
-  "M481D2600": {
+  "M481M1100": {
     "layer": "M481_C. S. Mott Children's Hospital & Von Voigtlander Women's Hospital",
     "category": "building",
-    "material": "Glass"
+    "material": "RoofMembrane"
+  },
+  "M481M1300": {
+    "layer": "M481_C. S. Mott Children's Hospital & Von Voigtlander Women's Hospital",
+    "category": "building",
+    "material": "RoofZinc"
+  },
+  "M481M1900": {
+    "layer": "M481_C. S. Mott Children's Hospital & Von Voigtlander Women's Hospital",
+    "category": "building",
+    "material": "LightStone"
+  },
+  "M481M2300": {
+    "layer": "M481_C. S. Mott Children's Hospital & Von Voigtlander Women's Hospital",
+    "category": "building",
+    "material": "Concrete"
+  },
+  "M481D2700": {
+    "layer": "M481_C. S. Mott Children's Hospital & Von Voigtlander Women's Hospital",
+    "category": "building",
+    "material": "DarkGlass"
   },
   "M481D2800": {
     "layer": "M481_C. S. Mott Children's Hospital & Von Voigtlander Women's Hospital",
@@ -17254,25 +17519,70 @@
     "category": "building",
     "material": "Brick"
   },
+  "M512B01": {
+    "layer": "M512_Yost Ice Arena",
+    "category": "building",
+    "material": "Brick"
+  },
+  "M512B02": {
+    "layer": "M512_Yost Ice Arena",
+    "category": "building",
+    "material": "Brick"
+  },
+  "M512B03": {
+    "layer": "M512_Yost Ice Arena",
+    "category": "building",
+    "material": "Brick"
+  },
   "M512HD0000": {
     "layer": "M512_Yost Ice Arena",
     "category": "building",
     "material": "Frame"
+  },
+  "M512HD0100": {
+    "layer": "M512_Yost Ice Arena",
+    "category": "building",
+    "material": "Metal"
   },
   "M512M0400": {
     "layer": "M512_Yost Ice Arena",
     "category": "building",
     "material": "Foundation"
   },
-  "M512M2500": {
+  "M512M1100": {
     "layer": "M512_Yost Ice Arena",
     "category": "building",
-    "material": "Metal"
+    "material": "RoofMembrane"
+  },
+  "M512M1300": {
+    "layer": "M512_Yost Ice Arena",
+    "category": "building",
+    "material": "RoofZinc"
+  },
+  "M512M1900": {
+    "layer": "M512_Yost Ice Arena",
+    "category": "building",
+    "material": "LightStone"
+  },
+  "M512M2000": {
+    "layer": "M512_Yost Ice Arena",
+    "category": "building",
+    "material": "Brick"
+  },
+  "M512M2200": {
+    "layer": "M512_Yost Ice Arena",
+    "category": "building",
+    "material": "Tile"
   },
   "M512D2600": {
     "layer": "M512_Yost Ice Arena",
     "category": "building",
     "material": "Glass"
+  },
+  "M512D2700": {
+    "layer": "M512_Yost Ice Arena",
+    "category": "building",
+    "material": "DarkGlass"
   },
   "M512D2800": {
     "layer": "M512_Yost Ice Arena",
@@ -17819,6 +18129,11 @@
     "category": "building",
     "material": "LightStone"
   },
+  "M526B03": {
+    "layer": "M526_Crisler Center",
+    "category": "building",
+    "material": "DarkGlass"
+  },
   "M526HD0000": {
     "layer": "M526_Crisler Center",
     "category": "building",
@@ -17834,15 +18149,25 @@
     "category": "building",
     "material": "Foundation"
   },
-  "M526M1200": {
+  "M526M1100": {
     "layer": "M526_Crisler Center",
     "category": "building",
-    "material": "RoofGravel"
+    "material": "RoofMembrane"
   },
-  "M526M2500": {
+  "M526M1300": {
     "layer": "M526_Crisler Center",
     "category": "building",
-    "material": "Metal"
+    "material": "RoofZinc"
+  },
+  "M526M1500": {
+    "layer": "M526_Crisler Center",
+    "category": "building",
+    "material": "RoofEdge"
+  },
+  "M526M1900": {
+    "layer": "M526_Crisler Center",
+    "category": "building",
+    "material": "LightStone"
   },
   "M526D2600": {
     "layer": "M526_Crisler Center",

@@ -2,12 +2,12 @@
   "format": "Rhino 3DM v7",
   "units": "meters",
   "layers": 6374,
-  "objects": 27775,
-  "closed_native_solids": 6534,
-  "closed_mesh_objects": 20637,
+  "nonempty_layers": 6374,
+  "objects": 27840,
+  "closed_native_solids": 6554,
+  "closed_mesh_objects": 20682,
+  "plan_curves": 604,
   "all_geometry_valid": true,
-  "mesh_coordinate_storage": "F32, matching 3DS",
-  "normals": "derived from stored faces",
   "named_views": [
     "Campus",
     "central",
@@ -15,8 +15,6 @@
     "medical",
     "athletic"
   ],
-  "nonempty_layers": 6374,
-  "plan_curves": 604,
   "georeference": {
     "wgs84": [
       -83.7382,

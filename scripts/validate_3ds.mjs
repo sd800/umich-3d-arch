@@ -16,3 +16,9 @@ if(names.some(n=>n.length>10))throw new Error('3DS names exceed Rhino limit');
 const info={parser:'Three.js TDSLoader (independent 3DS importer)',objects:names.length,triangles,vertices,box_min:bounds.min.toArray(),box_max:bounds.max.toArray(),all_names_preserved:true};
 console.log(JSON.stringify(info,null,2));
 fs.writeFileSync(new URL('../output/3ds_validation.json',import.meta.url),JSON.stringify(info,null,2));
+// Keep storage diagnostics tied to the current native export rather than an
+// earlier campus build. A zero-valued smoothing table is optional in 3DS.
+let zeroSmoothing=0;
+function storageChunks(start,end){for(let p=start;p<end;){const tag=buffer.readUInt16LE(p),n=buffer.readUInt32LE(p+2),stop=p+n;if(n<6||stop>end)throw new Error('Invalid 3DS storage chunk');if(tag===0x4150&&buffer.subarray(p+6,stop).every(x=>x===0))zeroSmoothing++;if([0x4d4d,0x3d3d,0x4100].includes(tag))storageChunks(p+6,stop);else if(tag===0x4000)storageChunks(buffer.indexOf(0,p+6,stop)+1,stop);else if(tag===0x4120)storageChunks(p+8+buffer.readUInt16LE(p+6)*8,stop);p=stop;}}
+storageChunks(0,buffer.length);if(zeroSmoothing)throw new Error('Redundant all-zero smoothing tables were reintroduced');
+fs.writeFileSync(new URL('../output/3ds_storage_validation.json',import.meta.url),JSON.stringify({source:filename,current_bytes:buffer.length,optional_zero_smoothing_tables_written:zeroSmoothing,storage:'Optional all-zero smoothing tables omitted; independent importer verified all named source meshes.'},null,2)+'\n');
