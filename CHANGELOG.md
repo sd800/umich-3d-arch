@@ -1,5 +1,9 @@
 # Changelog
 
+## 26.10.18.4 — 2026-10-18
+
+- Make Guide reference links muted gray with understated underlines and reduce the entire Reference row to 11 px, keeping model download links visually prominent.
+
 ## 26.10.18.3 — 2026-10-18
 
 - Gate the live view readout before activation on mobile: when one footer line cannot accommodate it, skip camera calculations, value formatting and view-data DOM creation entirely. Recheck only on layout or language changes, and restore the readout when space permits without adding footer rows.
