@@ -1,5 +1,10 @@
 # Changelog
 
+## 26.10.18.2 — 2026-10-18
+
+- Show the live camera azimuth, elevation, vertical view span and model-space view center beside the public-source model status. Update on navigation, presets, zoom, resize and language changes, including off-axis horizontal framing.
+- Wrap the bilingual readout on narrow screens and lift the scale, legend and section controls above the footer automatically. Preserve existing camera behavior, CAD geometry and delivery data.
+
 ## 26.10.18.1 — 2026-10-18
 
 - Individually audited all 29 building Highlights. Reconstructed Burton Memorial Tower, Hill Auditorium, Rackham, Detroit Observatory, Yost, Crisler, North Quad, Frankel, Kahn, BSRB and Mott/Women's Hospital from separate source-referenced exterior volumes.

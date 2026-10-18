@@ -35,7 +35,8 @@
     "check:stream": "node scripts/check_stream.mjs",
     "check:highlights": "python3 scripts/check_highlights.py",
     "build:highlight-review": "python3 scripts/build_highlight_review.py && esbuild scripts/highlight_review.js --bundle --format=esm --outfile=tmp/highlight-review.js",
-    "check:highlight-forms": "node scripts/check_highlight_forms.mjs"
+    "check:highlight-forms": "node scripts/check_highlight_forms.mjs",
+    "check:view-state": "node scripts/check_view_readout.mjs"
   },
   "dependencies": {
     "meshoptimizer": "1.3.0",
