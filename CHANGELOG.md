@@ -1,5 +1,10 @@
 # Changelog
 
+## 26.10.18.8 — 2026-10-18
+
+- Match the Guide copyright line to normal paragraph typography and spacing below it, and use standard paragraph spacing above and below the model download links.
+- Tighten the gap between the public-data snapshot date and Reference/license line, keeping the Close button beside both metadata rows.
+
 ## 26.10.18.7 — 2026-10-18
 
 - Move Guide source links into a clickable Reference floating panel below the retained public-data snapshot date; support outside-click dismissal, Escape and touch interaction.
