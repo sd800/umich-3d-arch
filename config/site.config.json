@@ -2,11 +2,11 @@
   "domain": "umich.arch.songming.org",
   "url": "https://umich.arch.songming.org/",
   "repository": "https://github.com/sd800/umich-3d-arch",
-  "title": "UMich Campus 3D Model | Ann Arbor Campus",
+  "title": "University of Michigan Campus 3D Model",
   "description": "Explore the University of Michigan Ann Arbor campus and neighboring streets in 3D: Central, North, Medical and Athletic sectors, individual building layers, mapped landscape and USGS terrain. Download 3DS and layered Rhino models.",
   "imageAlt": "Bird’s-eye exterior model of the University of Michigan Ann Arbor campus and neighboring streets, with buildings, landscape and terrain.",
   "zh": {
-    "title": "密西根大学 · 三维校区 | 安娜堡校区室外空间模型",
+    "title": "University of Michigan Campus 3D Model",
     "description": "探索密西根大学安娜堡校区及周边街区：覆盖中央校区、北校区、医学中心与体育区，建筑逐栋分层，校园周边可单独显示或隐藏，可下载3DS与分层Rhino模型。",
     "imageAlt": "密西根大学安娜堡校区及周边街区三维模型鸟瞰，展示校园建筑、街道、绿地与地形。"
   }

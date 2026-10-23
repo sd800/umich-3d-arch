@@ -1,5 +1,10 @@
 # Changelog
 
+## 26.10.23.1 — 2026-10-23
+
+- Use "University of Michigan Campus 3D Model" for browser titles in both language modes, search/social metadata and the structured website/page names; remove the abbreviated name and campus suffix from title metadata.
+- Preserve the visible page heading, campus descriptions, interface, model files and download assets; keep the static homepage, offline edition and future packaging output consistent.
+
 ## 26.10.18.8 — 2026-10-18
 
 - Match the Guide copyright line to normal paragraph typography and spacing below it, and use standard paragraph spacing above and below the model download links.
